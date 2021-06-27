@@ -7,20 +7,20 @@
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <link rel="icon" href="{{ asset('favicon.png')}}" type="image/x-icon" />
 
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
-        
-        <link rel="stylesheet" href="{{ asset('plugins/bootstrap/dist/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('plugins/ionicons/dist/css/ionicons.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('plugins/icon-kit/dist/css/iconkit.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('plugins/perfect-scrollbar/css/perfect-scrollbar.css')}}">
-        <link rel="stylesheet" href="{{ asset('dist/css/theme.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('dist/css/style.css')}}">
-        <link rel="stylesheet" href="{{ asset('dist/css/theme-image.css')}}">
-        <script src="{{ asset('src/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+
+        <link rel="stylesheet" href="{{ asset('admin/plugins/bootstrap/dist/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('admin/plugins/fontawesome-free/css/all.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('admin/plugins/ionicons/dist/css/ionicons.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('admin/plugins/icon-kit/dist/css/iconkit.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('admin/plugins/perfect-scrollbar/css/perfect-scrollbar.css')}}">
+        <link rel="stylesheet" href="{{ asset('admin/dist/css/theme.min.css')}}">
+        <link rel="stylesheet" href="{{ asset('admin/dist/css/style.css')}}">
+        <link rel="stylesheet" href="{{ asset('admin/dist/css/theme-image.css')}}">
+        <script src="{{ asset('admin/src/js/vendor/modernizr-2.8.3.min.js')}}"></script>
     </head>
 
     <body>
@@ -64,18 +64,21 @@
                                 </div>
                             </form>
                             <div class="register">
-                                <p>{{ __('Not a member') }}? <a href="{{ url('register')}}">{{ __('Create an account') }}</a></p>
+                                <p>{{ __('Already have an account?')}} <a href="{{url('login')}}">{{ __('Sign In')}}</a></p>
                             </div>
+{{--                            <div class="register">--}}
+{{--                                <p>{{ __('Not a member') }}? <a href="{{ url('register')}}">{{ __('Create an account') }}</a></p>--}}
+{{--                            </div>--}}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <script src="{{ asset('src/js/vendor/jquery-3.3.1.min.js')}}"></script>
-        <script src="{{ asset('plugins/popper.js')}}/dist/umd/popper.min.js')}}"></script>
-        <script src="{{ asset('plugins/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-        <script src="{{ asset('plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js')}}"></script>
-        <script src="{{ asset('plugins/screenfull/dist/screenfull.js')}}"></script>
+
+        <script src="{{ asset('admin/src/js/vendor/jquery-3.3.1.min.js')}}"></script>
+        <script src="{{ asset('admin/plugins/popper.js')}}/dist/umd/popper.min.js')}}"></script>
+        <script src="{{ asset('admin/plugins/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+        <script src="{{ asset('admin/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js')}}"></script>
+        <script src="{{ asset('admin/plugins/screenfull/dist/screenfull.js')}}"></script>
     </body>
 </html>

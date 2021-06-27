@@ -26,6 +26,7 @@
                 <div class="col-xs-12 col-sm-9 d-flex header-menu-col">
                     <ul class="list-inline d-flex site-menu site-main-menu">
                         <li><a href="{{url('vendor')}}">Vendors</a></li>
+                        <li><a href="{{url('price')}}">Price</a></li>
                         <li><a href="#">Bride</a></li>
                         <li><a href="#">Groom</a></li>
                         <li><a href="#">Blog</a></li>
@@ -43,267 +44,316 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="banner-container">
-                    <img src="images/slider.jpg" alt="" class="img-fluid">
+                    <img src="images/vendor-banner.jpg" alt="" class="img-fluid">
                     <div class="banner-search-col">
                         <div class="search-header">
-                            <p class="head">Your Wedding, Your Way</p>
-                            <p class="text">Find the best wedding vendors with thousands of trusted reviews</p>
+                            <p class="text">Best Wedding Photographers in</p>
                         </div>
-                        <div class="search-form-col text-center">
-                            <div class="form-list">
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <select class="form-control" name="" id="">
-                                            <option value="">Select Vendor Type</option>
-                                        </select>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <select class="form-control" name="" id="">
-                                            <option value="">Select City</option>
-                                        </select>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <input type="button" class="btn btn-primary" value="GET STARTED">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="search-links text-center">
+                        <div class="vendor-location-links">
                             <ul class="list-inline">
-                                <li class="list-inline-item">Popular Searches: </li>
-                                <li class="list-inline-item"><a href="">Wedding Photographers in India</a></li>
-                                <li class="list-inline-item"><a href="">Bridal Makeup in India</a></li>
-                                <li class="list-inline-item"><a href="">Wedding Cards in India</a></li>
-                                <li class="list-inline-item"><a href="">Wedding Venues in India</a></li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn btn-secondary">Delhi NCR</a>
+                                    <p>Delhi NCR</p>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn btn-secondary">Bangalore</a>
+                                    <p>Bangalore</p>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn btn-secondary">Mumbai</a>
+                                    <p>Mumbai</p>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn btn-secondary">Chennai</a>
+                                    <p>Chennai</p>
+                                </li>
+                                <li class="list-inline-item">
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                            Other Cities
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Link 1</a>
+                                            <a class="dropdown-item" href="#">Link 2</a>
+                                            <a class="dropdown-item" href="#">Link 3</a>
+                                        </div>
+                                    </div>
+                                    <p>Other Cities</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Wedding Photographers</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="photographers-section">
+        <div class="container-fluid">
+            <div class="col-xs-12 common-heading text-center">
+                <p class="shadow-text">Photographers</p>
+                <p class="head">Wedding Photographers in all cities (13297)</p>
+                <p class="text">
+                    The biggest day of your life deserves to be captured by the most talented ones. Find the list of wedding photographers in
+                    all indian cities. Both premium and budget photographers are listed in all categories including traditional, candid drone &.. <a href="#">Read more</a>
+                </p>
+            </div>
+            <div class="row vendor-list-row">
+                <div class="col-xs-12 col-sm-4">
+                    <div class="common-card vendor-card-col">
+                        <div class="img-col">
+                            <img src="images/real-story.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="text-col">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <p class="title">Focus Wedding Photographers</p>
+                                    <p class="grey-text">Ludhiana</p>
+                                </li>
+                                <li class="text-right">
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline vendor-card space-list v-center">
+                                <li>
+                                    <p class="price"><span>Rs. 50,000</span></p>
+                                </li>
+                                <li class="text-right">
+                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="common-card vendor-card-col">
+                        <div class="img-col">
+                            <img src="images/real-story.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="text-col">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <p class="title">Focus Wedding Photographers</p>
+                                    <p class="grey-text">Ludhiana</p>
+                                </li>
+                                <li class="text-right">
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline vendor-card space-list v-center">
+                                <li>
+                                    <p class="price"><span>Rs. 50,000</span></p>
+                                </li>
+                                <li class="text-right">
+                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="common-card vendor-card-col">
+                        <div class="img-col">
+                            <img src="images/real-story.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="text-col">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <p class="title">Focus Wedding Photographers</p>
+                                    <p class="grey-text">Ludhiana</p>
+                                </li>
+                                <li class="text-right">
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline vendor-card space-list v-center">
+                                <li>
+                                    <p class="price"><span>Rs. 50,000</span></p>
+                                </li>
+                                <li class="text-right">
+                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="common-card vendor-card-col">
+                        <div class="img-col">
+                            <img src="images/real-story.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="text-col">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <p class="title">Focus Wedding Photographers</p>
+                                    <p class="grey-text">Ludhiana</p>
+                                </li>
+                                <li class="text-right">
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline vendor-card space-list v-center">
+                                <li>
+                                    <p class="price"><span>Rs. 50,000</span></p>
+                                </li>
+                                <li class="text-right">
+                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="common-card vendor-card-col">
+                        <div class="img-col">
+                            <img src="images/real-story.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="text-col">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <p class="title">Focus Wedding Photographers</p>
+                                    <p class="grey-text">Ludhiana</p>
+                                </li>
+                                <li class="text-right">
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline vendor-card space-list v-center">
+                                <li>
+                                    <p class="price"><span>Rs. 50,000</span></p>
+                                </li>
+                                <li class="text-right">
+                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="common-card vendor-card-col">
+                        <div class="img-col">
+                            <img src="images/real-story.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="text-col">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <p class="title">Focus Wedding Photographers</p>
+                                    <p class="grey-text">Ludhiana</p>
+                                </li>
+                                <li class="text-right">
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline vendor-card space-list v-center">
+                                <li>
+                                    <p class="price"><span>Rs. 50,000</span></p>
+                                </li>
+                                <li class="text-right">
+                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="common-card vendor-card-col">
+                        <div class="img-col">
+                            <img src="images/real-story.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="text-col">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <p class="title">Focus Wedding Photographers</p>
+                                    <p class="grey-text">Ludhiana</p>
+                                </li>
+                                <li class="text-right">
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline vendor-card space-list v-center">
+                                <li>
+                                    <p class="price"><span>Rs. 50,000</span></p>
+                                </li>
+                                <li class="text-right">
+                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="common-card vendor-card-col">
+                        <div class="img-col">
+                            <img src="images/real-story.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="text-col">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <p class="title">Focus Wedding Photographers</p>
+                                    <p class="grey-text">Ludhiana</p>
+                                </li>
+                                <li class="text-right">
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline vendor-card space-list v-center">
+                                <li>
+                                    <p class="price"><span>Rs. 50,000</span></p>
+                                </li>
+                                <li class="text-right">
+                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="common-card vendor-card-col">
+                        <div class="img-col">
+                            <img src="images/real-story.jpg" alt="" class="img-fluid">
+                        </div>
+                        <div class="text-col">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <p class="title">Focus Wedding Photographers</p>
+                                    <p class="grey-text">Ludhiana</p>
+                                </li>
+                                <li class="text-right">
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline vendor-card space-list v-center">
+                                <li>
+                                    <p class="price"><span>Rs. 50,000</span></p>
+                                </li>
+                                <li class="text-right">
+                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="category-section">
-        <div class="container-fluid">
-            <div class="col-xs-12 common-heading text-center">
-                <p class="shadow-text">Categories</p>
-                <p class="head">Wedding Categories</p>
-            </div>
-            <div class="row category-main-row">
-                <div class="col-xs-12 col-sm-6">
-                    <div class="single-category-col">
-                        <div class="inner">
-                            <div class="img-col">
-                                <a href="#">
-                                    <img src="images/c1.png" alt="" class="img-fluid">
-                                    <div class="text-col">
-                                        <p class="head">Wedding Photographers</p>
-                                        <p class="text">Popular Searches: Wedding Photographers</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-category-col">
-                        <div class="inner">
-                            <div class="img-col">
-                                <a href="#">
-                                    <img src="images/c3.png" alt="" class="img-fluid">
-                                    <div class="text-col">
-                                        <p class="head">Wedding Planners</p>
-                                        <p class="text">Popular Searches: Wedding Photographers</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-category-col">
-                        <div class="inner">
-                            <div class="img-col">
-                                <a href="#">
-                                    <img src="images/c5.png" alt="" class="img-fluid">
-                                    <div class="text-col">
-                                        <p class="head">Bridal Makeup Artists</p>
-                                        <p class="text">Popular Searches: Wedding Photographers</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-category-col">
-                        <div class="inner">
-                            <div class="img-col">
-                                <a href="#">
-                                    <img src="images/c7.png" alt="" class="img-fluid">
-                                    <div class="text-col">
-                                        <p class="head">Wedding Venues</p>
-                                        <p class="text">Popular Searches: Wedding Photographers</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 pt-4">
-                    <div class="single-category-col">
-                        <div class="inner">
-                            <div class="img-col">
-                                <a href="#">
-                                    <img src="images/c2.png" alt="" class="img-fluid">
-                                    <div class="text-col">
-                                        <p class="head">Wedding Decorators</p>
-                                        <p class="text">Popular Searches: Wedding Photographers</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-category-col">
-                        <div class="inner">
-                            <div class="img-col">
-                                <a href="#">
-                                    <img src="images/c4.png" alt="" class="img-fluid">
-                                    <div class="text-col">
-                                        <p class="head">Wedding Videographers</p>
-                                        <p class="text">Popular Searches: Wedding Photographers</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-category-col">
-                        <div class="inner">
-                            <div class="img-col">
-                                <a href="#">
-                                    <img src="images/c6.png" alt="" class="img-fluid">
-                                    <div class="text-col">
-                                        <p class="head">Mehndi Artists</p>
-                                        <p class="text">Popular Searches: Wedding Photographers</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-category-col">
-                        <div class="inner">
-                            <div class="img-col">
-                                <a href="#">
-                                    <img src="images/c8.png" alt="" class="img-fluid">
-                                    <div class="text-col">
-                                        <p class="head">Pre Wedding Shoot</p>
-                                        <p class="text">Popular Searches: Wedding Photographers</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about-us">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 img-col">
-                    <img src="images/about.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="col-xs-12 col-sm-6 text-col">
-                    <div class="col-xs-12 common-heading">
-                        <p class="shadow-text">About Us</p>
-                        <p class="head">About Us</p>
-                    </div>
-                    <div class="mt-2">
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book.
-                        </p>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book.
-                        </p>
-                    </div>
-                    <div class="mt-4">
-                        <a href="#" class="btn btn-primary">READ MORE</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="wedding-stries">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 common-heading text-center with-lines">
-                    <p class="shadow-text">Stories</p>
-                    <p class="head">Real Wedding Stories</p>
-                </div>
-                <div class="col-xs-12 col-sm-12 card-listing-col">
-                    <div id="storySlider" class="owl-carousel owl-theme common-slider">
-                        <div>
-                            <div class="common-card">
-                                <div class="img-col">
-                                    <img src="images/real-story.jpg" alt="" class="img-fluid">
-                                </div>
-                                <div class="text-col">
-                                    <p class="title">Asawari and James</p>
-                                    <p class="text">
-                                        Indian-American Vineyard Wedding With
-                                        Customised Outfits & Jewellery For Everyone!
-                                    </p>
-                                    <p class="date">09 June 2021</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="common-card">
-                                <div class="img-col">
-                                    <img src="images/real-story2.jpg" alt="" class="img-fluid">
-                                </div>
-                                <div class="text-col">
-                                    <p class="title">Asawari and James</p>
-                                    <p class="text">
-                                        Indian-American Vineyard Wedding With
-                                        Customised Outfits & Jewellery For Everyone!
-                                    </p>
-                                    <p class="date">09 June 2021</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="common-card">
-                                <div class="img-col">
-                                    <img src="images/real-story3.jpg" alt="" class="img-fluid">
-                                </div>
-                                <div class="text-col">
-                                    <p class="title">Asawari and James</p>
-                                    <p class="text">
-                                        Indian-American Vineyard Wedding With
-                                        Customised Outfits & Jewellery For Everyone!
-                                    </p>
-                                    <p class="date">09 June 2021</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="common-card">
-                                <div class="img-col">
-                                    <img src="images/real-story3.jpg" alt="" class="img-fluid">
-                                </div>
-                                <div class="text-col">
-                                    <p class="title">Asawari and James</p>
-                                    <p class="text">
-                                        Indian-American Vineyard Wedding With
-                                        Customised Outfits & Jewellery For Everyone!
-                                    </p>
-                                    <p class="date">09 June 2021</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-xs-12 col-sm-12 load-more-col text-center">
+                <a href="#" class="btn btn-primary text-uppercase">Show more Photographers</a>
             </div>
         </div>
     </section>
@@ -379,75 +429,205 @@
         </div>
     </section>
 
-    <section id="latest-blogs">
+    <section id="latest-reviews">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 common-heading text-center with-lines">
-                    <p class="shadow-text">Latest Blogs</p>
-                    <p class="head">Latest Blogs</p>
+                    <p class="shadow-text">Reviews</p>
+                    <p class="head">Latest Reviews of Photographers on Wed.in</p>
                 </div>
-                <div class="col-xs-12 col-sm-12 card-listing-col">
-                    <div id="blogsSlider" class="owl-carousel owl-theme common-slider">
-                        <div>
-                            <div class="common-card">
-                                <div class="img-col">
-                                    <img src="images/blog.jpg" alt="" class="img-fluid">
-                                </div>
-                                <div class="text-col">
-                                    <p class="title">A Glam 25 People Wedding in Aamby...</p>
-                                    <p class="text">
-                                        Indian-American Vineyard Wedding With
-                                        Customised Outfits & Jewellery For Everyone!
-                                    </p>
-                                    <p class="date">09 June 2021</p>
-                                </div>
-                            </div>
+                <div class="col-xs-12 col-sm-12 row reviews-list-col">
+                    <div class="col-xs-12 col-sm-6 single-review">
+                        <div class="review-header">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="img-col">
+                                            <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="text-col">
+                                            <p class="name">Gaurav Kumar</p>
+                                            <p class="grey-text">about 22 hours ago</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div>
-                            <div class="common-card">
-                                <div class="img-col">
-                                    <img src="images/blog2.jpg" alt="" class="img-fluid">
-                                </div>
-                                <div class="text-col">
-                                    <p class="title">A Glam 25 People Wedding in Aamby...</p>
-                                    <p class="text">
-                                        Indian-American Vineyard Wedding With
-                                        Customised Outfits & Jewellery For Everyone!
-                                    </p>
-                                    <p class="date">09 June 2021</p>
-                                </div>
-                            </div>
+                        <div class="review-body">
+                            <p>Review for - <a href="#">FrameFitoor Photography</a></p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
                         </div>
-                        <div>
-                            <div class="common-card">
-                                <div class="img-col">
-                                    <img src="images/blog3.jpg" alt="" class="img-fluid">
-                                </div>
-                                <div class="text-col">
-                                    <p class="title">A Glam 25 People Wedding in Aamby...</p>
-                                    <p class="text">
-                                        Indian-American Vineyard Wedding With
-                                        Customised Outfits & Jewellery For Everyone!
-                                    </p>
-                                    <p class="date">09 June 2021</p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 single-review">
+                        <div class="review-header">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="img-col">
+                                            <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="text-col">
+                                            <p class="name">Gaurav Kumar</p>
+                                            <p class="grey-text">about 22 hours ago</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div>
-                            <div class="common-card">
-                                <div class="img-col">
-                                    <img src="images/real-story3.jpg" alt="" class="img-fluid">
-                                </div>
-                                <div class="text-col">
-                                    <p class="title">A Glam 25 People Wedding in Aamby...</p>
-                                    <p class="text">
-                                        Indian-American Vineyard Wedding With
-                                        Customised Outfits & Jewellery For Everyone!
-                                    </p>
-                                    <p class="date">09 June 2021</p>
-                                </div>
-                            </div>
+                        <div class="review-body">
+                            <p>Review for - <a href="#">FrameFitoor Photography</a></p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
                         </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 single-review">
+                        <div class="review-header">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="img-col">
+                                            <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="text-col">
+                                            <p class="name">Gaurav Kumar</p>
+                                            <p class="grey-text">about 22 hours ago</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="review-body">
+                            <p>Review for - <a href="#">FrameFitoor Photography</a></p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 single-review">
+                        <div class="review-header">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="img-col">
+                                            <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="text-col">
+                                            <p class="name">Gaurav Kumar</p>
+                                            <p class="grey-text">about 22 hours ago</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="review-body">
+                            <p>Review for - <a href="#">FrameFitoor Photography</a></p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="text-only-section" class="grey-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="text-header">
+                        <p class="head">Book Best Wedding Photographers @ Wed.in</p>
+                        <p class="text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                        <br/>
+                        <p class="head small-head">Types of wedding photography</p>
+                        <p class="text">
+                            <strong>Candid Photography</strong> - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                        <p class="text">
+                            <strong>Traditional Photography</strong> - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                        <p class="text">
+                            <strong>Cinematic Photography</strong> - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                        <p class="text">
+                            <strong>Traditional Photography</strong> - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                        <p class="text">
+                            <strong>Pre-wedding photoshoot & video shoot Photography</strong> - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="text-only-section" class="mt-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12">
+                    <div class="text-header">
+                        <p class="head">How to Hire Best Wedding Photographers?</p>
+                        <p class="text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.
+                        </p>
+                        <br/>
+                        <p class="head small-head">Things to keep in mind while booking wedding photographers</p>
+                        <p class="text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                        <p class="head small-head">Things to discuss with the wedding photographer before booking</p>
+                        <p class="text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <br/><br/>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search
+                        </p>
+                        <p class="head small-head">Hire the right wedding photographer</p>
+                        <p class="text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                        <p class="head small-head">Wedding Photography & Pre-Wedding Photography Pricing</p>
+                        <p class="text">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <br/><br/>
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search
+                        </p>
+                        <p class="head small-head">Other Wedding Services We Provide</p>
+                        <ul class="list-unstyled">
+                            <li>
+                                <span class="text-primary">Bridal Designers: </span> Design your trousseau as per the latest fashion trends
+                            </li>
+                            <li>
+                                <span class="text-primary">Choreographers: </span> Learn some new moved for your wedding
+                            </li>
+                            <li>
+                                <span class="text-primary">Wedding Videographers: </span> Design your trousseau as per the latest fashion trends
+                            </li>
+                            <li>
+                                <span class="text-primary">Mehndi Artists: </span> Design your trousseau as per the latest fashion trends
+                            </li>
+                            <li>
+                                <span class="text-primary">Bridal Makeup Artists: </span> Design your trousseau as per the latest fashion trends
+                            </li>
+                            <li>
+                                <span class="text-primary">Wedding Decorators: </span> Design your trousseau as per the latest fashion trends
+                            </li>
+                            <li>
+                                <span class="text-primary">Wedding Invitations: </span> Design your trousseau as per the latest fashion trends
+                            </li>
+                            <li>
+                                <span class="text-primary">Wedding Planners: </span> Design your trousseau as per the latest fashion trends
+                            </li>
+                            <li>
+                                <span class="text-primary">Wedding Venues: </span> Design your trousseau as per the latest fashion trends
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -878,7 +1058,7 @@
                         </ul>
                     </div>
                     <div class="footer-list-col">
-                        <p class="list-header strong"><img src="{{asset('images/heart-icon.png')}}" alt=""> Wedding Decorators</p>
+                        <p class="list-header strong"><img src="images/heart-icon.png" alt=""> Wedding Decorators</p>
                         <ul class="list-inline footer-color-list">
                             <li class="list-inline-item">
                                 <a href="#">Wedding Photographers</a>
@@ -958,7 +1138,7 @@
                         </ul>
                     </div>
                     <div class="footer-list-col">
-                        <p class="list-header strong"><img src="{{asset('images/heart-icon.png')}}" alt=""> Wedding Video graphers
+                        <p class="list-header strong"><img src="images/heart-icon.png" alt=""> Wedding Video graphers
                         </p>
                         <ul class="list-inline footer-color-list">
                             <li class="list-inline-item">
@@ -1204,7 +1384,7 @@
     </footer>
 
 
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
+                    <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/popper.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>

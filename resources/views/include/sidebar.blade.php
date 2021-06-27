@@ -2,8 +2,7 @@
     <div class="sidebar-header">
         <a class="header-brand" href="{{route('dashboard')}}">
             <div class="logo-img">
-                WED
-{{--               <img height="30" src="{{ asset('admin/img/logo_white.png')}}" class="header-brand-img" title="Wed">--}}
+               <img height="30" src="{{ asset('admin/img/logo_white.png')}}" class="header-brand-img" title="wed.in">
             </div>
         </a>
         <div class="sidebar-action"><i class="ik ik-arrow-left-circle"></i></div>

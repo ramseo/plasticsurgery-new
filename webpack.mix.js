@@ -12,7 +12,7 @@ const mix = require('laravel-mix');
  */
 
 var publicAdminPath = "public/admin";
-var publicFrontPath = "public/front";
+var publicRootPath = "public/";
 
 
 // mix.js('resources/assets/admin/js/app.js', publicAdminPath+'/js')
@@ -37,3 +37,9 @@ mix.scripts([
     'public/admin/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js',
 	'public/admin/plugins/screenfull/dist/screenfull.js',
 ], publicAdminPath+'/all.js');
+
+
+
+mix.copyDirectory("resources/assets/css", publicRootPath+"css")
+    .copyDirectory("resources/assets/images", publicRootPath+"images")
+    .copyDirectory("resources/assets/js", publicRootPath+"js");

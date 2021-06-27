@@ -31,12 +31,13 @@
             <div class="container-fluid h-100">
                 <div class="row flex-row h-100">
                     <div class="col-xl-4 col-lg-4 col-md-4 m-auto">
+                        <div class="logo-centered text-center" >
+                            <a href="{{url('/')}}">
+                                <img height="40" src="{{ asset('images/logo.png') }}" alt="wed.in" >
+                            </a>
+                        </div>
                         <div class="authentication-form mx-auto">
-                            <div class="logo-centered">
-                                <a href="http://radmin.rakibhstu.com">
-{{--                                    <img height="40" src="{{ asset('img/logo.png') }}" alt="RADMIN" >--}}
-                                </a>
-                            </div>
+
                             <p>Welcome back! </p>
                             <form method="POST" action="{{ route('login') }}">
                             @csrf
@@ -74,9 +75,9 @@
                                 <div class="sign-btn text-center">
                                     <button class="btn btn-custom">Sign In</button>
                                 </div>
-                                <div class="register">
-                                    <p>{{ __('No account?')}} <a href="{{url('register')}}">{{ __('Sign Up')}}</a></p>
-                                </div>
+{{--                                <div class="register">--}}
+{{--                                    <p>{{ __('No account?')}} <a href="{{url('register')}}">{{ __('Sign Up')}}</a></p>--}}
+{{--                                </div>--}}
 
                             </form>
                         </div>
