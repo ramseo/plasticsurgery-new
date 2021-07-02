@@ -1,9 +1,11 @@
 const mix = require('laravel-mix');
 
-mix.copyDirectory("resources/vendor", "public/vendor");
+mix.copyDirectory("resources/assets/vendor", "public/vendor")
+    .copyDirectory("resources/assets/img", "public/img")
+;
 
 
-mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
+mix.js('resources/assets/js/app.js', 'public/js').postCss('resources/assets/css/app.css', 'public/css', [
     require('postcss-import'),
     require('tailwindcss'),
 ]);
@@ -26,15 +28,15 @@ mix.copy("node_modules/jquery/dist/jquery.min.js", "public/js/jquery.min.js")
  * -----------------------------------------------------------------------------
  */
 // Build Backend SASS
-mix.sass("resources/sass/backend.scss", "public/css/backend-theme.css");
+mix.sass("resources/assets/sass/backend.scss", "public/css/backend-theme.css");
 
 // Backend CSS
 mix.styles(
     [
-        "resources/css/backend-theme.css",
+        "resources/assets/css/backend-theme.css",
         "node_modules/@coreui/icons/css/all.css",
         "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-        "resources/css/custom-backend.css"
+        "resources/assets/css/custom-backend.css"
     ],
     "public/css/backend.css"
 );
@@ -46,8 +48,8 @@ mix.scripts(
         "node_modules/bootstrap/dist/js/bootstrap.min.js",
         "node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js",
         "node_modules/@coreui/coreui/dist/js/coreui.bundle.js",
-        "resources/js/laravel.js",
-        "resources/js/custom-backend.js"
+        "resources/assets/js/laravel.js",
+        "resources/assets/js/custom-backend.js"
     ],
     "public/js/backend.js"
 );
@@ -63,7 +65,7 @@ mix.styles(
     [
         "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
         "public/vendor/impact-design/front/css/front.css",
-        "resources/css/custom-frontend.css",
+        "resources/assets/css/custom-frontend.css",
     ],
     "public/css/frontend.css"
 );
@@ -81,7 +83,7 @@ mix.scripts(
         "node_modules/jarallax/dist/jarallax.min.js",
         "node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js",
         "public/vendor/impact-design/front/assets/js/front.js",
-        "resources/js/custom-frontend.js"
+        "resources/assets/js/custom-frontend.js"
     ],
     "public/js/frontend.js"
 );
@@ -92,7 +94,7 @@ mix.styles(
     [
         "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
         "public/vendor/impact-design/dashboard/css/dashboard.css",
-        "resources/css/custom-dashboard.css",
+        "resources/assets/css/custom-dashboard.css",
     ],
     "public/css/dashboard.css"
 );
@@ -109,7 +111,7 @@ mix.scripts(
         "public/vendor/impact-design/dashboard/assets/vendor/chart.js/dist/Chart.min.js",
         "public/vendor/impact-design/dashboard/assets/vendor/chart.js/dist/Chart.extension.js",
         "public/vendor/impact-design/dashboard/assets/js/dashboard.js",
-        "resources/js/custom-dashboard.js"
+        "resources/assets/js/custom-dashboard.js"
     ],
     "public/js/dashboard.js"
 );
