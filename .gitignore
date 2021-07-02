@@ -1,5 +1,4 @@
 /node_modules
-
 /storage/*.key
 /vendor
 .env
@@ -12,9 +11,9 @@ yarn-error.log
 .php_cs.cache
 .idea
 
-/public
-!/public/index.php
-!/public/.htaccess
+#public/
+!public/index.php
+!public/.htaccess
 
 /storage
 !/storage/app/public/.gitignore
