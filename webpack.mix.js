@@ -1,5 +1,8 @@
 const mix = require('laravel-mix');
 
+mix.copyDirectory("resources/vendor", "public/vendor");
+
+
 mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
     require('postcss-import'),
     require('tailwindcss'),
@@ -28,7 +31,7 @@ mix.sass("resources/sass/backend.scss", "public/css/backend-theme.css");
 // Backend CSS
 mix.styles(
     [
-        "public/css/backend-theme.css",
+        "resources/css/backend-theme.css",
         "node_modules/@coreui/icons/css/all.css",
         "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
         "resources/css/custom-backend.css"
