@@ -11,15 +11,15 @@ yarn-error.log
 .php_cs.cache
 .idea
 
-#public/
+/public/
 !public/index.php
 !public/.htaccess
 
-/storage
-!/storage/app/public/.gitignore
-!/storage/debugbar/.gitignore
-!/storage/framework/cache/.gitignore
-!/storage/framework/sessions/.gitignore
-!/storage/framework/testing/.gitignore
-!/storage/framework/views/.gitignore
-!/storage/logs/.gitignore
+#/storage
+#!/storage/app/public/.gitignore
+#!/storage/debugbar/.gitignore
+#!/storage/framework/cache/.gitignore
+#!/storage/framework/sessions/.gitignore
+#!/storage/framework/testing/.gitignore
+#!/storage/framework/views/.gitignore
+#!/storage/logs/.gitignore
