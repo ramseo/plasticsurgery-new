@@ -14,15 +14,15 @@
     @include('frontend.includes.meta')
 
     <!-- Shortcut Icon -->
-    <link rel="shortcut icon" href="{{asset('img/favicon.png')}}">
-    <link rel="icon" type="image/ico" href="{{asset('img/favicon.png')}}" />
+    <link rel="shortcut icon" href="{{asset('favicon.png')}}">
+    <link rel="icon" type="image/ico" href="{{asset('favicon.png')}}" />
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @stack('before-styles')
 
-    <link rel="stylesheet" href="{{ mix('css/frontend.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/wed.css') }}">
 
     @stack('after-styles')
 
@@ -36,7 +36,7 @@
     <x-preloader />
 
     <main>
-        @yield('content')
+{{--        @yield('content')--}}
     </main>
 
     @include('frontend.includes.footer')
@@ -46,7 +46,7 @@
 <!-- Scripts -->
 @stack('before-scripts')
 
-<script src="{{ mix('js/frontend.js') }}"></script>
+<script src="{{ mix('js/wed.js') }}"></script>
 
 @stack('after-scripts')
 

@@ -2,7 +2,7 @@ const mix = require('laravel-mix');
 
 mix.copyDirectory("resources/assets/vendor", "public/vendor")
     .copyDirectory("resources/assets/img", "public/img")
-;
+    .copyDirectory("resources/theme/images", "public/images");
 
 
 mix.js('resources/assets/js/app.js', 'public/js').postCss('resources/assets/css/app.css', 'public/css', [
@@ -33,7 +33,7 @@ mix.sass("resources/assets/sass/backend.scss", "public/css/backend-theme.css");
 // Backend CSS
 mix.styles(
     [
-        "resources/assets/css/backend-theme.css",
+        "public/css/backend-theme.css",
         "node_modules/@coreui/icons/css/all.css",
         "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
         "resources/assets/css/custom-backend.css"
@@ -65,9 +65,13 @@ mix.styles(
     [
         "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
         "public/vendor/impact-design/front/css/front.css",
-        "resources/assets/css/custom-frontend.css",
+        "resources/theme/css/justifiedGallery.min.css",
+        "resources/theme/css/owl.carousel.min.css",
+        "resources/theme/css/owl.theme.default.min.css",
+        "resources/theme/css/responsive.css",
+        "resources/theme/css/style.css",
     ],
-    "public/css/frontend.css"
+    "public/css/wed.css"
 );
 
 // frontend js
@@ -77,15 +81,16 @@ mix.scripts(
         "node_modules/popper.js/dist/umd/popper.min.js",
         "node_modules/bootstrap/dist/js/bootstrap.min.js",
         "node_modules/headroom.js/dist/headroom.min.js",
-
         "node_modules/onscreen/dist/on-screen.umd.min.js",
         "node_modules/waypoints/lib/jquery.waypoints.min.js",
         "node_modules/jarallax/dist/jarallax.min.js",
         "node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js",
         "public/vendor/impact-design/front/assets/js/front.js",
-        "resources/assets/js/custom-frontend.js"
+        "resources/theme/js/jquery.justifiedGallery.min.js",
+        "resources/theme/js/owl.carousel.min.js",
+        "resources/theme/js/custom.js"
     ],
-    "public/js/frontend.js"
+    "public/js/wed.js"
 );
 
 

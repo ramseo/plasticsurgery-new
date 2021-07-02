@@ -1,0 +1,62 @@
+@media(min-width: 1200px) and (max-width: 1700px){
+    body {
+        font-size: 15px;
+    }
+    .search-header .head {
+        font-size: 70px;
+    }
+    .search-header .text {
+        font-size: 35px;
+    }
+    .search-form-col .form-control, .search-form-col .btn {
+        height: 50px;
+    }
+    .search-form-col .btn {
+        font-size: 17px;
+    }
+    .common-heading .shadow-text {
+        font-size: 90px;
+        line-height: 80px;
+    }
+    .common-heading .head {
+        font-size: 37px;
+        margin: -50px 0 0 0;
+    }
+    .single-category-col .head {
+        font-size: 20px;
+    }
+    .common-card .title {
+        font-size: 16px;
+    }
+    .common-card .text-col .text {
+        font-size: 14px;
+    }
+    .vendor-card .price span {
+        font-size: 18px;
+    }
+    .common-slider .owl-nav button {
+        height: 105px;
+        width: 105px;
+    }
+    .common-slider .owl-nav .owl-prev {
+        left: -55px;
+    }
+    .common-slider .owl-nav .owl-next {
+        right: -55px;
+    }
+    .footer-head {
+        font-size: 32px;
+    }
+    .footer-col img {
+        max-width: 200px;
+    }
+    .footer-text-col .footer-bold {
+        font-size: 16px;
+    }
+    #footer {
+        font-size: 14px;
+    }
+    .btn {
+        font-size: 14px;
+    }
+}

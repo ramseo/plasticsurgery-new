@@ -18,6 +18,27 @@ class FrontendController extends Controller
         return view('frontend.index', compact('body_class'));
     }
 
+    public function home()
+    {
+        $body_class = '';
+
+        return view('frontend.home', compact('body_class'));
+    }
+
+    public function vendor()
+    {
+        $body_class = '';
+
+        return view('frontend.vendor', compact('body_class'));
+    }
+
+    public function detail()
+    {
+        $body_class = '';
+
+        return view('frontend.detail', compact('body_class'));
+    }
+
     /**
      * Privacy Policy Page.
      *
