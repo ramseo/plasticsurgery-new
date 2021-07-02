@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('frontend.layouts.app')
 
-<head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+@section('title') {{app_name()}} @endsection
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
-        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/justifiedGallery.min.css')}}">
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-        <script src="{{ asset('js/fontawesome.js') }}"></script>
-
-{{--        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>--}}
-    </head>
-
-    <body>
+@section('content')
     <header id="header">
         <div class="container-fluid">
             <div class="row">
@@ -1792,43 +1775,40 @@
     </footer>
 
 
-    <script src="{{ asset('js/jquery.min.js') }}"></script>
-    <script src="{{ asset('js/popper.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+@endsection
 
-    <script src="{{ asset('js/jquery.justifiedGallery.min.js')}}"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('#storySlider').owlCarousel({
-                loop: true,
-                margin: 20,
-                nav: true,
-                items: 3,
-                dots: false,
-                autoplay: 3000
-            });
-            $('#blogsSlider').owlCarousel({
-                loop: true,
-                margin: 20,
-                nav: true,
-                items: 3,
-                dots: false,
-                autoplay: 2000
-            });
-            $('#vendorsSlider').owlCarousel({
-                loop: true,
-                margin: 20,
-                nav: true,
-                items: 3,
-                dots: false,
-                autoplay: 4000
-            });
-            var options = {minMargin: 10, maxMargin: 35, itemSelector: ".item"};
-            $(".containerCollage").justifiedGallery();
+<!-- Scripts -->
+@stack('before-scripts')
+@parent
+<script>
+    $(document).ready(function () {
+        $('#storySlider').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            items: 3,
+            dots: false,
+            autoplay: 3000
         });
-    </script>
-    </body>
-</html>
+        $('#blogsSlider').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            items: 3,
+            dots: false,
+            autoplay: 2000
+        });
+        $('#vendorsSlider').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            items: 3,
+            dots: false,
+            autoplay: 4000
+        });
+        var options = {minMargin: 10, maxMargin: 35, itemSelector: ".item"};
+        $(".containerCollage").justifiedGallery();
+    });
+</script>
+@stack('after-scripts')
 
