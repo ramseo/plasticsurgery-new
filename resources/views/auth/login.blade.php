@@ -1,96 +1,121 @@
-<!doctype html>
-<html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Login | Laravel Admin Starter Kit - Radmin</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('auth.layout')
 
-        <link rel="icon" href="{{ asset('favicon.png') }}" type="image/x-icon" />
+@section('title') @lang('Login') @endsection
 
-        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
+@section('content')
 
-        <link rel="stylesheet" href="{{ asset('admin/plugins/bootstrap/dist/css/bootstrap.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('admin/plugins/fontawesome-free/css/all.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('admin/plugins/ionicons/dist/css/ionicons.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('admin/plugins/icon-kit/dist/css/iconkit.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('admin/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}">
-        <link rel="stylesheet" href="{{ asset('admin/dist/css/theme.min.css') }}">
-        <link rel="stylesheet" href="{{ asset('admin/css/style.css') }}">
-        <script src="{{ asset('admin/src/js/vendor/modernizr-2.8.3.min.js') }}"></script>
-    </head>
+<div class="main-content">
 
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <div class="auth-wrapper">
-            <div class="container-fluid h-100">
-                <div class="row flex-row h-100">
-                    <div class="col-xl-4 col-lg-4 col-md-4 m-auto">
-                        <div class="logo-centered text-center" >
-                            <a href="{{url('/')}}">
-                                <img height="40" src="{{ asset('images/logo.png') }}" alt="wed.in" >
-                            </a>
-                        </div>
-                        <div class="authentication-form mx-auto">
-
-                            <p>Welcome back! </p>
-                            <form method="POST" action="{{ route('login') }}">
-                            @csrf
-                                <div class="form-group">
-                                    <input id="email" type="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                    <i class="ik ik-user"></i>
-                                    @error('email')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                                <div class="form-group">
-                                    <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required>
-                                    <i class="ik ik-lock"></i>
-                                    @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                                </div>
-                                <div class="row">
-                                    <div class="col text-left">
-                                        <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="item_checkbox" name="item_checkbox" value="option1">
-                                            <span class="custom-control-label">&nbsp;Remember Me</span>
-                                        </label>
-                                    </div>
-                                    <div class="col text-right">
-                                        <a class="btn text-danger" href="{{url('password/forget')}}">
-                                            {{ __('Forgot Password?') }}
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="sign-btn text-center">
-                                    <button class="btn btn-custom">Sign In</button>
-                                </div>
-{{--                                <div class="register">--}}
-{{--                                    <p>{{ __('No account?')}} <a href="{{url('register')}}">{{ __('Sign Up')}}</a></p>--}}
-{{--                                </div>--}}
-
-                            </form>
-                        </div>
+    <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
+        <div class="container">
+            <div class="header-body text-center mb-7">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-lg-6 col-md-8 px-5">
+                        <h1 class="text-white">@lang('Welcome')</h1>
+                        <p class="text-lead text-white">
+                            @lang("Use these awesome forms to login or create new account.")
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="separator separator-bottom separator-skew zindex-100">
+            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+    </div>
 
-        <script src="{{ asset('admin/src/js/vendor/jquery-3.3.1.min.js') }}"></script>
-        <script src="{{ asset('admin/plugins/popper.js/dist/umd/popper.min.js') }}"></script>
-        <script src="{{ asset('admin/plugins/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-        <script src="{{ asset('admin/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js') }}"></script>
-        <script src="{{ asset('admin/plugins/screenfull/dist/screenfull.js') }}"></script>
+    <div class="container mt--9 pb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="card bg-secondary border border-soft">
 
-    </body>
-</html>
+                    @include('auth.social_login_buttons')
+
+                    <div class="card-body px-lg-5 py-lg-5">
+                        <div class="text-center text-muted mb-4">
+                            <small>Sign in with credentials</small>
+                        </div>
+
+                        @include('flash::message')
+
+                        @if ($errors->any())
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <p>
+                                <i class="fas fa-exclamation-triangle"></i> @lang('Please fix the following errors & try again!')
+                            </p>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        @endif
+
+                        <form role="form" method="POST" action="{{ route('login') }}">
+                            @csrf
+
+                            <!-- redirectTo URL -->
+                            <input type="hidden" name="redirectTo" value="{{ request()->redirectTo }}">
+
+                            <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                    </div>
+                                    <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="{{ __('E-Mail Address') }}" aria-label="email" aria-describedby="input-email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group input-group-merge input-group-alternative">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="@lang('Password')" aria-label="@lang('Password')" aria-describedby="input-password" required>
+                                </div>
+                            </div>
+                            <div class="row my-4">
+                                <div class="col-12">
+                                    <div class="custom-control custom-control-alternative custom-checkbox">
+                                        <input class="custom-control-input" name="remember" id="remember" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
+                                        <label class="custom-control-label" for="remember">
+                                            <span class="text-muted">
+                                                Remember my login
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary mt-2">
+                                    @lang('Submit')
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <a href="{{ route('password.request') }}" class="text-gray">
+                            <small>{{ __('Forgot Your Password?') }}</small>
+                        </a>
+                    </div>
+                    @if (Route::has('register'))
+                    <div class="col-6 text-right">
+                        <a href="{{ route('register') }}" class="text-gray">
+                            <small>Create new account</small>
+                        </a>
+                    </div>
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection

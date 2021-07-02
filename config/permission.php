@@ -92,12 +92,6 @@ return [
 
     'display_permission_in_exception' => false,
 
-    /*
-     * By default wildcard permission lookups are disabled.
-     */
-
-    'enable_wildcard_permission' => false,
-
     'cache' => [
 
         /*

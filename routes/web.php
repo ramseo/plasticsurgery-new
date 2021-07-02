@@ -1,15 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\Auth\ForgotPasswordController;
-use App\Http\Controllers\Auth\ResetPasswordController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\RolesController;
-use App\Http\Controllers\PermissionController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,69 +10,133 @@ use App\Http\Controllers\PermissionController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () { return view('home'); });
-Route::get('vendor', [HomeController::class, 'vendor'])->name('vendor');
-Route::get('price', [HomeController::class, 'price'])->name('price');
 
-    Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
-    Route::post('login', [LoginController::class, 'login']);
-    Route::post('register', [RegisterController::class, 'register']);
+// Autho Routes
+require __DIR__.'/auth.php';
 
-    Route::get('password/forget', function () {
-        return view('pages.forgot-password');
-    })->name('password.forget');
-    Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
-    Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
-    Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
+// Atom/ RSS Feed Routes
+Route::feeds();
 
+// Language Switch
+Route::get('language/{language}', 'LanguageController@switch')->name('language.switch');
 
-    Route::group(['middleware' => 'auth'], function () {
-        // logout route
-        Route::get('/logout', [LoginController::class, 'logout']);
-        Route::get('/clear-cache', [HomeController::class, 'clearCache']);
+/*
+*
+* Frontend Routes
+*
+* --------------------------------------------------------------------
+*/
+Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
+    Route::get('/', 'FrontendController@index')->name('index');
+    Route::get('home', 'FrontendController@index')->name('home');
+    Route::get('privacy', 'FrontendController@privacy')->name('privacy');
+    Route::get('terms', 'FrontendController@terms')->name('terms');
 
-        // dashboard route
-        Route::get('/dashboard', function () {
-            return view('pages.dashboard');
-        })->name('dashboard');
+    Route::group(['middleware' => ['auth']], function () {
+        /*
+        *
+        *  Users Routes
+        *
+        * ---------------------------------------------------------------------
+        */
+        $module_name = 'users';
+        $controller_name = 'UserController';
+        Route::get('profile/{id}', ['as' => "$module_name.profile", 'uses' => "$controller_name@profile"]);
+        Route::get('profile/{id}/edit', ['as' => "$module_name.profileEdit", 'uses' => "$controller_name@profileEdit"]);
+        Route::patch('profile/{id}/edit', ['as' => "$module_name.profileUpdate", 'uses' => "$controller_name@profileUpdate"]);
+        Route::get("$module_name/emailConfirmationResend/{id}", ['as' => "$module_name.emailConfirmationResend", 'uses' => "$controller_name@emailConfirmationResend"]);
+        Route::get('profile/changePassword/{username}', ['as' => "$module_name.changePassword", 'uses' => "$controller_name@changePassword"]);
+        Route::patch('profile/changePassword/{username}', ['as' => "$module_name.changePasswordUpdate", 'uses' => "$controller_name@changePasswordUpdate"]);
+        Route::delete('users/userProviderDestroy', ['as' => 'users.userProviderDestroy', 'uses' => 'UserController@userProviderDestroy']);
+    });
+});
 
-        //only those have manage_user permission will get access
-        Route::group(['middleware' => 'can:manage_user'], function () {
-            Route::get('/users', [UserController::class, 'index']);
-            Route::get('/user/get-list', [UserController::class, 'getUserList']);
-            Route::get('/user/create', [UserController::class, 'create']);
-            Route::post('/user/create', [UserController::class, 'store'])->name('create-user');
-            Route::get('/user/{id}', [UserController::class, 'edit']);
-            Route::post('/user/update', [UserController::class, 'update']);
-            Route::get('/user/delete/{id}', [UserController::class, 'delete']);
-        });
+/*
+*
+* Backend Routes
+* These routes need view-backend permission
+* --------------------------------------------------------------------
+*/
+Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.', 'middleware' => ['auth', 'can:view_backend']], function () {
 
-        //only those have manage_role permission will get access
-        Route::group(['middleware' => 'can:manage_role|manage_user'], function () {
-            Route::get('/roles', [RolesController::class, 'index']);
-            Route::get('/role/get-list', [RolesController::class, 'getRoleList']);
-            Route::post('/role/create', [RolesController::class, 'create']);
-            Route::get('/role/edit/{id}', [RolesController::class, 'edit']);
-            Route::post('/role/update', [RolesController::class, 'update']);
-            Route::get('/role/delete/{id}', [RolesController::class, 'delete']);
-        });
+    /**
+     * Backend Dashboard
+     * Namespaces indicate folder structure.
+     */
+    Route::get('/', 'BackendController@index')->name('home');
+    Route::get('dashboard', 'BackendController@index')->name('dashboard');
 
-        //only those have manage_permission permission will get access
-        Route::group(['middleware' => 'can:manage_permission|manage_user'], function () {
-            Route::get('/permission', [PermissionController::class, 'index']);
-            Route::get('/permission/get-list', [PermissionController::class, 'getPermissionList']);
-            Route::post('/permission/create', [PermissionController::class, 'create']);
-            Route::get('/permission/update', [PermissionController::class, 'update']);
-            Route::get('/permission/delete/{id}', [PermissionController::class, 'delete']);
-        });
-
-        // get permissions
-        Route::get('get-role-permissions-badge', [PermissionController::class, 'getPermissionBadgeByRole']);
-
-
+    /*
+     *
+     *  Settings Routes
+     *
+     * ---------------------------------------------------------------------
+     */
+    Route::group(['middleware' => ['permission:edit_settings']], function () {
+        $module_name = 'settings';
+        $controller_name = 'SettingController';
+        Route::get("$module_name", "$controller_name@index")->name("$module_name");
+        Route::post("$module_name", "$controller_name@store")->name("$module_name.store");
     });
 
+    /*
+    *
+    *  Notification Routes
+    *
+    * ---------------------------------------------------------------------
+    */
+    $module_name = 'notifications';
+    $controller_name = 'NotificationsController';
+    Route::get("$module_name", ['as' => "$module_name.index", 'uses' => "$controller_name@index"]);
+    Route::get("$module_name/markAllAsRead", ['as' => "$module_name.markAllAsRead", 'uses' => "$controller_name@markAllAsRead"]);
+    Route::delete("$module_name/deleteAll", ['as' => "$module_name.deleteAll", 'uses' => "$controller_name@deleteAll"]);
+    Route::get("$module_name/{id}", ['as' => "$module_name.show", 'uses' => "$controller_name@show"]);
 
-    Route::get('/register', function () {
-        return view('pages.register');
-    });
+    /*
+    *
+    *  Backup Routes
+    *
+    * ---------------------------------------------------------------------
+    */
+    $module_name = 'backups';
+    $controller_name = 'BackupController';
+    Route::get("$module_name", ['as' => "$module_name.index", 'uses' => "$controller_name@index"]);
+    Route::get("$module_name/create", ['as' => "$module_name.create", 'uses' => "$controller_name@create"]);
+    Route::get("$module_name/download/{file_name}", ['as' => "$module_name.download", 'uses' => "$controller_name@download"]);
+    Route::get("$module_name/delete/{file_name}", ['as' => "$module_name.delete", 'uses' => "$controller_name@delete"]);
+
+    /*
+    *
+    *  Roles Routes
+    *
+    * ---------------------------------------------------------------------
+    */
+    $module_name = 'roles';
+    $controller_name = 'RolesController';
+    Route::resource("$module_name", "$controller_name");
+
+    /*
+    *
+    *  Users Routes
+    *
+    * ---------------------------------------------------------------------
+    */
+    $module_name = 'users';
+    $controller_name = 'UserController';
+    Route::get("$module_name/profile/{id}", ['as' => "$module_name.profile", 'uses' => "$controller_name@profile"]);
+    Route::get("$module_name/profile/{id}/edit", ['as' => "$module_name.profileEdit", 'uses' => "$controller_name@profileEdit"]);
+    Route::patch("$module_name/profile/{id}/edit", ['as' => "$module_name.profileUpdate", 'uses' => "$controller_name@profileUpdate"]);
+    Route::get("$module_name/emailConfirmationResend/{id}", ['as' => "$module_name.emailConfirmationResend", 'uses' => "$controller_name@emailConfirmationResend"]);
+    Route::delete("$module_name/userProviderDestroy", ['as' => "$module_name.userProviderDestroy", 'uses' => "$controller_name@userProviderDestroy"]);
+    Route::get("$module_name/profile/changeProfilePassword/{id}", ['as' => "$module_name.changeProfilePassword", 'uses' => "$controller_name@changeProfilePassword"]);
+    Route::patch("$module_name/profile/changeProfilePassword/{id}", ['as' => "$module_name.changeProfilePasswordUpdate", 'uses' => "$controller_name@changeProfilePasswordUpdate"]);
+    Route::get("$module_name/changePassword/{id}", ['as' => "$module_name.changePassword", 'uses' => "$controller_name@changePassword"]);
+    Route::patch("$module_name/changePassword/{id}", ['as' => "$module_name.changePasswordUpdate", 'uses' => "$controller_name@changePasswordUpdate"]);
+    Route::get("$module_name/trashed", ['as' => "$module_name.trashed", 'uses' => "$controller_name@trashed"]);
+    Route::patch("$module_name/trashed/{id}", ['as' => "$module_name.restore", 'uses' => "$controller_name@restore"]);
+    Route::get("$module_name/index_data", ['as' => "$module_name.index_data", 'uses' => "$controller_name@index_data"]);
+    Route::get("$module_name/index_list", ['as' => "$module_name.index_list", 'uses' => "$controller_name@index_list"]);
+    Route::resource("$module_name", "$controller_name");
+    Route::patch("$module_name/{id}/block", ['as' => "$module_name.block", 'uses' => "$controller_name@block", 'middleware' => ['permission:block_users']]);
+    Route::patch("$module_name/{id}/unblock", ['as' => "$module_name.unblock", 'uses' => "$controller_name@unblock", 'middleware' => ['permission:block_users']]);
+});
