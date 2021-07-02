@@ -12,55 +12,59 @@
     </ul>
 
     <ul class="c-header-nav ml-auto mr-4">
-        <li class="c-header-nav-item dropdown d-md-down-none mx-2">
-            <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <i class="c-icon cil-language"></i>&nbsp; {{strtoupper(App::getLocale())}}
-            </a>
-            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg pt-0">
-                <div class="dropdown-header bg-light">
-                    <strong>@lang('Change language')</strong>
-                </div>
+{{--        <li class="c-header-nav-item dropdown d-md-down-none mx-2">--}}
+{{--            <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">--}}
+{{--                <i class="c-icon cil-language"></i>&nbsp; {{strtoupper(App::getLocale())}}--}}
+{{--            </a>--}}
+{{--            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg pt-0">--}}
+{{--                <div class="dropdown-header bg-light">--}}
+{{--                    <strong>@lang('Change language')</strong>--}}
+{{--                </div>--}}
 
-                <a class="dropdown-item" href="{{route("language.switch", "bn")}}">
-                    বাংলা (BN)
-                </a>
-                <a class="dropdown-item" href="{{route("language.switch", "en")}}">
-                    English (EN)
-                </a>
-            </div>
-        </li>
-        <li class="c-header-nav-item dropdown d-md-down-none mx-2">
-            <?php
-            $notifications = optional(auth()->user())->unreadNotifications;
-            $notifications_count = optional($notifications)->count();
-            $notifications_latest = optional($notifications)->take(5);
-            ?>
-            <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <i class="c-icon cil-bell"></i>&nbsp;
-                @if($notifications_count)<span class="badge badge-pill badge-danger">{{$notifications_count}}</span>@endif
-            </a>
-            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg pt-0">
-                <div class="dropdown-header bg-light">
-                    <strong>@lang("You have :count notifications", ['count'=>$notifications_count])</strong>
-                </div>
-                @if($notifications_latest)
-                @foreach($notifications_latest as $notification)
-                @php
-                $notification_text = isset($notification->data['title'])? $notification->data['title'] : $notification->data['module'];
-                @endphp
-                <a class="dropdown-item" href="{{route("backend.notifications.show", $notification)}}">
-                    <i class="c-icon {{isset($notification->data['icon'])? $notification->data['icon'] : 'cil-bullhorn'}} "></i>&nbsp;{{$notification_text}}
-                </a>
-                @endforeach
-                @endif
-            </div>
-        </li>
+{{--                <a class="dropdown-item" href="{{route("language.switch", "bn")}}">--}}
+{{--                    বাংলা (BN)--}}
+{{--                </a>--}}
+{{--                <a class="dropdown-item" href="{{route("language.switch", "en")}}">--}}
+{{--                    English (EN)--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--        </li>--}}
+
+
+
+{{--        <li class="c-header-nav-item dropdown d-md-down-none mx-2">--}}
+{{--            <?php--}}
+{{--            $notifications = optional(auth()->user())->unreadNotifications;--}}
+{{--            $notifications_count = optional($notifications)->count();--}}
+{{--            $notifications_latest = optional($notifications)->take(5);--}}
+{{--            ?>--}}
+{{--            <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">--}}
+{{--                <i class="c-icon cil-bell"></i>&nbsp;--}}
+{{--                @if($notifications_count)<span class="badge badge-pill badge-danger">{{$notifications_count}}</span>@endif--}}
+{{--            </a>--}}
+{{--            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg pt-0">--}}
+{{--                <div class="dropdown-header bg-light">--}}
+{{--                    <strong>@lang("You have :count notifications", ['count'=>$notifications_count])</strong>--}}
+{{--                </div>--}}
+{{--                @if($notifications_latest)--}}
+{{--                @foreach($notifications_latest as $notification)--}}
+{{--                @php--}}
+{{--                $notification_text = isset($notification->data['title'])? $notification->data['title'] : $notification->data['module'];--}}
+{{--                @endphp--}}
+{{--                <a class="dropdown-item" href="{{route("backend.notifications.show", $notification)}}">--}}
+{{--                    <i class="c-icon {{isset($notification->data['icon'])? $notification->data['icon'] : 'cil-bullhorn'}} "></i>&nbsp;{{$notification_text}}--}}
+{{--                </a>--}}
+{{--                @endforeach--}}
+{{--                @endif--}}
+{{--            </div>--}}
+{{--        </li>--}}
 
         <li class="c-header-nav-item dropdown">
             <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <div class="c-avatar">
-                    <img class="c-avatar-img" src="{{ asset(auth()->user()->avatar) }}" alt="{{ auth()->user()->name }}">
-                </div>
+                <i class="fa fa-user">Admin</i>
+                {{--                <div class="c-avatar">--}}
+                {{--                    <img class="c-avatar-img" src="{{ asset(auth()->user()->avatar) }}" alt="{{ auth()->user()->name }}">--}}
+                {{--                </div>--}}
             </a>
             <div class="dropdown-menu dropdown-menu-right pt-0">
                 <div class="dropdown-header bg-light py-2"><strong>@lang('Account')</strong></div>
@@ -69,14 +73,14 @@
                     <i class="c-icon cil-user"></i>&nbsp;
                     {{ Auth::user()->name }}
                 </a>
-                <a class="dropdown-item" href="{{route('backend.users.profile', Auth::user()->id)}}">
-                    <i class="c-icon cil-at"></i>&nbsp;
-                    {{ Auth::user()->email }}
-                </a>
-                <a class="dropdown-item" href="{{ route("backend.notifications.index") }}">
-                    <i class="c-icon cil-bell"></i>&nbsp;
-                    @lang('Notifications') <span class="badge badge-danger ml-auto">{{$notifications_count}}</span>
-                </a>
+                {{--                <a class="dropdown-item" href="{{route('backend.users.profile', Auth::user()->id)}}">--}}
+                {{--                    <i class="c-icon cil-at"></i>&nbsp;--}}
+                {{--                    {{ Auth::user()->email }}--}}
+                {{--                </a>--}}
+                {{--                <a class="dropdown-item" href="{{ route("backend.notifications.index") }}">--}}
+                {{--                    <i class="c-icon cil-bell"></i>&nbsp;--}}
+                {{--                    @lang('Notifications') <span class="badge badge-danger ml-auto">{{$notifications_count}}</span>--}}
+                {{--                </a>--}}
 
                 <div class="dropdown-header bg-light py-2"><strong>@lang('Settings')</strong></div>
 
@@ -88,18 +92,18 @@
             </div>
         </li>
     </ul>
-    <div class="c-subheader justify-content-between px-3">
-        <ol class="breadcrumb border-0 m-0">
-            @yield('breadcrumbs')
-        </ol>
-        <div class="c-subheader-nav d-md-down-none mfe-2">
-            <span class="c-subheader-nav-link">
-                <div class="btn-group" role="group" aria-label="Button group">
-                    {{ date_today() }}&nbsp;<div id="liveClock" class="clock" onload="showTime()"></div>
-                </div>
-            </span>
-        </div>
-    </div>
+{{--    <div class="c-subheader justify-content-between px-3">--}}
+{{--        <ol class="breadcrumb border-0 m-0">--}}
+{{--            @yield('breadcrumbs')--}}
+{{--        </ol>--}}
+{{--        <div class="c-subheader-nav d-md-down-none mfe-2">--}}
+{{--            <span class="c-subheader-nav-link">--}}
+{{--                <div class="btn-group" role="group" aria-label="Button group">--}}
+{{--                    {{ date_today() }}&nbsp;<div id="liveClock" class="clock" onload="showTime()"></div>--}}
+{{--                </div>--}}
+{{--            </span>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 </header>
 
 @push('after-scripts')
