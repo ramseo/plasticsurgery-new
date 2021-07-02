@@ -36,7 +36,7 @@
     <x-preloader />
 
     <main>
-{{--        @yield('content')--}}
+        @yield('content')
     </main>
 
     @include('frontend.includes.footer')

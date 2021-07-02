@@ -1,5 +1,4 @@
 /node_modules
-/storage/*.key
 /vendor
 .env
 .env.backup
@@ -16,6 +15,7 @@ yarn-error.log
 !public/.htaccess
 
 /storage
+/storage/*.key
 !/storage/app/public/.gitignore
 !/storage/debugbar/.gitignore
 !/storage/framework/cache/.gitignore
@@ -23,3 +23,6 @@ yarn-error.log
 !/storage/framework/testing/.gitignore
 !/storage/framework/views/.gitignore
 !/storage/logs/.gitignore
+
+composer.lock
+package-lock.json
