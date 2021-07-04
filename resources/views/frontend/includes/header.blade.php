@@ -23,7 +23,7 @@
                 <ul class="navbar-nav navbar-nav-hover justify-content-center">
                     <li class="nav-item">
                         <a href="{{url('vendor')}}" class="nav-link">
-                            <span class="fas fa-file-alt mr-1"></span> Posts
+                            Vendor
                         </a>
                     </li>
 {{--                    <li class="nav-item dropdown">--}}
