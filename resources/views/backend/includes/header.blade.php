@@ -61,18 +61,20 @@
 
         <li class="c-header-nav-item dropdown">
             <a class="c-header-nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-user">Admin</i>
+                <i class="fa fa-user"></i>
                 {{--                <div class="c-avatar">--}}
                 {{--                    <img class="c-avatar-img" src="{{ asset(auth()->user()->avatar) }}" alt="{{ auth()->user()->name }}">--}}
                 {{--                </div>--}}
             </a>
             <div class="dropdown-menu dropdown-menu-right pt-0">
-                <div class="dropdown-header bg-light py-2"><strong>@lang('Account')</strong></div>
+{{--                <div class="dropdown-header bg-light py-2"><strong>@lang('Account')</strong></div>--}}
 
-                <a class="dropdown-item" href="{{route('backend.users.profile', Auth::user()->id)}}">
-                    <i class="c-icon cil-user"></i>&nbsp;
-                    {{ Auth::user()->name }}
-                </a>
+{{--                <a class="dropdown-item" href="{{route('backend.users.profile', Auth::user()->id)}}">--}}
+{{--                    <i class="c-icon cil-user"></i>&nbsp;--}}
+{{--                    {{ Auth::user()->name }}--}}
+{{--                </a>--}}
+
+
                 {{--                <a class="dropdown-item" href="{{route('backend.users.profile', Auth::user()->id)}}">--}}
                 {{--                    <i class="c-icon cil-at"></i>&nbsp;--}}
                 {{--                    {{ Auth::user()->email }}--}}
@@ -82,7 +84,7 @@
                 {{--                    @lang('Notifications') <span class="badge badge-danger ml-auto">{{$notifications_count}}</span>--}}
                 {{--                </a>--}}
 
-                <div class="dropdown-header bg-light py-2"><strong>@lang('Settings')</strong></div>
+{{--                <div class="dropdown-header bg-light py-2"><strong>@lang('Settings')</strong></div>--}}
 
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="c-icon cil-account-logout"></i>&nbsp;

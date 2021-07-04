@@ -19,7 +19,7 @@ class GenerateMenus
         \Menu::make('admin_sidebar', function ($menu) {
 
             // Articles Dropdown
-            $articles_menu = $menu->add('<i class="c-sidebar-nav-icon fas fa-file-alt"></i> Article', [
+            $articles_menu = $menu->add('<i class="c-sidebar-nav-icon fas fa-file-alt"></i> Blog', [
                 'class' => 'c-sidebar-nav-dropdown',
             ])
             ->data([
