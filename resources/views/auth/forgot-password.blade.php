@@ -6,7 +6,7 @@
 
 <div class="main-content">
 
-    <div class="header bg-gradient-primary py-7 py-lg-8">
+    <div class="header bg-gradient-theme py-7 py-lg-8">
         <div class="container">
             <div class="header-body text-center mb-6">
                 <div class="row justify-content-center">

@@ -6,7 +6,7 @@
 
 <div class="main-content">
 
-    <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
+    <div class="header bg-gradient-theme py-7 py-lg-8 pt-lg-9">
         <div class="container">
             <div class="header-body text-center mb-7">
                 <div class="row justify-content-center">
@@ -31,7 +31,7 @@
             <div class="col-lg-6 col-md-8">
                 <div class="card bg-secondary border border-soft">
 
-                    @include('auth.social_login_buttons')
+{{--                    @include('auth.social_login_buttons')--}}
 
                     <div class="card-body px-lg-5 py-lg-5">
                         <div class="text-center text-muted mb-4">
