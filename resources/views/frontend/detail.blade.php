@@ -1777,9 +1777,7 @@
 
 @endsection
 
-<!-- Scripts -->
-@stack('before-scripts')
-@parent
+@push('after-scripts')
 <script>
     $(document).ready(function () {
         $('#storySlider').owlCarousel({
@@ -1810,5 +1808,6 @@
         $(".containerCollage").justifiedGallery();
     });
 </script>
-@stack('after-scripts')
+@endpush
+
 

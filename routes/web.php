@@ -29,6 +29,8 @@ Route::get('language/{language}', 'LanguageController@switch')->name('language.s
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('/', 'FrontendController@index')->name('index');
     Route::get('home', 'FrontendController@index')->name('home');
+    Route::get('listing', 'FrontendController@listing')->name('listing');
+    Route::get('detail', 'FrontendController@detail')->name('detail');
     Route::get('privacy', 'FrontendController@privacy')->name('privacy');
     Route::get('terms', 'FrontendController@terms')->name('terms');
 

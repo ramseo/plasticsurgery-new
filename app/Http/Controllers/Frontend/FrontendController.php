@@ -13,6 +13,7 @@ class FrontendController extends Controller
      */
     public function index()
     {
+
         $body_class = '';
 
         return view('frontend.index', compact('body_class'));
@@ -20,12 +21,13 @@ class FrontendController extends Controller
 
     public function home()
     {
+
         $body_class = '';
 
         return view('frontend.home', compact('body_class'));
     }
 
-    public function vendor()
+    public function listing()
     {
         $body_class = '';
 

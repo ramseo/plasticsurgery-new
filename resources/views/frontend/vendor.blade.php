@@ -3,28 +3,28 @@
 @section('title') {{app_name()}} @endsection
 
 @section('content')
-    <header id="header">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 col-sm-3 header-logo-col">
-                    <a href="{{url('/')}}"><img src="images/logo.png" alt="" class="img-fluid"></a>
-                </div>
-                <div class="col-xs-12 col-sm-9 d-flex header-menu-col">
-                    <ul class="list-inline d-flex site-menu site-main-menu">
-                        <li><a href="{{url('vendor')}}">Vendors</a></li>
-                        <li><a href="{{url('price')}}">Price</a></li>
-                        <li><a href="#">Bride</a></li>
-                        <li><a href="#">Groom</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                    <ul class="list-inline d-flex site-menu user-menu">
-                        <li><a href="#"><img src="images/search.png" alt=""> Search</a></li>
-                        <li><a href="{{url('login')}}"><img src="images/login.png" alt=""> Log in</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
+{{--    <header id="header">--}}
+{{--        <div class="container-fluid">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-xs-12 col-sm-3 header-logo-col">--}}
+{{--                    <a href="{{url('/')}}"><img src="images/logo.png" alt="" class="img-fluid"></a>--}}
+{{--                </div>--}}
+{{--                <div class="col-xs-12 col-sm-9 d-flex header-menu-col">--}}
+{{--                    <ul class="list-inline d-flex site-menu site-main-menu">--}}
+{{--                        <li><a href="{{url('vendor')}}">Vendors</a></li>--}}
+{{--                        <li><a href="{{url('price')}}">Price</a></li>--}}
+{{--                        <li><a href="#">Bride</a></li>--}}
+{{--                        <li><a href="#">Groom</a></li>--}}
+{{--                        <li><a href="#">Blog</a></li>--}}
+{{--                    </ul>--}}
+{{--                    <ul class="list-inline d-flex site-menu user-menu">--}}
+{{--                        <li><a href="#"><img src="images/search.png" alt=""> Search</a></li>--}}
+{{--                        <li><a href="{{url('login')}}"><img src="images/login.png" alt=""> Log in</a></li>--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </header>--}}
 
     <section id="page-banner">
         <div class="container-fluid">
@@ -1371,8 +1371,7 @@
 
 @endsection
 
-@stack('before-scripts')
-@parent
+@push('after-scripts')
 <script>
     $(document).ready(function () {
         $('#storySlider').owlCarousel({
@@ -1401,4 +1400,4 @@
         });
     })
 </script>
-@stack('after-scripts')
+@endpush
