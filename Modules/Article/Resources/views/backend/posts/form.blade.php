@@ -133,24 +133,24 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col">
-        <div class="form-group">
-            <?php
-            $field_name = 'tags_list[]';
-            $field_lable = __("article::$module_name.tags");
-            $field_relation = "tags";
-            $field_placeholder = __("Select an option");
-            $required = "";
-            ?>
-            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-            {{ html()->multiselect($field_name,
-                isset($$module_name_singular)?optional($$module_name_singular->$field_relation)->pluck('name', 'id'):'',
-                isset($$module_name_singular)?optional($$module_name_singular->$field_relation)->pluck('id')->toArray():''
-                )->class('form-control select2-tags')->attributes(["$required"]) }}
-        </div>
-    </div>
-</div>
+{{--<div class="row">--}}
+{{--    <div class="col">--}}
+{{--        <div class="form-group">--}}
+{{--            <?php--}}
+{{--            $field_name = 'tags_list[]';--}}
+{{--            $field_lable = __("article::$module_name.tags");--}}
+{{--            $field_relation = "tags";--}}
+{{--            $field_placeholder = __("Select an option");--}}
+{{--            $required = "";--}}
+{{--            ?>--}}
+{{--            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}--}}
+{{--            {{ html()->multiselect($field_name,--}}
+{{--                isset($$module_name_singular)?optional($$module_name_singular->$field_relation)->pluck('name', 'id'):'',--}}
+{{--                isset($$module_name_singular)?optional($$module_name_singular->$field_relation)->pluck('id')->toArray():''--}}
+{{--                )->class('form-control select2-tags')->attributes(["$required"]) }}--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 <div class="row">
     <div class="col-6">
         <div class="form-group">
