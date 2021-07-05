@@ -434,7 +434,18 @@
             nav: true,
             items: 3,
             dots: false,
-            autoplay: 3000
+            autoplay: 3000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                767: {
+                    items: 2
+                },
+                991: {
+                    items: 3
+                }
+            }
         });
         $('#blogsSlider').owlCarousel({
             loop: true,
@@ -442,7 +453,18 @@
             nav: true,
             items: 3,
             dots: false,
-            autoplay: 2000
+            autoplay: 2000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                767: {
+                    items: 2
+                },
+                991: {
+                    items: 3
+                }
+            }
         });
         $('#vendorsSlider').owlCarousel({
             loop: true,
@@ -450,7 +472,18 @@
             nav: true,
             items: 3,
             dots: false,
-            autoplay: 4000
+            autoplay: 4000,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                767: {
+                    items: 2
+                },
+                991: {
+                    items: 3
+                }
+            }
         });
     })
 </script>
