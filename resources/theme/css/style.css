@@ -48,7 +48,7 @@ a:focus {
     color: white;
 }
 
-#header a {
+#header li>a {
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -907,6 +907,29 @@ strong {
 .photo-album-col .nav-tabs {
     border-bottom: none;
     margin: 0 0 20px 0;
+}
+
+.nav-link img {
+    opacity: 1;
+}
+
+.user-menu .dropdown-menu {
+    left: initial;
+    right: 0;
+    padding: 0;
+}
+
+.user-menu .dropdown-menu .list-group-item .icon {
+    display: none;
+}
+
+.user-menu .dropdown-menu .list-group-item {
+    padding: 6px 15px;
+    border-bottom: solid 1px #efefef;
+}
+
+.preloader {
+    background: #fa4a70 !important;
 }
 
 @media(min-width: 1600px) {

@@ -68,8 +68,8 @@ mix.styles(
         "resources/theme/css/justifiedGallery.min.css",
         "resources/theme/css/owl.carousel.min.css",
         "resources/theme/css/owl.theme.default.min.css",
-        "resources/theme/css/responsive.css",
         "resources/theme/css/style.css",
+        "resources/theme/css/responsive.css"
     ],
     "public/css/wed.css"
 );
