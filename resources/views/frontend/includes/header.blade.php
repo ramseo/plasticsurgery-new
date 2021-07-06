@@ -137,8 +137,29 @@
                 </div>
                 <ul class="navbar-nav navbar-nav-hover justify-content-center">
                     <li class="nav-item">
-                        <a href="{{url('vendor')}}" class="nav-link">
-                            <span class="fas fa-file-alt mr-1"></span> Posts
+                        <a href="{{url('listing')}}" class="nav-link">
+                            Vendors
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{url('detail')}}" class="nav-link">
+                            Details
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Bride
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            Groom
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('frontend.posts.index') }}"  class="nav-link">
+                           Blog
                         </a>
                     </li>
 {{--                    <li class="nav-item dropdown">--}}
@@ -197,16 +218,16 @@
                                             </a>
                                         @endcan
 
-                                        <a href="{{ route('frontend.users.profile', auth()->user()->id) }}"
-                                           class="list-group-item list-group-item-action">
-                                            <span class="icon icon-sm icon-success"><i class="fas fa-user"></i></span>
-                                            <div class="">
-                                            <span class="text-dark d-block">
-                                                {{ Auth::user()->name }}
-                                            </span>
-                                                <span class="small">View profile details!</span>
-                                            </div>
-                                        </a>
+{{--                                        <a href="{{ route('frontend.users.profile', auth()->user()->id) }}"--}}
+{{--                                           class="list-group-item list-group-item-action d-flex align-items-center p-0 py-3 px-lg-4">--}}
+{{--                                            <span class="icon icon-sm icon-success"><i class="fas fa-user"></i></span>--}}
+{{--                                            <div class="">--}}
+{{--                                            <span class="text-dark d-block">--}}
+{{--                                                {{ Auth::user()->name }}--}}
+{{--                                            </span>--}}
+{{--                                                <span class="small">View profile details!</span>--}}
+{{--                                            </div>--}}
+{{--                                        </a>--}}
                                         <a href="{{ route('logout') }}"
                                            class="list-group-item list-group-item-action" onclick="event.preventDefault(); document.getElementById('account-logout-form').submit();">
                                         <span class="icon icon-sm icon-secondary">
@@ -216,7 +237,7 @@
                                             <span class="text-dark d-block">
                                                 Logout
                                             </span>
-                                                <span class="small">Logout from your account!</span>
+{{--                                                <span class="small">Logout from your account!</span>--}}
                                             </div>
                                         </a>
                                         <form id="account-logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -230,7 +251,7 @@
                                             <span class="text-dark d-block">
                                                 Login
                                             </span>
-                                                <span class="small">Login to the application</span>
+{{--                                                <span class="small">Login to the application</span>--}}
                                             </div>
                                         </a>
                                         @if(user_registration())
@@ -241,7 +262,7 @@
                                         </span>
                                                 <div class="">
                                                     <span class="text-dark d-block">Register</span>
-                                                    <span class="small">Join with us!</span>
+{{--                                                    <span class="small">Join with us!</span>--}}
                                                 </div>
                                             </a>
                                         @endif
