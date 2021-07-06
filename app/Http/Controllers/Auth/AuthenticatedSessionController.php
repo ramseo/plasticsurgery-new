@@ -38,19 +38,26 @@ class AuthenticatedSessionController extends Controller
             return redirect($redirectTo);
         }
 
-        $roles = $request->user()->roles[0];
-
-        switch ($roles->name) {
-            case 'super admin':
-                return redirect('/admin/dashboard');
-                break;
-            case 'administrator':
-                return redirect('/vendor');
-                break;
-            default:
-                return redirect(RouteServiceProvider::HOME);
-                break;
+        $roles = $request->user()->roles;
+        if (isset($roles[0])){
+            switch ($roles[0]->name) {
+                case 'super admin':
+                    return redirect('/admin/dashboard');
+                    break;
+                case 'administrator':
+                    return redirect('/vendor');
+                    break;
+                case 'user':
+                    return redirect('/');
+                    break;
+                default:
+                    return redirect(RouteServiceProvider::HOME);
+                    break;
+            }
         }
+
+        return redirect(RouteServiceProvider::HOME);
+
     }
 
     /**
