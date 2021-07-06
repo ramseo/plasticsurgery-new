@@ -47,6 +47,16 @@
 @stack('before-scripts')
 
 <script src="{{ mix('js/wed.js') }}"></script>
+<script>
+    $(document).ready(function(){
+        $('#menuOpener').click(function(){
+            $('.site-main-menu').addClass('active');
+        });
+        $('#menuCloser').click(function(){
+            $('.site-main-menu').removeClass('active');
+        });
+    });
+</script>
 
 @stack('after-scripts')
 

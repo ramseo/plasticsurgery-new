@@ -1,15 +1,17 @@
 <header id="header">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-3 header-logo-col">
+        <div class="row header-main-col">
+            <div class="col-xs-6 col-sm-3 header-logo-col">
+                <span id="menuOpener" style="display: none;"><i class="fa fa-bars"></i></span>
                 <a href="#"><img src="{{asset('images/logo.png')}}" alt="" class="img-fluid"></a>
             </div>
-            <div class="col-xs-12 col-sm-9 d-flex header-menu-col">
+            <div class="col-xs-6 col-sm-9 d-flex header-menu-col">
                 <ul class="list-inline d-flex site-menu site-main-menu">
                     <li><a href="#">Vendors</a></li>
                     <li><a href="#">Bride</a></li>
                     <li><a href="#">Groom</a></li>
                     <li><a href="#">Blog</a></li>
+                    <span id="menuCloser" style="display: none;"><i class="fa fa-times"></i></span>
                 </ul>
                 <ul class="list-inline d-flex site-menu user-menu">
                     <li>
@@ -287,28 +289,3 @@
         </div>
     </nav>
 </header>
-
-
-
-{{--<header id="header">--}}
-{{--    <div class="container-fluid">--}}
-{{--        <div class="row">--}}
-{{--            <div class="col-xs-12 col-sm-3 header-logo-col">--}}
-{{--                <a href="{{url('/')}}"><img src="images/logo.png" alt="" class="img-fluid"></a>--}}
-{{--            </div>--}}
-{{--            <div class="col-xs-12 col-sm-9 d-flex header-menu-col">--}}
-{{--                <ul class="list-inline d-flex site-menu site-main-menu">--}}
-{{--                    <li><a href="{{url('vendor')}}">Vendors</a></li>--}}
-{{--                    <li><a href="#">Bride</a></li>--}}
-{{--                    <li><a href="#">Groom</a></li>--}}
-{{--                    <li><a href="{{ route('frontend.posts.index') }}">Blog</a></li>--}}
-{{--                </ul>--}}
-{{--                <ul class="list-inline d-flex site-menu user-menu">--}}
-{{--                    <li><a href="#"><img src="images/search.png" alt=""> Search</a></li>--}}
-{{--                    <li><a href="{{url('login')}}"><img src="images/login.png" alt=""> Log in</a></li>--}}
-
-{{--                </ul>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</header>--}}
