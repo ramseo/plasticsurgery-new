@@ -7,10 +7,10 @@
             </div>
             <div class="col-xs-6 col-sm-9 d-flex header-menu-col">
                 <ul class="list-inline d-flex site-menu site-main-menu">
-                    <li><a href="#">Vendors</a></li>
-                    <li><a href="#">Bride</a></li>
+                    <li><a href="{{url('listing')}}">Vendors</a></li>
+                    <li><a href="{{url('detail')}}">Bride</a></li>
                     <li><a href="#">Groom</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="{{ route('frontend.posts.index') }}">Blog</a></li>
                     <span id="menuCloser" style="display: none;"><i class="fa fa-times"></i></span>
                 </ul>
                 <ul class="list-inline d-flex site-menu user-menu">
