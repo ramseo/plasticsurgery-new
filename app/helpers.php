@@ -3,6 +3,36 @@
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
+
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+function getData($table, $column=null,$value=null){
+    $data = DB::table($table);
+    if($column!= null) {
+        if (is_array($column)):
+            $data->where($column);
+        else:
+            $data->where(array($column => $value));
+        endif;
+    }
+    return $data->first();
+}
+
+
+function getDataArray($table, $column=null,$value=null){
+    $data = DB::table($table);
+    if($column!= null) {
+        if (is_array($column)):
+            $data->where($column);
+        else:
+            $data->where(array($column => $value));
+        endif;
+    }
+    return $data->get();
+}
+
 /*
  * Global helpers file with misc functions.
  */
