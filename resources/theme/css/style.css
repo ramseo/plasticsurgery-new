@@ -973,6 +973,39 @@ strong {
     background-color: transparent;
 }
 
+.blog-detail-main-col h1 {
+    margin: 0;
+}
+
+article img {
+    margin: 0;
+}
+
+.blog-detail-content-col {
+    margin-top: 20px;
+}
+
+article p,
+article ul li,
+article ol li {
+    font-size: 16px;
+}
+
+.blog-meta {
+    color: #6f6f6f;
+}
+
+.breadcrumb-item.active {
+    color: #fa4a70 !important;
+}
+
+article p,
+article ul,
+article ol,
+article blockquote {
+    margin-bottom: 1rem;
+}
+
 @media(min-width: 1600px) {
     .container-fluid {
         max-width: 1400px;
