@@ -33,6 +33,11 @@ function getDataArray($table, $column=null,$value=null){
     return $data->get();
 }
 
+function getLatestBlogs(){
+    $data = DB::table('posts')->take(5)->orderBy('id', 'desc');
+    return $data->get();
+}
+
 /*
  * Global helpers file with misc functions.
  */

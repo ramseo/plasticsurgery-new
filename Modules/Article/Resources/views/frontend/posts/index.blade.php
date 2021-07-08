@@ -41,7 +41,6 @@
 <section class="listing-section">
     <div class="container-fluid">
         <div class="row">
-
             @foreach ($$module_name as $$module_name_singular)
             @php
                 $details_url = route("frontend.$module_name.show",[encode_id($$module_name_singular->id), $$module_name_singular->slug]);
@@ -57,7 +56,7 @@
                             <!-- {!!isset($$module_name_singular->created_by_alias)? $$module_name_singular->created_by_alias : '<a href="'.route('frontend.users.profile', $$module_name_singular->created_by).'"><h6 class="text-muted small ml-2 mb-0">'.$$module_name_singular->created_by_name.'</h6></a>'!!} -->
                             {{Str::words($$module_name_singular->intro, '15')}}
                         </p>
-                        <p class="date">09 June 2021</p>
+                        <!-- <p class="date">09 June 2021</p> -->
                     </div>
                 </div>
             </div>
