@@ -23,7 +23,7 @@ class GenerateMenus
                 'class' => 'c-sidebar-nav-dropdown',
             ])
             ->data([
-                'order'         => 81,
+                'order'         => 71,
                 'activematches' => [
                     'admin/pages*',
                 ],
@@ -36,11 +36,11 @@ class GenerateMenus
 
             // Submenu: Pages
             $cms_menu->add('<i class="c-sidebar-nav-icon fas fa-file-alt"></i> Pages', [
-                'route' => 'backend.posts.index',
+                'route' => 'backend.pages.index',
                 'class' => 'c-sidebar-nav-item',
             ])
             ->data([
-                'order'         => 82,
+                'order'         => 72,
                 'activematches' => 'admin/pages*',
                 'permission'    => ['edit_pages'],
             ])

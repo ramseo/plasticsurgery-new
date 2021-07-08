@@ -25,18 +25,18 @@
         </div>
     </div>
 
-    <div class="col-4">
-        <div class="form-group">
-            <?php
-            $field_name = 'created_by_alias';
-            $field_lable = __("cms::$module_name.$field_name");
-            $field_placeholder = "Hide Author User's Name and use Alias";
-            $required = "";
-            ?>
-            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-            {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
-        </div>
-    </div>
+{{--    <div class="col-4">--}}
+{{--        <div class="form-group">--}}
+{{--            <?php--}}
+{{--            $field_name = 'created_by_alias';--}}
+{{--            $field_lable = __("cms::$module_name.$field_name");--}}
+{{--            $field_placeholder = "Hide Author User's Name and use Alias";--}}
+{{--            $required = "";--}}
+{{--            ?>--}}
+{{--            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}--}}
+{{--            {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}--}}
+{{--        </div>--}}
+{{--    </div>--}}
 </div>
 <div class="row">
     <div class="col-12">
@@ -86,36 +86,36 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-4">
-        <div class="form-group">
-            <?php
-            $field_name = 'category_id';
-            $field_lable = __("cms::$module_name.$field_name");
-            $field_relation = "category";
-            $field_placeholder = __("Select an option");
-            $required = "required";
-            ?>
-            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-            {{ html()->select($field_name, isset($$module_name_singular)?optional($$module_name_singular->$field_relation)->pluck('name', 'id'):'')->placeholder($field_placeholder)->class('form-control select2-category')->attributes(["$required"]) }}
-        </div>
-    </div>
-    <div class="col-4">
-        <div class="form-group">
-            <?php
-            $field_name = 'type';
-            $field_lable = __("cms::$module_name.$field_name");
-            $field_placeholder = __("Select an option");
-            $required = "required";
-            $select_options = [
-                'Article'=>'Article',
-                'Feature'=>'Feature',
-                'News'=>'News',
-            ];
-            ?>
-            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-            {{ html()->select($field_name, $select_options)->placeholder($field_placeholder)->class('form-control select2')->attributes(["$required"]) }}
-        </div>
-    </div>
+{{--    <div class="col-4">--}}
+{{--        <div class="form-group">--}}
+{{--            <?php--}}
+{{--            $field_name = 'category_id';--}}
+{{--            $field_lable = __("cms::$module_name.$field_name");--}}
+{{--            $field_relation = "category";--}}
+{{--            $field_placeholder = __("Select an option");--}}
+{{--            $required = "required";--}}
+{{--            ?>--}}
+{{--            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}--}}
+{{--            {{ html()->select($field_name, isset($$module_name_singular)?optional($$module_name_singular->$field_relation)->pluck('name', 'id'):'')->placeholder($field_placeholder)->class('form-control select2-category')->attributes(["$required"]) }}--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--    <div class="col-4">--}}
+{{--        <div class="form-group">--}}
+{{--            <?php--}}
+{{--            $field_name = 'type';--}}
+{{--            $field_lable = __("cms::$module_name.$field_name");--}}
+{{--            $field_placeholder = __("Select an option");--}}
+{{--            $required = "required";--}}
+{{--            $select_options = [--}}
+{{--                'Article'=>'Article',--}}
+{{--                'Feature'=>'Feature',--}}
+{{--                'News'=>'News',--}}
+{{--            ];--}}
+{{--            ?>--}}
+{{--            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}--}}
+{{--            {{ html()->select($field_name, $select_options)->placeholder($field_placeholder)->class('form-control select2')->attributes(["$required"]) }}--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <div class="col-4">
         <div class="form-group">
             <?php

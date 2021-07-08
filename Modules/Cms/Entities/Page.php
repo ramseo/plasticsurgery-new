@@ -12,7 +12,7 @@ use Spatie\Activitylog\Traits\LogsActivity;
 use Spatie\Feed\Feedable;
 use Spatie\Feed\FeedItem;
 
-class Post extends BaseModel implements Feedable
+class Page extends BaseModel implements Feedable
 {
     use HasFactory;
     use LogsActivity;
@@ -20,9 +20,9 @@ class Post extends BaseModel implements Feedable
     use PagePresenter;
     use Notifiable;
 
-    protected $table = 'posts';
+    protected $table = 'pages';
 
-    protected static $logName = 'posts';
+    protected static $logName = 'pages';
     protected static $logOnlyDirty = true;
     protected static $logAttributes = ['name', 'intro', 'content', 'is_featured', 'meta_title', 'meta_keywords', 'meta_description', 'published_at', 'moderated_at', 'moderated_by', 'status', 'created_by_alias'];
 

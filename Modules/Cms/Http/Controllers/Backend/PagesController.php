@@ -17,7 +17,7 @@ use Modules\Cms\Http\Requests\Backend\PagesRequest;
 use Spatie\Activitylog\Models\Activity;
 use Yajra\DataTables\DataTables;
 
-class PostsController extends Controller
+class PagesController extends Controller
 {
     use Authorizable;
 
@@ -60,7 +60,7 @@ class PostsController extends Controller
         Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name.'(ID:'.Auth::user()->id.')');
 
         return view(
-            "article::backend.$module_path.index_datatable",
+            "cms::backend.$module_path.index_datatable",
             compact('module_title', 'module_name', "$module_name", 'module_icon', 'module_name_singular', 'module_action')
         );
     }
@@ -76,7 +76,7 @@ class PostsController extends Controller
 
         $module_action = 'List';
 
-        $$module_name = $module_model::select('id', 'name', 'category_name', 'status', 'updated_at', 'published_at', 'is_featured');
+        $$module_name = $module_model::select('id', 'name', 'status', 'updated_at', 'published_at', 'is_featured');
 
         $data = $$module_name;
 
@@ -159,13 +159,13 @@ class PostsController extends Controller
 
         $module_action = 'Create';
 
-        $categories = Category::pluck('name', 'id');
+//        $categories = Category::pluck('name', 'id');
 
         Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name.'(ID:'.Auth::user()->id.')');
 
         return view(
-            "article::backend.$module_name.create",
-            compact('module_title', 'module_name', 'module_icon', 'module_action', 'module_name_singular', 'categories')
+            "cms::backend.$module_name.create",
+            compact('module_title', 'module_name', 'module_icon', 'module_action', 'module_name_singular')
         );
     }
 
@@ -187,13 +187,13 @@ class PostsController extends Controller
 
         $module_action = 'Store';
 
-        $data = $request->except('tags_list');
+//        $data = $request->except('tags_list');
         $data['created_by_name'] = auth()->user()->name;
 
         $$module_name_singular = $module_model::create($data);
         $$module_name_singular->tags()->attach($request->input('tags_list'));
 
-        event(new PostCreated($$module_name_singular));
+        event(new PageCreated($$module_name_singular));
 
         Flash::success("<i class='fas fa-check'></i> New '".Str::singular($module_title)."' Added")->important();
 
@@ -231,7 +231,7 @@ class PostsController extends Controller
         Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name.'(ID:'.Auth::user()->id.')');
 
         return view(
-            "article::backend.$module_name.show",
+            "cms::backend.$module_name.show",
             compact('module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action', "$module_name_singular", 'activities')
         );
     }
@@ -256,13 +256,13 @@ class PostsController extends Controller
 
         $$module_name_singular = $module_model::findOrFail($id);
 
-        $categories = Category::pluck('name', 'id');
+//        $categories = Category::pluck('name', 'id');
 
         Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
 
         return view(
-            "article::backend.$module_name.edit",
-            compact('categories', 'module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action', "$module_name_singular")
+            "cms::backend.$module_name.edit",
+            compact( 'module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action', "$module_name_singular")
         );
     }
 

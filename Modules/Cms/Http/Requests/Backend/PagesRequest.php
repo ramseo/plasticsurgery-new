@@ -4,7 +4,7 @@ namespace Modules\Cms\Http\Requests\Backend;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class PostsRequest extends FormRequest
+class PagesRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -30,7 +30,6 @@ class PostsRequest extends FormRequest
             'content'           => 'required',
             'created_by_alias'  => 'nullable|max:191',
             'featured_image'    => 'required|max:191',
-            'type'              => 'required',
             'is_featured'       => 'required',
             'order'             => 'nullable|numeric',
             'status'            => 'required',
