@@ -154,10 +154,10 @@ return [
     */
 
     'composer' => [
-        'vendor' => 'nasirkhan',
+        'vendor' => 'wed',
         'author' => [
-            'name'  => 'Nasir Khan',
-            'email' => 'nasir8891@gmail.com',
+            'name'  => 'Nutan',
+            'email' => 'nutan@gmail.com',
         ],
     ],
     /*
