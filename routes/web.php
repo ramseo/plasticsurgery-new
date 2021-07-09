@@ -43,12 +43,12 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         */
         $module_name = 'users';
         $controller_name = 'UserController';
-        Route::get('profile/{id}', ['as' => "$module_name.profile", 'uses' => "$controller_name@profile"]);
-        Route::get('profile/{id}/edit', ['as' => "$module_name.profileEdit", 'uses' => "$controller_name@profileEdit"]);
-        Route::patch('profile/{id}/edit', ['as' => "$module_name.profileUpdate", 'uses' => "$controller_name@profileUpdate"]);
-        Route::get("$module_name/emailConfirmationResend/{id}", ['as' => "$module_name.emailConfirmationResend", 'uses' => "$controller_name@emailConfirmationResend"]);
-        Route::get('profile/changePassword/{username}', ['as' => "$module_name.changePassword", 'uses' => "$controller_name@changePassword"]);
-        Route::patch('profile/changePassword/{username}', ['as' => "$module_name.changePasswordUpdate", 'uses' => "$controller_name@changePasswordUpdate"]);
+        Route::get('profile/{id}', ['as' => "users.profile", 'uses' => "UserController@profile"]);
+        Route::get('profile/{id}/edit', ['as' => "users.profileEdit", 'uses' => "UserController@profileEdit"]);
+        Route::patch('profile/{id}/edit', ['as' => "users.profileUpdate", 'uses' => "UserController@profileUpdate"]);
+        Route::get("users/emailConfirmationResend/{id}", ['as' => "users.emailConfirmationResend", 'uses' => "UserController@emailConfirmationResend"]);
+        Route::get('profile/changePassword/{username}', ['as' => "users.changePassword", 'uses' => "UserController@changePassword"]);
+        Route::patch('profile/changePassword/{username}', ['as' => "users.changePasswordUpdate", 'uses' => "UserController@changePasswordUpdate"]);
         Route::delete('users/userProviderDestroy', ['as' => 'users.userProviderDestroy', 'uses' => 'UserController@userProviderDestroy']);
     });
 });
@@ -77,9 +77,19 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::group(['middleware' => ['permission:edit_settings']], function () {
         $module_name = 'settings';
         $controller_name = 'SettingController';
-        Route::get("$module_name", "$controller_name@index")->name("$module_name");
-        Route::post("$module_name", "$controller_name@store")->name("$module_name.store");
+        Route::get("settings", "SettingController@index")->name("settings");
+        Route::post("settings", "SettingController@store")->name("settings.store");
     });
+
+
+
+    $module_name = 'services';
+    $controller_name = 'ServiceController';
+    Route::get("services/index_list", ['as' => "services.index_list", 'uses' => "ServiceController@index_list"]);
+    Route::get("services/index_data", ['as' => "services.index_data", 'uses' => "ServiceController@index_data"]);
+    Route::get("services/trashed", ['as' => "services.trashed", 'uses' => "ServiceController@trashed"]);
+    Route::patch("services/trashed/{id}", ['as' => "services.restore", 'uses' => "ServiceController@restore"]);
+    Route::resource("services", "ServiceController");
 
     /*
     *
@@ -89,10 +99,10 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     */
     $module_name = 'notifications';
     $controller_name = 'NotificationsController';
-    Route::get("$module_name", ['as' => "$module_name.index", 'uses' => "$controller_name@index"]);
-    Route::get("$module_name/markAllAsRead", ['as' => "$module_name.markAllAsRead", 'uses' => "$controller_name@markAllAsRead"]);
-    Route::delete("$module_name/deleteAll", ['as' => "$module_name.deleteAll", 'uses' => "$controller_name@deleteAll"]);
-    Route::get("$module_name/{id}", ['as' => "$module_name.show", 'uses' => "$controller_name@show"]);
+    Route::get("notifications", ['as' => "notifications.index", 'uses' => "NotificationsController@index"]);
+    Route::get("notifications/markAllAsRead", ['as' => "notifications.markAllAsRead", 'uses' => "NotificationsController@markAllAsRead"]);
+    Route::delete("notifications/deleteAll", ['as' => "notifications.deleteAll", 'uses' => "NotificationsController@deleteAll"]);
+    Route::get("notifications/{id}", ['as' => "notifications.show", 'uses' => "NotificationsController@show"]);
 
     /*
     *
@@ -102,10 +112,10 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     */
     $module_name = 'backups';
     $controller_name = 'BackupController';
-    Route::get("$module_name", ['as' => "$module_name.index", 'uses' => "$controller_name@index"]);
-    Route::get("$module_name/create", ['as' => "$module_name.create", 'uses' => "$controller_name@create"]);
-    Route::get("$module_name/download/{file_name}", ['as' => "$module_name.download", 'uses' => "$controller_name@download"]);
-    Route::get("$module_name/delete/{file_name}", ['as' => "$module_name.delete", 'uses' => "$controller_name@delete"]);
+    Route::get("backups", ['as' => "backups.index", 'uses' => "BackupController@index"]);
+    Route::get("backups/create", ['as' => "backups.create", 'uses' => "BackupController@create"]);
+    Route::get("backups/download/{file_name}", ['as' => "backups.download", 'uses' => "BackupController@download"]);
+    Route::get("backups/delete/{file_name}", ['as' => "backups.delete", 'uses' => "BackupController@delete"]);
 
     /*
     *
@@ -115,7 +125,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     */
     $module_name = 'roles';
     $controller_name = 'RolesController';
-    Route::resource("$module_name", "$controller_name");
+    Route::resource("roles", "RolesController");
 
     /*
     *
@@ -125,20 +135,20 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     */
     $module_name = 'users';
     $controller_name = 'UserController';
-    Route::get("$module_name/profile/{id}", ['as' => "$module_name.profile", 'uses' => "$controller_name@profile"]);
-    Route::get("$module_name/profile/{id}/edit", ['as' => "$module_name.profileEdit", 'uses' => "$controller_name@profileEdit"]);
-    Route::patch("$module_name/profile/{id}/edit", ['as' => "$module_name.profileUpdate", 'uses' => "$controller_name@profileUpdate"]);
-    Route::get("$module_name/emailConfirmationResend/{id}", ['as' => "$module_name.emailConfirmationResend", 'uses' => "$controller_name@emailConfirmationResend"]);
-    Route::delete("$module_name/userProviderDestroy", ['as' => "$module_name.userProviderDestroy", 'uses' => "$controller_name@userProviderDestroy"]);
-    Route::get("$module_name/profile/changeProfilePassword/{id}", ['as' => "$module_name.changeProfilePassword", 'uses' => "$controller_name@changeProfilePassword"]);
-    Route::patch("$module_name/profile/changeProfilePassword/{id}", ['as' => "$module_name.changeProfilePasswordUpdate", 'uses' => "$controller_name@changeProfilePasswordUpdate"]);
-    Route::get("$module_name/changePassword/{id}", ['as' => "$module_name.changePassword", 'uses' => "$controller_name@changePassword"]);
-    Route::patch("$module_name/changePassword/{id}", ['as' => "$module_name.changePasswordUpdate", 'uses' => "$controller_name@changePasswordUpdate"]);
-    Route::get("$module_name/trashed", ['as' => "$module_name.trashed", 'uses' => "$controller_name@trashed"]);
-    Route::patch("$module_name/trashed/{id}", ['as' => "$module_name.restore", 'uses' => "$controller_name@restore"]);
-    Route::get("$module_name/index_data", ['as' => "$module_name.index_data", 'uses' => "$controller_name@index_data"]);
-    Route::get("$module_name/index_list", ['as' => "$module_name.index_list", 'uses' => "$controller_name@index_list"]);
-    Route::resource("$module_name", "$controller_name");
-    Route::patch("$module_name/{id}/block", ['as' => "$module_name.block", 'uses' => "$controller_name@block", 'middleware' => ['permission:block_users']]);
-    Route::patch("$module_name/{id}/unblock", ['as' => "$module_name.unblock", 'uses' => "$controller_name@unblock", 'middleware' => ['permission:block_users']]);
+    Route::get("users/profile/{id}", ['as' => "users.profile", 'uses' => "UserController@profile"]);
+    Route::get("users/profile/{id}/edit", ['as' => "users.profileEdit", 'uses' => "UserController@profileEdit"]);
+    Route::patch("users/profile/{id}/edit", ['as' => "users.profileUpdate", 'uses' => "UserController@profileUpdate"]);
+    Route::get("users/emailConfirmationResend/{id}", ['as' => "users.emailConfirmationResend", 'uses' => "UserController@emailConfirmationResend"]);
+    Route::delete("users/userProviderDestroy", ['as' => "users.userProviderDestroy", 'uses' => "UserController@userProviderDestroy"]);
+    Route::get("users/profile/changeProfilePassword/{id}", ['as' => "users.changeProfilePassword", 'uses' => "UserController@changeProfilePassword"]);
+    Route::patch("users/profile/changeProfilePassword/{id}", ['as' => "users.changeProfilePasswordUpdate", 'uses' => "UserController@changeProfilePasswordUpdate"]);
+    Route::get("users/changePassword/{id}", ['as' => "users.changePassword", 'uses' => "UserController@changePassword"]);
+    Route::patch("users/changePassword/{id}", ['as' => "users.changePasswordUpdate", 'uses' => "UserController@changePasswordUpdate"]);
+    Route::get("users/trashed", ['as' => "users.trashed", 'uses' => "UserController@trashed"]);
+    Route::patch("users/trashed/{id}", ['as' => "users.restore", 'uses' => "UserController@restore"]);
+    Route::get("users/index_data", ['as' => "users.index_data", 'uses' => "UserController@index_data"]);
+    Route::get("users/index_list", ['as' => "users.index_list", 'uses' => "UserController@index_list"]);
+    Route::resource("users", "users");
+    Route::patch("users/{id}/block", ['as' => "users.block", 'uses' => "UserController@block", 'middleware' => ['permission:block_users']]);
+    Route::patch("users/{id}/unblock", ['as' => "users.unblock", 'uses' => "UserController@unblock", 'middleware' => ['permission:block_users']]);
 });
