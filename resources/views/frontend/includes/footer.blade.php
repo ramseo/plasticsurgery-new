@@ -5,16 +5,21 @@
             <div class="col-xs-12 col-sm-12 footer-col">
                 <p class="footer-head">Follow us for more ideas & fun</p>
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href=""><img src="images/i-btn.png" alt=""
-                                                                 class="img-fluid"></a></li>
-                    <li class="list-inline-item"><a href=""><img src="images/f-btn.png" alt=""
-                                                                 class="img-fluid"></a></li>
-                    <li class="list-inline-item"><a href=""><img src="images/p-btn.png" alt=""
-                                                                 class="img-fluid"></a></li>
+                    <li class="list-inline-item">
+                        <a href="">
+                            <img src="{{asset('images/i-btn.png')}}" alt="" class="img-fluid">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href=""><img src="{{asset('images/f-btn.png')}}" alt="" class="img-fluid"></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href=""><img src="{{asset('images/p-btn.png')}}" alt="" class="img-fluid"></a>
+                    </li>
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-12 footer-col">
-                <img src="images/color-logo.png" alt="" class="img-fluid">
+                <img src="{{asset('images/color-logo.png')}}" alt="" class="img-fluid">
                 <div class="footer-text-col mt-4">
                     <p class="footer-bold">Helps plan your wedding like a loved one</p>
                     <p class="footer-text">Wed.in is India’s most loved Wedding Planning website! Check prices,

@@ -1006,6 +1006,20 @@ article blockquote {
     margin-bottom: 1rem;
 }
 
+.blog-comments-col {
+    margin: 30px 0 0 0;
+}
+
+.form-control {
+    font-size: 14px;
+    border-radius: 5px;
+    border: solid 1px #c9c9c9;
+}
+
+.detail-review-body ul.space-list .d-flex {
+    align-items: center;
+}
+
 @media(min-width: 1600px) {
     .container-fluid {
         max-width: 1400px;
