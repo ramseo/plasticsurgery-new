@@ -16,8 +16,8 @@ Route::group(['namespace' => '\Modules\Article\Http\Controllers\Frontend', 'as' 
      */
     $module_name = 'posts';
     $controller_name = 'PostsController';
-    Route::get("$module_name", ['as' => "$module_name.index", 'uses' => "$controller_name@index"]);
-    Route::get("$module_name/{id}/{slug?}", ['as' => "$module_name.show", 'uses' => "$controller_name@show"]);
+    Route::get("posts", ['as' => "posts.index", 'uses' => "PostsController@index"]);
+    Route::get("posts/{id}/{slug?}", ['as' => "posts.show", 'uses' => "PostsController@show"]);
 
     /*
      *
@@ -27,8 +27,8 @@ Route::group(['namespace' => '\Modules\Article\Http\Controllers\Frontend', 'as' 
      */
     $module_name = 'categories';
     $controller_name = 'CategoriesController';
-    Route::get("$module_name", ['as' => "$module_name.index", 'uses' => "$controller_name@index"]);
-    Route::get("$module_name/{id}/{slug?}", ['as' => "$module_name.show", 'uses' => "$controller_name@show"]);
+    Route::get("categories", ['as' => "categories.index", 'uses' => "CategoriesController@index"]);
+    Route::get("categories/{id}/{slug?}", ['as' => "categories.show", 'uses' => "CategoriesController@show"]);
 });
 
 /*
@@ -54,11 +54,11 @@ Route::group(['namespace' => '\Modules\Article\Http\Controllers\Backend', 'as' =
      */
     $module_name = 'posts';
     $controller_name = 'PostsController';
-    Route::get("$module_name/index_list", ['as' => "$module_name.index_list", 'uses' => "$controller_name@index_list"]);
-    Route::get("$module_name/index_data", ['as' => "$module_name.index_data", 'uses' => "$controller_name@index_data"]);
-    Route::get("$module_name/trashed", ['as' => "$module_name.trashed", 'uses' => "$controller_name@trashed"]);
-    Route::patch("$module_name/trashed/{id}", ['as' => "$module_name.restore", 'uses' => "$controller_name@restore"]);
-    Route::resource("$module_name", "$controller_name");
+    Route::get("posts/index_list", ['as' => "posts.index_list", 'uses' => "PostsController@index_list"]);
+    Route::get("posts/index_data", ['as' => "posts.index_data", 'uses' => "PostsController@index_data"]);
+    Route::get("posts/trashed", ['as' => "posts.trashed", 'uses' => "PostsController@trashed"]);
+    Route::patch("posts/trashed/{id}", ['as' => "posts.restore", 'uses' => "PostsController@restore"]);
+    Route::resource("posts", "PostsController");
 
     /*
      *
@@ -68,9 +68,9 @@ Route::group(['namespace' => '\Modules\Article\Http\Controllers\Backend', 'as' =
      */
     $module_name = 'categories';
     $controller_name = 'CategoriesController';
-    Route::get("$module_name/index_list", ['as' => "$module_name.index_list", 'uses' => "$controller_name@index_list"]);
-    Route::get("$module_name/index_data", ['as' => "$module_name.index_data", 'uses' => "$controller_name@index_data"]);
-    Route::get("$module_name/trashed", ['as' => "$module_name.trashed", 'uses' => "$controller_name@trashed"]);
-    Route::patch("$module_name/trashed/{id}", ['as' => "$module_name.restore", 'uses' => "$controller_name@restore"]);
-    Route::resource("$module_name", "$controller_name");
+    Route::get("categories/index_list", ['as' => "categories.index_list", 'uses' => "CategoriesController@index_list"]);
+    Route::get("categories/index_data", ['as' => "categories.index_data", 'uses' => "CategoriesController@index_data"]);
+    Route::get("categories/trashed", ['as' => "categories.trashed", 'uses' => "CategoriesController@trashed"]);
+    Route::patch("categories/trashed/{id}", ['as' => "categories.restore", 'uses' => "CategoriesController@restore"]);
+    Route::resource("categories", "CategoriesController");
 });
