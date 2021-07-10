@@ -40,7 +40,7 @@
                                             </a>
                                         @endcan
 
-                                        <a href="{{ route('frontend.users.profile', auth()->user()->id) }}"
+                                        <a href="{{ route('frontend.users.profileEdit', auth()->user()->id) }}"
                                            class="list-group-item list-group-item-action">
                                             <span class="icon icon-sm icon-success"><i class="fas fa-user"></i></span>
                                             <div class="">
@@ -56,10 +56,9 @@
                                             <i class="fas fa-sign-out-alt"></i>
                                         </span>
                                             <div class="">
-                                            <span class="text-dark d-block">
-                                                Logout
-                                            </span>
-                                                <span class="small">Logout from your account!</span>
+                                                <span class="text-dark d-block">
+                                                    Logout
+                                                </span>
                                             </div>
                                         </a>
                                         <form id="account-logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -70,10 +69,9 @@
                                            class="list-group-item list-group-item-action">
                                             <span class="icon icon-sm icon-secondary"><i class="fas fa-key"></i></span>
                                             <div class="">
-                                            <span class="text-dark d-block">
-                                                Login
-                                            </span>
-                                                <span class="small">Login to the application</span>
+                                                <span class="text-dark d-block">
+                                                    Login
+                                                </span>
                                             </div>
                                         </a>
                                         @if(user_registration())
@@ -84,7 +82,6 @@
                                         </span>
                                                 <div class="">
                                                     <span class="text-dark d-block">Register</span>
-                                                    <span class="small">Join with us!</span>
                                                 </div>
                                             </a>
                                         @endif

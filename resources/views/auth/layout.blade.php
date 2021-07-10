@@ -23,13 +23,15 @@
     @stack('before-styles')
 
     <link rel="stylesheet" href="{{ mix('css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/wed.css') }}">
 
     @stack('after-styles')
 
     <x-google-analytics config="{{ setting('google_analytics') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" type="text/css" rel="stylesheet">
 </head>
 
-<body class="bg-white">
+<body class="auth-body">
 
     <!-- <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
         <div class="container">
@@ -60,13 +62,39 @@
         </div>
     </nav> -->
 
-    @yield('content')
+    <section id="auth-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="/"><img class="auth-logo" src="{{asset('img/logo.png')}}" alt=""></a>
+                </div>
+                <div class="col-md-6 auth-form-col">
+                    @yield('content')
+                </div>
+            </div>
+        </div>
+    </section>
 
     @include('auth.footer')
 
     @stack('before-scripts')
 
     <script src="{{ mix('js/dashboard.js') }}"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.displayPassword').click(function(){
+                var inputType = $(this).parents('.password-container').find('input').attr('type');
+                if (inputType == 'password') {
+                    $(this).parents('.password-container').find('input').attr('type', 'text');
+                    $(this).find('img').attr('src', "{{asset('images/hide-password.png')}}");
+                } else {
+                    $(this).parents('.password-container').find('input').attr('type', 'password');
+                    $(this).find('img').attr('src', "{{asset('images/view-password.png')}}");
+                }
+            });
+        });
+    </script>
 
     @stack('after-scripts')
 
