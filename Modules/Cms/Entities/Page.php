@@ -163,6 +163,6 @@ class Page extends BaseModel implements Feedable
      */
     protected static function newFactory()
     {
-        return \Modules\Article\Database\Factories\PostFactory::new();
+        return \Modules\Cms\Database\Factories\PageFactory::new();
     }
 }
