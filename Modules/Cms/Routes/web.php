@@ -17,7 +17,7 @@ Route::group(['namespace' => '\Modules\Cms\Http\Controllers\Frontend', 'as' => '
     $module_name = 'pages';
     $controller_name = 'PagesController';
     Route::get("pages", ['as' => "pages.index", 'uses' => "PagesController@index"]);
-    Route::get("pages/{id}/{slug?}", ['as' => "pages.show", 'uses' => "PagesController@show"]);
+    Route::get("pages/{slug?}", ['as' => "pages.show", 'uses' => "PagesController@show"]);
 
 //    /*
 //     *

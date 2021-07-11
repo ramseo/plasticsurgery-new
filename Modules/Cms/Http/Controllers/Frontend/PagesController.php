@@ -58,9 +58,11 @@ class PagesController extends Controller
      *
      * @return Response
      */
-    public function show($hashid)
+    public function show($slug)
     {
-        $id = decode_id($hashid);
+
+
+//        $id = decode_id($hashid);
 
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -73,8 +75,8 @@ class PagesController extends Controller
 
 //        $meta_page_type = 'article';
 
-        $$module_name_singular = $module_model::findOrFail($id);
-
+        $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
+//        dd($$module_name_singular);
         event(new PageViewed($$module_name_singular));
 
         return view(

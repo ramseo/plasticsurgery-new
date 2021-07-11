@@ -44,7 +44,7 @@
 
             @foreach ($$module_name as $$module_name_singular)
             @php
-                $details_url = route("frontend.$module_name.show",[encode_id($$module_name_singular->id), $$module_name_singular->slug]);
+                $details_url = route("frontend.$module_name.show",[$$module_name_singular->slug]);
             @endphp
             <div class="col-12 col-md-4 mb-4">
                 <div class="common-card">
