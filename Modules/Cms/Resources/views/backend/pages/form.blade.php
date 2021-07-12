@@ -38,20 +38,20 @@
 {{--        </div>--}}
 {{--    </div>--}}
 </div>
-<div class="row">
-    <div class="col-12">
-        <div class="form-group">
-            <?php
-            $field_name = 'intro';
-            $field_lable = __("cms::$module_name.$field_name");
-            $field_placeholder = $field_lable;
-            $required = "required";
-            ?>
-            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-            {{ html()->textarea($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
-        </div>
-    </div>
-</div>
+{{--<div class="row">--}}
+{{--    <div class="col-12">--}}
+{{--        <div class="form-group">--}}
+{{--            <?php--}}
+{{--            $field_name = 'intro';--}}
+{{--            $field_lable = __("cms::$module_name.$field_name");--}}
+{{--            $field_placeholder = $field_lable;--}}
+{{--            $required = "required";--}}
+{{--            ?>--}}
+{{--            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}--}}
+{{--            {{ html()->textarea($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 <div class="row">
     <div class="col-12">
         <div class="form-group">
@@ -116,22 +116,22 @@
 {{--            {{ html()->select($field_name, $select_options)->placeholder($field_placeholder)->class('form-control select2')->attributes(["$required"]) }}--}}
 {{--        </div>--}}
 {{--    </div>--}}
-    <div class="col-4">
-        <div class="form-group">
-            <?php
-            $field_name = 'is_featured';
-            $field_lable = __("cms::$module_name.$field_name");
-            $field_placeholder = __("Select an option");
-            $required = "required";
-            $select_options = [
-                '1'=>'Yes',
-                '0'=>'No',
-            ];
-            ?>
-            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-            {{ html()->select($field_name, $select_options)->placeholder($field_placeholder)->class('form-control select2')->attributes(["$required"]) }}
-        </div>
-    </div>
+{{--    <div class="col-4">--}}
+{{--        <div class="form-group">--}}
+{{--            <?php--}}
+{{--            $field_name = 'is_featured';--}}
+{{--            $field_lable = __("cms::$module_name.$field_name");--}}
+{{--            $field_placeholder = __("Select an option");--}}
+{{--            $required = "required";--}}
+{{--            $select_options = [--}}
+{{--                '1'=>'Yes',--}}
+{{--                '0'=>'No',--}}
+{{--            ];--}}
+{{--            ?>--}}
+{{--            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}--}}
+{{--            {{ html()->select($field_name, $select_options)->placeholder($field_placeholder)->class('form-control select2')->attributes(["$required"]) }}--}}
+{{--        </div>--}}
+{{--    </div>--}}
 </div>
 {{--<div class="row">--}}
 {{--    <div class="col">--}}
@@ -169,23 +169,23 @@
             {{ html()->select($field_name, $select_options)->placeholder($field_placeholder)->class('form-control select2')->attributes(["$required"]) }}
         </div>
     </div>
-    <div class="col-6">
-        <div class="form-group">
-            <?php
-            $field_name = 'published_at';
-            $field_lable = __("cms::$module_name.$field_name");
-            $field_placeholder = $field_lable;
-            $required = "";
-            ?>
-            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-            <div class="input-group date datetime" id="{{$field_name}}" data-target-input="nearest">
-                {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control datetimepicker-input')->attributes(["$required", 'data-target'=>"#$field_name"]) }}
-                <div class="input-group-append" data-target="#{{$field_name}}" data-toggle="datetimepicker">
-                    <div class="input-group-text"><i class="fas fa-calendar-alt"></i></div>
-                </div>
-            </div>
-        </div>
-    </div>
+{{--    <div class="col-6">--}}
+{{--        <div class="form-group">--}}
+{{--            <?php--}}
+{{--            $field_name = 'published_at';--}}
+{{--            $field_lable = __("cms::$module_name.$field_name");--}}
+{{--            $field_placeholder = $field_lable;--}}
+{{--            $required = "";--}}
+{{--            ?>--}}
+{{--            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}--}}
+{{--            <div class="input-group date datetime" id="{{$field_name}}" data-target-input="nearest">--}}
+{{--                {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control datetimepicker-input')->attributes(["$required", 'data-target'=>"#$field_name"]) }}--}}
+{{--                <div class="input-group-append" data-target="#{{$field_name}}" data-toggle="datetimepicker">--}}
+{{--                    <div class="input-group-text"><i class="fas fa-calendar-alt"></i></div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 </div>
 <div class="row">
     <div class="col-5">
@@ -212,18 +212,18 @@
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
     </div>
-    <div class="col-2">
-        <div class="form-group">
-            <?php
-            $field_name = 'order';
-            $field_lable = __("cms::$module_name.$field_name");
-            $field_placeholder = $field_lable;
-            $required = "";
-            ?>
-            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-            {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
-        </div>
-    </div>
+{{--    <div class="col-2">--}}
+{{--        <div class="form-group">--}}
+{{--            <?php--}}
+{{--            $field_name = 'order';--}}
+{{--            $field_lable = __("cms::$module_name.$field_name");--}}
+{{--            $field_placeholder = $field_lable;--}}
+{{--            $required = "";--}}
+{{--            ?>--}}
+{{--            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}--}}
+{{--            {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}--}}
+{{--        </div>--}}
+{{--    </div>--}}
 </div>
 <div class="row">
     <div class="col-12 col-sm-6">
