@@ -57,9 +57,9 @@ class CategoriesController extends Controller
      *
      * @return Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        $id = decode_id($id);
+//        $id = decode_id($id);
 
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -70,7 +70,8 @@ class CategoriesController extends Controller
 
         $module_action = 'Show';
 
-        $$module_name_singular = $module_model::findOrFail($id);
+//        $$module_name_singular = $module_model::findOrFail($id);
+        $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
         $posts = $$module_name_singular->posts()->with('category', 'tags', 'comments')->paginate();
 
         return view(

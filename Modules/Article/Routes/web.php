@@ -17,7 +17,7 @@ Route::group(['namespace' => '\Modules\Article\Http\Controllers\Frontend', 'as' 
     $module_name = 'posts';
     $controller_name = 'PostsController';
     Route::get("posts", ['as' => "posts.index", 'uses' => "PostsController@index"]);
-    Route::get("posts/{id}/{slug?}", ['as' => "posts.show", 'uses' => "PostsController@show"]);
+    Route::get("posts/{slug?}", ['as' => "posts.show", 'uses' => "PostsController@show"]);
 
     /*
      *
@@ -28,7 +28,7 @@ Route::group(['namespace' => '\Modules\Article\Http\Controllers\Frontend', 'as' 
     $module_name = 'categories';
     $controller_name = 'CategoriesController';
     Route::get("categories", ['as' => "categories.index", 'uses' => "CategoriesController@index"]);
-    Route::get("categories/{id}/{slug?}", ['as' => "categories.show", 'uses' => "CategoriesController@show"]);
+    Route::get("categories/{slug?}", ['as' => "categories.show", 'uses' => "CategoriesController@show"]);
 });
 
 /*
