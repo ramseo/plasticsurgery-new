@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title') {{ __("Posts") }} @endsection
+@section('title') {{ __("Blog") }} @endsection
 
 @section('content')
 
@@ -51,7 +51,7 @@
                         <a href="{{$details_url}}"><img src="{{$$module_name_singular->featured_image}}" class="img-fluid" alt=""></a>
                     </div>
                     <div class="text-col">
-                        <p class="title">{{$$module_name_singular->name}}</p>
+                        <a href="{{$details_url}}">  <p class="title">{{$$module_name_singular->name}}</p></a>
                         <p class="text">
                             <!-- {!!isset($$module_name_singular->created_by_alias)? $$module_name_singular->created_by_alias : '<a href="'.route('frontend.users.profile', $$module_name_singular->created_by).'"><h6 class="text-muted small ml-2 mb-0">'.$$module_name_singular->created_by_name.'</h6></a>'!!} -->
                             {{Str::words($$module_name_singular->intro, '15')}}
