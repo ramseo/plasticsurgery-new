@@ -85,6 +85,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
 
     $module_name = 'services';
     $controller_name = 'ServiceController';
+    Route::get("services", ['as' => "services.index", 'uses' => "ServiceController@index"]);
     Route::get("services/index_list", ['as' => "services.index_list", 'uses' => "ServiceController@index_list"]);
     Route::get("services/index_data", ['as' => "services.index_data", 'uses' => "ServiceController@index_data"]);
     Route::get("services/trashed", ['as' => "services.trashed", 'uses' => "ServiceController@trashed"]);
