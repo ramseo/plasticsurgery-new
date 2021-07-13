@@ -287,7 +287,7 @@ class PagesController extends Controller
         $module_action = 'Update';
 
         $$module_name_singular = $module_model::findOrFail($id);
-
+        $$module_name_singular->update($request->all());
 //        $$module_name_singular->update($request->except('tags_list'));
 
 //        if ($request->input('tags_list') == null) {
