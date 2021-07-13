@@ -6,7 +6,7 @@ return [
     'slug'             => 'Slug',
     'intro'            => 'Intro',
     'content'          => 'Content',
-    'featured_image'   => 'Featured Image',
+    'featured_image'   => 'Page Banner',
     'is_featured'      => 'Is Featured',
     'status'           => 'Status',
     'published_at'     => 'Published At',

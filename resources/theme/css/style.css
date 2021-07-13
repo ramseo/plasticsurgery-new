@@ -1409,6 +1409,15 @@ article blockquote {
     padding: 5px 0px;
 }
 
+.page-banner-height .banner-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.page-banner-height img {
+    filter: brightness(40%);
+}
+
 @media(min-width: 1600px) {
     .container-fluid {
         max-width: 1400px;

@@ -20,15 +20,8 @@
             <div class="col-xs-12 col-sm-12 footer-col">
                 <img src="{{asset('images/color-logo.png')}}" alt="" class="img-fluid">
                 <div class="footer-text-col mt-4">
-                    <p class="footer-bold">Helps plan your wedding like a loved one</p>
-                    <p class="footer-text">Wed.in is India’s most loved Wedding Planning website! Check prices,
-                        verified reviews and book best wedding photographers, bridal makeup artists, wedding venues,
-                        decorators, and all other wedding vendors at guaranteed best prices. Get loads of latest
-                        wedding ideas & inspiration - bridal fashion, makeup and skincare tips, wedding planning
-                        tips, bachelorette & honeymoon ideas from India's largest wedding community & real weddings.
-                        ShaadiSaga is proud to have been the official wedding planner of celebrities like Yuvraj
-                        Singh & Bhuvneshwar Kumar. We love what we do, and that's how we help plan your wedding like
-                        a loved one!</p>
+                    <p class="footer-bold">{{setting('footer_tagline')}}</p>
+                    <p class="footer-text">{{setting('footer_about_us')}}</p>
                     <a href="#" class="btn btn-primary mt-3">HIRE A VENDOR</a>
                 </div>
             </div>
@@ -57,8 +50,9 @@
                         <a href="#">Wedding Guest Post</a>
                     </li>
                 </ul>
-                <p class="footer-small-text">© Copyright 2021 support@wed.in (Boatman Tech Pvt. Ltd.) - All Rights
-                    Reserved</p>
+                @if(setting('show_copyright'))
+                    <p class="footer-small-text">{{setting('copyright_text')}}</p>
+                @endif
             </div>
             <div class="col-xs-12 col-sm-12 footer-col">
                 <p class="footer-head">Contact Us</p>

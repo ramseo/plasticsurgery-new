@@ -1,42 +1,51 @@
 <?php
 
 return [
-//    'app' => [
-//        'title' => 'General',
-//        'desc'  => 'All the general settings for application.',
-//        'icon'  => 'fas fa-cube',
-//
-//        'elements' => [
-//            [
-//                'type'  => 'text', // input fields type
-//                'data'  => 'string', // data type, string, int, boolean
-//                'name'  => 'app_name', // unique name for field
-//                'label' => 'App Name', // you know what label it is
-//                'rules' => 'required|min:2|max:50', // validation rule of laravel
-//                'class' => '', // any class for input
-//                'value' => 'wed.in', // default value if you want
-//            ]
-//            ,
-//            [
-//                'type'  => 'text', // input fields type
-//                'data'  => 'string', // data type, string, int, boolean
-//                'name'  => 'footer_text', // unique name for field
-//                'label' => 'Footer Text', // you know what label it is
-//                'rules' => 'required|min:2', // validation rule of laravel
-//                'class' => '', // any class for input
-//                'value' => '<a href="https://wed.in/">Built with ♥</a>', // default value if you want
-//            ],
-//            [
-//                'type'  => 'checkbox', // input fields type
-//                'data'  => 'text', // data type, string, int, boolean
-//                'name'  => 'show_copyright', // unique name for field
-//                'label' => 'Show Copyright', // you know what label it is
-//                'rules' => '', // validation rule of laravel
-//                'class' => '', // any class for input
-//                'value' => '1', // default value if you want
-//            ],
-//        ],
-//    ],
+   'app' => [
+       'title' => 'General',
+       'desc'  => 'All the general settings for application.',
+       'icon'  => 'fas fa-cube',
+
+       'elements' => [
+        //    [
+        //        'type'  => 'text', // input fields type
+        //        'data'  => 'string', // data type, string, int, boolean
+        //        'name'  => 'app_name', // unique name for field
+        //        'label' => 'App Name', // you know what label it is
+        //        'rules' => 'required|min:2|max:50', // validation rule of laravel
+        //        'class' => '', // any class for input
+        //        'value' => 'wed.in', // default value if you want
+        //    ]
+        //    ,
+        //    [
+        //        'type'  => 'text', // input fields type
+        //        'data'  => 'string', // data type, string, int, boolean
+        //        'name'  => 'footer_text', // unique name for field
+        //        'label' => 'Footer Text', // you know what label it is
+        //        'rules' => 'required|min:2', // validation rule of laravel
+        //        'class' => '', // any class for input
+        //        'value' => '<a href="https://wed.in/">Built with ♥</a>', // default value if you want
+        //    ],
+           [
+               'type'  => 'checkbox', // input fields type
+               'data'  => 'text', // data type, string, int, boolean
+               'name'  => 'show_copyright', // unique name for field
+               'label' => 'Show Copyright', // you know what label it is
+               'rules' => '', // validation rule of laravel
+               'class' => '', // any class for input
+               'value' => '1', // default value if you want
+           ],
+           [
+            'type'  => 'text', // input fields type
+            'data'  => 'string', // data type, string, int, boolean
+            'name'  => 'copyright_text', // unique name for field
+            'label' => 'Copyright Text', // you know what label it is
+            'rules' => 'required', // validation rule of laravel
+            'class' => '', // any class for input
+            'value' => '', // default value if you want
+        ],
+       ],
+   ],
     'email' => [
         'title' => 'Email',
         'desc'  => 'Email settings',
@@ -196,6 +205,37 @@ return [
                 // 'value' => '123', // any class for input
                 'value' => '', // default value if you want
                 'help'     => 'Paste the tracking code in this field.', // Help text for the input field.
+                'display'  => 'raw', // Help text for the input field.
+            ],
+        ],
+
+    ],
+    'misc' => [
+        'title' => 'Miscellaneous',
+        'desc'  => 'Miscellaneous',
+        'icon'  => 'fas fa-chart-line',
+
+        'elements' => [
+            [
+                'type'  => 'textarea', // input fields type
+                'data'  => 'string', // data type, string, int, boolean
+                'name'  => 'footer_tagline', // unique name for field
+                'label' => 'Footer Tagline', // you know what label it is
+                'rules' => '', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '', // default value if you want
+                'help'     => '', // Help text for the input field.
+                'display'  => 'raw', // Help text for the input field.
+            ],
+            [
+                'type'  => 'textarea', // input fields type
+                'data'  => 'string', // data type, string, int, boolean
+                'name'  => 'footer_about_us', // unique name for field
+                'label' => 'Footer About Us Content', // you know what label it is
+                'rules' => '', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '', // default value if you want
+                'help'     => '', // Help text for the input field.
                 'display'  => 'raw', // Help text for the input field.
             ],
         ],

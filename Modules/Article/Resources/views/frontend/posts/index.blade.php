@@ -4,24 +4,6 @@
 
 @section('content')
 
-<!-- <section class="section-header bg-primary text-white pb-7 pb-lg-11">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8 text-center">
-                <h1 class="display-2 mb-4">
-                    The Super Articles
-                </h1>
-                <p class="lead">
-                    We publish articles on a number of topics. We encourage you to read our posts and let us know your feedback. It would be really help us to move forward.
-                </p>
-
-                @include('frontend.includes.messages')
-            </div>
-        </div>
-    </div>
-    <div class="pattern bottom"></div>
-</section> -->
-
 <section id="breadcrumb-section">
     <div class="container-fluid">
         <div class="row">
