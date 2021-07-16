@@ -55,7 +55,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 
 /*
 *
-* Backend Routes
+* Backend admin Routes
 * These routes need view-backend permission
 * --------------------------------------------------------------------
 */
@@ -91,6 +91,17 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::get("services/trashed", ['as' => "services.trashed", 'uses' => "ServiceController@trashed"]);
     Route::patch("services/trashed/{id}", ['as' => "services.restore", 'uses' => "ServiceController@restore"]);
     Route::resource("services", "ServiceController");
+
+
+
+    $module_name = 'category';
+    $controller_name = 'category';
+    Route::get("category", ['as' => "category.index", 'uses' => "CategoryController@index"]);
+    Route::get("category/index_list", ['as' => "category.index_list", 'uses' => "CategoryController@index_list"]);
+    Route::get("category/index_data", ['as' => "category.index_data", 'uses' => "CategoryController@index_data"]);
+    Route::get("category/trashed", ['as' => "category.trashed", 'uses' => "CategoryController@trashed"]);
+    Route::patch("category/trashed/{id}", ['as' => "category.restore", 'uses' => "CategoryController@restore"]);
+    Route::resource("category", "CategoryController");
 
     /*
     *
@@ -156,7 +167,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
 
 /*
 *
-* Backend Routes
+* Backend vendor Routes
 * These routes need view-backend permission
 * --------------------------------------------------------------------
 */
