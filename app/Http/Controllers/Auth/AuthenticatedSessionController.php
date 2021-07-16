@@ -38,14 +38,15 @@ class AuthenticatedSessionController extends Controller
             return redirect($redirectTo);
         }
 
-        $roles = $request->user()->roles;
-        if (isset($roles[0])){
-            switch ($roles[0]->name) {
+        $role = auth()->user()->getRoleNames()->first();
+
+        if ($role){
+            switch ($role) {
                 case 'super admin':
                     return redirect('/admin/dashboard');
                     break;
-                case 'administrator':
-                    return redirect('/vendor');
+                case 'vendor':
+                    return redirect('/vendor/dashboard');
                     break;
                 case 'user':
                     return redirect('/');
