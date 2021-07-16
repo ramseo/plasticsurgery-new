@@ -154,9 +154,6 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::patch("users/{id}/unblock", ['as' => "users.unblock", 'uses' => "UserController@unblock", 'middleware' => ['permission:block_users']]);
 });
 
-
-
-
 /*
 *
 * Backend Routes
@@ -187,14 +184,14 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
 
 
 
-    $module_name = 'services';
-    $controller_name = 'ServiceController';
-    Route::get("services", ['as' => "services.index", 'uses' => "ServiceController@index"]);
-    Route::get("services/index_list", ['as' => "services.index_list", 'uses' => "ServiceController@index_list"]);
-    Route::get("services/index_data", ['as' => "services.index_data", 'uses' => "ServiceController@index_data"]);
-    Route::get("services/trashed", ['as' => "services.trashed", 'uses' => "ServiceController@trashed"]);
-    Route::patch("services/trashed/{id}", ['as' => "services.restore", 'uses' => "ServiceController@restore"]);
-    Route::resource("services", "ServiceController");
+//    $module_name = 'services';
+//    $controller_name = 'ServiceController';
+//    Route::get("services", ['as' => "services.index", 'uses' => "ServiceController@index"]);
+//    Route::get("services/index_list", ['as' => "services.index_list", 'uses' => "ServiceController@index_list"]);
+//    Route::get("services/index_data", ['as' => "services.index_data", 'uses' => "ServiceController@index_data"]);
+//    Route::get("services/trashed", ['as' => "services.trashed", 'uses' => "ServiceController@trashed"]);
+//    Route::patch("services/trashed/{id}", ['as' => "services.restore", 'uses' => "ServiceController@restore"]);
+//    Route::resource("services", "ServiceController");
 
     /*
     *
@@ -202,12 +199,12 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
     *
     * ---------------------------------------------------------------------
     */
-    $module_name = 'notifications';
-    $controller_name = 'NotificationsController';
-    Route::get("notifications", ['as' => "notifications.index", 'uses' => "NotificationsController@index"]);
-    Route::get("notifications/markAllAsRead", ['as' => "notifications.markAllAsRead", 'uses' => "NotificationsController@markAllAsRead"]);
-    Route::delete("notifications/deleteAll", ['as' => "notifications.deleteAll", 'uses' => "NotificationsController@deleteAll"]);
-    Route::get("notifications/{id}", ['as' => "notifications.show", 'uses' => "NotificationsController@show"]);
+//    $module_name = 'notifications';
+//    $controller_name = 'NotificationsController';
+//    Route::get("notifications", ['as' => "notifications.index", 'uses' => "NotificationsController@index"]);
+//    Route::get("notifications/markAllAsRead", ['as' => "notifications.markAllAsRead", 'uses' => "NotificationsController@markAllAsRead"]);
+//    Route::delete("notifications/deleteAll", ['as' => "notifications.deleteAll", 'uses' => "NotificationsController@deleteAll"]);
+//    Route::get("notifications/{id}", ['as' => "notifications.show", 'uses' => "NotificationsController@show"]);
 
     /*
     *
@@ -215,12 +212,12 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
     *
     * ---------------------------------------------------------------------
     */
-    $module_name = 'backups';
-    $controller_name = 'BackupController';
-    Route::get("backups", ['as' => "backups.index", 'uses' => "BackupController@index"]);
-    Route::get("backups/create", ['as' => "backups.create", 'uses' => "BackupController@create"]);
-    Route::get("backups/download/{file_name}", ['as' => "backups.download", 'uses' => "BackupController@download"]);
-    Route::get("backups/delete/{file_name}", ['as' => "backups.delete", 'uses' => "BackupController@delete"]);
+//    $module_name = 'backups';
+//    $controller_name = 'BackupController';
+//    Route::get("backups", ['as' => "backups.index", 'uses' => "BackupController@index"]);
+//    Route::get("backups/create", ['as' => "backups.create", 'uses' => "BackupController@create"]);
+//    Route::get("backups/download/{file_name}", ['as' => "backups.download", 'uses' => "BackupController@download"]);
+//    Route::get("backups/delete/{file_name}", ['as' => "backups.delete", 'uses' => "BackupController@delete"]);
 
     /*
     *
