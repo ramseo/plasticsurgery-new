@@ -61,4 +61,8 @@ class RegisteredUserController extends Controller
 
         return redirect(RouteServiceProvider::HOME);
     }
+
+    public function vendorSignup(){
+        return view('auth.vendor-signup');
+    }
 }

@@ -66,6 +66,8 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout')
                 ->middleware('auth');
 
+Route::get('/vendor-signup', [RegisteredUserController::class, 'vendorSignup'])->middleware('guest')->name('vendor-signup');
+
 // Social Login Routes
 Route::group(['namespace' => 'Auth', 'middleware' => 'guest'], function () {
     Route::get('login/{provider}', ['as' => 'social.login', 'uses' => 'SocialLoginController@redirectToProvider']);
