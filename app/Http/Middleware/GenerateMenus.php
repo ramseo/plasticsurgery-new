@@ -60,6 +60,19 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-envelope"></i> Newsletter', [
+                'route' => 'backend.newsletter.index',
+                'class' => 'c-sidebar-nav-item',
+            ])
+                ->data([
+                    'order'         => 99,
+                    'activematches' => 'admin/newsletter*',
+                    'permission'    => [],
+                ])
+                ->link->attr([
+                    'class' => 'c-sidebar-nav-link',
+                ]);
+
             // Notifications
 //                        $menu->add('<i class="c-sidebar-nav-icon fas fa-bell"></i> Notifications', [
 //                            'route' => 'backend.notifications.index',

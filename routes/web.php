@@ -33,6 +33,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('detail', 'FrontendController@detail')->name('detail');
     Route::get('privacy', 'FrontendController@privacy')->name('privacy');
     Route::get('terms', 'FrontendController@terms')->name('terms');
+    Route::post('newsletter', 'NewsletterController@store')->name('newsletter');
 
     Route::group(['middleware' => ['auth']], function () {
         /*
@@ -163,6 +164,15 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::resource("users", "users");
     Route::patch("users/{id}/block", ['as' => "users.block", 'uses' => "UserController@block", 'middleware' => ['permission:block_users']]);
     Route::patch("users/{id}/unblock", ['as' => "users.unblock", 'uses' => "UserController@unblock", 'middleware' => ['permission:block_users']]);
+
+
+    /*
+     *
+     *  Newsletter Routes
+     *
+     * ---------------------------------------------------------------------
+     */
+    Route::get("newsletter", ['as' => "newsletter.index", 'uses' => "NewsletterController@index"]);
 });
 
 /*

@@ -47,7 +47,7 @@ return [
        ],
    ],
     'email' => [
-        'title' => 'Email',
+        'title' => 'Email & Contacts',
         'desc'  => 'Email settings',
         'icon'  => 'fas fa-envelope',
 
@@ -58,6 +58,42 @@ return [
                 'name'  => 'email', // unique name for field
                 'label' => 'Email', // you know what label it is
                 'rules' => 'required|email', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '', //info@example.com default value if you want
+            ],
+            [
+                'type'  => 'email', // input fields type
+                'data'  => 'string', // data type, string, int, boolean
+                'name'  => 'support_email', // unique name for field
+                'label' => 'Support Email', // you know what label it is
+                'rules' => 'required|email', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '', //info@example.com default value if you want
+            ],
+            [
+                'type'  => 'email', // input fields type
+                'data'  => 'string', // data type, string, int, boolean
+                'name'  => 'vendor_support_email', // unique name for field
+                'label' => 'Support Email (For Vendors)', // you know what label it is
+                'rules' => 'required|email', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '', //info@example.com default value if you want
+            ],
+            [
+                'type'  => 'text', // input fields type
+                'data'  => 'string', // data type, string, int, boolean
+                'name'  => 'support_telephone', // unique name for field
+                'label' => 'Support Phone', // you know what label it is
+                'rules' => 'required', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '', //info@example.com default value if you want
+            ],
+            [
+                'type'  => 'text', // input fields type
+                'data'  => 'string', // data type, string, int, boolean
+                'name'  => 'vendor_support_telephone', // unique name for field
+                'label' => 'Support Phone (For Vendors)', // you know what label it is
+                'rules' => 'required', // validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '', //info@example.com default value if you want
             ],
@@ -111,6 +147,15 @@ return [
                 'data'  => 'string', // data type, string, int, boolean
                 'name'  => 'youtube_url', // unique name for field
                 'label' => 'Youtube Channel URL', // you know what label it is
+                'rules' => 'required|nullable|max:191', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '#', // default value if you want
+            ],
+            [
+                'type'  => 'text', // input fields type
+                'data'  => 'string', // data type, string, int, boolean
+                'name'  => 'pinterest_url', // unique name for field
+                'label' => 'Pinterest', // you know what label it is
                 'rules' => 'required|nullable|max:191', // validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '#', // default value if you want
