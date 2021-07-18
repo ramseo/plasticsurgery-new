@@ -160,7 +160,7 @@ class ServiceController extends Controller
         Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
         return view(
-            "article::backend.$module_name.create",
+            "backend.$module_name.create",
             compact('module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action')
         );
     }

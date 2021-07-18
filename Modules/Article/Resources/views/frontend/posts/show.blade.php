@@ -32,7 +32,7 @@
                         Category:
                     </span>
 
-                    <a href="{{route('frontend.categories.show', [encode_id($$module_name_singular->category_id), $$module_name_singular->category->slug])}}" class="badge badge-sm badge-warning text-uppercase px-3">{{$$module_name_singular->category_name}}</a>
+                    <a href="{{route('frontend.categories.show', [$$module_name_singular->category->slug])}}" class="badge badge-sm badge-warning text-uppercase px-3">{{$$module_name_singular->category_name}}</a>
                 </p>
                 <h1 class="display-3">
                     {{$$module_name_singular->name}}

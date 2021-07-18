@@ -13,7 +13,7 @@
                     <div id="storySlider" class="owl-carousel owl-theme common-slider">
                         @foreach ($weddingStories as $weddingStory)
                             @php
-                                $details_url = route("frontend.posts.show",[encode_id($weddingStory->id), $weddingStory->slug]);
+                                $details_url = route("frontend.posts.show",[$weddingStory->slug]);
                             @endphp
                             <div>
                                 <div class="common-card">

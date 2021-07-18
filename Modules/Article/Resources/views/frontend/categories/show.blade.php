@@ -33,7 +33,7 @@
 
             @foreach ($posts as $post)
             @php
-            $details_url = route("frontend.posts.show",[encode_id($post->id), $post->slug]);
+            $details_url = route("frontend.posts.show",[$post->slug]);
             @endphp
 
             <div class="col-12 col-md-4 mb-4">
