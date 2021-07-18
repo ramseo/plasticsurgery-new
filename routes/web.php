@@ -94,6 +94,26 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::resource("services", "ServiceController");
 
 
+    $module_name = 'city';
+    $controller_name = 'CityController';
+    Route::get("city", ['as' => "city.index", 'uses' => "CityController@index"]);
+    Route::get("city/index_list", ['as' => "city.index_list", 'uses' => "CityController@index_list"]);
+    Route::get("city/index_data", ['as' => "city.index_data", 'uses' => "CityController@index_data"]);
+    Route::get("city/trashed", ['as' => "city.trashed", 'uses' => "CityController@trashed"]);
+    Route::patch("city/trashed/{id}", ['as' => "city.restore", 'uses' => "CityController@restore"]);
+    Route::resource("city", "CityController");
+
+
+
+    $module_name = 'type';
+    $controller_name = 'TypeController';
+    Route::get("type", ['as' => "type.index", 'uses' => "TypeController@index"]);
+    Route::get("type/index_list", ['as' => "type.index_list", 'uses' => "TypeController@index_list"]);
+    Route::get("type/index_data", ['as' => "type.index_data", 'uses' => "TypeController@index_data"]);
+    Route::get("type/trashed", ['as' => "type.trashed", 'uses' => "TypeController@trashed"]);
+    Route::patch("type/trashed/{id}", ['as' => "type.restore", 'uses' => "TypeController@restore"]);
+    Route::resource("type", "TypeController");
+
 
     $module_name = 'category';
     $controller_name = 'category';

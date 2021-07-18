@@ -8,9 +8,8 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Spatie\MediaLibrary\HasMedia;
 
-class Service extends Model implements HasMedia
+class Type extends Model
 {
     use HasFactory;
     use SoftDeletes;

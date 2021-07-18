@@ -33,27 +33,44 @@ class GenerateMenus
             ]);
 
 
-            $menu->add('<i class="c-sidebar-nav-icon fas fa-bell"></i> Categories', [
-                'route' => 'backend.category.index',
+
+
+
+
+
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-bell"></i> Vendor Type', [
+                'route' => 'backend.type.index',
                 'class' => 'c-sidebar-nav-item',
             ])
                 ->data([
-                    'order'         => 98,
-                    'activematches' => 'admin/category*',
+                    'order'         => 99,
+                    'activematches' => 'admin/type*',
                     'permission'    => [],
                 ])
                 ->link->attr([
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
-
             $menu->add('<i class="c-sidebar-nav-icon fas fa-bell"></i> Services', [
-                'route' => 'backend.services.index',
+                'route' => 'backend.type.index',
                 'class' => 'c-sidebar-nav-item',
             ])
                 ->data([
                     'order'         => 99,
-                    'activematches' => 'admin/services*',
+                    'activematches' => 'admin/type*',
+                    'permission'    => [],
+                ])
+                ->link->attr([
+                    'class' => 'c-sidebar-nav-link',
+                ]);
+
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-bell"></i> Cities', [
+                'route' => 'backend.city.index',
+                'class' => 'c-sidebar-nav-item',
+            ])
+                ->data([
+                    'order'         => 99,
+                    'activematches' => 'admin/city*',
                     'permission'    => [],
                 ])
                 ->link->attr([

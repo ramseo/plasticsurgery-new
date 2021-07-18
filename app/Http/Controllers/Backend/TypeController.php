@@ -5,36 +5,35 @@ namespace App\Http\Controllers\Backend;
 use App\Authorizable;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
-use Flash;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Log;
 use Yajra\DataTables\DataTables;
+use Auth;
+use Flash;
+use Log;
 
-class ServiceController extends Controller
+class TypeController extends Controller
 {
-
     use Authorizable;
 
     public function __construct()
     {
 
         // Page Title
-        $this->module_title = 'Services';
+        $this->module_title = 'Vendor Type';
 
         // module name
-        $this->module_name = 'services';
+        $this->module_name = 'type';
 
         // directory path of the module
-        $this->module_path = 'services';
+        $this->module_path = 'type';
 
         // module icon
         $this->module_icon = 'c-icon cil-people';
 
         // module model name, path
-        $this->module_model = "App\Models\Service";
+        $this->module_model = "App\Models\Type";
     }
 
     /**

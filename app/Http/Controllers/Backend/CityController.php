@@ -10,7 +10,12 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
 
-class CategoryController extends Controller
+use Auth;
+use Flash;
+use Log;
+
+
+class CityController extends Controller
 {
     use Authorizable;
 
@@ -18,19 +23,19 @@ class CategoryController extends Controller
     {
 
         // Page Title
-        $this->module_title = 'Category';
+        $this->module_title = 'Cities';
 
         // module name
-        $this->module_name = 'category';
+        $this->module_name = 'city';
 
         // directory path of the module
-        $this->module_path = 'category';
+        $this->module_path = 'city';
 
         // module icon
         $this->module_icon = 'c-icon cil-people';
 
         // module model name, path
-        $this->module_model = "App\Models\Service";
+        $this->module_model = "App\Models\City";
     }
 
     /**
@@ -156,7 +161,7 @@ class CategoryController extends Controller
         Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
         return view(
-            "article::backend.$module_name.create",
+            "backend.$module_name.create",
             compact('module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action')
         );
     }
@@ -168,7 +173,7 @@ class CategoryController extends Controller
      *
      * @return Response
      */
-    public function store(CategoriesRequest $request)
+    public function store(Request $request)
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -237,11 +242,10 @@ class CategoryController extends Controller
         $module_action = 'Edit';
 
         $$module_name_singular = $module_model::findOrFail($id);
-
         Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
         return view(
-            "article::backend.$module_name.edit",
+            "backend.$module_name.edit",
             compact('module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action', "$module_name_singular")
         );
     }
@@ -254,7 +258,7 @@ class CategoryController extends Controller
      *
      * @return Response
      */
-    public function update(CategoriesRequest $request, $id)
+    public function update(Request $request, $id)
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
