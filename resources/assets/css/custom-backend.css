@@ -1,0 +1,26 @@
+.btn-primary {
+    background-color: #fa4a70;
+    border-color: #fa4a70;
+}
+
+.page-item.active .page-link {
+    background-color: #fa4a70;
+    border-color: #fa4a70;
+}
+
+.badge-primary {
+    background-color: #fa4a70;
+}
+
+a {
+    color: #fa4a70;
+}
+
+.text-primary {
+    color: #fa4a70 !important;
+}
+
+.c-sidebar .c-sidebar-nav-link:hover,
+.c-sidebar .c-sidebar-nav-dropdown-toggle:hover {
+    background: #fa4a70;
+}
