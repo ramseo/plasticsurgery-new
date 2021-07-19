@@ -22,13 +22,13 @@ class ServiceController extends Controller
     {
 
         // Page Title
-        $this->module_title = 'Services';
+        $this->module_title = 'Service';
 
         // module name
-        $this->module_name = 'services';
+        $this->module_name = 'service';
 
         // directory path of the module
-        $this->module_path = 'services';
+        $this->module_path = 'service';
 
         // module icon
         $this->module_icon = 'c-icon cil-people';
@@ -44,6 +44,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
+
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
@@ -217,7 +218,7 @@ class ServiceController extends Controller
         Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
         return view(
-            "article::backend.$module_name.show",
+            "backend.$module_name.show",
             compact('module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action', "$module_name_singular", 'posts')
         );
     }
@@ -330,7 +331,7 @@ class ServiceController extends Controller
         Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name);
 
         return view(
-            "article::backend.$module_name.trash",
+            "backend.$module_name.trash",
             compact('module_title', 'module_name', "$module_name", 'module_icon', 'module_name_singular', 'module_action')
         );
     }

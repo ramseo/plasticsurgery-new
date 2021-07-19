@@ -24,7 +24,6 @@ Route::get('language/{language}', 'LanguageController@switch')->name('language.s
 *
 * Frontend Routes
 *
-* --------------------------------------------------------------------
 */
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('/', 'FrontendController@index')->name('index');
@@ -40,10 +39,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         *
         *  Users Routes
         *
-        * ---------------------------------------------------------------------
         */
-        $module_name = 'users';
-        $controller_name = 'UserController';
         Route::get('profile/{id}', ['as' => "users.profile", 'uses' => "UserController@profile"]);
         Route::get('profile/{id}/edit', ['as' => "users.profileEdit", 'uses' => "UserController@profileEdit"]);
         Route::patch('profile/{id}/edit', ['as' => "users.profileUpdate", 'uses' => "UserController@profileUpdate"]);
@@ -58,7 +54,6 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 *
 * Backend admin Routes
 * These routes need view-backend permission
-* --------------------------------------------------------------------
 */
 Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.', 'middleware' => ['auth', 'can:view_backend']], function () {
 
@@ -73,29 +68,22 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
      *
      *  Settings Routes
      *
-     * ---------------------------------------------------------------------
      */
     Route::group(['middleware' => ['permission:edit_settings']], function () {
-        $module_name = 'settings';
-        $controller_name = 'SettingController';
         Route::get("settings", "SettingController@index")->name("settings");
         Route::post("settings", "SettingController@store")->name("settings.store");
     });
 
 
 
-    $module_name = 'services';
-    $controller_name = 'ServiceController';
-    Route::get("services", ['as' => "services.index", 'uses' => "ServiceController@index"]);
-    Route::get("services/index_list", ['as' => "services.index_list", 'uses' => "ServiceController@index_list"]);
-    Route::get("services/index_data", ['as' => "services.index_data", 'uses' => "ServiceController@index_data"]);
-    Route::get("services/trashed", ['as' => "services.trashed", 'uses' => "ServiceController@trashed"]);
-    Route::patch("services/trashed/{id}", ['as' => "services.restore", 'uses' => "ServiceController@restore"]);
-    Route::resource("services", "ServiceController");
+    Route::get("service", ['as' => "service.index", 'uses' => "ServiceController@index"]);
+    Route::get("service/index_list", ['as' => "service.index_list", 'uses' => "ServiceController@index_list"]);
+    Route::get("service/index_data", ['as' => "service.index_data", 'uses' => "ServiceController@index_data"]);
+    Route::get("service/trashed", ['as' => "service.trashed", 'uses' => "ServiceController@trashed"]);
+    Route::patch("service/trashed/{id}", ['as' => "service.restore", 'uses' => "ServiceController@restore"]);
+    Route::resource("service", "ServiceController");
 
 
-    $module_name = 'city';
-    $controller_name = 'CityController';
     Route::get("city", ['as' => "city.index", 'uses' => "CityController@index"]);
     Route::get("city/index_list", ['as' => "city.index_list", 'uses' => "CityController@index_list"]);
     Route::get("city/index_data", ['as' => "city.index_data", 'uses' => "CityController@index_data"]);
@@ -105,8 +93,6 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
 
 
 
-    $module_name = 'type';
-    $controller_name = 'TypeController';
     Route::get("type", ['as' => "type.index", 'uses' => "TypeController@index"]);
     Route::get("type/index_list", ['as' => "type.index_list", 'uses' => "TypeController@index_list"]);
     Route::get("type/index_data", ['as' => "type.index_data", 'uses' => "TypeController@index_data"]);
@@ -115,8 +101,6 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::resource("type", "TypeController");
 
 
-    $module_name = 'category';
-    $controller_name = 'category';
     Route::get("category", ['as' => "category.index", 'uses' => "CategoryController@index"]);
     Route::get("category/index_list", ['as' => "category.index_list", 'uses' => "CategoryController@index_list"]);
     Route::get("category/index_data", ['as' => "category.index_data", 'uses' => "CategoryController@index_data"]);
@@ -128,10 +112,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     *
     *  Notification Routes
     *
-    * ---------------------------------------------------------------------
     */
-    $module_name = 'notifications';
-    $controller_name = 'NotificationsController';
     Route::get("notifications", ['as' => "notifications.index", 'uses' => "NotificationsController@index"]);
     Route::get("notifications/markAllAsRead", ['as' => "notifications.markAllAsRead", 'uses' => "NotificationsController@markAllAsRead"]);
     Route::delete("notifications/deleteAll", ['as' => "notifications.deleteAll", 'uses' => "NotificationsController@deleteAll"]);
@@ -141,10 +122,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     *
     *  Backup Routes
     *
-    * ---------------------------------------------------------------------
     */
-    $module_name = 'backups';
-    $controller_name = 'BackupController';
     Route::get("backups", ['as' => "backups.index", 'uses' => "BackupController@index"]);
     Route::get("backups/create", ['as' => "backups.create", 'uses' => "BackupController@create"]);
     Route::get("backups/download/{file_name}", ['as' => "backups.download", 'uses' => "BackupController@download"]);
@@ -154,20 +132,14 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     *
     *  Roles Routes
     *
-    * ---------------------------------------------------------------------
     */
-    $module_name = 'roles';
-    $controller_name = 'RolesController';
     Route::resource("roles", "RolesController");
 
     /*
     *
     *  Users Routes
     *
-    * ---------------------------------------------------------------------
     */
-    $module_name = 'users';
-    $controller_name = 'UserController';
     Route::get("users/profile/{id}", ['as' => "users.profile", 'uses' => "UserController@profile"]);
     Route::get("users/profile/{id}/edit", ['as' => "users.profileEdit", 'uses' => "UserController@profileEdit"]);
     Route::patch("users/profile/{id}/edit", ['as' => "users.profileUpdate", 'uses' => "UserController@profileUpdate"]);
@@ -190,7 +162,6 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
      *
      *  Newsletter Routes
      *
-     * ---------------------------------------------------------------------
      */
     Route::get("newsletter", ['as' => "newsletter.index", 'uses' => "NewsletterController@index"]);
 });
@@ -199,7 +170,6 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
 *
 * Backend vendor Routes
 * These routes need view-backend permission
-* --------------------------------------------------------------------
 */
 Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.', 'middleware' => ['auth', 'can:view_backend']], function () {
 
@@ -214,70 +184,53 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
      *
      *  Settings Routes
      *
-     * ---------------------------------------------------------------------
      */
     Route::group(['middleware' => ['permission:edit_settings']], function () {
-        $module_name = 'settings';
-        $controller_name = 'SettingController';
         Route::get("settings", "SettingController@index")->name("settings");
         Route::post("settings", "SettingController@store")->name("settings.store");
     });
 
 
 
-//    $module_name = 'services';
-//    $controller_name = 'ServiceController';
-//    Route::get("services", ['as' => "services.index", 'uses' => "ServiceController@index"]);
-//    Route::get("services/index_list", ['as' => "services.index_list", 'uses' => "ServiceController@index_list"]);
-//    Route::get("services/index_data", ['as' => "services.index_data", 'uses' => "ServiceController@index_data"]);
-//    Route::get("services/trashed", ['as' => "services.trashed", 'uses' => "ServiceController@trashed"]);
-//    Route::patch("services/trashed/{id}", ['as' => "services.restore", 'uses' => "ServiceController@restore"]);
-//    Route::resource("services", "ServiceController");
+    //    Route::get("services", ['as' => "services.index", 'uses' => "ServiceController@index"]);
+    //    Route::get("services/index_list", ['as' => "services.index_list", 'uses' => "ServiceController@index_list"]);
+    //    Route::get("services/index_data", ['as' => "services.index_data", 'uses' => "ServiceController@index_data"]);
+    //    Route::get("services/trashed", ['as' => "services.trashed", 'uses' => "ServiceController@trashed"]);
+    //    Route::patch("services/trashed/{id}", ['as' => "services.restore", 'uses' => "ServiceController@restore"]);
+    //    Route::resource("services", "ServiceController");
 
     /*
     *
     *  Notification Routes
     *
-    * ---------------------------------------------------------------------
     */
-//    $module_name = 'notifications';
-//    $controller_name = 'NotificationsController';
-//    Route::get("notifications", ['as' => "notifications.index", 'uses' => "NotificationsController@index"]);
-//    Route::get("notifications/markAllAsRead", ['as' => "notifications.markAllAsRead", 'uses' => "NotificationsController@markAllAsRead"]);
-//    Route::delete("notifications/deleteAll", ['as' => "notifications.deleteAll", 'uses' => "NotificationsController@deleteAll"]);
-//    Route::get("notifications/{id}", ['as' => "notifications.show", 'uses' => "NotificationsController@show"]);
+    //    Route::get("notifications", ['as' => "notifications.index", 'uses' => "NotificationsController@index"]);
+    //    Route::get("notifications/markAllAsRead", ['as' => "notifications.markAllAsRead", 'uses' => "NotificationsController@markAllAsRead"]);
+    //    Route::delete("notifications/deleteAll", ['as' => "notifications.deleteAll", 'uses' => "NotificationsController@deleteAll"]);
+    //    Route::get("notifications/{id}", ['as' => "notifications.show", 'uses' => "NotificationsController@show"]);
 
     /*
     *
     *  Backup Routes
     *
-    * ---------------------------------------------------------------------
     */
-//    $module_name = 'backups';
-//    $controller_name = 'BackupController';
-//    Route::get("backups", ['as' => "backups.index", 'uses' => "BackupController@index"]);
-//    Route::get("backups/create", ['as' => "backups.create", 'uses' => "BackupController@create"]);
-//    Route::get("backups/download/{file_name}", ['as' => "backups.download", 'uses' => "BackupController@download"]);
-//    Route::get("backups/delete/{file_name}", ['as' => "backups.delete", 'uses' => "BackupController@delete"]);
+    //    Route::get("backups", ['as' => "backups.index", 'uses' => "BackupController@index"]);
+    //    Route::get("backups/create", ['as' => "backups.create", 'uses' => "BackupController@create"]);
+    //    Route::get("backups/download/{file_name}", ['as' => "backups.download", 'uses' => "BackupController@download"]);
+    //    Route::get("backups/delete/{file_name}", ['as' => "backups.delete", 'uses' => "BackupController@delete"]);
 
     /*
     *
     *  Roles Routes
     *
-    * ---------------------------------------------------------------------
     */
-    $module_name = 'roles';
-    $controller_name = 'RolesController';
     Route::resource("roles", "RolesController");
 
     /*
     *
     *  Users Routes
     *
-    * ---------------------------------------------------------------------
     */
-    $module_name = 'users';
-    $controller_name = 'UserController';
     Route::get("users/profile/{id}", ['as' => "users.profile", 'uses' => "UserController@profile"]);
     Route::get("users/profile/{id}/edit", ['as' => "users.profileEdit", 'uses' => "UserController@profileEdit"]);
     Route::patch("users/profile/{id}/edit", ['as' => "users.profileUpdate", 'uses' => "UserController@profileUpdate"]);
