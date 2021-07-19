@@ -85,6 +85,15 @@
                                                 </div>
                                             </a>
                                         @endif
+                                        <a href="{{ route('register-vendor') }}"
+                                           class="list-group-item list-group-item-action">
+                                        <span class="icon icon-sm icon-primary">
+                                            <i class="fas fa-address-card"></i>
+                                        </span>
+                                            <div class="">
+                                                <span class="text-dark d-block">Register as Vendor</span>
+                                            </div>
+                                        </a>
                                     @endauth
                                 </div>
                             </div>

@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\EmailVerificationPromptController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Auth\RegisteredVendorController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
@@ -66,7 +67,15 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout')
                 ->middleware('auth');
 
-Route::get('/vendor-signup', [RegisteredUserController::class, 'vendorSignup'])->middleware('guest')->name('vendor-signup');
+
+Route::get('/register-vendor', [RegisteredVendorController::class, 'create'])
+    ->middleware('guest')
+    ->name('register-vendor');
+
+Route::post('/register-vendor', [RegisteredVendorController::class, 'store'])
+    ->middleware('guest');
+
+//Route::get('/vendor-signup', [RegisteredUserController::class, 'vendorSignup'])->middleware('guest')->name('vendor-signup');
 
 // Social Login Routes
 Route::group(['namespace' => 'Auth', 'middleware' => 'guest'], function () {

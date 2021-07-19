@@ -25,14 +25,20 @@
             </button>
         </div>
         @endif
-        <form role="form" method="POST" action="">
+        <form role="form" method="POST" action="{{ route('register-vendor') }}">
             @csrf
             <input type="hidden" name="redirectTo" value="{{ request()->redirectTo }}">
             <div class="form-row">
                 <div class="col-6 form-group mat-group">
-                    <label for="">{{ __('Business Name') }}</label>
-                    <input type="text" class="form-control" id="first_name" name="first_name" value="{{ old('first_name') }}" placeholder="{{ __('Business Name') }}" aria-label="first_name" aria-describedby="first_name" required>
+                    <label for="">{{ __('First Name') }}</label>
+                    <input type="text" class="form-control" id="first_name" name="first_name" value="{{ old('first_name') }}" placeholder="{{ __('First Name') }}" aria-label="first_name" aria-describedby="first_name" required>
                 </div>
+                <div class="col-6 form-group mat-group">
+                    <label for="">{{ __('Last Name') }}</label>
+                    <input type="last_name" class="form-control" id="last_name" name="last_name" value="{{ old('last_name') }}" placeholder="{{ __('Last Name') }}" aria-label="last_name" aria-describedby="last_name" required>
+                </div>
+            </div>
+            <div class="form-row">
                 <div class="col-6 form-group mat-group">
                     <label for="">{{ __('Email') }}</label>
                     <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="{{ __('Email') }}" aria-label="email" aria-describedby="email" required>
