@@ -38,7 +38,7 @@ class GenerateMenus
 
 
 
-            $menu->add('<i class="c-sidebar-nav-icon fas fa-bell"></i> Vendor Type', [
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-industry"></i> Vendor Type', [
                 'route' => 'backend.type.index',
                 'class' => 'c-sidebar-nav-item',
             ])
@@ -51,7 +51,7 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
-            $menu->add('<i class="c-sidebar-nav-icon fas fa-bell"></i> Services', [
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-wrench"></i> Services', [
                 'route' => 'backend.service.index',
                 'class' => 'c-sidebar-nav-item',
             ])
@@ -64,7 +64,7 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
-            $menu->add('<i class="c-sidebar-nav-icon fas fa-bell"></i> Cities', [
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-city"></i> Cities', [
                 'route' => 'backend.city.index',
                 'class' => 'c-sidebar-nav-item',
             ])
