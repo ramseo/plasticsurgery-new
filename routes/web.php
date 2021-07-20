@@ -164,6 +164,13 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
      *
      */
     Route::get("newsletter", ['as' => "newsletter.index", 'uses' => "NewsletterController@index"]);
+
+    /*
+     *
+     *  Menu Routes
+     *
+     */
+    Route::get("menus", ['as' => "menu.index", 'uses' => "MenuController@index"]);
 });
 
 /*
