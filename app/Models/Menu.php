@@ -10,6 +10,11 @@ class Menu extends Model
     public $timestamps = false;
     protected $table = 'menus';
 
+    protected $guarded = [
+        'id',
+        '_token'
+    ];
+
     protected $dates = [
         'created_at',
     ];

@@ -21,7 +21,9 @@
                 </div>
             </div>
             <div class="col-4">
-                
+                <div class="float-right">
+                    <x-buttons.create route='{{ route("backend.$module_name.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}"/>
+                </div>
             </div>
         </div>
 
@@ -39,6 +41,9 @@
                             <th>
                                 Menu
                             </th>
+                            <th>
+                                Action
+                            </th>
                         </tr>
                     </thead>
                     @if($menus)
@@ -50,6 +55,9 @@
                                 <td>{{$count}}</td>
                                 <td>{{$item->title}}</td>
                                 <td>{{$item->menu}}</td>
+                                <td>
+                                    <x-buttons.edit route='{!!route("backend.$module_name.edit", $item->id)!!}' title="{{__('Edit')}} {{ ucwords(Str::singular($module_name)) }}" small="true" />
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

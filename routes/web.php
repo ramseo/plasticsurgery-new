@@ -171,6 +171,11 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
      *
      */
     Route::get("menus", ['as' => "menu.index", 'uses' => "MenuController@index"]);
+    Route::get("menus-create", ['as' => "menu.create", 'uses' => "MenuController@create"]);
+    Route::post("menus-store", ['as' => "menu.store", 'uses' => "MenuController@store"]);
+    Route::get("menus-edit/{id}", ['as' => "menu.edit", 'uses' => "MenuController@edit"]);
+    Route::patch("menus-update/{id}", ['as' => "menu.update", 'uses' => "MenuController@update"]);
+    Route::delete("menus-destroy/{id}", ['as' => "menu.destroy", 'uses' => "MenuController@destroy"]);
 });
 
 /*
