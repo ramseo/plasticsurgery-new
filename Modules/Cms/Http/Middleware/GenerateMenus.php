@@ -19,11 +19,11 @@ class GenerateMenus
         \Menu::make('admin_sidebar', function ($menu) {
 
             // Cms Dropdown
-            $cms_menu = $menu->add('<i class="c-sidebar-nav-icon fas fa-file-alt"></i> Cms', [
+            $cms_menu = $menu->add('<i class="c-sidebar-nav-icon fas fa-grav"></i> Cms', [
                 'class' => 'c-sidebar-nav-dropdown',
             ])
             ->data([
-                'order'         => 71,
+                'order'         => 71,  
                 'activematches' => [
                     'admin/pages*',
                 ],

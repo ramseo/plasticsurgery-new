@@ -6,13 +6,21 @@
                 <a href="{{url('/')}}"><img src="{{asset('images/logo.png')}}" alt="" class="img-fluid"></a>
             </div>
             <div class="col-xs-6 col-sm-9 d-flex header-menu-col">
-                <ul class="list-inline d-flex site-menu site-main-menu">
-                    <li><a href="{{url('listing')}}">Vendors</a></li>
-                    <li><a href="{{url('detail')}}">Bride</a></li>
-                    <li><a href="#">Groom</a></li>
-                    <li><a href="{{ route('frontend.posts.index') }}">Blog</a></li>
-                    <span id="menuCloser" style="display: none;"><i class="fa fa-times"></i></span>
-                </ul>
+                @php
+                    $header_menu = getDataArray('menus','menu', 'header');
+                @endphp
+                @if($header_menu)
+                    <ul class="list-inline d-flex site-menu site-main-menu">
+                        @foreach($header_menu as $menu_item)
+                            <li><a href="{{$menu_item->url}}">{{$menu_item->title}}</a></li>
+                        @endforeach
+                        <!-- <li><a href="{{url('listing')}}">Vendors</a></li>
+                        <li><a href="{{url('detail')}}">Bride</a></li>
+                        <li><a href="#">Groom</a></li>
+                        <li><a href="{{ route('frontend.posts.index') }}">Blog</a></li> -->
+                        <span id="menuCloser" style="display: none;"><i class="fa fa-times"></i></span>
+                    </ul>
+                @endif
                 <ul class="list-inline d-flex site-menu user-menu">
                     <li>
                         <a href="#"><img src="images/search.png" alt=""> Search</a>

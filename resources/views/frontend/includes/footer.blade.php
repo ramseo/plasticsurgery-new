@@ -33,29 +33,16 @@
             </div>
             <div class="col-xs-12 col-sm-12 footer-col">
                 <p class="footer-head">More About Us</p>
-                <ul class="list-inline footer-color-list">
-                    <li class="list-inline-item">
-                        <a href="#">About Us</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">Careers</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">Contact Us</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">Privacy Policy</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">Sitemap</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">Terms & Conditions</a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">Wedding Guest Post</a>
-                    </li>
-                </ul>
+                @php
+                    $footer_menu = getDataArray('menus','menu', 'footer');
+                @endphp
+                @if($footer_menu)
+                    <ul class="list-inline footer-color-list">
+                        @foreach($footer_menu as $menu_item)
+                            <li class="list-inline-item"><a href="{{$menu_item->url}}">{{$menu_item->title}}</a></li>
+                        @endforeach
+                    </ul>
+                @endif
                 @if(setting('show_copyright'))
                     <p class="footer-small-text">{{setting('copyright_text')}}</p>
                 @endif
