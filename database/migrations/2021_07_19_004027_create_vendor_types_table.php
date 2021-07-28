@@ -23,6 +23,10 @@ class CreateVendorTypesTable extends Migration
             $table->string('order')->nullable();
             $table->tinyInteger('status')->default(1);
 
+            $table->string('icon')->nullable();
+            $table->string('image')->nullable();
+            $table->string('banner')->nullable();
+
             $table->integer('created_by')->unsigned()->nullable();
             $table->integer('updated_by')->unsigned()->nullable();
             $table->integer('deleted_by')->unsigned()->nullable();

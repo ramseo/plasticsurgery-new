@@ -22,7 +22,7 @@
             </div>
             <div class="col-4">
                 <div class="float-right">
-                    <x-buttons.create route='{{ route("backend.$module_name.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}"/>
+{{--                    <x-buttons.create route='{{ route("backend.$module_name.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}"/>--}}
 
 {{--                    <div class="btn-group" role="group" aria-label="Toolbar button groups">--}}
 {{--                        <div class="btn-group" role="group">--}}

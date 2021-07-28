@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Authorizable;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Str;
@@ -182,7 +183,24 @@ class TypeController extends Controller
 
         $module_action = 'Store';
 
-        $$module_name_singular = $module_model::create($request->all());
+
+        $data = $request->all();
+        if($request->file('icon')){
+            $file_icon = fileUpload($request, 'icon','type/icon/');
+            $data = array_merge($data,['icon'=> $file_icon]);
+        }
+
+        if($request->file('image')){
+            $file_image = fileUpload($request, 'image','type/image/');
+            $data = array_merge($data,['image'=> $file_image]);
+        }
+
+        if($request->file('banner')){
+            $file_banner = fileUpload($request, 'banner','type/banner/');
+            $data = array_merge($data,['banner'=> $file_banner]);
+        }
+
+        $$module_name_singular = $module_model::create($data);
 
         Flash::success("<i class='fas fa-check'></i> New '".Str::singular($module_title)."' Added")->important();
 
@@ -269,7 +287,24 @@ class TypeController extends Controller
 
         $$module_name_singular = $module_model::findOrFail($id);
 
-        $$module_name_singular->update($request->all());
+        $data = $request->all();
+        if($request->file('icon')){
+            $file_icon = fileUpload($request, 'icon','vendor/type/icon/');
+            $data = array_merge($data,['icon'=> $file_icon]);
+        }
+
+        if($request->file('image')){
+            $file_image = fileUpload($request, 'image','vendor/type/image/');
+            $data = array_merge($data,['image'=> $file_image]);
+        }
+
+        if($request->file('banner')){
+            $file_banner = fileUpload($request, 'banner','vendor/type/banner/');
+            $data = array_merge($data,['banner'=> $file_banner]);
+        }
+
+
+        $$module_name_singular->update($data);
 
         Flash::success("<i class='fas fa-check'></i> '".Str::singular($module_title)."' Updated Successfully")->important();
 

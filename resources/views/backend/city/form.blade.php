@@ -50,3 +50,36 @@
         </div>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-6">
+
+        <div class="form-group">
+            {{ Form::label('icon', 'Icon') }}
+            <div class="custom-file">
+                <input type="file" class="custom-file-input"  name="icon">
+                <label class="custom-file-label">Choose file</label>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            {{ Form::label('image', 'Image') }}
+            <div class="custom-file">
+                <input type="file" class="custom-file-input"  name="image">
+                <label class="custom-file-label">Choose file</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@push ('after-scripts')
+    <script type="text/javascript">
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+@endpush

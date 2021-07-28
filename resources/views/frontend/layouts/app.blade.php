@@ -31,7 +31,7 @@
     <x-google-analytics />
 </head>
 
-<body> 
+<body>
 
     @include('frontend.includes.header')
 

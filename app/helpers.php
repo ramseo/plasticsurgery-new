@@ -38,6 +38,21 @@ function getLatestBlogs(){
     return $data->get();
 }
 
+function fileUpload(Request $request, $key, $folder, $realName=true){
+    if ($request->has($key)) {
+        $image = $request->file($key);
+        if($realName){
+            $imageName = $image->getClientOriginalName();
+        }else{
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+        }
+        if($request->{$key}->move(storage_path('app/public/'.$folder), $imageName)){
+            return $imageName;
+        }
+    }
+    return false;
+}
+
 /*
  * Global helpers file with misc functions.
  */

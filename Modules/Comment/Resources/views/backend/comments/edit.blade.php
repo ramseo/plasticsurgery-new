@@ -22,9 +22,9 @@
             </div>
             <!--/.col-->
             <div class="col-4">
-                <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-                    <a href="{{ route("backend.$module_name.show", $$module_name_singular->id) }}" class="btn btn-primary btn-sm ml-1" data-toggle="tooltip" title="Show Details"><i class="fas fa-tv"></i> Show</a>
-                </div>
+{{--                <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">--}}
+{{--                    <a href="{{ route("backend.$module_name.show", $$module_name_singular->id) }}" class="btn btn-primary btn-sm ml-1" data-toggle="tooltip" title="Show Details"><i class="fas fa-tv"></i> Show</a>--}}
+{{--                </div>--}}
             </div>
             <!--/.col-->
         </div>
