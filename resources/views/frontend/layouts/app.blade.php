@@ -25,13 +25,13 @@
     <link rel="stylesheet" href="{{ mix('css/wed.css') }}">
 
     @stack('after-styles')
-    
+
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
 
     <x-google-analytics />
 </head>
 
-<body>
+<body> 
 
     @include('frontend.includes.header')
 
