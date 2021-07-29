@@ -14,7 +14,7 @@ class CreateVendorTypesTable extends Migration
     public function up()
     {
         Schema::create('types', function (Blueprint $table) {
-            $table->increments('id')->unsigned();
+            $table->id();
 
             $table->string('name');
             $table->string('slug')->nullable();

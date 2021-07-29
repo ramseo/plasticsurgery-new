@@ -53,6 +53,10 @@ class Service extends Model implements HasMedia
         });
     }
 
+    public function type()
+    {
+        return $this->belongsTo('App\Models\Type');
+    }
 
     /**
      * Name should be lowercase.
