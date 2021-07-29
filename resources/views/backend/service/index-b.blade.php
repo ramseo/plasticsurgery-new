@@ -2,11 +2,11 @@
 
 @section('title') {{ $module_action }} {{ $module_title }} @endsection
 
-@section('breadcrumbs')
-<x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item type="active" icon='{{ $module_icon }}'>{{ $module_title }}</x-backend-breadcrumb-item>
-</x-backend-breadcrumbs>
-@endsection
+{{--@section('breadcrumbs')--}}
+{{--<x-backend-breadcrumbs>--}}
+{{--    <x-backend-breadcrumb-item type="active" icon='{{ $module_icon }}'>{{ $module_title }}</x-backend-breadcrumb-item>--}}
+{{--</x-backend-breadcrumbs>--}}
+{{--@endsection--}}
 
 @section('content')
 <div class="card">
@@ -37,6 +37,7 @@
 {{--                            </div>--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
+
                 </div>
             </div>
             <!--/.col-->
@@ -88,7 +89,6 @@
                                 {{ $module_name_singular->created_by }}
                             </td>
                             <td class="text-right">
-                                <a href='{!!route("backend.service.index", $module_name_singular->id)!!}' class='btn btn-sm btn-primary mt-1' data-toggle="tooltip" title="Edit {{ ucwords(Str::singular($module_name)) }}"><i class="fas fa-wrench"></i></a>
                                 <a href='{!!route("backend.$module_name.edit", $module_name_singular)!!}' class='btn btn-sm btn-primary mt-1' data-toggle="tooltip" title="Edit {{ ucwords(Str::singular($module_name)) }}"><i class="fas fa-wrench"></i></a>
                                 <a href='{!!route("backend.$module_name.show", $module_name_singular)!!}' class='btn btn-sm btn-success mt-1' data-toggle="tooltip" title="Show {{ ucwords(Str::singular($module_name)) }}"><i class="fas fa-tv"></i></a>
                             </td>

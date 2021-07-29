@@ -76,13 +76,6 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
 
 
 
-    Route::get("service", ['as' => "service.index", 'uses' => "ServiceController@index"]);
-    Route::get("service/index_list", ['as' => "service.index_list", 'uses' => "ServiceController@index_list"]);
-    Route::get("service/index_data", ['as' => "service.index_data", 'uses' => "ServiceController@index_data"]);
-    Route::get("service/trashed", ['as' => "service.trashed", 'uses' => "ServiceController@trashed"]);
-    Route::patch("service/trashed/{id}", ['as' => "service.restore", 'uses' => "ServiceController@restore"]);
-    Route::resource("service", "ServiceController");
-
 
     Route::get("city", ['as' => "city.index", 'uses' => "CityController@index"]);
     Route::get("city/index_list", ['as' => "city.index_list", 'uses' => "CityController@index_list"]);
@@ -99,6 +92,27 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::get("type/trashed", ['as' => "type.trashed", 'uses' => "TypeController@trashed"]);
     Route::patch("type/trashed/{id}", ['as' => "type.restore", 'uses' => "TypeController@restore"]);
     Route::resource("type", "TypeController");
+
+//    Route::get("service/{type}", ['as' => "service.index", 'uses' => "ServiceController@index"]);
+//    Route::get("service/index_list/{type}", ['as' => "service.index_list", 'uses' => "ServiceController@index_list"]);
+//    Route::get("service/index_data/{type}", ['as' => "service.index_data", 'uses' => "ServiceController@index_data"]);
+//    Route::get("service/create/{type}", ['as' => "service.create", 'uses' => "ServiceController@create"]);
+//    Route::post("service/store/{type}", ['as' => "service.store", 'uses' => "ServiceController@store"]);
+//    Route::get("service/edit/{type}", ['as' => "service.edit", 'uses' => "ServiceController@edit"]);
+//    Route::post("service/update/{type}", ['as' => "service.update", 'uses' => "ServiceController@update"]);
+//    Route::get("service/trashed/{type}", ['as' => "service.trashed", 'uses' => "ServiceController@trashed"]);
+//    Route::patch("service/trashed/{type}/{id}", ['as' => "service.restore", 'uses' => "ServiceController@restore"]);
+//    Route::resource("service", "ServiceController");
+
+    Route::group(['prefix' => 'service'], function () {
+        Route::get('/{type}', 'ServiceController@index')->name('service.index');
+        Route::get('create/{type}', 'ServiceController@create')->name('service.create');
+        Route::post('store/{type}', 'ServiceController@store')->name('service.store');
+        Route::get('edit/{type}', 'ServiceController@edit')->name('service.edit');
+        Route::get('update/{type}', 'ServiceController@update')->name('service.update');
+//        Route::get('ed', 'ServiceController@ed')->name('service.ed');
+        Route::resource("service", "ServiceController");
+    });
 
 
     Route::get("category", ['as' => "category.index", 'uses' => "CategoryController@index"]);

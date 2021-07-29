@@ -22,7 +22,14 @@
             </div>
             <div class="col-4">
                 <div class="float-right">
-                    <x-buttons.create route='{{ route("backend.$module_name.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}"/>
+                    <a href='{{ route("backend.$module_name.create").'/'. $typeId}}'
+                       class='btn btn-success btn-sm'
+                       data-toggle="tooltip"
+                       title="{{__('Create')}}">
+                        <i class="fas fa-plus-circle"></i>
+                    </a>
+
+{{--                    <x-buttons.create route='{{ route("backend.$module_name.create",$typeId) }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}"/>--}}
 
 {{--                    <div class="btn-group" role="group" aria-label="Toolbar button groups">--}}
 {{--                        <div class="btn-group" role="group">--}}
@@ -99,7 +106,7 @@
         serverSide: true,
         autoWidth: true,
         responsive: true,
-        ajax: '{{ route("backend.$module_name.index_data") }}',
+        ajax: '{{ route("backend.$module_name.index_data",$typeId) }}',
         columns: [
             {data: 'id', name: 'id'},
             {data: 'name', name: 'name'},

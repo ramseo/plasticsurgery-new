@@ -86,7 +86,7 @@ class TypeController extends Controller
             ->addColumn('action', function ($data) {
                 $module_name = $this->module_name;
 
-                return view('backend.includes.action_column', compact('module_name', 'data'));
+                return view('backend.type.action_column', compact('module_name', 'data'));
             })
             ->editColumn('name', '<strong>{{$name}}</strong>')
             ->editColumn('updated_at', function ($data) {

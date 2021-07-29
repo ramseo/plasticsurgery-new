@@ -19,6 +19,7 @@ class CreateVendorTypesTable extends Migration
             $table->string('name');
             $table->string('slug')->nullable();
             $table->text('description')->nullable();
+            $table->string('colour')->nullable();
 
             $table->string('order')->nullable();
             $table->tinyInteger('status')->default(1);

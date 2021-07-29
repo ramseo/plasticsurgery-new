@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Backend;
 
 use App\Authorizable;
 use App\Http\Controllers\Controller;
+
+use App\Models\Service;
+use App\User;
 use Carbon\Carbon;
 use Flash;
 use Illuminate\Http\Request;
@@ -18,57 +21,82 @@ class ServiceController extends Controller
 
     use Authorizable;
 
-    public function __construct()
-    {
-
-        // Page Title
-        $this->module_title = 'Service';
-
-        // module name
-        $this->module_name = 'service';
-
-        // directory path of the module
-        $this->module_path = 'service';
-
-        // module icon
-        $this->module_icon = 'c-icon cil-people';
-
-        // module model name, path
-        $this->module_model = "App\Models\Service";
-    }
+//    public function __construct()
+//    {
+//
+//        // Page Title
+//        $this->module_title = 'Service';
+//
+//        // module name
+//        $this->module_name = 'service';
+//
+//        // directory path of the module
+//        $this->module_path = 'service';
+//
+//        // module icon
+//        $this->module_icon = 'c-icon cil-people';
+//
+//        // module model name, path
+//        $this->module_model = "App\Models\Service";
+//    }
 
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
-    public function index()
-    {
 
-        $module_title = $this->module_title;
-        $module_name = $this->module_name;
-        $module_path = $this->module_path;
-        $module_icon = $this->module_icon;
-        $module_model = $this->module_model;
-        $module_name_singular = Str::singular($module_name);
 
-        $module_action = 'List';
+    public function index($typeId,Request $request) {
 
-        $page_heading = ucfirst($module_title);
-        $title = $page_heading.' '.ucfirst($module_action);
+        if ($request->ajax()) {
+            $reviews = Service::leftJoin('types', 'services.type_id', '=', 'types.id')
+                ->select(['services.id', 'services.name','services.description','services.created_at'])
+            ;
 
-        $$module_name = $module_model::paginate();
+            return Datatables::of($reviews)
+                ->addIndexColumn()
+                ->addColumn('action', function($review){
+//                    $btn = '<a class="btn btn-primary shadow btn-xs sharp mr-1" href="javascript:;" onclick="getReview('.$review->id.');" data-toggle="modal" data-target="#updateModal"> <i class="fa fa-pencil"></i></a>';
+//                    $btn .= '<a class="btn btn-danger shadow btn-xs sharp" href="javascript:;" id="removeInterest" onclick="removeReviews('.$review->id .');"><i class="fa fa-trash"></i></a>';
+                $btn ='';
+                    return $btn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
 
-        Log::info("'$title' viewed by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
-
-        return view(
-            "backend.$module_path.index_datatable",
-            compact('module_title', 'module_name', "$module_name", 'module_path', 'module_icon', 'module_action', 'module_name_singular', 'page_heading', 'title')
-        );
+        return view('backend.service.index');
     }
 
 
-    public function index_data()
+//    public function index($typeId)
+//    {
+//
+//        $module_title = $this->module_title;
+//        $module_name = $this->module_name;
+//        $module_path = $this->module_path;
+//        $module_icon = $this->module_icon;
+//        $module_model = $this->module_model;
+//        $module_name_singular = Str::singular($module_name);
+//
+//        $module_action = 'List';
+//
+//        $page_heading = ucfirst($module_title);
+//        $title = $page_heading.' '.ucfirst($module_action);
+//
+//        $$module_name = Service::paginate();
+//
+//        Log::info("'$title' viewed by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
+//
+//        return view(
+//            "backend.$module_path.index_datatable",
+//            compact('module_title', 'module_name', "$module_name", 'module_path', 'module_icon', 'module_action', 'module_name_singular', 'page_heading', 'title', 'typeId')
+//        );
+//    }
+
+
+    public function index_data($typeId)
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -111,7 +139,7 @@ class ServiceController extends Controller
      *
      * @return Response
      */
-    public function index_list(Request $request)
+    public function index_list($typeId,Request $request)
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -147,7 +175,7 @@ class ServiceController extends Controller
      *
      * @return Response
      */
-    public function create()
+    public function create($typeId)
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -162,7 +190,7 @@ class ServiceController extends Controller
 
         return view(
             "backend.$module_name.create",
-            compact('module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action')
+            compact('module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action', 'typeId')
         );
     }
 
@@ -173,7 +201,7 @@ class ServiceController extends Controller
      *
      * @return Response
      */
-    public function store(Request $request)
+    public function store($typeId,Request $request)
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -200,7 +228,7 @@ class ServiceController extends Controller
      *
      * @return Response
      */
-    public function show($id)
+    public function show($typeId,$id)
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -230,7 +258,7 @@ class ServiceController extends Controller
      *
      * @return Response
      */
-    public function edit($id)
+    public function edit($typeId,$id)
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -246,7 +274,7 @@ class ServiceController extends Controller
 
         return view(
             "backend.$module_name.edit",
-            compact('module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action', "$module_name_singular")
+            compact('module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action', "$module_name_singular", 'typeId')
         );
     }
 
@@ -258,7 +286,7 @@ class ServiceController extends Controller
      *
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update($typeId, $id,Request $request)
     {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
