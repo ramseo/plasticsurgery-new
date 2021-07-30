@@ -39,26 +39,38 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="col-6 form-group mat-group">
+                <div class="col-12 form-group mat-group">
                     <label for="">{{ __('Email') }}</label>
                     <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="{{ __('Email') }}" aria-label="email" aria-describedby="email" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-6 form-group mat-group">
+                    @php
+                        $types = getDataArray('types');
+                    @endphp
                     <label for="">{{ __('Vendor Type') }}</label>
                     <select name="" id="" class="form-control">
                         <option value="">Select</option>
-                        <option value="">Photographer</option>
-                        <option value="">Wedding Planner</option>
+                        @if(isset($types) && $types)
+                            @foreach($types as $type)
+                                <option value="{{$type->id}}">{{$type->name}}</option>
+                            @endforeach
+                        @endif
                     </select>
                 </div>
                 <div class="col-6 form-group mat-group">
+                    @php
+                        $cities = getDataArray('cities');
+                    @endphp
                     <label for="">{{ __('City') }}</label>
                     <select name="" id="" class="form-control">
                         <option value="">Select</option>
-                        <option value="">Banglore</option>
-                        <option value="">Chennai</option>
+                        @if(isset($cities) && $cities)
+                            @foreach($cities as $city)
+                                <option value="{{$city->id}}">{{$city->name}}</option>
+                            @endforeach
+                        @endif
                     </select>
                 </div>
             </div>

@@ -3,7 +3,11 @@
 @section('title') {{app_name()}} @endsection
 
 @section('content')
-
+    @php
+        $cities = getDataArray('cities');
+        $types = getDataArray('types');
+    @endphp
+    
     <!-- Banner search -->
     @include('frontend.includes.banner-search')
 
