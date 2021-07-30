@@ -62,19 +62,6 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
-            $menu->add('<i class="c-sidebar-nav-icon fas fa-wrench"></i> Services', [
-                'route' => 'backend.service.index',
-                'class' => 'c-sidebar-nav-item',
-            ])
-                ->data([
-                    'order'         => 99,
-                    'activematches' => 'admin/service*',
-                    'permission'    => [],
-                ])
-                ->link->attr([
-                    'class' => 'c-sidebar-nav-link',
-                ]);
-
             $menu->add('<i class="c-sidebar-nav-icon fas fa-city"></i> Cities', [
                 'route' => 'backend.city.index',
                 'class' => 'c-sidebar-nav-item',
@@ -324,18 +311,18 @@ class GenerateMenus
 //            ]);
 
             // Settings
-            $menu->add('<i class="c-sidebar-nav-icon fas fa-cogs"></i> Settings', [
-                'route' => 'backend.settings',
-                'class' => 'c-sidebar-nav-item',
-            ])
-                ->data([
-                    'order'         => 102,
-                    'activematches' => 'admin/settings*',
-                    'permission'    => ['edit_settings'],
-                ])
-                ->link->attr([
-                    'class' => 'c-sidebar-nav-link',
-                ]);
+//            $menu->add('<i class="c-sidebar-nav-icon fas fa-cogs"></i> Settings', [
+//                'route' => 'backend.settings',
+//                'class' => 'c-sidebar-nav-item',
+//            ])
+//                ->data([
+//                    'order'         => 102,
+//                    'activematches' => 'admin/settings*',
+//                    'permission'    => ['edit_settings'],
+//                ])
+//                ->link->attr([
+//                    'class' => 'c-sidebar-nav-link',
+//                ]);
             // Backup
 //                        $menu->add('<i class="c-sidebar-nav-icon fas fa-archive"></i> Backups', [
 //                            'route' => 'backend.backups.index',
