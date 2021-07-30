@@ -24,6 +24,9 @@
                     </div>
                 </div>
                 <div class="col-4">
+                    <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+                        <a href="{{ route("backend.type.index") }}" class="btn btn-secondary btn-sm ml-1" data-toggle="tooltip" title="Type List"><i class="fas fa-list-ul"></i> List</a>
+                    </div>
                     <div class="float-right">
                         <a href='{{ route("backend.service.create").'/'. $typeId}}'
                            class='btn btn-success btn-sm'
@@ -31,21 +34,6 @@
                            title="{{__('Create')}}">
                             <i class="fas fa-plus-circle"></i>
                         </a>
-
-                        {{--                    <x-buttons.create route='{{ route("backend.$module_name.create",$typeId) }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}"/>--}}
-
-                        {{--                    <div class="btn-group" role="group" aria-label="Toolbar button groups">--}}
-                        {{--                        <div class="btn-group" role="group">--}}
-                        {{--                            <button id="btnGroupToolbar" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-                        {{--                                <i class="fas fa-cog"></i>--}}
-                        {{--                            </button>--}}
-                        {{--                            <div class="dropdown-menu" aria-labelledby="btnGroupToolbar">--}}
-                        {{--                                <a class="dropdown-item" href="{{ route("backend.$module_name.trashed") }}">--}}
-                        {{--                                    <i class="fas fa-eye-slash"></i> View trash--}}
-                        {{--                                </a>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
-                        {{--                    </div>--}}
                     </div>
                 </div>
             </div>
@@ -54,11 +42,11 @@
             <div class="row mt-4">
                 <div class="col">
                     <div class="table-responsive">
-                        <table id="ticketsTable" class="display min-w850">
+                        <table id="datatable" class="table table-bordered table-hover table-responsive-sm">
                             <thead>
                             <th> # </th>
                             <th> Name </th>
-                            <th> Subject </th>
+                            <th> Slug </th>
                             <th> Action </th>
                             </thead>
                             <tbody>
@@ -97,14 +85,14 @@
     <script type="text/javascript">
 
 
-        var table = $('#ticketsTable').DataTable({
+        var table = $('#datatable').DataTable({
             processing: true,
             serverSide: true,
                 ajax: "{{ route('backend.service.index').'/'. $typeId}}",
                 columns: [
                     {data: 'id', name: 'id'},
                     {data: 'name', name: 'name'},
-                    {data: 'description', name: 'description'},
+                    {data: 'slug', name: 'slug'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
             columnDefs: [{

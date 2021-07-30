@@ -1,13 +1,13 @@
 @extends('backend.layouts.app')
 
-@section('title') {{ $module_action }} {{ $module_title }} @endsection
+@section('title') Edit Service @endsection
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("backend.$module_name.index")}}' icon='{{ $module_icon }}' >
-        {{ $module_title }}
+    <x-backend-breadcrumb-item route='{{url("admin/service/update/$service->id")}}' icon='c-icon cil-people' >
+        Service
     </x-backend-breadcrumb-item>
-    <x-backend-breadcrumb-item type="active">{{ $module_action }}</x-backend-breadcrumb-item>
+    <x-backend-breadcrumb-item type="active">Edit</x-backend-breadcrumb-item>
 </x-backend-breadcrumbs>
 @endsection
 
@@ -17,10 +17,10 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="{{ $module_icon }}"></i>  {{ $module_title }} <small class="text-muted">{{ $module_action }}</small>
+                    <i class="c-icon cil-people"></i>  Service <small class="text-muted">Edit</small>
                 </h4>
                 <div class="small text-muted">
-                    {{ ucwords($module_name) }} Management Dashboard
+                    Service Management Dashboard
                 </div>
             </div>
             <!--/.col-->
@@ -37,10 +37,27 @@
 
         <div class="row mt-4">
             <div class="col">
-                {{ html()->form('POST', url("admin/service/update/$service->id"))->class('form')->open() }}
-
-                @include ("backend.$module_name.form")
-
+                {{ Form::open(array('url' =>url("admin/service/update/$service->id"), 'files' => true,'id' => 'ticketForm')) }}
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            {{ Form::label('name', 'Name') }} {!! fielf_required("required") !!}
+                            {{ Form::text('name', $service->name, array('class' => 'form-control')) }}
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="form-group">
+                            {{ Form::label('slug', 'Slug') }}
+                            {{ Form::text('slug', $service->slug, array('class' => 'form-control')) }}
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <div class="form-group">
+                            {{ Form::label('order', 'Order') }}
+                            {{ Form::text('order', $service->order, array('class' => 'form-control')) }}
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-4">
                         <div class="form-group">
@@ -50,16 +67,15 @@
 
                     <div class="col-8">
                         <div class="float-right">
-                            @can('delete_'.$module_name)
-                            <a href="{{route("backend.$module_name.destroy", $service)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}"><i class="fas fa-trash-alt"></i></a>
+                            @can('delete_service')
+{{--                            <a href="{{route("backend.service.destroy", $service)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}"><i class="fas fa-trash-alt"></i></a>--}}
                             @endcan
-                            <a href="{{ route("backend.$module_name.index") }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
+                            <a href="{{ url("admin/service/$service->id") }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
                         </div>
                     </div>
                 </div>
 
-                {{ html()->form()->close() }}
-
+                {{ Form::close() }}
             </div>
         </div>
     </div>
