@@ -206,6 +206,12 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
         Route::post("settings", "SettingController@store")->name("settings.store");
     });
 
+    Route::get('album/', 'AlbumController@index')->name('album.index');
+    Route::get('album/create/{type}', 'AlbumController@create')->name('album.create');
+    Route::post('album/store/{type}', 'AlbumController@store')->name('album.store');
+    Route::get('album/edit/{id}', 'AlbumController@edit')->name('album.edit');
+    Route::post('album/update/{id}', 'AlbumController@update')->name('album.update');
+    Route::resource("album", "AlbumController");
 
 //    Route::get("profile", ['as' => "vendor.profile", 'uses' => "VendorController@profile"]);
 //    Route::post("update", ['as' => "vendor.update", 'uses' => "VendorController@update"]);
