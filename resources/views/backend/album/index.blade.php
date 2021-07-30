@@ -1,7 +1,7 @@
 @extends('backend.layouts.app')
 
 @section('title')
-<title>Tickets | Index</title>
+<title>Album | Index</title>
 @endsection
 {{--@section('header-title')--}}
 {{--    Manage Tickets--}}
@@ -17,10 +17,10 @@
             <div class="row">
                 <div class="col-8">
                     <h4 class="card-title mb-0">
-                        <i class="c-icon cil-people"></i> Service <small class="text-muted">Data Table Service</small>
+                        <i class="c-icon cil-people"></i> Album <small class="text-muted">Data Table Album</small>
                     </h4>
                     <div class="small text-muted">
-                        {{ Str::title('service') }} Management Dashboard
+                        {{ Str::title('album') }} Management Dashboard
                     </div>
                 </div>
                 <div class="col-4">
@@ -46,7 +46,7 @@
                             <thead>
                             <th> # </th>
                             <th> Name </th>
-                            <th> Slug </th>
+                            <th> Description </th>
                             <th> Action </th>
                             </thead>
                             <tbody>
@@ -92,7 +92,7 @@
                 columns: [
                     {data: 'id', name: 'id'},
                     {data: 'name', name: 'name'},
-                    {data: 'slug', name: 'slug'},
+                    {data: 'description', name: 'description'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
             columnDefs: [{
