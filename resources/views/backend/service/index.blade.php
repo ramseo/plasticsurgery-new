@@ -10,101 +10,125 @@
 
 {{--@endsection--}}
 
+
 @section('content')
-
-    <div class="col-12">
-        <div class="card">
-            <div class="card-header">
-                <div class="card-title">
-                    <h3 class="card-label">Manage Tickets</h3>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-8">
+                    <h4 class="card-title mb-0">
+                        <i class="c-icon cil-people"></i> Service <small class="text-muted">Data Table Service</small>
+                    </h4>
+                    <div class="small text-muted">
+                        {{ Str::title('service') }} Management Dashboard
+                    </div>
                 </div>
-                <div class="card-toolbar">
+                <div class="col-4">
+                    <div class="float-right">
+                        <a href='{{ route("backend.service.create").'/'. $typeId}}'
+                           class='btn btn-success btn-sm'
+                           data-toggle="tooltip"
+                           title="{{__('Create')}}">
+                            <i class="fas fa-plus-circle"></i>
+                        </a>
 
+                        {{--                    <x-buttons.create route='{{ route("backend.$module_name.create",$typeId) }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}"/>--}}
+
+                        {{--                    <div class="btn-group" role="group" aria-label="Toolbar button groups">--}}
+                        {{--                        <div class="btn-group" role="group">--}}
+                        {{--                            <button id="btnGroupToolbar" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+                        {{--                                <i class="fas fa-cog"></i>--}}
+                        {{--                            </button>--}}
+                        {{--                            <div class="dropdown-menu" aria-labelledby="btnGroupToolbar">--}}
+                        {{--                                <a class="dropdown-item" href="{{ route("backend.$module_name.trashed") }}">--}}
+                        {{--                                    <i class="fas fa-eye-slash"></i> View trash--}}
+                        {{--                                </a>--}}
+                        {{--                            </div>--}}
+                        {{--                        </div>--}}
+                        {{--                    </div>--}}
+                    </div>
                 </div>
             </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table id="ticketsTable" class="display min-w850">
-                        <thead>
+            <!--/.row-->
+
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="table-responsive">
+                        <table id="ticketsTable" class="display min-w850">
+                            <thead>
                             <th> # </th>
-                            <th> Date </th>
-                            <th> User Name </th>
-                            <th> Email </th>
-                            <th> Ticket number </th>
+                            <th> Name </th>
                             <th> Subject </th>
-                            <th> Type </th>
-                            <th> Status </th>
                             <th> Action </th>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-7">
+                    <div class="float-left">
+
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="float-right">
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="col-lg-5">
-        <div id="simple" class="simple"></div>
-    </div>
-@endsection
+@stop
 
 @push ('after-styles')
+    <!-- DataTables Core and Extensions -->
+    <link rel="stylesheet" href="{{ asset('vendor/datatable/datatables.min.css') }}">
+
+@endpush
+@push ('after-scripts')
+    <script type="text/javascript" src="{{ asset('vendor/datatable/datatables.min.js') }}"></script>
 
     <script type="text/javascript">
 
 
         var table = $('#ticketsTable').DataTable({
-                processing: true,
-                serverSide: true,
-                ajax: "{{ route('backend.service.index') }}",
+            processing: true,
+            serverSide: true,
+                ajax: "{{ route('backend.service.index').'/'. $typeId}}",
                 columns: [
                     {data: 'id', name: 'id'},
-                    {data: 'created_at',
-                        render: function(data, type, row){
-                            if(type === "sort" || type === "type"){
-                                return data;
-                            }
-                            return moment(data).format("DD MMMM Y ");
-                        }
-                    },
-                    {data: 'name', name: 'users.name'},
-                    {data: 'email', name: 'users.email'},
-                    {data: 'ticket_number', name: 'ticket_number'},
-                    {data: 'subject', name: 'subject'},
-                    {data: 'type', name: 'type'},
-                    {data: 'status', name: 'status'},
+                    {data: 'name', name: 'name'},
+                    {data: 'description', name: 'description'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
             columnDefs: [{
                 targets: [0, 1],
-            },
-                {
-                    'targets': [7],
-                    'className': 'dt-center',
-                    'render': function(data, type, row, meta) {
-                           return  ticket_status(row);
-                    }
-                }
+            }
             ],
             "order": [[1, 'desc']]
             });
 
-        function ticket_status(data){
-            let select = '<div class="status">';
-            select += '<select class="form-control ticket_status" name="status" ticket="'+data.id+'">';
-            let status = {open:'Open', pending:'Pending',answered:'Answered',resolved:'Resolved',closed:'Closed', spam:'Span'};
-               $.each(status , function (k, v){
-                   if(data.status == k){
-                       select += '<option value="'+k+'" selected="selected">'+v+'</option>';
-                   }else{
-                       select += '<option value="'+k+'">'+v+'</option>';
-                   }
-               });
-            select += '</select>';
-            select += '</div>';
-            return select;
-        }
+        // function ticket_status(data){
+        //     let select = '<div class="status">';
+        //     select += '<select class="form-control ticket_status" name="status" ticket="'+data.id+'">';
+        //     let status = {open:'Open', pending:'Pending',answered:'Answered',resolved:'Resolved',closed:'Closed', spam:'Span'};
+        //        $.each(status , function (k, v){
+        //            if(data.status == k){
+        //                select += '<option value="'+k+'" selected="selected">'+v+'</option>';
+        //            }else{
+        //                select += '<option value="'+k+'">'+v+'</option>';
+        //            }
+        //        });
+        //     select += '</select>';
+        //     select += '</div>';
+        //     return select;
+        // }
 
         {{--$(document).on('change', '.ticket_status', function (){--}}
         {{--    let data ={ _token: '{{ csrf_token() }}', ticket_id: $(this).attr('ticket'), status: $(this).val() }--}}

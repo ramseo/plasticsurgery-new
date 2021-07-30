@@ -37,7 +37,7 @@
 
         <div class="row mt-4">
             <div class="col">
-                {{ html()->modelForm($$module_name_singular, 'PATCH', route("backend.$module_name.update", $$module_name_singular))->class('form')->open() }}
+                {{ html()->form('POST', url("admin/service/update/$service->id"))->class('form')->open() }}
 
                 @include ("backend.$module_name.form")
 
@@ -51,7 +51,7 @@
                     <div class="col-8">
                         <div class="float-right">
                             @can('delete_'.$module_name)
-                            <a href="{{route("backend.$module_name.destroy", $$module_name_singular)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}"><i class="fas fa-trash-alt"></i></a>
+                            <a href="{{route("backend.$module_name.destroy", $service)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}"><i class="fas fa-trash-alt"></i></a>
                             @endcan
                             <a href="{{ route("backend.$module_name.index") }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
                         </div>
@@ -68,8 +68,8 @@
         <div class="row">
             <div class="col">
                 <small class="float-right text-muted">
-                    Updated: {{$$module_name_singular->updated_at->diffForHumans()}},
-                    Created at: {{$$module_name_singular->created_at->isoFormat('LLLL')}}
+                    Updated: {{$service->updated_at->diffForHumans()}},
+                    Created at: {{$service->created_at->isoFormat('LLLL')}}
                 </small>
             </div>
         </div>

@@ -104,15 +104,13 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
 //    Route::patch("service/trashed/{type}/{id}", ['as' => "service.restore", 'uses' => "ServiceController@restore"]);
 //    Route::resource("service", "ServiceController");
 
-    Route::group(['prefix' => 'service'], function () {
-        Route::get('/{type}', 'ServiceController@index')->name('service.index');
-        Route::get('create/{type}', 'ServiceController@create')->name('service.create');
-        Route::post('store/{type}', 'ServiceController@store')->name('service.store');
-        Route::get('edit/{type}', 'ServiceController@edit')->name('service.edit');
-        Route::get('update/{type}', 'ServiceController@update')->name('service.update');
+        Route::get('service/{type}', 'ServiceController@index')->name('service.index');
+        Route::get('service/create/{type}', 'ServiceController@create')->name('service.create');
+        Route::post('service/store/{type}', 'ServiceController@store')->name('service.store');
+        Route::get('service/edit/{id}', 'ServiceController@edit')->name('service.edit');
+        Route::post('service/update/{id}', 'ServiceController@update')->name('service.update');
 //        Route::get('ed', 'ServiceController@ed')->name('service.ed');
         Route::resource("service", "ServiceController");
-    });
 
 
     Route::get("category", ['as' => "category.index", 'uses' => "CategoryController@index"]);

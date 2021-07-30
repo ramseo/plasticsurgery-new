@@ -16,6 +16,7 @@ use Illuminate\Support\Str;
 use Log;
 use Yajra\DataTables\DataTables;
 
+
 class ServiceController extends Controller
 {
 
@@ -48,126 +49,21 @@ class ServiceController extends Controller
 
 
     public function index($typeId,Request $request) {
-
         if ($request->ajax()) {
-            $reviews = Service::leftJoin('types', 'services.type_id', '=', 'types.id')
-                ->select(['services.id', 'services.name','services.description','services.created_at'])
+            $services = Service::where('type_id',$typeId)
+                ->select(['services.id','services.name','services.description'])
             ;
-
-            return Datatables::of($reviews)
+            return Datatables::of($services)
                 ->addIndexColumn()
-                ->addColumn('action', function($review){
-//                    $btn = '<a class="btn btn-primary shadow btn-xs sharp mr-1" href="javascript:;" onclick="getReview('.$review->id.');" data-toggle="modal" data-target="#updateModal"> <i class="fa fa-pencil"></i></a>';
-//                    $btn .= '<a class="btn btn-danger shadow btn-xs sharp" href="javascript:;" id="removeInterest" onclick="removeReviews('.$review->id .');"><i class="fa fa-trash"></i></a>';
-                $btn ='';
+                ->addColumn('action', function($service){
+                    $btn =  '<a href="'.url("admin/service/edit/$service->id").'" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"></i></a>';
                     return $btn;
                 })
                 ->rawColumns(['action'])
                 ->make(true);
         }
 
-        return view('backend.service.index');
-    }
-
-
-//    public function index($typeId)
-//    {
-//
-//        $module_title = $this->module_title;
-//        $module_name = $this->module_name;
-//        $module_path = $this->module_path;
-//        $module_icon = $this->module_icon;
-//        $module_model = $this->module_model;
-//        $module_name_singular = Str::singular($module_name);
-//
-//        $module_action = 'List';
-//
-//        $page_heading = ucfirst($module_title);
-//        $title = $page_heading.' '.ucfirst($module_action);
-//
-//        $$module_name = Service::paginate();
-//
-//        Log::info("'$title' viewed by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
-//
-//        return view(
-//            "backend.$module_path.index_datatable",
-//            compact('module_title', 'module_name', "$module_name", 'module_path', 'module_icon', 'module_action', 'module_name_singular', 'page_heading', 'title', 'typeId')
-//        );
-//    }
-
-
-    public function index_data($typeId)
-    {
-        $module_title = $this->module_title;
-        $module_name = $this->module_name;
-        $module_path = $this->module_path;
-        $module_icon = $this->module_icon;
-        $module_model = $this->module_model;
-        $module_name_singular = Str::singular($module_name);
-
-        $module_action = 'List';
-
-        $$module_name = $module_model::select('id', 'name', 'slug', 'updated_at');
-
-        $data = $$module_name;
-
-        return Datatables::of($$module_name)
-            ->addColumn('action', function ($data) {
-                $module_name = $this->module_name;
-
-                return view('backend.includes.action_column', compact('module_name', 'data'));
-            })
-            ->editColumn('name', '<strong>{{$name}}</strong>')
-            ->editColumn('updated_at', function ($data) {
-                $module_name = $this->module_name;
-
-                $diff = Carbon::now()->diffInHours($data->updated_at);
-
-                if ($diff < 25) {
-                    return $data->updated_at->diffForHumans();
-                } else {
-                    return $data->updated_at->isoFormat('LLLL');
-                }
-            })
-            ->rawColumns(['name', 'action'])
-            ->orderColumns(['id'], '-:column $1')
-            ->make(true);
-    }
-
-    /**
-     * Select Options for Select 2 Request/ Response.
-     *
-     * @return Response
-     */
-    public function index_list($typeId,Request $request)
-    {
-        $module_title = $this->module_title;
-        $module_name = $this->module_name;
-        $module_path = $this->module_path;
-        $module_icon = $this->module_icon;
-        $module_model = $this->module_model;
-        $module_name_singular = Str::singular($module_name);
-
-        $module_action = 'List';
-
-        $term = trim($request->q);
-
-        if (empty($term)) {
-            return response()->json([]);
-        }
-
-        $query_data = $module_model::where('name', 'LIKE', "%$term%")->orWhere('slug', 'LIKE', "%$term%")->limit(7)->get();
-
-        $$module_name = [];
-
-        foreach ($query_data as $row) {
-            $$module_name[] = [
-                'id'   => $row->id,
-                'text' => $row->name.' (Slug: '.$row->slug.')',
-            ];
-        }
-
-        return response()->json($$module_name);
+        return view('backend.service.index')->with('typeId', $typeId);
     }
 
     /**
@@ -177,11 +73,13 @@ class ServiceController extends Controller
      */
     public function create($typeId)
     {
-        $module_title = $this->module_title;
-        $module_name = $this->module_name;
-        $module_path = $this->module_path;
-        $module_icon = $this->module_icon;
-        $module_model = $this->module_model;
+
+
+        $module_title = 'Service';
+        $module_name = 'service';
+        $module_path = 'service';
+        $module_icon = 'c-icon cil-people';
+        $module_model ="App\Models\Service";
         $module_name_singular = Str::singular($module_name);
 
         $module_action = 'Create';
@@ -203,11 +101,11 @@ class ServiceController extends Controller
      */
     public function store($typeId,Request $request)
     {
-        $module_title = $this->module_title;
-        $module_name = $this->module_name;
-        $module_path = $this->module_path;
-        $module_icon = $this->module_icon;
-        $module_model = $this->module_model;
+        $module_title = 'Service';
+        $module_name = 'service';
+        $module_path = 'service';
+        $module_icon = 'c-icon cil-people';
+        $module_model ="App\Models\Service";
         $module_name_singular = Str::singular($module_name);
 
         $module_action = 'Store';
@@ -218,38 +116,9 @@ class ServiceController extends Controller
 
         Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
-        return redirect("admin/$module_name");
+        return redirect("admin/$module_name/$typeId");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param int $id
-     *
-     * @return Response
-     */
-    public function show($typeId,$id)
-    {
-        $module_title = $this->module_title;
-        $module_name = $this->module_name;
-        $module_path = $this->module_path;
-        $module_icon = $this->module_icon;
-        $module_model = $this->module_model;
-        $module_name_singular = Str::singular($module_name);
-
-        $module_action = 'Show';
-
-        $$module_name_singular = $module_model::findOrFail($id);
-
-        $posts = $$module_name_singular->posts()->latest()->paginate();
-
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
-
-        return view(
-            "backend.$module_name.show",
-            compact('module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action', "$module_name_singular", 'posts')
-        );
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -258,23 +127,23 @@ class ServiceController extends Controller
      *
      * @return Response
      */
-    public function edit($typeId,$id)
+    public function edit($id)
     {
-        $module_title = $this->module_title;
-        $module_name = $this->module_name;
-        $module_path = $this->module_path;
-        $module_icon = $this->module_icon;
-        $module_model = $this->module_model;
+        $module_title = 'Service';
+        $module_name = 'service';
+        $module_path = 'service';
+        $module_icon = 'c-icon cil-people';
+        $module_model ="App\Models\Service";
         $module_name_singular = Str::singular($module_name);
 
         $module_action = 'Edit';
-
-        $$module_name_singular = $module_model::findOrFail($id);
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
+        $service = Service::findOrFail($id);
+//        $service = $module_model::findOrFail($id);
+        Log::info(label_case($module_title.' '.$module_action)." | '".$service->name.'(ID:'.$service->id.") ' by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
         return view(
             "backend.$module_name.edit",
-            compact('module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action', "$module_name_singular", 'typeId')
+            compact('module_title', 'module_name', 'module_icon', 'service', 'module_action', "$module_name_singular")
         );
     }
 
@@ -286,26 +155,25 @@ class ServiceController extends Controller
      *
      * @return Response
      */
-    public function update($typeId, $id,Request $request)
+    public function update($id,Request $request)
     {
-        $module_title = $this->module_title;
-        $module_name = $this->module_name;
-        $module_path = $this->module_path;
-        $module_icon = $this->module_icon;
-        $module_model = $this->module_model;
+        $module_title = 'Service';
+        $module_name = 'service';
+        $module_path = 'service';
+        $module_icon = 'c-icon cil-people';
+        $module_model ="App\Models\Service";
         $module_name_singular = Str::singular($module_name);
 
         $module_action = 'Update';
+        $service = Service::findOrFail($id);
 
-        $$module_name_singular = $module_model::findOrFail($id);
-
-        $$module_name_singular->update($request->all());
+        $service->update($request->all());
 
         Flash::success("<i class='fas fa-check'></i> '".Str::singular($module_title)."' Updated Successfully")->important();
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
+        Log::info(label_case($module_title.' '.$module_action)." | '".$service->name.'(ID:'.$service->id.") ' by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
 
-        return redirect("admin/$module_name");
+        return redirect("admin/$module_name/".$service->type_id );
     }
 
     /**

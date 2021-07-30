@@ -37,10 +37,10 @@
 
         <div class="row mt-4">
             <div class="col">
-                {{ html()->form('POST', route("backend.$module_name.store").'/'.$typeId)->class('form')->open() }}
+                {{ html()->form('POST', url("admin/service/store/".$typeId))->class('form')->open() }}
 
                 @include ("backend.$module_name.form")
-
+                <input type="hidden" value="{{$typeId}}" name="type_id">
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
