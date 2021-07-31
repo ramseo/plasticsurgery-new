@@ -1,8 +1,8 @@
 @php
-    $types = getDataArray('types');
+    $categories = getDataArray('types');
     $cities = getDataArray('cities');
 @endphp
-@if(isset($types) && $types)
+@if($categories)
     <section id="category-section">
         <div class="container-fluid">
             <div class="col-xs-12 common-heading text-center">
@@ -11,7 +11,7 @@
             </div>
             <div class="row category-main-row">
                 @php $cat_count = 0; @endphp
-                @foreach($types as $type)
+                @foreach($categories as $type)
                     @php $cat_count++; @endphp
                     <div class="single-category-col col-6">
                         <div class="inner inner_{{$cat_count}}" style="background-color: {{$type->colour}};">

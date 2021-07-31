@@ -494,7 +494,8 @@ strong {
 
 .single-category-col .img-col {
     position: relative;
-    overflow: auto;
+    display: table;
+    width: 100%;
 }
 
 .single-category-col .img-col .text-col {
