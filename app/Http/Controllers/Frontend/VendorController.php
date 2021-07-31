@@ -20,6 +20,7 @@ class VendorController extends Controller
 
         }
         $data = $vendors->get();
+        // dd($data);
 
         return view('frontend.vendors.index', compact('body_class', 'data', 'city', 'type'));
     }

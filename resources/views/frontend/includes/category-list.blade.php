@@ -22,10 +22,9 @@
                             </style>
                             <div class="img-col">
                                 <a href="#" class="city-modal-link" data-link-type="{{$type->slug}}" data-toggle="modal" data-target="#cityModal">
-                                    <img src="{{asset('storage/vendor/type/image/'.$type->image)}}" alt="" class="img-fluid">
+                                    <img src="{{asset('storage/type/image/'.$type->image)}}" alt="" class="img-fluid">
                                     <div class="text-col">
                                         <p class="head">{{$type->name}}</p>
-                                        <p class="text">Popular Searches: {{$type->name}}</p>
                                     </div>
                                 </a>
                             </div>

@@ -34,8 +34,6 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('terms', 'FrontendController@terms')->name('terms');
     Route::post('newsletter', 'NewsletterController@store')->name('newsletter');
 
-    Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
-
     Route::group(['middleware' => ['auth']], function () {
         /*
         *
@@ -254,3 +252,8 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
     Route::patch("users/{id}/block", ['as' => "users.block", 'uses' => "UserController@block", 'middleware' => ['permission:block_users']]);
     Route::patch("users/{id}/unblock", ['as' => "users.unblock", 'uses' => "UserController@unblock", 'middleware' => ['permission:block_users']]);
 });
+
+Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
+    Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
+});
+

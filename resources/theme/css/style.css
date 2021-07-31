@@ -132,6 +132,7 @@ a:focus {
 
 .banner-container {
     position: relative;
+    width: 100%;
 }
 
 .banner-container .banner-search-col {
@@ -491,6 +492,7 @@ strong {
     font-weight: 600;
     font-size: 25px;
     margin: 0px;
+    text-transform: capitalize;
 }
 
 .single-category-col .img-col {
@@ -1514,6 +1516,13 @@ article blockquote {
 
 .city-list li:last-child a {
     border: none;
+}
+
+.no-records {
+    color: #fb2626;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 50px 0;
 }
 
 @media(min-width: 1600px) {

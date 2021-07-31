@@ -9,45 +9,53 @@
                         <p class="text">Find the best wedding vendors with thousands of trusted reviews</p>
                     </div>
                     <div class="search-form-col text-center">
-                        <div class="form-list">
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <select class="form-control" name="" id="">
-                                        <option value="">Select Vendor Type</option>
-                                        @if(isset($types) && $types)
-                                            @foreach($types as $type)
-                                                <option value="{{$type->id}}">{{$type->name}}</option>
-                                            @endforeach
-                                        @endif
-                                    </select>
-                                </li>
-                                <li class="list-inline-item">
-                                    <select class="form-control" name="" id="">
-                                        <option value="">Select City</option>
-                                        @if(isset($cities) && $cities)
-                                            @foreach($cities as $city)
-                                                <option value="{{$city->slug}}">{{$city->name}}</option>
-                                            @endforeach
-                                        @endif
-                                    </select>
-                                </li>
-                                <li class="list-inline-item">
-                                    <input type="button" class="btn btn-primary" value="GET STARTED">
-                                </li>
-                            </ul>
-                        </div>
+                        <form id="searchForm" action="">
+                            <div class="form-list">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <select class="form-control" name="" id="typeField" required>
+                                            <option value="">Select Vendor Type</option>
+                                            @if(isset($types) && $types)
+                                                @foreach($types as $type)
+                                                    <option value="{{$type->slug}}">{{$type->name}}</option>
+                                                @endforeach
+                                            @endif
+                                        </select>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <select class="form-control" name="" id="cityField" required>
+                                            <option value="">Select City</option>
+                                            @if(isset($cities) && $cities)
+                                                @foreach($cities as $city)
+                                                    <option value="{{$city->slug}}">{{$city->name}}</option>
+                                                @endforeach
+                                            @endif
+                                        </select>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <input type="submit" class="btn btn-primary" value="GET STARTED">
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
                     </div>
-                    <!-- <div class="search-links text-center">
-                        <ul class="list-inline">
-                            <li class="list-inline-item">Popular Searches: </li>
-                            <li class="list-inline-item"><a href="">Wedding Photographers in India</a></li>
-                            <li class="list-inline-item"><a href="">Bridal Makeup in India</a></li>
-                            <li class="list-inline-item"><a href="">Wedding Cards in India</a></li>
-                            <li class="list-inline-item"><a href="">Wedding Venues in India</a></li>
-                        </ul>
-                    </div> -->
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+@push ("after-scripts")
+    <script>
+        $(document).ready(function(){
+            $('#searchForm').submit(function(e){
+                e.preventDefault();
+                var type = $('#typeField').val();
+                var city = $('#cityField').val();
+                var typeUrl = type + '/' + city;
+                window.location.href = typeUrl;
+                console.log(typeUrl);
+            });
+        });
+    </script>
+@endpush
