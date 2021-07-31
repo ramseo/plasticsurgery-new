@@ -14,15 +14,21 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="{{ $module_icon }}"></i> {{ $module_title }} <small class="text-muted">{{ $module_action }}</small>
+                    <i class="c-icon cil-people"></i> Service <small class="text-muted">Data Table Service</small>
                 </h4>
                 <div class="small text-muted">
-                    {{ ucwords($module_name) }} Management Dashboard
+                    {{ Str::title('service') }} Management Dashboard
                 </div>
             </div>
             <!--/.col-->
             <div class="col-4">
                 <div class="float-right">
+                    <a href='{{ route("backend.service.create").'/'. $typeId}}'
+                       class='btn btn-success btn-sm'
+                       data-toggle="tooltip"
+                       title="{{__('Create')}}">
+                        <i class="fas fa-plus-circle"></i>
+                    </a>
                     <x-buttons.create route='{{ route("backend.$module_name.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}"/>
 
 {{--                    <div class="btn-group" role="group" aria-label="Toolbar button groups">--}}

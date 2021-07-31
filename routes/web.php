@@ -95,26 +95,12 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::patch("type/trashed/{id}", ['as' => "type.restore", 'uses' => "TypeController@restore"]);
     Route::resource("type", "TypeController");
 
-//    Route::get("service/{type}", ['as' => "service.index", 'uses' => "ServiceController@index"]);
-//    Route::get("service/index_list/{type}", ['as' => "service.index_list", 'uses' => "ServiceController@index_list"]);
-//    Route::get("service/index_data/{type}", ['as' => "service.index_data", 'uses' => "ServiceController@index_data"]);
-//    Route::get("service/create/{type}", ['as' => "service.create", 'uses' => "ServiceController@create"]);
-//    Route::post("service/store/{type}", ['as' => "service.store", 'uses' => "ServiceController@store"]);
-//    Route::get("service/edit/{type}", ['as' => "service.edit", 'uses' => "ServiceController@edit"]);
-//    Route::post("service/update/{type}", ['as' => "service.update", 'uses' => "ServiceController@update"]);
-//    Route::get("service/trashed/{type}", ['as' => "service.trashed", 'uses' => "ServiceController@trashed"]);
-//    Route::patch("service/trashed/{type}/{id}", ['as' => "service.restore", 'uses' => "ServiceController@restore"]);
-//    Route::resource("service", "ServiceController");
-
-    Route::group(['prefix' => 'service'], function () {
-        Route::get('/{type}', 'ServiceController@index')->name('service.index');
-        Route::get('create/{type}', 'ServiceController@create')->name('service.create');
-        Route::post('store/{type}', 'ServiceController@store')->name('service.store');
-        Route::get('edit/{type}', 'ServiceController@edit')->name('service.edit');
-        Route::get('update/{type}', 'ServiceController@update')->name('service.update');
-//        Route::get('ed', 'ServiceController@ed')->name('service.ed');
-        Route::resource("service", "ServiceController");
-    });
+    Route::get('service/{type}', 'ServiceController@index')->name('service.index');
+    Route::get('service/create/{type}', 'ServiceController@create')->name('service.create');
+    Route::post('service/store/{type}', 'ServiceController@store')->name('service.store');
+    Route::get('service/edit/{id}', 'ServiceController@edit')->name('service.edit');
+    Route::post('service/update/{id}', 'ServiceController@update')->name('service.update');
+    Route::resource("service", "ServiceController");
 
 
     Route::get("category", ['as' => "category.index", 'uses' => "CategoryController@index"]);
@@ -192,6 +178,10 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::get("menus-edit/{id}", ['as' => "menu.edit", 'uses' => "MenuController@edit"]);
     Route::patch("menus-update/{id}", ['as' => "menu.update", 'uses' => "MenuController@update"]);
     Route::delete("menus-destroy/{id}", ['as' => "menu.destroy", 'uses' => "MenuController@destroy"]);
+
+
+
+
 });
 
 /*
@@ -218,34 +208,22 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
         Route::post("settings", "SettingController@store")->name("settings.store");
     });
 
+    Route::get('album/', 'AlbumController@index')->name('album.index');
+    Route::get('album/create/{type}', 'AlbumController@create')->name('album.create');
+    Route::post('album/store/{type}', 'AlbumController@store')->name('album.store');
+    Route::get('album/edit/{id}', 'AlbumController@edit')->name('album.edit');
+    Route::post('album/update/{id}', 'AlbumController@update')->name('album.update');
+    Route::resource("album", "AlbumController");
 
+//    Route::get("profile", ['as' => "vendor.profile", 'uses' => "VendorController@profile"]);
+//    Route::post("update", ['as' => "vendor.update", 'uses' => "VendorController@update"]);
 
-    //    Route::get("services", ['as' => "services.index", 'uses' => "ServiceController@index"]);
-    //    Route::get("services/index_list", ['as' => "services.index_list", 'uses' => "ServiceController@index_list"]);
-    //    Route::get("services/index_data", ['as' => "services.index_data", 'uses' => "ServiceController@index_data"]);
-    //    Route::get("services/trashed", ['as' => "services.trashed", 'uses' => "ServiceController@trashed"]);
-    //    Route::patch("services/trashed/{id}", ['as' => "services.restore", 'uses' => "ServiceController@restore"]);
-    //    Route::resource("services", "ServiceController");
+    Route::get('profile', 'VendorController@profile')->name('profile');
+    Route::post('profile/update', 'VendorController@update')->name('profile.update');
+    Route::resource("vendor", "VendorController");
+//    Route::get('service/edit/{id}', 'ServiceController@edit')->name('service.edit');
+//    Route::post('service/update/{id}', 'ServiceController@update')->name('service.update');
 
-    /*
-    *
-    *  Notification Routes
-    *
-    */
-    //    Route::get("notifications", ['as' => "notifications.index", 'uses' => "NotificationsController@index"]);
-    //    Route::get("notifications/markAllAsRead", ['as' => "notifications.markAllAsRead", 'uses' => "NotificationsController@markAllAsRead"]);
-    //    Route::delete("notifications/deleteAll", ['as' => "notifications.deleteAll", 'uses' => "NotificationsController@deleteAll"]);
-    //    Route::get("notifications/{id}", ['as' => "notifications.show", 'uses' => "NotificationsController@show"]);
-
-    /*
-    *
-    *  Backup Routes
-    *
-    */
-    //    Route::get("backups", ['as' => "backups.index", 'uses' => "BackupController@index"]);
-    //    Route::get("backups/create", ['as' => "backups.create", 'uses' => "BackupController@create"]);
-    //    Route::get("backups/download/{file_name}", ['as' => "backups.download", 'uses' => "BackupController@download"]);
-    //    Route::get("backups/delete/{file_name}", ['as' => "backups.delete", 'uses' => "BackupController@delete"]);
 
     /*
     *

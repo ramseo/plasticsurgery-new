@@ -42,21 +42,16 @@
                     <div class="col-12 col-md-6">
                         <div class="form-group">
                             {{ Form::label('name', 'Name') }} {!! fielf_required("required") !!}
-                            {{ Form::text('name', $service->name, array('class' => 'form-control')) }}
+                            {{ Form::text('name', $album->name, array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="form-group">
-                            {{ Form::label('slug', 'Slug') }}
-                            {{ Form::text('slug', $service->slug, array('class' => 'form-control')) }}
+                            {{ Form::label('description', 'Description') }}
+                            {{ Form::text('description', $album->description, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                    <div class="col-6 col-md-2">
-                        <div class="form-group">
-                            {{ Form::label('order', 'Order') }}
-                            {{ Form::text('order', $service->order, array('class' => 'form-control')) }}
-                        </div>
-                    </div>
+
                 </div>
                 <div class="row">
                     <div class="col-4">

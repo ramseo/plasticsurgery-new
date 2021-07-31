@@ -1,7 +1,15 @@
 <div class="text-right">
-    @can('edit_'.$module_name)
-    <x-buttons.edit route='{!!route("backend.$module_name.edit", $data)!!}' title="{{__('Edit')}} {{ ucwords(Str::singular($module_name)) }}" small="true" />
-    @endcan
-{{--    <x-buttons.show route='{{ route("backend.service.index", $data->id)}}' title="{{__('Show')}} {{ ucwords(Str::singular($module_name)) }}" small="true" />--}}
-        <x-buttons.show route='{{ url("admin/service/". $data->id)}}' title="{{__('Show')}} {{ ucwords(Str::singular($module_name)) }}" small="true" />
+        <a href='{!!route("backend.type.edit", $data)!!}'
+           class='btn btn-primary btn-sm'
+           data-toggle="tooltip"
+           title="Edit">
+            <i class="fas fa-edit"></i>
+        </a>
+    <a href='{{ url("admin/service/". $data->id)}}'
+       class='btn btn-primary btn-sm'
+       data-toggle="tooltip"
+       title="Services">
+        <i class="fas fa-server"></i>
+    </a>
+{{--        <x-buttons.show route='{{ url("admin/service/". $data->id)}}' title="{{__('Show')}} {{ ucwords(Str::singular($module_name)) }}" small="true" />--}}
 </div>

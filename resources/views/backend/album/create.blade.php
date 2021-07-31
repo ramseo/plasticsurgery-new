@@ -1,11 +1,11 @@
 @extends('backend.layouts.app')
 
-@section('title') Create Service @endsection
+@section('title') Create Album @endsection
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
     <x-backend-breadcrumb-item route='{{route("backend.service.index")}}' icon='c-icon cil-people' >
-        Service
+        Album
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">Create</x-backend-breadcrumb-item>
 </x-backend-breadcrumbs>
@@ -17,10 +17,10 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="c-icon cil-people"></i> Service <small class="text-muted">Create</small>
+                    <i class="c-icon cil-people"></i> Album <small class="text-muted">Create</small>
                 </h4>
                 <div class="small text-muted">
-                    Service Management Dashboard
+                    Album Management Dashboard
                 </div>
             </div>
             <!--/.col-->
@@ -48,18 +48,18 @@
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="form-group">
-                            {{ Form::label('slug', 'Slug') }}
-                            {{ Form::text('slug', null, array('class' => 'form-control')) }}
+                            {{ Form::label('description', 'Description') }}
+                            {{ Form::text('description', null, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                    <div class="col-6 col-md-2">
-                        <div class="form-group">
-                            {{ Form::label('order', 'Order') }}
-                            {{ Form::text('order', null, array('class' => 'form-control')) }}
-                        </div>
-                    </div>
+{{--                    <div class="col-6 col-md-2">--}}
+{{--                        <div class="form-group">--}}
+{{--                            {{ Form::label('order', 'Order') }}--}}
+{{--                            {{ Form::text('order', null, array('class' => 'form-control')) }}--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
-                <input type="hidden" value="{{$typeId}}" name="type_id">
+{{--                <input type="hidden" value="{{$typeId}}" name="type_id">--}}
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">

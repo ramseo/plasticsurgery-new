@@ -41,7 +41,7 @@
             <div class="form-row">
                 <div class="col-6 form-group mat-group">
                     <label for="">{{ __('Vendor Type') }}</label>
-                    <select name="" id="" class="form-control">
+                    <select name="type_id" id="" class="form-control">
                         <option value="">Select</option>
                         <option value="">Photographer</option>
                         <option value="">Wedding Planner</option>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="col-6 form-group mat-group">
                     <label for="">{{ __('City') }}</label>
-                    <select name="" id="" class="form-control">
+                    <select name="city_it" id="" class="form-control">
                         <option value="">Select</option>
                         <option value="">Banglore</option>
                         <option value="">Chennai</option>

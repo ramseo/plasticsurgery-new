@@ -15,20 +15,28 @@ class CreateVendorsTable extends Migration
     {
         Schema::create('vendors', function (Blueprint $table) {
             $table->id();
-
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->bigInteger('type_id')->unsigned();
             $table->foreign('type_id')->references('id')->on('types')->onDelete('cascade');
             $table->bigInteger('city_id')->unsigned();
             $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
-
-            $table->string('business_name');
+            $table->string('business_name')->nullable();
             $table->string('slug')->nullable();
+            $table->string('business_address')->nullable();
+            $table->string('image')->nullable()->default('img/default-vendor.jpg');
             $table->text('description')->nullable();
+            $table->string('since')->nullable();
+            $table->string('wedding_covered')->nullable();
+            $table->tinyInteger('travel_to_other_cities')->default(0);
+
+            $table->string('website_link')->nullable();
+            $table->string('facebook_link')->nullable();
+            $table->string('instagram_link')->nullable();
 
             $table->integer('is_featured')->nullable();
-            $table->string('profile_image')->nullable();
 
-            $table->tinyInteger('status')->default(1);
+            $table->tinyInteger('status')->default(0);
 
             $table->integer('created_by')->unsigned()->nullable();
             $table->integer('updated_by')->unsigned()->nullable();

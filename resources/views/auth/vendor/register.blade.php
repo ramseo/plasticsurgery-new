@@ -50,7 +50,7 @@
                         $types = getDataArray('types');
                     @endphp
                     <label for="">{{ __('Vendor Type') }}</label>
-                    <select name="" id="" class="form-control">
+                    <select name="type_id" id="" class="form-control">
                         <option value="">Select</option>
                         @if(isset($types) && $types)
                             @foreach($types as $type)
@@ -64,7 +64,7 @@
                         $cities = getDataArray('cities');
                     @endphp
                     <label for="">{{ __('City') }}</label>
-                    <select name="" id="" class="form-control">
+                    <select name="city_id" id="" class="form-control">
                         <option value="">Select</option>
                         @if(isset($cities) && $cities)
                             @foreach($cities as $city)
