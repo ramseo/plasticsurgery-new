@@ -34,6 +34,8 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('terms', 'FrontendController@terms')->name('terms');
     Route::post('newsletter', 'NewsletterController@store')->name('newsletter');
 
+    Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
+
     Route::group(['middleware' => ['auth']], function () {
         /*
         *

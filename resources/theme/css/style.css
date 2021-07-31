@@ -516,7 +516,7 @@ strong {
     display: table;
     height: 200px;
     width: 200px;
-    background: red;
+    background: #efefef;
     position: absolute;
     right: 29%;
     transform: rotate( 20deg);
