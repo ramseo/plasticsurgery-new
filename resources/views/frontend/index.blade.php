@@ -28,31 +28,4 @@
 
 @endsection
 
-<!-- Scripts -->
-@push('after-scripts')
-<script>
-    $(document).ready(function () {
-        $('#vendorsSlider').owlCarousel({
-            loop: false,
-            margin: 20,
-            nav: true,
-            items: 3,
-            dots: false,
-            autoplay: 4000,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                767: {
-                    items: 2
-                },
-                991: {
-                    items: 3
-                }
-            }
-        });
-    })
-</script>
-@endpush
-
 

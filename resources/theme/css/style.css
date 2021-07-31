@@ -95,6 +95,7 @@ a:focus {
 .header-logo-col {
     align-items: center;
     display: flex;
+    padding: 10px 15px;
 }
 
 .site-main-menu>li {
@@ -517,7 +518,6 @@ strong {
     display: table;
     height: 200px;
     width: 200px;
-    background: #efefef;
     position: absolute;
     right: 29%;
     transform: rotate( 20deg);
@@ -1442,6 +1442,78 @@ article blockquote {
 
 .page-banner-height img {
     filter: brightness(40%);
+}
+
+#cityModal .modal-body {
+    padding: 0;
+}
+
+.modal-header .close {
+    position: absolute;
+    background: #EE4970;
+    opacity: 1;
+    color: white;
+    padding: 0;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: normal;
+    border-radius: 50%;
+    right: 5px;
+    top: 5px;
+}
+
+#modal-search input {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-color: #efefef;
+    font-size: 14px;
+    height: 50px;
+    padding: 0 20px;
+}
+
+.search-input-col {
+    position: relative;
+}
+
+.search-input-col .fa {
+    position: absolute;
+    top: 52%;
+    right: 20px;
+    font-size: 20px;
+    transform: translateY(-50%);
+    color: #a2a2a2;
+}
+
+#cityModal .modal-header {
+    padding: 15px 20px;
+}
+
+.city-list .city-link {
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: dashed 2px #efefef;
+    color: inherit;
+    text-transform: capitalize;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.city-list .city-link i {
+    color: #EE4970;
+}
+
+.city-list {
+    margin: 0;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.city-list li:last-child a {
+    border: none;
 }
 
 @media(min-width: 1600px) {

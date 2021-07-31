@@ -10,7 +10,7 @@
                     <div>
                         <div class="common-card vendor-card">
                             <div class="img-col">
-                                <img src="images/vendor-img.jpg" alt="" class="img-fluid">
+                                <img src="{{asset('images/vendor-img.jpg')}}" alt="" class="img-fluid">
                             </div>
                             <div class="text-col">
                                 <p class="title">Gulaabi Soirees by Geetika Mudgal</p>
@@ -24,7 +24,7 @@
                     <div>
                         <div class="common-card vendor-card">
                             <div class="img-col">
-                                <img src="images/vendor-img.jpg" alt="" class="img-fluid">
+                                <img src="{{asset('images/vendor-img.jpg')}}" alt="" class="img-fluid">
                             </div>
                             <div class="text-col">
                                 <p class="title">Gulaabi Soirees by Geetika Mudgal</p>
@@ -38,7 +38,7 @@
                     <div>
                         <div class="common-card vendor-card">
                             <div class="img-col">
-                                <img src="images/vendor-img.jpg" alt="" class="img-fluid">
+                                <img src="{{asset('images/vendor-img.jpg')}}" alt="" class="img-fluid">
                             </div>
                             <div class="text-col">
                                 <p class="title">Gulaabi Soirees by Geetika Mudgal</p>
@@ -52,7 +52,7 @@
                     <div>
                         <div class="common-card vendor-card">
                             <div class="img-col">
-                                <img src="images/vendor-img.jpg" alt="" class="img-fluid">
+                                <img src="{{asset('images/vendor-img.jpg')}}" alt="" class="img-fluid">
                             </div>
                             <div class="text-col">
                                 <p class="title">Gulaabi Soirees by Geetika Mudgal</p>
@@ -68,3 +68,29 @@
         </div>
     </div>
 </section>
+
+@push('after-scripts')
+    <script>
+        $(document).ready(function () {
+            $('#vendorsSlider').owlCarousel({
+                loop: false,
+                margin: 20,
+                nav: true,
+                items: 3,
+                dots: false,
+                autoplay: 4000,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    767: {
+                        items: 2
+                    },
+                    991: {
+                        items: 3
+                    }
+                }
+            });
+        })
+    </script>
+@endpush
