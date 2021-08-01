@@ -253,7 +253,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
     Route::patch("users/{id}/unblock", ['as' => "users.unblock", 'uses' => "UserController@unblock", 'middleware' => ['permission:block_users']]);
 });
 
-Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-    Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
-});
+//Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
+//    Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
+//});
 
