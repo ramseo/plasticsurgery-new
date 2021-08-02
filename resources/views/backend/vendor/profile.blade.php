@@ -42,20 +42,20 @@
                     <div class="col-12 col-md-6">
                         <div class="form-group">
                             {{ Form::label('business_name', 'Business Name') }} {!! fielf_required("required") !!}
-                            {{ Form::text('business_name', null, array('class' => 'form-control')) }}
+                            {{ Form::text('business_name', $vendor->business_name, array('class' => 'form-control')) }}
                         </div>
                     </div>
 
                     <div class="col-6 col-md-2">
                         <div class="form-group">
                             {{ Form::label('since', 'Working Since (year)') }}
-                            {{ Form::text('since', null, array('class' => 'form-control')) }}
+                            {{ Form::text('since', $vendor->since, array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('wedding_covered', 'Number of weddings covered') }}
-                            {{ Form::text('slug', null, array('class' => 'form-control')) }}
+                            {{ Form::text('slug', $vendor->slug, array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
@@ -63,13 +63,13 @@
                     <div class="col-12">
                         <div class="form-group">
                             {{ Form::label('description', 'About') }}  {!! fielf_required("required") !!}
-                            {{ Form::textarea('description', null, array('class' => 'form-control')) }}
+                            {{ Form::textarea('description', $vendor->description, array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
                             {{ Form::label('business_address', 'Address') }}  {!! fielf_required("required") !!}
-                            {{ Form::textarea('business_address', null, array('class' => 'form-control')) }}
+                            {{ Form::textarea('business_address', $vendor->business_address, array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
@@ -78,26 +78,26 @@
                         <div class="form-group">
                             {{ Form::label('travel_to_other_cities', 'Travel to other Indian cities?') }} {!! fielf_required("required") !!}
                             <br>
-                           Yes  {{ Form::radio('travel_to_other_cities', 1, true) }}
-                           No {{ Form::radio('travel_to_other_cities', 0, false) }}
+                           Yes  {{ Form::radio('travel_to_other_cities', 1, $vendor->travel_to_other_cities == 1?  true : false) }}
+                           No {{ Form::radio('travel_to_other_cities', 0, $vendor->travel_to_other_cities == 0 ? true : false) }}
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="form-group">
                             {{ Form::label('website_link', 'Website') }}
-                            {{ Form::text('website_link', null, array('class' => 'form-control')) }}
+                            {{ Form::text('website_link', $vendor->website_link, array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="form-group">
                             {{ Form::label('facebook_link', 'Facebook') }}
-                            {{ Form::text('facebook_link', null, array('class' => 'form-control')) }}
+                            {{ Form::text('facebook_link', $vendor->facebook_link, array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="form-group">
                             {{ Form::label('instagram_link', 'Instagram') }}
-                            {{ Form::text('instagram_link', null, array('class' => 'form-control')) }}
+                            {{ Form::text('instagram_link', $vendor->instagram_link, array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>

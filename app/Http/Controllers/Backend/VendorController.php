@@ -70,7 +70,7 @@ class VendorController extends Controller
     {
         $user_id = auth()->user()->id;
 
-        $vendor = Vendor::where('user_id', '=', $user_id)->get();
+        $vendor = Vendor::where('user_id', '=', $user_id)->first();
 //        Log::info(label_case('Vendor Profile | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return view('backend.vendor.profile', compact('vendor'));
     }

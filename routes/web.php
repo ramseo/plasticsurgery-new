@@ -222,35 +222,6 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
 //    Route::get('service/edit/{id}', 'ServiceController@edit')->name('service.edit');
 //    Route::post('service/update/{id}', 'ServiceController@update')->name('service.update');
 
-
-    /*
-    *
-    *  Roles Routes
-    *
-    */
-    Route::resource("roles", "RolesController");
-
-    /*
-    *
-    *  Users Routes
-    *
-    */
-    Route::get("users/profile/{id}", ['as' => "users.profile", 'uses' => "UserController@profile"]);
-    Route::get("users/profile/{id}/edit", ['as' => "users.profileEdit", 'uses' => "UserController@profileEdit"]);
-    Route::patch("users/profile/{id}/edit", ['as' => "users.profileUpdate", 'uses' => "UserController@profileUpdate"]);
-    Route::get("users/emailConfirmationResend/{id}", ['as' => "users.emailConfirmationResend", 'uses' => "UserController@emailConfirmationResend"]);
-    Route::delete("users/userProviderDestroy", ['as' => "users.userProviderDestroy", 'uses' => "UserController@userProviderDestroy"]);
-    Route::get("users/profile/changeProfilePassword/{id}", ['as' => "users.changeProfilePassword", 'uses' => "UserController@changeProfilePassword"]);
-    Route::patch("users/profile/changeProfilePassword/{id}", ['as' => "users.changeProfilePasswordUpdate", 'uses' => "UserController@changeProfilePasswordUpdate"]);
-    Route::get("users/changePassword/{id}", ['as' => "users.changePassword", 'uses' => "UserController@changePassword"]);
-    Route::patch("users/changePassword/{id}", ['as' => "users.changePasswordUpdate", 'uses' => "UserController@changePasswordUpdate"]);
-    Route::get("users/trashed", ['as' => "users.trashed", 'uses' => "UserController@trashed"]);
-    Route::patch("users/trashed/{id}", ['as' => "users.restore", 'uses' => "UserController@restore"]);
-    Route::get("users/index_data", ['as' => "users.index_data", 'uses' => "UserController@index_data"]);
-    Route::get("users/index_list", ['as' => "users.index_list", 'uses' => "UserController@index_list"]);
-    Route::resource("users", "users");
-    Route::patch("users/{id}/block", ['as' => "users.block", 'uses' => "UserController@block", 'middleware' => ['permission:block_users']]);
-    Route::patch("users/{id}/unblock", ['as' => "users.unblock", 'uses' => "UserController@unblock", 'middleware' => ['permission:block_users']]);
 });
 
 //Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
