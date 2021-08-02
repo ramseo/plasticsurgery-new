@@ -56,20 +56,6 @@
                 </div>
             </div>
         </div>
-        <div class="card-footer">
-            <div class="row">
-                <div class="col-7">
-                    <div class="float-left">
-
-                    </div>
-                </div>
-                <div class="col-5">
-                    <div class="float-right">
-
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
 @stop
