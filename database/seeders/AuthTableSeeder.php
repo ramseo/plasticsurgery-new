@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Database\Seeders\Auth\PermissionRoleTableSeeder;
 use Database\Seeders\Auth\UserRoleTableSeeder;
 use Database\Seeders\Auth\UserTableSeeder;
+use Database\Seeders\Auth\VendorTableSeeder;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Schema;
 
@@ -28,6 +29,7 @@ class AuthTableSeeder extends Seeder
         $this->call(UserTableSeeder::class);
         $this->call(PermissionRoleTableSeeder::class);
         $this->call(UserRoleTableSeeder::class);
+        $this->call(VendorTableSeeder::class);
 
         Schema::enableForeignKeyConstraints();
     }

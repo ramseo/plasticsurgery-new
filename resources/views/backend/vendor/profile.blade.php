@@ -55,7 +55,7 @@
                     <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('wedding_covered', 'Number of weddings covered') }}
-                            {{ Form::text('slug', $vendor->slug, array('class' => 'form-control')) }}
+                            {{ Form::text('wedding_covered', $vendor->wedding_covered, array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
