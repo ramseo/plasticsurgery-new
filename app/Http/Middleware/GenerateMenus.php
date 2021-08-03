@@ -273,6 +273,8 @@ class GenerateMenus
             $menu->add('<i class="cil-speedometer c-sidebar-nav-icon"></i> Dashboard', ['route' => 'backend.dashboard', 'class' => 'c-sidebar-nav-item',])->data(['order' => 1, 'activematches' => 'admin/dashboard*',])->link->attr(['class' => 'c-sidebar-nav-link',]);
             // Profile
             $menu->add('<i class="c-sidebar-nav-icon fas fa-user"></i> Profile', ['route' => 'vendor.profile', 'class' => 'c-sidebar-nav-item',])->data(['order' => 99, 'activematches' => 'vendor/profile*', 'permission' => [],])->link->attr(['class' => 'c-sidebar-nav-link',]);
+            // Profile
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-images"></i> Album', ['route' => 'vendor.album.index', 'class' => 'c-sidebar-nav-item',])->data(['order' => 99, 'activematches' => 'vendor/album*', 'permission' => [],])->link->attr(['class' => 'c-sidebar-nav-link',]);
 
             // Set Active Menu
             $menu->filter(function ($item) {

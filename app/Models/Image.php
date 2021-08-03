@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Auth;
 
-class Album extends Model
+class Image extends Model
 {
     use HasFactory;
     use SoftDeletes;
@@ -52,9 +52,8 @@ class Album extends Model
         });
     }
 
-    public function vendor()
+    public function album()
     {
-        return $this->belongsTo('App\Models\Vendor');
+        return $this->belongsTo('App\Models\Album');
     }
-
 }

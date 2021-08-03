@@ -56,6 +56,21 @@ function fileUpload(Request $request, $key, $folder, $realName = true)
     return false;
 }
 
+function multiFileUpload($file, $folder, $realName = true)
+{
+    if ($file) {
+        if ($realName) {
+            $imageName = $file->getClientOriginalName();
+        } else {
+            $imageName = time() . '.' . $file->getClientOriginalExtension();
+        }
+        if ($file->move(storage_path('app/public/' . $folder), $imageName)) {
+            return $imageName;
+        }
+    }
+    return false;
+}
+
 /*
  * Global helpers file with misc functions.
  */

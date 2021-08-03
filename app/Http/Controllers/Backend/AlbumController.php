@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Backend;
 //use App\Authorizable;
 use App\Http\Controllers\Controller;
 use App\Models\Album;
-use App\Models\Vendor;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Yajra\DataTables\DataTables;
+use Log;
+use Flash;
 
 class AlbumController extends Controller
 {
@@ -27,13 +28,14 @@ class AlbumController extends Controller
             return Datatables::of($albums)
                 ->addIndexColumn()
                 ->addColumn('action', function ($album) {
-                    $btn = '<a href="' . url("vendor/service/edit/$album->id") . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"></i></a>';
+
+                    $btn = '<a href="' . route("vendor.album.edit", $album->id) . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"> </i></a> ';
+                    $btn .= '<a href="' . route("vendor.image.index", $album->id) . '" class="btn btn-sm btn-success mt-1" data-toggle="tooltip" title="Album Gallery"><i class="fas fa-file-image"> </i></a>';
                     return $btn;
                 })
                 ->rawColumns(['action'])
                 ->make(true);
         }
-
         return view('backend.album.index');
     }
 
@@ -45,8 +47,9 @@ class AlbumController extends Controller
      */
     public function create()
     {
+        $vendor = getData('vendors', 'user_id', auth()->user()->id);
         Log::info(label_case('Album Create | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view("backend.album.create");
+        return view("backend.album.create")->with('vendor', $vendor);
     }
 
     /**
@@ -58,8 +61,9 @@ class AlbumController extends Controller
      */
     public function store(Request $request)
     {
+
         $album = Album::create($request->all());
-        Flash::success("<i class='fas fa-check'></i> New Service Added")->important();
+        Flash::success("<i class='fas fa-check'></i> New Album Added")->important();
         Log::info(label_case('Album Store | ' . $album->name . '(ID:' . $album->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect("vendor/album");
     }
@@ -76,7 +80,7 @@ class AlbumController extends Controller
     {
         $album = Album::findOrFail($id);
         Log::info(label_case('Service Edit | ' . $album->name . '(ID:' . $album->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view('backend.album.edit', compact('album '));
+        return view('backend.album.edit')->with('album', $album);
     }
 
     /**
@@ -91,7 +95,7 @@ class AlbumController extends Controller
     {
         $album = Album::findOrFail($id);
         $album->update($request->all());
-        Flash::success("<i class='fas fa-check'></i> Service Updated Successfully")->important();
+        Flash::success("<i class='fas fa-check'></i> Album Updated Successfully")->important();
         Log::info(label_case('Service Update | ' . $album->name . '(ID:' . $album->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect("vendor/album");
     }

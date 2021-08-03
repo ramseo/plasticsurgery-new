@@ -4,7 +4,7 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("backend.service.index")}}' icon='c-icon cil-people' >
+    <x-backend-breadcrumb-item route='{{route("vendor.album.index")}}' icon='c-icon cil-people' >
         Album
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">Create</x-backend-breadcrumb-item>
@@ -26,7 +26,7 @@
             <!--/.col-->
             <div class="col-4">
                 <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-                    <a href="{{ route('backend.service.index').'/'. $typeId}}" class="btn btn-secondary btn-sm ml-1" data-toggle="tooltip" title="Service List"><i class="fas fa-list-ul"></i> List</a>
+                    <a href="{{ route("vendor.album.index") }}" class="btn btn-secondary btn-sm ml-1" data-toggle="tooltip" title="Type List"><i class="fas fa-list-ul"></i> List</a>
                 </div>
             </div>
             <!--/.col-->
@@ -37,29 +37,43 @@
 
         <div class="row mt-4">
             <div class="col">
-                {{ html()->form('POST', url("admin/service/store/".$typeId))->class('form')->open() }}
-
+                {{ html()->form('POST', route("vendor.album.store"))->class('form')->open() }}
+                {{ Form::hidden('vendor_id', $vendor->id) }}
                 <div class="row">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-8">
                         <div class="form-group">
                             {{ Form::label('name', 'Name') }} {!! fielf_required("required") !!}
                             {{ Form::text('name', null, array('class' => 'form-control')) }}
                         </div>
                     </div>
+
                     <div class="col-6 col-md-4">
+                        <div class="form-group">
+                            {{ Form::label('order', 'Order') }}
+                            {{ Form::text('order', null, array('class' => 'form-control')) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 ">
                         <div class="form-group">
                             {{ Form::label('description', 'Description') }}
                             {{ Form::text('description', null, array('class' => 'form-control')) }}
                         </div>
                     </div>
-{{--                    <div class="col-6 col-md-2">--}}
-{{--                        <div class="form-group">--}}
-{{--                            {{ Form::label('order', 'Order') }}--}}
-{{--                            {{ Form::text('order', null, array('class' => 'form-control')) }}--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
                 </div>
-{{--                <input type="hidden" value="{{$typeId}}" name="type_id">--}}
+                <div class="row">
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            {{ Form::label('status', 'Status?') }}
+                            <br>
+                            Yes  {{ Form::radio('status', 1) }}
+                            No {{ Form::radio('status', 0) }}
+{{--                            Yes  {{ Form::radio('status', 1, $vendor->travel_to_other_cities == 1?  true : false) }}--}}
+{{--                            No {{ Form::radio('status', 0, $vendor->travel_to_other_cities == 0 ? true : false) }}--}}
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">

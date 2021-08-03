@@ -1,53 +1,48 @@
-@extends('backend.layouts.app')
+@extends ('backend.layouts.app')
 
-@section('title')
-<title>Album | Index</title>
+@section('title') <title>Album | Index</title>  @endsection
+
+@section('breadcrumbs')
+    <x-backend-breadcrumbs>
+        <x-backend-breadcrumb-item type="active" icon=''></x-backend-breadcrumb-item>
+    </x-backend-breadcrumbs>
 @endsection
-{{--@section('header-title')--}}
-{{--    Manage Tickets--}}
-{{--@endsection--}}
-{{--@section('styles')--}}
-
-{{--@endsection--}}
-
 
 @section('content')
     <div class="card">
         <div class="card-body">
             <div class="row">
-                <div class="col-8">
-                    <h4 class="card-title mb-0">
-                        <i class="c-icon cil-people"></i> Album <small class="text-muted">Data Table Album</small>
-                    </h4>
-                    <div class="small text-muted">
-                        {{ Str::title('album') }} Management Dashboard
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-                        <a href="{{ route("backend.type.index") }}" class="btn btn-secondary btn-sm ml-1" data-toggle="tooltip" title="Type List"><i class="fas fa-list-ul"></i> List</a>
-                    </div>
-                    <div class="float-right">
-                        <a href='{{ route("backend.service.create")}}'
-                           class='btn btn-success btn-sm'
-                           data-toggle="tooltip"
-                           title="{{__('Create')}}">
-                            <i class="fas fa-plus-circle"></i>
-                        </a>
-                    </div>
+            <div class="col-8">
+                <h4 class="card-title mb-0">
+                    <i class="c-icon cil-people"></i> Album <small class="text-muted">Data Table Album</small>
+                </h4>
+                <div class="small text-muted">
+                    {{ Str::title('album') }} Management Dashboard
                 </div>
             </div>
-            <!--/.row-->
+            <div class="col-4">
+
+                <div class="float-right">
+                    <a href='{{ route("vendor.album.create")}}'
+                       class='btn btn-success btn-sm'
+                       data-toggle="tooltip"
+                       title="{{__('Create')}}">
+                        <i class="fas fa-plus-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--/.row-->
 
             <div class="row mt-4">
                 <div class="col">
                     <div class="table-responsive">
                         <table id="datatable" class="table table-bordered table-hover table-responsive-sm">
                             <thead>
-                            <th> # </th>
-                            <th> Name </th>
-                            <th> Description </th>
-                            <th> Action </th>
+                                <th> # </th>
+                                <th> Name </th>
+                                <th> Description </th>
+                                <th> Action </th>
                             </thead>
                             <tbody>
                             </tbody>
@@ -58,7 +53,7 @@
         </div>
     </div>
 
-@stop
+@endsection
 
 @push ('after-styles')
     <!-- DataTables Core and Extensions -->
@@ -74,7 +69,7 @@
         var table = $('#datatable').DataTable({
             processing: true,
             serverSide: true,
-                ajax: "{{ route('backend.service.index')}}",
+                ajax: "{{ route('vendor.album.index')}}",
                 columns: [
                     {data: 'id', name: 'id'},
                     {data: 'name', name: 'name'},
