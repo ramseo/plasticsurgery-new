@@ -26,6 +26,9 @@ class CreateCitiesTable extends Migration
             $table->string('icon')->nullable();
             $table->string('image')->nullable();
 
+            $table->string('meta_title')->nullable();
+            $table->text('meta_keywords')->nullable();
+            $table->text('meta_description')->nullable();
 
             $table->integer('created_by')->unsigned()->nullable();
             $table->integer('updated_by')->unsigned()->nullable();
