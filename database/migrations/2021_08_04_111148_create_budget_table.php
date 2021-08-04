@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateVendorTypesTable extends Migration
+class CreateBudgetTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,15 @@ class CreateVendorTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('types', function (Blueprint $table) {
+        Schema::create('budget', function (Blueprint $table) {
             $table->id();
-
-            $table->string('name');
-            $table->string('slug')->nullable();
-            $table->text('description')->nullable();
-            $table->text('faq')->nullable();
-            $table->string('colour')->nullable();
-
+            $table->bigInteger('type_id')->unsigned();
+            $table->foreign('type_id')->references('id')->on('types')->onDelete('cascade');
+            $table->enum('filter', ['less_then','between','above'])->default('less_then');
+            $table->string('min')->nullable();
+            $table->string('max')->nullable();
             $table->string('order')->nullable();
             $table->tinyInteger('status')->default(1);
-
-            $table->string('icon')->nullable()->default('img/default-vendor-icon.jpg');
-            $table->string('image')->nullable()->default('img/default-vendor-type.jpg');
-            $table->string('banner')->nullable()->default('img/default-vendor-banner.jpg');
 
             $table->integer('created_by')->unsigned()->nullable();
             $table->integer('updated_by')->unsigned()->nullable();
@@ -45,6 +39,6 @@ class CreateVendorTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('types');
+        Schema::dropIfExists('budget');
     }
 }

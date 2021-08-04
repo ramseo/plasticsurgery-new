@@ -34,6 +34,10 @@ class CreateVendorsTable extends Migration
             $table->string('facebook_link')->nullable();
             $table->string('instagram_link')->nullable();
 
+            $table->integer('safety_assured')->nullable();
+            $table->integer('flexi_sure_policy')->nullable();
+            $table->integer('video_meetings')->nullable();
+            $table->integer('most_popular')->nullable();
             $table->integer('is_featured')->nullable();
 
             $table->tinyInteger('status')->default(0);

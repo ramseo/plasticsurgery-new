@@ -17,10 +17,11 @@ class CreateServicesTable extends Migration
             $table->id();
             $table->bigInteger('type_id')->unsigned();
             $table->foreign('type_id')->references('id')->on('types')->onDelete('cascade');
-            $table->string('name');
-            $table->string('slug')->nullable();
-            $table->text('description')->nullable();
-
+            $table->string('name')->nullable();
+            $table->enum('input_type', ['text','price','number',])->default('text');
+            $table->enum('positions', ['top','bottom'])->default('top');
+            $table->enum('service_on_basis', ['day','complete'])->default('day');
+            $table->string('placeholder')->nullable();
             $table->string('order')->nullable();
             $table->tinyInteger('status')->default(1);
 
