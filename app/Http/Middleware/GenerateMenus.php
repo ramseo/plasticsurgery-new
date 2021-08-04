@@ -277,6 +277,8 @@ class GenerateMenus
             $menu->add('<i class="c-sidebar-nav-icon fas fa-amazon-pay"></i> Price & Services', ['route' => 'vendor.price.index', 'class' => 'c-sidebar-nav-item',])->data(['order' => 100, 'activematches' => 'vendor/price*', 'permission' => [],])->link->attr(['class' => 'c-sidebar-nav-link',]);
             // Album
             $menu->add('<i class="c-sidebar-nav-icon fas fa-images"></i> Album', ['route' => 'vendor.album.index', 'class' => 'c-sidebar-nav-item',])->data(['order' => 101, 'activematches' => 'vendor/album*', 'permission' => [],])->link->attr(['class' => 'c-sidebar-nav-link',]);
+            // Album
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-video"></i> Video', ['route' => 'vendor.video.index', 'class' => 'c-sidebar-nav-item',])->data(['order' => 102, 'activematches' => 'vendor/video*', 'permission' => [],])->link->attr(['class' => 'c-sidebar-nav-link',]);
 
             // Set Active Menu
             $menu->filter(function ($item) {

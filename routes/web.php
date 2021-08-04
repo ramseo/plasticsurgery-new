@@ -204,6 +204,14 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
     Route::PATCH('album/update/{id}', 'AlbumController@update')->name('album.update');
     Route::resource("album", "AlbumController");
 
+    Route::get('video/', 'VideoController@index')->name('video.index');
+    Route::get('video/create/', 'VideoController@create')->name('video.create');
+    Route::post('video/store/', 'VideoController@store')->name('video.store');
+    Route::get('video/edit/{id}', 'VideoController@edit')->name('video.edit');
+    Route::PATCH('video/update/{id}', 'VideoController@update')->name('video.update');
+    Route::resource("video", "VideoController");
+
+
     Route::get('image/{album}', 'ImageController@index')->name('image.index');
     Route::post('image/store', 'ImageController@store')->name('image.store');
 
