@@ -2,16 +2,21 @@
 
 @section('title') <title>Album | Index</title>  @endsection
 
+
 @section('breadcrumbs')
     <x-backend-breadcrumbs>
-        <x-backend-breadcrumb-item type="active" icon=''></x-backend-breadcrumb-item>
+        <x-backend-breadcrumb-item route='{{route("vendor.album.index")}}' icon='c-icon cil-people' >
+            Album
+        </x-backend-breadcrumb-item>
+        <x-backend-breadcrumb-item type="active">Create</x-backend-breadcrumb-item>
     </x-backend-breadcrumbs>
 @endsection
 
+
 @section('content')
-    <div class="card">
-        <div class="card-body">
-            <div class="row">
+<div class="card">
+    <div class="card-body">
+        <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
                     <i class="c-icon cil-people"></i> Album <small class="text-muted">Data Table Album</small>
@@ -32,27 +37,26 @@
                 </div>
             </div>
         </div>
-        <!--/.row-->
-
-            <div class="row mt-4">
-                <div class="col">
-                    <div class="table-responsive">
-                        <table id="datatable" class="table table-bordered table-hover table-responsive-sm">
-                            <thead>
-                                <th> # </th>
-                                <th> Name </th>
-                                <th> Description </th>
-                                <th> Action </th>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table id="datatable" class="table table-bordered table-hover table-responsive-sm">
+                        <thead>
+                            <th> # </th>
+                            <th> Name </th>
+                            <th> Description </th>
+                            <th> Action </th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+
     </div>
 
+</div>
 @endsection
 
 @push ('after-styles')
