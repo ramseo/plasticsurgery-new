@@ -49,3 +49,7 @@ Route::group(['namespace' => '\Modules\Tag\Http\Controllers\Backend', 'as' => 'b
     Route::patch("tags/trashed/{id}", ['as' => "tags.restore", 'uses' => "TagsController@restore"]);
     Route::resource("tags", "TagsController");
 });
+
+    Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
+        Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
+    });
