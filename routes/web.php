@@ -230,5 +230,8 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
 
 });
 
+Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
+    Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
+});
 
 
