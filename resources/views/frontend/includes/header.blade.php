@@ -1,3 +1,6 @@
+@php
+    $categories = getDataArray('types');
+@endphp
 <header id="header">
     <div class="container-fluid">
         <div class="row header-main-col">
@@ -18,6 +21,23 @@
                         <li><a href="{{url('detail')}}">Bride</a></li>
                         <li><a href="#">Groom</a></li>
                         <li><a href="{{ route('frontend.posts.index') }}">Blog</a></li> -->
+                        <li>
+                            <div class="dropdown menuDropDown">
+                                <button class="dropbtn menuDropBtn">Vendors <i class="fa fa-chevron-down"></i></button>
+                                <div class="dropdown-content">
+                                    <div class="inner">
+                                        @if($categories)
+                                            @foreach($categories as $type)
+                                                <a href="#"><img src="{{asset('storage/vendor/type/icon/'.$type->icon)}}" alt="">{{$type->name}}</a>
+                                            @endforeach
+                                        @endif
+                                    </div>
+                                    <div class="inner-footer">
+                                        <p class="text-right">Are you a vendor? <a class="btn btn-primary" href="#">Register Now</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
                         <span id="menuCloser" style="display: none;"><i class="fa fa-times"></i></span>
                     </ul>
                 @endif
