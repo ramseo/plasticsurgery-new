@@ -46,7 +46,7 @@
                             <thead>
                             <th> # </th>
                             <th> Name </th>
-                            <th> Slug </th>
+                            <th> Placeholder </th>
                             <th> Action </th>
                             </thead>
                             <tbody>
@@ -92,7 +92,7 @@
                 columns: [
                     {data: 'id', name: 'id'},
                     {data: 'name', name: 'name'},
-                    {data: 'slug', name: 'slug'},
+                    {data: 'placeholder', name: 'placeholder'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
             columnDefs: [{

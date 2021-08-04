@@ -25,11 +25,11 @@ class ServiceController extends Controller
     public function index($typeId, Request $request)
     {
         if ($request->ajax()) {
-            $services = Service::where('type_id', $typeId)->select(['services.id', 'services.name', 'services.slug']);
+            $services = Service::where('type_id', $typeId)->select(['services.id', 'services.name', 'services.placeholder']);
             return Datatables::of($services)
                 ->addIndexColumn()
                 ->addColumn('action', function ($service) {
-                    $btn = '<a href="' . url("admin/service/edit/$service->id") . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"></i></a>';
+                    $btn = '<a href="' . route("backend.service.edit", $service->id) . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"></i></a>';
                     return $btn;
                 })
                 ->rawColumns(['action'])

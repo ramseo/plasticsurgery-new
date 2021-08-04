@@ -54,15 +54,6 @@ class Type extends Model
 
 
     /**
-     * Name should be lowercase.
-     *
-     * @param string $value Name value
-     */
-    public function setNameAttribute($value)
-    {
-        $this->attributes['name'] = strtolower($value);
-    }
-    /**
      * Set the 'Slug'.
      * If no value submitted 'Name' will be used as slug
      * str_slug helper method was used to format the text.

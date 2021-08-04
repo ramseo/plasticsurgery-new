@@ -136,14 +136,6 @@ class BaseModel extends Model implements HasMedia
     }
 
     /**
-     *  Set 'Name' attribute value.
-     */
-    public function setNameAttribute($value)
-    {
-        $this->attributes['name'] = trim($value);
-    }
-
-    /**
      * Set the 'Slug'.
      * If no value submitted 'Name' will be used as slug
      * str_slug helper method was used to format the text.

@@ -38,6 +38,7 @@
         <div class="row mt-4">
             <div class="col">
                 {{ Form::open(array('url' =>url("admin/service/update/$service->id"), 'files' => true,'id' => 'ticketForm')) }}
+
                 <div class="row">
                     <div class="col-12 col-md-6">
                         <div class="form-group">
@@ -45,19 +46,43 @@
                             {{ Form::text('name', $service->name, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                    <div class="col-6 col-md-4">
+                    <div class="col-12 col-md-3">
                         <div class="form-group">
-                            {{ Form::label('slug', 'Slug') }}
-                            {{ Form::text('slug', $service->slug, array('class' => 'form-control')) }}
+                            {{ Form::label('placeholder', 'Placeholder') }}
+                            {{ Form::text('placeholder', $service->placeholder, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                    <div class="col-6 col-md-2">
+                    <div class="col-12 col-md-3">
+                        @php $service_on_basis  =  array(''=>'Select', 'day'=> 'Per Day','complete'=>'Complete');  @endphp
+                        <div class="form-group">
+                            {{ Form::label('service_on_basis', 'Service On The Basis') }}
+                            {{ Form::select('service_on_basis', $service_on_basis, $service->service_on_basis, array('class' => 'form-control')) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-md-4">
+                        @php $type =  array(''=>'Select', 'text'=> 'Text','price'=>'Price','number'=> 'Number');  @endphp
+                        <div class="form-group">
+                            {{ Form::label('input_type', 'Type') }}
+                            {{ Form::select('input_type', $type, $service->input_type, array('class' => 'form-control input_type')) }}
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        @php $positions =  array(''=>'Select', 'top'=> 'Top','bottom'=>'Bottom');  @endphp
+                        <div class="form-group">
+                            {{ Form::label('positions', 'Position') }}
+                            {{ Form::select('positions', $positions, $service->positions, array('class' => 'form-control positions')) }}
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('order', 'Order') }}
                             {{ Form::text('order', $service->order, array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-4">
                         <div class="form-group">
