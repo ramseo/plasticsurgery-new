@@ -3,6 +3,179 @@
 @section('title') {{ __("Vendors") }} @endsection
 
 @section('content')
+    <div class="filter-overlay" style="display: none;"></div>
+    <div id="filter-main-col" class="">
+        <div class="filter-inner-col">
+            <div class="filter-top-bar">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <p>Filter</p>
+                    </li>
+                    <li class="list-inline-item">
+                        <select class="form-control" name="" id="">
+                            <option value="">Select Category</option>
+                        </select>
+                    </li>
+                    <li class="list-inline-item">
+                        <p>IN</p>
+                    </li>
+                    <li class="list-inline-item">
+                        <select class="form-control" name="" id="">
+                            <option value="">Select City</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div class="filter-body-col">
+                <div class="container">
+                    <div class="filter-form-col">
+                        <div class="single-filter-col col-xs-12 col-sm-4">
+                            <div class="filter-col-header">
+                                <p>Services</p>
+                            </div>
+                            <div class="filter-col-body">
+                                <ul class="list-unstyled filter-list">
+                                    <li>
+                                        <label class="custom-box-label">
+                                            <input type="checkbox" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-box-label">
+                                            <input type="checkbox" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-box-label">
+                                            <input type="checkbox" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-box-label">
+                                            <input type="checkbox" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-box-label">
+                                            <input type="checkbox" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-box-label">
+                                            <input type="checkbox" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="single-filter-col col-xs-12 col-sm-4">
+                            <div class="filter-col-header">
+                                <p>Services</p>
+                            </div>
+                            <div class="filter-col-body">
+                                <ul class="list-unstyled filter-list">
+                                    <li>
+                                        <label class="custom-box-label custom-radio-box">
+                                            <input type="radio" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-box-label custom-radio-box">
+                                            <input type="radio" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-box-label custom-radio-box">
+                                            <input type="radio" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-box-label custom-radio-box">
+                                            <input type="radio" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-box-label custom-radio-box">
+                                            <input type="radio" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-box-label custom-radio-box">
+                                            <input type="radio" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="single-filter-col col-xs-12 col-sm-4">
+                            <div class="filter-col-header">
+                                <p>Services</p>
+                            </div>
+                            <div class="filter-col-body">
+                                <ul class="list-unstyled filter-list">
+                                    <li>
+                                        <label class="custom-box-label custom-radio-box">
+                                            <input type="radio" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-box-label custom-radio-box">
+                                            <input type="radio" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="custom-box-label custom-radio-box">
+                                            <input type="radio" class="">
+                                            <span class="custom-box"><i class="fa fa-check"></i></span>
+                                            <span class="text">Label</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-footer-col">
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <button class="btn btn-warning cancel-filter" type="button">Cancel</button>
+                    </li>
+                    <li class="list-inline-item">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <section id="page-banner">
         <div class="container-fluid">
             <div class="row">
@@ -23,33 +196,20 @@
                         <div class="vendor-location-links">
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn btn-secondary">Delhi NCR</a>
+                                    <a href="#" class="btn btn-secondary filter-link">Delhi NCR</a>
                                     <p>Delhi NCR</p>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn btn-secondary">Bangalore</a>
+                                    <a href="#" class="btn btn-secondary filter-link">Bangalore</a>
                                     <p>Bangalore</p>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn btn-secondary">Mumbai</a>
+                                    <a href="#" class="btn btn-secondary filter-link">Mumbai</a>
                                     <p>Mumbai</p>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn btn-secondary">Chennai</a>
+                                    <a href="#" class="btn btn-secondary filter-link">Chennai</a>
                                     <p>Chennai</p>
-                                </li>
-                                <li class="list-inline-item">
-                                    <div class="dropdown">
-                                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                            Other Cities
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">Link 1</a>
-                                            <a class="dropdown-item" href="#">Link 2</a>
-                                            <a class="dropdown-item" href="#">Link 3</a>
-                                        </div>
-                                    </div>
-                                    <p>Other Cities</p>
                                 </li>
                             </ul>
                         </div>
@@ -248,3 +408,18 @@
     </section>
 
 @endsection
+
+@push('after-scripts')
+    <script>
+        $(document).ready(function(){
+            $('.filter-link').click(function(){
+                $('#filter-main-col').addClass('activeFilter');
+                $('.filter-overlay').fadeIn();
+            });
+            $('.cancel-filter').click(function(){
+                $('#filter-main-col').removeClass('activeFilter');
+                $('.filter-overlay').fadeOut();
+            });
+        });
+    </script>
+@endpush

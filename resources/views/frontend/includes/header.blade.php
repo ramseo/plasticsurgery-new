@@ -28,8 +28,8 @@
                                 <div class="dropdown-content">
                                     <div class="inner">
                                         @if($categories)
-                                            @foreach($categories as $type)
-                                                <a href="{{$type->slug . '/' . $city->slug}}"><img src="{{asset('storage/vendor/type/icon/'.$type->icon)}}" alt="">{{$type->name}}</a>
+                                            @foreach($categories as $header_type)
+                                                <a href="{{url('/') . '/' . $header_type->slug . '/' . $city->slug}}"><img src="{{asset('storage/vendor/type/icon/'.$header_type->icon)}}" alt="">{{$header_type->name}}</a>
                                             @endforeach
                                         @endif
                                     </div>
