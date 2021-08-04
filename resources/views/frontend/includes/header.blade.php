@@ -1,5 +1,6 @@
 @php
     $categories = getDataArray('types');
+    $city = getData('cities');
 @endphp
 <header id="header">
     <div class="container-fluid">
@@ -28,12 +29,12 @@
                                     <div class="inner">
                                         @if($categories)
                                             @foreach($categories as $type)
-                                                <a href="#"><img src="{{asset('storage/vendor/type/icon/'.$type->icon)}}" alt="">{{$type->name}}</a>
+                                                <a href="{{$type->slug . '/' . $city->slug}}"><img src="{{asset('storage/vendor/type/icon/'.$type->icon)}}" alt="">{{$type->name}}</a>
                                             @endforeach
                                         @endif
                                     </div>
                                     <div class="inner-footer">
-                                        <p class="text-right">Are you a vendor? <a class="btn btn-primary" href="#">Register Now</a></p>
+                                        <p class="text-right">Are you a vendor? <a class="btn btn-primary" href="{{ route('register-vendor') }}">Register Now</a></p>
                                     </div>
                                 </div>
                             </div>
