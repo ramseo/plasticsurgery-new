@@ -17,7 +17,7 @@
                     <i class="c-icon cil-people"></i>  Price And Services
                 </h4>
                 <div class="small text-muted">
-                    Price And Services Management Dashboard
+                    Price And Services Management
                 </div>
             </div>
             <div class="col-4">
@@ -35,9 +35,20 @@
     <div class="form">
         {{ Form::open(array('url' => route("vendor.price.store"), 'files' => true,'id' => 'priceForm')) }}
 {{--        {{ Form::hidden('album_id', $price->id) }}--}}
+{{--        {{dd($pricesData)}}--}}
         <div class="row">
-            @each('backend.prices.service', $services, 'service')
+            @foreach($services as $service)
+                @include('backend.prices.service', compact('services','pricesData'))
+            @endforeach
         </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group">
+                    {{ html()->submit($text = icon('fas fa-save')." Save")->class('btn btn-success') }}
+                </div>
+            </div>
+        </div>
+
         {{ Form::close() }}
     </div>
 

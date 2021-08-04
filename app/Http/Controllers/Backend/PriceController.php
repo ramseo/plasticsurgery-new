@@ -8,6 +8,7 @@ use App\Models\Service;
 use Illuminate\Http\Request;
 use Log;
 use Flash;
+use Validator;
 
 class PriceController extends Controller
 {
@@ -16,7 +17,14 @@ class PriceController extends Controller
         $vendor = getData('vendors', 'user_id', auth()->user()->id);
         $services = Service::where('type_id', $vendor->type_id)->get();
         $prices = Price::where('vendor_id', $vendor->id)->get();
-        return view('backend.prices.index', compact('vendor', 'services', 'prices'));
+        $pricesData = array();
+        if($prices){
+            foreach ($prices as $price){
+                $pricesData[$price->service_id]['service_type']=$price->service_type;
+                $pricesData[$price->service_id]['description']=$price->description;
+            }
+        }
+        return view('backend.prices.index', compact('vendor', 'services', 'pricesData'));
     }
 
 
@@ -29,21 +37,28 @@ class PriceController extends Controller
      */
     public function store(Request $request)
     {
-        $album_id = $request->album_id;
-        request()->validate(['file' => 'required', 'file.*' => 'mimes:jpeg,jpg,png']);
-        if ($request->hasfile('file')) {
-            foreach ($request->file('file') as $file) {
-                $fileName = multiFileUpload($file, "album/$album_id/");
-                $input['album_id'] = $album_id;
-                $input['name'] = $fileName;
-                $image = Image::create($input);
-                Log::info(label_case('Image Store | ' . $image->name . '(ID:' . $image->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        $vendor = getData('vendors', 'user_id', auth()->user()->id);
+        $services = Service::where('type_id', $vendor->type_id)->get();
+
+        foreach ($services as $service) {
+            $price = Price::where(array('vendor_id' => $vendor->id, 'service_id' => $service->id))->first();
+            $data =array();
+            $data['vendor_id'] = $vendor->id;
+            $data['service_id'] = $service->id;
+            $data['service_type'] = $request->service_type[$service->id];
+            $data['description'] = $request->description[$service->id];
+            if ($price) {
+                $price->update($data);
+            } else {
+                $price = Price::create($data);
             }
+            $price->save();
+            Log::info(label_case('Image Store | ' . $price->service_type . '(ID:' . $price->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         }
 
         Flash::success("<i class='fas fa-check'></i> New Image Added")->important();
 
-        return redirect("vendor/image/$album_id");
+        return redirect("vendor/price");
     }
 
 }
