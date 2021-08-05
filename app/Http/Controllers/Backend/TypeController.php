@@ -289,17 +289,17 @@ class TypeController extends Controller
 
         $data = $request->all();
         if($request->file('icon')){
-            $file_icon = fileUpload($request, 'icon','vendor/type/icon/');
+            $file_icon = fileUpload($request, 'icon','type/icon/');
             $data = array_merge($data,['icon'=> $file_icon]);
         }
 
         if($request->file('image')){
-            $file_image = fileUpload($request, 'image','vendor/type/image/');
+            $file_image = fileUpload($request, 'image','type/image/');
             $data = array_merge($data,['image'=> $file_image]);
         }
 
         if($request->file('banner')){
-            $file_banner = fileUpload($request, 'banner','vendor/type/banner/');
+            $file_banner = fileUpload($request, 'banner','type/banner/');
             $data = array_merge($data,['banner'=> $file_banner]);
         }
 

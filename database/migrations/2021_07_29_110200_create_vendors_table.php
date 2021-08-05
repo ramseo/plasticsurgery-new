@@ -24,7 +24,7 @@ class CreateVendorsTable extends Migration
             $table->string('business_name')->nullable();
             $table->string('slug')->nullable();
             $table->string('business_address')->nullable();
-            $table->string('image')->nullable()->default('img/default-vendor.jpg');
+            $table->string('image')->nullable();
             $table->text('description')->nullable();
             $table->string('since')->nullable();
             $table->string('wedding_covered')->nullable();

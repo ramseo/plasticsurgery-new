@@ -28,7 +28,7 @@
                                     <div class="inner">
                                         @if($categories)
                                             @foreach($categories as $type)
-                                                <a href="#"><img src="{{asset('storage/vendor/type/icon/'.$type->icon)}}" alt="">{{$type->name}}</a>
+                                                <a href="#"><img src="{{asset('storage/type/icon/'.$type->icon)}}" alt="">{{$type->name}}</a>
                                             @endforeach
                                         @endif
                                     </div>

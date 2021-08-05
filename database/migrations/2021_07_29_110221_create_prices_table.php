@@ -22,6 +22,7 @@ class CreatePricesTable extends Migration
             $table->string('service_type')->nullable();
             $table->text('description')->nullable();
             $table->tinyInteger('status')->default(1);
+            $table->tinyInteger('default')->default(0);
 
             $table->integer('created_by')->unsigned()->nullable();
             $table->integer('updated_by')->unsigned()->nullable();
