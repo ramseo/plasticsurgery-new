@@ -95,7 +95,6 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::post('service/update/{id}', 'ServiceController@update')->name('service.update');
     Route::resource("service", "ServiceController");
 
-
     Route::get("category", ['as' => "category.index", 'uses' => "CategoryController@index"]);
     Route::get("category/index_list", ['as' => "category.index_list", 'uses' => "CategoryController@index_list"]);
     Route::get("category/index_data", ['as' => "category.index_data", 'uses' => "CategoryController@index_data"]);
