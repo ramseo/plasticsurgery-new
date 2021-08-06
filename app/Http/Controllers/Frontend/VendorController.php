@@ -32,4 +32,18 @@ class VendorController extends Controller
 
         return view('frontend.vendors.cities', compact('body_class', 'cities', 'type'));
     }
+
+    public function details($type_slug, $city_slug, $vendor_slug){
+        $body_class = '';
+        $city = City::where('slug', $city_slug)->first();
+        $type = Type::where('slug', $type_slug)->first();
+        $vendor_details = DB::table('vendors')->where('type_id', $type->id)->where('city_id', $city->id)->where('slug', $vendor_slug)->first();
+        return view('frontend.vendors.details', compact('body_class', 'vendor_details', 'city', 'type'));
+    }
+
+    public function postReview(Request $request){
+        VendorReview::create($request->all());
+        Flash::success("<i class='fas fa-check'></i> Review posted successfully.")->important();
+        return redirect("/");
+    }
 }

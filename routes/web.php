@@ -33,6 +33,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('privacy', 'FrontendController@privacy')->name('privacy');
     Route::get('terms', 'FrontendController@terms')->name('terms');
     Route::post('newsletter', 'NewsletterController@store')->name('newsletter');
+    Route::post('post-review', 'VendorController@postReview')->name('post-review');
 
     Route::group(['middleware' => ['auth']], function () {
         /*
@@ -240,6 +241,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('{type}/', 'VendorController@cities')->name('vendor-city-listing');
     Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
+    Route::get('{type}/{city}/{vendor}', 'VendorController@details')->name('vendor-details');
 });
 
 
