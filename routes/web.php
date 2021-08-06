@@ -95,6 +95,14 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::post('service/update/{id}', 'ServiceController@update')->name('service.update');
     Route::resource("service", "ServiceController");
 
+    Route::get('budget/{type}', 'BudgetController@index')->name('budget.index');
+    Route::get('budget/create/{type}', 'BudgetController@create')->name('budget.create');
+    Route::post('budget/store/{type}', 'BudgetController@store')->name('budget.store');
+    Route::get('budget/edit/{id}', 'BudgetController@edit')->name('budget.edit');
+    Route::post('budget/update/{id}', 'BudgetController@update')->name('budget.update');
+    Route::resource("budget", "BudgetController");
+
+
     Route::get("category", ['as' => "category.index", 'uses' => "CategoryController@index"]);
     Route::get("category/index_list", ['as' => "category.index_list", 'uses' => "CategoryController@index_list"]);
     Route::get("category/index_data", ['as' => "category.index_data", 'uses' => "CategoryController@index_data"]);
