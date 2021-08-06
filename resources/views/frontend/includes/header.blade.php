@@ -29,7 +29,7 @@
                                     <div class="inner">
                                         @if($categories)
                                             @foreach($categories as $header_type)
-                                                <a href="{{url('/') . '/' . $header_type->slug . '/' . $city->slug}}"><img src="{{asset('storage/type/icon/'.$header_type->icon)}}" alt="">{{$header_type->name}}</a>
+                                                <a href="{{url('/') . '/' . $header_type->slug}}"><img src="{{asset('storage/type/icon/'.$header_type->icon)}}" alt="">{{$header_type->name}}</a>
                                             @endforeach
                                         @endif
                                     </div>

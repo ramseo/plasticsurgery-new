@@ -24,4 +24,12 @@ class VendorController extends Controller
 
         return view('frontend.vendors.index', compact('body_class', 'data', 'city', 'type'));
     }
+
+    public function cities($type_slug){
+        $body_class = '';
+        $cities = getDataArray('cities');
+        $type = Type::where('slug', $type_slug)->first();
+
+        return view('frontend.vendors.cities', compact('body_class', 'cities', 'type'));
+    }
 }
