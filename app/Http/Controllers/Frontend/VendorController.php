@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\City;
 use App\Models\Type;
+use App\Models\VendorReview;
 use DB;
+use Illuminate\Http\Request;
+use Validator;
 
 class VendorController extends Controller
 {
@@ -42,8 +45,23 @@ class VendorController extends Controller
     }
 
     public function postReview(Request $request){
-        VendorReview::create($request->all());
-        Flash::success("<i class='fas fa-check'></i> Review posted successfully.")->important();
-        return redirect("/");
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'rating' => 'required',
+            'description' => 'required',
+        ]);
+        if ($validator->passes()) {
+            $data = $request->all();
+            $vendor = new VendorReview();
+            $vendor->user_id = $data['user_id'];
+            $vendor->vendor_id = $data['vendor_id'];
+            $vendor->title = $data['title'];
+            $vendor->rating = $data['rating'];
+            $vendor->description = $data['description'];
+            $vendor->save();
+            return response()->json(['success' => true, 'message' => 'Review posted successfully!']);
+        }
+        
+        return response()->json(['success' => false, 'message' => $validator->errors()->all()]);
     }
 }

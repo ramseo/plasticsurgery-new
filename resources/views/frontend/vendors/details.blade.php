@@ -2,14 +2,11 @@
 
 @section('title') {{ __("Vendor") . ' | ' . $vendor_details->business_name }} @endsection
 
-@push('before-styles')
-    <link rel="stylesheet" href="{{asset('theme/css/rateit.css')}}">
-@endpush
-
 @section('content')
     @php
         $albums = getDataArray('albums', 'vendor_id', $vendor_details->id);
         $videos = getDataArray('videos', 'vendor_id', $vendor_details->id);
+        $reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor_details->id);
     @endphp
     <section id="breadcrumb-section">
         <div class="container-fluid">
@@ -74,82 +71,11 @@
                         </div>
                     </div>
                     <hr>
-                    <div class="vendor-detail-cols">
-                        <p class="head">Latest Reviews (10)</p>
-                        <div class="detail-review-header">
-                            <ul class="list-inline space-list">
-                                <li class="list-inline-item">
-                                    <p class="review">5.0</p>
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item text-success">
-                                            <i class="fa fa-star"></i>
-                                        </li>
-                                        <li class="list-inline-item text-success">
-                                            <i class="fa fa-star"></i>
-                                        </li>
-                                        <li class="list-inline-item text-success">
-                                            <i class="fa fa-star"></i>
-                                        </li>
-                                        <li class="list-inline-item text-success">
-                                            <i class="fa fa-star"></i>
-                                        </li>
-                                        <li class="list-inline-item text-success">
-                                            <i class="fa fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#reviewModal">Write a Review</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <hr>
-                        <div class="detail-review-body">
-                            <div class="col-xs-12 single-review">
-                                <div class="review-header">
-                                    <ul class="list-inline space-list">
-                                        <li>
-                                            <div class="d-flex">
-                                                <div class="img-col">
-                                                    <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
-                                                </div>
-                                                <div class="text-col">
-                                                    <p class="name">Gaurav Kumar</p>
-                                                    <ul class="list-inline rating-list">
-                                                        <li class="list-inline-item">
-                                                            <ul class="list-inline">
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <p class="grey-text">about 22 hours ago</p>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="review-body">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                    @if($reviews)
+                        @include('frontend.vendors.vendor-reviews',['reviews' => $reviews])
+                    @endif
+
                 </div>
                 <div class="col-xs-12 col-sm-5 vendor-detail-text-col">
                     <div class="inner bg-white-custom">
@@ -169,9 +95,11 @@
                                 <li class="list-inline-item">
                                     <a href="#" class="grey-text"><i class="far fa-share-square text-primary"></i> Share</a>
                                 </li>
-                                <li class="list-inline-item">
-                                    <a href="#" class="grey-text" data-toggle="modal" data-target="#reviewModal"><i class="far fa-star text-primary"></i> Write Review</a>
-                                </li>
+                                @auth
+                                    <li class="list-inline-item">
+                                        <a href="#" class="grey-text" data-toggle="modal" data-target="#reviewModal"><i class="far fa-star text-primary"></i> Write Review</a>
+                                    </li>
+                                @endauth
                             </ul>
                         </div>
                         <hr>
@@ -205,43 +133,9 @@
         </div>
     </section>
 
-    <div class="modal fade" id="reviewModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Write Review</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="review-form-main-col">
-                        <form id="reviewForm" action="">
-                            <div class="form-group">
-                                <div class="review-rating" data-rateit-mode="font" data-rateit-resetable="false"></div>
-                                <input type="hidden" id="review-rating-hidden">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Title</label>
-                                <input id="reviewTitle" type="text" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Your Review</label>
-                                <textarea id="reviewDescription" name="" class="form-control"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input id="reviewUserId" type="hidden" value="">
-                                <input id="reviewVendorId" type="hidden" value="">
-                                <input type="submit" class="btn btn-primary" value="Submit">
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection
 
 @push('after-scripts')
-    <script src="{{asset('theme/js/jquery.rateit.min.js')}}"></script>
     <script>
         $(document).ready(function(){
             var options = {minMargin: 10, maxMargin: 35, itemSelector: ".item"};
@@ -263,10 +157,11 @@
                     },
                     success: function(res) {
                         if(res.success){
+                            $('.reviewAlert').html('').hide();
                             $('#reviewForm').trigger('reset');
                             toastr.success(res.message, 'Review posted Successfully!');
                         }else{
-                            toastr.error(res.message, 'Error!');
+                            $('.reviewAlert').html(res.message).show();
                         }
                     }
                 });
