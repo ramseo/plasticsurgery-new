@@ -41,145 +41,67 @@
                     @endif
                     
                     <hr>
+
+                    @php
+                        $top_services = get_vendor_services($vendor_details->id, 'top');
+                        $bottom_services = get_vendor_services($vendor_details->id, 'bottom');
+                    @endphp
                     <div class="vendor-detail-cols">
-                        <p class="head">Pricing</p>
-                        <div class="single-price">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="grey-text text-uppercase">Candid Photography</p>
-                                    <p class="info"><i class="fas fa-rupee-sign"></i> 70,000 per day</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-chevron-down"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="single-price">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="grey-text text-uppercase">Traditional Photography</p>
-                                    <p class="info"><i class="fas fa-rupee-sign"></i> 70,000 per day</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-chevron-down"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="single-price">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="grey-text text-uppercase">Cinematic Photography</p>
-                                    <p class="info"><i class="fas fa-rupee-sign"></i> 70,000 per day</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-chevron-down"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="single-price">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="grey-text text-uppercase">Traditional Videography</p>
-                                    <p class="info"><i class="fas fa-rupee-sign"></i> 70,000 per day</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-chevron-down"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="single-price">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="grey-text text-uppercase">Photo Album</p>
-                                    <p class="info"><i class="fas fa-rupee-sign"></i> 70,000 per day</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-chevron-down"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="single-price">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="grey-text text-uppercase">Pre-Wedding shoot</p>
-                                    <p class="info"><i class="fas fa-rupee-sign"></i> 70,000 per day</p>
-                                </li>
-                                <li>
-                                    <i class="fas fa-chevron-down"></i>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="single-price">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="grey-text text-uppercase">Payment Policy</p>
-                                    <p class="info">15% - At the Time of booking</p>
-                                    <p class="info">80% - On Event date</p>
-                                    <p class="info">100% - After deliverables are delivered</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="single-price">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="grey-text text-uppercase">Cancellation Policy</p>
-                                    <p class="info">30% of the booking charges are refundable.</p>
-                                </li>
-                            </ul>
-                        </div>
+                        @if($top_services)
+                            <p class="head">Pricing</p>
+                            @foreach($top_services as $top_service)
+                                @include('frontend.vendors.vendor-service',['service_item' => $top_service])
+                            @endforeach
+                        @endif
                     </div>
                     <hr>
                     <div class="vendor-detail-cols">
                         <p class="head">About</p>
-                        <p class="text-uppercase small-head"><strong>Introduction</strong></p>
-                        <p class="grey-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <p class="text-uppercase small-head"><strong>Working since</strong></p>
-                        <p class="grey-text">2000</p>
-                        <p class="text-uppercase small-head"><strong>Travel Policy</strong></p>
-                        <p class="grey-text">Travel & Stay paid by client</p>
+                        @if($vendor_details->description != '')
+                            <p class="text-uppercase small-head"><strong>Introduction</strong></p>
+                            <p class="grey-text">{!! $vendor_details->description !!}</p>
+                        @endif
+                        @if($vendor_details->since != '')
+                            <p class="text-uppercase small-head"><strong>Working since</strong></p>
+                            <p class="grey-text">{{$vendor_details->since}}</p>
+                        @endif
+                        <div class="vendor-detail-cols">
+                            @if($bottom_services)
+                                @foreach($bottom_services as $bottom_service)
+                                    @include('frontend.vendors.vendor-service',['service_item' => $bottom_service])
+                                @endforeach
+                            @endif
+                        </div>
                     </div>
                     <hr>
                     <div class="vendor-detail-cols">
                         <p class="head">Latest Reviews (10)</p>
                         <div class="detail-review-header">
-                            <p class="review">5.0</p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item text-success">
-                                    <i class="fa fa-star"></i>
+                            <ul class="list-inline space-list">
+                                <li class="list-inline-item">
+                                    <p class="review">5.0</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item text-success">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="list-inline-item text-success">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="list-inline-item text-success">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="list-inline-item text-success">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="list-inline-item text-success">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li class="list-inline-item text-success">
-                                    <i class="fa fa-star"></i>
-                                </li>
-                                <li class="list-inline-item text-success">
-                                    <i class="fa fa-star"></i>
-                                </li>
-                                <li class="list-inline-item text-success">
-                                    <i class="fa fa-star"></i>
-                                </li>
-                                <li class="list-inline-item text-success">
-                                    <i class="fa fa-star"></i>
+                                <li class="list-inline-item">
+                                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#reviewModal">Write a Review</a>
                                 </li>
                             </ul>
-                            <div class="rate-plugin">
-                                <p><strong>Rate 'Focus Wedding Photographers'</strong></p>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <i class="far fa-star"></i>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <i class="far fa-star"></i>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <i class="far fa-star"></i>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <i class="far fa-star"></i>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <i class="far fa-star"></i>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                         <hr>
                         <div class="detail-review-body">
@@ -224,221 +146,6 @@
                                 </div>
                                 <div class="review-body">
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-                                    <div class="col-xs-12 single-review">
-                                        <div class="review-header">
-                                            <ul class="list-inline space-list">
-                                                <li>
-                                                    <div class="d-flex">
-                                                        <div class="img-col">
-                                                            <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
-                                                        </div>
-                                                        <div class="text-col">
-                                                            <p class="name">Focus Wedding Photographers</p>
-                                                            <ul class="list-inline rating-list">
-                                                                <li class="list-inline-item">
-                                                                    <ul class="list-inline">
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li class="list-inline-item">
-                                                                    <p class="grey-text">about 22 hours ago</p>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="review-body">
-                                            <p>Thanks</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 single-review">
-                                <div class="review-header">
-                                    <ul class="list-inline space-list">
-                                        <li>
-                                            <div class="d-flex">
-                                                <div class="img-col">
-                                                    <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
-                                                </div>
-                                                <div class="text-col">
-                                                    <p class="name">Gaurav Kumar</p>
-                                                    <ul class="list-inline rating-list">
-                                                        <li class="list-inline-item">
-                                                            <ul class="list-inline">
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <p class="grey-text">about 22 hours ago</p>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="review-body">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-                                    <div class="col-xs-12 single-review">
-                                        <div class="review-header">
-                                            <ul class="list-inline space-list">
-                                                <li>
-                                                    <div class="d-flex">
-                                                        <div class="img-col">
-                                                            <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
-                                                        </div>
-                                                        <div class="text-col">
-                                                            <p class="name">Focus Wedding Photographers</p>
-                                                            <ul class="list-inline rating-list">
-                                                                <li class="list-inline-item">
-                                                                    <ul class="list-inline">
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li class="list-inline-item">
-                                                                    <p class="grey-text">about 22 hours ago</p>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="review-body">
-                                            <p>Thanks</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 single-review">
-                                <div class="review-header">
-                                    <ul class="list-inline space-list">
-                                        <li>
-                                            <div class="d-flex">
-                                                <div class="img-col">
-                                                    <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
-                                                </div>
-                                                <div class="text-col">
-                                                    <p class="name">Gaurav Kumar</p>
-                                                    <ul class="list-inline rating-list">
-                                                        <li class="list-inline-item">
-                                                            <ul class="list-inline">
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                                <li class="list-inline-item text-success">
-                                                                    <i class="fa fa-star"></i>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                        <li class="list-inline-item">
-                                                            <p class="grey-text">about 22 hours ago</p>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="review-body">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-                                    <div class="col-xs-12 single-review">
-                                        <div class="review-header">
-                                            <ul class="list-inline space-list">
-                                                <li>
-                                                    <div class="d-flex">
-                                                        <div class="img-col">
-                                                            <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
-                                                        </div>
-                                                        <div class="text-col">
-                                                            <p class="name">Focus Wedding Photographers</p>
-                                                            <ul class="list-inline rating-list">
-                                                                <li class="list-inline-item">
-                                                                    <ul class="list-inline">
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                        <li class="list-inline-item text-success">
-                                                                            <i class="fa fa-star"></i>
-                                                                        </li>
-                                                                    </ul>
-                                                                </li>
-                                                                <li class="list-inline-item">
-                                                                    <p class="grey-text">about 22 hours ago</p>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="review-body">
-                                            <p>Thanks</p>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -480,263 +187,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="photographers-section">
-        <div class="container-fluid">
-            <div class="col-xs-12 common-left-heading">
-                <p class="head">Similar Wedding Photographers</p>
-                <p class="grey-text">These are Photographers similar to 'Focus Wedding Photographers'</p>
-            </div>
-            <div class="row vendor-list-row">
-                <div class="col-xs-12 col-sm-4">
-                    <div class="common-card vendor-card-col">
-                        <div class="img-col">
-                            <img src="images/real-story.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="text-col">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="title">Focus Wedding Photographers</p>
-                                    <p class="grey-text">Ludhiana</p>
-                                </li>
-                                <li class="text-right">
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
-                                </li>
-                            </ul>
-                            <ul class="list-inline vendor-card space-list v-center">
-                                <li>
-                                    <p class="price"><span>Rs. 50,000</span></p>
-                                </li>
-                                <li class="text-right">
-                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="common-card vendor-card-col">
-                        <div class="img-col">
-                            <img src="images/real-story.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="text-col">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="title">Focus Wedding Photographers</p>
-                                    <p class="grey-text">Ludhiana</p>
-                                </li>
-                                <li class="text-right">
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
-                                </li>
-                            </ul>
-                            <ul class="list-inline vendor-card space-list v-center">
-                                <li>
-                                    <p class="price"><span>Rs. 50,000</span></p>
-                                </li>
-                                <li class="text-right">
-                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="common-card vendor-card-col">
-                        <div class="img-col">
-                            <img src="images/real-story.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="text-col">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="title">Focus Wedding Photographers</p>
-                                    <p class="grey-text">Ludhiana</p>
-                                </li>
-                                <li class="text-right">
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
-                                </li>
-                            </ul>
-                            <ul class="list-inline vendor-card space-list v-center">
-                                <li>
-                                    <p class="price"><span>Rs. 50,000</span></p>
-                                </li>
-                                <li class="text-right">
-                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="common-card vendor-card-col">
-                        <div class="img-col">
-                            <img src="images/real-story.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="text-col">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="title">Focus Wedding Photographers</p>
-                                    <p class="grey-text">Ludhiana</p>
-                                </li>
-                                <li class="text-right">
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
-                                </li>
-                            </ul>
-                            <ul class="list-inline vendor-card space-list v-center">
-                                <li>
-                                    <p class="price"><span>Rs. 50,000</span></p>
-                                </li>
-                                <li class="text-right">
-                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="common-card vendor-card-col">
-                        <div class="img-col">
-                            <img src="images/real-story.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="text-col">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="title">Focus Wedding Photographers</p>
-                                    <p class="grey-text">Ludhiana</p>
-                                </li>
-                                <li class="text-right">
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
-                                </li>
-                            </ul>
-                            <ul class="list-inline vendor-card space-list v-center">
-                                <li>
-                                    <p class="price"><span>Rs. 50,000</span></p>
-                                </li>
-                                <li class="text-right">
-                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="common-card vendor-card-col">
-                        <div class="img-col">
-                            <img src="images/real-story.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="text-col">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="title">Focus Wedding Photographers</p>
-                                    <p class="grey-text">Ludhiana</p>
-                                </li>
-                                <li class="text-right">
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
-                                </li>
-                            </ul>
-                            <ul class="list-inline vendor-card space-list v-center">
-                                <li>
-                                    <p class="price"><span>Rs. 50,000</span></p>
-                                </li>
-                                <li class="text-right">
-                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="common-card vendor-card-col">
-                        <div class="img-col">
-                            <img src="images/real-story.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="text-col">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="title">Focus Wedding Photographers</p>
-                                    <p class="grey-text">Ludhiana</p>
-                                </li>
-                                <li class="text-right">
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
-                                </li>
-                            </ul>
-                            <ul class="list-inline vendor-card space-list v-center">
-                                <li>
-                                    <p class="price"><span>Rs. 50,000</span></p>
-                                </li>
-                                <li class="text-right">
-                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="common-card vendor-card-col">
-                        <div class="img-col">
-                            <img src="images/real-story.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="text-col">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="title">Focus Wedding Photographers</p>
-                                    <p class="grey-text">Ludhiana</p>
-                                </li>
-                                <li class="text-right">
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
-                                </li>
-                            </ul>
-                            <ul class="list-inline vendor-card space-list v-center">
-                                <li>
-                                    <p class="price"><span>Rs. 50,000</span></p>
-                                </li>
-                                <li class="text-right">
-                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div class="common-card vendor-card-col">
-                        <div class="img-col">
-                            <img src="images/real-story.jpg" alt="" class="img-fluid">
-                        </div>
-                        <div class="text-col">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <p class="title">Focus Wedding Photographers</p>
-                                    <p class="grey-text">Ludhiana</p>
-                                </li>
-                                <li class="text-right">
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                    <p><a href="#" class="grey-text">10 Reviews</a></p>
-                                </li>
-                            </ul>
-                            <ul class="list-inline vendor-card space-list v-center">
-                                <li>
-                                    <p class="price"><span>Rs. 50,000</span></p>
-                                </li>
-                                <li class="text-right">
-                                    <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 load-more-col text-center">
-                <a href="#" class="btn btn-primary text-uppercase">Show more Photographers</a>
             </div>
         </div>
     </section>

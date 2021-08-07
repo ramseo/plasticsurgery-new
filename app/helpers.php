@@ -71,6 +71,16 @@ function multiFileUpload($file, $folder, $realName = true)
     return false;
 }
 
+function get_vendor_services($vendor_id, $position = ''){
+    $data = DB::table('services')
+            ->join('prices', 'services.id', '=', 'prices.service_id')
+            ->select('services.*', 'prices.input_type_value', 'prices.service_on_basis_value', 'prices.description')
+            ->where('prices.vendor_id', $vendor_id)
+            ->where('services.positions', $position)
+            ->get();
+    return $data;
+}
+
 /*
  * Global helpers file with misc functions.
  */

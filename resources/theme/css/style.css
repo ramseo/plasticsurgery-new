@@ -1755,6 +1755,14 @@ article blockquote {
     margin-bottom: 30px;
 }
 
+.tab-img-menu .active-arrow i {
+    margin: 0;
+}
+
+.service-description-toggler {
+    cursor: pointer;
+}
+
 @media(min-width: 1600px) {
     .container-fluid {
         max-width: 1400px;
