@@ -123,6 +123,7 @@
         </div>
     </section>
 
+    @include('frontend.vendors.similar-vendors', ['vendor_details' => $vendor_details])
     @include('frontend.includes.featured-vendors')
 
     <section id="text-only-section" class="mt-section">
