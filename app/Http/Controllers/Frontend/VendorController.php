@@ -5,7 +5,10 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\City;
 use App\Models\Type;
+use App\Models\VendorReview;
 use DB;
+use Illuminate\Http\Request;
+use Validator;
 
 class VendorController extends Controller
 {
@@ -23,5 +26,42 @@ class VendorController extends Controller
         // dd($data);
 
         return view('frontend.vendors.index', compact('body_class', 'data', 'city', 'type'));
+    }
+
+    public function cities($type_slug){
+        $body_class = '';
+        $cities = getDataArray('cities');
+        $type = Type::where('slug', $type_slug)->first();
+
+        return view('frontend.vendors.cities', compact('body_class', 'cities', 'type'));
+    }
+
+    public function details($type_slug, $city_slug, $vendor_slug){
+        $body_class = '';
+        $city = City::where('slug', $city_slug)->first();
+        $type = Type::where('slug', $type_slug)->first();
+        $vendor_details = DB::table('vendors')->where('type_id', $type->id)->where('city_id', $city->id)->where('slug', $vendor_slug)->first();
+        return view('frontend.vendors.details', compact('body_class', 'vendor_details', 'city', 'type'));
+    }
+
+    public function postReview(Request $request){
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'rating' => 'required',
+            'description' => 'required',
+        ]);
+        if ($validator->passes()) {
+            $data = $request->all();
+            $vendor = new VendorReview();
+            $vendor->user_id = $data['user_id'];
+            $vendor->vendor_id = $data['vendor_id'];
+            $vendor->title = $data['title'];
+            $vendor->rating = $data['rating'];
+            $vendor->description = $data['description'];
+            $vendor->save();
+            return response()->json(['success' => true, 'message' => 'Review posted successfully!']);
+        }
+        
+        return response()->json(['success' => false, 'message' => $validator->errors()->all()]);
     }
 }

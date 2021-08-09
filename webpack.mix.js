@@ -68,6 +68,7 @@ mix.styles(
         "resources/theme/css/justifiedGallery.min.css",
         "resources/theme/css/owl.carousel.min.css",
         "resources/theme/css/owl.theme.default.min.css",
+        "resources/theme/css/rateit.css",
         "resources/theme/css/style.css",
         "resources/theme/css/responsive.css"
     ],
@@ -88,6 +89,7 @@ mix.scripts(
         "public/vendor/impact-design/front/assets/js/front.js",
         "resources/theme/js/jquery.justifiedGallery.min.js",
         "resources/theme/js/owl.carousel.min.js",
+        "resources/theme/js/jquery.rateit.min.js",
         "resources/theme/js/custom.js"
     ],
     "public/js/wed.js"

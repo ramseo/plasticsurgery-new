@@ -20,7 +20,9 @@ class PriceController extends Controller
         $pricesData = array();
         if($prices){
             foreach ($prices as $price){
-                $pricesData[$price->service_id]['service_type']=$price->service_type;
+
+                $pricesData[$price->service_id]['input_type_value']=$price->input_type_value;
+                $pricesData[$price->service_id]['service_on_basis_value']=$price->service_on_basis_value;
                 $pricesData[$price->service_id]['description']=$price->description;
             }
         }
@@ -37,6 +39,7 @@ class PriceController extends Controller
      */
     public function store(Request $request)
     {
+//        dd($request);
         $vendor = getData('vendors', 'user_id', auth()->user()->id);
         $services = Service::where('type_id', $vendor->type_id)->get();
 
@@ -45,7 +48,11 @@ class PriceController extends Controller
             $data =array();
             $data['vendor_id'] = $vendor->id;
             $data['service_id'] = $service->id;
-            $data['service_type'] = $request->service_type[$service->id];
+            $data['input_type_value'] = $request->input_type_value[$service->id];
+            if($request->has('service_on_basis_value')){
+                $data['service_on_basis_value'] = $request->service_on_basis_value[$service->id];
+            }
+
             $data['description'] = $request->description[$service->id];
             if ($price) {
                 $price->update($data);

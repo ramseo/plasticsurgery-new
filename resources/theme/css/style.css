@@ -1691,8 +1691,8 @@ article blockquote {
     opacity: 1;
 }
 .custom-box-label input:checked ~ .custom-box{
-    background-color: red;
-    border-color: red;
+    background-color: #fa4a70;
+    border-color: #fa4a70;
 }
 .filter-col-header {
     font-size: 17px;
@@ -1723,6 +1723,44 @@ article blockquote {
 }
 .activeFilter{
     top: 0px !important;
+}
+
+.single-city-col .img-col {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fa4a70;
+    border-radius: 50%;
+    font-size: 30px;
+    margin: 0px auto 10px;
+    color: white;
+}
+
+.single-city-col a {
+    color: inherit;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 500;
+    display: table;
+    margin: auto;
+}
+
+.city-row {
+    margin-top: 50px;
+}
+
+.single-city-col {
+    margin-bottom: 30px;
+}
+
+.tab-img-menu .active-arrow i {
+    margin: 0;
+}
+
+.service-description-toggler {
+    cursor: pointer;
 }
 
 @media(min-width: 1600px) {

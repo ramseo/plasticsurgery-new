@@ -33,6 +33,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('privacy', 'FrontendController@privacy')->name('privacy');
     Route::get('terms', 'FrontendController@terms')->name('terms');
     Route::post('newsletter', 'NewsletterController@store')->name('newsletter');
+    Route::post('post-review', 'VendorController@postReview')->name('post-review');
 
     Route::group(['middleware' => ['auth']], function () {
         /*
@@ -94,6 +95,13 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::get('service/edit/{id}', 'ServiceController@edit')->name('service.edit');
     Route::post('service/update/{id}', 'ServiceController@update')->name('service.update');
     Route::resource("service", "ServiceController");
+
+    Route::get('budget/{type}', 'BudgetController@index')->name('budget.index');
+    Route::get('budget/create/{type}', 'BudgetController@create')->name('budget.create');
+    Route::post('budget/store/{type}', 'BudgetController@store')->name('budget.store');
+    Route::get('budget/edit/{id}', 'BudgetController@edit')->name('budget.edit');
+    Route::post('budget/update/{id}', 'BudgetController@update')->name('budget.update');
+    Route::resource("budget", "BudgetController");
 
 
     Route::get("category", ['as' => "category.index", 'uses' => "CategoryController@index"]);
@@ -231,7 +239,9 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
 });
 
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
+    Route::get('{type}/', 'VendorController@cities')->name('vendor-city-listing');
     Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
+    Route::get('{type}/{city}/{vendor}', 'VendorController@details')->name('vendor-details');
 });
 
 
