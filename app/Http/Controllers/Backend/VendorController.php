@@ -89,6 +89,13 @@ class VendorController extends Controller
         $vendor = Vendor::where('user_id', '=', $user_id)->first();
         $data = $request->all();
         $data = array_merge($data, ['user_id' => $user_id]);
+
+        if($request->file('image')){
+            $file_image = fileUpload($request, 'image','vendor/profile/');
+            $data = array_merge($data,['image'=> $file_image]);
+        }
+
+
         if ($vendor) {
             $vendor->update($data);
         } else {
