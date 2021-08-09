@@ -36,11 +36,14 @@
         {{ Form::open(array('url' => route("vendor.price.store"), 'files' => true,'id' => 'priceForm')) }}
 {{--        {{ Form::hidden('album_id', $price->id) }}--}}
 {{--        {{dd($pricesData)}}--}}
-        <div class="row">
+
             @foreach($services as $service)
+
+
                 @include('backend.prices.service', compact('services','pricesData'))
+
             @endforeach
-        </div>
+
         <div class="row">
             <div class="col-12">
                 <div class="form-group">

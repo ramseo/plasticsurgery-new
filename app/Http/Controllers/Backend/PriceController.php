@@ -20,10 +20,10 @@ class PriceController extends Controller
         $pricesData = array();
         if($prices){
             foreach ($prices as $price){
-
                 $pricesData[$price->service_id]['input_type_value']=$price->input_type_value;
                 $pricesData[$price->service_id]['service_on_basis_value']=$price->service_on_basis_value;
                 $pricesData[$price->service_id]['description']=$price->description;
+                $pricesData[$price->service_id]['default']=$price->default;
             }
         }
         return view('backend.prices.index', compact('vendor', 'services', 'pricesData'));
@@ -44,13 +44,18 @@ class PriceController extends Controller
         $services = Service::where('type_id', $vendor->type_id)->get();
 
         foreach ($services as $service) {
+//            dd($request);
             $price = Price::where(array('vendor_id' => $vendor->id, 'service_id' => $service->id))->first();
             $data =array();
             $data['vendor_id'] = $vendor->id;
             $data['service_id'] = $service->id;
             $data['input_type_value'] = $request->input_type_value[$service->id];
-            if($request->has('service_on_basis_value')){
+            if(isset($request->service_on_basis_value[$service->id])){
                 $data['service_on_basis_value'] = $request->service_on_basis_value[$service->id];
+            }
+
+            if(isset($request->default[$service->id])){
+                $data['default'] = $request->default[$service->id];
             }
 
             $data['description'] = $request->description[$service->id];
