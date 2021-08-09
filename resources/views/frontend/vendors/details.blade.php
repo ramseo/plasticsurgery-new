@@ -4,9 +4,13 @@
 
 @section('content')
     @php
+        $vendorUser = getData('users', 'id', $vendor_details->user_id);
         $albums = getDataArray('albums', 'vendor_id', $vendor_details->id);
         $videos = getDataArray('videos', 'vendor_id', $vendor_details->id);
         $reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor_details->id);
+        $avg = array_column($reviews->toArray(), 'rating');
+        $a = array_filter($avg);
+        $average = round(array_sum($a)/count($a));
     @endphp
     <section id="breadcrumb-section">
         <div class="container-fluid">
@@ -36,9 +40,7 @@
                     @if($albums)
                         @include('frontend.vendors.vendor-album',['vendor_albmum' => $albums])
                     @endif
-                    
                     <hr>
-
                     @php
                         $top_services = get_vendor_services($vendor_details->id, 'top');
                         $bottom_services = get_vendor_services($vendor_details->id, 'bottom');
@@ -80,7 +82,9 @@
                 <div class="col-xs-12 col-sm-5 vendor-detail-text-col">
                     <div class="inner bg-white-custom">
                         <div class="inner-col">
-                            <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
+                            @if($average > 0)
+                                <span class="vendor-rating"><i class="fa fa-star"></i> {{number_format($average, 1)}}</span>
+                            @endif
                             <p class="title">{{$vendor_details->business_name}}</p>
                             <p class="grey-text">{{$type->name}} in {{$city->name}}</p>
                         </div>
@@ -93,7 +97,7 @@
                         <div class="inner-col">
                             <ul class="list-inline share-ul">
                                 <li class="list-inline-item">
-                                    <a href="#" class="grey-text"><i class="far fa-share-square text-primary"></i> Share</a>
+                                    <a href="#" class="grey-text" data-toggle="modal" data-target="#shareModal"><i class="far fa-share-square text-primary"></i> Share</a>
                                 </li>
                                 @auth
                                     <li class="list-inline-item">
@@ -106,10 +110,10 @@
                         <div class="inner-col">
                             <ul class="list-inline actions-ul">
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn btn-primary"><i class="fas fa-rupee-sign"></i> Get Quotation</a>
+                                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#quotationModal"><i class="fas fa-rupee-sign"></i> Get Quotation</a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn btn-success"><i class="fas fa-phone-alt"></i> CALL/CHAT</a>
+                                    <a href="tel:{{$vendorUser->mobile}}" class="btn btn-success"><i class="fas fa-phone-alt"></i> CALL/CHAT</a>
                                 </li>
                             </ul>
                         </div>
@@ -132,6 +136,29 @@
             </div>
         </div>
     </section>
+
+    <div class="modal fade" id="shareModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Share</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="vendor-social-main-col">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a class="facebook" href="{{$vendor_details->facebook_link}}" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="instagram" href="{{$vendor_details->instagram_link}}" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 @endsection
 

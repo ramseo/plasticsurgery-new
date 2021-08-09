@@ -1763,6 +1763,18 @@ article blockquote {
     cursor: pointer;
 }
 
+.vendor-social-main-col a {
+    font-size: 40px;
+}
+
+.facebook{
+    color: #3B73EB;
+}
+
+.instagram{
+    color: #DA1E3D;
+}
+
 @media(min-width: 1600px) {
     .container-fluid {
         max-width: 1400px;
