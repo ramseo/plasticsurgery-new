@@ -24,7 +24,15 @@
                         <div class="common-card vendor-card-col">
                             <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $similar_vendor->slug }}">
                                 <div class="img-col">
-                                    <img src="images/real-story.jpg" alt="" class="img-fluid">
+                                    @php
+                                        $vendor_profile_img = asset('img/default-vendor.jpg');
+                                        if($similar_vendor->image){
+                                            if(file_exists( public_path().'/storage/vendor/profile/'. $similar_vendor->image )){
+                                                $vendor_profile_img = asset('storage/vendor/profile/'.$similar_vendor->image);
+                                            }
+                                        }
+                                    @endphp
+                                    <img src="{{$vendor_profile_img}}" alt="" class="img-fluid">
                                 </div>
                                 <div class="text-col">
                                     <ul class="list-inline space-list">

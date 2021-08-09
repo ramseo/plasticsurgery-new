@@ -33,8 +33,16 @@
         <div class="container-fluid">
             <div class="row vendor-detail-main-col">
                 <div class="col-xs-12 col-sm-7 vendor-detail-img-col">
+                    @php
+                        $vendor_profile_img = asset('img/default-vendor.jpg');
+                        if($vendor_details->image){
+                            if(file_exists( public_path().'/storage/vendor/profile/'. $vendor_details->image )){
+                                $vendor_profile_img = asset('storage/vendor/profile/'.$vendor_details->image);
+                            }
+                        }
+                    @endphp
                     <div class="img-col">
-                        <img src="images/real-story.jpg" class="img-fluid" alt="">
+                        <img src="{{$vendor_profile_img}}" class="img-fluid" alt="">
                     </div>
 
                     @if($albums)

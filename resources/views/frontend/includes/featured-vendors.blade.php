@@ -20,12 +20,22 @@
                             <div>
                                 <div class="common-card vendor-card">
                                     <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $vendor->slug }}">
+                                        @php
+                                            $vendor_profile_img = asset('img/default-vendor.jpg');
+                                            if($vendor->image){
+                                                if(file_exists( public_path().'/storage/vendor/profile/'. $vendor->image )){
+                                                    $vendor_profile_img = asset('storage/vendor/profile/'.$vendor->image);
+                                                }
+                                            }
+                                        @endphp
                                         <div class="img-col">
-                                            <img src="{{asset('images/vendor-img.jpg')}}" alt="" class="img-fluid">
+                                            <img src="{{$vendor_profile_img}}" alt="" class="img-fluid">
                                         </div>
                                         <div class="text-col">
                                             <p class="title">{{$vendor->business_name}}</p>
-                                            <p class="text">Bridal Makeup, Gomti Nagar</p>
+                                            @if($vendor->business_address)
+                                            <p class="text">{{$vendor->business_address}}</p>
+                                            @endif
                                             <p class="price"><span>Rs.18,000</span> for Bridal Makeup</p>
                                         </div>
                                     </a>

@@ -1786,6 +1786,17 @@ article blockquote {
     transform: translateY(-50%);
 }
 
+.vendor-card-col .img-col {
+    height: 270px;
+    overflow: hidden;
+}
+
+.vendor-card .img-col {
+    height: 230px;
+    overflow: hidden;
+}
+
+
 @media(min-width: 1600px) {
     .container-fluid {
         max-width: 1400px;
