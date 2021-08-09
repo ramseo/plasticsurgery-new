@@ -18,7 +18,7 @@ class BudgetController extends Controller
     public function index($typeId, Request $request)
     {
         if ($request->ajax()) {
-            $budgets = Budget::where('type_id', $typeId)->select(['id', 'name', 'placeholder']);
+            $budgets = Budget::where('type_id', $typeId)->select(['id', 'filter', 'min', 'max']);
             return Datatables::of($budgets)
                 ->addIndexColumn()
                 ->addColumn('action', function ($budget) {

@@ -8,20 +8,22 @@
                     $a = array_filter($avg);
                     $average = round(array_sum($a)/count($a));
                 @endphp
-                <p class="review">{{$average}}</p>
-                <ul class="list-inline">
-                    @for($i = 1; $i <= $average; $i++)
-                        <li class="list-inline-item text-success">
-                            <i class="fa fa-star"></i>
-                        </li>
-                    @endfor
-                </ul>
+                @if($average > 0)
+                    <p class="review">{{number_format($average, 1)}}</p>
+                    <ul class="list-inline">
+                        @for($i = 1; $i <= $average; $i++)
+                            <li class="list-inline-item text-success">
+                                <i class="fa fa-star"></i>
+                            </li>
+                        @endfor
+                    </ul>
+                @endif
             </li>
-            
+            @auth
                 <li class="list-inline-item">
                     <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#reviewModal">Write a Review</a>
                 </li>
-            
+            @endauth
         </ul>
     </div>
     <hr>
@@ -65,38 +67,38 @@
 </div>
 
 
-    <div class="modal fade" id="reviewModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Write Review</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="review-form-main-col">
-                        <div class="alert alert-danger reviewAlert" style="display: none;"></div>
-                        <form id="reviewForm" action="">
-                            <div class="form-group">
-                                <div class="review-rating" data-rateit-mode="font" data-rateit-resetable="false"></div>
-                                <input type="hidden" id="review-rating-hidden" value="">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Title</label>
-                                <input id="reviewTitle" type="text" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Your Review</label>
-                                <textarea id="reviewDescription" name="" class="form-control"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input id="reviewUserId" type="hidden" value="1">
-                                <input id="reviewVendorId" type="hidden" value="{{$vendor_details->id}}">
-                                <input type="submit" class="btn btn-primary" value="Submit">
-                            </div>
-                        </form>
-                    </div>
+<div class="modal fade" id="reviewModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Write Review</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="review-form-main-col">
+                    <div class="alert alert-danger reviewAlert" style="display: none;"></div>
+                    <form id="reviewForm" action="">
+                        <div class="form-group">
+                            <div class="review-rating" data-rateit-mode="font" data-rateit-resetable="false"></div>
+                            <input type="hidden" id="review-rating-hidden" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Title</label>
+                            <input id="reviewTitle" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Your Review</label>
+                            <textarea id="reviewDescription" name="" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input id="reviewUserId" type="hidden" value="{{Auth::user()->id}}">
+                            <input id="reviewVendorId" type="hidden" value="{{$vendor_details->id}}">
+                            <input type="submit" class="btn btn-primary" value="Submit">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
