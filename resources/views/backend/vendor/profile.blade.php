@@ -105,6 +105,19 @@
                 <div class="row">
                     <div class="col-4">
                         <div class="form-group">
+                            {{ Form::label('image', 'Profile Image') }}
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input"  name="image">
+                                <label class="custom-file-label">Choose file</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-4">
+                        <div class="form-group">
                             {{ html()->submit($text = icon('fas fa-save')." Save")->class('btn btn-success') }}
                         </div>
                     </div>
@@ -135,3 +148,13 @@
 </div>
 
 @stop
+
+@push ('after-scripts')
+    <script type="text/javascript">
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
+@endpush
