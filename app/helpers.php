@@ -81,6 +81,22 @@ function get_vendor_services($vendor_id, $position = ''){
     return $data;
 }
 
+function get_featured_vendors(){
+    $data = DB::table('vendors')
+            ->where('vendors.is_featured', 1)
+            ->limit(6)
+            ->get();
+    return $data;
+}
+
+function get_similar_vendors($type_id){
+    $data = DB::table('vendors')
+            ->where('vendors.type_id', $type_id)
+            ->limit(9)
+            ->get();
+    return $data;
+}
+
 /*
  * Global helpers file with misc functions.
  */
