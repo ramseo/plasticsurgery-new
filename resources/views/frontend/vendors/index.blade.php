@@ -196,20 +196,16 @@
                         <div class="vendor-location-links">
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn btn-secondary filter-link">Delhi NCR</a>
-                                    <p>Delhi NCR</p>
+                                    <a href="#" class="btn btn-primary filter-link">{{$type->name}} <i class="fas fa-chevron-down"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn btn-secondary filter-link">Bangalore</a>
-                                    <p>Bangalore</p>
+                                    <a href="#" class="btn btn-primary filter-link">{{$city->name}} <i class="fas fa-chevron-down"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn btn-secondary filter-link">Mumbai</a>
-                                    <p>Mumbai</p>
+                                    <a href="#" class="btn btn-secondary filter-link">Total Budget <i class="fas fa-chevron-down"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn btn-secondary filter-link">Chennai</a>
-                                    <p>Chennai</p>
+                                    <a href="#" class="btn btn-secondary filter-link">Sort: Relevance <i class="fas fa-chevron-down"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -240,6 +236,11 @@
                         @php 
                             $vendorCity = getData('cities', 'id', $vendor->city_id);
                             $vendorType = getData('types', 'id', $vendor->type_id); 
+
+                            $reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor->id);
+                            $avg = array_column($reviews->toArray(), 'rating');
+                            $a = array_filter($avg);
+                            $average = round(array_sum($a)/count($a));
                         @endphp
                         <div class="col-xs-12 col-sm-4">
                             <div class="common-card vendor-card-col">
@@ -253,10 +254,12 @@
                                                 <p class="title">{{$vendor->business_name}}</p>
                                                 <p class="grey-text">{{$vendorCity->name}}</p>
                                             </li>
-                                            <li class="text-right">
-                                                <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                                <p><a href="#" class="grey-text">10 Reviews</a></p>
-                                            </li>
+                                            @if($average > 0)
+                                                <li class="text-right">
+                                                    <span class="vendor-rating"><i class="fa fa-star"></i> {{number_format($average, 1)}}</span>
+                                                    <p><a href="javascript:void(0)" class="grey-text">{{count($reviews)}} Reviews</a></p>
+                                                </li>
+                                            @endif
                                         </ul>
                                         <ul class="list-inline vendor-card space-list v-center">
                                             <li>
@@ -398,19 +401,21 @@
         </div>
     </section>
 
-    <section id="text-only-section" class="grey-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12">
-                    <div class="text-header">
-                        <div class="text">
-                            {!! nl2br($type->description) !!}
+    @if($type->description != '')
+        <section id="text-only-section" class="grey-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="text-header">
+                            <div class="text">
+                                {!! nl2br($type->description) !!}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
 
 @endsection
 

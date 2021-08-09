@@ -572,10 +572,11 @@ strong {
 
 .vendor-location-links .btn {
     min-width: 160px;
-    margin-bottom: 8px;
+    margin-bottom: 0px;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    padding: 10px 35px 10px 15px;
 }
 
 .vendor-location-links {
@@ -583,7 +584,8 @@ strong {
 }
 
 .vendor-location-links li {
-    margin: 0 10px !important;
+    margin: 0 10px 0px !important;
+    position: relative;
 }
 
 .dropdown-item {
@@ -953,6 +955,7 @@ strong {
 .photo-album-col .nav-tabs .nav-link {
     text-align: center;
     font-size: 14px;
+    max-width: 140px;
 }
 
 .photo-album-col .nav-tabs .nav-link.active {
@@ -1773,6 +1776,14 @@ article blockquote {
 
 .instagram{
     color: #DA1E3D;
+}
+
+.vendor-location-links .btn i {
+    margin: 0 0 0 5px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 @media(min-width: 1600px) {
