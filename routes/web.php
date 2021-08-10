@@ -244,4 +244,9 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('{type}/{city}/{vendor}', 'VendorController@details')->name('vendor-details');
 });
 
+//$paths = getData('types');
+//dd($paths);
+//foreach($paths as $path){
+//    Route::get($path, 'YourController@index')->name('yours.index');
+//}
 
