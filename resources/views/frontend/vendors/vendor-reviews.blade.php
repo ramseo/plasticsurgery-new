@@ -91,7 +91,9 @@
                             <textarea id="reviewDescription" name="" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
-                            <input id="reviewUserId" type="hidden" value="{{Auth::user()->id}}">
+                            @auth
+                                <input id="reviewUserId" type="hidden" value="{{Auth::user()->id}}">
+                            @endauth
                             <input id="reviewVendorId" type="hidden" value="{{$vendor_details->id}}">
                             <input type="submit" class="btn btn-primary" value="Submit">
                         </div>

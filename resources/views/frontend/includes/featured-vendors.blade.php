@@ -13,16 +13,32 @@
                 <div class="col-xs-12 col-sm-12 card-listing-col">
                     <div id="vendorsSlider" class="owl-carousel owl-theme common-slider">
                         @foreach($featured_vendors as $vendor)
+                            @php 
+                                $vendorCity = getData('cities', 'id', $vendor->city_id);
+                                $vendorType = getData('types', 'id', $vendor->type_id); 
+                            @endphp
                             <div>
                                 <div class="common-card vendor-card">
-                                    <div class="img-col">
-                                        <img src="{{asset('images/vendor-img.jpg')}}" alt="" class="img-fluid">
-                                    </div>
-                                    <div class="text-col">
-                                        <p class="title">{{$vendor->business_name}}</p>
-                                        <p class="text">Bridal Makeup, Gomti Nagar</p>
-                                        <p class="price"><span>Rs.18,000</span> for Bridal Makeup</p>
-                                    </div>
+                                    <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $vendor->slug }}">
+                                        @php
+                                            $vendor_profile_img = asset('img/default-vendor.jpg');
+                                            if($vendor->image){
+                                                if(file_exists( public_path().'/storage/vendor/profile/'. $vendor->image )){
+                                                    $vendor_profile_img = asset('storage/vendor/profile/'.$vendor->image);
+                                                }
+                                            }
+                                        @endphp
+                                        <div class="img-col">
+                                            <img src="{{$vendor_profile_img}}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text-col">
+                                            <p class="title">{{$vendor->business_name}}</p>
+                                            @if($vendor->business_address)
+                                            <p class="text">{{$vendor->business_address}}</p>
+                                            @endif
+                                            <p class="price"><span>Rs.18,000</span> for Bridal Makeup</p>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         @endforeach

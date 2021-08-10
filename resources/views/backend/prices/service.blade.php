@@ -27,11 +27,11 @@
                     <div class="form-group">
                         @if($service->input_type == 'text')
                             {{ Form::label('name', Str::title($service->name) ) }}
-                            {{ Form::text("input_type_value[$service->id]", isset($pricesData[$service->id]['service_type'])? $pricesData[$service->id]['service_type']:null, array('class' => 'form-control')) }}
+                            {{ Form::text("input_type_value[$service->id]", isset($pricesData[$service->id]['input_type_value'])? $pricesData[$service->id]['input_type_value']:null, array('class' => 'form-control')) }}
                         @endif
                         @if($service->input_type == 'number')
                             {{ Form::label('name',  Str::title($service->name) ) }}
-                            {{ Form::number("input_type_value[$service->id]", isset($pricesData[$service->id]['service_type'])? $pricesData[$service->id]['service_type']:null, array('class' => 'form-control')) }}
+                            {{ Form::number("input_type_value[$service->id]", isset($pricesData[$service->id]['input_type_value'])? $pricesData[$service->id]['input_type_value']:null, array('class' => 'form-control')) }}
                         @endif
                     </div>
                 </div>
@@ -42,5 +42,18 @@
             {{ Form::label('description', Str::title($service->name.' service description (optional)') ) }}
             {{ Form::text("description[$service->id]", isset($pricesData[$service->id]['description'])? $pricesData[$service->id]['description']:null, array('class' => 'form-control')) }}
         </div>
+
+    </div>
+    <div class="col-12">
+        <div class="form-group">
+            {{ Form::label('default', Str::title($service->name.' set default service ') ) }}
+
+            @if(isset($pricesData[$service->id]['default']))
+                {{ Form::checkbox("default[$service->id]", 1, $pricesData[$service->id]['default'] == 1 ? true: false) }}
+            @else
+                {{ Form::checkbox("default[$service->id]", 1) }}
+            @endif
+        </div>
+
     </div>
 

@@ -174,6 +174,9 @@ class TypeController extends Controller
      */
     public function store(Request $request)
     {
+
+        request()->validate([ 'colour' => 'required','icon' => 'required',  'icon.*' => 'mimes:jpeg,jpg,png', 'image' => 'required',  'image.*' => 'mimes:jpeg,jpg,png','banner' => 'required',  'banner.*' => 'mimes:jpeg,jpg,png']);
+
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
@@ -276,6 +279,9 @@ class TypeController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        request()->validate([ 'colour' => 'required']);
+
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;

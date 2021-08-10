@@ -20,7 +20,7 @@ class CreateServicesTable extends Migration
             $table->string('name')->nullable();
             $table->enum('input_type', ['text','price','number',])->default('text');
             $table->enum('positions', ['top','bottom'])->default('top');
-            $table->enum('service_on_basis', ['minute','hour','day','complete'])->default('day');
+            $table->enum('service_on_basis', ['minute','hour','day','complete'])->default('day')->nullable();
             $table->string('placeholder')->nullable();
             $table->string('order')->nullable();
             $table->tinyInteger('status')->default(1);
