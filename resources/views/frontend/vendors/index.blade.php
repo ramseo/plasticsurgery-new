@@ -233,14 +233,10 @@
             <div class="row vendor-list-row">
                 @if($data->count() > 0)
                     @foreach($data as $vendor)
-                        @php 
+                        @php
                             $vendorCity = getData('cities', 'id', $vendor->city_id);
-                            $vendorType = getData('types', 'id', $vendor->type_id); 
-
-                            $reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor->id);
-                            $avg = array_column($reviews->toArray(), 'rating');
-                            $a = array_filter($avg);
-                            $average = round(array_sum($a)/count($a));
+                            $vendorType = getData('types', 'id', $vendor->type_id);
+                            $average =  averageReview($vendor->id);
                         @endphp
                         <div class="col-xs-12 col-sm-4">
                             <div class="common-card vendor-card-col">

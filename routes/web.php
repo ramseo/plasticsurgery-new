@@ -12,7 +12,7 @@
 */
 
 // Autho Routes
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 // Atom/ RSS Feed Routes
 Route::feeds();
@@ -243,14 +243,14 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
 //    Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
 //    Route::get('{type}/{city}/{vendor}', 'VendorController@details')->name('vendor-details');
 //});
+
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-$paths = getDataArray('types');
-if($paths) :
-    foreach ($paths as $path) {
-//        Route::get($path->slug, 'VendorController@index')->name('yours.index');
-        Route::get($path->slug.'/', 'VendorController@cities')->name('vendor-city-listing');
-        Route::get($path->slug.'/{city}', 'VendorController@index')->name('vendor-listing');
-        Route::get($path->slug.'/{city}/{vendor}', 'VendorController@details')->name('vendor-details');
-    }
-endif;
+    $paths = getDataArray('types');
+    if ($paths) :
+        foreach ($paths as $path) {
+            Route::get($path->slug . '/', 'VendorController@cities')->name('vendor-city-listing');
+            Route::get($path->slug . '/{city}', 'VendorController@index')->name('vendor-listing');
+            Route::get($path->slug . '/{city}/{vendor}', 'VendorController@details')->name('vendor-details');
+        }
+    endif;
 });

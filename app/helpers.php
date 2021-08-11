@@ -71,30 +71,45 @@ function multiFileUpload($file, $folder, $realName = true)
     return false;
 }
 
-function get_vendor_services($vendor_id, $position = ''){
+function get_vendor_services($vendor_id, $position = '')
+{
     $data = DB::table('services')
-            ->join('prices', 'services.id', '=', 'prices.service_id')
-            ->select('services.*', 'prices.input_type_value', 'prices.service_on_basis_value', 'prices.description')
-            ->where('prices.vendor_id', $vendor_id)
-            ->where('services.positions', $position)
-            ->get();
+        ->join('prices', 'services.id', '=', 'prices.service_id')
+        ->select('services.*', 'prices.input_type_value', 'prices.service_on_basis_value', 'prices.description')
+        ->where('prices.vendor_id', $vendor_id)
+        ->where('services.positions', $position)
+        ->get();
     return $data;
 }
 
-function get_featured_vendors(){
+function get_featured_vendors()
+{
     $data = DB::table('vendors')
-            ->where('vendors.is_featured', 1)
-            ->limit(6)
-            ->get();
+        ->where('vendors.is_featured', 1)
+        ->limit(6)
+        ->get();
     return $data;
 }
 
-function get_similar_vendors($type_id){
+function get_similar_vendors($type_id)
+{
     $data = DB::table('vendors')
-            ->where('vendors.type_id', $type_id)
-            ->limit(9)
-            ->get();
+        ->where('vendors.type_id', $type_id)
+        ->limit(9)
+        ->get();
     return $data;
+}
+
+function averageReview($vendor_id, $default = 0)
+{
+    $reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor_id);
+    $average = $default;
+    if (!$reviews->isEmpty()) {
+        $avg = array_column($reviews->toArray(), 'rating');
+        $a = array_filter($avg);
+        $average = round(array_sum($a) / count($a));
+    }
+    return $average;
 }
 
 /*

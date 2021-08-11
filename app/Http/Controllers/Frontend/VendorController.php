@@ -9,26 +9,32 @@ use App\Models\VendorReview;
 use DB;
 use Illuminate\Http\Request;
 use Validator;
+use Illuminate\Http\Response;
 
 class VendorController extends Controller
 {
 
-    public function index($type_slug, $city_slug){
+    public function index(Request $request, $city_slug)
+    {
+        $type_slug = $request->segment(1);
         $body_class = '';
         $city = City::where('slug', $city_slug)->first();
         $type = Type::where('slug', $type_slug)->first();
         $vendors = DB::table('vendors');
         $vendors->where('type_id', $type->id)->where('city_id', $city->id);
-        if(1 == 1){
+        if (1 == 1) {
 
         }
         $data = $vendors->get();
-        // dd($data);
 
         return view('frontend.vendors.index', compact('body_class', 'data', 'city', 'type'));
     }
 
-    public function cities($type_slug){
+    public function cities(Request $request)
+    {
+
+        $type_slug = $request->segment(1);
+
         $body_class = '';
         $cities = getDataArray('cities');
         $type = Type::where('slug', $type_slug)->first();
@@ -36,7 +42,9 @@ class VendorController extends Controller
         return view('frontend.vendors.cities', compact('body_class', 'cities', 'type'));
     }
 
-    public function details($type_slug, $city_slug, $vendor_slug){
+    public function details(Request $request, $city_slug, $vendor_slug)
+    {
+        $type_slug = $request->segment(1);
         $body_class = '';
         $city = City::where('slug', $city_slug)->first();
         $type = Type::where('slug', $type_slug)->first();
@@ -44,7 +52,8 @@ class VendorController extends Controller
         return view('frontend.vendors.details', compact('body_class', 'vendor_details', 'city', 'type'));
     }
 
-    public function postReview(Request $request){
+    public function postReview(Request $request)
+    {
         $validator = Validator::make($request->all(), [
             'title' => 'required',
             'rating' => 'required',
@@ -61,7 +70,7 @@ class VendorController extends Controller
             $vendor->save();
             return response()->json(['success' => true, 'message' => 'Review posted successfully!']);
         }
-        
+
         return response()->json(['success' => false, 'message' => $validator->errors()->all()]);
     }
 }
