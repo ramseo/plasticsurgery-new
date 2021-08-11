@@ -52,6 +52,18 @@
 </div>
 
 <div class="row">
+    <div class="col-12">
+        <div class="form-group">
+            <?php
+            $field_name = 'colour';
+            $field_lable = label_case($field_name);
+            $field_placeholder = $field_lable;
+            $required = "required";
+            ?>
+            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
+            {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
+        </div>
+    </div>
     <div class="col-4">
 
         <div class="form-group">
@@ -143,12 +155,14 @@
 
 
 @push ('after-scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.6/js/bootstrap-colorpicker.js"></script>
 <script type="text/javascript">
     // Add the following code if you want the name of the file appear on select
     $(".custom-file-input").on("change", function() {
         var fileName = $(this).val().split("\\").pop();
         $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
     });
+    $('#colour').colorpicker();
 </script>
 @endpush
 
@@ -162,6 +176,7 @@
 @push('after-styles')
     <!-- File Manager -->
     <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.6/css/bootstrap-colorpicker.css" rel="stylesheet">
 @endpush
 
 @push ('after-scripts')
