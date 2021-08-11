@@ -1,15 +1,8 @@
 @extends('backend.layouts.app')
 
 @section('title')
-<title>Budget | Index</title>
+Budget | Index
 @endsection
-{{--@section('header-title')--}}
-{{--    Manage Tickets--}}
-{{--@endsection--}}
-{{--@section('styles')--}}
-
-{{--@endsection--}}
-
 
 @section('content')
     <div class="card">
@@ -84,8 +77,6 @@
     <script type="text/javascript" src="{{ asset('vendor/datatable/datatables.min.js') }}"></script>
 
     <script type="text/javascript">
-
-
         var table = $('#datatable').DataTable({
             processing: true,
             serverSide: true,

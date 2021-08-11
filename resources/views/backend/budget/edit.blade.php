@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title') Edit Service @endsection
+@section('title') Edit Budget @endsection
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
@@ -17,10 +17,10 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="c-icon cil-people"></i>  Service <small class="text-muted">Edit</small>
+                    <i class="c-icon cil-people"></i>  Budget <small class="text-muted">Edit</small>
                 </h4>
                 <div class="small text-muted">
-                    Service Management Dashboard
+                    Budget Management Dashboard
                 </div>
             </div>
             <!--/.col-->
