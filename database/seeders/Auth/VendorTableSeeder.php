@@ -38,7 +38,7 @@ class VendorTableSeeder extends Seeder
 
         $type = [
             'name'        => 'Wedding Photographers',
-            'slug'        => 'wedding_photographers',
+            'slug'        => 'wedding-photographers',
             'created_at'        => Carbon::now(),
             'updated_at'        => Carbon::now(),
         ];

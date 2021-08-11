@@ -238,15 +238,19 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
 
 });
 
+//Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
+//    Route::get('{type}/', 'VendorController@cities')->name('vendor-city-listing');
+//    Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
+//    Route::get('{type}/{city}/{vendor}', 'VendorController@details')->name('vendor-details');
+//});
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-    Route::get('{type}/', 'VendorController@cities')->name('vendor-city-listing');
-    Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
-    Route::get('{type}/{city}/{vendor}', 'VendorController@details')->name('vendor-details');
+$paths = getDataArray('types');
+if($paths) :
+    foreach ($paths as $path) {
+//        Route::get($path->slug, 'VendorController@index')->name('yours.index');
+        Route::get($path->slug.'/', 'VendorController@cities')->name('vendor-city-listing');
+        Route::get($path->slug.'/{city}', 'VendorController@index')->name('vendor-listing');
+        Route::get($path->slug.'/{city}/{vendor}', 'VendorController@details')->name('vendor-details');
+    }
+endif;
 });
-
-//$paths = getData('types');
-//dd($paths);
-//foreach($paths as $path){
-//    Route::get($path, 'YourController@index')->name('yours.index');
-//}
-
