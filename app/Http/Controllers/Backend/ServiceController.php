@@ -25,7 +25,7 @@ class ServiceController extends Controller
     public function index($typeId, Request $request)
     {
         if ($request->ajax()) {
-            $services = Service::where('type_id', $typeId)->select(['services.id', 'services.name', 'services.placeholder']);
+            $services = Service::where('type_id', $typeId)->select(['id', 'name','input_type']);
             return Datatables::of($services)
                 ->addIndexColumn()
                 ->addColumn('action', function ($service) {

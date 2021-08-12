@@ -47,32 +47,31 @@
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
-                        @php $positions =  array(''=>'Select', 'top'=> 'Top','bottom'=>'Bottom');  @endphp
+                        @php $positions =  array(''=>'Select', 'top'=> 'Under Price','bottom'=>'Under About');  @endphp
                         <div class="form-group">
-                            {{ Form::label('positions', 'Position ( To Display on frontend )') }}
+                            {{ Form::label('positions', 'Position') }} {!! fielf_required("required") !!}
                             {{ Form::select('positions', $positions, null, array('class' => 'form-control positions')) }}
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
-                        @php $type =  array(''=>'Select', 'text'=> 'Text','price'=>'Price','number'=> 'Number');  @endphp
+                        @php $type =  array(''=>'Select', 'text'=> 'Text','price'=>'Price','number'=> 'Number','textarea'=> 'Textarea');  @endphp
                         <div class="form-group">
-                            {{ Form::label('input_type', 'Type') }}
+                            {{ Form::label('input_type', 'Type') }} {!! fielf_required("required") !!}
                             {{ Form::select('input_type', $type, null, array('class' => 'form-control input_type')) }}
                         </div>
                     </div>
                     <div class="col-12 col-md-4 input_type_price" style="display: none">
-                            @php $service_on_basis  =  array(''=>'Select', 'minute'=> 'Minute','hour'=> 'Hour','day'=> 'Day','complete'=>'Complete');  @endphp
-                            <div class="form-group">
-                                {{ Form::label('service_on_basis', 'Service On The Basis') }}
-                                {{ Form::select('service_on_basis', $service_on_basis, null, array('class' => 'form-control')) }}
-                            </div>
+                        <div class="form-group">
+                            {{ Form::label('label', 'Price Label') }}
+                            {{ Form::text('label', null, array('class' => 'form-control')) }}
+                        </div>
                      </div>
-{{--                    <div class="col-12 col-md-4">--}}
-{{--                        <div class="form-group">--}}
-{{--                            {{ Form::label('placeholder', 'Placeholder ( this for vendor only )') }}--}}
-{{--                            {{ Form::text('placeholder', null, array('class' => 'form-control')) }}--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            {{ Form::label('placeholder', 'Placeholder ( this for vendor only )') }}
+                            {{ Form::text('placeholder', null, array('class' => 'form-control')) }}
+                        </div>
+                    </div>
 
 
                     <div class="col-6 col-md-4">

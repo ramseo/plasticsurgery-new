@@ -30,6 +30,9 @@ class CreateVendorsTable extends Migration
             $table->string('wedding_covered')->nullable();
             $table->tinyInteger('travel_to_other_cities')->default(0);
 
+            $table->string('price')->nullable();
+            $table->string('label')->nullable();
+
             $table->string('website_link')->nullable();
             $table->string('facebook_link')->nullable();
             $table->string('instagram_link')->nullable();

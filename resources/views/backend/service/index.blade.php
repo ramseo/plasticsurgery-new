@@ -46,7 +46,7 @@
                             <thead>
                             <th> # </th>
                             <th> Name </th>
-                            <th> Placeholder </th>
+                            <th> Type </th>
                             <th> Action </th>
                             </thead>
                             <tbody>
@@ -92,7 +92,7 @@
                 columns: [
                     {data: 'id', name: 'id'},
                     {data: 'name', name: 'name'},
-                    {data: 'placeholder', name: 'placeholder'},
+                    {data: 'input_type', name: 'input_type'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
             columnDefs: [{
@@ -102,28 +102,6 @@
             "order": [[1, 'desc']]
             });
 
-        // function ticket_status(data){
-        //     let select = '<div class="status">';
-        //     select += '<select class="form-control ticket_status" name="status" ticket="'+data.id+'">';
-        //     let status = {open:'Open', pending:'Pending',answered:'Answered',resolved:'Resolved',closed:'Closed', spam:'Span'};
-        //        $.each(status , function (k, v){
-        //            if(data.status == k){
-        //                select += '<option value="'+k+'" selected="selected">'+v+'</option>';
-        //            }else{
-        //                select += '<option value="'+k+'">'+v+'</option>';
-        //            }
-        //        });
-        //     select += '</select>';
-        //     select += '</div>';
-        //     return select;
-        // }
-
-        {{--$(document).on('change', '.ticket_status', function (){--}}
-        {{--    let data ={ _token: '{{ csrf_token() }}', ticket_id: $(this).attr('ticket'), status: $(this).val() }--}}
-        {{--    $.post('{{ route('admin.tickets.update') }}', data, function (data){--}}
-        {{--        toastr.success("Ticket updated successfully!");--}}
-        {{--    },'json');--}}
-        {{--});--}}
     </script>
 
 @endpush

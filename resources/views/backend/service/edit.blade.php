@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
-                        @php $positions =  array(''=>'Select', 'top'=> 'Top','bottom'=>'Bottom');  @endphp
+                        @php $positions =  array(''=>'Select', 'top'=> 'Under Price','bottom'=>'Under About');  @endphp
                         <div class="form-group">
                             {{ Form::label('positions', 'Position') }}
                             {{ Form::select('positions', $positions, $service->positions, array('class' => 'form-control positions')) }}
@@ -63,18 +63,23 @@
 
 
                     <div class="col-12 col-md-4 input_type_price" style="display: none">
-                        @php $service_on_basis  =  array(''=>'Select', 'minute'=> 'Minute','hour'=> 'Hour','day'=> 'Day','complete'=>'Complete');  @endphp
+
                         <div class="form-group">
-                            {{ Form::label('service_on_basis', 'Service On The Basis') }}
-                            {{ Form::select('service_on_basis', $service_on_basis, $service->service_on_basis, array('class' => 'form-control')) }}
+                            {{ Form::label('label', 'Price Label') }}
+                            {{ Form::text('label', $service->label, array('class' => 'form-control')) }}
+                        </div>
+{{--                        @php $service_on_basis  =  array(''=>'Select', 'minute'=> 'Minute','hour'=> 'Hour','day'=> 'Day','complete'=>'Complete');  @endphp--}}
+{{--                        <div class="form-group">--}}
+{{--                            {{ Form::label('service_on_basis', 'Service On The Basis') }}--}}
+{{--                            {{ Form::select('service_on_basis', $service_on_basis, $service->service_on_basis, array('class' => 'form-control')) }}--}}
+{{--                        </div>--}}
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="form-group">
+                            {{ Form::label('placeholder', 'Placeholder') }}
+                            {{ Form::text('placeholder', $service->placeholder, array('class' => 'form-control')) }}
                         </div>
                     </div>
-{{--                    <div class="col-12 col-md-4">--}}
-{{--                        <div class="form-group">--}}
-{{--                            {{ Form::label('placeholder', 'Placeholder') }}--}}
-{{--                            {{ Form::text('placeholder', $service->placeholder, array('class' => 'form-control')) }}--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
 
                     <div class="col-6 col-md-4">
                         <div class="form-group">
