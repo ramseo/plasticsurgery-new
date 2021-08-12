@@ -32,7 +32,7 @@
         <hr>
         <div class="row mt-4">
             <div class="col">
-                {{ html()->form('POST', url("admin/service/store/".$typeId))->class('form')->open() }}
+                {{ html()->form('POST', url("admin/budget/store/".$typeId))->class('form')->open() }}
                 <div class="row">
 
                     <div class="col-6 col-md-4">
@@ -45,19 +45,19 @@
                     <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('min', 'Amount') }}
-                            {{ Form::text('min', null, array('class' => 'form-control')) }}
+                            {{ Form::number('min', null, array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-6 col-md-4 filter_amount">
                         <div class="form-group">
                             {{ Form::label('max', 'Max Amount') }}
-                            {{ Form::text('max', null, array('class' => 'form-control')) }}
+                            {{ Form::number('max', null, array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('order', 'Order') }}
-                            {{ Form::text('order', null, array('class' => 'form-control')) }}
+                            {{ Form::number('order', null, array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
