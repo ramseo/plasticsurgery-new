@@ -46,19 +46,65 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
-
-            $menu->add('<i class="c-sidebar-nav-icon fas fa-industry"></i> Vendor Type', [
-                'route' => 'backend.type.index',
-                'class' => 'c-sidebar-nav-item',
+            $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-shield-alt"></i> Vendor ', [
+                'class' => 'c-sidebar-nav-dropdown',
             ])
                 ->data([
-                    'order' => 99,
+                    'order' => 100,
+                    'activematches' => [
+                        'admin/vendor*',
+                        'admin/type*',
+                    ],
+                    'permission' => [],
+                ]);
+            $accessControl->link->attr([
+                'class' => 'c-sidebar-nav-dropdown-toggle',
+                'href' => '#',
+            ]);
+
+
+            // Submenu: vendor
+            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Vendor List', [
+                'route' => 'backend.vendor.index',
+                'class' => 'nav-item',
+            ])
+                ->data([
+                    'order' => 101,
+                    'activematches' => 'admin/vendor*',
+                    'permission' => ['view_roles'],
+                ])
+                ->link->attr([
+                    'class' => 'c-sidebar-nav-link',
+                ]);
+
+            // Submenu: category
+            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Category', [
+                'route' => 'backend.type.index',
+                'class' => 'nav-item',
+            ])
+                ->data([
+                    'order' => 102,
                     'activematches' => 'admin/type*',
                     'permission' => [],
                 ])
                 ->link->attr([
                     'class' => 'c-sidebar-nav-link',
                 ]);
+
+            // Submenu: Users
+            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Contents', [
+                'route' => 'backend.content.index',
+                'class' => 'nav-item',
+            ])
+                ->data([
+                    'order' => 103,
+                    'activematches' => 'admin/content*',
+                    'permission' => [],
+                ])
+                ->link->attr([
+                    'class' => 'c-sidebar-nav-link',
+                ]);
+
 
             $menu->add('<i class="c-sidebar-nav-icon fas fa-city"></i> Cities', [
                 'route' => 'backend.city.index',
@@ -140,49 +186,49 @@ class GenerateMenus
 
             // Access Control Dropdown
 
-            //            $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-shield-alt"></i> Access Control', [
-            //                'class' => 'c-sidebar-nav-dropdown',
-            //            ])
-            //            ->data([
-            //                'order'         => 104,
-            //                'activematches' => [
-            //                    'admin/users*',
-            //                    'admin/roles*',
-            //                ],
-            //                'permission'    => ['view_users', 'view_roles'],
-            //            ]);
-            //            $accessControl->link->attr([
-            //                'class' => 'c-sidebar-nav-dropdown-toggle',
-            //                'href'  => '#',
-            //            ]);
-            //
-            //            // Submenu: Users
-            //            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Users', [
-            //                'route' => 'backend.users.index',
-            //                'class' => 'nav-item',
-            //            ])
-            //            ->data([
-            //                'order'         => 105,
-            //                'activematches' => 'admin/users*',
-            //                'permission'    => ['view_users'],
-            //            ])
-            //            ->link->attr([
-            //                'class' => 'c-sidebar-nav-link',
-            //            ]);
-            //
-            //            // Submenu: Roles
-            //            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Roles', [
-            //                'route' => 'backend.roles.index',
-            //                'class' => 'nav-item',
-            //            ])
-            //            ->data([
-            //                'order'         => 106,
-            //                'activematches' => 'admin/roles*',
-            //                'permission'    => ['view_roles'],
-            //            ])
-            //            ->link->attr([
-            //                'class' => 'c-sidebar-nav-link',
-            //            ]);
+//            $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-shield-alt"></i> Access Control', [
+//                'class' => 'c-sidebar-nav-dropdown',
+//            ])
+//                ->data([
+//                    'order' => 104,
+//                    'activematches' => [
+//                        'admin/users*',
+//                        'admin/roles*',
+//                    ],
+//                    'permission' => ['view_users', 'view_roles'],
+//                ]);
+//            $accessControl->link->attr([
+//                'class' => 'c-sidebar-nav-dropdown-toggle',
+//                'href' => '#',
+//            ]);
+//
+//            // Submenu: Users
+//            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Users', [
+//                'route' => 'backend.users.index',
+//                'class' => 'nav-item',
+//            ])
+//                ->data([
+//                    'order' => 105,
+//                    'activematches' => 'admin/users*',
+//                    'permission' => ['view_users'],
+//                ])
+//                ->link->attr([
+//                    'class' => 'c-sidebar-nav-link',
+//                ]);
+//
+//            // Submenu: Roles
+//            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Roles', [
+//                'route' => 'backend.roles.index',
+//                'class' => 'nav-item',
+//            ])
+//                ->data([
+//                    'order' => 106,
+//                    'activematches' => 'admin/roles*',
+//                    'permission' => ['view_roles'],
+//                ])
+//                ->link->attr([
+//                    'class' => 'c-sidebar-nav-link',
+//                ]);
 
             // Log Viewer
             // Log Viewer Dropdown

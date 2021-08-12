@@ -40,6 +40,13 @@ function getLatestBlogs()
     return $data->get();
 }
 
+
+function custom_array_coloum($array, $key, $value, $default =''){
+    $array = $array->toArray();
+    if($default): @array_unshift($array, array($key =>'', $value => $default)); endif;
+    return @array_combine(array_column($array,$key), array_column( $array,$value));
+}
+
 function fileUpload(Request $request, $key, $folder, $realName = true)
 {
     if ($request->has($key)) {

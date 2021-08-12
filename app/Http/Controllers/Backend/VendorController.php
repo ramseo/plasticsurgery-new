@@ -3,12 +3,13 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Service;
 use App\Models\Vendor;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Log;
 use Flash;
+use Yajra\DataTables\DataTables;
+
 class VendorController extends Controller
 {
     /**
@@ -16,20 +17,27 @@ class VendorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-
+        if ($request->ajax()) {
+            $vendors = Vendor::select(['id', 'business_name']);
+            return Datatables::of($vendors)
+                ->addIndexColumn()
+                ->addColumn('action', function ($vendor) {
+                    $btn = '<a href="' . route("backend.vendor.edit", $vendor->id) . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"></i></a>';
+                    return $btn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+        return view('backend.vendor.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
+    public function edit($id)
     {
-        Log::info(label_case('Vendor Create | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view("backend.vendor.create");
+        $vendor = Vendor::findOrFail($id);
+        Log::info(label_case('Vendor Edit | ' . $vendor->name . '(ID:' . $vendor->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return view("backend.vendor.edit")->with('vendor', $vendor);
     }
 
     /**
@@ -75,14 +83,7 @@ class VendorController extends Controller
         return view('backend.vendor.profile', compact('vendor'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param Request $request
-     * @param int $id
-     *
-     * @return Response
-     */
+
     public function update(Request $request)
     {
         $user_id = auth()->user()->id;
@@ -90,9 +91,9 @@ class VendorController extends Controller
         $data = $request->all();
         $data = array_merge($data, ['user_id' => $user_id]);
 
-        if($request->file('image')){
-            $file_image = fileUpload($request, 'image','vendor/profile/');
-            $data = array_merge($data,['image'=> $file_image]);
+        if ($request->file('image')) {
+            $file_image = fileUpload($request, 'image', 'vendor/profile/');
+            $data = array_merge($data, ['image' => $file_image]);
         }
 
 

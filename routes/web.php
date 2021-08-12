@@ -111,6 +111,19 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::patch("category/trashed/{id}", ['as' => "category.restore", 'uses' => "CategoryController@restore"]);
     Route::resource("category", "CategoryController");
 
+    Route::get('vendor', 'VendorController@index')->name('vendor.index');
+    Route::get('vendor/edit/{id}', 'VendorController@edit')->name('vendor.edit');
+
+    Route::get('content', 'ContentController@index')->name('content.index');
+    Route::get('content/create/', 'ContentController@create')->name('content.create');
+    Route::post('content/store/', 'ContentController@store')->name('content.store');
+    Route::get('content/edit/{id}', 'ContentController@edit')->name('content.edit');
+    Route::post('content/update/{id}', 'ContentController@update')->name('content.update');
+    Route::get('content/trashed/', 'ContentController@trashed')->name('content.trashed');
+    Route::post('content/trashed/{id}', 'ContentController@restore')->name('content.restore');
+    Route::resource("content", "ContentController");
+
+
     /*
     *
     *  Notification Routes
