@@ -18,7 +18,7 @@ class ContentController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $contents = Content::select(['id', 'title', 'faq_title']);
+            $contents = Content::select(['id', 'title']);
             return Datatables::of($contents)
                 ->addIndexColumn()
                 ->addColumn('action', function ($content) {
@@ -43,6 +43,12 @@ class ContentController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request, ['type_id' => 'required'],['type_id.required' => "The Vendor Category field is required" ]);
+        $content_type = Content::where(array('type_id' => $request->type_id, 'city_id' => ''))->first();
+        if ($content_type != null) {
+            Flash::error("<i class='fas fa-check'></i> Content already exist for Vendor Category." )->important();
+            return redirect(route('backend.content.create'));
+        }
         $content_exist = Content::where(array('type_id' => $request->type_id, 'city_id' => $request->city_id))->first();
         if ($content_exist) {
             Flash::error("<i class='fas fa-check'></i> Content already exist for Vendor Category and City." )->important();

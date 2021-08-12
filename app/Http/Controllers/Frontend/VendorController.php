@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\City;
+use App\Models\Content;
 use App\Models\Type;
 use App\Models\VendorReview;
 use DB;
@@ -22,12 +23,13 @@ class VendorController extends Controller
         $type = Type::where('slug', $type_slug)->first();
         $vendors = DB::table('vendors');
         $vendors->where('type_id', $type->id)->where('city_id', $city->id);
+        $content = Content::where(array('type_id' => $type->id, 'city_id' => $city->id))->first();
         if (1 == 1) {
 
         }
         $data = $vendors->get();
 
-        return view('frontend.vendors.index', compact('body_class', 'data', 'city', 'type'));
+        return view('frontend.vendors.index', compact('content','body_class', 'data', 'city', 'type'));
     }
 
     public function cities(Request $request)
@@ -38,8 +40,8 @@ class VendorController extends Controller
         $body_class = '';
         $cities = getDataArray('cities');
         $type = Type::where('slug', $type_slug)->first();
-
-        return view('frontend.vendors.cities', compact('body_class', 'cities', 'type'));
+        $content = Content::where(array('type_id' => $type->id, 'city_id' => null))->first();
+        return view('frontend.vendors.cities', compact('content','body_class', 'cities', 'type'));
     }
 
     public function details(Request $request, $city_slug, $vendor_slug)

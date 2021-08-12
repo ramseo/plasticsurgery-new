@@ -39,7 +39,6 @@ Content | Index
                             <thead>
                             <th> # </th>
                             <th> Title </th>
-                            <th> FAQ Title </th>
                             <th> Action </th>
                             </thead>
                             <tbody>
@@ -83,7 +82,6 @@ Content | Index
                 columns: [
                     {data: 'id', name: 'id'},
                     {data: 'title', name: 'title'},
-                    {data: 'faq_title', name: 'faq_title'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
             columnDefs: [{

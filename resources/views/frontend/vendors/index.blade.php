@@ -236,7 +236,8 @@
                         @php
                             $vendorCity = getData('cities', 'id', $vendor->city_id);
                             $vendorType = getData('types', 'id', $vendor->type_id);
-                            $average =  averageReview($vendor->id);
+                            $reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor->id);
+                            $average =  averageReview($reviews);
                         @endphp
                         <div class="col-xs-12 col-sm-4">
                             <div class="common-card vendor-card-col">
@@ -405,21 +406,40 @@
         </div>
     </section>
 
-    @if($type->description != '')
+    @if($content)
+        @if($content->content != '')
         <section id="text-only-section" class="grey-section">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12">
                         <div class="text-header">
                             <div class="text">
-                                {!! nl2br($type->description) !!}
+                                {!! nl2br($content->content) !!}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        @endif
+
+        @if($content->faq_content != '')
+            <section id="text-only-section" class="grey-section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="text-header">
+                                <div class="text">
+                                    {!! nl2br($content->faq_content) !!}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        @endif
     @endif
+
 
 @endsection
 

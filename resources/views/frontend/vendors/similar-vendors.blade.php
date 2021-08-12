@@ -11,14 +11,11 @@
             </div>
             <div class="row vendor-list-row">
                 @foreach($similar_vendors as $similar_vendor)
-                    @php 
+                    @php
                         $vendorCity = getData('cities', 'id', $similar_vendor->city_id);
-                        $vendorType = getData('types', 'id', $similar_vendor->type_id); 
-
+                        $vendorType = getData('types', 'id', $similar_vendor->type_id);
                         $reviews = getDataArray('vendor_reviews', 'vendor_id', $similar_vendor->id);
-                        $avg = array_column($reviews->toArray(), 'rating');
-                        $a = array_filter($avg);
-                        $average = round(array_sum($a)/count($a));
+                        $average =  averageReview($reviews);
                     @endphp
                     <div class="col-xs-12 col-sm-4">
                         <div class="common-card vendor-card-col">

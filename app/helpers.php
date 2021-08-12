@@ -107,9 +107,8 @@ function get_similar_vendors($type_id)
     return $data;
 }
 
-function averageReview($vendor_id, $default = 0)
+function averageReview($reviews, $default = 0)
 {
-    $reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor_id);
     $average = $default;
     if (!$reviews->isEmpty()) {
         $avg = array_column($reviews->toArray(), 'rating');

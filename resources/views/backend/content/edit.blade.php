@@ -36,7 +36,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                            {{ Form::label('type_id', 'Vendor Category') }}
+                            {{ Form::label('type_id', 'Vendor Category') }}  {!! fielf_required("required") !!}
                             {{ Form::select('type_id', $types, $content->type_id, array('class' => 'form-control', 'disabled')) }}
                         </div>
                     </div>
@@ -55,19 +55,19 @@
                     <div class="col-12">
                         <div class="form-group">
                             {{ Form::label('description', 'Description') }}
-                            {{ Form::textarea('description', $content->description, array('class' => 'form-control','id'=> 'content')) }}
+                            {{ Form::textarea('description', $content->description, array('class' => 'form-control','id'=> 'description')) }}
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            {{ Form::label('faq_title', 'FAQ Title') }}
-                            {{ Form::text('faq_title', $content->faq_title, array('class' => 'form-control')) }}
+                            {{ Form::label('content', 'Content') }}
+                            {{ Form::textarea('content', $content->content, array('class' => 'form-control','id'=> 'content')) }}
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            {{ Form::label('faq_description', 'FAQ Description') }}
-                            {{ Form::textarea('faq_description', $content->faq_description, array('class' => 'form-control', 'id'=> 'faq')) }}
+                            {{ Form::label('faq_content', 'FAQ Content') }}
+                            {{ Form::textarea('faq_content', $content->faq_content, array('class' => 'form-control', 'id'=> 'faq')) }}
                         </div>
                     </div>
                 </div>
@@ -197,7 +197,7 @@
     <script type="text/javascript" src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 
     <script type="text/javascript">
-
+        CKEDITOR.replace('description', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
         CKEDITOR.replace('content', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
         CKEDITOR.replace('faq', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
         document.addEventListener("DOMContentLoaded", function() {

@@ -4,9 +4,8 @@
         <ul class="list-inline space-list">
             <li class="list-inline-item">
                 @php
-                    $avg = array_column($reviews->toArray(), 'rating');
-                    $a = array_filter($avg);
-                    $average = round(array_sum($a)/count($a));
+
+                $average =  averageReview($reviews);
                 @endphp
                 @if($average > 0)
                     <p class="review">{{number_format($average, 1)}}</p>

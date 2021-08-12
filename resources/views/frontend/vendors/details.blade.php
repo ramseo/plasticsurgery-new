@@ -8,9 +8,8 @@
         $albums = getDataArray('albums', 'vendor_id', $vendor_details->id);
         $videos = getDataArray('videos', 'vendor_id', $vendor_details->id);
         $reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor_details->id);
-        $avg = array_column($reviews->toArray(), 'rating');
-        $a = array_filter($avg);
-        $average = round(array_sum($a)/count($a));
+        $average =  averageReview($reviews);
+
     @endphp
     <section id="breadcrumb-section">
         <div class="container-fluid">
@@ -176,7 +175,7 @@
         $(document).ready(function(){
             var options = {minMargin: 10, maxMargin: 35, itemSelector: ".item"};
             $(".containerCollage").justifiedGallery();
-            $('.review-rating').rateit({ max: 5, step: 1, backingfld: '#review-rating-hidden' }); 
+            $('.review-rating').rateit({ max: 5, step: 1, backingfld: '#review-rating-hidden' });
 
             $('#reviewForm').submit(function(e){
                 e.preventDefault();
