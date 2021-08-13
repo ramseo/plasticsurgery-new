@@ -36,7 +36,7 @@
         {{ Form::open(array('url' => route("vendor.price.store"), 'files' => true,'id' => 'priceForm')) }}
 {{--        {{ Form::hidden('album_id', $price->id) }}--}}
 {{--        {{dd($pricesData)}}--}}
-
+{{--{{dd($services)}}--}}
             @foreach($services as $service)
 
 
