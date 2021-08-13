@@ -13,7 +13,7 @@ class AlterReviewsTable extends Migration
      */
     public function up()
     {
-        Schema::table('reviews', function (Blueprint $table) {
+        Schema::table('vendor_reviews', function (Blueprint $table) {
             $table->integer('type_id');
         });
     }
@@ -25,6 +25,6 @@ class AlterReviewsTable extends Migration
      */
     public function down()
     {
-        
+
     }
 }
