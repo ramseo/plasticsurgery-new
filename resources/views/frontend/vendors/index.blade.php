@@ -267,14 +267,16 @@
                                                 </li>
                                             @endif
                                         </ul>
-                                        <ul class="list-inline vendor-card space-list v-center">
-                                            <li>
-                                                <p class="price"><span>Rs. 50,000</span></p>
-                                            </li>
-                                            <li class="text-right">
-                                                <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
-                                            </li>
-                                        </ul>
+                                        @if($vendor->price)
+                                            <ul class="list-inline vendor-card space-list v-center">
+                                                <li>
+                                                    <p class="price"><span>Rs. {{$vendor->price}}</span></p>
+                                                </li>
+                                                <li class="text-right">
+                                                    <p class="grey-text" style="margin: 0px;">{{$vendor->label}}</p>
+                                                </li>
+                                            </ul>
+                                        @endif
                                     </div>
                                 </a>
                             </div>
@@ -295,7 +297,7 @@
     @include('frontend.includes.featured-vendors')
 
     @php
-        $latestReviews = getDataArray('reviews', 'type_id', $type->id);
+        $latestReviews = getDataArray('vendor_reviews', 'type_id', $type->id);
     @endphp
     @if($latestReviews)
         <section id="latest-reviews">

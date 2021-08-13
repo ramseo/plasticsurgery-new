@@ -44,25 +44,27 @@
                         <img src="{{$vendor_profile_img}}" class="img-fluid" alt="">
                     </div>
 
-                    @if($albums)
+                    @if($albums && count($albums) > 0)
                         @include('frontend.vendors.vendor-album',['vendor_albmum' => $albums])
+                        <hr>
                     @endif
-                    <hr>
                     @php
                         $top_services = get_vendor_services($vendor_details->id, 'top');
                         $bottom_services = get_vendor_services($vendor_details->id, 'bottom');
                     @endphp
-                    <div class="vendor-detail-cols">
-                        @if($top_services)
+                    @if($top_services && count($top_services) > 0)
+                        <div class="vendor-detail-cols">
                             <p class="head">Pricing</p>
                             @foreach($top_services as $top_service)
                                 @include('frontend.vendors.vendor-service',['service_item' => $top_service])
                             @endforeach
-                        @endif
-                    </div>
-                    <hr>
+                        </div>
+                        <hr>
+                    @endif
                     <div class="vendor-detail-cols">
-                        <p class="head">About</p>
+                        @if($vendor_details->description != '' || $vendor_details->since != '')
+                            <p class="head">About</p>
+                        @endif
                         @if($vendor_details->description != '')
                             <p class="text-uppercase small-head"><strong>Introduction</strong></p>
                             <p class="grey-text">{!! $vendor_details->description !!}</p>
@@ -71,13 +73,13 @@
                             <p class="text-uppercase small-head"><strong>Working since</strong></p>
                             <p class="grey-text">{{$vendor_details->since}}</p>
                         @endif
-                        <div class="vendor-detail-cols">
-                            @if($bottom_services)
+                        @if($bottom_services && count($bottom_services) > 0)
+                            <div class="vendor-detail-cols">
                                 @foreach($bottom_services as $bottom_service)
                                     @include('frontend.vendors.vendor-service',['service_item' => $bottom_service])
                                 @endforeach
-                            @endif
-                        </div>
+                            </div>
+                        @endif
                     </div>
                     <hr>
 
@@ -97,8 +99,8 @@
                         </div>
                         <hr>
                         <div class="inner-col">
-                            <p class="price">Rs. 1,50,000</p>
-                            <p class="grey-text">For 1 Day of Photo + Video <a class="grey-text" href="#">(See Full Pricelist)</a></p>
+                            <p class="price">Rs. {{$vendor_details->price}}</p>
+                            <p class="grey-text">{{$vendor_details->label}} <a class="grey-text" href="#">(See Full Pricelist)</a></p>
                         </div>
                         <hr>
                         <div class="inner-col">

@@ -4,7 +4,7 @@
             <p class="grey-text text-uppercase"><strong>{{$service_item->name}}</strong></p>
             <p class="info">
                 @if($service_item->input_type == 'price')
-                    <i class="fas fa-rupee-sign"></i> {{$service_item->input_type_value}} {{$service_item->service_on_basis_value == 1 ? 'per' : 'for'}} {{$service_item->service_on_basis}}
+                    <i class="fas fa-rupee-sign"></i> {{$service_item->input_type_value}} {{$service_item->label}}
                 @else
                     {{$service_item->input_type_value}}
                 @endif

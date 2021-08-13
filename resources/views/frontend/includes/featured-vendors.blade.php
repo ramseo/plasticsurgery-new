@@ -36,7 +36,7 @@
                                             @if($vendor->business_address)
                                             <p class="text">{{$vendor->business_address}}</p>
                                             @endif
-                                            <p class="price"><span>Rs.18,000</span> for Bridal Makeup</p>
+                                            <p class="price"><span>Rs.{{$vendor->price}}</span>&nbsp; {{$vendor->label}}</p>
                                         </div>
                                     </a>
                                 </div>

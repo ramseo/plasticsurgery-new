@@ -1,5 +1,7 @@
 <div class="vendor-detail-cols">
-    <p class="head">Latest Reviews ({{count($reviews)}})</p>
+    @if(isset($reviews) && count($reviews) > 0)
+        <p class="head">Latest Reviews ({{count($reviews)}})</p>
+    @endif
     <div class="detail-review-header">
         <ul class="list-inline space-list">
             <li class="list-inline-item">

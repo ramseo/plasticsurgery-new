@@ -46,10 +46,10 @@
                                     </ul>
                                     <ul class="list-inline vendor-card space-list v-center">
                                         <li>
-                                            <p class="price"><span>Rs. 50,000</span></p>
+                                            <p class="price"><span>Rs. {{$similar_vendor->price}}</span></p>
                                         </li>
                                         <li class="text-right">
-                                            <p class="grey-text" style="margin: 0px;">For 1 Day of Photo + Video</p>
+                                            <p class="grey-text" style="margin: 0px;">{{$similar_vendor->business_name}}</p>
                                         </li>
                                     </ul>
                                 </div>
