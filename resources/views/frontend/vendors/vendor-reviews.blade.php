@@ -4,8 +4,7 @@
         <ul class="list-inline space-list">
             <li class="list-inline-item">
                 @php
-
-                $average =  averageReview($reviews);
+                    $average =  averageReview($reviews);
                 @endphp
                 @if($average > 0)
                     <p class="review">{{number_format($average, 1)}}</p>
@@ -65,7 +64,6 @@
     </div>
 </div>
 
-
 <div class="modal fade" id="reviewModal">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -93,6 +91,7 @@
                             @auth
                                 <input id="reviewUserId" type="hidden" value="{{Auth::user()->id}}">
                             @endauth
+                            <input id="reviewVendorTypeId" type="hidden" value="{{$vendor_details->type_id}}">
                             <input id="reviewVendorId" type="hidden" value="{{$vendor_details->id}}">
                             <input type="submit" class="btn btn-primary" value="Submit">
                         </div>

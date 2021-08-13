@@ -66,6 +66,7 @@ class VendorController extends Controller
             $vendor = new VendorReview();
             $vendor->user_id = $data['user_id'];
             $vendor->vendor_id = $data['vendor_id'];
+            $vendor->type_id = $data['type_id'];
             $vendor->title = $data['title'];
             $vendor->rating = $data['rating'];
             $vendor->description = $data['description'];

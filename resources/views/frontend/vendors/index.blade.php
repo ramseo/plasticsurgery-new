@@ -176,6 +176,7 @@
             </div>
         </div>
     </div>
+
     <section id="page-banner">
         <div class="container-fluid">
             <div class="row">
@@ -293,118 +294,54 @@
 
     @include('frontend.includes.featured-vendors')
 
-    <section id="latest-reviews">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 common-heading text-center with-lines">
-                    <p class="shadow-text">Reviews</p>
-                    <p class="head">Latest Reviews of Photographers on Wed.in</p>
-                </div>
-                <div class="col-xs-12 col-sm-12 row reviews-list-col">
-                    <div class="col-xs-12 col-sm-6 single-review">
-                        <div class="review-header">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <div class="d-flex">
-                                        <div class="img-col">
-                                            <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="text-col">
-                                            <p class="name">Gaurav Kumar</p>
-                                            <p class="grey-text">about 22 hours ago</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="review-body">
-                            <p>Review for - <a href="#">FrameFitoor Photography</a></p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                                a type specimen book. It has survived not only five centuries,</p>
-                        </div>
+    @php
+        $latestReviews = getDataArray('reviews', 'type_id', $type->id);
+    @endphp
+    @if($latestReviews)
+        <section id="latest-reviews">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 common-heading text-center with-lines">
+                        <p class="shadow-text">Reviews</p>
+                        <p class="head">Latest Reviews of {{$type->name}} on Wed.in</p>
                     </div>
-                    <div class="col-xs-12 col-sm-6 single-review">
-                        <div class="review-header">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <div class="d-flex">
-                                        <div class="img-col">
-                                            <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="text-col">
-                                            <p class="name">Gaurav Kumar</p>
-                                            <p class="grey-text">about 22 hours ago</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="review-body">
-                            <p>Review for - <a href="#">FrameFitoor Photography</a></p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                                a type specimen book. It has survived not only five centuries,</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 single-review">
-                        <div class="review-header">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <div class="d-flex">
-                                        <div class="img-col">
-                                            <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="text-col">
-                                            <p class="name">Gaurav Kumar</p>
-                                            <p class="grey-text">about 22 hours ago</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="review-body">
-                            <p>Review for - <a href="#">FrameFitoor Photography</a></p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                                a type specimen book. It has survived not only five centuries,</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 single-review">
-                        <div class="review-header">
-                            <ul class="list-inline space-list">
-                                <li>
-                                    <div class="d-flex">
-                                        <div class="img-col">
-                                            <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="text-col">
-                                            <p class="name">Gaurav Kumar</p>
-                                            <p class="grey-text">about 22 hours ago</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> 5.0</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="review-body">
-                            <p>Review for - <a href="#">FrameFitoor Photography</a></p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                                a type specimen book. It has survived not only five centuries,</p>
-                        </div>
+                    <div class="col-xs-12 col-sm-12 row reviews-list-col">
+                        @foreach($latestReviews as $review)
+                            @php
+                                $review_user = getData('users', 'id', $review->user_id);
+                                $review_vendor = getData('vendors', 'id', $review->vendor_id);
+                                $vendorCity = getData('cities', 'id', $review_vendor->city_id);
+                                $vendorType = getData('types', 'id', $review_vendor->type_id);
+                            @endphp
+                            <div class="col-xs-12 col-sm-6 single-review">
+                                <div class="review-header">
+                                    <ul class="list-inline space-list">
+                                        <li>
+                                            <div class="d-flex">
+                                                <div class="img-col">
+                                                    <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="text-col">
+                                                    <p class="name">{{$review_user->first_name . ' '. $review_user->last_name}}</p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <span class="vendor-rating"><i class="fa fa-star"></i> {{number_format($review->rating, 1)}}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="review-body">
+                                    <p>Review for - <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $review_vendor->slug }}">{{$review_vendor->business_name}}</a></p>
+                                    <p>{{$review->description}}</p>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
 
     @if($content)
         @if($content->content != '')
