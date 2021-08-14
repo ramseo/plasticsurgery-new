@@ -46,7 +46,7 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
-            $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-shield-alt"></i> Vendor ', [
+            $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-applications-settings"></i> Vendor ', [
                 'class' => 'c-sidebar-nav-dropdown',
             ])
                 ->data([
@@ -78,7 +78,7 @@ class GenerateMenus
                 ]);
 
             // Submenu: category
-            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Category', [
+            $accessControl->add('<i class="c-sidebar-nav-icon cil-list"></i> Category', [
                 'route' => 'backend.type.index',
                 'class' => 'nav-item',
             ])
@@ -92,7 +92,7 @@ class GenerateMenus
                 ]);
 
             // Submenu: Users
-            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Contents', [
+            $accessControl->add('<i class="c-sidebar-nav-icon cil-note-add"></i> Contents', [
                 'route' => 'backend.content.index',
                 'class' => 'nav-item',
             ])

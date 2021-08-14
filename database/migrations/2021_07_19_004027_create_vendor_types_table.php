@@ -18,7 +18,6 @@ class CreateVendorTypesTable extends Migration
 
             $table->string('name');
             $table->string('slug')->nullable();
-            $table->text('description')->nullable();
             $table->string('colour')->nullable();
 
             $table->string('order')->nullable();
@@ -27,10 +26,6 @@ class CreateVendorTypesTable extends Migration
             $table->string('icon')->nullable()->default('img/default-vendor-icon.jpg');
             $table->string('image')->nullable()->default('img/default-vendor-type.jpg');
             $table->string('banner')->nullable()->default('img/default-vendor-banner.jpg');
-
-            $table->string('meta_title')->nullable();
-            $table->text('meta_keywords')->nullable();
-            $table->text('meta_description')->nullable();
 
             $table->integer('created_by')->unsigned()->nullable();
             $table->integer('updated_by')->unsigned()->nullable();
