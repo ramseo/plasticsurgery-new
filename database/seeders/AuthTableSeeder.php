@@ -29,7 +29,7 @@ class AuthTableSeeder extends Seeder
         $this->call(UserTableSeeder::class);
         $this->call(PermissionRoleTableSeeder::class);
         $this->call(UserRoleTableSeeder::class);
-        $this->call(VendorTableSeeder::class);
+       // $this->call(VendorTableSeeder::class);
 
         Schema::enableForeignKeyConstraints();
     }
