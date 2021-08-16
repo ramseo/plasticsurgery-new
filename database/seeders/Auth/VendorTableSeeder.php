@@ -57,18 +57,6 @@ class VendorTableSeeder extends Seeder
 
         Vendor::create($vendor);
 
-        $vendor = [
-                'user_id'        => 3,
-                'city_id'        => 1,
-                'type_id'        => 1,
-                'business_name'  => 'Business name',
-                'slug'           => 'business_name',
-                'created_at'        => Carbon::now(),
-                'updated_at'        => Carbon::now(),
-        ];
-
-        Vendor::create($vendor);
-
         Schema::enableForeignKeyConstraints();
     }
 }
