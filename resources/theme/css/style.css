@@ -1614,7 +1614,7 @@ article blockquote {
 
 .menuDropDown .dropdown-content a {
     display: inline-flex;
-    width: 50%;
+    width: 50% !important;
     flex-wrap: wrap;
     margin-right: -3px;
     font-size: 13px;
