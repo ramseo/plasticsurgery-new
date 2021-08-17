@@ -53,7 +53,7 @@
                         <div class="col-xs-12 col-sm-12">
                             <div class="text-header">
                                 <div class="text">
-                                    {!! nl2br($content->content) !!}
+                                    {!! $content->content !!}
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@
                         <div class="col-xs-12 col-sm-12">
                             <div class="text-header">
                                 <div class="text">
-                                    {!! nl2br($content->faq_content) !!}
+                                    {!! $content->faq_content !!}
                                 </div>
                             </div>
                         </div>
