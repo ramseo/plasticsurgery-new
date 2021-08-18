@@ -54,7 +54,7 @@ class RegisteredUserController extends Controller
         $user->username = $username;
         $user->save();
 
-        Auth::login($user);
+//        Auth::login($user);
 
         event(new Registered($user));
         event(new UserRegistered($user));

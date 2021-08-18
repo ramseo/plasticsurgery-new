@@ -61,8 +61,7 @@ class RegisteredVendorController extends Controller
         $vendor_create =  ['user_id' => $user->id, 'type_id' => $request->type_id, 'city_id' => $request->city_id];
         Vendor::create($vendor_create);
 
-
-        Auth::login($user);
+//        Auth::login($user);
 
         event(new Registered($user));
         event(new UserRegistered($user));
