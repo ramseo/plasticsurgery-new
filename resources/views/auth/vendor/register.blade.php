@@ -39,11 +39,16 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="col-12 form-group mat-group">
+                <div class="col-6 form-group mat-group">
+                    <label for="">{{ __('Business Name') }}</label>
+                    <input type="text" class="form-control" id="business_name" name="business_name" value="{{ old('business_name') }}" placeholder="{{ __('Business Name') }}" aria-label="business_name" aria-describedby="business_name" required>
+                </div>
+                <div class="col-6 form-group mat-group">
                     <label for="">{{ __('Email') }}</label>
                     <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="{{ __('Email') }}" aria-label="email" aria-describedby="email" required>
                 </div>
             </div>
+
             <div class="form-row">
                 <div class="col-6 form-group mat-group">
                     @php

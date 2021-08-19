@@ -36,6 +36,7 @@ class RegisteredVendorController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'business_name' => 'required|string|max:191',
             'first_name' => 'required|string|max:191',
             'last_name'  => 'required|string|max:191',
             'email'      => 'required|string|email|max:191|unique:users',
@@ -58,14 +59,14 @@ class RegisteredVendorController extends Controller
         $user->save();
         $user->assignRole('vendor');
 
-        $vendor_create =  ['user_id' => $user->id, 'type_id' => $request->type_id, 'city_id' => $request->city_id];
+        $vendor_create =  ['business_name'=> $request->business_name, 'user_id' => $user->id, 'type_id' => $request->type_id, 'city_id' => $request->city_id];
         Vendor::create($vendor_create);
 
 //        Auth::login($user);
 
         event(new Registered($user));
         event(new UserRegistered($user));
-
+        Flash::success("<i class='fas fa-check'></i> Registered Successfully")->important();
         return redirect(RouteServiceProvider::HOME);
     }
 

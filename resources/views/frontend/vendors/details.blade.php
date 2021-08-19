@@ -62,18 +62,8 @@
                         <hr>
                     @endif
                     <div class="vendor-detail-cols">
-                        @if($vendor_details->description != '' || $vendor_details->since != '')
-                            <p class="head">About</p>
-                        @endif
-                        @if($vendor_details->description != '')
-                            <p class="text-uppercase small-head"><strong>Introduction</strong></p>
-                            <p class="grey-text">{!! $vendor_details->description !!}</p>
-                        @endif
-                        @if($vendor_details->since != '')
-                            <p class="text-uppercase small-head"><strong>Working since</strong></p>
-                            <p class="grey-text">{{$vendor_details->since}}</p>
-                        @endif
                         @if($bottom_services && count($bottom_services) > 0)
+                            <p class="head">About</p>
                             <div class="vendor-detail-cols">
                                 @foreach($bottom_services as $bottom_service)
                                     @include('frontend.vendors.vendor-service',['service_item' => $bottom_service])
@@ -135,17 +125,17 @@
     @include('frontend.vendors.similar-vendors', ['vendor_details' => $vendor_details])
     @include('frontend.includes.featured-vendors')
 
-    <section id="text-only-section" class="mt-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12">
-                    <div class="text-header">
-                        {!! $vendor_details->description !!}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section id="text-only-section" class="mt-section">--}}
+{{--        <div class="container-fluid">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-xs-12 col-sm-12">--}}
+{{--                    <div class="text-header">--}}
+{{--                        {!! $vendor_details->description !!}--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
 
     <div class="modal fade" id="shareModal">
         <div class="modal-dialog">
