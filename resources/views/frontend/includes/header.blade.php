@@ -33,9 +33,11 @@
                                             @endforeach
                                         @endif
                                     </div>
-                                    <div class="inner-footer">
-                                        <p class="text-right">Are you a vendor? <a class="btn btn-primary" href="{{ route('register-vendor') }}">Register Now</a></p>
-                                    </div>
+                                    @if(!Auth::check())
+                                        <div class="inner-footer">
+                                            <p class="text-right">Are you a vendor? <a class="btn btn-primary" href="{{ route('register-vendor') }}">Register Now</a></p>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                         </li>
@@ -59,7 +61,7 @@
                             <div class="col-auto px-0" data-dropdown-content>
                                 <div class="list-group list-group-flush">
                                     @auth
-                                        @can('view_backend')
+                                        @if(auth()->user()->getRoleNames()->first() == 'super admin')
                                             <a href="{{ route('backend.dashboard') }}"
                                                class="list-group-item list-group-item-action">
                                                 <span class="icon icon-sm icon-success"><i class="fas fa-user"></i></span>
@@ -67,18 +69,28 @@
                                                     <span class="text-dark d-block">Dashboard</span>
                                                 </div>
                                             </a>
-                                        @endcan
-
-                                        <a href="{{ route('frontend.users.profileEdit', auth()->user()->id) }}"
-                                           class="list-group-item list-group-item-action">
-                                            <span class="icon icon-sm icon-success"><i class="fas fa-user"></i></span>
-                                            <div class="">
-                                            <span class="text-dark d-block">
-                                                {{ Auth::user()->name }}
-                                            </span>
-                                                <span class="small">View profile details!</span>
-                                            </div>
-                                        </a>
+                                        @endif
+                                        @if(auth()->user()->getRoleNames()->first() == 'vendor')
+                                            <a href="{{ route('vendor.dashboard') }}"
+                                               class="list-group-item list-group-item-action">
+                                                <span class="icon icon-sm icon-success"><i class="fas fa-user"></i></span>
+                                                <div class="">
+                                                    <span class="text-dark d-block">Dashboard</span>
+                                                </div>
+                                            </a>
+                                        @endif
+                                        @if(auth()->user()->getRoleNames()->first() == 'user')
+                                            <a href="{{ route('frontend.users.profileEdit', auth()->user()->id) }}"
+                                               class="list-group-item list-group-item-action">
+                                                <span class="icon icon-sm icon-success"><i class="fas fa-user"></i></span>
+                                                <div class="">
+                                                <span class="text-dark d-block">
+                                                    {{ Auth::user()->name }}
+                                                </span>
+                                                    <span class="small">View profile details!</span>
+                                                </div>
+                                            </a>
+                                        @endif
                                         <a href="{{ route('logout') }}"
                                            class="list-group-item list-group-item-action" onclick="event.preventDefault(); document.getElementById('account-logout-form').submit();">
                                         <span class="icon icon-sm icon-secondary">
@@ -114,15 +126,7 @@
                                                 </div>
                                             </a>
                                         @endif
-                                        <a href="{{ route('register-vendor') }}"
-                                           class="list-group-item list-group-item-action">
-                                        <span class="icon icon-sm icon-primary">
-                                            <i class="fas fa-address-card"></i>
-                                        </span>
-                                            <div class="">
-                                                <span class="text-dark d-block">Register as Vendor</span>
-                                            </div>
-                                        </a>
+
                                     @endauth
                                 </div>
                             </div>

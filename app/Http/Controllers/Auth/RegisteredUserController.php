@@ -10,7 +10,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-
+use Flash;
 class RegisteredUserController extends Controller
 {
     /**
@@ -58,11 +58,12 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
         event(new UserRegistered($user));
-
-        return redirect(RouteServiceProvider::HOME);
+        Flash::success("<i class='fas fa-check'></i> Registered Successfully")->important();
+//        return redirect(RouteServiceProvider::HOME);
+        return redirect(route('login'));
     }
 
-    public function vendorSignup(){
-        return view('auth.vendor-signup');
-    }
+//    public function vendorSignup(){
+//        return view('auth.vendor-signup');
+//    }
 }

@@ -11,7 +11,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-
+use Flash;
 class RegisteredVendorController extends Controller
 {
     /**
@@ -66,8 +66,8 @@ class RegisteredVendorController extends Controller
 
         event(new Registered($user));
         event(new UserRegistered($user));
-        Flash::success("<i class='fas fa-check'></i> Registered Successfully")->important();
-        return redirect(RouteServiceProvider::HOME);
+        Flash::success("<i class='fas fa-check'></i> Registered: Please verify you email id")->important();
+        return redirect(route('login'));
     }
 
 }
