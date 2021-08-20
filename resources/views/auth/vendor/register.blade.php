@@ -51,32 +51,14 @@
 
             <div class="form-row">
                 <div class="col-6 form-group mat-group">
-                    @php
-                        $types = getDataArray('types');
-                    @endphp
-                    <label for="">{{ __('Vendor Type') }}</label>
-                    <select name="type_id" id="" class="form-control">
-                        <option value="">Select</option>
-                        @if(isset($types) && $types)
-                            @foreach($types as $type)
-                                <option value="{{$type->id}}">{{$type->name}}</option>
-                            @endforeach
-                        @endif
-                    </select>
+                    @php $types = custom_array_coloum(getDataArray('types'), 'id', 'name', 'Select'); @endphp
+                    {{ Form::label('Vendor_Type', __('Vendor Type')) }}
+                    {{ Form::select('type_id', $types, old('type_id'), array('class' => 'form-control')) }}
                 </div>
                 <div class="col-6 form-group mat-group">
-                    @php
-                        $cities = getDataArray('cities');
-                    @endphp
-                    <label for="">{{ __('City') }}</label>
-                    <select name="city_id" id="" class="form-control">
-                        <option value="">Select</option>
-                        @if(isset($cities) && $cities)
-                            @foreach($cities as $city)
-                                <option value="{{$city->id}}">{{$city->name}}</option>
-                            @endforeach
-                        @endif
-                    </select>
+                    @php $cities = custom_array_coloum(getDataArray('cities'), 'id', 'name', 'Select'); @endphp
+                    {{ Form::label('city', __('City')) }}
+                    {{ Form::select('city_id', $cities, old('city_id'), array('class' => 'form-control')) }}
                 </div>
             </div>
             <div class="form-row">

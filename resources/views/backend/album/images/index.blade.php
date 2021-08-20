@@ -59,7 +59,7 @@
                     @foreach ($images as $image)
                         <figure>
                             <img src="{{ asset('storage/album').'/'.$image->album_id.'/'.$image->name }}" alt="" />
-                            <figcaption>Daytona Beach <small>United States</small></figcaption>
+{{--                            <figcaption>Daytona Beach <small>United States</small></figcaption>--}}
                         </figure>
 
                     @endforeach
