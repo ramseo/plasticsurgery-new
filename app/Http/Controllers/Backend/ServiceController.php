@@ -98,4 +98,44 @@ class ServiceController extends Controller
     }
 
 
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param int $id
+     *
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        $service = Service::findOrFail($id);
+        $service->delete();
+        Flash::success('<i class="fas fa-check"></i> Service Deleted Successfully!')->important();
+        Log::info(label_case('Service Delete | ' . $service->name . '(ID:' . $service->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return redirect(route('backend.service.index', $service->type_id));
+    }
+
+    /**
+     * List of trashed ertries
+     * works if the softdelete is enabled.
+     *
+     * @return Response
+     */
+    public function trashed()
+    {
+        $services = Service::onlyTrashed()->orderBy('deleted_at', 'desc')->paginate();
+        Log::info(label_case('Service Trash List ').' | User:'.Auth::user()->name);
+        return view("backend.service.trash", compact('services'));
+    }
+
+
+    public function restore($id)
+    {
+        $service = Service::withTrashed()->find($id);
+        $service->restore();
+        Flash::success('<i class="fas fa-check"></i> Service Data Restoreded Successfully!')->important();
+        Log::info(label_case('Service Delete | ' . $service->name . '(ID:' . $service->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return redirect(route('backend.service.index'));
+    }
+
 }
