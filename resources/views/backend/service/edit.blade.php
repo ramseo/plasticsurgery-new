@@ -60,20 +60,20 @@
                             {{ Form::select('input_type', $type, $service->input_type, array('class' => 'form-control input_type')) }}
                         </div>
                     </div>
-
-
-                    <div class="col-12 col-md-4 input_type_price" style="display: none">
-
+                    <div class="col-6 col-md-4 input_type_price" style="display: none">
                         <div class="form-group">
                             {{ Form::label('label', 'Price Label') }}
                             {{ Form::text('label', $service->label, array('class' => 'form-control')) }}
                         </div>
-{{--                        @php $service_on_basis  =  array(''=>'Select', 'minute'=> 'Minute','hour'=> 'Hour','day'=> 'Day','complete'=>'Complete');  @endphp--}}
-{{--                        <div class="form-group">--}}
-{{--                            {{ Form::label('service_on_basis', 'Service On The Basis') }}--}}
-{{--                            {{ Form::select('service_on_basis', $service_on_basis, $service->service_on_basis, array('class' => 'form-control')) }}--}}
-{{--                        </div>--}}
                     </div>
+                    <div class="col-6 col-md-4 input_type_price" style="display: none">
+                        @php $service_type = array(''=>'Select', 'minute'=> 'Minute','hour'=> 'Hour','day'=> 'Day','complete'=>'Complete');  @endphp
+                        <div class="form-group">
+                            {{ Form::label('service_type', 'Service Type') }}
+                            {{ Form::select('service_type', $service_type, $service->service_type, array('class' => 'form-control')) }}
+                        </div>
+                    </div>
+
                     <div class="col-12 col-md-4">
                         <div class="form-group">
                             {{ Form::label('placeholder', 'Placeholder') }}

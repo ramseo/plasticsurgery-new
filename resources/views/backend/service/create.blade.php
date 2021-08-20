@@ -60,12 +60,20 @@
                             {{ Form::select('input_type', $type, null, array('class' => 'form-control input_type')) }}
                         </div>
                     </div>
-                    <div class="col-12 col-md-4 input_type_price" style="display: none">
+                    <div class="col-6 col-md-4 input_type_price" style="display: none">
                         <div class="form-group">
                             {{ Form::label('label', 'Price Label') }}
                             {{ Form::text('label', null, array('class' => 'form-control')) }}
                         </div>
-                     </div>
+                    </div>
+                    <div class="col-6 col-md-4 input_type_price" style="display: none">
+                        @php $service_type = array(''=>'Select', 'minute'=> 'Minute','hour'=> 'Hour','day'=> 'Day','complete'=>'Complete');  @endphp
+                        <div class="form-group">
+                            {{ Form::label('service_type', 'Service Price Type') }}
+                            {{ Form::select('service_type', $service_type, null, array('class' => 'form-control service_type')) }}
+                        </div>
+                    </div>
+
                     <div class="col-12 col-md-4">
                         <div class="form-group">
                             {{ Form::label('placeholder', 'Placeholder ( this for vendor only )') }}
