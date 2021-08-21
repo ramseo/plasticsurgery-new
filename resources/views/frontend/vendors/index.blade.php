@@ -2,6 +2,17 @@
 
 @section('title') {{ __("Vendors") }} @endsection
 
+@push('after-styles')
+    <style>
+        #footer {
+            margin: 3px 0 0 0;
+        }
+        #text-only-section {
+            padding-bottom: 15px;
+        }
+    </style>
+@endpush
+
 @section('content')
     @include('frontend.vendors.filters', ['selected_city' => $city, 'selected_type' => $type])
 

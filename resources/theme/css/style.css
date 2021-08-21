@@ -1984,6 +1984,11 @@ article blockquote {
     width: 100%;
 }
 
+.mat-group .custom-control-input {
+    z-index: 1;
+    cursor: pointer;
+}
+
 @media(min-width: 1600px) {
     .container-fluid {
         max-width: 1400px;
