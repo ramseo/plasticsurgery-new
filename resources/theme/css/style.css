@@ -1639,13 +1639,17 @@ article blockquote {
 #filter-main-col {
     position: fixed;
     z-index: 11111;
-    top: -160%;
+    top: -2000px;
     left: 0;
     width: 100%;
     background: white;
     padding: 15px 15px;
     border-bottom: solid 1px #dfdfdf;
     transition: 0.3s;
+}
+.filter-list {
+    max-height: 300px;
+    overflow-y: auto;
 }
 .filter-top-bar {
     text-align: center;
