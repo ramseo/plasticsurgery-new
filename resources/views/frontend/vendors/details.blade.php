@@ -108,9 +108,15 @@
                         <hr>
                         <div class="inner-col">
                             <ul class="list-inline actions-ul">
-                                <li class="list-inline-item">
-                                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#quotationModal"><i class="fas fa-rupee-sign"></i> Get Quotation</a>
-                                </li>
+                                @if (Auth::check())
+                                    <li class="list-inline-item">
+                                        <a href="{{ route('frontend.quotation', ['vendor_id' => base64_encode($vendor_details->id)]) }}" class="btn btn-primary"><i class="fas fa-rupee-sign"></i> Get Quotation</a>
+                                    </li>
+                                @else
+                                    <li class="list-inline-item">
+                                        <a href="{{ route('login') }}" class="btn btn-primary">Login for Quotation</a>
+                                    </li>
+                                @endif
                                 <li class="list-inline-item">
                                     <a href="tel:{{$vendorUser->mobile}}" class="btn btn-success"><i class="fas fa-phone-alt"></i> CALL/CHAT</a>
                                 </li>

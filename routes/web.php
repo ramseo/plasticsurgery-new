@@ -34,6 +34,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('terms', 'FrontendController@terms')->name('terms');
     Route::post('newsletter', 'NewsletterController@store')->name('newsletter');
     Route::post('post-review', 'VendorController@postReview')->name('post-review');
+    Route::get('quotation/{vendor_id}', 'VendorController@saveQuotation')->name('quotation');
 
     Route::group(['middleware' => ['auth']], function () {
         /*

@@ -69,6 +69,7 @@ mix.styles(
         "resources/theme/css/owl.carousel.min.css",
         "resources/theme/css/owl.theme.default.min.css",
         "resources/theme/css/rateit.css",
+        "resources/theme/css/asRange.min.css",
         "resources/theme/css/style.css",
         "resources/theme/css/responsive.css"
     ],
@@ -90,6 +91,7 @@ mix.scripts(
         "resources/theme/js/jquery.justifiedGallery.min.js",
         "resources/theme/js/owl.carousel.min.js",
         "resources/theme/js/jquery.rateit.min.js",
+        "resources/theme/js/jquery-asRange.min.js",
         "resources/theme/js/custom.js"
     ],
     "public/js/wed.js"

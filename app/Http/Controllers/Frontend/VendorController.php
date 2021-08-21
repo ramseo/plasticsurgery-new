@@ -128,4 +128,11 @@ class VendorController extends Controller
 
         return response()->json(['success' => false, 'message' => $validator->errors()->all()]);
     }
+
+    public function saveQuotation($vendor_id){
+        $vendor_id = base64_decode($vendor_id);
+        $body_class = '';
+        $vendor_details = DB::table('vendors')->where('id', $vendor_id)->first();
+        return view('frontend.vendors.quotation', compact('body_class', 'vendor_details'));
+    }
 }
