@@ -45,12 +45,12 @@ class VendorController extends Controller
 
         if($budget){
             if($budget->filter == 'less_then'){
-                $vendors->where('vendors.price <', $budget->min);
+                $vendors->where('vendors.price', '<' , $budget->min);
             }elseif($budget->filter == 'between'){
-                $vendors->where('vendors.price >', $budget->min);
-                $vendors->where('vendors.price <', $budget->max);
+                $vendors->where('vendors.price', '>' , $budget->min);
+                $vendors->where('vendors.price', '<' , $budget->max);
             }elseif($budget->filter == 'above'){
-                $vendors->where('vendors.price >', $budget->min);
+                $vendors->where('vendors.price', '>' , $budget->min);
             }
         }
 
@@ -62,8 +62,19 @@ class VendorController extends Controller
             }
         }
 
-        $vendors->where('vendors.type_id', $type->id)->where('vendors.city_id', $city->id);
-        $data = $vendors->get();
+        if(isset($_GET['type'])){
+            $vendors->where('vendors.type_id', $_GET['type']);
+        }else{
+            $vendors->where('vendors.type_id', $type->id);
+        }
+
+        if(isset($_GET['city'])){
+            $vendors->where('vendors.city_id', $_GET['city']);
+        }else{
+            $vendors->where('vendors.city_id', $city->id);
+        }
+
+        $data = $vendors->groupBy('vendors.user_id')->get();
 
         $content = Content::where(array('type_id' => $type->id, 'city_id' => $city->id))->first();
 
