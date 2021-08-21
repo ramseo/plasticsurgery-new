@@ -44,13 +44,13 @@
             </div>
         </section>
     @endif
-
+    
     @if(isset($vendors))
         <section id="photographers-section">
             <div class="container-fluid">
                 <div class="col-xs-12 common-heading text-center">
                     <p class="shadow-text">{{$type->name}}</p>
-                    <p class="head">{{$type->name}} in all cities</p>
+                    <p class="head">{{$type->name}} in all cities ({{$vendors_total}})</p>
                 </div>
                 <div class="row vendor-list-row">
                     @if($vendors->count() > 0)

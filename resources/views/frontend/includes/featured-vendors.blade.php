@@ -2,7 +2,7 @@
     $featured_vendors = get_featured_vendors();
 @endphp
 
-@if($featured_vendors)
+@if(count($featured_vendors) > 0)
     <section id="featured-vendors">
         <div class="container-fluid">
             <div class="row">

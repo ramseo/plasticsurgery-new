@@ -74,7 +74,7 @@ class VendorController extends Controller
             $vendors->where('vendors.city_id', $city->id);
         }
 
-        $data = $vendors->groupBy('vendors.user_id')->get();
+        $data = $vendors->groupBy('vendors.user_id')->paginate(15);
 
         $content = Content::where(array('type_id' => $type->id, 'city_id' => $city->id))->first();
 
@@ -88,10 +88,12 @@ class VendorController extends Controller
 
         $body_class = '';
         $cities = getDataArray('cities');
-        $vendors = DB::table('vendors')->get();
+        $vendors = DB::table('vendors')->paginate(15);
+        $vendors_total = DB::table('vendors')->get();
+        $vendors_total= count($vendors_total);
         $type = Type::where('slug', $type_slug)->first();
         $content = Content::where(array('type_id' => $type->id, 'city_id' => null))->first();
-        return view('frontend.vendors.cities', compact('content','body_class', 'cities', 'type', 'vendors'));
+        return view('frontend.vendors.cities', compact('content','body_class', 'cities', 'type', 'vendors', 'vendors_total'));
     }
 
     public function details(Request $request, $city_slug, $vendor_slug)

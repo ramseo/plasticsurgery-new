@@ -1800,6 +1800,12 @@ article blockquote {
     overflow: hidden;
 }
 
+.faq-head {
+    font-size: 25px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 0 10px 0;
+}
 
 @media(min-width: 1600px) {
     .container-fluid {

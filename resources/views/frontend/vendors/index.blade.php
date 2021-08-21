@@ -31,10 +31,36 @@
                                     <a href="#" class="btn btn-primary filter-link">{{$city->name}} <i class="fas fa-chevron-down"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn btn-secondary filter-link">Total Budget <i class="fas fa-chevron-down"></i></a>
+                                    @php
+                                        $selected_budget = '';
+                                        $budget_label = 'Total Budget';
+                                        if(isset($_GET['budget'])){
+                                            $selected_budget = getData('budgets', 'id', $_GET['budget']);
+                                            if($selected_budget->filter == 'less_then'){
+                                                $budget_label = "Less than Rs.".$selected_budget->min;
+                                            }elseif($selected_budget->filter == 'between'){
+                                                $budget_label = 'Rs.'.$selected_budget->min . ' - ' . $selected_budget->max;
+                                            }elseif($selected_budget->filter == 'above'){
+                                                $budget_label = 'Above Rs.'. $selected_budget->min;
+                                            }
+                                        }
+                                    @endphp
+                                    <a href="#" class="btn btn-secondary filter-link">{{$budget_label}} <i class="fas fa-chevron-down"></i></a>
                                 </li>
                                 <li class="list-inline-item">
-                                    <a href="#" class="btn btn-secondary filter-link">Sort: Relevance <i class="fas fa-chevron-down"></i></a>
+                                    @php
+                                        $sort_text = 'Relevance';
+                                        if(isset($_GET['sort'])){
+                                            if($_GET['sort'] == 'relevance'){
+                                                $sort_text = 'Relevance';
+                                            }elseif($_GET['sort'] == 'low_to_high'){
+                                                $sort_text = 'Price (Low to High)';
+                                            }elseif($_GET['sort'] == 'high_to_low'){
+                                                $sort_text = 'Price (High to Low)';
+                                            }
+                                        }
+                                    @endphp
+                                    <a href="#" class="btn btn-secondary filter-link">Sort: {{$sort_text}} <i class="fas fa-chevron-down"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -127,7 +153,8 @@
     @php
         $latestReviews = getDataArray('vendor_reviews', 'type_id', $type->id);
     @endphp
-    @if($latestReviews)
+
+    @if(count($latestReviews) > 0)
         <section id="latest-reviews">
             <div class="container-fluid">
                 <div class="row">
@@ -178,32 +205,28 @@
         <section id="text-only-section" class="grey-section">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-12">
-                        <div class="text-header">
-                            <div class="text">
-                                {!! $content->content !!}
+                    @if($content->content != '')
+                        <div class="col-xs-12 col-sm-12">
+                            <div class="text-header">
+                                <div class="text">
+                                    {!! $content->content !!}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        @endif
-
-        @if($content->faq_content != '')
-            <section id="text-only-section" class="grey-section">
-                <div class="container-fluid">
-                    <div class="row">
+                    @endif
+                    @if($content->faq_content != '')
                         <div class="col-xs-12 col-sm-12">
+                            <p class="faq-head">Frequently Asked Questions</p>
                             <div class="text-header">
                                 <div class="text">
                                     {!! $content->faq_content !!}
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endif
                 </div>
-            </section>
+            </div>
+        </section>
         @endif
     @endif
 
