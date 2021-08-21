@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\City;
 use App\Models\Content;
 use App\Models\Type;
-use App\Models\VendorReview;
+use App\Models\VendorReview; 
+use App\Models\Quotation; 
 use DB;
 use Illuminate\Http\Request;
 use Validator;
@@ -134,5 +135,41 @@ class VendorController extends Controller
         $body_class = '';
         $vendor_details = DB::table('vendors')->where('id', $vendor_id)->first();
         return view('frontend.vendors.quotation', compact('body_class', 'vendor_details'));
+    }
+
+    public function storeQuotation(Request $request){
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'city' => 'required',
+        ]);
+        if ($validator->passes()) {
+            $data = $request->all();
+            $services = [];
+            if(isset($data['service'])){
+                foreach($data['service'] as $service){
+                    if(!isset($service['service_val'])){
+                        $tmp = [];
+                        $tmp['service_id'] = $service['service_id'];
+                        $tmp['quantity'] = $service['quantity'];
+                        array_push($services, $tmp);
+                    }
+                }
+            }
+
+            $vendor = new Quotation();
+            $vendor->vendor_id = $data['vendor_id'];
+            $vendor->city_id = $data['city'];
+            $vendor->name = $data['name'];
+            $vendor->email = $data['email'];
+            $vendor->phone = $data['phone'];
+            $vendor->budget = $data['budget'];
+            // $vendor->dates = $data['dates'];
+            $vendor->service_json = json_encode($services);
+            $vendor->save();
+            return response()->json(['success' => true, 'message' => 'Quotation requested successfully!']);
+        }
+        return response()->json(['success' => false, 'message' => $validator->errors()->all()]);
     }
 }

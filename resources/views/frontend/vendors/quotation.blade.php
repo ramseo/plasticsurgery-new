@@ -50,72 +50,75 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-xs-12 col-sm-8">
-                    @if($top_services)
-                        <div>
-                            <p class="quotation-header">Fill your requirements</p>
-                        </div>
-                        @foreach($top_services as $top_service)
-                            <ul class="list-inline justified-list">
-                                <li class="list-inline-item">
-                                    <div class="q-service-col">
-                                        <div class="q-service-title">
-                                            <p class="title">{{$top_service->name}}</p>
+                <div class="alert alert-danger alert-quotation" style="display: none;"></div>
+                <form id="quotationForm" class="row" action="">
+                    <div class="col-xs-12 col-sm-8">
+                        @if($top_services)
+                            <div>
+                                <p class="quotation-header">Fill your requirements</p>
+                            </div>
+                            @foreach($top_services as $top_service)
+                                <ul class="list-inline justified-list">
+                                    <li class="list-inline-item">
+                                        <div class="q-service-col">
+                                            <div class="q-service-title">
+                                                <p class="title">{{$top_service->name}}</p>
+                                            </div>
+                                            @if($top_service->description)
+                                                <div>
+                                                    <span class="show_details">Show details</span>
+                                                </div>
+                                                <div class="q-service-details" style="display: none;">
+                                                    <p>{!! $top_service->description !!}</p>
+                                                </div>
+                                            @endif
                                         </div>
-                                        @if($top_service->description)
-                                            <div>
-                                                <span class="show_details">Show details</span>
-                                            </div>
-                                            <div class="q-service-details" style="display: none;">
-                                                <p>{!! $top_service->description !!}</p>
-                                            </div>
-                                        @endif
-                                    </div>
-                                </li>
-                                <li class="list-inline-item">
-                                    <div class="q-add-btn-col">
-                                        <label class="q-custom-label">
-                                            <input class="service-selection" type="checkbox" data-type="{{ $top_service->service_type == 'complete' ? 'simple' : 'config' }}" />
-                                            <span class="q-box">
-                                            Add <i class="fa fa-plus"></i>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="q-quantity-box" style="display: none;">
-                                        <span class="q-minus q-icon" data-type="minus"><i class="fa fa-minus"></i></span>
-                                        <span class="q-plus q-icon" data-type="plus"><i class="fa fa-plus"></i></span>
-                                        <input type="text" class="form-control quantity-box" value="1" />
-                                    </div>
-                                </li>
-                            </ul>
-                        @endforeach
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <div class="q-add-btn-col">
+                                            <label class="q-custom-label">
+                                                <input type="hidden" name="service[{{$top_service->id}}][service_val]" value="0">
+                                                <input class="service-selection" type="checkbox" name="service[{{$top_service->id}}]" data-type="{{ $top_service->service_type == 'complete' ? 'simple' : 'config' }}" />
+                                                <span class="q-box">
+                                                    Add <i class="fa fa-plus"></i>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="q-quantity-box" style="display: none;">
+                                            <span class="q-minus q-icon" data-type="minus"><i class="fa fa-minus"></i></span>
+                                            <span class="q-plus q-icon" data-type="plus"><i class="fa fa-plus"></i></span>
+                                            <input type="text" class="form-control quantity-box" name="service[{{$top_service->id}}][quantity]" value="1" />
+                                            <input type="hidden" name="service[{{$top_service->id}}][service_id]" value="{{$top_service->id}}" />
+                                        </div>
+                                    </li>
+                                </ul>
+                            @endforeach
 
-                        <div class="bugdet-field-col">
-                            <p>Total budget?</p>
-                            <input class="range-example-input" type="text" min="{{$min_price}}" max="{{$max_price}}" value="{{$min_price}}" name="points" step="500">
-                        </div>
-                    @endif
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <div>
-                        <p class="quotation-header">Your basic info</p>
+                            <div class="bugdet-field-col">
+                                <p>Total budget?</p>
+                                <input class="range-example-input" type="text" min="{{$min_price}}" max="{{$max_price}}" value="{{$min_price}}" name="budget" step="500">
+                            </div>
+                        @endif
                     </div>
-                    <form action="">
+                    <div class="col-xs-12 col-sm-4">
+                        <div>
+                            <p class="quotation-header">Your basic info</p>
+                        </div>
                         <div class="form-group">
                             <label>Name</label>
-                            <input type="text" class="form-control">
+                            <input type="text" name="name" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="text" class="form-control">
+                            <input type="text" name="email" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Phone</label>
-                            <input type="text" class="form-control">
+                            <input type="text" name="phone" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>City</label>
-                            <select name="" class="form-control">
+                            <select name="city" class="form-control">
                                 <option value="">Select</option>
                                 @if(count($cities) > 0)
                                     @foreach($cities as $citi)
@@ -125,10 +128,11 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <input type="hidden" name="vendor_id" value="{{$vendor_details->id}}">
                             <input id="submitQuotation" type="submit" class="btn btn-primary btn btn-block" value="Submit" disabled>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -141,12 +145,14 @@
             $(document).on('change', '.service-selection', function(){
                 var type = $(this).attr('data-type');
                 if($(this).is(':checked')){
+                    $(this).prev().val('1');
                     $(this).next('.q-box').addClass('active').html('Added <i class="fa fa-check"></i>');
                     if(type == 'config'){
                         $(this).parents('.q-add-btn-col').hide();
                         $(this).parents('.q-add-btn-col').next('.q-quantity-box').show();
                     }
                 }else{
+                    $(this).prev().val('0');
                     $(this).next('.q-box').removeClass('active').html('Add <i class="fa fa-plus"></i>');
                 }
             });
@@ -176,6 +182,32 @@
                 }else{
                     $('#submitQuotation').prop('disabled', true);
                 }
+            });
+            $(document).on('submit','#quotationForm', function(e){
+                e.preventDefault();
+                var form_data = $('#quotationForm').serialize();
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                $.ajax({
+                    type: "POST",
+                    url: "{{route('frontend.quotation-save')}}",
+                    data: form_data, 
+                    success: function(res) {
+                        if(res.success){
+                            $('.alert-quotation').html('').hide();
+                            $('#quotationForm').trigger('reset');
+                            toastr.success(res.message, 'Quotation requested Successfully!');
+                            setTimeout(function(){
+                                document.location.href = "/";
+                            }, 1000);
+                        }else{
+                            $('.alert-quotation').html(res.message).show();
+                        }
+                    }
+                });
             });
         });
     </script>
