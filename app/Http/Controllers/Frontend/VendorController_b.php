@@ -21,51 +21,13 @@ class VendorController extends Controller
         $body_class = '';
         $city = City::where('slug', $city_slug)->first();
         $type = Type::where('slug', $type_slug)->first();
-
-        $service_ids = [];
-        if(isset($_GET['service'])){
-            foreach($_GET['service'] as $service){
-                $service_id = getData('services', 'name', $service);
-                array_push($service_ids, $service_id->id);
-            } 
-        }
-
-        $budget = null;
-        if(isset($_GET['budget'])){
-            $budget = getData('budgets', 'id', $_GET['budget']);
-        }
-
         $vendors = DB::table('vendors');
-
-        if(count($service_ids) > 0){
-            $vendors->join('services', 'vendors.type_id', '=', 'services.type_id');
-            $vendors->join('prices', 'prices.service_id', '=', 'services.id');
-            $vendors->whereIn('services.id', $service_ids);
-        }
-
-        if($budget){
-            if($budget->filter == 'less_then'){
-                $vendors->where('vendors.price <', $budget->min);
-            }elseif($budget->filter == 'between'){
-                $vendors->where('vendors.price >', $budget->min);
-                $vendors->where('vendors.price <', $budget->max);
-            }elseif($budget->filter == 'above'){
-                $vendors->where('vendors.price >', $budget->min);
-            }
-        }
-
-        if(isset($_GET['sort'])){
-            if($_GET['sort'] == 'low_to_high'){
-                $vendors->orderBy('vendors.price', 'ASC');
-            }elseif($_GET['sort'] == 'high_to_low'){
-                $vendors->orderBy('vendors.price', 'DESC');
-            }
-        }
-
-        $vendors->where('vendors.type_id', $type->id)->where('vendors.city_id', $city->id);
-        $data = $vendors->get();
-
+        $vendors->where('type_id', $type->id)->where('city_id', $city->id);
         $content = Content::where(array('type_id' => $type->id, 'city_id' => $city->id))->first();
+        if (1 == 1) {
+
+        }
+        $data = $vendors->get();
 
         return view('frontend.vendors.index', compact('content','body_class', 'data', 'city', 'type'));
     }
@@ -77,10 +39,9 @@ class VendorController extends Controller
 
         $body_class = '';
         $cities = getDataArray('cities');
-        $vendors = DB::table('vendors')->get();
         $type = Type::where('slug', $type_slug)->first();
         $content = Content::where(array('type_id' => $type->id, 'city_id' => null))->first();
-        return view('frontend.vendors.cities', compact('content','body_class', 'cities', 'type', 'vendors'));
+        return view('frontend.vendors.cities', compact('content','body_class', 'cities', 'type'));
     }
 
     public function details(Request $request, $city_slug, $vendor_slug)

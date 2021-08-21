@@ -45,6 +45,70 @@
         </section>
     @endif
 
+    @if(isset($vendors))
+        <section id="photographers-section">
+            <div class="container-fluid">
+                <div class="col-xs-12 common-heading text-center">
+                    <p class="shadow-text">{{$type->name}}</p>
+                    <p class="head">{{$type->name}} in all cities</p>
+                </div>
+                <div class="row vendor-list-row">
+                    @if($vendors->count() > 0)
+                        @foreach($vendors as $vendor)
+                            @php
+                                $vendorCity = getData('cities', 'id', $vendor->city_id);
+                                $vendorType = getData('types', 'id', $vendor->type_id);
+                                $reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor->id);
+                                $average =  averageReview($reviews);
+                            @endphp
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="common-card vendor-card-col">
+                                    <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $vendor->slug }}">
+                                        @php
+                                            $vendor_profile_img = asset('img/default-vendor.jpg');
+                                            if($vendor->image){
+                                                if(file_exists( public_path().'/storage/vendor/profile/'. $vendor->image )){
+                                                    $vendor_profile_img = asset('storage/vendor/profile/'.$vendor->image);
+                                                }
+                                            }
+                                        @endphp
+                                        <div class="img-col">
+                                            <img src="{{$vendor_profile_img}}" alt="" class="img-fluid">
+                                        </div>
+                                        <div class="text-col">
+                                            <ul class="list-inline space-list">
+                                                <li>
+                                                    <p class="title">{{$vendor->business_name}}</p>
+                                                    <p class="grey-text">{{$vendorCity->name}}</p>
+                                                </li>
+                                                @if($average > 0)
+                                                    <li class="text-right">
+                                                        <span class="vendor-rating"><i class="fa fa-star"></i> {{number_format($average, 1)}}</span>
+                                                        <p><a href="javascript:void(0)" class="grey-text">{{count($reviews)}} Reviews</a></p>
+                                                    </li>
+                                                @endif
+                                            </ul>
+                                            @if($vendor->price)
+                                                <ul class="list-inline vendor-card space-list v-center">
+                                                    <li>
+                                                        <p class="price"><span>Rs. {{$vendor->price}}</span></p>
+                                                    </li>
+                                                    <li class="text-right">
+                                                        <p class="grey-text" style="margin: 0px;">{{$vendor->label}}</p>
+                                                    </li>
+                                                </ul>
+                                            @endif
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
+            </div>
+        </section>
+    @endif
+
     @if($content)
         @if($content->content != '')
             <section id="text-only-section" class="grey-section">
@@ -53,7 +117,7 @@
                         <div class="col-xs-12 col-sm-12">
                             <div class="text-header">
                                 <div class="text">
-                                    {!! nl2br($content->content) !!}
+                                    {!! $content->content !!}
                                 </div>
                             </div>
                         </div>
@@ -69,7 +133,7 @@
                         <div class="col-xs-12 col-sm-12">
                             <div class="text-header">
                                 <div class="text">
-                                    {!! nl2br($content->faq_content) !!}
+                                    {!! $content->faq_content !!}
                                 </div>
                             </div>
                         </div>
