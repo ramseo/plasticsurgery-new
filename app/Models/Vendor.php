@@ -62,4 +62,20 @@ class Vendor extends Model
         return $this->belongsTo('App\Models\Type');
     }
 
+    /**
+     * Set the 'Slug'.
+     * If no value submitted 'Name' will be used as slug
+     * str_slug helper method was used to format the text.
+     *
+     * @param [type]
+     */
+    public function setSlugAttribute($value)
+    {
+        $this->attributes['slug'] = slug_format(trim($value));
+
+        if (empty($value)) {
+            $this->attributes['slug'] = slug_format(trim($this->attributes['business_name']));
+        }
+    }
+
 }

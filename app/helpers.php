@@ -34,6 +34,29 @@ function getDataArray($table, $column = null, $value = null)
     return $data->get();
 }
 
+function getDataCustom($table, $column=null, $custom=null, $results=null){
+    $data = DB::table($table);
+    if($column!= null):
+        $data->where($column);
+    endif;
+    if($custom!= null && is_array($custom) == true):
+        if(isset($custom['sort'])):
+            $data->orderBy($custom['sort']);
+        endif;
+        if(isset($custom['offset'])):
+            $data->offset($custom['offset']);
+        endif;
+        if(isset($custom['limit'])):
+            $data->limit($custom['limit']);
+        endif;
+    endif;
+    $data = $data->get();
+    if(!$data->isEmpty()):
+        return ($results)? $data->all(): $data->first();
+    endif;
+    return false;
+}
+
 function getLatestBlogs()
 {
     $data = DB::table('posts')->take(5)->orderBy('id', 'desc');
@@ -82,7 +105,7 @@ function get_vendor_services($vendor_id, $position = '')
 {
     $data = DB::table('services')
         ->join('prices', 'services.id', '=', 'prices.service_id')
-        ->select('services.*', 'prices.input_type_value', 'prices.service_on_basis_value', 'prices.description')
+        ->select('services.*', 'prices.input_type_value', 'prices.description')
         ->where('prices.vendor_id', $vendor_id)
         ->where('services.positions', $position)
         ->get();

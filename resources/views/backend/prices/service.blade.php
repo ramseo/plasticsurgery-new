@@ -7,13 +7,19 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">₹</span>
                 </div>
-                {{ Form::number("input_type_value[$service->id]", isset($pricesData[$service->id]['input_type_value'])? $pricesData[$service->id]['input_type_value']:null, array('class' => 'form-control','placeholder'=>'Service Price')) }}
+                {{ Form::number("input_type_value[$service->id]", isset($pricesData[$service->id]['input_type_value'])? $pricesData[$service->id]['input_type_value']:null, array('class' => 'form-control','placeholder'=> $service->placeholder )) }}
                 @if($service->label)
                     <div class="input-group-append">
                         <span class="input-group-text" id="basic-addon1">{{$service->label}}</span>
                     </div>
                 @endif
             </div>
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-group">
+            {{ Form::label('description', Str::title($service->name.' service description (optional)') ) }}
+            {{ Form::text("description[$service->id]", isset($pricesData[$service->id]['description'])? $pricesData[$service->id]['description']:null, array('class' => 'form-control')) }}
         </div>
     </div>
 @endif
@@ -41,11 +47,5 @@
         </div>
     </div>
 @endif
-<div class="col-12">
-    <div class="form-group">
-        {{ Form::label('description', Str::title($service->name.' service description (optional)') ) }}
-        {{ Form::text("description[$service->id]", isset($pricesData[$service->id]['description'])? $pricesData[$service->id]['description']:null, array('class' => 'form-control')) }}
-    </div>
-</div>
 
 

@@ -19,16 +19,13 @@ class CreatePricesTable extends Migration
             $table->foreign('vendor_id')->references('id')->on('vendors')->onDelete('cascade');
             $table->bigInteger('service_id')->unsigned();
             $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
-            $table->string('input_type_value')->nullable();
-            $table->string('service_on_basis_value')->nullable();
+            $table->text('input_type_value')->nullable();
             $table->text('description')->nullable();
             $table->tinyInteger('status')->default(1);
             $table->tinyInteger('default')->default(0);
-
             $table->integer('created_by')->unsigned()->nullable();
             $table->integer('updated_by')->unsigned()->nullable();
             $table->integer('deleted_by')->unsigned()->nullable();
-
             $table->timestamps();
             $table->softDeletes();
         });

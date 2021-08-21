@@ -25,8 +25,6 @@ class CreateVendorsTable extends Migration
             $table->string('slug')->nullable();
             $table->string('business_address')->nullable();
             $table->string('image')->nullable();
-            $table->text('description')->nullable();
-            $table->string('since')->nullable();
             $table->string('wedding_covered')->nullable();
             $table->tinyInteger('travel_to_other_cities')->default(0);
 

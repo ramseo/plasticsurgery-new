@@ -20,7 +20,7 @@
                         <i class="c-icon cil-people"></i> Service <small class="text-muted">Data Table Service</small>
                     </h4>
                     <div class="small text-muted">
-                        {{ Str::title('service') }} Management Dashboard
+                        Service Management Dashboard
                     </div>
                 </div>
                 <div class="col-4">

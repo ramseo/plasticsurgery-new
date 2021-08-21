@@ -50,7 +50,7 @@ class VendorTableSeeder extends Seeder
             'city_id'        => 1,
             'type_id'        => 1,
             'business_name'  => 'Business name',
-            'slug'           => 'business_name',
+            'slug'           => 'business-name',
             'created_at'        => Carbon::now(),
             'updated_at'        => Carbon::now(),
         ];
