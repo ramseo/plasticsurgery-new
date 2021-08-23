@@ -56,8 +56,8 @@ class RegisteredUserController extends Controller
 
 //        Auth::login($user);
 
-//        event(new Registered($user));
-//        event(new UserRegistered($user));
+        event(new Registered($user));
+        event(new UserRegistered($user));
         Flash::success("<i class='fas fa-check'></i> Registered Successfully")->important();
 //        return redirect(RouteServiceProvider::HOME);
         return redirect(route('login'));
