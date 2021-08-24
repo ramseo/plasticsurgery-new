@@ -39,14 +39,14 @@
             <div class="col">
                 {{ Form::open(array('route' =>'vendor.profile.update', 'files' => true,'id' => 'profileForm')) }}
                 <div class="row">
-                    <div class="col-6 col-md-4">
+                    <div class="col-6">
                         <div class="form-group">
                             {{ Form::label('business_name', 'Business Name') }} {!! fielf_required("required") !!}
                             {{ Form::text('business_name', $vendor->business_name, array('class' => 'form-control')) }}
                         </div>
                     </div>
 
-                    <div class="col-6 col-md-4">
+                    <div class="col-6">
                         <div class="form-group">
                             {{ Form::label('slug', 'Slug') }}
                             {{ Form::text('slug', $vendor->slug, array('class' => 'form-control')) }}
