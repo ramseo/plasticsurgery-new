@@ -6,8 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\City;
 use App\Models\Content;
 use App\Models\Type;
-use App\Models\VendorReview; 
-use App\Models\Quotation; 
+use App\Models\Vendor;
+use App\Models\VendorReview;
+use App\Models\Quotation;
 use DB;
 use Illuminate\Http\Request;
 use Validator;
@@ -28,7 +29,7 @@ class VendorController extends Controller
             foreach($_GET['service'] as $service){
                 $service_id = getData('services', 'name', $service);
                 array_push($service_ids, $service_id->id);
-            } 
+            }
         }
 
         $budget = null;
@@ -78,21 +79,21 @@ class VendorController extends Controller
         $data = $vendors->groupBy('vendors.user_id')->paginate(15);
 
         $content = Content::where(array('type_id' => $type->id, 'city_id' => $city->id))->first();
-
-        return view('frontend.vendors.index', compact('content','body_class', 'data', 'city', 'type'));
+        $vendors_total = Vendor::where(array('type_id' => $type->id, 'city_id' => $city->id))->get()->count();
+        return view('frontend.vendors.index', compact('content','body_class', 'data', 'city', 'type', 'vendors_total'));
     }
 
     public function cities(Request $request)
     {
 
         $type_slug = $request->segment(1);
-
+        $type = Type::where('slug', $type_slug)->first();
         $body_class = '';
         $cities = getDataArray('cities');
         $vendors = DB::table('vendors')->paginate(15);
-        $vendors_total = DB::table('vendors')->get();
-        $vendors_total= count($vendors_total);
-        $type = Type::where('slug', $type_slug)->first();
+//        $vendors_total = DB::table('vendors')->where('type_id', $type->id)->get()->count();
+        $vendors_total = Vendor::where('type_id', $type->id)->get()->count();
+//        $vendors_total= count($vendors_total);
         $content = Content::where(array('type_id' => $type->id, 'city_id' => null))->first();
         return view('frontend.vendors.cities', compact('content','body_class', 'cities', 'type', 'vendors', 'vendors_total'));
     }

@@ -25,6 +25,7 @@
                 <div class="col-xs-12 common-heading text-center">
                     <p class="shadow-text">{{$type->name}}</p>
                     <p class="head">Find Best {{$type->name}} in</p>
+
                 </div>
                 <div class="row city-row">
                     @foreach($cities as $city_item)
@@ -44,13 +45,22 @@
             </div>
         </section>
     @endif
-    
+
     @if(isset($vendors))
         <section id="photographers-section">
             <div class="container-fluid">
                 <div class="col-xs-12 common-heading text-center">
                     <p class="shadow-text">{{$type->name}}</p>
-                    <p class="head">{{$type->name}} in all cities ({{$vendors_total}})</p>
+                    @if($content)
+                        @if($content->title != '')
+                            <p class="head">{{$content->title}} in all cities ({{$vendors_total}})</p>
+                        @endif
+                        @if($content->description != '')
+                            <p class="text">
+                                {!! $content->description !!}
+                            </p>
+                        @endif
+                    @endif
                 </div>
                 <div class="row vendor-list-row">
                     @if($vendors->count() > 0)
@@ -127,7 +137,7 @@
         @endif
 
         @if($content->faq_content != '')
-            <section id="text-only-section" class="grey-section">
+            <section id="text-only-section"  class="mt-5" >
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12">

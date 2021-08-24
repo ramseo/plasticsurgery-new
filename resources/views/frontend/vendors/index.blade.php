@@ -94,7 +94,17 @@
         <div class="container-fluid">
             <div class="col-xs-12 common-heading text-center">
                 <p class="shadow-text">{{$type->name}}</p>
-                <p class="head">{{$type->name}} in {{$city->name}}</p>
+{{--                <p class="head">{{$type->name}} in {{$city->name}}</p>--}}
+                @if($content)
+                    @if($content->title != '')
+                        <p class="head">{{$content->title}} ({{$vendors_total}})</p>
+                    @endif
+                    @if($content->description != '')
+                        <p class="text">
+                            {!! $content->description !!}
+                        </p>
+                    @endif
+                @endif
             </div>
             <div class="row vendor-list-row">
                 @if($data->count() > 0)
@@ -213,10 +223,9 @@
 
     @if($content)
         @if($content->content != '')
-        <section id="text-only-section" class="grey-section">
-            <div class="container-fluid">
-                <div class="row">
-                    @if($content->content != '')
+            <section id="text-only-section" class="grey-section">
+                <div class="container-fluid">
+                    <div class="row">
                         <div class="col-xs-12 col-sm-12">
                             <div class="text-header">
                                 <div class="text">
@@ -224,23 +233,27 @@
                                 </div>
                             </div>
                         </div>
-                    @endif
-                    @if($content->faq_content != '')
+                    </div>
+                </div>
+            </section>
+        @endif
+
+        @if($content->faq_content != '')
+            <section id="text-only-section" class="mt-5" >
+                <div class="container-fluid">
+                    <div class="row">
                         <div class="col-xs-12 col-sm-12">
-                            <p class="faq-head">Frequently Asked Questions</p>
                             <div class="text-header">
                                 <div class="text">
                                     {!! $content->faq_content !!}
                                 </div>
                             </div>
                         </div>
-                    @endif
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         @endif
     @endif
-
 
 @endsection
 
