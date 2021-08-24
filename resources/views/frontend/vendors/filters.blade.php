@@ -1,7 +1,7 @@
 @php
     $cities = getDataArray('cities');
     $categories = getDataArray('types');
-    $services = getDataArray('services');
+    $services = getDataArray('services', 'positions', 'top');
     $budgets = getDataArray('budgets');
 @endphp
 <div class="filter-overlay" style="display: none;"></div>
