@@ -7,6 +7,7 @@
 @endsection
 
 @section('content')
+    @if(auth()->user()->getRoleNames()->first() == 'vendor')
         <div class="card">
             <div class="card-header">
                 <h5 class="card-title m-0">Please Complete following points:</h5>
@@ -19,4 +20,5 @@
                 </ol>
             </div>
         </div>
+    @endif
 @endsection
