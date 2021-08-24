@@ -80,7 +80,7 @@ class VendorController extends Controller
 
         $content = Content::where(array('type_id' => $type->id, 'city_id' => $city->id))->first();
         $vendors_total = Vendor::where(array('type_id' => $type->id, 'city_id' => $city->id))->get()->count();
-        return view('frontend.vendors.index', compact('content','body_class', 'data', 'city', 'type'));
+        return view('frontend.vendors.index', compact('content','body_class', 'data', 'city', 'type', 'vendors_total'));
     }
 
     public function cities(Request $request)
