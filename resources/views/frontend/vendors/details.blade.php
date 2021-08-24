@@ -173,7 +173,6 @@
         $(document).ready(function(){
             var options = {minMargin: 10, maxMargin: 35, itemSelector: ".item"};
             $(".containerCollage").justifiedGallery();
-            $('.review-rating').rateit({ max: 5, step: 1, backingfld: '#review-rating-hidden' });
 
             $('#reviewForm').submit(function(e){
                 e.preventDefault();

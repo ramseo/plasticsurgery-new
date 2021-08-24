@@ -55,13 +55,16 @@
     <div>
         <div class="container">
             <div class="row">
-                <div class="gallery">
+                <div class="gallery1 row">
                     @foreach ($images as $image)
-                        <figure>
-                            <img src="{{ asset('storage/album').'/'.$image->album_id.'/'.$image->name }}" alt="" />
-{{--                            <figcaption>Daytona Beach <small>United States</small></figcaption>--}}
-                        </figure>
-
+                        <div class="col-3 gallery-col">
+                            <div class="gallery-img-col">
+                                <img class="img-fluid" src="{{ asset('storage/album').'/'.$image->album_id.'/'.$image->name }}" alt="" />
+                            </div>
+                            <div class="gallery-action-col text-center">
+                                <a class="" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                            </div>
+                        </div>
                     @endforeach
                 </div>
             </div>
@@ -74,6 +77,26 @@
 
 @push ('after-styles')
     <style>
+        .gallery-img-col {
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gallery-action-col {
+            background: #fa4a70;
+        }
+        .gallery-action-col a {
+            color: white;
+            display: block;
+            width: 100%;
+            padding: 5px 0;
+            text-decoration: none !important;
+        }
+        .gallery-col {
+            margin-bottom: 30px;
+        }
         *,
         *::before,
         *::after {
