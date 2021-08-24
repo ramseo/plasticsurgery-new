@@ -96,8 +96,10 @@
                 <p class="shadow-text">{{$type->name}}</p>
 {{--                <p class="head">{{$type->name}} in {{$city->name}}</p>--}}
                 @if($content)
-                    @if($content->content != '')
+                    @if($content->title != '')
                         <p class="head">{{$content->title}} ({{$vendors_total}})</p>
+                    @endif
+                    @if($content->description != '')
                         <p class="text">
                             {!! $content->description !!}
                         </p>

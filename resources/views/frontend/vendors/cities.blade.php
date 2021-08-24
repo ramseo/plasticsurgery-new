@@ -52,8 +52,10 @@
                 <div class="col-xs-12 common-heading text-center">
                     <p class="shadow-text">{{$type->name}}</p>
                     @if($content)
-                        @if($content->content != '')
+                        @if($content->title != '')
                             <p class="head">{{$content->title}} in all cities ({{$vendors_total}})</p>
+                        @endif
+                        @if($content->description != '')
                             <p class="text">
                                 {!! $content->description !!}
                             </p>
