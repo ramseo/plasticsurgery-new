@@ -50,15 +50,17 @@ class PriceController extends Controller
             $data['vendor_id'] = $vendor->id;
             $data['service_id'] = $service->id;
             $data['input_type_value'] = $request->input_type_value[$service->id];
-            if(isset($request->service_on_basis_value[$service->id])){
-                $data['service_on_basis_value'] = $request->service_on_basis_value[$service->id];
-            }
+//            if(isset($request->service_on_basis_value[$service->id])){
+//                $data['service_on_basis_value'] = $request->service_on_basis_value[$service->id];
+//            }
 
-            if(isset($request->default[$service->id])){
-                $data['default'] = $request->default[$service->id];
-            }
+//            if(isset($request->default[$service->id])){
+//                $data['default'] = $request->default[$service->id];
+//            }
 
-            $data['description'] = $request->description[$service->id];
+            if(isset($request->description[$service->id])) {
+                $data['description'] = $request->description[$service->id];
+            }
             if ($price) {
                 $price->update($data);
             } else {

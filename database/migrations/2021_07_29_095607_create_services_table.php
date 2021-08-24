@@ -20,7 +20,7 @@ class CreateServicesTable extends Migration
             $table->foreign('type_id')->references('id')->on('types')->onDelete('cascade');
             $table->string('name')->nullable();
             $table->enum('input_type', ['text','textarea','price','number',])->default('text')->nullable();
-            $table->enum('service_type', ['minute','hour','day','complete',])->default('complete');
+            $table->enum('service_type', ['minute','hour','day','complete',])->default('complete')->nullable();
             $table->enum('positions', ['top','bottom'])->default('top')->nullable();
             $table->string('label')->nullable();
             $table->string('placeholder')->nullable();
