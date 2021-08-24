@@ -111,7 +111,6 @@ class VendorController extends Controller
     public function postReview(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'title' => 'required',
             'rating' => 'required',
             'description' => 'required',
         ]);
@@ -121,7 +120,6 @@ class VendorController extends Controller
             $vendor->user_id = $data['user_id'];
             $vendor->vendor_id = $data['vendor_id'];
             $vendor->type_id = $data['type_id'];
-            $vendor->title = $data['title'];
             $vendor->rating = $data['rating'];
             $vendor->description = $data['description'];
             $vendor->save();

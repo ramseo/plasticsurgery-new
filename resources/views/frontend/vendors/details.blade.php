@@ -53,7 +53,7 @@
                         $bottom_services = get_vendor_services($vendor_details->id, 'bottom');
                     @endphp
                     @if($top_services && count($top_services) > 0)
-                        <div class="vendor-detail-cols">
+                        <div class="vendor-detail-cols pricing-col">
                             <p class="head">Pricing</p>
                             @foreach($top_services as $top_service)
                                 @include('frontend.vendors.vendor-service',['service_item' => $top_service])
@@ -90,7 +90,7 @@
                         <hr>
                         <div class="inner-col">
                             <p class="price">Rs. {{$vendor_details->price}}</p>
-                            <p class="grey-text">{{$vendor_details->label}} <a class="grey-text" href="#">(See Full Pricelist)</a></p>
+                            <p class="grey-text">{{$vendor_details->label}} <a id="see-full-list" class="grey-text" href="javascript:void(0)">(See Full Pricelist)</a></p>
                         </div>
                         <hr>
                         <div class="inner-col">
@@ -198,6 +198,13 @@
                         }
                     }
                 });
+            });
+
+            $('#see-full-list').click(function(e){
+                e.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: $(".pricing-col").offset().top
+                    }, 1500);
             });
         });
     </script>
