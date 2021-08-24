@@ -79,7 +79,7 @@
                     <form id="reviewForm" action="">
                         <div class="form-group">
                             <div class="review-rating" data-rateit-mode="font" data-rateit-resetable="false"></div>
-                            <input type="hidden" id="review-rating-hidden" value="">
+                            <input type="hidden" id="review-rating-hidden" value="0">
                         </div>
                         <div class="form-group">
                             <label for="">Title</label>
@@ -103,4 +103,12 @@
         </div>
     </div>
 </div>
+
+@push('after-scripts')
+    <script>
+        $("#reviewModal").on('shown.bs.modal', function(){
+            $('.review-rating').rateit({ max: 5, step: 1, backingfld: '#review-rating-hidden' });
+        });
+    </script>
+@endpush
 

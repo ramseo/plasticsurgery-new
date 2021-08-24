@@ -878,7 +878,15 @@ strong {
 }
 
 .vendor-detail-cols ul {
-    margin-bottom: 25px;
+    margin-bottom: 0px;
+}
+
+.service-price-description {
+    margin-top: 10px;
+}
+
+.single-price {
+    margin-bottom: 20px;
 }
 
 .vendor-detail-cols .small-head {
@@ -1987,6 +1995,14 @@ article blockquote {
 .mat-group .custom-control-input {
     z-index: 1;
     cursor: pointer;
+}
+
+.rateit .rateit-selected {
+    color: #fa4a70;
+}
+
+.rateit-font .rateit-range > div, .rateit-font .rateit-range > span {
+    font-size: 30px;
 }
 
 @media(min-width: 1600px) {
