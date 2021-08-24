@@ -52,8 +52,12 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-
-        $video = Video::create($request->all());
+        $data = $request->all();
+        if($request->file('image')){
+            $file_image = fileUpload($request, 'image','video/image/');
+            $data = array_merge($data,['image'=> $file_image]);
+        }
+        $video = Video::create($data);
         Flash::success("<i class='fas fa-check'></i> New Video Added")->important();
         Log::info(label_case('Video Store | ' . $video->url . '(ID:' . $video->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect("vendor/video");
@@ -85,7 +89,12 @@ class VideoController extends Controller
     public function update($id, Request $request)
     {
         $video = Video::findOrFail($id);
-        $video->update($request->all());
+        $data = $request->all();
+        if($request->file('image')){
+            $file_image = fileUpload($request, 'image','video/image/');
+            $data = array_merge($data,['image'=> $file_image]);
+        }
+        $video->update($data);
         Flash::success("<i class='fas fa-check'></i> Video Updated Successfully")->important();
         Log::info(label_case('Video Update | ' . $video->url . '(ID:' . $video->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect("vendor/video");
