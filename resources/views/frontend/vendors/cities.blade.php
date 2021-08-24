@@ -55,7 +55,7 @@
                         @if($content->content != '')
                             <p class="head">{{$content->title}} in all cities ({{$vendors_total}})</p>
                             <p class="text">
-                                {{$content->description}}
+                                {!! $content->description !!}
                             </p>
                         @endif
                     @endif
