@@ -39,26 +39,44 @@
             <div class="col">
                 {{ Form::open(array('route' =>'vendor.profile.update', 'files' => true,'id' => 'profileForm')) }}
                 <div class="row">
-                    <div class="col-12 col-md-6">
+                    <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('business_name', 'Business Name') }} {!! fielf_required("required") !!}
                             {{ Form::text('business_name', $vendor->business_name, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                    <div class="col-6 col-md-6">
+
+                    <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('wedding_covered', 'Number of weddings covered') }}
                             {{ Form::text('wedding_covered', $vendor->wedding_covered, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
+                    <div class="col-6 col-md-4">
                         <div class="form-group">
-                            {{ Form::label('description', 'About') }}  {!! fielf_required("required") !!}
-                            {{ Form::textarea('description', $vendor->description, array('class' => 'form-control')) }}
+                            {{ Form::label('image', 'Profile Image') }} {!! fielf_required("required") !!}
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input"  name="image">
+                                <label class="custom-file-label">Choose file</label>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            {{ Form::label('price', 'Default Price') }}  {!! fielf_required("required") !!}
+                            {{ Form::number('price', $vendor->price, array('class' => 'form-control', 'placeholder'=> 'Service default price')) }}
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            {{ Form::label('label', 'Price Label') }}  {!! fielf_required("required") !!}
+                            {{ Form::text('label', $vendor->label, array('class' => 'form-control', 'placeholder'=> 'Price label')) }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-12">
                         <div class="form-group">
                             {{ Form::label('business_address', 'Address') }}  {!! fielf_required("required") !!}
@@ -67,7 +85,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-4">
                         <div class="form-group">
                             {{ Form::label('travel_to_other_cities', 'Travel to other Indian cities?') }} {!! fielf_required("required") !!}
                             <br>
@@ -75,7 +93,7 @@
                            No {{ Form::radio('travel_to_other_cities', 0, $vendor->travel_to_other_cities == 0 ? true : false) }}
                         </div>
                     </div>
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-4">
                         <div class="form-group">
                             {{ Form::label('safety_assured', 'Safety Assured') }}
                             <br>
@@ -83,7 +101,7 @@
                             No {{ Form::radio('safety_assured', 0, $vendor->safety_assured == 0 ? true : false) }}
                         </div>
                     </div>
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-4">
                         <div class="form-group">
                             {{ Form::label('flexi_sure_policy', 'Flexi sure policy') }}
                             <br>
@@ -91,7 +109,7 @@
                             No {{ Form::radio('flexi_sure_policy', 0, $vendor->flexi_sure_policy == 0 ? true : false) }}
                         </div>
                     </div>
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-4">
                         <div class="form-group">
                             {{ Form::label('video_meetings', 'Video Meetings') }}
                             <br>
@@ -99,7 +117,7 @@
                             No {{ Form::radio('video_meetings', 0, $vendor->video_meetings == 0 ? true : false) }}
                         </div>
                     </div>
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-4">
                         <div class="form-group">
                             {{ Form::label('most_popular', 'Most Popular') }}
                             <br>
@@ -107,7 +125,7 @@
                             No {{ Form::radio('most_popular', 0, $vendor->most_popular == 0 ? true : false) }}
                         </div>
                     </div>
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-4">
                         <div class="form-group">
                             {{ Form::label('is_featured', 'Is Featured') }}
                             <br>
@@ -115,38 +133,25 @@
                             No {{ Form::radio('is_featured', 0, $vendor->is_featured == 0 ? true : false) }}
                         </div>
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('website_link', 'Website') }}
                             {{ Form::text('website_link', $vendor->website_link, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('facebook_link', 'Facebook') }}
                             {{ Form::text('facebook_link', $vendor->facebook_link, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('instagram_link', 'Instagram') }}
                             {{ Form::text('instagram_link', $vendor->instagram_link, array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-4">
-                        <div class="form-group">
-                            {{ Form::label('image', 'Profile Image') }}
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input"  name="image">
-                                <label class="custom-file-label">Choose file</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
 
                 <div class="row">
                     <div class="col-4">
