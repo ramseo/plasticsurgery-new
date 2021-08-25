@@ -2005,6 +2005,19 @@ article blockquote {
     font-size: 30px;
 }
 
+.videos-main-col .videe-item {
+    width: 33.333%;
+    display: inline-block;
+    margin-right: -3px;
+    margin-bottom: 5px;
+}
+
+.videos-main-col .videe-item iframe {
+    width: 100%;
+    height: 180px;
+    padding: 0 5px;
+}
+
 @media(min-width: 1600px) {
     .container-fluid {
         max-width: 1400px;
