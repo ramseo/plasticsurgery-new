@@ -29,7 +29,7 @@
     @stack('after-styles')
 
     <x-google-analytics />
-    
+
 </head>
 <body class="c-app">
 

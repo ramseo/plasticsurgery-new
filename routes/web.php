@@ -115,6 +115,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
 
     Route::get('vendor', 'VendorController@index')->name('vendor.index');
     Route::get('vendor/edit/{id}', 'VendorController@edit')->name('vendor.edit');
+    Route::post('vendor/update/{id}', 'VendorController@update')->name('vendor.update');
 
     Route::get('content', 'ContentController@index')->name('content.index');
     Route::get('content/create/', 'ContentController@create')->name('content.create');
@@ -210,11 +211,6 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
     Route::get('/', 'BackendController@index')->name('home');
     Route::get('dashboard', 'BackendController@index')->name('dashboard');
 
-    /*
-     *
-     *  Settings Routes
-     *
-     */
     Route::group(['middleware' => ['permission:edit_settings']], function () {
         Route::get("settings", "SettingController@index")->name("settings");
         Route::post("settings", "SettingController@store")->name("settings.store");
@@ -234,30 +230,17 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
     Route::PATCH('video/update/{id}', 'VideoController@update')->name('video.update');
     Route::resource("video", "VideoController");
 
-
     Route::get('image/{album}', 'ImageController@index')->name('image.index');
     Route::post('image/store', 'ImageController@store')->name('image.store');
 
     Route::get('price', 'PriceController@index')->name('price.index');
     Route::post('price/store', 'PriceController@store')->name('price.store');
 
-    //    Route::resource("image", "ImageController");
-    //    Route::get("profile", ['as' => "vendor.profile", 'uses' => "VendorController@profile"]);
-    //    Route::post("update", ['as' => "vendor.update", 'uses' => "VendorController@update"]);
-
     Route::get('profile', 'VendorController@profile')->name('profile');
-    Route::post('profile/update', 'VendorController@update')->name('profile.update');
+    Route::post('profile/update', 'VendorController@updateProfile')->name('profile.update');
     Route::resource("vendor", "VendorController");
-    //    Route::get('service/edit/{id}', 'ServiceController@edit')->name('service.edit');
-    //    Route::post('service/update/{id}', 'ServiceController@update')->name('service.update');
 
 });
-
-//Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-//    Route::get('{type}/', 'VendorController@cities')->name('vendor-city-listing');
-//    Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
-//    Route::get('{type}/{city}/{vendor}', 'VendorController@details')->name('vendor-details');
-//});
 
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     $paths = getDataArray('types');
