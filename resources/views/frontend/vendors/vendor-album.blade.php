@@ -44,7 +44,9 @@
                                 @endphp
                                 @if($image_path != '')
                                     <div class="item">
-                                        <img src="{{$image_path}}" width="320" height="200" alt="" class="img-fluid">
+                                        <a href="{{$image_path}}" data-fancybox="gallery" data-caption="<h1>Optional caption</h1>">
+                                            <img src="{{$image_path}}" width="320" height="200" alt="" class="img-fluid">
+                                        </a>
                                     </div>
                                 @endif
                             @endforeach
@@ -55,3 +57,40 @@
         @endforeach
     </div>
 </div>
+
+@push('after-styles')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <style>
+        .fancybox__thumbs, button.carousel__button.fancybox__button--zoom,
+        button.carousel__button.fancybox__button--slideshow, button.carousel__button.fancybox__button--thumbs {
+            display: none;
+        }
+        /* .fancybox__container {
+            padding-right: 400px;
+        }
+        .fancybox__caption {
+            position: fixed !important;
+            top: 0 !important;
+            right: 0px !important;
+            z-index: 1111111111;
+            background: #efefef;
+            height: 100%;
+            width: 400px;
+            left: initial;
+            bottom: initial;
+        } */
+    </style>
+@endpush
+@push('after-scripts')
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script>
+        $(".fancybox").fancybox({
+            afterShow: function(){
+                alert(1);
+            },
+            afterClose: function(){
+                alert(2);
+            }
+        });
+    </script>
+@endpush
