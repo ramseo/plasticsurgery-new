@@ -26,7 +26,7 @@
             <!--/.col-->
             <div class="col-4">
                 <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-{{--                    <a href="{{ route("backend.$module_name.show", $$module_name_singular->id) }}" class="btn btn-primary btn-sm ml-1" data-toggle="tooltip" title="Show Details"><i class="fas fa-tv"></i> Show</a>--}}
+                    <a href="{{ route("backend.vendor.index") }}" class="btn btn-secondary btn-sm ml-1" data-toggle="tooltip" title="Type List"><i class="fas fa-list-ul"></i> List</a>
                 </div>
             </div>
             <!--/.col-->
@@ -37,12 +37,12 @@
 
         <div class="row mt-4">
             <div class="col">
-                {{ Form::open(array('url' => route('backend.vendor.edit', $vendor->id) , 'files' => true,'id' => 'profileForm')) }}
+                {{ Form::open(array('method' => 'post','url' => route('backend.vendor.update', $vendor->id) , 'files' => true,'id' => 'profileForm')) }}
                 {{ Form::hidden('id', $vendor->id) }}
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                            {{ Form::label('business_name', 'Business Name') }} {!! fielf_required("required") !!}
+                            {{ Form::label('business_name', 'Business Name') }}
                             {{ Form::text('business_name', $vendor->business_name, array('class' => 'form-control')) }}
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="col-6">
                         <div class="form-group">
-                            {{ Form::label('image', 'Profile Image') }} {!! fielf_required("required") !!}
+                            {{ Form::label('image', 'Profile Image') }}
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input"  name="image">
                                 <label class="custom-file-label">Choose file</label>
@@ -75,13 +75,13 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                            {{ Form::label('price', 'Default Price') }}  {!! fielf_required("required") !!}
+                            {{ Form::label('price', 'Default Price') }}
                             {{ Form::number('price', $vendor->price, array('class' => 'form-control', 'placeholder'=> 'Service default price')) }}
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-group">
-                            {{ Form::label('label', 'Price Label') }}  {!! fielf_required("required") !!}
+                            {{ Form::label('label', 'Price Label') }}
                             {{ Form::text('label', $vendor->label, array('class' => 'form-control', 'placeholder'=> 'Price label')) }}
                         </div>
                     </div>
@@ -89,13 +89,13 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            {{ Form::label('business_address', 'Address') }}  {!! fielf_required("required") !!}
+                            {{ Form::label('business_address', 'Address') }}
                             {{ Form::textarea('business_address', $vendor->business_address, array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-3">
                         <div class="form-group">
                             {{ Form::label('travel_to_other_cities', 'Travel to other Indian cities?') }} {!! fielf_required("required") !!}
                             <br>
@@ -103,7 +103,7 @@
                            No {{ Form::radio('travel_to_other_cities', 0, $vendor->travel_to_other_cities == 0 ? true : false) }}
                         </div>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-3">
                         <div class="form-group">
                             {{ Form::label('safety_assured', 'Safety Assured') }}
                             <br>
@@ -111,7 +111,7 @@
                             No {{ Form::radio('safety_assured', 0, $vendor->safety_assured == 0 ? true : false) }}
                         </div>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-3">
                         <div class="form-group">
                             {{ Form::label('flexi_sure_policy', 'Flexi sure policy') }}
                             <br>
@@ -119,7 +119,7 @@
                             No {{ Form::radio('flexi_sure_policy', 0, $vendor->flexi_sure_policy == 0 ? true : false) }}
                         </div>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-3">
                         <div class="form-group">
                             {{ Form::label('video_meetings', 'Video Meetings') }}
                             <br>
@@ -127,7 +127,7 @@
                             No {{ Form::radio('video_meetings', 0, $vendor->video_meetings == 0 ? true : false) }}
                         </div>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-3">
                         <div class="form-group">
                             {{ Form::label('most_popular', 'Most Popular') }}
                             <br>
@@ -135,12 +135,20 @@
                             No {{ Form::radio('most_popular', 0, $vendor->most_popular == 0 ? true : false) }}
                         </div>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-3">
                         <div class="form-group">
                             {{ Form::label('is_featured', 'Is Featured') }}
                             <br>
                             Yes  {{ Form::radio('is_featured', 1, $vendor->is_featured == 1?  true : false) }}
                             No {{ Form::radio('is_featured', 0, $vendor->is_featured == 0 ? true : false) }}
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="form-group">
+                            {{ Form::label('status', 'Approved') }}
+                            <br>
+                            Yes  {{ Form::radio('status', 1, $vendor->status == 1?  true : false) }}
+                            No {{ Form::radio('status', 0, $vendor->status == 0 ? true : false) }}
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
@@ -172,7 +180,7 @@
 
                     <div class="col-8">
                         <div class="float-right">
-{{--                            <a href="{{route("backend.profile")}}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>--}}
+                            {{--<a href="{{route("backend.profile")}}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>--}}
                         </div>
                     </div>
                 </div>
@@ -186,8 +194,8 @@
         <div class="row">
             <div class="col">
                 <small class="float-right text-muted">
-{{--                    Updated: {{$service->updated_at->diffForHumans()}},--}}
-{{--                    Created at: {{$service->created_at->isoFormat('LLLL')}}--}}
+                     Updated: {{$vendor->updated_at->diffForHumans()}},
+                     Created at: {{$vendor->created_at->isoFormat('LLLL')}}
                 </small>
             </div>
         </div>

@@ -15,24 +15,15 @@
 <div class="card">
     <div class="card-body">
         <div class="row">
-            <div class="col-8">
+            <div class="col-12">
                 <h4 class="card-title mb-0">
                     <i class="c-icon cil-people"></i>  Profile <small class="text-muted">Create</small>
                 </h4>
                 <div class="small text-muted">
-                    Profile Management Dashboard
+                    Profile Management
                 </div>
             </div>
-            <!--/.col-->
-            <div class="col-4">
-                <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-{{--                    <a href="{{ route("backend.$module_name.show", $$module_name_singular->id) }}" class="btn btn-primary btn-sm ml-1" data-toggle="tooltip" title="Show Details"><i class="fas fa-tv"></i> Show</a>--}}
-                </div>
-            </div>
-            <!--/.col-->
         </div>
-        <!--/.row-->
-
         <hr>
 
         <div class="row mt-4">
@@ -142,8 +133,8 @@
         <div class="row">
             <div class="col">
                 <small class="float-right text-muted">
-{{--                    Updated: {{$service->updated_at->diffForHumans()}},--}}
-{{--                    Created at: {{$service->created_at->isoFormat('LLLL')}}--}}
+                    Updated: {{$vendor->updated_at->diffForHumans()}},
+                    Created at: {{$vendor->created_at->isoFormat('LLLL')}}
                 </small>
             </div>
         </div>
