@@ -4,9 +4,6 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-{{--    <x-backend-breadcrumb-item route='{{route("backend.profile")}}' icon='c-icon cil-people' >--}}
-{{--        Service--}}
-{{--    </x-backend-breadcrumb-item>--}}
     <x-backend-breadcrumb-item type="active">Edit</x-backend-breadcrumb-item>
 </x-backend-breadcrumbs>
 @endsection
@@ -78,7 +75,7 @@
                 <div class="row">
                     <div class="col-12 col-md-3">
                         <div class="form-group">
-                            {{ Form::label('travel_to_other_cities', 'Travel to other Indian cities?') }} {!! fielf_required("required") !!}
+                            {{ Form::label('travel_to_other_cities', 'Travel to other Indian cities?') }}
                             <br>
                            Yes  {{ Form::radio('travel_to_other_cities', 1, $vendor->travel_to_other_cities == 1?  true : false) }}
                            No {{ Form::radio('travel_to_other_cities', 0, $vendor->travel_to_other_cities == 0 ? true : false) }}
