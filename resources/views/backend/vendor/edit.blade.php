@@ -37,8 +37,8 @@
 
         <div class="row mt-4">
             <div class="col">
-                {{ Form::open(array('route' =>'vendor.update', 'files' => true,'id' => 'profileForm')) }}
-                {{ Form::hidden('user_id', $vendor->user_id) }}
+                {{ Form::open(array('url' => route('backend.vendor.edit', $vendor->id) , 'files' => true,'id' => 'profileForm')) }}
+                {{ Form::hidden('id', $vendor->id) }}
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">

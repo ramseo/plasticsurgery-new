@@ -57,11 +57,10 @@ class VendorController extends Controller
 
 
 
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-
         $data = $request->all();
-        $vendor = Vendor::where('user_id', '=', $data->user_id)->first();
+        $vendor = Vendor::findOrFail($id);
         if ($request->file('image')) {
             $file_image = fileUpload($request, 'image', 'vendor/profile/');
             $data = array_merge($data, ['image' => $file_image]);
