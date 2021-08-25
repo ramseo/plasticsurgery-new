@@ -115,6 +115,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
 
     Route::get('vendor', 'VendorController@index')->name('vendor.index');
     Route::get('vendor/edit/{id}', 'VendorController@edit')->name('vendor.edit');
+    Route::post('vendor/update', 'VendorController@update')->name('vendor.edit');
 
     Route::get('content', 'ContentController@index')->name('content.index');
     Route::get('content/create/', 'ContentController@create')->name('content.create');
@@ -252,12 +253,6 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
     //    Route::post('service/update/{id}', 'ServiceController@update')->name('service.update');
 
 });
-
-//Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-//    Route::get('{type}/', 'VendorController@cities')->name('vendor-city-listing');
-//    Route::get('{type}/{city}', 'VendorController@index')->name('vendor-listing');
-//    Route::get('{type}/{city}/{vendor}', 'VendorController@details')->name('vendor-details');
-//});
 
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     $paths = getDataArray('types');

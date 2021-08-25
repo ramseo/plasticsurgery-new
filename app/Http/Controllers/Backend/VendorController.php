@@ -56,7 +56,42 @@ class VendorController extends Controller
     }
 
 
+
     public function update(Request $request)
+    {
+
+        $data = $request->all();
+        $vendor = Vendor::where('user_id', '=', $data->user_id)->first();
+        if ($request->file('image')) {
+            $file_image = fileUpload($request, 'image', 'vendor/profile/');
+            $data = array_merge($data, ['image' => $file_image]);
+        }
+
+        $vendor->update($data);
+
+        Flash::success("<i class='fas fa-check'></i> Vendor Updated Successfully")->important();
+        Log::info(label_case('Vendor Update | ' . $vendor->business_name . '(ID:' . $vendor->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return redirect("admin/vendor/edit/" . $vendor->id);
+    }
+
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param int $id
+     *
+     * @return Response
+     */
+    public function profile()
+    {
+        $user_id = auth()->user()->id;
+
+        $vendor = Vendor::where('user_id', '=', $user_id)->first();
+//        Log::info(label_case('Vendor Profile | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return view('backend.vendor.profile', compact('vendor'));
+    }
+
+    public function updateProfile(Request $request)
     {
         $user_id = auth()->user()->id;
         $vendor = Vendor::where('user_id', '=', $user_id)->first();
@@ -82,61 +117,6 @@ class VendorController extends Controller
     }
 
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param int $id
-     *
-     * @return Response
-     */
-    public function profile()
-    {
-        $user_id = auth()->user()->id;
-
-        $vendor = Vendor::where('user_id', '=', $user_id)->first();
-//        Log::info(label_case('Vendor Profile | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view('backend.vendor.profile', compact('vendor'));
-    }
-
-    public function updateProfile(Request $request)
-    {
-
-        $data = $request->all();
-
-        if(auth()->user()->getRoleNames()->first() == 'vendor'){
-            $user_id = auth()->user()->id;
-            $vendor = Vendor::where('user_id', '=', $user_id)->first();
-            $data = array_merge($data, ['user_id' => $user_id]);
-        }else{
-            $vendor = Vendor::where('user_id', '=', $user_id)->first();
-        }
-
-        if ($request->file('image')) {
-            $file_image = fileUpload($request, 'image', 'vendor/profile/');
-            $data = array_merge($data, ['image' => $file_image]);
-        }
-
-
-        if ($vendor) {
-            $vendor->update($data);
-        } else {
-            $data = array_merge($data, ['type_id' => 1]);
-            $data = array_merge($data, ['city_id' => 1]);
-            $vendor = Vendor::create($data);
-        }
-
-        if(auth()->user()->getRoleNames()->first() == 'vendor'){
-
-            Flash::success("<i class='fas fa-check'></i> Profile Updated Successfully")->important();
-//        Log::info(label_case('Vendor Update | ' . $vendor->business_name . '(ID:' . $vendor->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-            return redirect("vendor/profile");
-        }else{
-
-            Flash::success("<i class='fas fa-check'></i> Profile Updated Successfully")->important();
-//        Log::info(label_case('Vendor Update | ' . $vendor->business_name . '(ID:' . $vendor->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-            return redirect("admin/vendor/edit/".$vendor->id);
-        }
-    }
 
 
 }
