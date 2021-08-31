@@ -233,6 +233,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
     Route::get('image/{album}', 'ImageController@index')->name('image.index');
     Route::post('image/store/{album_id}', 'ImageController@store')->name('image.store');
     Route::post('image/remove', 'ImageController@remove')->name('image.remove');
+    Route::get('image/delete/{id}', 'ImageController@delete')->name('image.delete');
 
     Route::get('price', 'PriceController@index')->name('price.index');
     Route::post('price/store', 'PriceController@store')->name('price.store');

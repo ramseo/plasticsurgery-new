@@ -69,5 +69,17 @@ class ImageController extends Controller
         return $name;
     }
 
+    public function delete($id)
+    {
+        $image = Image::findorfail($id);
+        Storage::delete('album/$album_id/'.$image->name);
+        Image::where(['id' => $image->id])->delete();
+
+        Flash::success("<i class='fas fa-check'></i> Image Deleted")->important();
+
+        return redirect("vendor/image/$image->album_id");
+    }
+
+
 
 }

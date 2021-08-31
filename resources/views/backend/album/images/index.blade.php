@@ -75,7 +75,7 @@
                                 <img class="img-fluid" src="{{ asset('storage/album').'/'.$image->album_id.'/'.$image->name }}" alt="" />
                             </div>
                             <div class="gallery-action-col text-center">
-                                <a class="" href="#"><i class="fas fa-trash-alt"></i> Delete</a>
+                                <a class="" href="{{ route('vendor.image.delete', $image->id) }}"><i class="fas fa-trash-alt"></i> Delete</a>
                             </div>
                         </div>
                     @endforeach
