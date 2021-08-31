@@ -13,9 +13,6 @@ use DB;
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Http\Response;
-use App\Mail\QuotationUser;
-use App\Mail\QuotationAdmin;
-use Illuminate\Support\Facades\Mail;
 
 class VendorController extends Controller
 {
@@ -170,10 +167,6 @@ class VendorController extends Controller
             // $vendor->dates = $data['dates'];
             $vendor->service_json = json_encode($services);
             $vendor->save();
-
-            Mail::to($vendor->email)->send(new QuotationUser($vendor));
-            Mail::to(env('MAIL_FROM_ADDRESS'))->send(new QuotationAdmin($vendor));
-
             return response()->json(['success' => true, 'message' => 'Quotation requested successfully!']);
         }
         return response()->json(['success' => false, 'message' => $validator->errors()->all()]);
