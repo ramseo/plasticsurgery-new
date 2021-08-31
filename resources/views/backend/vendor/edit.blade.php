@@ -56,13 +56,19 @@
 
                 </div>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-4">
+                        <div class="form-group">
+                            {{ Form::label('phone', 'Phone Number') }}
+                            {{ Form::text('phone', $vendor->phone, array('class' => 'form-control')) }}
+                        </div>
+                    </div>
+                    <div class="col-4">
                         <div class="form-group">
                             {{ Form::label('wedding_covered', 'Number of weddings covered') }}
                             {{ Form::text('wedding_covered', $vendor->wedding_covered, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-4">
                         <div class="form-group">
                             {{ Form::label('image', 'Profile Image') }}
                             <div class="custom-file">

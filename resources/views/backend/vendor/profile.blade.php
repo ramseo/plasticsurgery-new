@@ -51,13 +51,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-4">
+                        <div class="form-group">
+                            {{ Form::label('phone', 'Phone Number') }}
+                            {{ Form::text('phone', $vendor->phone, array('class' => 'form-control')) }}
+                        </div>
+                    </div>
+                    <div class="col-4">
                         <div class="form-group">
                             {{ Form::label('price', 'Default Price') }}  {!! fielf_required("required") !!}
                             {{ Form::number('price', $vendor->price, array('class' => 'form-control', 'placeholder'=> 'Service default price')) }}
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-4">
                         <div class="form-group">
                             {{ Form::label('label', 'Price Label') }}  {!! fielf_required("required") !!}
                             {{ Form::text('label', $vendor->label, array('class' => 'form-control', 'placeholder'=> 'Price label')) }}
