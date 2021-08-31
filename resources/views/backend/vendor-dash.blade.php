@@ -23,7 +23,7 @@
 
 @endphp
 
-@if($vendor->status == 1)
+@if($vendor->status == 0)
     <div class="card">
         <div class="card-header">
             <h2>Hey {{$vendor->business_name }}!</h2>

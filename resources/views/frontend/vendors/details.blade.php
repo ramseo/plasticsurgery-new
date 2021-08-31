@@ -48,6 +48,12 @@
                         @include('frontend.vendors.vendor-album',['vendor_albmum' => $albums])
                         <hr>
                     @endif
+
+                    @if($videos && count($videos) > 0)
+                        @include('frontend.vendors.vendor-videos',['vendor_videos' => $videos])
+                        <hr>
+                    @endif
+
                     @php
                         $top_services = get_vendor_services($vendor_details->id, 'top');
                         $bottom_services = get_vendor_services($vendor_details->id, 'bottom');
