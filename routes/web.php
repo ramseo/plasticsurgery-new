@@ -238,8 +238,8 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
     Route::get('price', 'PriceController@index')->name('price.index');
     Route::post('price/store', 'PriceController@store')->name('price.store');
 
-    Route::get("quotations/{id}", ['as' => "quotations.index", 'uses' => "QuotationController@index"]);
-    Route::get("quotations/details/{id}", ['as' => "quotations.details", 'uses' => "QuotationController@details"]);
+    Route::get('quotations', 'QuotationController@index')->name('quotation.index');
+    Route::get('quotations/details/{id}', 'QuotationController@details')->name('quotation.details');
 
     Route::get('profile', 'VendorController@profile')->name('profile');
     Route::post('profile/update', 'VendorController@updateProfile')->name('profile.update');

@@ -316,7 +316,7 @@ class GenerateMenus
 
         \Menu::make('vedor_sidebar', function ($menu) {
             // Dashboard
-            $menu->add('<i class="cil-speedometer c-sidebar-nav-icon"></i> Dashboard', ['route' => 'vendor.dashboard', 'class' => 'c-sidebar-nav-item',])->data(['order' => 1, 'activematches' => 'admin/dashboard*',])->link->attr(['class' => 'c-sidebar-nav-link',]);
+            $menu->add('<i class="cil-speedometer c-sidebar-nav-icon"></i> Dashboard', ['route' => 'vendor.dashboard', 'class' => 'c-sidebar-nav-item',])->data(['order' => 1, 'activematches' => 'vendor/dashboard*',])->link->attr(['class' => 'c-sidebar-nav-link',]);
             // Profile
             $menu->add('<i class="c-sidebar-nav-icon fas fa-user"></i> Profile', ['route' => 'vendor.profile', 'class' => 'c-sidebar-nav-item',])->data(['order' => 99, 'activematches' => 'vendor/profile*', 'permission' => [],])->link->attr(['class' => 'c-sidebar-nav-link',]);
             // Price & Services
@@ -325,6 +325,8 @@ class GenerateMenus
             $menu->add('<i class="c-sidebar-nav-icon fas fa-images"></i> Album', ['route' => 'vendor.album.index', 'class' => 'c-sidebar-nav-item',])->data(['order' => 101, 'activematches' => 'vendor/album*', 'permission' => [],])->link->attr(['class' => 'c-sidebar-nav-link',]);
             // Album
             $menu->add('<i class="c-sidebar-nav-icon fas fa-video"></i> Video', ['route' => 'vendor.video.index', 'class' => 'c-sidebar-nav-item',])->data(['order' => 102, 'activematches' => 'vendor/video*', 'permission' => [],])->link->attr(['class' => 'c-sidebar-nav-link',]);
+            // qutation
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-video"></i> Quotation', ['route' => 'vendor.quotation.index', 'class' => 'c-sidebar-nav-item',])->data(['order' => 102, 'activematches' => 'vendor/quotation*', 'permission' => [],])->link->attr(['class' => 'c-sidebar-nav-link',]);
 
             // Set Active Menu
             $menu->filter(function ($item) {
