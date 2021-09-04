@@ -112,6 +112,18 @@ function get_vendor_services($vendor_id, $position = '')
     return $data;
 }
 
+function get_vendor_selected_services($vendor_id, $position = '', $service_id)
+{
+    $data = DB::table('services')
+        ->join('prices', 'services.id', '=', 'prices.service_id')
+        ->select('services.*', 'prices.input_type_value', 'prices.description')
+        ->where('prices.vendor_id', $vendor_id)
+        ->where('services.positions', $position)
+        ->where('services.id', $service_id)
+        ->first();
+    return $data;
+}
+
 function get_featured_vendors()
 {
     $data = DB::table('vendors')

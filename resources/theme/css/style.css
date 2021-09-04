@@ -1830,13 +1830,12 @@ article blockquote {
  .q-quantity-box{
     position: relative;
  }
- .q-quantity-box .q-icon{
+ .q-quantity-box .q-icon {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 13px;
     cursor: pointer;
     font-size: 13px;
- }
+}
  .q-quantity-box .form-control{
     border-radius: 70px;
     max-width: 90px;
@@ -1856,7 +1855,7 @@ article blockquote {
     display: none;
  }
  .q-custom-label .q-box{
-    height: 36px;
+    height: 43px;
     width: 90px;
     display: inline-flex;
     align-items: center;
@@ -1867,6 +1866,10 @@ article blockquote {
     color: #fa4a70;
     font-size: 15px;
  }
+ .for_service {
+    position: relative;
+    top: 5px;
+}
  .q-custom-label .q-box .fa{
     margin-left: 5px;
     font-size: 13px;

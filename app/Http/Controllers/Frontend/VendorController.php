@@ -167,7 +167,7 @@ class VendorController extends Controller
             $vendor->email = $data['email'];
             $vendor->phone = $data['phone'];
             $vendor->budget = $data['budget'];
-            // $vendor->dates = $data['dates'];
+            $vendor->dates = $data['dates'];
             $vendor->service_json = json_encode($services);
             $vendor->save();
 
