@@ -89,6 +89,11 @@
                                             <span class="q-plus q-icon" data-type="plus"><i class="fa fa-plus"></i></span>
                                             <input type="text" class="form-control quantity-box" name="service[{{$top_service->id}}][quantity]" value="1" />
                                             <input type="hidden" name="service[{{$top_service->id}}][service_id]" value="{{$top_service->id}}" />
+                                            @if($top_service->service_type != 'complete')
+                                                <div class="text-center text-capitalize for_service">
+                                                    <p>{{$top_service->service_type}}</p>
+                                                </div>
+                                            @endif
                                         </div>
                                     </li>
                                 </ul>
@@ -128,6 +133,10 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label for="">When it is required?</label>
+                            <input type="text" class="form-control date" name="dates"/>
+                        </div>
+                        <div class="form-group">
                             <input type="hidden" name="vendor_id" value="{{$vendor_details->id}}">
                             <input id="submitQuotation" type="submit" class="btn btn-primary btn btn-block" value="Submit" disabled>
                         </div>
@@ -138,9 +147,31 @@
     </section>
 @endsection
 
+@push('after-styles')
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" rel="stylesheet"/>
+    <style>
+        .blockUI.blockMsg.blockElement {
+            position: fixed !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%);
+            background: transparent !important;
+            border: none !important;
+            color: white !important;
+            font-size: 20px;
+        }
+    </style>
+@endpush
+
 @push('after-scripts')
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
     <script>
         $(document).ready(function(){
+            $('.date').datepicker({
+                multidate: true,
+                minDate: new Date()
+            });
             $('.range-example-input').asRange({});
             $(document).on('change', '.service-selection', function(){
                 var type = $(this).attr('data-type');
@@ -185,6 +216,7 @@
             });
             $(document).on('submit','#quotationForm', function(e){
                 e.preventDefault();
+                $('body').block({ message: "Processing..." });
                 var form_data = $('#quotationForm').serialize();
                 $.ajaxSetup({
                     headers: {
@@ -206,6 +238,7 @@
                         }else{
                             $('.alert-quotation').html(res.message).show();
                         }
+                        $('body').unblock();
                     }
                 });
             });
