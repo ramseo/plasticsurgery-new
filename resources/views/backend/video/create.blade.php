@@ -78,8 +78,8 @@
                         <div class="form-group">
                             {{ Form::label('status', 'Status?') }}
                             <br>
-                            Yes  {{ Form::radio('status', 1) }}
-                            No {{ Form::radio('status', 0) }}
+                            Enable  {{ Form::radio('status', 1) }}
+                            Disable {{ Form::radio('status', 0) }}
 {{--                            Yes  {{ Form::radio('status', 1, $vendor->travel_to_other_cities == 1?  true : false) }}--}}
 {{--                            No {{ Form::radio('status', 0, $vendor->travel_to_other_cities == 0 ? true : false) }}--}}
                         </div>
