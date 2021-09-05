@@ -17,7 +17,7 @@ class VideoController extends Controller
     {
         $vendor = getData('vendors', 'user_id', auth()->user()->id);
         if ($request->ajax()) {
-            $videos = Video::where('vendor_id', $vendor->id)->select(['id', 'url', 'type']);
+            $videos = Video::where('vendor_id', $vendor->id)->select(['id', 'url']);
             return Datatables::of($videos)
                 ->addIndexColumn()
                 ->addColumn('action', function ($video) {

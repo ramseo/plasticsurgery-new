@@ -44,7 +44,6 @@
                         <thead>
                             <th> # </th>
                             <th> URL </th>
-                            <th> Type </th>
                             <th> Action </th>
                         </thead>
                         <tbody>
@@ -77,7 +76,6 @@
                 columns: [
                     {data: 'id', name: 'id'},
                     {data: 'url', name: 'url'},
-                    {data: 'type', name: 'type'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
             columnDefs: [{
