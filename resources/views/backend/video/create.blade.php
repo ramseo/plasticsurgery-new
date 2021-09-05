@@ -40,28 +40,23 @@
                 {{ html()->form('POST', route("vendor.video.store"))->class('form')->open() }}
                 {{ Form::hidden('vendor_id', $vendor->id) }}
                 <div class="row">
-                    <div class="col-12 col-md-8">
+                    <div class="col-12">
                         <div class="form-group">
                             {{ Form::label('url', 'URL') }} {!! fielf_required("required") !!}
-                            {{ Form::text('url', null, array('class' => 'form-control')) }}
+                            {{ Form::textarea('url', null, array('class' => 'form-control')) }}
                         </div>
                     </div>
 
-                    <div class="col-6 col-md-4">
-                        <div class="form-group">
-                            {{ Form::label('order', 'Order') }}
-                            {{ Form::text('order', null, array('class' => 'form-control')) }}
-                        </div>
-                    </div>
+
                 </div>
                 <div class="row">
-                    <div class="col-6 ">
-                        @php $type =  array(''=>'Select', 'youtube'=> 'YouTube','vimeo'=>'Vimeo');  @endphp
-                        <div class="form-group">
-                            {{ Form::label('type', 'Video Type') }}
-                            {{ Form::select('type', $type, null, array('class' => 'form-control')) }}
-                        </div>
-                    </div>
+{{--                    <div class="col-4">--}}
+{{--                        @php $type =  array(''=>'Select', 'youtube'=> 'YouTube','vimeo'=>'Vimeo');  @endphp--}}
+{{--                        <div class="form-group">--}}
+{{--                            {{ Form::label('type', 'Video Type') }}--}}
+{{--                            {{ Form::select('type', $type, null, array('class' => 'form-control')) }}--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                     <div class="col-6">
                         <div class="form-group">
                             {{ Form::label('image', 'Image') }}
@@ -71,9 +66,15 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            {{ Form::label('order', 'Order') }}
+                            {{ Form::text('order', null, array('class' => 'form-control')) }}
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-3">
+                    <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('status', 'Status?') }}
                             <br>
@@ -83,6 +84,7 @@
 {{--                            No {{ Form::radio('status', 0, $vendor->travel_to_other_cities == 0 ? true : false) }}--}}
                         </div>
                     </div>
+
                 </div>
                 <div class="row">
                     <div class="col-6">

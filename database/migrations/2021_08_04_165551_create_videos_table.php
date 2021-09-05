@@ -17,8 +17,7 @@ class CreateVideosTable extends Migration
             $table->id();
             $table->bigInteger('vendor_id')->unsigned();
             $table->foreign('vendor_id')->references('id')->on('vendors')->onDelete('cascade');
-            $table->string('url')->nullable();
-            $table->enum('type', ['youtube','vimeo'])->default('youtube');
+            $table->text('url')->nullable();
             $table->string('image')->nullable();
             $table->tinyInteger('status')->default(1);
             $table->string('order')->nullable();

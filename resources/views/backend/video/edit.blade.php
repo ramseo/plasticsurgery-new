@@ -40,28 +40,23 @@
                 {{ html()->form('PATCH', route("vendor.video.update",$video->id))->class('form')->open() }}
                 {{ Form::hidden('vendor_id', $video->vendor_id) }}
                 <div class="row">
-                    <div class="col-12 col-md-8">
+                    <div class="col-12">
                         <div class="form-group">
                             {{ Form::label('url', 'URL') }} {!! fielf_required("required") !!}
-                            {{ Form::text('url', $video->url, array('class' => 'form-control')) }}
+                            {{ Form::textarea('url', $video->url, array('class' => 'form-control')) }}
                         </div>
                     </div>
 
-                    <div class="col-6 col-md-4">
-                        <div class="form-group">
-                            {{ Form::label('order', 'Order') }}
-                            {{ Form::text('order', $video->order, array('class' => 'form-control')) }}
-                        </div>
-                    </div>
+
                 </div>
                 <div class="row">
-                    <div class="col-6 ">
-                        @php $type =  array(''=>'Select', 'youtube'=> 'YouTube','vimeo'=>'Vimeo');  @endphp
-                        <div class="form-group">
-                            {{ Form::label('type', 'Video Type') }}
-                            {{ Form::select('type', $type, $video->type, array('class' => 'form-control')) }}
-                        </div>
-                    </div>
+{{--                    <div class="col-6 ">--}}
+{{--                        @php $type =  array(''=>'Select', 'youtube'=> 'YouTube','vimeo'=>'Vimeo');  @endphp--}}
+{{--                        <div class="form-group">--}}
+{{--                            {{ Form::label('type', 'Video Type') }}--}}
+{{--                            {{ Form::select('type', $type, $video->type, array('class' => 'form-control')) }}--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                     <div class="col-6">
                         <div class="form-group">
                             {{ Form::label('image', 'Image') }}
@@ -69,6 +64,12 @@
                                 <input type="file" class="custom-file-input"  name="image">
                                 <label class="custom-file-label">Choose file</label>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="form-group">
+                            {{ Form::label('order', 'Order') }}
+                            {{ Form::text('order', $video->order, array('class' => 'form-control')) }}
                         </div>
                     </div>
                 </div>
