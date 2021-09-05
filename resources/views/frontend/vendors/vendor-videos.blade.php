@@ -5,7 +5,7 @@
     <div class="videos-main-col">
         @foreach($vendor_videos as $vendor_video)
             <div class="videe-item">
-                {{$vendor_video->url}}
+                {!! $vendor_video->url !!}
             </div>
         @endforeach
     </div>
