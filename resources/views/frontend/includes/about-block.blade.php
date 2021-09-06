@@ -10,20 +10,15 @@
                     <p class="head">About Us</p>
                 </div>
                 <div class="mt-2">
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                        galley of type and scrambled it to make a type specimen book.
-                    </p>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                        galley of type and scrambled it to make a type specimen book.
-                    </p>
+                    @if(setting('about_us'))
+                        {!! setting('about_us') !!}
+                    @endif
                 </div>
+                @if(setting('about_link'))
                 <div class="mt-4">
-                    <a href="#" class="btn btn-primary">READ MORE</a>
+                    <a href="{{setting('about_link')}}" class="btn btn-primary">READ MORE</a>
                 </div>
+                @endif
             </div>
         </div>
     </div>

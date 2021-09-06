@@ -255,6 +255,57 @@ return [
         ],
 
     ],
+    'home' => [
+        'title' => 'Homepage',
+        'desc'  => 'Contents',
+        'icon'  => 'fas fa-chart-line',
+
+        'elements' => [
+                        [
+                'type'  => 'text', // input fields type
+                'data'  => 'text', // data type, string, int, boolean
+                'name'  => 'homepage_title', // unique name for field
+                'label' => 'Homepage Title', // you know what label it is
+                'rules' => '', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => 'Turn your dream wedding into reality', // default value if you want
+            ],
+            [
+                'type'  => 'text', // input fields type
+                'data'  => 'text', // data type, string, int, boolean
+                'name'  => 'homepage_sub_title', // unique name for field
+                'label' => 'Homepage Sub Title', // you know what label it is
+                'rules' => '', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => 'Choose your wedding style with the best vendors all across India', // default value if you want
+            ],
+            [
+                'type'  => 'textarea', // input fields type
+                'data'  => 'string', // data type, string, int, boolean
+                'name'  => 'about_us', // unique name for field
+                'label' => 'About Us', // you know what label it is
+                'rules' => '', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => ' Wed.in is a platform for all Indian Brides and Grooms where we provide all wedding vendors at one place for easy interaction, making choices easy by choosing among the best. It saves your valuable time as you can see all the top rated vendors and make personal calls or meet them and discuss every detail with them all on a single platform.
+                            <br>
+                            <br>
+                            <br>
+                            We are a team of dedicated people who make every possible effort to provide you with the best services to satisfy you. We create memories for couples and make their wedding of dreams come true. We bring smiles to their faces by creating what they truly desire and make their special day marvelous.', // default value if you want
+                'help'     => '', // Help text for the input field.
+                'display'  => 'raw', // Help text for the input field.
+            ],
+            [
+                'type'  => 'text', // input fields type
+                'data'  => 'text', // data type, string, int, boolean
+                'name'  => 'about_link', // unique name for field
+                'label' => 'About Link', // you know what label it is
+                'rules' => '', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '', // default value if you want
+            ],
+        ],
+
+    ],
     'misc' => [
         'title' => 'Miscellaneous',
         'desc'  => 'Miscellaneous',

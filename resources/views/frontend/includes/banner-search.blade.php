@@ -5,8 +5,12 @@
                 <img src="images/slider.jpg" alt="" class="img-fluid">
                 <div class="banner-search-col">
                     <div class="search-header">
-                        <p class="head">Your Wedding, Your Way</p>
-                        <p class="text">Find the best wedding vendors with thousands of trusted reviews</p>
+                        @if(setting('homepage_title'))
+                            <p class="head">{{ setting('homepage_title') }}</p>
+                        @endif
+                        @if(setting('homepage_sub_title'))
+                            <p class="text">{{ setting('homepage_sub_title') }}</p>
+                        @endif
                     </div>
                     <div class="search-form-col text-center">
                         <form id="searchForm" action="">
