@@ -101,7 +101,7 @@
                 justify-content: center;
             }
             .gallery-action-col {
-                background: #fa4a70;
+                background: #581845;
             }
             .gallery-action-col a {
                 color: white;

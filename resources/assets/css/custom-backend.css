@@ -1,26 +1,26 @@
 .btn-primary {
-    background-color: #fa4a70;
-    border-color: #fa4a70;
+    background-color: #581845;
+    border-color: #581845;
 }
 
 .page-item.active .page-link {
-    background-color: #fa4a70;
-    border-color: #fa4a70;
+    background: #900c3f;
+    border-color: #900c3f;
 }
 
 .badge-primary {
-    background-color: #fa4a70;
+    background-color: #581845;
 }
 
 a {
-    color: #fa4a70;
+    color: #581845;
 }
 
 .text-primary {
-    color: #fa4a70 !important;
+    color: #581845 !important;
 }
 
 .c-sidebar .c-sidebar-nav-link:hover,
 .c-sidebar .c-sidebar-nav-dropdown-toggle:hover {
-    background: #fa4a70;
+    background: #581845;
 }

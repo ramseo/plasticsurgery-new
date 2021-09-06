@@ -40,14 +40,19 @@ a:focus {
 }
 
 .btn-primary {
-    background: #fa4a70;
-    border-color: #fa4a70;
+    background: #900c3f;
+    border-color: #900c3f;
 }
 
 .btn-primary:hover {
     background: white;
-    border-color: #fa4a70;
-    color: #fa4a70;
+    border-color: #900c3f;
+    color: #581845;
+}
+
+.btn-success{
+    background-color: #08540a;
+    border-color: #08540a;
 }
 
 .search-form-col .btn:hover {
@@ -59,12 +64,12 @@ a:focus {
 
 .btn-secondary:hover {
     color: #ffffff !important;
-    background-color: #fa4a70;
-    border-color: #fa4a70;
+    background-color: #581845;
+    border-color: #581845;
 }
 
 #header {
-    background: #fa4a70;
+    background: #581845;
     color: white;
 }
 
@@ -297,11 +302,11 @@ a:focus {
 }
 
 .footer-color-list a {
-    color: #fa4a70;
+    color: #581845;
 }
 
 .footer-color-list>li {
-    border-right: solid 1px #fa4a70;
+    border-right: solid 1px #581845;
     height: 15px;
     line-height: 15px;
     margin: 0 0 7px 0 !important;
@@ -336,15 +341,15 @@ strong {
 
 .footer-contact-list a {
     display: table;
-    border: solid 1px #fa4a70;
+    border: solid 1px #581845;
     padding: 10px 70px;
     border-radius: 70px;
-    color: #fa4a70;
+    color: #581845;
 }
 
 .footer-contact-list a:hover,
 .footer-contact-list a.active {
-    background: #fa4a70;
+    background: #581845;
     color: white;
 }
 
@@ -359,7 +364,7 @@ strong {
 .newsletter-group input,
 .newsletter-group .btn {
     height: 45px;
-    border-color: #fa4a70;
+    border-color: #581845;
 }
 
 .newsletter-group {
@@ -368,7 +373,7 @@ strong {
 }
 
 .newsletter-group .btn {
-    background: #fa4a70;
+    background: #581845;
     color: white;
     padding: 0 20px;
 }
@@ -469,7 +474,7 @@ strong {
 
 .vendor-card .price span {
     font-size: 20px;
-    color: #fa4a70;
+    color: #581845;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
@@ -567,7 +572,7 @@ strong {
     color: #fff;
     background-color: white;
     border-color: white;
-    color: #fa4a70 !important;
+    color: #581845 !important;
 }
 
 .vendor-location-links .btn {
@@ -589,7 +594,7 @@ strong {
 }
 
 .dropdown-item {
-    color: #fa4a70 !important;
+    color: #581845 !important;
 }
 
 .vendor-location-links p {
@@ -633,7 +638,7 @@ strong {
 }
 
 .common-heading .text a {
-    color: #fa4a70;
+    color: #581845;
 }
 
 .vendor-list-row {
@@ -715,7 +720,7 @@ strong {
 }
 
 .single-review a {
-    color: #fa4a70;
+    color: #581845;
 }
 
 .reviews-list-col {
@@ -755,7 +760,7 @@ strong {
 }
 
 .text-primary {
-    color: #fa4a70 !important;
+    color: #581845 !important;
 }
 
 .text-header .small-head {
@@ -827,7 +832,7 @@ strong {
 
 .vendor-detail-text-col .price {
     font-size: 30px;
-    color: #fa4a70;
+    color: #581845;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     margin: 0;
@@ -841,13 +846,17 @@ strong {
     margin-right: 60px !important;
 }
 
-.btn-success {
-    background-color: #3ad700;
-    border-color: #3ad700;
-}
-
 .vendor-detail-text-col .actions-ul {
     padding: 15px 0;
+}
+
+#about-us .img-col img {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#about-us .img-col {
+    overflow: hidden;
 }
 
 .vendor-detail-text-col .inner-col .vendor-rating {
@@ -1015,7 +1024,7 @@ strong {
 }
 
 .preloader {
-    background: #fa4a70 !important;
+    background: #581845 !important;
 }
 
 .nav-tabs .nav-link.active {
@@ -1045,7 +1054,7 @@ article ol li {
 }
 
 .breadcrumb-item.active {
-    color: #fa4a70 !important;
+    color: #581845 !important;
 }
 
 article p,
@@ -1102,7 +1111,7 @@ article blockquote {
 .header-title {
     font-size: 42px;
     line-height: 50px;
-    color: #fa4a70;
+    color: #581845;
     margin: 0;
     font-weight: 800;
 }
@@ -1249,7 +1258,7 @@ article blockquote {
 
 .alternate-text-group .text-primary {
     font-weight: 600;
-    color: #fa4a70;
+    color: #581845;
 }
 
 .blue-bg {
@@ -1441,8 +1450,8 @@ article blockquote {
 
 .custom-control-input:checked~.custom-control-label::before {
     color: white;
-    border-color: #fa4a70 !important;
-    background-color: #fa4a70;
+    border-color: #581845 !important;
+    background-color: #581845;
     box-shadow: none;
 }
 
@@ -1706,8 +1715,8 @@ article blockquote {
     opacity: 1;
 }
 .custom-box-label input:checked ~ .custom-box{
-    background-color: #fa4a70;
-    border-color: #fa4a70;
+    background-color: #581845;
+    border-color: #581845;
 }
 .filter-col-header {
     font-size: 17px;
@@ -1746,7 +1755,7 @@ article blockquote {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fa4a70;
+    background: #581845;
     border-radius: 50%;
     font-size: 30px;
     margin: 0px auto 10px;
@@ -1862,8 +1871,8 @@ article blockquote {
     justify-content: center;
     border-radius: 70px;
     background-color: white;
-    border: solid 1px #fa4a70;
-    color: #fa4a70;
+    border: solid 1px #581845;
+    color: #581845;
     font-size: 15px;
  }
  .for_service {
@@ -1875,7 +1884,7 @@ article blockquote {
     font-size: 13px;
  }
  .q-custom-label .q-box.active{
-    background-color: #fa4a70;
+    background-color: #581845;
     color: white;
  }
 
@@ -1890,12 +1899,12 @@ article blockquote {
 
 .show_details {
     cursor: pointer;
-    color: #fa4a70;
+    color: #581845;
 }
 
 .quotation-header {
     font-size: 18px;
-    color: #fa4a70;
+    color: #581845;
     font-weight: 500;
     border-bottom: solid 1px #e0e0e0;
     padding-bottom: 10px;
@@ -1923,7 +1932,7 @@ article blockquote {
 .asRange .asRange-pointer {
     width: 18px !important;
     height: 18px !important;
-    background-color: #fa4a70 !important;
+    background-color: #581845 !important;
     border-radius: 50% !important;
 }
 
@@ -1933,11 +1942,11 @@ article blockquote {
     bottom: 0px;
     left: 0px;
     content: "";
-    background: #fa4a70;
+    background: #581845;
 }
 
 .asRange .asRange-pointer:after { 
-    background: #fa4a70;
+    background: #581845;
 }
 
 .asRange .asRange-pointer .asRange-tip {
@@ -1946,8 +1955,8 @@ article blockquote {
     font-family: inherit;
     font-size: 12px;
     color: #fff;
-    background-color: #fa4a70;
-    border: 1px solid #fa4a70;
+    background-color: #581845;
+    border: 1px solid #581845;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1955,7 +1964,7 @@ article blockquote {
 }
 
 .asRange .asRange-pointer .asRange-tip:before {
-    background-color: #fa4a70;
+    background-color: #581845;
 }
 
 .quotation-vendor .img-li {
@@ -2001,7 +2010,7 @@ article blockquote {
 }
 
 .rateit .rateit-selected {
-    color: #fa4a70;
+    color: #581845;
 }
 
 .rateit-font .rateit-range > div, .rateit-font .rateit-range > span {
