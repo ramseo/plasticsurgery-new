@@ -4,6 +4,39 @@
 
 @section('content')
 
+<section id="page-banner">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="banner-container">
+                    @php
+                        $vendor_banner = asset('images/vendor-banner.jpg');
+                        if($type->banner){
+                            if(file_exists( public_path().'/storage/type/banner/'. $type->banner )){
+                                $vendor_banner = asset('storage/type/banner/'.$type->banner);
+                            }
+                        }
+                    @endphp
+                    <img src="{{$vendor_banner}}" alt="" class="img-fluid">
+                    <div class="banner-search-col">
+                        <div class="search-header">
+                            <p class="head">{{$type->name}}</p>
+                            <p class="text">Find best {{$type->name}} in your city</p>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{$type->name}}</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="breadcrumb-section">
         <div class="container-fluid">
             <div class="row">
