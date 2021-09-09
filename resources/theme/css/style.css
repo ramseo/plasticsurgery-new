@@ -502,6 +502,7 @@ strong {
 
 .single-category-col a {
     color: #333;
+    display: block;
 }
 
 .single-category-col .head {
@@ -1583,7 +1584,7 @@ article blockquote {
 }
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 15px 16px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -1592,8 +1593,8 @@ article blockquote {
 .dropdown.menuDropDown:hover .dropdown-content {display: block;}
 .dropdown.menuDropDown:hover .dropbtn.menuDropBtn {background-color: #3e8e41;}
 .menuDropDown a img {
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: auto;
     border-radius: 50%;
     margin-right: 10px;
 }

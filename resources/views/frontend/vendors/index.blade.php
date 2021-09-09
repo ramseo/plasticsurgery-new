@@ -23,8 +23,8 @@
                     @php
                         $vendor_banner = asset('images/vendor-banner.jpg');
                         if($type->banner){
-                            if(file_exists( public_path().'/storage/vendor/type/banner/'. $type->banner )){
-                                $vendor_banner = asset('storage/vendor/type/banner/'.$type->banner);
+                            if(file_exists( public_path().'/storage/type/banner/'. $type->banner )){
+                                $vendor_banner = asset('storage/type/banner/'.$type->banner);
                             }
                         }
                     @endphp

@@ -14,21 +14,24 @@
                 @foreach($categories as $type)
                     @php $cat_count++; @endphp
                     <div class="single-category-col col-6">
-                        <div class="inner inner_{{$cat_count}}" style="background-color: {{$type->colour}};">
-                            <style>
-                                .inner_<?= $cat_count ?> .img-col::after {
-                                    background-color: <?= $type->colour ?> !important
-                                }
-                            </style>
-                            <div class="img-col">
-                                <a href="#" class="city-modal-link" data-link-type="{{$type->slug}}" data-toggle="modal" data-target="#cityModal">
-                                    <img src="{{asset('storage/type/image/'.$type->image)}}" alt="" class="img-fluid">
-                                    <div class="text-col">
-                                        <p class="head">{{$type->name}}</p>
-                                    </div>
-                                </a>
+                        <a href="{{url('/'.$type->slug)}}" class="">
+                        <!-- <a href="#" class="city-modal-link" data-link-type="{{$type->slug}}" data-toggle="modal" data-target="#cityModal"> -->
+                            <div class="inner inner_{{$cat_count}}" style="background-color: {{$type->colour}};">
+                                <style>
+                                    .inner_<?= $cat_count ?> .img-col::after {
+                                        background-color: <?= $type->colour ?> !important
+                                    }
+                                </style>
+                                <div class="img-col">
+                                    
+                                        <img src="{{asset('storage/type/image/'.$type->image)}}" alt="" class="img-fluid">
+                                        <div class="text-col">
+                                            <p class="head">{{$type->name}}</p>
+                                        </div>
+                                    
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 @endforeach
             </div>
