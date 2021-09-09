@@ -1055,7 +1055,7 @@ article ol li {
 }
 
 .breadcrumb-item.active {
-    color: #581845 !important;
+    font-weight: 700;
 }
 
 article p,

@@ -37,21 +37,6 @@
         </div>
     </section>
 
-    <section id="breadcrumb-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{$type->name}}</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </section>
-
     @if(isset($cities))
         <section id="city-section">
             <div class="container-fluid">
