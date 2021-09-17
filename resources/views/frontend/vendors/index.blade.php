@@ -172,7 +172,7 @@
     @include('frontend.includes.featured-vendors')
 
     @php
-        $latestReviews = getDataArray('vendor_reviews', 'type_id', $type->id);
+        $latestReviews = getDataArray('vendor_reviews', array('type_id'=> $type->id, 'city_id' => $city->id));
     @endphp
 
     @if(count($latestReviews) > 0)
