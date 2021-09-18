@@ -93,9 +93,10 @@
                             @auth
                                 <input id="reviewUserId" type="hidden" value="{{Auth::user()->id}}">
                             @endauth
-                            <input id="reviewVendorTypeId" type="hidden" value="{{$vendor_details->type_id}}">
-                            <input id="reviewVendorId" type="hidden" value="{{$vendor_details->id}}">
-                            <input type="submit" class="btn btn-primary" value="Submit">
+                                <input id="reviewVendorTypeId" type="hidden" value="{{$vendor_details->type_id}}">
+                                <input id="reviewVendorCityId" type="hidden" value="{{$vendor_details->city_id}}">
+                                <input id="reviewVendorId" type="hidden" value="{{$vendor_details->id}}">
+                                <input type="submit" class="btn btn-primary" value="Submit">
                         </div>
                     </form>
                 </div>

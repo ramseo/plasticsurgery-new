@@ -190,6 +190,7 @@
                         'user_id': $('#reviewUserId').val(),
                         'vendor_id': $('#reviewVendorId').val(),
                         'type_id': $('#reviewVendorTypeId').val(),
+                        'city_id': $('#reviewVendorCityId').val(),
                         'title': $('#reviewTitle').val(),
                         'rating': $('#review-rating-hidden').val(),
                         'description': $('#reviewDescription').val()

@@ -16,6 +16,7 @@ class CreateVendorReviewsTable extends Migration
         Schema::create('vendor_reviews', function (Blueprint $table) {
             $table->id();
             $table->integer('type_id');
+            $table->integer('city_id');
             $table->bigInteger('vendor_id')->unsigned();
             $table->foreign('vendor_id')->references('id')->on('vendors')->onDelete('cascade');
             $table->integer('user_id')->unsigned()->nullable();

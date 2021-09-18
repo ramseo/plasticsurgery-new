@@ -123,6 +123,7 @@ class VendorController extends Controller
             $vendor->user_id = $data['user_id'];
             $vendor->vendor_id = $data['vendor_id'];
             $vendor->type_id = $data['type_id'];
+            $vendor->city_id = $data['city_id'];
             $vendor->rating = $data['rating'];
             $vendor->description = $data['description'];
             $vendor->save();
