@@ -181,7 +181,7 @@
                 url: '{{ route('vendor.image.store', $album->id) }}',
                 acceptedFiles: ".jpeg,.jpg,.png,.gif",
                 addRemoveLinks: true,
-                maxFilesize: 8,
+                maxFilesize: 1000,
                 headers: {
                     'X-CSRF-TOKEN': "{{ csrf_token() }}"
                 },

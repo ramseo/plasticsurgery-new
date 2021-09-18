@@ -57,15 +57,15 @@
 {{--                            {{ Form::select('type', $type, null, array('class' => 'form-control')) }}--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
-                    <div class="col-6">
-                        <div class="form-group">
-                            {{ Form::label('image', 'Image') }}
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input"  name="image">
-                                <label class="custom-file-label">Choose file</label>
-                            </div>
-                        </div>
-                    </div>
+{{--                    <div class="col-6">--}}
+{{--                        <div class="form-group">--}}
+{{--                            {{ Form::label('image', 'Image') }}--}}
+{{--                            <div class="custom-file">--}}
+{{--                                <input type="file" class="custom-file-input"  name="image">--}}
+{{--                                <label class="custom-file-label">Choose file</label>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                     <div class="col-6">
                         <div class="form-group">
                             {{ Form::label('order', 'Order') }}

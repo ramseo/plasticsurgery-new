@@ -306,6 +306,33 @@ return [
         ],
 
     ],
+    'vendor' => [
+        'title' => 'Vendor',
+        'desc'  => 'Vendor Config',
+        'icon'  => 'fas fa-chart-line',
+
+        'elements' => [
+            [
+                'type'  => 'text', // input fields type
+                'data'  => 'text', // data type, string, int, boolean
+                'name'  => 'vendor_max_album', // unique name for field
+                'label' => 'how many album require.', // you know what label it is
+                'rules' => '', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '', // default value if you want
+            ],
+            [
+                'type'  => 'text', // input fields type
+                'data'  => 'text', // data type, string, int, boolean
+                'name'  => 'vendor_max_image_album', // unique name for field
+                'label' => 'how many image require in each album.', // you know what label it is
+                'rules' => '', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '', // default value if you want
+            ],
+        ],
+
+    ],
     'misc' => [
         'title' => 'Miscellaneous',
         'desc'  => 'Miscellaneous',
