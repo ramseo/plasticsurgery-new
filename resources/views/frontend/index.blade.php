@@ -7,7 +7,7 @@
         $cities = getDataArray('cities');
         $types = getDataArray('types');
     @endphp
-    
+
     <!-- Banner search -->
     @include('frontend.includes.banner-search')
 
