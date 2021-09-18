@@ -27,6 +27,21 @@
             <div class="col">
                 {{ Form::open(array('route' =>'vendor.profile.update', 'files' => true,'id' => 'profileForm')) }}
                 <div class="row">
+                    <div class="col-2" >
+                        @php
+                            $vendor_profile_img = asset('img/default-vendor.jpg');
+                            if($vendor->image){
+                                if(file_exists( public_path().'/storage/vendor/profile/'. $vendor->image )){
+                                    $vendor_profile_img = asset('storage/vendor/profile/'.$vendor->image);
+                                }
+                            }
+                        @endphp
+                        {{--                                @if ($user->userImages->isEmpty())--}}
+                        <img id="imgPreview" src="{{ $vendor_profile_img }}" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row">
+
                     <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('business_name', 'Business Name') }} {!! fielf_required("required") !!}

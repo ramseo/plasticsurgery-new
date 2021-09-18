@@ -20,6 +20,8 @@
     $photos = albumImages($albums);
     if($profile == 1 && $services == 1 && $photos ==1){
         setData('vendors',array('status'=>1),array('user_id'=>auth()->user()->id));
+    }else{
+         setData('vendors',array('status'=>0),array('user_id'=>auth()->user()->id));
     }
 
 

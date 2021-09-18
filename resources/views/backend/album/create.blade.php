@@ -40,7 +40,7 @@
                 {{ html()->form('POST', route("vendor.album.store"))->class('form')->open() }}
                 {{ Form::hidden('vendor_id', $vendor->id) }}
                 <div class="row">
-                    <div class="col-12 col-md-8">
+                    <div class="col-12 col-md-4">
                         <div class="form-group">
                             {{ Form::label('name', 'Name') }} {!! fielf_required("required") !!}
                             {{ Form::text('name', null, array('class' => 'form-control')) }}
@@ -53,27 +53,26 @@
                             {{ Form::text('order', null, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 ">
-                        <div class="form-group">
-                            {{ Form::label('description', 'Description') }}
-                            {{ Form::text('description', null, array('class' => 'form-control')) }}
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-3">
+                    <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('status', 'Status?') }}
                             <br>
                             Yes  {{ Form::radio('status', 1) }}
                             No {{ Form::radio('status', 0) }}
-{{--                            Yes  {{ Form::radio('status', 1, $vendor->travel_to_other_cities == 1?  true : false) }}--}}
-{{--                            No {{ Form::radio('status', 0, $vendor->travel_to_other_cities == 0 ? true : false) }}--}}
+                            {{--                            Yes  {{ Form::radio('status', 1, $vendor->travel_to_other_cities == 1?  true : false) }}--}}
+                            {{--                            No {{ Form::radio('status', 0, $vendor->travel_to_other_cities == 0 ? true : false) }}--}}
                         </div>
                     </div>
                 </div>
+{{--                <div class="row">--}}
+{{--                    <div class="col-12 ">--}}
+{{--                        <div class="form-group">--}}
+{{--                            {{ Form::label('description', 'Description') }}--}}
+{{--                            {{ Form::text('description', null, array('class' => 'form-control')) }}--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">

@@ -221,6 +221,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
     Route::post('album/store/', 'AlbumController@store')->name('album.store');
     Route::get('album/edit/{id}', 'AlbumController@edit')->name('album.edit');
     Route::PATCH('album/update/{id}', 'AlbumController@update')->name('album.update');
+    Route::get('album/delete/{id}', 'AlbumController@delete')->name('album.delete');
     Route::resource("album", "AlbumController");
 
     Route::get('video/', 'VideoController@index')->name('video.index');

@@ -57,6 +57,26 @@ function getDataCustom($table, $column=null, $custom=null, $results=null){
     return false;
 }
 
+function rrmdir($dir)
+{
+    if (is_dir($dir))
+    {
+        $objects = scandir($dir);
+
+        foreach ($objects as $object)
+        {
+            if ($object != '.' && $object != '..')
+            {
+                if (filetype($dir.'/'.$object) == 'dir') {rrmdir($dir.'/'.$object);}
+                else {unlink($dir.'/'.$object);}
+            }
+        }
+
+        reset($objects);
+        rmdir($dir);
+    }
+}
+
 function setData($table, $column = null, $where = null)
 {
     $data = DB::table($table);

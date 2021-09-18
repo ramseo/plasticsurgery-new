@@ -23,14 +23,14 @@
             </div>
             <div class="col-4">
 
-                <div class="float-right">
-                    <a href='{{ route("vendor.album.create")}}'
-                       class='btn btn-success btn-sm'
-                       data-toggle="tooltip"
-                       title="{{__('Create')}}">
-                        <i class="fas fa-plus-circle"></i>
-                    </a>
-                </div>
+{{--                <div class="float-right">--}}
+{{--                    <a href='{{ route("vendor.album.create")}}'--}}
+{{--                       class='btn btn-success btn-sm'--}}
+{{--                       data-toggle="tooltip"--}}
+{{--                       title="{{__('Create')}}">--}}
+{{--                        <i class="fas fa-plus-circle"></i>--}}
+{{--                    </a>--}}
+{{--                </div>--}}
             </div>
         </div>
 {{--    <div class="row">--}}
