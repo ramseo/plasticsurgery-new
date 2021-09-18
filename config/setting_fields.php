@@ -40,7 +40,7 @@ return [
             'data'  => 'string', // data type, string, int, boolean
             'name'  => 'copyright_text', // unique name for field
             'label' => 'Copyright Text', // you know what label it is
-            'rules' => 'required', // validation rule of laravel
+            'rules' => '', // validation rule of laravel
             'class' => '', // any class for input
             'value' => '', // default value if you want
         ],
@@ -57,7 +57,7 @@ return [
                 'data'  => 'string', // data type, string, int, boolean
                 'name'  => 'email', // unique name for field
                 'label' => 'Email', // you know what label it is
-                'rules' => 'required|email', // validation rule of laravel
+                'rules' => '', // validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '', //info@example.com default value if you want
             ],
@@ -66,7 +66,7 @@ return [
                 'data'  => 'string', // data type, string, int, boolean
                 'name'  => 'support_email', // unique name for field
                 'label' => 'Support Email', // you know what label it is
-                'rules' => 'required|email', // validation rule of laravel
+                'rules' => '', // validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '', //info@example.com default value if you want
             ],
@@ -75,7 +75,7 @@ return [
                 'data'  => 'string', // data type, string, int, boolean
                 'name'  => 'vendor_support_email', // unique name for field
                 'label' => 'Support Email (For Vendors)', // you know what label it is
-                'rules' => 'required|email', // validation rule of laravel
+                'rules' => '', //required|email validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '', //info@example.com default value if you want
             ],
@@ -84,7 +84,7 @@ return [
                 'data'  => 'string', // data type, string, int, boolean
                 'name'  => 'support_telephone', // unique name for field
                 'label' => 'Support Phone', // you know what label it is
-                'rules' => 'required', // validation rule of laravel
+                'rules' => '', // validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '', //info@example.com default value if you want
             ],
@@ -93,7 +93,7 @@ return [
                 'data'  => 'string', // data type, string, int, boolean
                 'name'  => 'vendor_support_telephone', // unique name for field
                 'label' => 'Support Phone (For Vendors)', // you know what label it is
-                'rules' => 'required', // validation rule of laravel
+                'rules' => '', // validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '', //info@example.com default value if you want
             ],
@@ -111,7 +111,7 @@ return [
                 'data'  => 'string', // data type, string, int, boolean
                 'name'  => 'facebook_url', // unique name for field
                 'label' => 'Facebook Page URL', // you know what label it is
-                'rules' => 'required|nullable|max:191', // validation rule of laravel
+                'rules' => '', // required|nullable|max:191 validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '#', // default value if you want
             ],
@@ -120,7 +120,7 @@ return [
                 'data'  => 'string', // data type, string, int, boolean
                 'name'  => 'twitter_url', // unique name for field
                 'label' => 'Twitter Profile URL', // you know what label it is
-                'rules' => 'required|nullable|max:191', // validation rule of laravel
+                'rules' => '', // required|nullable|max:191 validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '#', // default value if you want
             ],
@@ -129,7 +129,7 @@ return [
                 'data'  => 'string', // data type, string, int, boolean
                 'name'  => 'instagram_url', // unique name for field
                 'label' => 'Instagram Account URL', // you know what label it is
-                'rules' => 'required|nullable|max:191', // validation rule of laravel
+                'rules' => '', //required|nullable|max:191 validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '#', // default value if you want
             ],
@@ -147,7 +147,7 @@ return [
                 'data'  => 'string', // data type, string, int, boolean
                 'name'  => 'youtube_url', // unique name for field
                 'label' => 'Youtube Channel URL', // you know what label it is
-                'rules' => 'required|nullable|max:191', // validation rule of laravel
+                'rules' => '', //required|nullable|max:191 validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '#', // default value if you want
             ],
@@ -156,7 +156,7 @@ return [
                 'data'  => 'string', // data type, string, int, boolean
                 'name'  => 'pinterest_url', // unique name for field
                 'label' => 'Pinterest', // you know what label it is
-                'rules' => 'required|nullable|max:191', // validation rule of laravel
+                'rules' => '', //required|nullable|max:191 validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '#', // default value if you want
             ],
@@ -174,7 +174,7 @@ return [
                 'data'  => 'text', // data type, string, int, boolean
                 'name'  => 'meta_site_name', // unique name for field
                 'label' => 'Meta Site Name', // you know what label it is
-                'rules' => 'required', // validation rule of laravel
+                'rules' => '', // validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '', // default value if you want
             ],
@@ -183,7 +183,7 @@ return [
                 'data'  => 'text', // data type, string, int, boolean
                 'name'  => 'meta_description', // unique name for field
                 'label' => 'Meta Description', // you know what label it is
-                'rules' => 'required', // validation rule of laravel
+                'rules' => '', // validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '', // default value if you want
             ],
@@ -192,7 +192,7 @@ return [
                 'data'  => 'text', // data type, string, int, boolean
                 'name'  => 'meta_keyword', // unique name for field
                 'label' => 'Meta Keyword', // you know what label it is
-                'rules' => 'required', // validation rule of laravel
+                'rules' => '', // validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '', // default value if you want
             ],
@@ -201,7 +201,7 @@ return [
                 'data'  => 'text', // data type, string, int, boolean
                 'name'  => 'meta_image', // unique name for field
                 'label' => 'Meta Image', // you know what label it is
-                'rules' => 'required', // validation rule of laravel
+                'rules' => '', // validation rule of laravel
                 'class' => '', // any class for input
                 'value' => '', //img/default_banner.jpg default value if you want
             ],

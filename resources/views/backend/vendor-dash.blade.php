@@ -1,12 +1,11 @@
 @php
-
     function albumImages($albums){
      $status = false;
-      if(count($albums) >= 2){
+      if(count($albums) >= setting('vendor_max_album')){
           $status = true;
             foreach ($albums as $album){
               $images = getDataArray('images', 'album_id', $album->id);
-              $status = (count($images) >= 1);
+              $status = (count($images) >= setting('vendor_max_image_album'));
             }
         }
         return $status;
@@ -19,15 +18,22 @@
     $profile = ($vendor->business_name != '' && $vendor->image != '' && $vendor->price != '' && $vendor->label != '' && $vendor->business_address != '' );
     $services = (count($prices) >= 3);
     $photos = albumImages($albums);
+    if($profile == 1 && $services == 1 && $photos ==1){
+        setData('vendors',array('status'=>1),array('user_id'=>auth()->user()->id));
+    }
 
 
 @endphp
 
-@if($vendor->status == 0)
+
     <div class="card">
         <div class="card-header">
             <h2>Hey {{$vendor->business_name }}!</h2>
-            <h5 class="card-title m-0">You are now following steps away from submitting your profile for approval:</h5>
+            @if($vendor->status == 0)
+                <h5 class="card-title m-0">You are now following steps away from submitting your profile for approval:</h5>
+            @else
+                <h5 class="card-title m-0">Your profile Approved.</h5>
+            @endif
         </div>
         <div class="card-body">
             <ol class="m-0 list-unstyled p-0" style="font-size: 16px;">
@@ -53,4 +59,4 @@
             </ol>
         </div>
     </div>
-@endif
+

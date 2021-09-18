@@ -57,6 +57,17 @@ function getDataCustom($table, $column=null, $custom=null, $results=null){
     return false;
 }
 
+function setData($table, $column = null, $where = null)
+{
+    $data = DB::table($table);
+    if($where!= null):
+        $data->where($where);
+        $data->update($column);
+    else:
+        $data->insert($column);
+    endif;
+}
+
 function getLatestBlogs()
 {
     $data = DB::table('posts')->take(5)->orderBy('id', 'desc');
