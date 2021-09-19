@@ -229,6 +229,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
     Route::post('video/store/', 'VideoController@store')->name('video.store');
     Route::get('video/edit/{id}', 'VideoController@edit')->name('video.edit');
     Route::PATCH('video/update/{id}', 'VideoController@update')->name('video.update');
+    Route::get('video/delete/{id}', 'VideoController@delete')->name('video.delete');
     Route::resource("video", "VideoController");
 
     Route::get('image/{album}', 'ImageController@index')->name('image.index');

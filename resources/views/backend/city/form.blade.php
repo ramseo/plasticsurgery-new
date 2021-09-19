@@ -47,6 +47,17 @@
                 <label class="custom-file-label">Choose file</label>
             </div>
         </div>
+        <div>
+            @php
+                $vendor_icon_img = asset('img/default-vendor.jpg');
+                if($city->icon){
+                    if(file_exists( public_path().'/storage/city/icon/'. $city->icon )){
+                        $vendor_icon_img = asset('storage/city/icon/'.$city->icon);
+                    }
+                }
+            @endphp
+            <img id="imgPreview" src="{{ $vendor_icon_img }}" alt="" class="img-fluid">
+        </div>
     </div>
     <div class="col-6">
         <div class="form-group">
@@ -55,6 +66,17 @@
                 <input type="file" class="custom-file-input"  name="image">
                 <label class="custom-file-label">Choose file</label>
             </div>
+        </div>
+        <div >
+            @php
+                $vendor_image = asset('img/default-vendor.jpg');
+                if($city->image){
+                    if(file_exists( public_path().'/storage/city/image/'. $city->image )){
+                        $vendor_image = asset('storage/city/image/'.$city->image);
+                    }
+                }
+            @endphp
+            <img id="imgPreview" src="{{ $vendor_image }}" alt="" class="img-fluid">
         </div>
     </div>
 </div>

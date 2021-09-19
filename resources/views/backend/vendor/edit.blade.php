@@ -40,6 +40,20 @@
                 {{ Form::open(array('method' => 'post','url' => route('backend.vendor.update', $vendor->id) , 'files' => true,'id' => 'profileForm')) }}
                 {{ Form::hidden('id', $vendor->id) }}
                 <div class="row">
+                    <div class="col-2" >
+                        @php
+                            $vendor_profile_img = asset('img/default-vendor.jpg');
+                            if($vendor->image){
+                                if(file_exists( public_path().'/storage/vendor/profile/'. $vendor->image )){
+                                    $vendor_profile_img = asset('storage/vendor/profile/'.$vendor->image);
+                                }
+                            }
+                        @endphp
+                        {{--                                @if ($user->userImages->isEmpty())--}}
+                        <img id="imgPreview" src="{{ $vendor_profile_img }}" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-6">
                         <div class="form-group">
                             {{ Form::label('business_name', 'Business Name') }}

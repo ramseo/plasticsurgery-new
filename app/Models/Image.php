@@ -6,13 +6,13 @@ use App\Models\Traits\HasHashedMediaTrait;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+//use Illuminate\Database\Eloquent\SoftDeletes;
 use Auth;
 
 class Image extends Model
 {
     use HasFactory;
-    use SoftDeletes;
+//    use SoftDeletes;
     use HasHashedMediaTrait;
     protected $guarded = [
         'id',

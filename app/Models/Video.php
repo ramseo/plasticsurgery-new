@@ -2,18 +2,16 @@
 
 namespace App\Models;
 
-use App\Models\Traits\HasHashedMediaTrait;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+//use Illuminate\Database\Eloquent\SoftDeletes;
 use Auth;
 
 class Video extends Model
 {
     use HasFactory;
-    use SoftDeletes;
-    use HasHashedMediaTrait;
+//    use SoftDeletes;
     protected $guarded = [
         'id',
         'updated_at',

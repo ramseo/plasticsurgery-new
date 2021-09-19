@@ -22,6 +22,7 @@ class VideoController extends Controller
                 ->addIndexColumn()
                 ->addColumn('action', function ($video) {
                     $btn = '<a href="' . route("vendor.video.edit", $video->id) . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"> </i></a> ';
+                    $btn .= '<a href="' . route("vendor.video.delete", $video->id) . '" class="btn btn-sm btn-danger mt-1" data-toggle="tooltip" title="Album Delete"><i class="fas fa-trash"> </i></a>';
                     return $btn;
                 })
                 ->rawColumns(['action'])
@@ -100,14 +101,11 @@ class VideoController extends Controller
         return redirect("vendor/video");
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $image = Video::findorfail($id);
+        $image->delete();
+        Flash::success("<i class='fas fa-check'></i> Video Deleted")->important();
+        return redirect("vendor/video");
     }
 }

@@ -103,7 +103,7 @@ class AlbumController extends Controller
      */
     public function delete($id)
     {
-        // Storage::deleteDirectory('album/'.$id);
+//        Storage::deleteDirectory('album/'.$id);
         rrmdir(storage_path('app/public/album/'.$id));
         Album::where(['id' => $id])->delete();
         Image::where(['album_id' => $id])->delete();

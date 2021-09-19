@@ -59,6 +59,18 @@
                 <label class="custom-file-label">Choose file</label>
             </div>
         </div>
+        <div>
+            @php
+                $vendor_icon_img = asset('img/default-vendor.jpg');
+                if($type->icon){
+                    if(file_exists( public_path().'/storage/type/icon/'. $type->icon )){
+                        $vendor_icon_img = asset('storage/type/icon/'.$type->icon);
+                    }
+                }
+            @endphp
+            <img id="imgPreview" src="{{ $vendor_icon_img }}" alt="" class="img-fluid">
+        </div>
+
     </div>
     <div class="col-4">
         <div class="form-group">
@@ -68,6 +80,17 @@
                 <label class="custom-file-label">Choose file</label>
             </div>
         </div>
+        <div >
+            @php
+                $vendor_image = asset('img/default-vendor.jpg');
+                if($type->image){
+                    if(file_exists( public_path().'/storage/type/image/'. $type->image )){
+                        $vendor_image = asset('storage/type/image/'.$type->image);
+                    }
+                }
+            @endphp
+            <img id="imgPreview" src="{{ $vendor_image }}" alt="" class="img-fluid">
+        </div>
     </div>
     <div class="col-4">
         <div class="form-group">
@@ -76,6 +99,17 @@
                 <input type="file" class="custom-file-input"  name="banner">
                 <label class="custom-file-label">Choose file</label>
             </div>
+        </div>
+        <div >
+            @php
+                $vendor_banner_img = asset('img/default-vendor.jpg');
+                if($type->banner){
+                    if(file_exists( public_path().'/storage/type/banner/'. $type->banner )){
+                        $vendor_banner_img = asset('storage/type/banner/'.$type->banner);
+                    }
+                }
+            @endphp
+            <img id="imgPreview" src="{{ $vendor_banner_img }}" alt="" class="img-fluid">
         </div>
     </div>
 

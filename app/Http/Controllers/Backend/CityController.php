@@ -188,12 +188,12 @@ class CityController extends Controller
 
         $data = $request->all();
         if($request->file('icon')){
-            $file_icon = fileUpload($request, 'icon','city/');
+            $file_icon = fileUpload($request, 'icon','city/icon');
             $data = array_merge($data,['icon'=> $file_icon]);
         }
 
         if($request->file('image')){
-            $file_image = fileUpload($request, 'image','city/');
+            $file_image = fileUpload($request, 'image','city/image');
             $data = array_merge($data,['image'=> $file_image]);
         }
 
@@ -289,12 +289,12 @@ class CityController extends Controller
 
         $data = $request->all();
         if($request->file('icon')){
-            $file_icon = fileUpload($request, 'icon','vendor/type/icon/');
+            $file_icon = fileUpload($request, 'icon','city/icon/');
             $data = array_merge($data,['icon'=> $file_icon]);
         }
 
         if($request->file('image')){
-            $file_image = fileUpload($request, 'image','vendor/type/image/');
+            $file_image = fileUpload($request, 'image','city/image/');
             $data = array_merge($data,['image'=> $file_image]);
         }
 
