@@ -54,4 +54,4 @@ if(!isset($meta_page_type)){
 
     <!--canonical link-->
     <link type="text/plain" rel="author" href="{{asset('humans.txt')}}" />
-    <link rel="canonical" href="{{url()->full()}}">
+    <link rel="canonical" href="{{url()->current()}}">
