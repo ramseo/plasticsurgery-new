@@ -119,6 +119,7 @@ class VendorController extends Controller
         ]);
         if ($validator->passes()) {
             $data = $request->all();
+            // dd($data);
             $vendor = new VendorReview();
             $vendor->user_id = $data['user_id'];
             $vendor->vendor_id = $data['vendor_id'];

@@ -173,7 +173,7 @@
 
     @php
         $latestReviews = array();
-          // $latestReviews = getDataArray('vendor_reviews', array('type_id'=> $type->id, 'city_id' => $city->id));
+        $latestReviews = getDataArray('vendor_reviews', array('type_id'=> $type->id, 'city_id' => $city->id));
     @endphp
 
     @if(count($latestReviews) > 0)
