@@ -39,7 +39,17 @@
 <section class="profile-form-section">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 mx-auto">
+            <div class="col-xs-12 col-sm-3">
+                <div class="menu-menu-col">
+                    <ul class="list-unstyled">
+                        <li><a href="{{ route('frontend.users.profileEdit', auth()->user()->id) }}"><i class="fa fa-user"></i> My Profile</a></li>
+                        <li><a href="{{ route('frontend.users.quotations', auth()->user()->id) }}"><i class="far fa-file-alt"></i> Quotations</a></li>
+                        <li><a class="active" href="{{ route('frontend.users.changePassword', auth()->user()->id) }}"><i class="fa fa-key"></i> Change Password</a></li>
+                        <li><a href="{{ route('logout') }}"><i class="fas fa-lock"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-9">
                 <div class="card bg-white border-light shadow-soft flex-md-row no-gutters p-4">
                     <div class="card-body d-flex flex-column justify-content-between col-auto py-4 p-lg-5">
                         <div class="row mt-4 mb-4">

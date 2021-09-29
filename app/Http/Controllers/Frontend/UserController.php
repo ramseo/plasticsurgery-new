@@ -11,6 +11,7 @@ use App\Models\Role;
 use App\Models\User;
 use App\Models\Userprofile;
 use App\Models\UserProvider;
+use App\Models\Quotation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -422,5 +423,71 @@ class UserController extends Controller
                 return redirect()->back();
             }
         }
+    }
+
+    public function getUserQuotations($id)
+    {
+        $module_title = $this->module_title;
+        $module_name = $this->module_name;
+        $module_path = $this->module_path;
+        $module_icon = $this->module_icon;
+        $module_model = $this->module_model;
+        $module_name_singular = Str::singular($module_name);
+
+        $module_action = 'My Quotations';
+
+        $page_heading = ucfirst($module_title);
+        $title = $page_heading.' '.ucfirst($module_action);
+
+        if (!auth()->user()->can('edit_users')) {
+            $id = auth()->user()->id;
+        }
+
+        if ($id != auth()->user()->id) {
+            return redirect()->route('frontend.users.profile', $id);
+        }
+
+        // $$module_name_singular = $module_model::findOrFail($id);
+        $quotations = Quotation::where('user_id', $id)->get();
+
+        $body_class = 'profile-page';
+
+        return view(
+            "frontend.$module_name.quotations",
+            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', 'quotations', 'body_class')
+        );
+    }
+
+    public function getUserQuotation($id, $quotation_id)
+    {
+        $module_title = $this->module_title;
+        $module_name = $this->module_name;
+        $module_path = $this->module_path;
+        $module_icon = $this->module_icon;
+        $module_model = $this->module_model;
+        $module_name_singular = Str::singular($module_name);
+
+        $module_action = 'Quotation Details';
+
+        $page_heading = ucfirst($module_title);
+        $title = $page_heading.' '.ucfirst($module_action);
+
+        if (!auth()->user()->can('edit_users')) {
+            $id = auth()->user()->id;
+        }
+
+        if ($id != auth()->user()->id) {
+            return redirect()->route('frontend.users.profile', $id);
+        }
+
+        // $$module_name_singular = $module_model::findOrFail($id);
+        $quotations = Quotation::where('id', $quotation_id)->first();
+
+        $body_class = 'profile-page';
+
+        return view(
+            "frontend.$module_name.quotations-details",
+            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', 'quotations', 'body_class')
+        );
     }
 }

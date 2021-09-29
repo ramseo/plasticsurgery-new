@@ -16,6 +16,7 @@ use Illuminate\Http\Response;
 use App\Mail\QuotationUser;
 use App\Mail\QuotationAdmin;
 use Illuminate\Support\Facades\Mail;
+use Auth;
 
 class VendorController extends Controller
 {
@@ -164,6 +165,7 @@ class VendorController extends Controller
 
             $vendor = new Quotation();
             $vendor->vendor_id = $data['vendor_id'];
+            $vendor->user_id = Auth::user()->id;
             $vendor->city_id = $data['city'];
             $vendor->name = $data['name'];
             $vendor->email = $data['email'];

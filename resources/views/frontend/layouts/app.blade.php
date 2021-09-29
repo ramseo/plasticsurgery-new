@@ -22,7 +22,8 @@
 
     @stack('before-styles')
 
-    <link rel="stylesheet" href="{{ mix('css/wed.css') }}">
+    <!-- <link rel="stylesheet" href="{{ mix('css/wed.css') }}"> -->
+    <link rel="stylesheet" href="{{ URL('css/wed.css') }}">
 
     @stack('after-styles')
 
@@ -33,7 +34,6 @@
 
 <body>
 
-    @include('frontend.includes.header')
 
     <x-preloader />
 
@@ -43,14 +43,14 @@
         @yield('content')
     </main>
 
-    @include('frontend.includes.footer')
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" type="text/css" rel="stylesheet">
 </body>
 
 <!-- Scripts -->
 @stack('before-scripts')
 
-<script src="{{ mix('js/wed.js') }}"></script>
+<script src="{{ URL('js/wed.js') }}"></script>
+<!-- <script src="{{ mix('js/wed.js') }}"></script> -->
 <script>
     $(document).ready(function(){
         $('#menuOpener').click(function(){

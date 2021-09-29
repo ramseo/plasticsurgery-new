@@ -50,6 +50,8 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         Route::get('profile/changePassword/{username}', ['as' => "users.changePassword", 'uses' => "UserController@changePassword"]);
         Route::patch('profile/changePassword/{username}', ['as' => "users.changePasswordUpdate", 'uses' => "UserController@changePasswordUpdate"]);
         Route::delete('users/userProviderDestroy', ['as' => 'users.userProviderDestroy', 'uses' => 'UserController@userProviderDestroy']);
+        Route::get('quotations/{id}', ['as' => "users.quotations", 'uses' => "UserController@getUserQuotations"]);
+        Route::get('quotations/{id}/{quotation_id}', ['as' => "users.quotation", 'uses' => "UserController@getUserQuotation"]);
     });
 });
 

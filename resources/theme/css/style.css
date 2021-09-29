@@ -2031,6 +2031,29 @@ article blockquote {
     padding: 0 5px;
 }
 
+.menu-menu-col {
+    height: 100%;
+    background: #f0f0f0;
+}
+
+.menu-menu-col a {
+    display: block;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-bottom: solid 1px #dcdcdc;
+    transition: 0.2s;
+}
+
+.menu-menu-col a i, .menu-menu-col a svg{
+    width: 22px;
+}
+
+.menu-menu-col a:hover, .menu-menu-col a.active{
+    background-color: #900c3f;
+    color: white;
+}
+
 @media(min-width: 1600px) {
     .container-fluid {
         max-width: 1400px;
