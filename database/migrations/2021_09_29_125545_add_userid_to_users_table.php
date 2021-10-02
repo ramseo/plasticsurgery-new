@@ -13,7 +13,7 @@ class AddUseridToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('vendor_quotation', function (Blueprint $table) {
+        Schema::table('vendor_quotation', function (Blueprint $table) {
             $table->integer('user_id');
         });
     }

@@ -6,7 +6,7 @@
 @endphp
 <div class="filter-overlay" style="display: none;"></div>
 <div id="filter-main-col" class="">
-    <form action="{{url('/') . '/' . $selected_type->slug . '/' . $selected_city->slug}}">
+    <form id="filterForm" action="{{url('/') . '/' . $selected_type->slug . '/' . $selected_city->slug}}">
         <div class="filter-inner-col">
             <div class="filter-top-bar">
                 <ul class="list-inline">
@@ -14,11 +14,11 @@
                         <p>Filter</p>
                     </li>
                     <li class="list-inline-item">
-                        <select class="form-control" name="type" id="">
+                        <select class="form-control" name="type" id="typeFilter">
                             <option value="">Select Category</option>
                             @if(isset($categories) && $categories)
                                 @foreach($categories as $category)
-                                    <option value="{{$category->id}}" {{$selected_type->slug == $category->slug ? 'selected' : ''}}>{{$category->name}}</option>
+                                    <option data-type-slug="{{$selected_type->slug}}" value="{{$category->id}}" {{$selected_type->slug == $category->slug ? 'selected' : ''}}>{{$category->name}}</option>
                                 @endforeach
                             @endif
                         </select>
@@ -27,11 +27,11 @@
                         <p>IN</p>
                     </li>
                     <li class="list-inline-item">
-                        <select class="form-control" name="city" id="">
+                        <select class="form-control" name="city" id="cityFilter">
                             <option value="">Select City</option>
                             @if(isset($cities) && $cities)
                                 @foreach($cities as $filter_city)
-                                    <option value="{{$filter_city->id}}" {{$selected_city->slug == $filter_city->slug ? 'selected' : ''}}>{{$filter_city->name}}</option>
+                                    <option data-city-slug="{{$filter_city->slug}}" value="{{$filter_city->id}}" {{$selected_city->slug == $filter_city->slug ? 'selected' : ''}}>{{$filter_city->name}}</option>
                                 @endforeach
                             @endif
                         </select>
@@ -141,3 +141,29 @@
         </div>
     </form>
 </div>
+
+@push('after-scripts')
+    <script>
+        $(document).ready(() => {
+            var site_base_url = "{{URL('/')}}";
+            $('#filterForm').submit((e) => {
+                e.preventDefault();
+                var formArr = $('#filterForm').serializeArray();
+                var selectedType = $('#typeFilter option:selected').attr('data-type-slug');
+                var selectedCity = $('#cityFilter option:selected').attr('data-city-slug');
+                var redirect_url = site_base_url + '/' + selectedType + '/' + selectedCity;
+                var urlParameters = '';
+                // formArr.splice(0,2);
+                formArr.forEach((item, index) => {
+                    if(index == 0){
+                        urlParameters += '?' + item['name'] + '=' + item['value'];
+                    }else{
+                        urlParameters += '&' + item['name'] + '=' + item['value'];
+                    }
+                })
+                redirect_url = redirect_url + urlParameters;
+                window.location = redirect_url;
+            });
+        });
+    </script>
+@endpush
