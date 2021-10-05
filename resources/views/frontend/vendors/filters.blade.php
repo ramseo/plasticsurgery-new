@@ -18,7 +18,7 @@
                             <option value="">Select Category</option>
                             @if(isset($categories) && $categories)
                                 @foreach($categories as $category)
-                                    <option data-type-slug="{{$selected_type->slug}}" value="{{$category->id}}" {{$selected_type->slug == $category->slug ? 'selected' : ''}}>{{$category->name}}</option>
+                                    <option data-type-slug="{{$category->slug}}" value="{{$category->id}}" {{$selected_type->slug == $category->slug ? 'selected' : ''}}>{{$category->name}}</option>
                                 @endforeach
                             @endif
                         </select>
