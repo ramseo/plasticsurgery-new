@@ -148,6 +148,7 @@ class TypeController extends Controller
      */
     public function create()
     {
+        $type = false;
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
@@ -161,7 +162,7 @@ class TypeController extends Controller
 
         return view(
             "backend.$module_name.create",
-            compact('module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action')
+            compact('type','module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action')
         );
     }
 

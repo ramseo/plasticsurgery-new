@@ -59,6 +59,7 @@
                 <label class="custom-file-label">Choose file</label>
             </div>
         </div>
+        @if($type)
         <div>
             @php
                 $vendor_icon_img = asset('img/default-vendor.jpg');
@@ -70,6 +71,7 @@
             @endphp
             <img id="imgPreview" src="{{ $vendor_icon_img }}" alt="" class="img-fluid">
         </div>
+        @endif
 
     </div>
     <div class="col-4">
@@ -80,6 +82,7 @@
                 <label class="custom-file-label">Choose file</label>
             </div>
         </div>
+        @if($type)
         <div >
             @php
                 $vendor_image = asset('img/default-vendor.jpg');
@@ -91,6 +94,7 @@
             @endphp
             <img id="imgPreview" src="{{ $vendor_image }}" alt="" class="img-fluid">
         </div>
+        @endif
     </div>
     <div class="col-4">
         <div class="form-group">
@@ -100,6 +104,7 @@
                 <label class="custom-file-label">Choose file</label>
             </div>
         </div>
+        @if($type)
         <div >
             @php
                 $vendor_banner_img = asset('img/default-vendor.jpg');
@@ -111,6 +116,7 @@
             @endphp
             <img id="imgPreview" src="{{ $vendor_banner_img }}" alt="" class="img-fluid">
         </div>
+        @endif
     </div>
 
 </div>

@@ -47,6 +47,7 @@
                 <label class="custom-file-label">Choose file</label>
             </div>
         </div>
+        @if($city)
         <div>
             @php
                 $vendor_icon_img = asset('img/default-vendor.jpg');
@@ -58,6 +59,7 @@
             @endphp
             <img id="imgPreview" src="{{ $vendor_icon_img }}" alt="" class="img-fluid">
         </div>
+        @endif
     </div>
     <div class="col-6">
         <div class="form-group">
@@ -67,6 +69,7 @@
                 <label class="custom-file-label">Choose file</label>
             </div>
         </div>
+        @if($city)
         <div >
             @php
                 $vendor_image = asset('img/default-vendor.jpg');
@@ -78,6 +81,7 @@
             @endphp
             <img id="imgPreview" src="{{ $vendor_image }}" alt="" class="img-fluid">
         </div>
+        @endif
     </div>
 </div>
 
