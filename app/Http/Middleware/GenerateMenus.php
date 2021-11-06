@@ -46,6 +46,19 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-file"></i> Customer', [
+                'route' => 'backend.customer.index',
+                'class' => 'c-sidebar-nav-item',
+            ])
+                ->data([
+                    'order' => 99,
+                    'activematches' => 'admin/customer*',
+                    'permission' => [],
+                ])
+                ->link->attr([
+                    'class' => 'c-sidebar-nav-link',
+                ]);
+
             $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-applications-settings"></i> Vendor ', [
                 'class' => 'c-sidebar-nav-dropdown',
             ])
@@ -186,6 +199,7 @@ class GenerateMenus
 
             // Access Control Dropdown
 
+<<<<<<< HEAD
             $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-shield-alt"></i> Access Control', [
                 'class' => 'c-sidebar-nav-dropdown',
             ])
@@ -229,6 +243,51 @@ class GenerateMenus
                 ->link->attr([
                     'class' => 'c-sidebar-nav-link',
                 ]);
+=======
+            //           $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-shield-alt"></i> Access Control', [
+            //               'class' => 'c-sidebar-nav-dropdown',
+            //           ])
+            //               ->data([
+            //                   'order' => 104,
+            //                   'activematches' => [
+            //                       'admin/users*',
+            //                       'admin/roles*',
+            //                   ],
+            //                   'permission' => ['view_users', 'view_roles'],
+            //               ]);
+            //           $accessControl->link->attr([
+            //               'class' => 'c-sidebar-nav-dropdown-toggle',
+            //               'href' => '#',
+            //           ]);
+            //
+            //           // Submenu: Users
+            //           $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Users', [
+            //               'route' => 'backend.users.index',
+            //               'class' => 'nav-item',
+            //           ])
+            //               ->data([
+            //                   'order' => 105,
+            //                   'activematches' => 'admin/users*',
+            //                   'permission' => ['view_users'],
+            //               ])
+            //               ->link->attr([
+            //                   'class' => 'c-sidebar-nav-link',
+            //               ]);
+            //
+            //           // Submenu: Roles
+            //           $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Roles', [
+            //               'route' => 'backend.roles.index',
+            //               'class' => 'nav-item',
+            //           ])
+            //               ->data([
+            //                   'order' => 106,
+            //                   'activematches' => 'admin/roles*',
+            //                   'permission' => ['view_roles'],
+            //               ])
+            //               ->link->attr([
+            //                   'class' => 'c-sidebar-nav-link',
+            //               ]);
+>>>>>>> dab214f92c237d76c5abee7893665a0f1a80c72e
 
             // Log Viewer
             // Log Viewer Dropdown

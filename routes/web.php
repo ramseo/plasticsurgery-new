@@ -119,6 +119,10 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::get('vendor/edit/{id}', 'VendorController@edit')->name('vendor.edit');
     Route::post('vendor/update/{id}', 'VendorController@update')->name('vendor.update');
 
+    Route::get('customer', 'CustomerController@index')->name('customer.index');
+    Route::get('customer/edit/{id}', 'CustomerController@edit')->name('customer.edit');
+    Route::post('customer/update/{id}', 'CustomerController@update')->name('customer.update');
+
     Route::get('content', 'ContentController@index')->name('content.index');
     Route::get('content/create/', 'ContentController@create')->name('content.create');
     Route::post('content/store/', 'ContentController@store')->name('content.store');
@@ -174,6 +178,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::patch("users/trashed/{id}", ['as' => "users.restore", 'uses' => "UserController@restore"]);
     Route::get("users/index_data", ['as' => "users.index_data", 'uses' => "UserController@index_data"]);
     Route::get("users/index_list", ['as' => "users.index_list", 'uses' => "UserController@index_list"]);
+    Route::get("users/index", ['as' => "users.index", 'uses' => "UserController@index"]);
     Route::resource("users", "users");
     Route::patch("users/{id}/block", ['as' => "users.block", 'uses' => "UserController@block", 'middleware' => ['permission:block_users']]);
     Route::patch("users/{id}/unblock", ['as' => "users.unblock", 'uses' => "UserController@unblock", 'middleware' => ['permission:block_users']]);
