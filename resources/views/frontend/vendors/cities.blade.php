@@ -33,34 +33,8 @@
                         @if(isset($cities))
                             <div class="vendor-location-links">
                                 <ul class="list-inline">
-
-
-{{--                                    @if(isset($cities[0]))--}}
-{{--                                        <li class="list-inline-item">--}}
-{{--                                            <a href="#" class="btn btn-secondary">{{$cities[0]->name}}</a>--}}
-{{--                                            <p>{{$cities[0]->name}}</p>--}}
-{{--                                        </li>--}}
-{{--                                    @endif--}}
-{{--                                    @if(isset($cities[1]))--}}
-{{--                                        <li class="list-inline-item">--}}
-{{--                                            <a href="#" class="btn btn-secondary">{{$cities[1]->name}}</a>--}}
-{{--                                            <p>{{$cities[1]->name}}</p>--}}
-{{--                                        </li>--}}
-{{--                                    @endif--}}
-{{--                                    @if(isset($cities[2]))--}}
-{{--                                        <li class="list-inline-item">--}}
-{{--                                            <a href="#" class="btn btn-secondary">{{$cities[2]->name}}</a>--}}
-{{--                                            <p>{{$cities[2]->name}}</p>--}}
-{{--                                        </li>--}}
-{{--                                    @endif--}}
-{{--                                    @if(isset($cities[3]))--}}
-{{--                                        <li class="list-inline-item">--}}
-{{--                                            <a href="#" class="btn btn-secondary">{{$cities[3]->name}}</a>--}}
-{{--                                            <p>{{$cities[3]->name}}</p>--}}
-{{--                                        </li>--}}
-{{--                                    @endif--}}
                                     @if(count($cities) > 4)
-                                        @for ($x = 0; $x <= 3; $x++) {
+                                        @for ($x = 0; $x <= 3; $x++)
                                         <li class="list-inline-item">
                                             <a href="{{url($type->slug.'/'.$cities[$x]->slug)}}" class="btn btn-secondary">{{$cities[$x]->name}}</a>
                                         </li>
