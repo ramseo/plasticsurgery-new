@@ -2,6 +2,14 @@
 
 @section('title') {{ __("Cities") }} @endsection
 
+@push('after-styles')
+    <style>
+        .vendor-location-links .btn {
+            padding: 10px 15px 10px 15px;
+        }
+    </style>
+@endpush
+
 @section('content')
 
 <section id="page-banner">
@@ -22,6 +30,44 @@
                             <p class="head">{{$type->name}}</p>
                             <p class="text">Find best {{$type->name}} in your city</p>
                         </div>
+                        @if(isset($cities))
+                            <div class="vendor-location-links">
+                                <ul class="list-inline">
+                                    @if(isset($cities[0]))
+                                        <li class="list-inline-item">
+                                            <a href="#" class="btn btn-secondary">{{$cities[0]->name}}</a>
+                                            <p>{{$cities[0]->name}}</p>
+                                        </li>
+                                    @endif
+                                    @if(isset($cities[1]))
+                                        <li class="list-inline-item">
+                                            <a href="#" class="btn btn-secondary">{{$cities[1]->name}}</a>
+                                            <p>{{$cities[1]->name}}</p>
+                                        </li>
+                                    @endif
+                                    @if(isset($cities[2]))
+                                        <li class="list-inline-item">
+                                            <a href="#" class="btn btn-secondary">{{$cities[2]->name}}</a>
+                                            <p>{{$cities[2]->name}}</p>
+                                        </li>
+                                    @endif
+                                    @if(isset($cities[3]))
+                                        <li class="list-inline-item">
+                                            <a href="#" class="btn btn-secondary">{{$cities[3]->name}}</a>
+                                            <p>{{$cities[3]->name}}</p>
+                                        </li>
+                                    @endif
+                                    @if(count($cities) > 4)
+                                        <li class="list-inline-item">
+                                            <a href="#" class="city-modal-link btn btn-primary" data-link-type="{{$type->slug}}" data-toggle="modal" data-target="#cityModal">
+                                                Other Cities
+                                            </a>
+                                            <p>Other Cities</p>
+                                        </li>
+                                    @endif
+                                </ul>
+                            </div>
+                        @endif
                     </div>
 
                     <div class="container-fluid">
@@ -38,7 +84,7 @@
     </section>
 
     @if(isset($cities))
-        <section id="city-section">
+        <!-- <section id="city-section">
             <div class="container-fluid">
                 <div class="col-xs-12 common-heading text-center">
                     <p class="shadow-text">{{$type->name}}</p>
@@ -51,7 +97,6 @@
                             <a href="{{url('/') . '/' . $type->slug . '/' . $city_item->slug}}">
                                 <div class="img-col">
                                     <i class="fas fa-city"></i>
-                                    <!-- <img class="img-fluid" src="" alt=""> -->
                                 </div>
                                 <div class="text-col">
                                     <p>{{$city_item->name}}</p>
@@ -61,7 +106,71 @@
                     @endforeach
                 </div>
             </div>
-        </section>
+        </section> -->
+    @endif
+
+    @if(isset($cities) && $cities)
+        <div id="cityModal" class="modal fade" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Select City</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="modal-search">
+                            <div class="search-input-col">
+                                <input type="text" id="myInput" class="form-control" onkeyup="myFunction()" placeholder="Search...">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <ul id="myUL" class="list-unstyled city-list">
+                                @php $city_count = 1; @endphp
+                                @foreach($cities as $city)
+                                    @if($city_count > 4)
+                                        <li><a class="city-link" href="{{$city->slug}}">{{$city->name}} <i class="fas fa-long-arrow-alt-right"></i></a></li>
+                                    @endif
+                                    @php $city_count++; @endphp
+                                @endforeach
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        @push ("after-scripts")
+            <script>
+                function myFunction() {
+                    var input, filter, ul, li, a, i, txtValue;
+                    input = document.getElementById('myInput');
+                    filter = input.value.toUpperCase();
+                    ul = document.getElementById("myUL");
+                    li = ul.getElementsByTagName('li');
+                    for (i = 0; i < li.length; i++) {
+                        a = li[i].getElementsByTagName("a")[0];
+                        txtValue = a.textContent || a.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            li[i].style.display = "";
+                        } else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+                $(document).ready(function(){
+                    $('.city-modal-link').click(function(){
+                        var vType = $(this).attr('data-link-type');
+                        var cityLinks = $('.city-link');
+                        
+                        $(cityLinks).each(function(index, value) {
+                            var cityLink = $(value).attr('href');
+                            var newLink = vType + '/' + cityLink;
+                            $(value).attr('href', newLink);
+                        });
+                    });
+                });
+            </script>
+        @endpush
+        
     @endif
 
     @if(isset($vendors))

@@ -41,16 +41,59 @@
                                 </div>
                             </div>
                         </li>
+                        <li><a href="/bride">Bride</a></li>
+                        <li><a href="/groom">Groom</a></li>
+                        <li><a href="#">Ideas</a></li>
+                        <li><a href="#">Blog</a></li>
+                        @auth
+                            @if(auth()->user()->getRoleNames()->first() == 'super admin')
+                                <li>
+                                    <a href="{{ route('backend.dashboard') }}">
+                                        Dashboard
+                                    </a>
+                                </li>
+                            @endif
+                            @if(auth()->user()->getRoleNames()->first() == 'vendor')
+                                <li>
+                                    <a href="{{ route('vendor.dashboard') }}">
+                                        Dashboard
+                                    </a>
+                                </li>
+                            @endif
+                            @if(auth()->user()->getRoleNames()->first() == 'user')
+                                <li>
+                                    <a href="{{ route('frontend.users.profileEdit', auth()->user()->id) }}">
+                                        My Profile
+                                    </a>
+                                </li>
+                            @endif
+                            <li>
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('account-logout-form').submit();">
+                                    Logout
+                                </a>
+                            </li>
+                            <form id="account-logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        @else
+                            <li>
+                                <a href="{{ route('login') }}">
+                                    Login
+                                </a>
+                            </li>
+                            @if(user_registration())
+                                <li>
+                                    <a href="{{ route('register') }}">
+                                        Register
+                                    </a>
+                                </li>
+                            @endif
+
+                        @endauth
                         <span id="menuCloser" style="display: none;"><i class="fa fa-times"></i></span>
                     </ul>
                 @endif
-                <ul class="list-inline d-flex site-menu user-menu">
-                    <li>
-                        <a href="#"><img src="images/search.png" alt=""> Search</a>
-                    </li>
-                    <!-- <li>
-                        <a href="#"><img src="images/login.png" alt=""> Log in</a>
-                    </li> -->
+                <!-- <ul class="list-inline d-flex site-menu user-menu">
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" aria-expanded="false" data-toggle="dropdown">
                             <img src="images/login.png" alt="">
@@ -132,7 +175,7 @@
                             </div>
                         </div>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>
