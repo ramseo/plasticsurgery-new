@@ -44,7 +44,7 @@
                         <li><a href="/bride">Bride</a></li>
                         <li><a href="/groom">Groom</a></li>
                         <li><a href="#">Ideas</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="/blog">Blog</a></li>
                         @auth
                             @if(auth()->user()->getRoleNames()->first() == 'super admin')
                                 <li>

@@ -33,37 +33,49 @@
                         @if(isset($cities))
                             <div class="vendor-location-links">
                                 <ul class="list-inline">
-                                    @if(isset($cities[0]))
-                                        <li class="list-inline-item">
-                                            <a href="#" class="btn btn-secondary">{{$cities[0]->name}}</a>
-                                            <p>{{$cities[0]->name}}</p>
-                                        </li>
-                                    @endif
-                                    @if(isset($cities[1]))
-                                        <li class="list-inline-item">
-                                            <a href="#" class="btn btn-secondary">{{$cities[1]->name}}</a>
-                                            <p>{{$cities[1]->name}}</p>
-                                        </li>
-                                    @endif
-                                    @if(isset($cities[2]))
-                                        <li class="list-inline-item">
-                                            <a href="#" class="btn btn-secondary">{{$cities[2]->name}}</a>
-                                            <p>{{$cities[2]->name}}</p>
-                                        </li>
-                                    @endif
-                                    @if(isset($cities[3]))
-                                        <li class="list-inline-item">
-                                            <a href="#" class="btn btn-secondary">{{$cities[3]->name}}</a>
-                                            <p>{{$cities[3]->name}}</p>
-                                        </li>
-                                    @endif
+
+
+{{--                                    @if(isset($cities[0]))--}}
+{{--                                        <li class="list-inline-item">--}}
+{{--                                            <a href="#" class="btn btn-secondary">{{$cities[0]->name}}</a>--}}
+{{--                                            <p>{{$cities[0]->name}}</p>--}}
+{{--                                        </li>--}}
+{{--                                    @endif--}}
+{{--                                    @if(isset($cities[1]))--}}
+{{--                                        <li class="list-inline-item">--}}
+{{--                                            <a href="#" class="btn btn-secondary">{{$cities[1]->name}}</a>--}}
+{{--                                            <p>{{$cities[1]->name}}</p>--}}
+{{--                                        </li>--}}
+{{--                                    @endif--}}
+{{--                                    @if(isset($cities[2]))--}}
+{{--                                        <li class="list-inline-item">--}}
+{{--                                            <a href="#" class="btn btn-secondary">{{$cities[2]->name}}</a>--}}
+{{--                                            <p>{{$cities[2]->name}}</p>--}}
+{{--                                        </li>--}}
+{{--                                    @endif--}}
+{{--                                    @if(isset($cities[3]))--}}
+{{--                                        <li class="list-inline-item">--}}
+{{--                                            <a href="#" class="btn btn-secondary">{{$cities[3]->name}}</a>--}}
+{{--                                            <p>{{$cities[3]->name}}</p>--}}
+{{--                                        </li>--}}
+{{--                                    @endif--}}
                                     @if(count($cities) > 4)
+                                        @for ($x = 0; $x <= 3; $x++) {
+                                        <li class="list-inline-item">
+                                            <a href="{{url($type->slug.'/'.$cities[$x]->slug)}}" class="btn btn-secondary">{{$cities[$x]->name}}</a>
+                                        </li>
+                                        @endfor
                                         <li class="list-inline-item">
                                             <a href="#" class="city-modal-link btn btn-primary" data-link-type="{{$type->slug}}" data-toggle="modal" data-target="#cityModal">
                                                 Other Cities
                                             </a>
-                                            <p>Other Cities</p>
                                         </li>
+                                        @else
+                                            @foreach ($cities as $citie)
+                                            <li class="list-inline-item">
+                                                <a href="{{url($type->slug.'/'.$citie->slug)}}" class="btn btn-secondary">{{$citie->name}}</a>
+                                            </li>
+                                            @endforeach
                                     @endif
                                 </ul>
                             </div>
@@ -131,13 +143,13 @@
                                     @endif
                                     @php $city_count++; @endphp
                                 @endforeach
-                            </ul> 
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-            
+
         @push ("after-scripts")
             <script>
                 function myFunction() {
@@ -160,7 +172,7 @@
                     $('.city-modal-link').click(function(){
                         var vType = $(this).attr('data-link-type');
                         var cityLinks = $('.city-link');
-                        
+
                         $(cityLinks).each(function(index, value) {
                             var cityLink = $(value).attr('href');
                             var newLink = vType + '/' + cityLink;
@@ -170,7 +182,7 @@
                 });
             </script>
         @endpush
-        
+
     @endif
 
     @if(isset($vendors))
