@@ -23,6 +23,7 @@
     @stack('before-styles')
 
     <link rel="stylesheet" href="{{ mix('css/wed.css') }}">
+    
 
     @stack('after-styles')
 
