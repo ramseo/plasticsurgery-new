@@ -94,7 +94,7 @@ class VendorController extends Controller
         $type = Type::where('slug', $type_slug)->first();
         $body_class = '';
         $cities = getDataArray('cities');
-        $vendors = DB::table('vendors')->paginate(15);
+        $vendors = DB::table('vendors')->all();
 //        $vendors_total = DB::table('vendors')->where('type_id', $type->id)->get()->count();
         $vendors_total = Vendor::where('type_id', $type->id)->get()->count();
 //        $vendors_total= count($vendors_total);
