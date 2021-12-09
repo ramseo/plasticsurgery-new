@@ -21,12 +21,38 @@ use Auth;
 class VendorController extends Controller
 {
 
-    public function index(Request $request, $city_slug)
+
+
+    public function typeAjax(Request $request)
     {
+        $type = Type::where('slug', $request->type)->first();
+        $vendors = DB::table('vendors')
+            ->join('users', 'users.id', '=', 'vendors.user_id')
+            ->where('type_id', $type->id)
+            ->where('email_verified_at', '!=', null)
+            ->paginate(6);
+        $view = view('frontend.vendors.types.inner.vendors',compact('vendors'))->render();
+        return response()->json(['html'=>$view]);
+    }
+
+    public function types(Request $request)
+    {
+
         $type_slug = $request->segment(1);
-        $body_class = '';
-        $city = City::where('slug', $city_slug)->first();
         $type = Type::where('slug', $type_slug)->first();
+        $body_class = '';
+        $cities = getDataArray('cities');
+        $vendors_total = DB::table('vendors')->where('type_id', $type->id)->get()->count();
+        $vendors_total = Vendor::join('users', 'users.id', '=', 'vendors.user_id')->where('email_verified_at', '!=', null)->where('type_id', $type->id)->get()->count();
+//        $vendors_total= count($vendors_total);
+        $content = Content::where(array('type_id' => $type->id, 'city_id' => null))->first();
+        return view('frontend.vendors.types.listing', compact('content','body_class', 'cities', 'type', 'vendors_total'));
+    }
+
+    public function cityAjax(Request $request)
+    {
+        $city = City::where('slug', $request->city)->first();
+        $type = Type::where('slug', $request->type)->first();
 
         $service_ids = [];
         if(isset($_GET['service'])){
@@ -41,69 +67,123 @@ class VendorController extends Controller
             $budget = getData('budgets', 'id', $_GET['budget']);
         }
 
-        $vendors = DB::table('vendors');
+        $vendorsDB = DB::table('vendors');
+        $vendorsDB->join('users', 'users.id', '=', 'vendors.user_id')
+            ->where('email_verified_at', '!=', null)
+            ->where(array('type_id' => $type->id, 'city_id' => $city->id));
 
         if(count($service_ids) > 0){
-            $vendors->join('services', 'vendors.type_id', '=', 'services.type_id');
-            $vendors->join('prices', 'prices.service_id', '=', 'services.id');
-            $vendors->whereIn('services.id', $service_ids);
+            $vendorsDB->join('services', 'vendors.type_id', '=', 'services.type_id');
+            $vendorsDB->join('prices', 'prices.service_id', '=', 'services.id');
+            $vendorsDB->whereIn('services.id', $service_ids);
         }
 
         if($budget){
             if($budget->filter == 'less_then'){
-                $vendors->where('vendors.price', '<' , $budget->min);
+                $vendorsDB->where('vendors.price', '<' , $budget->min);
             }elseif($budget->filter == 'between'){
-                $vendors->where('vendors.price', '>' , $budget->min);
-                $vendors->where('vendors.price', '<' , $budget->max);
+                $vendorsDB->where('vendors.price', '>' , $budget->min);
+                $vendorsDB->where('vendors.price', '<' , $budget->max);
             }elseif($budget->filter == 'above'){
-                $vendors->where('vendors.price', '>' , $budget->min);
+                $vendorsDB->where('vendors.price', '>' , $budget->min);
             }
         }
 
         if(isset($_GET['sort'])){
             if($_GET['sort'] == 'low_to_high'){
-                $vendors->orderBy('vendors.price', 'ASC');
+                $vendorsDB->orderBy('vendors.price', 'ASC');
             }elseif($_GET['sort'] == 'high_to_low'){
-                $vendors->orderBy('vendors.price', 'DESC');
+                $vendorsDB->orderBy('vendors.price', 'DESC');
             }
         }
 
-        if(isset($_GET['type'])){
-            $vendors->where('vendors.type_id', $_GET['type']);
-        }else{
-            $vendors->where('vendors.type_id', $type->id);
-        }
+//        if(isset($_GET['type'])){
+//            $vendorsDB->where('vendors.type_id', $_GET['type']);
+//        }else{
+//            $vendorsDB->where('vendors.type_id', $type->id);
+//        }
+//
+//        if(isset($_GET['city'])){
+//            $vendorsDB->where('vendors.city_id', $_GET['city']);
+//        }else{
+//            $vendorsDB->where('vendors.city_id', $city->id);
+//        }
 
-        if(isset($_GET['city'])){
-            $vendors->where('vendors.city_id', $_GET['city']);
-        }else{
-            $vendors->where('vendors.city_id', $city->id);
-        }
+        $vendors = $vendorsDB->groupBy('vendors.user_id')->paginate(15);
 
-        $data = $vendors->groupBy('vendors.user_id')->paginate(15);
+        $view = view('frontend.vendors.types.inner.vendors',compact('vendors'))->render();
+        return response()->json(['html'=>$view]);
+    }
+
+    public function cities(Request $request, $city_slug)
+    {
+        $type_slug = $request->segment(1);
+        $body_class = '';
+        $city = City::where('slug', $city_slug)->first();
+        $type = Type::where('slug', $type_slug)->first();
+
+//        $service_ids = [];
+//        if(isset($_GET['service'])){
+//            foreach($_GET['service'] as $service){
+//                $service_id = getData('services', 'name', $service);
+//                array_push($service_ids, $service_id->id);
+//            }
+//        }
+//
+//        $budget = null;
+//        if(isset($_GET['budget'])){
+//            $budget = getData('budgets', 'id', $_GET['budget']);
+//        }
+//
+//        $vendorsDB = DB::table('vendors');
+//
+//        if(count($service_ids) > 0){
+//            $vendorsDB->join('services', 'vendors.type_id', '=', 'services.type_id');
+//            $vendorsDB->join('prices', 'prices.service_id', '=', 'services.id');
+//            $vendorsDB->whereIn('services.id', $service_ids);
+//        }
+//
+//        if($budget){
+//            if($budget->filter == 'less_then'){
+//                $vendorsDB->where('vendors.price', '<' , $budget->min);
+//            }elseif($budget->filter == 'between'){
+//                $vendorsDB->where('vendors.price', '>' , $budget->min);
+//                $vendorsDB->where('vendors.price', '<' , $budget->max);
+//            }elseif($budget->filter == 'above'){
+//                $vendorsDB->where('vendors.price', '>' , $budget->min);
+//            }
+//        }
+//
+//        if(isset($_GET['sort'])){
+//            if($_GET['sort'] == 'low_to_high'){
+//                $vendorsDB->orderBy('vendors.price', 'ASC');
+//            }elseif($_GET['sort'] == 'high_to_low'){
+//                $vendorsDB->orderBy('vendors.price', 'DESC');
+//            }
+//        }
+//
+//        if(isset($_GET['type'])){
+//            $vendorsDB->where('vendors.type_id', $_GET['type']);
+//        }else{
+//            $vendorsDB->where('vendors.type_id', $type->id);
+//        }
+//
+//        if(isset($_GET['city'])){
+//            $vendorsDB->where('vendors.city_id', $_GET['city']);
+//        }else{
+//            $vendorsDB->where('vendors.city_id', $city->id);
+//        }
+//
+//        $vendors = $vendorsDB->groupBy('vendors.user_id')->paginate(15);
 
         $content = Content::where(array('type_id' => $type->id, 'city_id' => $city->id))->first();
-        $vendors_total = Vendor::where(array('type_id' => $type->id, 'city_id' => $city->id))->get()->count();
-        return view('frontend.vendors.index', compact('content','body_class', 'data', 'city', 'type', 'vendors_total'));
+        $vendors_total = DB::table('vendors')
+            ->join('users', 'users.id', '=', 'vendors.user_id')
+            ->where('email_verified_at', '!=', null)
+            ->where(array('type_id' => $type->id, 'city_id' => $city->id))->get()->count();
+        return view('frontend.vendors.types.cities.listing', compact('content','body_class', 'city', 'type', 'vendors_total'));
     }
 
-    public function cities(Request $request)
-    {
-
-        $type_slug = $request->segment(1);
-        $type = Type::where('slug', $type_slug)->first();
-        $body_class = '';
-        $cities = getDataArray('cities');
-        $vendors =  DB::table('vendors')
-                ->join('users', 'users.id', '=', 'vendors.user_id')
-                ->where('email_verified_at', '!=', null)
-                ->get();
-//        $vendors_total = DB::table('vendors')->where('type_id', $type->id)->get()->count();
-        $vendors_total = Vendor::where('type_id', $type->id)->get()->count();
-//        $vendors_total= count($vendors_total);
-        $content = Content::where(array('type_id' => $type->id, 'city_id' => null))->first();
-        return view('frontend.vendors.cities', compact('content','body_class', 'cities', 'type', 'vendors', 'vendors_total'));
-    }
 
     public function details(Request $request, $city_slug, $vendor_slug)
     {

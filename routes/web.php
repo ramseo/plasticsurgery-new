@@ -257,11 +257,13 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
 });
 
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
+    Route::get('typeAjax', 'VendorController@typeAjax')->name('type-ajax');
+    Route::get('cityAjax', 'VendorController@cityAjax')->name('city-ajax');
     $paths = getDataArray('types');
     if ($paths) :
         foreach ($paths as $path) {
-            Route::get($path->slug . '/', 'VendorController@cities')->name('vendor-city-listing');
-            Route::get($path->slug . '/{city}', 'VendorController@index')->name('vendor-listing');
+            Route::get($path->slug . '/', 'VendorController@types')->name('vendor-city-listing');
+            Route::get($path->slug . '/{city}', 'VendorController@cities')->name('vendor-listing');
             Route::get($path->slug . '/{city}/{vendor}', 'VendorController@details')->name('vendor-details');
         }
     endif;
