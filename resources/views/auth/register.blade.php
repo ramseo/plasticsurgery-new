@@ -1,7 +1,9 @@
 @extends('auth.layout')
 
 @section('title') @lang('Register') @endsection
-
+@push('before-styles')
+    {!! RecaptchaV3::initJs() !!}
+@endpush
 @section('content')
 
 <div class="col-xs-12 col-md-10 auth-inner-form-col">
@@ -56,6 +58,16 @@
                         <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="@lang('Confirm Password')" aria-label="@lang('password_confirmation')" aria-describedby="password_confirmation" required>
                         <span class="displayPassword"><img src="{{asset('images/view-password.png')}}" alt=""></span>
                     </div>
+                </div>
+            </div>
+            <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
+                <div class="col-md-6">
+                    {!! RecaptchaV3::field('register') !!}
+                    @if ($errors->has('g-recaptcha-response'))
+                        <span class="help-block">
+                                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                    </span>
+                    @endif
                 </div>
             </div>
             <div class="form-group mat-group list-top-group">

@@ -43,6 +43,7 @@ class RegisteredVendorController extends Controller
             'password'   => 'required|string|confirmed|min:8',
             'city_id' => 'required',
             'type_id'  => 'required',
+            'g-recaptcha-response' => 'required|recaptchav3:register,0.5',
         ]);
 
         $user = User::create([
