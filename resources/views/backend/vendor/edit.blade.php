@@ -73,7 +73,7 @@
                     <div class="col-4">
                         <div class="form-group">
                             {{ Form::label('phone', 'Phone Number') }}
-                            {{ Form::text('phone', $vendor->phone, array('class' => 'form-control')) }}
+                            {{ Form::text('phone', $vendor->mobile, array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-4">

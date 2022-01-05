@@ -1,14 +1,8 @@
 @extends('backend.layouts.app')
 
-@section('title')
-<title>Tickets | Index</title>
-@endsection
-{{--@section('header-title')--}}
-{{--    Manage Tickets--}}
-{{--@endsection--}}
-{{--@section('styles')--}}
-
-{{--@endsection--}}
+@section('title')Service @endsection
+{{--@section('header-title') Manage Service @endsection--}}
+{{--@section('styles') @endsection--}}
 
 
 @section('content')

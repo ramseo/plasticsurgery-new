@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use App\Models\Vendor;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -93,6 +94,7 @@ class VendorController extends Controller
     public function updateProfile(Request $request)
     {
         $user_id = auth()->user()->id;
+        $user = User::findOrFail($user_id);
         $vendor = Vendor::where('user_id', '=', $user_id)->first();
         $data = $request->all();
         $data = array_merge($data, ['user_id' => $user_id]);
@@ -102,6 +104,10 @@ class VendorController extends Controller
             $data = array_merge($data, ['image' => $file_image]);
         }
 
+        if ($request->mobile != '') {
+            $user->mobile = $request->mobile;
+            $user->update();
+        }
 
         if ($vendor) {
             $vendor->update($data);

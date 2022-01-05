@@ -68,8 +68,8 @@
                 <div class="row">
                     <div class="col-4">
                         <div class="form-group">
-                            {{ Form::label('phone', 'Phone Number') }}
-                            {{ Form::text('phone', $vendor->phone, array('class' => 'form-control')) }}
+                            {{ Form::label('mobile', 'Phone Number') }}
+                            {{ Form::text('mobile', $vendor->user->mobile, array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-4">
