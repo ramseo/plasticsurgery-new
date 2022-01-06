@@ -164,7 +164,7 @@
 @endpush
 
 @push('after-scripts')
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -226,7 +226,7 @@
                 $.ajax({
                     type: "POST",
                     url: "{{route('frontend.quotation-save')}}",
-                    data: form_data, 
+                    data: form_data,
                     success: function(res) {
                         if(res.success){
                             $('.alert-quotation').html('').hide();

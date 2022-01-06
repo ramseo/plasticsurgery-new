@@ -20,7 +20,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    @stack('before-styles')
+    @stack('x')
 
     <link rel="stylesheet" href="{{ mix('css/wed.css') }}">
 
