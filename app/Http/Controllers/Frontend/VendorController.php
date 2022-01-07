@@ -43,7 +43,7 @@ class VendorController extends Controller
         $body_class = '';
         $cities = getDataArray('cities');
         $vendors_total = DB::table('vendors')->where('type_id', $type->id)->get()->count();
-        $vendors_total = Vendor::join('users', 'users.id', '=', 'vendors.user_id')->where('email_verified_at', '!=', null)->where('type_id', $type->id)->get()->count();
+        $vendors_total = Vendor::join('users', 'users.id', '=', 'vendors.user_id')->where('type_id', $type->id)->get()->count();
 //        $vendors_total= count($vendors_total);
         $content = Content::where(array('type_id' => $type->id, 'city_id' => null))->first();
         return view('frontend.vendors.types.listing', compact('content','body_class', 'cities', 'type', 'vendors_total'));
