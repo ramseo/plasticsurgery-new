@@ -10,6 +10,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Userprofile;
 use Flash;
 class RegisteredUserController extends Controller
 {
@@ -55,6 +56,14 @@ class RegisteredUserController extends Controller
         $user->username = $username;
         $user->save();
         $user->assignRole('user');
+
+        $profile_create =  [
+            'first_name' => $request->first_name,
+            'last_name'  => $request->last_name,
+            'name'       => $request->first_name.' '.$request->last_name,
+            'email'      => $request->email,
+        ];
+        Userprofile::create($profile_create);
 //        Auth::login($user);
 
         event(new Registered($user));

@@ -60,14 +60,6 @@ class RegisteredVendorController extends Controller
         $user->save();
         $user->assignRole('vendor');
 
-        $vendor_create =  [
-            'business_name'=> $request->business_name,
-            'slug' => '',
-            'user_id' => $user->id,
-            'type_id' => $request->type_id,
-            'city_id' => $request->city_id
-        ];
-        Vendor::create($vendor_create);
 
 //        Auth::login($user);
 

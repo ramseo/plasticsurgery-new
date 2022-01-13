@@ -18,7 +18,7 @@
         </div>
     </div>
 </section>
-
+{{dd($userprofile)}}
 <section id="user-profile-section">
     <div class="container-fluid">
         <div class="col-xs-12 col-sm-12 user-profile-main-col">
@@ -132,7 +132,7 @@
                                     $field_name = 'date_of_birth';
                                     $field_lable = label_case($field_name);
                                     $field_placeholder = $field_lable;
-                                    $value = ($userprofile->$field_name != "")? $userprofile->$field_name->toDateString() : "";
+                                    $value = ($userprofile->date_of_birth != "")? $userprofile-date_of_birth->toDateString() : "";
                                     $required = "required";
                                     ?>
                                     {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
