@@ -78,28 +78,9 @@ class UserController extends Controller
      */
     public function profile($id)
     {
-        $module_title = $this->module_title;
-        $module_name = $this->module_name;
-        $module_path = $this->module_path;
-        $module_icon = $this->module_icon;
-        $module_model = $this->module_model;
-        $module_name_singular = Str::singular($module_name);
-        $module_action = 'Profile';
-
-        $$module_name_singular = $module_model::findOrFail($id);
-
-        if ($$module_name_singular) {
-            $userprofile = User::where('id', $id)->first();
-        } else {
-            Log::error('UserProfile Exception for Username: '.$username);
-            abort(404);
-        }
-
-        $body_class = 'profile-page';
-
-        $meta_page_type = 'profile';
-
-        return view("frontend.$module_name.profile", compact('module_name', 'module_name_singular', "$module_name_singular", 'module_icon', 'module_action', 'module_title', 'body_class', 'userprofile', 'meta_page_type'));
+        $user = User::findOrFail($id);
+        Log::info(label_case('Profile | ' . $user->name . '(ID:' . $user->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return view("frontend.users.profile")->with('users', $user);
     }
 
     /**
@@ -131,15 +112,10 @@ class UserController extends Controller
             return redirect()->route('frontend.users.profile', $id);
         }
 
-        $$module_name_singular = $module_model::findOrFail($id);
-        $userprofile = Userprofile::where('user_id', $id)->first();
-
-        $body_class = 'profile-page';
-
-        return view(
-            "frontend.$module_name.profileEdit",
-            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", 'userprofile', 'body_class')
-        );
+        $user = User::findOrFail($id);
+        Log::info(label_case('Profile | ' . $user->name . '(ID:' . $user->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return view("frontend.users.profileEdit")->with('users', $user);
+       
     }
 
     /**
