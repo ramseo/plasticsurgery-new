@@ -59,7 +59,7 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
         // event(new UserRegistered($user));
-        Flash::success("<i class='fas fa-check'></i> Registered Successfully")->important();
+        Flash::success("<i class='fas fa-check'></i> Registered: Please verify you email id")->important();
 //        return redirect(RouteServiceProvider::HOME);
         return redirect(route('login'));
     }
