@@ -61,7 +61,7 @@
                                 </li>
                             @endif
 
-{{--                            {{dd(auth()->user()->getRoleNames()->first())}}--}}
+                            {{dd(auth()->user()->getRoleNames()->first())}}
                             @if(auth()->user()->getRoleNames()->first() == 'user')
                                 <li>
                                     <a href="{{ route('frontend.users.profileEdit', auth()->user()->id) }}">
