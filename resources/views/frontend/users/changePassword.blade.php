@@ -23,14 +23,14 @@
     <div class="container-fluid">
         <div class="col-xs-12 col-sm-12 user-profile-main-col">
 
-            <div class="row text-right">
-                @if ($$module_name_singular->email_verified_at == null)
-                    <p class="lead">
-                        <a href="{{route('frontend.users.emailConfirmationResend', $$module_name_singular->id)}}">Confirm Email</a>
-                    </p>
-                @endif
-                @include('frontend.includes.messages')
-            </div>
+{{--            <div class="row text-right">--}}
+{{--                @if ($$module_name_singular->email_verified_at == null)--}}
+{{--                    <p class="lead">--}}
+{{--                        <a href="{{route('frontend.users.emailConfirmationResend', $$module_name_singular->id)}}">Confirm Email</a>--}}
+{{--                    </p>--}}
+{{--                @endif--}}
+{{--                @include('frontend.includes.messages')--}}
+{{--            </div>--}}
 
         </div>
     </div>
