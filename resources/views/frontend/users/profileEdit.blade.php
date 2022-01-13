@@ -24,11 +24,11 @@
         <div class="col-xs-12 col-sm-12 user-profile-main-col">
 
             <div class="row text-right">
-                @if ($$module_name_singular->email_verified_at == null)
-                <p class="lead">
-                    <a class="btn btn-primary" href="{{route('frontend.users.emailConfirmationResend', $$module_name_singular->id)}}">Confirm Email</a>
-                </p>
-                @endif
+{{--                @if ($$module_name_singular->email_verified_at == null)--}}
+{{--                <p class="lead">--}}
+{{--                    <a class="btn btn-primary" href="{{route('frontend.users.emailConfirmationResend', $$module_name_singular->id)}}">Confirm Email</a>--}}
+{{--                </p>--}}
+{{--                @endif--}}
                 @include('frontend.includes.messages')
             </div>
 
@@ -126,7 +126,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-6">
+{{--                            <div class="col-sm-6">--}}
 {{--                                <div class="form-group">--}}
 {{--                                    <?php--}}
 {{--                                    $field_name = 'date_of_birth';--}}
@@ -138,7 +138,7 @@
 {{--                                    {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}--}}
 {{--                                    {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->value($value)->attributes(["$required", 'type'=>'date']) }}--}}
 {{--                                </div>--}}
-                            </div>
+{{--                            </div>--}}
 
                             <div class="col-sm-6">
                                 <div class="form-group">
@@ -157,9 +157,7 @@
                                     {{ html()->select($field_name, $select_options)->placeholder($field_placeholder)->class('form-control ')->attributes(["$required"]) }}
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row">
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <?php
