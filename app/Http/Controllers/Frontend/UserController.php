@@ -80,7 +80,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
         Log::info(label_case('Profile | ' . $user->name . '(ID:' . $user->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view("frontend.users.profile")->with('users', $user);
+        return view("frontend.users.profile")->with('user', $user);
     }
 
     /**
@@ -114,8 +114,8 @@ class UserController extends Controller
 
         $user = User::findOrFail($id);
         Log::info(label_case('Profile | ' . $user->name . '(ID:' . $user->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view("frontend.users.profileEdit")->with('users', $user);
-       
+        return view("frontend.users.profileEdit")->with('user', $user);
+
     }
 
     /**

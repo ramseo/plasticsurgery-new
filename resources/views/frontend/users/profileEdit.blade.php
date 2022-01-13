@@ -54,7 +54,7 @@
                 <div class="card bg-white border-light shadow-soft flex-md-row no-gutters p-4">
                     <div class="card-body d-flex flex-column justify-content-between col-auto">
 
-                            {{ html()->modelForm($userprofile, 'PATCH', route('frontend.users.profileUpdate', $$module_name_singular->id))->class('form-horizontal')->acceptsFiles()->open() }}
+                            {{ html()->modelForm($userprofile, 'PATCH', route('frontend.users.profileUpdate', $user->id))->class('form-horizontal')->acceptsFiles()->open() }}
 
                         <div class="form-group row">
                             <div class="col-md-2">
@@ -70,7 +70,7 @@
                             <div class="col-md-6">
                                 <!-- <div class="form-group row">
                                     <div class="col-12 text-right">
-                                        <a href="{{ route('frontend.users.changePassword', $$module_name_singular->id) }}" class="btn btn-warning btn-sm"><i class="now-ui-icons objects_key-25"></i>&nbsp;Change password</a>
+                                        <a href="{{ route('frontend.users.changePassword', $user->id) }}" class="btn btn-warning btn-sm"><i class="now-ui-icons objects_key-25"></i>&nbsp;Change password</a>
                                     </div>
                                 </div> -->
                             </div>
@@ -126,19 +126,19 @@
                             </div>
                         </div>
                         <div class="row">
-{{--                            <div class="col-sm-6">--}}
-{{--                                <div class="form-group">--}}
-{{--                                    <?php--}}
-{{--                                    $field_name = 'date_of_birth';--}}
-{{--                                    $field_lable = label_case($field_name);--}}
-{{--                                    $field_placeholder = $field_lable;--}}
-{{--                                    $value = ($userprofile->$field_name != "")? $userprofile->$field_name->toDateString() : "";--}}
-{{--                                    $required = "required";--}}
-{{--                                    ?>--}}
-{{--                                    {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}--}}
-{{--                                    {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->value($value)->attributes(["$required", 'type'=>'date']) }}--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <?php
+                                    $field_name = 'date_of_birth';
+                                    $field_lable = label_case($field_name);
+                                    $field_placeholder = $field_lable;
+                                    $value = ($userprofile->$field_name != "")? $userprofile->$field_name->toDateString() : "";
+                                    $required = "required";
+                                    ?>
+                                    {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
+                                    {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->value($value)->attributes(["$required", 'type'=>'date']) }}
+                                </div>
+                            </div>
 
                             <div class="col-sm-6">
                                 <div class="form-group">
