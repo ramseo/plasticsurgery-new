@@ -54,7 +54,7 @@
                 <div class="card bg-white border-light shadow-soft flex-md-row no-gutters p-4">
                     <div class="card-body d-flex flex-column justify-content-between col-auto">
 
-                        {{ html()->modelForm($userprofile, 'PATCH', route('frontend.users.profileUpdate', $$module_name_singular->id))->class('form-horizontal')->acceptsFiles()->open() }}
+                            {{ html()->modelForm($userprofile, 'PATCH', route('frontend.users.profileUpdate', $$module_name_singular->id))->class('form-horizontal')->acceptsFiles()->open() }}
 
                         <div class="form-group row">
                             <div class="col-md-2">
