@@ -100,8 +100,8 @@
                                             <td>
                                                 <a href="{{ $userprofile->$field_name }}" target="_blank">{{ $userprofile->$field_name }}</a>
                                             </td>
-{{--                                            @else--}}
-{{--                                            <td>{{ $userprofile->$field_name }}</td>--}}
+                                            @else
+                                            <td>{{ $userprofile->$field_name }}</td>
                                             @endif
                                         </tr>
                                     @endforeach

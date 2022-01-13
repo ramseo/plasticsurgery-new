@@ -64,7 +64,7 @@
 {{--                            {{dd(auth()->user()->getRoleNames()->first())}}--}}
                             @if(auth()->user()->getRoleNames()->first() == 'user')
                                 <li>
-                                    <a href="{{ route('frontend.users.profileEdit', auth()->user()->id) }}">
+                                    <a href="{{ route('frontend.users.changePassword', auth()->user()->id) }}">
                                         My Profile
                                     </a>
                                 </li>
