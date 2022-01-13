@@ -6,8 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
-use Illuminate\Http\RedirectResponse;
-use App\Models\User;
 
 class VerifyEmailController extends Controller
 {
@@ -18,32 +16,16 @@ class VerifyEmailController extends Controller
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-
-    public function __invoke(Request $request): RedirectResponse
+    public function __invoke(EmailVerificationRequest $request)
     {
-        $user = User::find($request->route('id')); //takes user ID from verification link. Even if somebody would hijack the URL, signature will be fail the request
-        if ($user->hasVerifiedEmail()) {
-            return redirect()->intended(RouteServiceProvider::HOME . '?verified=1');
+        if ($request->user()->hasVerifiedEmail()) {
+            return redirect()->intended(RouteServiceProvider::HOME.'?verified=1');
         }
 
-        if ($user->markEmailAsVerified()) {
-            event(new Verified($user));
+        if ($request->user()->markEmailAsVerified()) {
+            event(new Verified($request->user()));
         }
 
-        return redirect()->intended(RouteServiceProvider::HOME.'?verified=1'); //if user is already logged in it will redirect to the dashboard page
+        return redirect()->intended(RouteServiceProvider::HOME.'?verified=1');
     }
-
-//    public function __invoke(EmailVerificationRequest $request)
-//    {
-//        $user = User::find($request->route('id')); //takes user ID from verification link. Even if somebody would hijack the URL, signature will be fail the request
-//        if ($user->hasVerifiedEmail()) {
-//            return redirect()->intended(RouteServiceProvider::HOME.'?verified=1');
-//        }
-//
-//        if ($user->markEmailAsVerified()) {
-//            event(new Verified($user));
-//        }
-//
-//        return redirect()->intended(RouteServiceProvider::HOME.'?verified=1');
-//    }
 }
