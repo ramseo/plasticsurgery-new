@@ -18,7 +18,6 @@
         </div>
     </div>
 </section>
-{{dd($userprofile)}}
 <section id="user-profile-section">
     <div class="container-fluid">
         <div class="col-xs-12 col-sm-12 user-profile-main-col">

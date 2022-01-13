@@ -43,11 +43,11 @@
                     </div>
                     <div class="card-body d-flex flex-column justify-content-between col-auto py-4 p-lg-5">
 
-                        @if($userprofile->bio)
-                        <h5 class="description">
-                            {{$userprofile->bio}}
-                        </h5>
-                        @endif
+{{--                        @if($userprofile->bio)--}}
+{{--                        <h5 class="description">--}}
+{{--                            {{$userprofile->bio}}--}}
+{{--                        </h5>--}}
+{{--                        @endif--}}
 
                         <div class="table-responsive">
                             <table class="table table-hover">
