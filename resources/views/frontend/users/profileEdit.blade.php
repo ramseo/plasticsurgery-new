@@ -157,7 +157,10 @@
                                     {{ html()->select($field_name, $select_options)->placeholder($field_placeholder)->class('form-control ')->attributes(["$required"]) }}
                                 </div>
                             </div>
+                            <div class="clearfix"></div>
+                        </div>
 
+                        <div class="row">
                             <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <?php
