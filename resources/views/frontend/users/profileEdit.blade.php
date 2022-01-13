@@ -127,19 +127,17 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-6">
-                                <div class="form-group">
-                                    <?php
-                                    $field_name = 'date_of_birth';
-                                    $field_lable = label_case($field_name);
-                                    $field_placeholder = $field_lable;
-                                    $value = ($userprofile->date_of_birth != "")? $userprofile->date_of_birth->toDateString() : "";
-                                    print_r($value);
-                                    exit();
-                                    $required = "required";
-                                    ?>
-                                    {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-                                    {{ html()->text('date_of_birth')->placeholder($field_placeholder)->class('form-control')->value($value)->attributes(["$required", 'type'=>'date']) }}
-                                </div>
+{{--                                <div class="form-group">--}}
+{{--                                    <?php--}}
+{{--                                    $field_name = 'date_of_birth';--}}
+{{--                                    $field_lable = label_case($field_name);--}}
+{{--                                    $field_placeholder = $field_lable;--}}
+{{--                                    $value = ($userprofile->$field_name != "")? $userprofile->$field_name->toDateString() : "";--}}
+{{--                                    $required = "required";--}}
+{{--                                    ?>--}}
+{{--                                    {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}--}}
+{{--                                    {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->value($value)->attributes(["$required", 'type'=>'date']) }}--}}
+{{--                                </div>--}}
                             </div>
 
                             <div class="col-sm-6">
