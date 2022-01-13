@@ -53,8 +53,9 @@ class RegisteredUserController extends Controller
         // username
         $username = config('app.initial_username') + $user->id;
         $user->username = $username;
-        $user->save();
         $user->assignRole('user');
+        $user->save();
+
 //        Auth::login($user);
 
         event(new Registered($user));
