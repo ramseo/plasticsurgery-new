@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title') {{$user->name}}'s Profile @endsection
+@section('title') {{$$module_name_singular->name}}'s Profile @endsection
 
 @section('content')
 
@@ -24,11 +24,11 @@
         <div class="col-xs-12 col-sm-12 user-profile-main-col">
 
             <div class="row text-right">
-{{--                @if ($user->email_verified_at == null)--}}
-{{--                <p class="lead">--}}
-{{--                    <a class="btn btn-primary" href="{{route('frontend.users.emailConfirmationResend', $user->id)}}">Confirm Email</a>--}}
-{{--                </p>--}}
-{{--                @endif--}}
+                @if ($$module_name_singular->email_verified_at == null)
+                <p class="lead">
+                    <a class="btn btn-primary" href="{{route('frontend.users.emailConfirmationResend', $$module_name_singular->id)}}">Confirm Email</a>
+                </p>
+                @endif
                 @include('frontend.includes.messages')
             </div>
 
@@ -54,7 +54,7 @@
                 <div class="card bg-white border-light shadow-soft flex-md-row no-gutters p-4">
                     <div class="card-body d-flex flex-column justify-content-between col-auto">
 
-                            {{ html()->modelForm($userprofile, 'PATCH', route('frontend.users.profileUpdate', $user->id))->class('form-horizontal')->acceptsFiles()->open() }}
+                        {{ html()->modelForm($userprofile, 'PATCH', route('frontend.users.profileUpdate', $$module_name_singular->id))->class('form-horizontal')->acceptsFiles()->open() }}
 
                         <div class="form-group row">
                             <div class="col-md-2">
@@ -70,7 +70,7 @@
                             <div class="col-md-6">
                                 <!-- <div class="form-group row">
                                     <div class="col-12 text-right">
-                                        <a href="{{ route('frontend.users.changePassword', $user->id) }}" class="btn btn-warning btn-sm"><i class="now-ui-icons objects_key-25"></i>&nbsp;Change password</a>
+                                        <a href="{{ route('frontend.users.changePassword', $$module_name_singular->id) }}" class="btn btn-warning btn-sm"><i class="now-ui-icons objects_key-25"></i>&nbsp;Change password</a>
                                     </div>
                                 </div> -->
                             </div>
@@ -157,7 +157,6 @@
                                     {{ html()->select($field_name, $select_options)->placeholder($field_placeholder)->class('form-control ')->attributes(["$required"]) }}
                                 </div>
                             </div>
-                            <div class="clearfix"></div>
                         </div>
 
                         <div class="row">
