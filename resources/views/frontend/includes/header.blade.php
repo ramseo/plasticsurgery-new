@@ -60,6 +60,8 @@
                                     </a>
                                 </li>
                             @endif
+
+                            {{dd(auth()->user())}}
                             @if(auth()->user()->getRoleNames()->first() == 'user')
                                 <li>
                                     <a href="{{ route('frontend.users.profileEdit', auth()->user()->id) }}">
