@@ -55,13 +55,13 @@ class RegisteredUserController extends Controller
         $user->username = $username;
         $user->save();
 
-//        Auth::login($user);
+        Auth::login($user);
 
         event(new Registered($user));
         // event(new UserRegistered($user));
         Flash::success("<i class='fas fa-check'></i> Registered: Please verify you email id")->important();
-//        return redirect(RouteServiceProvider::HOME);
-        return redirect(route('login'));
+        return redirect(RouteServiceProvider::HOME);
+//        return redirect(route('login'));
     }
 
 //    public function vendorSignup(){
