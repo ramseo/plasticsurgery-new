@@ -44,19 +44,19 @@
                     <li><i class="fas fa-check-circle text-success"></i> 2. Complete Profile</li>
                 @else
                     <li><i class="fas fa-check-circle text-soft"></i> 2. <a href="{{route('vendor.profile')}}">Complete
-                            Profile</a></li>
+                            Profile <span style="color: red;">*</span></a></li>
                 @endif
                 @if($services)
                     <li><i class="fas fa-check-circle text-success"></i> 3.My Services & Pricing</li>
                 @else
-                    <li><i class="fas fa-check-circle text-soft">*</i> 3. <a href="{{route('vendor.price.index')}}">My
-                            Services & Pricing</a></li>
+                    <li><i class="fas fa-check-circle text-soft"></i> 3. <a href="{{route('vendor.price.index')}}">My
+                            Services & Pricing <span style="color: red;">*</span></a> </li>
                 @endif
                 @if($photos)
-                    <li><i class="fas fa-check-circle text-success">*</i> 4. My Past Work - Photos Album & Videos</li>
+                    <li><i class="fas fa-check-circle text-success"></i> 4. My Past Work - Photos Album & Videos</li>
                 @else
-                    <li><i class="fas fa-check-circle text-soft">*</i> 4. <a href="{{route('vendor.album.index')}}">My
-                            My Past Work - Photos Album & Videos</a></li>
+                    <li><i class="fas fa-check-circle text-soft"></i> 4. <a href="{{route('vendor.album.index')}}">My
+                            My Past Work - Photos Album & Videos <span style="color: red;">*</span></a></li>
                 @endif
             </ol>
         </div>
