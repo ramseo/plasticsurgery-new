@@ -1649,7 +1649,10 @@ article blockquote {
 }
 
 .menuDropDown .dropdown-content a:hover {
-    background: #FA506F;
+    background: #f8f8f8;
+    text-decoration: none;
+    color: #fa4a6f!Important;
+    border-radius: 4px;
 }
 
 #filter-main-col {
@@ -1944,7 +1947,7 @@ article blockquote {
     background: #eb0a3e;
 }
 
-.asRange .asRange-pointer:after { 
+.asRange .asRange-pointer:after {
     background: #eb0a3e;
 }
 
