@@ -64,13 +64,13 @@ class RegisteredUserController extends Controller
             'email'      => $request->email,
         ];
         Userprofile::create($profile_create);
-//        Auth::login($user);
+        Auth::login($user);
 
         event(new Registered($user));
         // event(new UserRegistered($user));
-        Flash::success("<i class='fas fa-check'></i> Registered: Please verify you email id")->important();
-//        return redirect(RouteServiceProvider::HOME);
-        return redirect(route('login'));
+//        Flash::success("<i class='fas fa-check'></i> Registered: Please verify you email id")->important();
+        return redirect(RouteServiceProvider::HOME);
+//        return redirect(route('login'));
     }
 
 //    public function vendorSignup(){
