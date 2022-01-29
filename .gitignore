@@ -9,6 +9,7 @@ npm-debug.log
 yarn-error.log
 .php_cs.cache
 .idea
+.htaccess
 
 /public/
 !public/index.php
