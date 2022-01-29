@@ -216,7 +216,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
      * Namespaces indicate folder structure.
      */
     Route::get('/', 'BackendController@index')->name('home');
-    Route::get('dashboard', 'BackendController@index')->name('dashboard');
+    Route::get('dashboard', 'BackendController@index')->middleware('verified')->name('dashboard');
 
     Route::group(['middleware' => ['permission:edit_settings']], function () {
         Route::get("settings", "SettingController@index")->name("settings");

@@ -11,6 +11,7 @@
         return $status;
     }
 
+
     $profile = $services = $photos = 0;
     $vendor = getData('vendors', 'user_id', auth()->user()->id);
     $prices = getDataArray('prices', 'vendor_id', $vendor->id);
@@ -18,6 +19,7 @@
     $profile = ($vendor->business_name != '' && $vendor->image != '' && $vendor->price != '' && $vendor->label != '' && $vendor->business_address != '' );
     $services = (count($prices) >= 3);
     $photos = albumImages($albums);
+
     if($profile == 1 && $services == 1 && $photos ==1){
         setData('vendors',array('status'=>1),array('user_id'=>auth()->user()->id));
     }else{

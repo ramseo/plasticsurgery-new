@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Vendor;
 use App\Providers\RouteServiceProvider;
+use Carbon\Carbon as Carbon;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -60,14 +61,26 @@ class RegisteredVendorController extends Controller
         $user->save();
         $user->assignRole('vendor');
 
+        $vendor = [
+            'user_id'        => $user->id,
+            'city_id'        => $request->city_id,
+            'type_id'        => $request->type_id,
+            'business_name'  => $request->business_name,
+            'slug'           => slug_format($request->business_name),
+            'created_at'        => Carbon::now(),
+            'updated_at'        => Carbon::now(),
+        ];
 
-        Auth::login($user);
+        Vendor::create($vendor);
 
-        event(new Registered($user));
-//        event(new UserRegistered($user));
-//        Flash::success("<i class='fas fa-check'></i> Registered: Please verify you email id")->important();
-//        return redirect(route('login'));
-        return redirect(RouteServiceProvider::HOME);
+
+//        Auth::login($user);
+
+//        event(new Registered($user));
+        event(new UserRegistered($user));
+        Flash::success("<i class='fas fa-check'></i> Registered: Please verify you email id")->important();
+        return redirect(route('login'));
+//        return redirect(RouteServiceProvider::HOME);
     }
 
 }
