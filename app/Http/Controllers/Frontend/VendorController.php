@@ -222,7 +222,15 @@ class VendorController extends Controller
         $vendor_id = base64_decode($vendor_id);
         $body_class = '';
         $vendor_details = DB::table('vendors')->where('id', $vendor_id)->first();
-        return view('frontend.vendors.quotation', compact('body_class', 'vendor_details'));
+
+        $top_services  = DB::table('services')
+            ->join('prices', 'services.id', '=', 'prices.service_id')
+            ->select('services.*', 'prices.input_type_value', 'prices.description')
+            ->where('prices.vendor_id', $vendor_id)
+            ->where('services.positions', 'top')
+            ->where('services.input_type', 'price')
+            ->get();
+        return view('frontend.vendors.quotation', compact('body_class', 'vendor_details', 'top_services'));
     }
 
     public function storeQuotation(Request $request){

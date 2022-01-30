@@ -7,7 +7,6 @@
         $cities = getDataArray('cities');
         $type = getData('types', 'id', $vendor_details->type_id);
         $city = getData('cities', 'id', $vendor_details->city_id);
-        $top_services = get_vendor_services($vendor_details->id, 'top');
         $reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor_details->id);
         $average =  averageReview($reviews);
 
@@ -111,15 +110,15 @@
                         </div>
                         <div class="form-group">
                             <label>Name</label>
-                            <input type="text" name="name" class="form-control">
+                            <input type="text" name="name" class="form-control" value="{{auth()->user()->name}}">
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="text" name="email" class="form-control">
+                            <input type="text" name="email" class="form-control" value="{{auth()->user()->email}}">
                         </div>
                         <div class="form-group">
                             <label>Phone</label>
-                            <input type="text" name="phone" class="form-control">
+                            <input type="text" name="phone" class="form-control" value="{{auth()->user()->phone}}">
                         </div>
                         <div class="form-group">
                             <label>City</label>
