@@ -10,7 +10,7 @@ yarn-error.log
 .php_cs.cache
 .idea
 .htaccess
-
+package-lock.json
 /public/
 !public/index.php
 !public/.htaccess
