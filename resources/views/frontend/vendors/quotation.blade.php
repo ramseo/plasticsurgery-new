@@ -118,7 +118,7 @@
                         </div>
                         <div class="form-group">
                             <label>Phone</label>
-                            <input type="text" name="phone" class="form-control" value="{{auth()->user()->phone}}">
+                            <input type="text" name="phone" class="form-control" value="{{auth()->user()->mobile}}">
                         </div>
                         <div class="form-group">
                             <label>City</label>
