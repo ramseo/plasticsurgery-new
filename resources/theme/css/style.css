@@ -1582,7 +1582,7 @@ article blockquote {
 }
 .dropdown-content a {
     color: black;
-    padding: 15px 16px;
+    padding: 10px 10px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -1656,11 +1656,12 @@ article blockquote {
 }
 
 .menuDropDown .dropdown-content a > i{
-    height: 25px;
+    height: 30px;
     background-position: left;
     background-repeat: no-repeat;
     background-size: 28px;
     padding-left: 40px;
+    padding-top: 5px;
 }
 .menuDropDown .dropdown-content a > i:hover,.menuDropDown .dropdown-content a > i:focus{
     filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
