@@ -1655,6 +1655,17 @@ article blockquote {
     border-radius: 4px;
 }
 
+.menuDropDown .dropdown-content a > i{
+    height: 25px;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 28px;
+    padding-left: 40px;
+}
+.menuDropDown .dropdown-content a > i:hover,.menuDropDown .dropdown-content a > i:focus{
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
 #filter-main-col {
     position: fixed;
     z-index: 11111;
