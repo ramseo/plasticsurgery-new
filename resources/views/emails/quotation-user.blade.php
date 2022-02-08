@@ -43,9 +43,7 @@
                                         </td>
                                     </tr>
                                 </table>
-                            </td>
-                            <td class="body" width="100%" cellpadding="0" cellspacing="0">
-                                <table class="table table-bordered table-striped">
+                                <table class="inner-body" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
                                     <tr>
                                         <th width="200">Name</th>
                                         <td>{{$details->name}}</td>
