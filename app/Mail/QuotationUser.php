@@ -17,7 +17,8 @@ class QuotationUser extends Mailable
 
     public function build()
     {
+        $details =  $this->user;
         return $this->from(env('MAIL_FROM_ADDRESS'))
-                    ->view('emails.quotation-user');
+                    ->view('emails.quotation-user', compact('details'));
     }
 }

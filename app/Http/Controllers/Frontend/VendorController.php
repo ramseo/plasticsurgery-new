@@ -29,7 +29,7 @@ class VendorController extends Controller
         $vendors = DB::table('vendors')
             ->join('users', 'users.id', '=', 'vendors.user_id')
             ->where('type_id', $type->id)
-//            ->where('email_verified_at', '!=', null)
+            ->where('email_verified_at', '!=', null)
             ->paginate(6);
         $view = view('frontend.vendors.types.inner.vendors',compact('vendors'))->render();
         return response()->json(['html'=>$view]);
@@ -69,7 +69,7 @@ class VendorController extends Controller
 
         $vendorsDB = DB::table('vendors');
         $vendorsDB->join('users', 'users.id', '=', 'vendors.user_id')
-//            ->where('email_verified_at', '!=', null)
+            ->where('email_verified_at', '!=', null)
             ->where(array('type_id' => $type->id, 'city_id' => $city->id));
 
         if(count($service_ids) > 0){

@@ -17,7 +17,8 @@ class QuotationAdmin extends Mailable
 
     public function build()
     {
+        $details =  $this->user;
         return $this->from(env('MAIL_FROM_ADDRESS'))
-                    ->view('emails.quotation-admin');
+                    ->view('emails.quotation-admin', compact('details'));
     }
 }

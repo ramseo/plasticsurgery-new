@@ -39,8 +39,61 @@
                                     <!-- Body content -->
                                     <tr>
                                         <td class="content-cell">
-                                            <p>New Quotation Request</p>
-                                            <p>You have received a new Quotation Request. Login to your panel to view quotation details.</p>
+                                            <p>Quotation Request</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="body" width="100%" cellpadding="0" cellspacing="0">
+                                <table class="table table-bordered table-striped">
+                                    <tr>
+                                        <th width="200">Name</th>
+                                        <td>{{$details->name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Email</th>
+                                        <td>{{$details->email}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Phone</th>
+                                        <td>{{$details->phone}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Budget</th>
+                                        <td>{{$details->budget}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Dates</th>
+                                        <td>{{$details->dates}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Services</th>
+                                        <td>
+                                            @php
+                                                $services = json_decode($details->service_json, true);
+                                            @endphp
+                                            <div>
+                                                <p class="h4">Selected Services</p>
+                                            </div>
+                                            @foreach($services as $service)
+                                                @php
+                                                    $selected_services = get_vendor_selected_services($details->vendor_id, 'top', $service['service_id']);
+                                                @endphp
+                                                <div class="service-col">
+                                                    <ul class="list-unstyled">
+                                                        <li>
+                                                            <strong class="text-primary">Service: </strong> {{$selected_services->name}}
+                                                        </li>
+                                                        <li>
+                                                            <strong>Current Service Price: </strong> {{$selected_services->input_type_value}}
+                                                        </li>
+                                                        <li>
+                                                            <strong>Time: </strong> {{$selected_services->service_type == 'complete' ? 'Complete Service' : 'For '. $service['quantity'] . ' ' . $selected_services->service_type}}
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <hr style="border-top: 1px dashed rgba(0, 0, 21, 0.2);">
+                                            @endforeach
                                         </td>
                                     </tr>
                                 </table>
@@ -51,7 +104,7 @@
                                 <table class="footer" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
                                     <tr>
                                         <td class="content-cell" align="center">
-                                            
+
                                         </td>
                                     </tr>
                                 </table>
