@@ -37,7 +37,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('quotation/{vendor_id}', 'VendorController@saveQuotation')->name('quotation');
     Route::post('quotation-save', 'VendorController@storeQuotation')->name('quotation-save');
 
-    Route::group(['middleware' => ['auth']], function () {
+    Route::group(['middleware' => ['auth', 'verified']], function () {
         /*
         *
         *  Users Routes

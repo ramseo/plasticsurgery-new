@@ -60,7 +60,13 @@
 
                         <div class="form-group row">
                             <div class="col-md-2">
-                                <img src="{{asset('/storage/user/profile/'. $user->avatar)}}" class="user-profile-image img-fluid img-thumbnail" style="max-height:200px; max-width:200px;" />
+
+                                @if(file_exists( asset('/storage/user/profile/'. $user->avatar)))
+                                    <img src="{{asset('/storage/user/profile/'. $user->avatar)}}" class="user-profile-image img-fluid img-thumbnail" style="max-height:200px; max-width:200px;" />
+                                @else
+                                    <img src="{{asset($user->avatar)}}" class="user-profile-image img-fluid img-thumbnail" style="max-height:200px; max-width:200px;" />
+                                @endif
+
                             </div>
                             <div class="col-md-4">
                                 {{ html()->label(__('labels.backend.users.fields.avatar'))->class('form-control-label')->for('name') }}

@@ -33,29 +33,29 @@
             <div class="form-row">
                 <div class="col-6 form-group mat-group">
                     <label for="">{{ __('First Name') }}</label>
-                    <input type="text" class="form-control" id="first_name" name="first_name" value="{{ old('first_name') }}" placeholder="{{ __('First Name') }}" aria-label="first_name" aria-describedby="first_name" required>
+                    <input type="text" class="form-control" id="first_name" name="first_name" value="{{ old('first_name') }}" placeholder="{{ __('First Name') }}" aria-label="first_name" aria-describedby="first_name" >
                 </div>
                 <div class="col-6 form-group mat-group">
                     <label for="">{{ __('Last Name') }}</label>
-                    <input type="text" class="form-control" id="last_name" name="last_name" value="{{ old('last_name') }}" placeholder="{{ __('Last Name') }}" aria-label="last_name" aria-describedby="last_name" required>
+                    <input type="text" class="form-control" id="last_name" name="last_name" value="{{ old('last_name') }}" placeholder="{{ __('Last Name') }}" aria-label="last_name" aria-describedby="last_name" >
                 </div>
             </div>
             <div class="form-group mat-group">
                 <label for="">{{ __('Email') }}</label>
-                <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="{{ __('Email') }}" aria-label="email" aria-describedby="email" required>
+                <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" placeholder="{{ __('Email') }}" aria-label="email" aria-describedby="email" >
             </div>
             <div class="form-row">
                 <div class="col-6 form-group mat-group">
                     <label for="">{{ __('Password') }}</label>
                     <div class="password-container">
-                        <input type="password" class="form-control" id="password" name="password" placeholder="@lang('Password')" aria-label="@lang('Password')" aria-describedby="password" required>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="@lang('Password')" aria-label="@lang('Password')" aria-describedby="password" >
                         <span class="displayPassword"><img src="{{asset('images/view-password.png')}}" alt=""></span>
                     </div>
                 </div>
                 <div class="col-6 form-group mat-group">
                     <label for="">{{ __('Confirm Password') }}</label>
                     <div class="password-container">
-                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="@lang('Confirm Password')" aria-label="@lang('password_confirmation')" aria-describedby="password_confirmation" required>
+                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="@lang('Confirm Password')" aria-label="@lang('password_confirmation')" aria-describedby="password_confirmation" >
                         <span class="displayPassword"><img src="{{asset('images/view-password.png')}}" alt=""></span>
                     </div>
                 </div>
@@ -63,16 +63,16 @@
             <div class="form-group{{ $errors->has('g-recaptcha-response') ? ' has-error' : '' }}">
                 <div class="col-md-6">
                     {!! RecaptchaV3::field('register') !!}
-                    @if ($errors->has('g-recaptcha-response'))
-                        <span class="help-block">
-                                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-                                    </span>
-                    @endif
+{{--                    @if ($errors->has('g-recaptcha-response'))--}}
+{{--                        <span class="help-block">--}}
+{{--                                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>--}}
+{{--                                    </span>--}}
+{{--                    @endif--}}
                 </div>
             </div>
             <div class="form-group mat-group list-top-group">
                 <div class="custom-control custom-control-alternative custom-checkbox">
-                    <input class="custom-control-input" id="customCheckRegister" type="checkbox">
+                    <input class="custom-control-input" name="agree" id="customCheckRegister" type="checkbox">
                     <label class="custom-control-label" for="customCheckRegister">
                         <span class="text-muted">I agree with the <a href="#!">Privacy Policy</a></span>
                     </label>

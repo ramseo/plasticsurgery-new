@@ -56,8 +56,10 @@ class RegisteredVendorController extends Controller
         ]);
 
         // username
-        $username = config('app.initial_username') + $user->id;
-        $user->username = $username;
+//        $username = config('app.initial_username') + $user->id;
+//        $user->username = $username;
+        $user->username = $request->first_name . ' ' . $request->last_name;
+
         $user->save();
         $user->assignRole('vendor');
 

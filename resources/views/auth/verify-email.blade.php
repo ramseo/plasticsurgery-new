@@ -27,11 +27,11 @@
 
     <div class="container mt--9 pb-5">
         <div class="row justify-content-center">
-            <div class="col-lg-6 col-md-8">
+            <div class="col-lg-10 col-md-10">
                 <div class="card bg-secondary border border-soft">
 
                     <div class="card-body px-lg-5 py-lg-5">
-                        <div class="text-center text-muted mb-4">
+                        <div style="color: white;" class="text-center mb-4">
                             {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
                         </div>
 
@@ -52,9 +52,8 @@
                             <div class="col-12 col-sm-8 mb-3">
                                 <form role="form" method="POST" action="{{ route('verification.send') }}">
                                     @csrf
-
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-primary">
+                                        <button type="submit" class="btn btn-danger">
                                             {{ __('Resend Verification Email') }}
                                         </button>
                                     </div>
@@ -63,9 +62,8 @@
                             <div class="col-12 col-sm-4 mb-3">
                                 <form role="form" method="POST" action="{{ route('logout') }}">
                                     @csrf
-
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-outline-danger">
+                                        <button type="submit" class="btn btn-danger">
                                             {{ __('Logout') }}
                                         </button>
                                     </div>
