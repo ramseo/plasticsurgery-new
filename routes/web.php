@@ -209,14 +209,14 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
 * Backend vendor Routes
 * These routes need view-backend permission
 */
-Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.', 'middleware' => ['auth', 'can:view_backend']], function () {
+Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.', 'middleware' => ['auth', 'verified', 'can:view_backend']], function () {
 
     /**
      * Backend Dashboard
      * Namespaces indicate folder structure.
      */
     Route::get('/', 'BackendController@index')->name('home');
-    Route::get('dashboard', 'BackendController@index')->middleware('verified')->name('dashboard');
+    Route::get('dashboard', 'BackendController@index')->name('dashboard');
 
     Route::group(['middleware' => ['permission:edit_settings']], function () {
         Route::get("settings", "SettingController@index")->name("settings");

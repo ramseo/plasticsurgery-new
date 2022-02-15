@@ -76,12 +76,12 @@ class RegisteredVendorController extends Controller
         Vendor::create($vendor);
 
 
-//        Auth::login($user);
+        Auth::login($user);
 
 //        event(new Registered($user));
         event(new UserRegistered($user));
         Flash::success("<i class='fas fa-check'></i> Registered: Please verify you email id")->important();
-        return redirect(route('login'));
+        return redirect(route('vendor.dashboard'));
 //        return redirect(RouteServiceProvider::HOME);
     }
 
