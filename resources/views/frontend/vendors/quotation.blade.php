@@ -133,7 +133,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">When it is required?</label>
-                            <input type="text" class="form-control date" name="dates"/>
+                            <input type="text" autocomplete="off" class="form-control date" name="dates"/>
                         </div>
                         <div class="form-group">
                             <input type="hidden" name="vendor_id" value="{{$vendor_details->id}}">
