@@ -275,7 +275,8 @@ class VendorController extends Controller
 
             $vendor_url = url('/').'/'.$type->slug.'/'.$city->slug.'/'.$vendor->slug;
             $vendor_data =  array( 'vendor_business_name' => $vendor->business_name,            'vendor_url' => $vendor_url );
-            $quotation->vendor_data = array( 'vendor_business_name' => $vendor->business_name,            'vendor_url' => $vendor_url );
+
+            $quotation->vendor_data = array( 'vendor_business_name' => $vendor->business_name,            'vendor_url' => $vendor_url , 'city' => $city->name);
 
             Mail::to($vendor->email)->send(new QuotationUser($quotation));
             Mail::to(env('MAIL_FROM_ADDRESS'))->send(new QuotationUser($quotation));
