@@ -38,8 +38,8 @@
                                 <table class="inner-body" align="center" width="570" cellpadding="0" cellspacing="0" role="presentation">
                                     <!-- Body content -->
                                     <tr>
-                                        <td class="content-cell">
-                                            <p>Quotation Request</p>
+                                           <td class="content-cell">
+                                            <p>Quotation Request for <a href="{{$details->vendor_data->vendor_url}}" title="{{$details->vendor_data->vendor_business_name}}">{{$details->vendor_data->vendor_business_name}}</a></p> 
                                         </td>
                                     </tr>
                                 </table>

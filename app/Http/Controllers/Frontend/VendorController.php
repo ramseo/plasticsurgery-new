@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use App\Models\City;
 use App\Models\Content;
 use App\Models\Type;
@@ -254,20 +255,31 @@ class VendorController extends Controller
                 }
             }
 
-            $vendor = new Quotation();
-            $vendor->vendor_id = $data['vendor_id'];
-            $vendor->user_id = Auth::user()->id;
-            $vendor->city_id = $data['city'];
-            $vendor->name = $data['name'];
-            $vendor->email = $data['email'];
-            $vendor->phone = $data['phone'];
-            $vendor->budget = $data['budget'];
-            $vendor->dates = $data['dates'];
-            $vendor->service_json = json_encode($services);
-            $vendor->save();
+            $vendor = Vendor::where('id',  $data['vendor_id'])->first();
+            $vendor_user = User::where('id', $vendor->user_id)->first();
+            $city = City::where('id', $vendor->city_id)->first();
+            $type = Type::where('id', $vendor->type_id)->first();
 
-            Mail::to($vendor->email)->send(new QuotationUser($vendor));
-            Mail::to(env('MAIL_FROM_ADDRESS'))->send(new QuotationAdmin($vendor));
+
+            $quotation = new Quotation();
+            $quotation->vendor_id = $data['vendor_id'];
+            $quotation->user_id = Auth::user()->id;
+            $quotation->city_id = $data['city'];
+            $quotation->name = $data['name'];
+            $quotation->email = $data['email'];
+            $quotation->phone = $data['phone'];
+            $quotation->budget = $data['budget'];
+            $quotation->dates = $data['dates'];
+            $quotation->service_json = json_encode($services);
+            $quotation->save();
+
+            $vendor_url = url('/').'/'.$type->slug.'/'.$city->slug.'/'.$vendor->slug;
+            $vendor_data =  array( 'vendor_business_name' => $vendor->business_name,            'vendor_url' => $vendor_url );
+            $quotation->vendor_data = array( 'vendor_business_name' => $vendor->business_name,            'vendor_url' => $vendor_url );
+
+            Mail::to($vendor->email)->send(new QuotationUser($quotation));
+            Mail::to(env('MAIL_FROM_ADDRESS'))->send(new QuotationUser($quotation));
+            Mail::to($vendor_user->email)->send(new QuotationAdmin($quotation));
 
             return response()->json(['success' => true, 'message' => 'Quotation requested successfully!']);
         }

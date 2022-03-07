@@ -39,7 +39,7 @@
                                     <!-- Body content -->
                                     <tr>
                                         <td class="content-cell">
-                                            <p>Quotation Request</p>
+                                            <p>Quotation Request for <a href="{{$details->vendor_data->vendor_url}}" title="{{$details->vendor_data->vendor_business_name}}">{{$details->vendor_data->vendor_business_name}}</a></p> 
                                         </td>
                                     </tr>
                                 </table>

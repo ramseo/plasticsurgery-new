@@ -61,7 +61,7 @@
                         <div class="form-group row">
                             <div class="col-md-2">
 
-                                @if(file_exists( asset('/storage/user/profile/'. $user->avatar)))
+                                @if(file_exists(public_path().'/storage/user/profile/'. $user->avatar))
                                     <img src="{{asset('/storage/user/profile/'. $user->avatar)}}" class="user-profile-image img-fluid img-thumbnail" style="max-height:200px; max-width:200px;" />
                                 @else
                                     <img src="{{asset($user->avatar)}}" class="user-profile-image img-fluid img-thumbnail" style="max-height:200px; max-width:200px;" />

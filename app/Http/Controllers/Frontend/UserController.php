@@ -15,6 +15,11 @@ use App\Models\Quotation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+
+use App\Models\Type;
+use App\Models\City;
+use App\Models\Vendor;
+
 use Log;
 use Flash;
 
@@ -507,6 +512,15 @@ class UserController extends Controller
 
         // $$module_name_singular = $module_model::findOrFail($id);
         $quotations = Quotation::where('id', $quotation_id)->first();
+
+
+          $vendor = Vendor::where('id', $quotations->vendor_id)->first();
+
+        $vendor_user = User::where('id', $vendor->user_id)->first();
+        $city = City::where('id', $vendor->city_id)->first();
+        $type = Type::where('id', $vendor->type_id)->first();
+        $vendor_url = url('/').'/'.$type->slug.'/'.$city->slug.'/'.$vendor->slug;
+        $vendor_data =  array( 'vendor_business_name' => $vendor->business_name,            'vendor_url' => $vendor_url );
 
         $body_class = 'profile-page';
 
