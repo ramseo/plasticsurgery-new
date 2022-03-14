@@ -32,7 +32,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h2>Hey {{$vendor->business_name }}!</h2>
+            <h2>Hey <a href="{{$vendor_data['vendor_url']}}" title="view profile" target="_blank">{{$vendor->business_name }}</a>!</h2>
             @if($vendor->status == 0)
                 <h5 class="card-title m-0">You are now following steps away from submitting your profile for approval:</h5>
             @else
