@@ -2,30 +2,78 @@
     $types = getDataArray('types');
     $cities = getDataArray('cities');
 @endphp
+<style type="text/css">
+.button {    float: left;    width: 60px;    height: 60px;    cursor: pointer;    background: #fff;    overflow: hidden;    border-radius: 50px;    transition: all 0.3s ease-in-out;    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);}
+.button span {    font-size: 20px;    font-weight: 500;    line-height: 60px;    margin-left: 10px;}
+.button:hover {    width: 200px;}
+.button:hover .icon {    background: #EC413F;}
+.button span {    color: #EC413F;}
+.button .icon {    width: 60px;    height: 60px;    text-align: center;    border-radius: 50px;    display: inline-block;    transition: all 0.3s ease-in-out;}
+.button .icon i {    color: #EC413F;    font-size: 25px;    line-height: 60px;    transition: all 0.3s ease-in-out;}
+.button:hover i {    color: #fff;}
+</style>
 <footer id="footer">
     <div class="container-fluid">
         <div class="row">
+
+
             <div class="col-xs-12 col-sm-12 footer-col">
                 <p class="footer-head">Follow us for more ideas & fun</p>
-                <ul class="list-inline">
-                    @if(setting('instagram_url'))
-                        <li class="list-inline-item">
-                            <a href="{{setting('instagram_url')}}">
-                                <img src="{{asset('images/i-btn.png')}}" alt="" class="img-fluid">
-                            </a>
-                        </li>
-                    @endif
-                    @if(setting('facebook_url'))
-                        <li class="list-inline-item">
-                            <a href="{{setting('facebook_url')}}"><img src="{{asset('images/f-btn.png')}}" alt="" class="img-fluid"></a>
-                        </li>
-                    @endif
-                    @if(setting('pinterest_url'))
-                        <li class="list-inline-item">
-                            <a href="{{setting('pinterest_url')}}"><img src="{{asset('images/p-btn.png')}}" alt="" class="img-fluid"></a>
-                        </li>
-                    @endif
-                </ul>
+
+             
+              
+                @if(setting('instagram_url'))
+                    <a href="{{setting('instagram_url')}}">
+                       <div class="button">
+                            
+                                <div class="icon">
+                                    <i class="fab fa-instagram"></i>
+                                </div>
+                                <span>@wed.in</span>
+                            
+                        </div>
+                    </a>
+                @endif
+                @if(setting('facebook_url'))
+                    <a href="{{setting('facebook_url')}}">
+                        <div class="button">
+                            <div class="icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <span>@wed.in</span>
+                        </div>
+                    </a>
+                @endif
+                @if(setting('twitter_url'))
+                    <a href="{{setting('twitter_url')}}">
+                        <div class="button">
+                            <div class="icon">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <span>@wed.in</span>
+                        </div>
+                    </a>
+                @endif
+                @if(setting('pinterest_url'))
+                    <a href="{{setting('pinterest_url')}}">
+                        <div class="button">
+                            <div class="icon">
+                                <i class="fab fa-pinterest"></i>
+                            </div>
+                            <span>@wed.in</span>
+                        </div>
+                    </a>
+                @endif
+                 @if(setting('youtube_url'))
+                    <a href="{{setting('youtube_url')}}">
+                       <div class="button">
+                            <div class="icon">
+                                <i class="fab fa-youtube"></i>
+                            </div>
+                            <span>@wed.in</span>
+                        </div>
+                    </a>
+                @endif
             </div>
             <div class="col-xs-12 col-sm-12 footer-col">
                 <img src="{{asset('images/color-logo.png')}}" alt="" class="img-fluid">
