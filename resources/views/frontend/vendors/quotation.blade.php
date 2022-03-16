@@ -10,12 +10,18 @@
         $reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor_details->id);
         $average =  averageReview($reviews);
 
+        $min_price = 0;
+        $max_price = 0;
+
         $service_arr = [];
-        foreach($top_services as $top_service){
-            array_push($service_arr, $top_service->input_type_value);
-        }
+        if($top_services){
+            foreach($top_services as $top_service){
+                array_push($service_arr, $top_service->input_type_value);
+            }
         $min_price = min($service_arr);
         $max_price = max($service_arr);
+        }
+      
     @endphp
     <section id="quotation-section">
         <div class="container">

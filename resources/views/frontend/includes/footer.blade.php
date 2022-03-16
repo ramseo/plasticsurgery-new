@@ -15,17 +15,11 @@
 <footer id="footer">
     <div class="container-fluid">
         <div class="row">
-
-
             <div class="col-xs-12 col-sm-12 footer-col">
                 <p class="footer-head">Follow us for more ideas & fun</p>
-
-             
-              
                 @if(setting('instagram_url'))
                     <a href="{{setting('instagram_url')}}">
                        <div class="button">
-                            
                                 <div class="icon">
                                     <i class="fab fa-instagram"></i>
                                 </div>
