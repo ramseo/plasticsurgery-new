@@ -15,6 +15,7 @@
 
         $service_arr = [];
         if($top_services){
+            dd($top_services);
             foreach($top_services as $top_service){
                 array_push($service_arr, $top_service->input_type_value);
             }
