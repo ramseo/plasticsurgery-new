@@ -193,7 +193,6 @@ class VendorController extends Controller
         $city = City::where('slug', $city_slug)->first();
         $type = Type::where('slug', $type_slug)->first();
         $vendor_details = DB::table('vendors')->where('type_id', $type->id)->where('city_id', $city->id)->where('slug', $vendor_slug)->first();
-        dd($vendor_details);
         return view('frontend.vendors.details', compact('body_class', 'vendor_details', 'city', 'type'));
     }
 
