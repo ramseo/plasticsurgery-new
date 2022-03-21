@@ -141,9 +141,16 @@
                                 @endif
                             </select>
                         </div>
-                        <div class="form-group">
+                     <!--    <div class="form-group">
                             <label for="">When it is required?</label>
                             <input type="text" autocomplete="off" class="form-control date" name="dates"/>
+                        </div> -->
+
+                        <div class="form-group">
+                            <div id="reportrange" name="dates"  class="pull-left" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;">
+                                <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                                <span></span> <b class="caret"></b>
+                            </div>
                         </div>
                         <div class="form-group">
                             <input type="hidden" name="vendor_id" value="{{$vendor_details->id}}">
@@ -253,5 +260,40 @@
             });
         });
     </script>
+
+
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
+ <script>
+$(function() {
+
+    var start = moment().subtract(29, 'days');
+    var end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+           'Today': [moment(), moment()],
+           'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           'Next 7 Days': [moment(), moment().add(6, 'days')],
+           'Next 30 Days': [moment(), moment().add(29, 'days')],
+           'This Month': [moment().startOf('month'), moment().endOf('month')],
+           'Next Month': [moment().add(1, 'month').startOf('month'), moment().add(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+    
+});
+</script>
 @endpush
 

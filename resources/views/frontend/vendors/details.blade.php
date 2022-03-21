@@ -120,7 +120,7 @@
                                     </li>
                                 @else
                                     <li class="list-inline-item">
-                                        <a href="{{ route('login') }}" class="btn btn-primary">Login for Quotation</a>
+                                        <a href="{{ route('login') }}" class="btn btn-primary">Get Quotation</a>
                                     </li>
                                 @endif
                                 <li class="list-inline-item">
