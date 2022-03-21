@@ -58,6 +58,16 @@
                         </div>
                     </a>
                 @endif
+                @if(setting('linkedin_url'))
+                    <a href="{{setting('linkedin_url')}}">
+                        <div class="button">
+                            <div class="icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <span>@wed.in</span>
+                        </div>
+                    </a>
+                @endif
                  @if(setting('youtube_url'))
                     <a href="{{setting('youtube_url')}}">
                        <div class="button">
