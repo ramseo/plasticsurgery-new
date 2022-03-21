@@ -2,7 +2,16 @@
     $types = getDataArray('types');
     $cities = getDataArray('cities');
 @endphp
-
+<style type="text/css">
+.button {    float: left;    width: 60px;    height: 60px;    cursor: pointer;    background: #fff;    overflow: hidden;    border-radius: 50px;    transition: all 0.3s ease-in-out;    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);}
+.button span {    font-size: 20px;    font-weight: 500;    line-height: 60px;    margin-left: 10px;}
+.button:hover {    width: 200px;}
+.button:hover .icon {    background: #EC413F;}
+.button span {    color: #EC413F;}
+.button .icon {    width: 60px;    height: 60px;    text-align: center;    border-radius: 50px;    display: inline-block;    transition: all 0.3s ease-in-out;}
+.button .icon i {    color: #EC413F;    font-size: 25px;    line-height: 60px;    transition: all 0.3s ease-in-out;}
+.button:hover i {    color: #fff;}
+</style>
 <footer id="footer">
     <div class="container-fluid">
         <div class="row">
