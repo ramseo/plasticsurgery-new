@@ -18,7 +18,7 @@
             <div class="col-xs-12 col-sm-12 footer-col">
                 <p class="footer-head">Follow us for more ideas & fun</p>
                 @if(setting('instagram_url'))
-                    <a href="{{setting('instagram_url')}}">
+                    <a href="{{setting('instagram_url')}}" target="_blank">
                        <div class="button">
                                 <div class="icon">
                                     <i class="fab fa-instagram"></i>
@@ -29,7 +29,7 @@
                     </a>
                 @endif
                 @if(setting('facebook_url'))
-                    <a href="{{setting('facebook_url')}}">
+                    <a href="{{setting('facebook_url')}}" target="_blank">
                         <div class="button">
                             <div class="icon">
                                 <i class="fab fa-facebook-f"></i>
@@ -39,7 +39,7 @@
                     </a>
                 @endif
                 @if(setting('twitter_url'))
-                    <a href="{{setting('twitter_url')}}">
+                    <a href="{{setting('twitter_url')}}" target="_blank">
                         <div class="button">
                             <div class="icon">
                                 <i class="fab fa-twitter"></i>
@@ -49,7 +49,7 @@
                     </a>
                 @endif
                 @if(setting('pinterest_url'))
-                    <a href="{{setting('pinterest_url')}}">
+                    <a href="{{setting('pinterest_url')}}" target="_blank">
                         <div class="button">
                             <div class="icon">
                                 <i class="fab fa-pinterest"></i>
@@ -59,7 +59,7 @@
                     </a>
                 @endif
                 @if(setting('linkedin_url'))
-                    <a href="{{setting('linkedin_url')}}">
+                    <a href="{{setting('linkedin_url')}}" target="_blank">
                         <div class="button">
                             <div class="icon">
                                 <i class="fab fa-linkedin"></i>
@@ -69,7 +69,7 @@
                     </a>
                 @endif
                  @if(setting('youtube_url'))
-                    <a href="{{setting('youtube_url')}}">
+                    <a href="{{setting('youtube_url')}}" target="_blank">
                        <div class="button">
                             <div class="icon">
                                 <i class="fab fa-youtube"></i>
