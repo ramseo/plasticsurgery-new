@@ -16,8 +16,8 @@
                         <form id="searchForm" action="">
                             <div class="form-list">
                                 <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                        <select class="form-control" name="" id="typeField" required>
+                                    <li style="border-right: none; padding-right: 10px; background-color: white;" class="list-inline-item">
+                                        <select style="border-right: none;" class="form-control" name="" id="typeField" required>
                                             <option value="">Select Vendor Type</option>
                                             @if(isset($types) && $types)
                                                 @foreach($types as $type)
@@ -26,8 +26,8 @@
                                             @endif
                                         </select>
                                     </li>
-                                    <li class="list-inline-item">
-                                        <select class="form-control" name="" id="cityField" required>
+                                    <li style="padding-right: 10px; background-color: white;" class="list-inline-item">
+                                        <select style="border-right: none;" class="form-control" name="" id="cityField" required>
                                             <option value="">Select City</option>
                                             @if(isset($cities) && $cities)
                                                 @foreach($cities as $city)
