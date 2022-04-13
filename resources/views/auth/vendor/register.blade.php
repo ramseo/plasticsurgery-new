@@ -102,7 +102,7 @@
                 <input type="submit" class="btn btn-primary btn-block" value="@lang('Create account')">
             </div>
             <div class="alternate-text-group">
-                <p class="text-center">Already have an account? <a class="text-primary" href="{{ route('login') }}">Login</a></p>
+                <p class="text-center">Already have an account? <a class="text-primary" href="{{ route('vendor.login') }}">Login</a></p>
             </div>
         </form>
     </div>

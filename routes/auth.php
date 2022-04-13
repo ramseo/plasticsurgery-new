@@ -28,6 +28,14 @@ Route::get('/login', [AuthenticatedSessionController::class, 'create'])
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])
                 ->middleware('guest');
 
+
+Route::get('/vendor-login', [AuthenticatedSessionController::class, 'vendorCreate'])
+    ->middleware('guest')
+    ->name('vendor.login');
+
+Route::post('/vendor-login', [AuthenticatedSessionController::class, 'vendorStore'])
+    ->middleware('guest');
+
 Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
                 ->middleware('guest')
                 ->name('password.request');

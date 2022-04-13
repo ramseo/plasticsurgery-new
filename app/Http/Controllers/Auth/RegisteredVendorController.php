@@ -40,12 +40,15 @@ class RegisteredVendorController extends Controller
             'business_name' => 'required|string|max:191',
             'first_name' => 'required|string|max:191',
             'last_name'  => 'required|string|max:191',
-            'email'      => 'required|string|email|max:191|unique:users',
             'password'   => 'required|string|confirmed|min:8',
             'city_id' => 'required',
             'type_id'  => 'required',
             'g-recaptcha-response' => 'required|recaptchav3:register,0.5',
         ]);
+        if(trim($request->email) != 'mywedindia@gmail.com'){
+            $request->validate(['email'      => 'required|string|email|max:191|unique:users']);
+        }
+
 
         $user = User::create([
             'first_name' => $request->first_name,
@@ -58,7 +61,7 @@ class RegisteredVendorController extends Controller
         // username
 //        $username = config('app.initial_username') + $user->id;
 //        $user->username = $username;
-        $user->username = $request->first_name . ' ' . $request->last_name;
+        $user->username = strtolower($request->first_name . $request->last_name);
 
         $user->save();
         $user->assignRole('vendor');
