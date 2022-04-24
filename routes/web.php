@@ -34,7 +34,11 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('terms', 'FrontendController@terms')->name('terms');
     Route::post('newsletter', 'NewsletterController@store')->name('newsletter');
     Route::post('post-review', 'VendorController@postReview')->name('post-review');
-    Route::get('quotation/{vendor_id}', 'VendorController@saveQuotation')->name('quotation');
+    Route::post('call', 'VendorController@callView')->name('call');
+    Route::post('call-review', 'VendorController@callReview')->name('call-review');
+    Route::get('quotation/type/{alias?}', 'VendorController@saveQuotationType')->name('quotation.type');
+    Route::post('quotation-type-save', 'VendorController@storeQuotationType')->name('quotation-type-save');
+    Route::get('quotation/{slug}', 'VendorController@saveQuotation')->name('quotation');
     Route::post('quotation-save', 'VendorController@storeQuotation')->name('quotation-save');
 
     Route::group(['middleware' => ['auth', 'verified']], function () {
@@ -43,15 +47,16 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         *  Users Routes
         *
         */
-        Route::get('profile/{id}', ['as' => "users.profile", 'uses' => "UserController@profile"]);
-        Route::get('profile/{id}/edit', ['as' => "users.profileEdit", 'uses' => "UserController@profileEdit"]);
-        Route::post('profile/{id}/edit', ['as' => "users.profileUpdate", 'uses' => "UserController@profileUpdate"]);
+        Route::get('profile', ['as' => "users.profile", 'uses' => "UserController@profile"]);
+        Route::get('profile/edit', ['as' => "users.profileEdit", 'uses' => "UserController@profileEdit"]);
+        Route::post('profile/edit', ['as' => "users.profileUpdate", 'uses' => "UserController@profileUpdate"]);
         Route::get("users/emailConfirmationResend/{id}", ['as' => "users.emailConfirmationResend", 'uses' => "UserController@emailConfirmationResend"]);
-        Route::get('profile/changePassword/{username}', ['as' => "users.changePassword", 'uses' => "UserController@changePassword"]);
-        Route::patch('profile/changePassword/{username}', ['as' => "users.changePasswordUpdate", 'uses' => "UserController@changePasswordUpdate"]);
+        Route::get('profile/changePassword', ['as' => "users.changePassword", 'uses' => "UserController@changePassword"]);
+        Route::patch('profile/changePassword', ['as' => "users.changePasswordUpdate", 'uses' => "UserController@changePasswordUpdate"]);
         Route::delete('users/userProviderDestroy', ['as' => 'users.userProviderDestroy', 'uses' => 'UserController@userProviderDestroy']);
         Route::get('quotations/{id}', ['as' => "users.quotations", 'uses' => "UserController@getUserQuotations"]);
         Route::get('quotations/{id}/{quotation_id}', ['as' => "users.quotation", 'uses' => "UserController@getUserQuotation"]);
+        Route::get('vendors/{slug?}', ['as' => "vendors.slug", 'uses' => "UserController@getVendors"]);
     });
 });
 

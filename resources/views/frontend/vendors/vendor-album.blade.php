@@ -61,7 +61,7 @@
                                             
                                             $caption_view .= '<div class="inner-col"><ul class="list-inline">';
                                             if(Auth::check()){
-                                                $caption_link = route('frontend.quotation', ['vendor_id' => base64_encode($vendor_details->id)]);
+                                                $caption_link = route('frontend.quotation', ['slug' => $vendor_details->slug]);
                                                 $caption_view .= '<li class="list-inline-item">';
                                                 $caption_view .= '<a href="'.$caption_link.'" class="btn btn-primary"><i class="fas fa-rupee-sign"></i> Get Quotation</a>';
                                                 $caption_view .= '</li>';

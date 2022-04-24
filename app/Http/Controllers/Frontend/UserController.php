@@ -22,6 +22,7 @@ use App\Models\Vendor;
 
 use Log;
 use Flash;
+use Auth;
 
 class UserController extends Controller
 {
@@ -82,20 +83,16 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function profile($id)
+    public function profile()
     {
-        $module_title = $this->module_title;
-        $module_name = $this->module_name;
-        $module_path = $this->module_path;
-        $module_icon = $this->module_icon;
-        $module_model = $this->module_model;
-        $module_name_singular = Str::singular($module_name);
-        $module_action = 'Profile';
+        if(Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user = Auth::user();
+        $user = User::findOrFail($user->id);
 
-        $$module_name_singular = $module_model::findOrFail($id);
-
-        if ($$module_name_singular) {
-            $userprofile = Userprofile::where('user_id', $id)->first();
+        if ($user) {
+            $userprofile = Userprofile::where('user_id', $user->id)->first();
         } else {
             Log::error('UserProfile Exception for Username: '.$username);
             abort(404);
@@ -105,7 +102,7 @@ class UserController extends Controller
 
         $meta_page_type = 'profile';
 
-        return view("frontend.$module_name.profile", compact('module_name', 'module_name_singular', "$module_name_singular", 'module_icon', 'module_action', 'module_title', 'body_class', 'userprofile', 'meta_page_type'));
+        return view("frontend.users.profile", compact( 'user', 'userprofile'));
     }
 
     /**
@@ -115,44 +112,15 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function profileEdit($id)
+    public function profileEdit()
     {
 
-        $user = User::findOrFail($id);
-
+        if(Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user = Auth::user();
         Log::info(label_case('Edit | ' . $user->name . '(ID:' . $user->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-
         return view("frontend.users.edit")->with('user', $user);
-
-//        $module_title = $this->module_title;
-//        $module_name = $this->module_name;
-//        $module_path = $this->module_path;
-//        $module_icon = $this->module_icon;
-//        $module_model = $this->module_model;
-//        $module_name_singular = Str::singular($module_name);
-//
-//        $module_action = 'Edit Profile';
-//
-//        $page_heading = ucfirst($module_title);
-//        $title = $page_heading.' '.ucfirst($module_action);
-//
-//        if (!auth()->user()->can('edit_users')) {
-//            $id = auth()->user()->id;
-//        }
-//
-//        if ($id != auth()->user()->id) {
-//            return redirect()->route('frontend.users.profile', $id);
-//        }
-//
-//        $$module_name_singular = $module_model::findOrFail($id);
-//        $userprofile = Userprofile::where('user_id', $id)->first();
-//
-//        $body_class = 'profile-page';
-//
-//        return view(
-//            "frontend.profile-page.profileEdit",
-//            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", 'userprofile', 'body_class')
-//        );
     }
 
     /**
@@ -243,8 +211,15 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function changePassword($id)
+    public function changePassword()
     {
+
+        if(Auth::check() == false) {
+            return redirect(base_url());
+        }
+
+        $id = Auth::user()->id;
+
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
@@ -276,11 +251,13 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function changePasswordUpdate(Request $request, $username)
+    public function changePasswordUpdate(Request $request)
     {
-        if ($id != auth()->user()->id) {
-            return redirect()->route('frontend.users.profile', $id);
+        if(Auth::check() == false) {
+            return redirect(base_url());
         }
+
+        $id = Auth::user()->id;
 
         $this->validate($request, [
             'password' => 'required|confirmed|min:6',
@@ -529,4 +506,12 @@ class UserController extends Controller
             compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', 'quotations', 'body_class')
         );
     }
+
+
+   public function getVendors($slug = 'wedding-photographers')
+    {
+        // $types = Type::all();
+        return view("frontend.users.vendor");
+    }
+
 }

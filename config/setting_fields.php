@@ -333,6 +333,37 @@ return [
         ],
 
     ],
+    'call' => [
+        'title' => 'Call / Chat',
+        'desc'  => 'Call / Chat',
+        'icon'  => 'fas fa-chart-line',
+
+        'elements' => [
+            [
+                'type'  => 'textarea', // input fields type
+                'data'  => 'string', // data type, string, int, boolean
+                'name'  => 'call_chat_title', // unique name for field
+                'label' => 'Call Chat Title', // you know what label it is
+                'rules' => '', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '', // default value if you want
+                'help'     => '', // Help text for the input field.
+                'display'  => 'raw', // Help text for the input field.
+            ],
+            [
+                'type'  => 'textarea', // input fields type
+                'data'  => 'string', // data type, string, int, boolean
+                'name'  => 'call_chat_after_call', // unique name for field
+                'label' => 'Call Chat After Call', // you know what label it is
+                'rules' => '', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '', // default value if you want
+                'help'     => '', // Help text for the input field.
+                'display'  => 'raw', // Help text for the input field.
+            ],
+        ],
+
+    ],
     'misc' => [
         'title' => 'Miscellaneous',
         'desc'  => 'Miscellaneous',

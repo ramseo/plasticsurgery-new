@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title') {{$$module_name_singular->name}}'s Profile @endsection
+@section('title') {{$user->name}}'s Profile @endsection
 
 @section('content')
 
@@ -9,21 +9,21 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 text-center">
                 <h1 class="display-2 mb-4">
-                    {{$$module_name_singular->name}}
+                    {{$user->name}}
                     @auth
-                    @if(auth()->user()->id == $$module_name_singular->id)
+                    @if(auth()->user()->id == $user->id)
                     <small>
-                        <a href="{{ route('frontend.users.profileEdit', $$module_name_singular->id) }}" class="btn btn-secondary btn-sm">Edit</a>
+                        <a href="{{ route('frontend.users.profileEdit') }}" class="btn btn-secondary btn-sm">Edit</a>
                     </small>
                     @endif
                     @endauth
                 </h1>
                 <p class="lead">
-                    Username: {{$$module_name_singular->username}}
+                    Username: {{$user->username}}
                 </p>
-                @if ($$module_name_singular->email_verified_at == null)
+                @if ($user->email_verified_at == null)
                 <p class="lead">
-                    <a href="{{route('frontend.users.emailConfirmationResend', $$module_name_singular->id)}}">Confirm Email</a>
+                    <a href="{{route('frontend.users.emailConfirmationResend')}}">Confirm Email</a>
                 </p>
                 @endif
 
@@ -39,7 +39,7 @@
             <div class="col-lg-12 mb-5">
                 <div class="card bg-white border-light shadow-soft flex-md-row no-gutters p-4">
                     <div class="col-md-6 col-lg-4">
-                        <img class="img-fluid img-thumbnail" src="{{asset($user->avatar)}}" alt="{{$$module_name_singular->name}}">
+                        <img class="img-fluid img-thumbnail" src="{{asset($user->avatar)}}" alt="{{$user->name}}">
                     </div>
                     <div class="card-body d-flex flex-column justify-content-between col-auto py-4 p-lg-5">
 
@@ -119,7 +119,7 @@
                     <div class="col-9 col-md-6">
                         <h6 class="font-weight-bolder d-inline mb-0 mr-3">Share:</h6>
 
-                        @php $title_text = $$module_name_singular->name; @endphp
+                        @php $title_text = $user->name; @endphp
 
                         <button class="btn btn-sm mr-3 btn-icon-only btn-pill btn-twitter d-inline" data-sharer="twitter" data-via="LaravelStarter" data-title="{{$title_text}}" data-hashtags="LaravelStarter" data-url="{{url()->full()}}" data-toggle="tooltip" title="Share on Twitter" data-original-title="Share on Twitter">
                             <span class="btn-inner-icon"><i class="fab fa-twitter"></i></span>

@@ -11,6 +11,7 @@
         $average =  averageReview($reviews);
 
     @endphp
+
     <section id="breadcrumb-section">
         <div class="container-fluid">
             <div class="row">
@@ -111,12 +112,13 @@
                                 @endauth
                             </ul>
                         </div>
+                        
                         <hr>
                         <div class="inner-col">
                             <ul class="list-inline actions-ul">
                                 @if (Auth::check())
                                     <li class="list-inline-item">
-                                        <a href="{{ route('frontend.quotation', ['vendor_id' => base64_encode($vendor_details->id)]) }}" class="btn btn-primary"><i class="fas fa-rupee-sign"></i> Get Quotation</a>
+                                        <a href="{{ route('frontend.quotation', ['slug' => $vendor_details->slug]) }}" class="btn btn-primary"><i class="fas fa-rupee-sign"></i> Get Quotation</a>
                                     </li>
                                 @else
                                     <li class="list-inline-item">
@@ -124,7 +126,7 @@
                                     </li>
                                 @endif
                                 <li class="list-inline-item">
-                                    <a href="tel:{{$vendorUser->mobile}}" class="btn btn-success"><i class="fas fa-phone-alt"></i> CALL/CHAT</a>
+                                    <button class="btn btn-success callButton"><i class="fas fa-phone-alt"></i> CALL/CHAT</button>
                                 </li>
                             </ul>
                         </div>
@@ -171,11 +173,71 @@
             </div>
         </div>
     </div>
-
+@include('frontend.popup.callchat', ['vendor_details' => $vendor_details, 'vendoruser' => $vendorUser])
 @endsection
 
 @push('after-scripts')
     <script>
+        
+        $(document).ready(function(){
+            $('.callButton').click(function() {
+                if('<?php echo Auth::check(); ?>' == ''){
+                    location.href = "{{ route('login') }}";
+                }else{
+                   $.ajax({
+                        type: 'POST',
+                        url: "{{route('frontend.call')}}",
+                        data: {
+                            '_token': "<?php echo csrf_token(); ?>",
+                            'user_id': "<?php echo Auth::check() == 1 ? Auth::user()->id : ''; ?>",
+                            'vendor_id': "<?php echo $vendor_details->id; ?>"
+                        },
+                        success: function(res) {
+                            if(res.success){
+                                $(".callPopup").addClass("active");
+                                $("#call-slide").addClass("active");
+                                // $('.reviewAlert').html('').hide();
+                                // $('#reviewForm').trigger('reset');
+                                // toastr.success(res.message, 'Review posted Successfully!');
+                            }else{
+                                // $('.reviewAlert').html(res.message).show();
+                            }
+                        }
+                    });
+                }
+              
+            });
+
+
+            $('.cpp-after-call').click(function() {
+                let review = $(this).attr('review');
+                $('.cppSlide').removeClass('active');
+                $.ajax({
+                    type: 'POST',
+                    url: "{{route('frontend.call-review')}}",
+                    data: {
+                        '_token': "<?php echo csrf_token(); ?>",
+                        'user_id': "<?php echo Auth::check() == 1 ? Auth::user()->id : ''; ?>",
+                        'vendor_id': "<?php echo $vendor_details->id; ?>",
+                        'review': review
+                    },
+                    success: function(res) {
+                        if(res.success){
+                            $("#call-thank-you-slide").addClass("active");
+                        }else{
+                            // $('.reviewAlert').html(res.message).show();
+                        }
+                    }
+                });
+              
+            });
+
+            $('.cppClose').click(function(){
+                $('.callPopup').removeClass('active');
+            });
+            
+        });
+
         $(document).ready(function(){
             var options = {minMargin: 10, maxMargin: 35, itemSelector: ".item"};
             $(".containerCollage").justifiedGallery();
