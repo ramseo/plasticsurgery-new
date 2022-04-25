@@ -11,6 +11,7 @@ use App\Models\Role;
 use App\Models\User;
 use App\Models\Userprofile;
 use App\Models\UserProvider;
+use App\Models\UserQuotation;
 use App\Models\Quotation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -23,6 +24,7 @@ use App\Models\Vendor;
 use Log;
 use Flash;
 use Auth;
+use DB;
 
 class UserController extends Controller
 {
@@ -510,8 +512,39 @@ class UserController extends Controller
 
    public function getVendors($slug = 'wedding-photographers')
     {
-        // $types = Type::all();
-        return view("frontend.users.vendor");
+         if(Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user_id = Auth::user()->id;
+        $type = DB::table('types')->where('slug', $slug)->first();
+
+
+        $user_quotation = UserQuotation::where('type_id',$type->id)->where('user_id', $user_id)->first();
+
+        $quotations = Quotation::where('user_id', $user_id)->get();
+        
+        $vendors = array();
+        foreach($quotations as $quotation){
+            $vendors[]=$quotation['vendor_id'];
+        }
+
+// DB::enableQueryLog();
+        $more_vendors = DB::table('vendors')
+        ->leftJoin('users', 'users.id', '=', 'vendors.user_id')
+        ->leftJoin('types', 'types.id', '=', 'vendors.type_id')
+        ->whereNotNull('users.email_verified_at')
+        ->where('types.slug', $slug)
+        ->whereNotIn('vendors.id', $vendors)
+        ->limit(20)
+        ->get();
+        
+
+         $vendors = DB::table('vendors')->whereIn('vendors.id', $vendors)->get();
+
+        // dd(DB::getQueryLog());
+        // dd($more_vendors);
+
+        return view("frontend.users.vendor",  compact('user_quotation', 'type', 'more_vendors', 'vendors'));
     }
 
 }

@@ -230,6 +230,7 @@
                     $('#submitQuotation').prop('disabled', true);
                 }
             });
+
             $(document).on('submit','#quotationForm', function(e){
                 e.preventDefault();
                 $('body').block({ message: "Processing..." });

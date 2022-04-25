@@ -299,8 +299,13 @@ class VendorController extends Controller
             $city = City::where('id', $vendor->city_id)->first();
             $type = Type::where('id', $vendor->type_id)->first();
 
+            $data['dates'] =  date('Y-m-d');
 
-            $quotation = new Quotation();
+
+            $quotation = Quotation::where('vendor_id',$data['vendor_id'])->where('user_id', Auth::user()->id)->first();
+            if($quotation == ''){
+                $quotation = new Quotation();
+            }
             $quotation->vendor_id = $data['vendor_id'];
             $quotation->user_id = Auth::user()->id;
             $quotation->city_id = $data['city'];
@@ -327,17 +332,19 @@ class VendorController extends Controller
     }
 
      public function saveQuotationType($type_alias){
-        // $type_id = base64_decode($type_id);
-        $body_class = '';
         $type = DB::table('types')->where('slug', $type_alias)->first();
-
+        if(Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user_id = Auth::user()->id;
+        $user_quotation = UserQuotation::where('type_id',$type->id)->where('user_id', $user_id)->first();
         $top_services  = DB::table('services')
             ->select('services.*')
             ->where('services.type_id', $type->id)
             ->where('services.positions', 'top')
             ->where('services.input_type', 'price')
             ->get();
-        return view('frontend.vendors.type', compact('body_class', 'type', 'top_services'));
+        return view('frontend.vendors.type', compact('user_quotation', 'type', 'top_services'));
     }
     
     public function storeQuotationType(Request $request){
@@ -361,12 +368,13 @@ class VendorController extends Controller
                 }
             }
 
-        // dd($data);
-
-
-            $quotation = new    UserQuotation();
+            $quotation = UserQuotation::where('type_id',$data['type_id'])->where('user_id', Auth::user()->id)->first();
+            if($quotation == ''){
+                $quotation = new    UserQuotation();
+            }
             $quotation->user_id = Auth::user()->id;
             $quotation->type_id = $data['type_id'];
+            $quotation->city_id = $data['city'];
             $quotation->name = $data['name'];
             $quotation->email = $data['email'];
             $quotation->phone = $data['phone'];

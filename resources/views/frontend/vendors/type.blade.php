@@ -201,7 +201,7 @@ $max_price = 100000;
                             $('#quotationForm').trigger('reset');
                             toastr.success(res.message, 'Quotation requested Successfully!');
                             setTimeout(function(){
-                                document.location.href = "/vendors";
+                                document.location.href = "/vendors/{{Request::segment(3)}}";
                             }, 1000);
                         }else{
                             $('.alert-quotation').html(res.message).show();
