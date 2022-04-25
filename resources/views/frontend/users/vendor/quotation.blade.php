@@ -10,18 +10,22 @@
 
 @foreach($services as $service)
   @php  $selected_services = getData('services', 'id',  $service['service_id']);  @endphp
+  @if($selected_services)
     <div class="requirement">
       <p class="medium-16 req-name">{{$selected_services->name}}</p>
       <p class="normal-16 light req-days">{{$service['quantity']}} {{ $selected_services->service_type == 'day' ? $selected_services->service_type : 'Yes'}} </p>
     </div>
+  @endif
 @endforeach
        
 
        @php  $city = getData('cities', 'id',  $user_quotation->city_id);  @endphp
+       @if($city)
       <div class="requirement">
         <p class="medium-16 req-name">Wedding city</p>
         <p class="normal-16 light req-days">{{$city->name}}</p>
       </div>
+      @endif
     <div class="requirement">
       <p class="medium-16 req-name">Event Dates</p>
       <p class="normal-16 light req-days">
