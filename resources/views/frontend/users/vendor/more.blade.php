@@ -13,19 +13,19 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 card-listing-col">
                     <div id="vendorsSlider" class="owl-carousel owl-theme common-slider">
-                        @foreach($featured_vendors as $vendor)
+                        @foreach($featured_vendors as $fvendor)
                             @php 
-                                $vendorCity = getData('cities', 'id', $vendor->city_id);
-                                $vendorType = getData('types', 'id', $vendor->type_id); 
+                                $vendorCity = getData('cities', 'id', $fvendor->city_id);
+                                $vendorType = getData('types', 'id', $fvendor->type_id); 
                             @endphp
                             <div>
                                 <div class="common-card vendor-card">
-                                    <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $vendor->slug }}">
+                                    <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $fvendor->slug }}">
                                         @php
                                             $vendor_profile_img = asset('img/default-vendor.jpg');
-                                            if($vendor->image){
-                                                if(file_exists( public_path().'/storage/vendor/profile/'. $vendor->image )){
-                                                    $vendor_profile_img = asset('storage/vendor/profile/'.$vendor->image);
+                                            if($fvendor->image){
+                                                if(file_exists( public_path().'/storage/vendor/profile/'. $fvendor->image )){
+                                                    $vendor_profile_img = asset('storage/vendor/profile/'.$fvendor->image);
                                                 }
                                             }
                                         @endphp
@@ -33,7 +33,7 @@
                                             <img src="{{$vendor_profile_img}}" alt="" class="img-fluid">
                                         </div>
                                         <div class="text-col">
-                                            <p class="title">{{$vendor->business_name}}</p>
+                                            <p class="title">{{$fvendor->business_name}}</p>
                                         </div>
                                     </a>
                                 </div>
