@@ -542,7 +542,7 @@ class UserController extends Controller
          $vendors = DB::table('vendors')->whereIn('vendors.id', $vendors)->get();
 
         // dd(DB::getQueryLog());
-        // dd($more_vendors);
+        // dd($vendors);
 
         return view("frontend.users.vendor",  compact('user_quotation', 'type', 'more_vendors', 'vendors'));
     }

@@ -3,7 +3,7 @@
 @endphp
 
 @if(count($featured_vendors) > 0)
-<div class="step-hr"></div>
+
     <section id="more-vendors">
         <div class="container-fluid">
             <div class="row">

@@ -1,5 +1,4 @@
 @extends('frontend.layouts.app')
-
 @section('title') {{ __("Vendor") . ' | ' . $vendor_details->business_name }} @endsection
 
 @section('content')

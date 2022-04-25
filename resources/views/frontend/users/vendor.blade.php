@@ -27,7 +27,7 @@
             <div class="col-xs-12 col-sm-9">
                 @if($user_quotation)   
                     @if($vendors)
-                        @include('frontend.users.vendor.vendors', ['user_quotation'=> $user_quotation])
+                        @include('frontend.users.vendor.vendors', ['vendors'=> $vendors])
                     @endif
                  
                     @include('frontend.users.vendor.quotation', ['user_quotation'=> $user_quotation])
