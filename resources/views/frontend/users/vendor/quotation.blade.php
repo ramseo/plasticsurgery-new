@@ -29,8 +29,9 @@
     <div class="requirement">
       <p class="medium-16 req-name">Event Dates</p>
       <p class="normal-16 light req-days">
-        {{$user_quotation->dates}}
-        <!-- 01/04/2022 -->
+        <!-- {{$user_quotation->dates}}   -->
+        26/04/2022
+        <!-- -->
       </p>
     </div>
   </div>
