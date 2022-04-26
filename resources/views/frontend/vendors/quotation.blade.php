@@ -24,9 +24,20 @@
             $min_price = min($service_arr);
             $max_price = max($service_arr);                
         }
-
+        
+    $userservice = array();
+    if($user_quotation){
+        $user_service = json_decode($user_quotation->service_json, true);
+        foreach($user_service as $serv){
+          $userservice[$serv["service_id"]]  = $serv['quantity'];
+        }
+    }
+ 
       
     @endphp
+
+
+
     <section id="quotation-section">
         <div class="container">
             <div class="row">
@@ -66,7 +77,68 @@
                             <div>
                                 <p class="quotation-header">Fill your requirements</p>
                             </div>
-                            @foreach($top_services as $top_service)
+
+                            @if($userservice)
+                                @foreach($top_services as $top_service)
+                                    <ul class="list-inline justified-list">
+                                        <li class="list-inline-item">
+                                            <div class="q-service-col">
+                                                <div class="q-service-title">
+                                                    <p class="title">{{$top_service->name}}</p>
+                                                </div>
+                                                @if($top_service->description)
+                                                    <div>
+                                                        <span class="show_details">Show details</span>
+                                                    </div>
+                                                    <div class="q-service-details" style="display: none;">
+                                                        <p>{!! $top_service->description !!}</p>
+                                                    </div>
+                                                @endif
+                                            </div>
+                                        </li>
+
+                                        <li class="list-inline-item">
+                                              
+                                            @if(isset($userservice[$top_service->id]))
+                                                <div class="q-quantity-box">
+                                                    <span class="q-minus q-icon" data-type="minus"><i class="fa fa-minus"></i></span>
+                                                    <span class="q-plus q-icon" data-type="plus"><i class="fa fa-plus"></i></span>
+                                                    <input type="text" class="form-control quantity-box" name="service[{{$top_service->id}}][quantity]" value="{{$userservice[$top_service->id]}}" />
+                                                    <input type="hidden" name="service[{{$top_service->id}}][service_id]" value="{{$top_service->id}}" />
+                                                    @if($top_service->service_type != 'complete')
+                                                        <div class="text-center text-capitalize for_service">
+                                                            <p>{{$top_service->service_type}}</p>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            @else
+                                                <div class="q-add-btn-col">
+                                                    <label class="q-custom-label">
+                                                        <input type="hidden" name="service[{{$top_service->id}}][service_val]" value="0">
+                                                        <input class="service-selection" type="checkbox" name="service[{{$top_service->id}}]" data-type="{{ $top_service->service_type == 'complete' ? 'simple' : 'config' }}" />
+                                                        <span class="q-box">
+                                                            Add <i class="fa fa-plus"></i>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                                <div class="q-quantity-box" style="display: none;">
+                                                    <span class="q-minus q-icon" data-type="minus"><i class="fa fa-minus"></i></span>
+                                                    <span class="q-plus q-icon" data-type="plus"><i class="fa fa-plus"></i></span>
+                                                    <input type="text" class="form-control quantity-box" name="service[{{$top_service->id}}][quantity]" value="1" />
+                                                    <input type="hidden" name="service[{{$top_service->id}}][service_id]" value="{{$top_service->id}}" />
+                                                    @if($top_service->service_type != 'complete')
+                                                        <div class="text-center text-capitalize for_service">
+                                                            <p>{{$top_service->service_type}}</p>
+                                                        </div>
+                                                    @endif
+                                                </div>
+                                            @endif
+
+                                        </li>
+                                    </ul>
+                                @endforeach
+                            @else
+                                @foreach($top_services as $top_service)
                                 <ul class="list-inline justified-list">
                                     <li class="list-inline-item">
                                         <div class="q-service-col">
@@ -83,6 +155,7 @@
                                             @endif
                                         </div>
                                     </li>
+
                                     <li class="list-inline-item">
                                         <div class="q-add-btn-col">
                                             <label class="q-custom-label">
@@ -107,6 +180,9 @@
                                     </li>
                                 </ul>
                             @endforeach
+                            @endif
+
+                            
 
                             <div class="bugdet-field-col">
                                 <p>Total budget?</p>
@@ -120,26 +196,51 @@
                         </div>
                         <div class="form-group">
                             <label>Name</label>
-                            <input type="text" name="name" class="form-control" value="{{auth()->user()->name}}">
+                            @if($user_quotation)
+                                <input type="text" name="name" class="form-control" value="{{$user_quotation->name}}">
+                            @else
+                                <input type="text" name="name" class="form-control" value="{{auth()->user()->name}}">
+                            @endif
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="text" name="email" class="form-control" value="{{auth()->user()->email}}">
+                            @if($user_quotation)
+                                <input type="text" name="email" class="form-control" value="{{$user_quotation->email}}">
+                            @else
+                                <input type="text" name="email" class="form-control" value="{{auth()->user()->email}}">
+                            @endif
                         </div>
                         <div class="form-group">
                             <label>Phone</label>
-                            <input type="text" name="phone" class="form-control" value="{{auth()->user()->mobile}}">
+                            @if($user_quotation)
+                                <input type="text" name="phone" class="form-control" value="{{$user_quotation->phone}}">
+                            @else
+                                <input type="text" name="phone" class="form-control" value="{{auth()->user()->mobile}}">
+                            @endif
+                            
                         </div>
                         <div class="form-group">
                             <label>City</label>
-                            <select name="city" class="form-control">
-                                <option value="">Select</option>
-                                @if(count($cities) > 0)
-                                    @foreach($cities as $citi)
-                                        <option value="{{$citi->id}}">{{$citi->name}}</option>
-                                    @endforeach
-                                @endif
-                            </select>
+                            @if($user_quotation)
+                                <select name="city" class="form-control">
+                                    <option value="">Select</option>
+                                    @if(count($cities) > 0)
+                                        @foreach($cities as $citi)
+                                            <option value="{{$citi->id}}"  {{ $citi->id == $user_quotation->city_id ? 'selected': '' }}>{{$citi->name}}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                            @else
+                                <select name="city" class="form-control">
+                                    <option value="">Select</option>
+                                    @if(count($cities) > 0)
+                                        @foreach($cities as $citi)
+                                            <option value="{{$citi->id}}">{{$citi->name}}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                            @endif
+                            
                         </div>
                      <!--    <div class="form-group">
                             <label for="">When it is required?</label>

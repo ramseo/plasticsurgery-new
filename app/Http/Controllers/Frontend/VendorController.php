@@ -194,6 +194,9 @@ class VendorController extends Controller
         $body_class = '';
         $city = City::where('slug', $city_slug)->first();
         $type = Type::where('slug', $type_slug)->first();
+
+
+
         $vendor_details = DB::table('vendors')->where('type_id', $type->id)->where('city_id', $city->id)->where('slug', $vendor_slug)->first();
         return view('frontend.vendors.details', compact('body_class', 'vendor_details', 'city', 'type'));
     }
@@ -262,6 +265,14 @@ class VendorController extends Controller
         // $vendor_id = base64_decode($vendor_id);
         $body_class = '';
         $vendor = DB::table('vendors')->where('slug', $vendor_slug)->first();
+
+
+        if(Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user_id = Auth::user()->id;
+        $user_quotation = UserQuotation::where('type_id',$vendor->type_id)->where('user_id', $user_id)->first();
+
         $vendor_details = $vendor;
         $top_services  = DB::table('services')
             ->join('prices', 'services.id', '=', 'prices.service_id')
@@ -270,7 +281,7 @@ class VendorController extends Controller
             ->where('services.positions', 'top')
             ->where('services.input_type', 'price')
             ->get();
-        return view('frontend.vendors.quotation', compact('body_class', 'vendor_details', 'top_services'));
+        return view('frontend.vendors.quotation', compact('user_quotation', 'vendor_details', 'top_services'));
     }
 
     public function storeQuotation(Request $request){
