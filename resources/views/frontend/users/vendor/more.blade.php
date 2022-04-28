@@ -30,7 +30,7 @@
                                             }
                                         @endphp
                                         <div class="img-coll">
-                                            <img src="{{$vendor_profile_img}}" alt="" height="200" class="img-fluid">
+                                            <img src="{{$vendor_profile_img}}" alt="" style="height: 200px;" class="img-fluid">
                                         </div>
                                         <div class="text-col">
                                             <p class="title">{{$fvendor->business_name}}</p>
