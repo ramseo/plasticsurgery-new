@@ -333,9 +333,9 @@ class VendorController extends Controller
 
             $quotation->vendor_data = array( 'vendor_business_name' => $vendor->business_name,            'vendor_url' => $vendor_url , 'city' => $city->name);
 
-            Mail::to($vendor->email)->send(new QuotationUser($quotation));
-            Mail::to(env('MAIL_FROM_ADDRESS'))->send(new QuotationUser($quotation));
-            Mail::to($vendor_user->email)->send(new QuotationAdmin($quotation));
+            // Mail::to($vendor->email)->send(new QuotationUser($quotation));
+            // Mail::to(env('MAIL_FROM_ADDRESS'))->send(new QuotationUser($quotation));
+            // Mail::to($vendor_user->email)->send(new QuotationAdmin($quotation));
 
             return response()->json(['success' => true, 'message' => 'Quotation requested successfully!']);
         }
@@ -383,6 +383,10 @@ class VendorController extends Controller
             if($quotation == ''){
                 $quotation = new    UserQuotation();
             }
+            $dates = '';
+            if(isset($data['start_date']) && isset($data['end_date'])){
+            $dates =  $data['start_date'] . ' - ' . $data['end_date'];
+            }
             $quotation->user_id = Auth::user()->id;
             $quotation->type_id = $data['type_id'];
             $quotation->city_id = $data['city'];
@@ -390,7 +394,7 @@ class VendorController extends Controller
             $quotation->email = $data['email'];
             $quotation->phone = $data['phone'];
             $quotation->budget = $data['budget'];
-            // $quotation->dates = $data['dates'];
+            $quotation->dates = $dates;
             $quotation->service_json = json_encode($services);
             $quotation->save();
 

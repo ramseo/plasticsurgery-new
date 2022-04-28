@@ -255,7 +255,12 @@
                         </div>
                         <div class="form-group">
                             <input type="hidden" name="vendor_id" value="{{$vendor_details->id}}">
-                            <input id="submitQuotation" type="submit" class="btn btn-primary btn btn-block" value="Submit" disabled>
+                              @if($user_quotation)
+                              <input id="submitQuotation" type="submit" class="btn btn-primary btn btn-block" value="Submit">
+                               @else
+                               <input id="submitQuotation" type="submit" class="btn btn-primary btn btn-block" value="Submit" disabled>
+                               @endif
+                            
                         </div>
                     </div>
                 </form>

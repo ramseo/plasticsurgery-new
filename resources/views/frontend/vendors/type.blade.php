@@ -132,14 +132,47 @@ $max_price = 100000;
 @endpush
 
 @push('after-scripts')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+
+
+    <!-- Include Date Range Picker -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+
     <script>
-        $(document).ready(function(){
-            $('.date').datepicker({
-                multidate: true,
-                minDate: new Date()
-            });
+
+$(function() {
+
+            var start = moment().subtract(29, 'days');
+            var end = moment();
+
+        var storeStartDate;
+        var storeEndDate;
+            function cb(start, end) {
+                $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                    storeStartDate = start;
+                    storeEndDate = end;   
+            }
+
+            $('#reportrange').daterangepicker({
+                startDate: start,
+                endDate: end,
+                ranges: {
+                   'Next 7 Days': [moment(), moment().add(6, 'days')],
+                   'Next 30 Days': [moment(), moment().add(29, 'days')],
+                   'This Month': [moment().startOf('month'), moment().endOf('month')],
+                   'Next Month': [moment().add(1, 'month').startOf('month'), moment().add(1, 'month').endOf('month')]
+                }
+            }, cb);
+
+            cb(start, end);
+
+            // $('.date').datepicker({
+            //     multidate: true,
+            //     minDate: new Date()
+            // });
             $('.range-example-input').asRange({});
             $(document).on('change', '.service-selection', function(){
                 var type = $(this).attr('data-type');
@@ -185,7 +218,7 @@ $max_price = 100000;
             $(document).on('submit','#quotationForm', function(e){
                 e.preventDefault();
                 $('body').block({ message: "Processing..." });
-                var form_data = $('#quotationForm').serialize();
+                var form_data = $('#quotationForm').serialize() + '&start_date='  + storeStartDate.format('D MMMM YYYY') + '&end_date='+  storeEndDate.format('D MMMM YYYY');
                 $.ajaxSetup({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -215,35 +248,9 @@ $max_price = 100000;
 
 
 
-<!-- Include Date Range Picker -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 
  <script>
-$(function() {
 
-    var start = moment().subtract(29, 'days');
-    var end = moment();
-
-    function cb(start, end) {
-        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-    }
-
-    $('#reportrange').daterangepicker({
-        startDate: start,
-        endDate: end,
-        ranges: {
-           'Next 7 Days': [moment(), moment().add(6, 'days')],
-           'Next 30 Days': [moment(), moment().add(29, 'days')],
-           'This Month': [moment().startOf('month'), moment().endOf('month')],
-           'Next Month': [moment().add(1, 'month').startOf('month'), moment().add(1, 'month').endOf('month')]
-        }
-    }, cb);
-
-    cb(start, end);
-    
-});
 </script>
 @endpush
 

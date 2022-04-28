@@ -1,10 +1,10 @@
 <section id="about-us">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 col-sm-6 img-col">
+            <div class="col-xs-12 col-sm-3 img-col">
                 <img src="images/about.jpg" alt="" class="img-fluid">
             </div>
-            <div class="col-xs-12 col-sm-6 text-col">
+            <div class="col-xs-12 col-sm-9 text-col">
                 <div class="col-xs-12 common-heading">
                     <p class="shadow-text">About Us</p>
                     <p class="head">About Us</p>

@@ -520,9 +520,8 @@ class UserController extends Controller
 
 
         $user_quotation = UserQuotation::where('type_id',$type->id)->where('user_id', $user_id)->first();
-
         $quotations = Quotation::where('user_id', $user_id)->get();
-        
+
         $vendors = array();
         foreach($quotations as $quotation){
             $vendors[]=$quotation['vendor_id'];
@@ -539,7 +538,16 @@ class UserController extends Controller
         ->get();
         
 
-         $vendors = DB::table('vendors')->whereIn('vendors.id', $vendors)->get();
+         $vendors = DB::table('vendors')->select('vendors.*')
+        ->leftJoin('users', 'users.id', '=', 'vendors.user_id')
+        ->leftJoin('types', 'types.id', '=', 'vendors.type_id')
+        ->whereNotNull('users.email_verified_at')
+        ->where('types.slug', $slug)
+        ->whereIn('vendors.id', $vendors)
+        ->limit(20)
+        ->get();
+
+         // $vendors = DB::table('vendors')->whereIn('vendors.id', $vendors)->get();
 
         // dd(DB::getQueryLog());
         // dd($vendors);
