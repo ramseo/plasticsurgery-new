@@ -176,6 +176,7 @@
 @endsection
 
 @push('after-scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
     <script>
         
         $(document).ready(function(){
@@ -183,7 +184,8 @@
                 if('<?php echo Auth::check(); ?>' == ''){
                     location.href = "{{ route('login') }}";
                 }else{
-                   $.ajax({
+                    $('body').block({ message: "Processing..." });
+                    $.ajax({
                         type: 'POST',
                         url: "{{route('frontend.call')}}",
                         data: {
@@ -201,6 +203,7 @@
                             }else{
                                 // $('.reviewAlert').html(res.message).show();
                             }
+                             $('body').unblock();
                         }
                     });
                 }
