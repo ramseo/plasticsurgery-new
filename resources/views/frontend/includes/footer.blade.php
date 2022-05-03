@@ -10,7 +10,7 @@
 </style>
 <footer class="footer pt-5 pb-3  text-white overflow-hidden" style=" background: rgb(235, 10, 62);">
     <!-- <div class="pattern pattern-soft top"></div> -->
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-8 footer-col">
                 <p class="footer-brand mr-lg-5 d-flex" > Follow us for more ideas & fun</p>
