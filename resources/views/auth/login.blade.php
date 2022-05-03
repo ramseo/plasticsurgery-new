@@ -11,6 +11,7 @@
         <p class="header-text">Welcome Back, Sign in to Wed.in</p>
     </div>
     <div class="form-body">
+        
         @include('flash::message')
         @if ($errors->any())
             <div class="alert alert-danger alert-dismissible fade show" role="alert">

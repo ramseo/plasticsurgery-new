@@ -1,7 +1,3 @@
-@php
-    $types = getDataArray('types');
-    $cities = getDataArray('cities');
-@endphp
 <style type="text/css">
 .button {    float: left;    width: 60px;    height: 60px;    cursor: pointer;    background: #fff;    overflow: hidden;    border-radius: 50px;    transition: all 0.3s ease-in-out;    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);}
 .button span {    font-size: 20px;    font-weight: 500;    line-height: 60px;    margin-left: 10px;}
@@ -12,11 +8,12 @@
 .button .icon i {    color: rgb(235, 10, 62); font-size: 25px;    line-height: 60px;    transition: all 0.3s ease-in-out;}
 .button:hover i {    color: #fff;}
 </style>
-<footer id="footer">
-    <div class="container-fluid">
+<footer class="footer pt-5 pb-3  text-white overflow-hidden" style=" background: rgb(235, 10, 62);">
+    <!-- <div class="pattern pattern-soft top"></div> -->
+    <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 footer-col">
-                <p class="footer-head">Follow us for more ideas & fun</p>
+            <div class="col-xs-12 col-sm-8 footer-col">
+                <p class="footer-brand mr-lg-5 d-flex" > Follow us for more ideas & fun</p>
                 @if(setting('instagram_url'))
                     <a href="{{setting('instagram_url')}}" target="_blank">
                        <div class="button">
@@ -79,103 +76,120 @@
                     </a>
                 @endif
             </div>
-            <div class="col-xs-12 col-sm-12 footer-col">
-                <img src="{{asset('images/color-logo.png')}}" alt="" class="img-fluid">
-                <div class="footer-text-col mt-4">
-                    <p class="footer-bold">{{setting('footer_tagline')}}</p>
-                    <p class="footer-text">{{setting('footer_about_us')}}</p>
-                    <a href="#" class="btn btn-primary mt-3">HIRE A VENDOR</a>
-                </div>
+            <div class="col-lg-4  mb-lg-0">
+                <p class="footer-brand mr-lg-5 d-flex" > Are you a vendor? </p>
+                <p class="my-4">
+                    Sign up on {{ env('APP_NAME')}} to reach more couples and book more weddings!
+                </p>
+                <a target="_blank" rel="noopener" href="#" >Start Here <i class="fa fa-arrow-right"></i></a>
             </div>
-            <div class="col-xs-12 col-sm-12 footer-col">
-                <p class="footer-head">More About Us</p>
-                @php
-                    $footer_menu = getDataArray('menus','menu', 'footer');
-                @endphp
-                @if($footer_menu)
-                    <ul class="list-inline footer-color-list">
-                        @foreach($footer_menu as $menu_item)
-                            <li class="list-inline-item"><a href="{{$menu_item->url}}">{{$menu_item->title}}</a></li>
-                        @endforeach
-                    </ul>
-                @endif
-                @if(setting('show_copyright'))
-                    <p class="footer-small-text">{{setting('copyright_text')}}</p>
-                @endif
+        </div>
+        <div class="row">
+             <div class="col-12 col-sm-12 col-lg-12">
+                <h5>{{ env('APP_NAME') }} - Your Personal Wedding Planner</h5>
+                 @if(setting('footer_about_us'))
+                    {!! setting('footer_about_us') !!}
+                 @endif
             </div>
-            <div class="col-xs-12 col-sm-12 footer-col">
-                <p class="footer-head">Contact Us</p>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-5">
-                        <p class="list-header"><img src="images/heart-icon.png" alt=""> If you are getting married & need help</p>
-                        <ul class="list-unstyled footer-contact-list">
-                            @if(setting('support_email'))
-                                <li>
-                                    <a class="active" href="mailto:{{setting('support_email')}}"><i class="far fa-envelope"></i> support@wed.in</a>
-                                </li>
-                            @endif
-                            @if(setting('support_telephone'))
-                                <li>
-                                    <a href="tel:{{setting('support_telephone')}}"><i class="fas fa-phone-alt"></i> {{setting('support_telephone')}}</a>
-                                </li>
-                            @endif
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-5">
-                        <p class="list-header"><img src="images/heart-icon.png" alt=""> If you are a wedding vendor & need help</p>
-                        <ul class="list-unstyled footer-contact-list">
-                            @if(setting('vendor_support_email'))
-                                <li>
-                                    <a href="mailto:{{setting('vendor_support_email')}}"><i class="far fa-envelope"></i> support@wed.in</a>
-                                </li>
-                            @endif
-                            @if(setting('vendor_support_telephone'))
-                                <li>
-                                    <a href="tel:{{setting('vendor_support_telephone')}}"><i class="fas fa-phone-alt"></i> {{setting('vendor_support_telephone')}}</a>
-                                </li>
-                            @endif
-                        </ul>
-                    </div>
-                </div>
+        </div>
+        <br>
+        <div class="row">
+             <div class="col-12 col-sm-8 col-lg-8">
+
+                <h6>Contact us to get best deals</h6>
+                <p class="font-small">{{ env('MAIL_FROM_ADDRESS')}}</p>
+                <p class="font-small">+91 9888898888</p>
+               
             </div>
-            <div class="col-xs-12 col-sm-12 footer-col">
-                <p class="footer-head">Get Amazing Wedding Ideas</p>
-                <p class="list-header"><img src="images/heart-icon.png" alt=""> Get Latest wedding blog updates</p>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4">
-                        <form id="newsletterForm" action="">
-                            <div class="input-group newsletter-group">
+
+             <div class="col-6 col-sm-4 col-lg-4  mb-lg-0 text-left">
+                <h6>Get Latest Blog Alerts</h6>
+                 <form id="newsletterForm" action="">
+                            <div class="input-group newsletter-group" style="background: white;">
                                 <input id="newsletterEmail" type="text" class="form-control" name="email" placeholder="Email">
-                                <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="submit"><i
+                                <div class="input-group-append" style="background: white;">
+                                    <button class="btn btn-outline-secondary" style="background:#E4E4E4;" type="submit"><i
                                             class="fas fa-check"></i></button>
                                 </div>
                             </div>
                         </form>
-                    </div>
-                </div>
+              
             </div>
 
-            @if(isset($types) && $types)
-                <div class="col-xs-12 col-sm-12 footer-col">
-                    <p class="footer-head">Wedding Vendors in over 100 cities</p>
-                    @foreach($types as $type)
-                        <div class="footer-list-col">
-                            <p class="list-header strong"><img src="images/heart-icon.png" alt=""> {{$type->name}}</p>
-                            <ul class="list-inline footer-color-list">
-                                @if(isset($cities) && $cities)
-                                    @foreach($cities as $city)
-                                        <li class="list-inline-item">
-                                            <a href="{{url($type->slug.'/'.$city->slug)}}">{{$type->name}} in {{$city->name}}</a>
-                                        </li>
-                                    @endforeach
-                                @endif
-                            </ul>
-                        </div>
-                    @endforeach
-                </div>
-            @endif
+             
+        </div>
 
+        <hr style="background: #ddd;">
+        <div class="row">
+           
+
+            <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left">
+                <h6>
+                    Start Planning
+                </h6>
+                <ul class="links-vertical">
+                    <li><a target="_blank" href="#">Search By Vendor</a></li>
+                    <li><a target="_blank" href="#">Search By City</a></li>
+                    <li><a target="_blank" href="#">Top Rated Vendors</a></li>
+                    <li><a target="_blank" href="#">Destination Wedding</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left">
+                <h6>
+                    Wedding Ideas
+                </h6>
+                <ul class="links-vertical">
+                    <li><a target="_blank" href="#">Wedding Blog</a></li>
+                    <li><a target="_blank" href="#">Wedding Inspiration Gallery</a></li>
+                    <li><a target="_blank" href="#">Real Wedding</a></li>
+                    <li><a target="_blank" href="#">Submit Wedding</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left">
+                <h6>
+                    Photo Gallery
+                </h6>
+                <ul class="links-vertical">
+                    <li><a target="_blank" href="#">Bridal Wear</a></li>
+                    <li><a target="_blank" href="#">Wedding Jewellery</a></li>
+                    <li><a target="_blank" href="#">Bridal Makeup</a></li>
+                    <li><a target="_blank" href="#">Wedding Decor</a></li>
+                    <li><a target="_blank" href="#">Wedding Photography</a></li>
+                    <li><a target="_blank" href="#">Groom Wear</a></li>
+                    <li><a target="_blank" href="#">Wedding Accessories</a></li>
+                    <li><a target="_blank" href="#">Mehendi Designs</a></li>
+                </ul>
+            </div>
+
+
+            <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left">
+                <h6>
+                    Pages
+                </h6>
+                <ul class="links-vertical">
+                    <li><a target="_blank" href="#">Blog</a></li>
+                    <li><a target="_blank" href="#">Themes</a></li>
+                    <li><a target="_blank" href="#">Support</a></li>
+                    <li><a target="_blank" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+              
+         
+        </div>
+
+        <hr  style="background: #ddd;">
+
+        <div class="row">
+            <div class="col mb-md-0">
+                <div class="d-flex text-center justify-content-center align-items-center">
+                    <p class="font-weight-normal mb-0">
+                        © {{date('Y')}} <a href="{{ env('APP_URL')}}">{{ env('APP_NAME')}}</a>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
