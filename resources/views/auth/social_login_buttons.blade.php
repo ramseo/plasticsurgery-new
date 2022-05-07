@@ -5,6 +5,13 @@
     </div>
 
     <div class="text-center">
+        @if(env('FACEBOOK_ACTIVE'))
+        <a href="{{route('social.login', 'facebook')}}" class="btn btn-neutral btn-icon mb-2">
+            <span class="btn-inner--icon"> <i class="fab fa-facebook"></i> </span>
+            <span class="btn-inner--text">Facebook</span>
+        </a>
+        @endif
+
        
 
         @if(env('GOOGLE_ACTIVE'))
