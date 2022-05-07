@@ -1,7 +1,7 @@
 @if(env('FACEBOOK_ACTIVE') || env('GITHUB_ACTIVE') || env('GOOGLE_ACTIVE'))
 <div class="card-header bg-transparent pb-4">
     <div class="text-muted text-center mt-2 mb-4">
-        <small>Sign in with social profiles</small>
+      
     </div>
 
     <div class="text-center">
