@@ -8,7 +8,7 @@
 .button .icon i {    color: rgb(235, 10, 62); font-size: 25px;    line-height: 60px;    transition: all 0.3s ease-in-out;}
 .button:hover i {    color: #fff;}
 </style>
-<footer class="footer pt-5 pb-3  text-white overflow-hidden" style=" background: rgb(235, 10, 62);">
+<footer  id="footer" class="footer pt-5 pb-3  text-white overflow-hidden" style=" background: rgb(235, 10, 62);">
     <!-- <div class="pattern pattern-soft top"></div> -->
     <div class="container-fluid">
         <div class="row">
