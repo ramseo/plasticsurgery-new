@@ -527,8 +527,21 @@ class UserController extends Controller
             $vendors[]=$quotation['vendor_id'];
         }
 
-// DB::enableQueryLog();
+
+        // DB::enableQueryLog();
+        if($user_quotation){
         $more_vendors = DB::table('vendors')->select('vendors.*')
+        ->leftJoin('users', 'users.id', '=', 'vendors.user_id')
+        ->leftJoin('types', 'types.id', '=', 'vendors.type_id')
+        ->whereNotNull('users.email_verified_at')
+        ->where('types.slug', $slug)
+        ->where('vendors.city_id', $user_quotation->city_id)
+        ->whereNotIn('vendors.id', $vendors)
+        ->limit(20)
+        ->get();
+        
+         }else{
+            $more_vendors = DB::table('vendors')->select('vendors.*')
         ->leftJoin('users', 'users.id', '=', 'vendors.user_id')
         ->leftJoin('types', 'types.id', '=', 'vendors.type_id')
         ->whereNotNull('users.email_verified_at')
@@ -536,7 +549,7 @@ class UserController extends Controller
         ->whereNotIn('vendors.id', $vendors)
         ->limit(20)
         ->get();
-        
+         }
 
          $vendors = DB::table('vendors')->select('vendors.*')
         ->leftJoin('users', 'users.id', '=', 'vendors.user_id')
