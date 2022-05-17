@@ -21,7 +21,6 @@
             
         }
         if($service_arr){
-            $min_price = min($service_arr);
             $max_price = max($service_arr);                
         }
         
