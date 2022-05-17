@@ -34,7 +34,7 @@
                                         <div class="text-col">
                                             <p class="title">{{$vendor->business_name}}</p>
                                             @if($vendor->business_address)
-                                            <p class="text">{{ \Illuminate\Support\Str::limit($vendor->business_address, 90, '...') }}</p>
+                                            <p class="text">{{ \Illuminate\Support\Str::limit($vendor->business_address, 45, '...') }}</p>
                                             @endif
                                             <p class="price"><span>Rs.{{$vendor->price}}</span>&nbsp; {{ \Illuminate\Support\Str::limit($vendor->label, 30, '...') }}</p>
                                         </div>
