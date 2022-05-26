@@ -102,6 +102,7 @@ class SocialLoginController extends Controller
                 'last_name'   => $last_name,
                 'name'        => $name,
                 'email'       => $email,
+                'email_verified_at' => time(),
             ]);
 
           
