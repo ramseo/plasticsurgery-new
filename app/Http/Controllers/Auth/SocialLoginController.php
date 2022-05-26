@@ -104,6 +104,7 @@ class SocialLoginController extends Controller
                 'email'       => $email,
             ]);
 
+          
             $media = $user->addMediaFromUrl($socialUser->getAvatar())->toMediaCollection('users');
             $user->avatar = $media->getUrl();
             $user->save();
@@ -116,6 +117,8 @@ class SocialLoginController extends Controller
                 'avatar'      => $socialUser->getAvatar(),
                 'provider'    => $provider,
             ]);
+
+            $user->assignRole('user');
 
             return $user;
         }
