@@ -160,7 +160,7 @@ class UserController extends Controller
         Flash::success("<i class='fas fa-check'></i> Vendor Updated Successfully")->important();
         Log::info(label_case('Update | ' . $user->name . '(ID:' . $user->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
 //        return redirect("admin/vendor/edit/" . $user->id);
-        return redirect()->route('frontend.users.profileEdit', $user->id)->with('flash_success', 'Update successful!');
+        return redirect()->route('frontend.users.profileEdit')->with('flash_success', 'Update successful!');
 
 //        $module_title = $this->module_title;
 //        $module_name = $this->module_name;

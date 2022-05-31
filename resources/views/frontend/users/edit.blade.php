@@ -47,7 +47,7 @@
                     <div class="card-body d-flex flex-column justify-content-between col-auto">
 
 
-                        {{ html()->modelForm($user, 'POST', route('frontend.users.profileUpdate', $user->id))->class('form-horizontal')->acceptsFiles()->open() }}
+                        {{ html()->modelForm($user, 'POST', route('frontend.users.profileUpdate'))->class('form-horizontal')->acceptsFiles()->open() }}
 
                         <div class="form-group row">
                             <div class="col-md-2">
