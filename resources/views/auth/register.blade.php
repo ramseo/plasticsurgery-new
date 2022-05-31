@@ -14,6 +14,7 @@
     </div>
     <div class="form-body">
         @include('flash::message')
+        @include('auth.social_login_buttons')
         @if ($errors->any())
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
             <p><i class="fas fa-exclamation-triangle"></i> @lang('Please fix the following errors & try again!')</p>

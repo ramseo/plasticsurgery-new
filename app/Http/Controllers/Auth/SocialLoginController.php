@@ -10,6 +10,7 @@ use App\Providers\RouteServiceProvider;
 use Auth;
 use Log;
 use Socialite;
+use Session;
 
 class SocialLoginController extends Controller
 {
@@ -36,8 +37,16 @@ class SocialLoginController extends Controller
      */
     public function redirectToProvider($provider)
     {
+        session('loginType', 'user');
         return Socialite::driver($provider)->redirect();
     }
+
+    public function redirectToProviderVendor($provider)
+    {
+        Session::put('loginType', 'vendor');
+        return Socialite::driver($provider)->redirect();
+    }
+
 
     /**
      * Obtain the user information from Provider (Facebook, Google, GitHub...).
@@ -68,6 +77,10 @@ class SocialLoginController extends Controller
      */
     private function findOrCreateUser($socialUser, $provider)
     {
+
+
+
+
         if ($authUser = UserProvider::where('provider_id', $socialUser->getId())->first()) {
             $authUser = User::findOrFail($authUser->user->id);
 
@@ -121,7 +134,13 @@ class SocialLoginController extends Controller
                 'email_verified_at' => time(),
             ]);
 
-            $user->assignRole('user');
+            if(Session::get('loginType')){
+                $role = Session::get('loginType');
+                Session::forget('loginType');
+            }else{
+                $role = 'user';
+            }
+            $user->assignRole($role);
 
             return $user;
         }

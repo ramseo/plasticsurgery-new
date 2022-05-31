@@ -88,5 +88,6 @@ Route::post('/register-vendor', [RegisteredVendorController::class, 'store'])
 // Social Login Routes
 Route::group(['namespace' => 'Auth', 'middleware' => 'guest'], function () {
     Route::get('login/{provider}', ['as' => 'social.login', 'uses' => 'SocialLoginController@redirectToProvider']);
+    Route::get('vendorlogin/{provider}', ['as' => 'social.vendorlogin', 'uses' => 'SocialLoginController@redirectToProviderVendor']);
     Route::get('login/{provider}/callback', 'SocialLoginController@handleProviderCallback');
 });
