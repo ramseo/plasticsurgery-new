@@ -133,12 +133,14 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function profileUpdate(Request $request, $id)
+    public function profileUpdate(Request $request)
     {
 
 //        if ($id != auth()->user()->id) {
 //            return redirect()->route('frontend.users.profile', $id);
 //        }
+
+        $id = Auth::user()->id;
 
         $this->validate($request, [
             'first_name' => 'required|string|max:191',
