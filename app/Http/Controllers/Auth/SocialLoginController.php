@@ -78,6 +78,7 @@ class SocialLoginController extends Controller
                 'provider_id' => $socialUser->getId(),
                 'avatar'      => $socialUser->getAvatar(),
                 'provider'    => $provider,
+                'email_verified_at' => time(),
             ]);
 
             return $authUser;
@@ -102,8 +103,10 @@ class SocialLoginController extends Controller
                 'last_name'   => $last_name,
                 'name'        => $name,
                 'email'       => $email,
+                'email_verified_at' => time(),
             ]);
 
+          
             $media = $user->addMediaFromUrl($socialUser->getAvatar())->toMediaCollection('users');
             $user->avatar = $media->getUrl();
             $user->save();
@@ -115,7 +118,10 @@ class SocialLoginController extends Controller
                 'provider_id' => $socialUser->getId(),
                 'avatar'      => $socialUser->getAvatar(),
                 'provider'    => $provider,
+                'email_verified_at' => time(),
             ]);
+
+            $user->assignRole('user');
 
             return $user;
         }
