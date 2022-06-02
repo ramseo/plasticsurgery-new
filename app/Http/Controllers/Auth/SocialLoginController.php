@@ -57,7 +57,7 @@ class SocialLoginController extends Controller
     {
         try {
             $user = Socialite::driver($provider)->stateless()->user();
-
+dd($user);
             $authUser = $this->findOrCreateUser($user, $provider);
 
             Auth::login($authUser, true);
