@@ -13,7 +13,6 @@
     <div class="form-body">
           
         @include('flash::message')
-        @include('auth.social_login_buttons')
         @if ($errors->any())
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
                 <p><i class="fas fa-exclamation-triangle"></i> @lang('Please fix the following errors & try again!')</p>
@@ -27,6 +26,25 @@
                 </button>
             </div>
         @endif
+
+        @if(env('FACEBOOK_ACTIVE') || env('GITHUB_ACTIVE') || env('GOOGLE_ACTIVE'))
+            <div class="text-center">
+                @if(env('FACEBOOK_ACTIVE'))
+                <a href="{{route('social.login', 'facebook')}}" class="btn btn-block btn-outline-info">
+                    <span class="btn-inner--icon"> <i class="fab fa-facebook"></i> </span>
+                    <span class="btn-inner--text">Log in with Facebook</span>
+                </a>
+                @endif
+                @if(env('GOOGLE_ACTIVE'))
+                <a href="{{route('social.login', 'google')}}" class="btn btn-block btn-outline-primary">
+                    <span class="btn-inner--icon"><i class="fab fa-google"></i> </span>
+                    <span class="btn-inner--text"> Log in with Google</span>
+                </a>
+                @endif
+            </div>
+            <p _ngcontent-smx-c137="" class="or my-4 color-grey fs-sm fw-semibold text-center"><span _ngcontent-smx-c137="">Or log in using</span></p>
+        @endif
+
         <form role="form" method="POST" action="{{ route('login') }}">
             @csrf
             <!-- redirectTo URL -->
