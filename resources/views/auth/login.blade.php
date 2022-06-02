@@ -42,7 +42,26 @@
                 </a>
                 @endif
             </div>
-            <p _ngcontent-smx-c137="" class="or my-4 color-grey fs-sm fw-semibold text-center"><span _ngcontent-smx-c137="">Or log in using</span></p>
+
+        <style type="text/css">
+            .or-text-row { display: table-row; }
+            .or-text { display: table; width: 100%; position: relative; margin: 20px 0; }
+            .or-text-step button[disabled] { opacity: 1 !important; filter: alpha(opacity=100) !important; }
+            .or-text-row:before { top: 14px; bottom: 0; position: absolute; content: " "; width: 100%; height: 1px; background-color: #e8e8e8; z-order: 0; }
+            .or-text-line { display: table-cell; text-align: center; position: relative; width: 100%; }
+            .or-text-line p { margin-top:10px; }
+            .btn-circle { width: 30px; height: 30px; text-align: center; padding: 2px 0; font-size: 17px; line-height: 1.428571429; border-radius: 15px;}      
+        </style>
+
+        <div class="or-text">
+            <div class="or-text-row">
+                <div class="or-text-line">
+                    <button type="button" class="btn btn-neutral btn-circle" disabled="disabled">Or</button>
+                </div>
+            </div>
+        </div>
+
+          
         @endif
 
         <form role="form" method="POST" action="{{ route('login') }}">
