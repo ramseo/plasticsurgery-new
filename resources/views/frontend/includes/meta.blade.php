@@ -53,5 +53,4 @@ if(!isset($meta_page_type)){
     <meta name="twitter:image" content="{{ asset(setting('meta_image')) }}">
 
     <!--canonical link-->
-    <link type="text/plain" rel="author" href="{{asset('humans.txt')}}" />
     <link rel="canonical" href="{{url()->current()}}">
