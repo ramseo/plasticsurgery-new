@@ -12,6 +12,15 @@
     <!-- <div class="pattern pattern-soft top"></div> -->
     <div class="container-fluid">
         <div class="row">
+             <div class="col-12 col-sm-12 col-lg-12">
+                <h5>{{ env('APP_NAME') }} - Your Personal Wedding Planner</h5>
+                 @if(setting('footer_about_us'))
+                    {!! setting('footer_about_us') !!}
+                 @endif
+            </div>
+        </div>
+        <br>
+        <div class="row">
             <div class="col-xs-12 col-sm-8 footer-col">
                 <p class="footer-brand mr-lg-5 d-flex" > Follow us for more ideas & fun</p>
                 @if(setting('instagram_url'))
@@ -84,14 +93,7 @@
                 <a target="_blank" rel="noopener" href="#" >Start Here <i class="fa fa-arrow-right"></i></a>
             </div>
         </div>
-        <div class="row">
-             <div class="col-12 col-sm-12 col-lg-12">
-                <h5>{{ env('APP_NAME') }} - Your Personal Wedding Planner</h5>
-                 @if(setting('footer_about_us'))
-                    {!! setting('footer_about_us') !!}
-                 @endif
-            </div>
-        </div>
+        
         <br>
         <div class="row">
              <div class="col-12 col-sm-8 col-lg-8">

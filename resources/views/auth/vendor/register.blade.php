@@ -28,7 +28,7 @@
             </button>
         </div>
         @endif
-        @if(env('FACEBOOK_ACTIVE') || env('GITHUB_ACTIVE') || env('GOOGLE_ACTIVE'))
+      <!--   @if(env('FACEBOOK_ACTIVE') || env('GITHUB_ACTIVE') || env('GOOGLE_ACTIVE'))
         <div class="card-header bg-transparent ">
             <div class="text-muted text-center ">
               
@@ -72,7 +72,7 @@
         </div>
 
 
-        @endif
+        @endif -->
 
         <form role="form" method="POST" action="{{ route('register-vendor') }}">
             @csrf
