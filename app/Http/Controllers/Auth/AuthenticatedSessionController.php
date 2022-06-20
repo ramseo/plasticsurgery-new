@@ -96,7 +96,7 @@ class AuthenticatedSessionController extends Controller
                     return redirect('/vendor/dashboard');
                     break;
                 case 'user':
-                    return redirect('/');
+                    return redirect('/profile/edit');
                     break;
                 default:
                     return redirect(RouteServiceProvider::HOME);
