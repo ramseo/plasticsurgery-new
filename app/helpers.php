@@ -6,6 +6,7 @@ use Illuminate\Support\Str;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Auth;
 
 function getData($table, $column = null, $value = null)
 {
@@ -171,6 +172,22 @@ function get_similar_vendors($type_id)
         ->limit(9)
         ->get();
     return $data;
+}
+
+function getTotalVendorUserMenu($type_id)
+{
+    $user_id = Auth::id();
+    $data = DB::table('vendor_quotation')
+        ->join('vendors', 'vendors.id', '=', 'vendor_quotation.vendor_id')
+        ->where('vendors.type_id', $type_id)
+        ->where('vendor_quotation.user_id', $user_id)
+        ->get();
+        
+        if(count($data) > 0){
+            return count($data);        
+        }
+
+        return false;
 }
 
 function averageReview($reviews, $default = 0)

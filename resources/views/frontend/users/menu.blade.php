@@ -9,16 +9,30 @@
     }
 
     .menu-menu-col a{
-        margin-left: 30px !important;
-    }
-    .menu-menu-col a.active i{
-        color: white;
+        /*padding: 15px !important;*/
+        /*margin-left: 30px !important;*/
+        /*font-size: 15px;*/
     }
 
-    
+
+#mainFeatures a:hover  , #mainFeatures a:active{
+    color: white;
+}
+#mainFeatures {
+    padding: 0px !important;
+}
 #mainFeatures li {
     list-style: none;
-    padding:1px;
+}
+
+#mainFeatures li a i{
+    padding: 5px 0 10px 35px;
+}
+
+.menu-counter{
+    padding: 5px 12px ; 
+    border-radius: 20px; 
+    border: 1px solid #555;
 }
 
 </style>
@@ -29,9 +43,10 @@
             @if($types)
                 @foreach($types as $type)
                
-                        #mainFeatures li#menu_{{$type->slug}} { 
-                             background: url("{{asset('storage/type/icon/'.$type->icon)}}") no-repeat 0 10px;
-                             background-size:25px 25px;
+                        .icon-{{$type->slug}}{ 
+                             background: url("{{asset('storage/type/icon/'.$type->icon)}}") no-repeat ;
+                             background-size:30px 30px;
+                             
                             }
                   
                 @endforeach
@@ -45,9 +60,14 @@
               <a class="{{ Request::segment(1) == 'vendors' ? 'active' : '' }}" href="{{ route('frontend.vendors.slug')}}"><i class="fa fa-globe fa-lg"></i> My Vendors <span class="arrow"></span></a>
                 <ul id="mainFeatures"  class="sub-menu collapse {{ Request::segment(1) == 'vendors' ? 'show' : '' }}  ">
                     @foreach($types as $type)
-                        <li id="menu_{{$type->slug}}">
+                        <li>
                             <a href="{{ route('frontend.vendors.slug', ['slug'=> $type->slug ])}}"  class="{{ Request::segment(2) == $type->slug ? 'active' : '' }}">
-                                <i class="left-icon- -icon-{{$type->slug}}">{{$type->name}}</i>
+                                <i  id="menu_{{$type->slug}}" class="left-icon- icon-{{$type->slug}}">
+                                    {{$type->name}} 
+                                    @if(getTotalVendorUserMenu($type->id))
+                                        <span class="menu-counter" >{{getTotalVendorUserMenu($type->id)}}</span>
+                                    @endif
+                                </i>
                             </a>
                         </li>
                     @endforeach
