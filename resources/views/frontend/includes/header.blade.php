@@ -88,13 +88,13 @@
                                     Login
                                 </a>
                             </li>
-                            @if(user_registration())
+                          <!--   @if(user_registration())
                                 <li>
                                     <a href="{{ route('register') }}">
                                         Register
                                     </a>
                                 </li>
-                            @endif
+                            @endif -->
 
                         @endauth
                         <span id="menuCloser" style="display: none;"><i class="fa fa-times"></i></span>
