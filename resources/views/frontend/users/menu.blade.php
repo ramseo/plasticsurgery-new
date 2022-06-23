@@ -12,11 +12,14 @@
         /*padding: 15px !important;*/
         /*margin-left: 30px !important;*/
         /*font-size: 15px;*/
+
     }
 
 
 #mainFeatures a:hover  , #mainFeatures a:active{
-    color: white;
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+      background-color: transparent;
+        color: #eb0a3e;
 }
 #mainFeatures {
     padding: 0px !important;
