@@ -147,7 +147,7 @@
         var page = 1;
 
         let footerOffsetHeight = document.getElementById('footer').offsetHeight;
-        let textOnlySectionOffsetHeight = document.getElementById('text-only-section').offsetHeight;
+        let textOnlySectionOffsetHeight = document.getElementById('featured-vendors').offsetHeight;
         let totalHeight = footerOffsetHeight+textOnlySectionOffsetHeight;
         loadMoreData(page);
         $(window).scroll(function() {
