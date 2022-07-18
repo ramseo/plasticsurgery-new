@@ -1,8 +1,10 @@
-@php
+<?php 
     $categories = getDataArray('types');
     $city = getData('cities');
-@endphp
-<header id="header">
+?>
+
+
+<header id="header" >
     <div class="container-fluid">
         <div class="row header-main-col">
             <div class="col-xs-6 col-sm-3 header-logo-col">
@@ -22,7 +24,7 @@
                         <li><a href="{{url('detail')}}">Bride</a></li>
                         <li><a href="#">Groom</a></li>
                         <li><a href="{{ route('frontend.posts.index') }}">Blog</a></li> -->
-                        <li>
+                        <li class="bg-screen">
                             <div class="dropdown menuDropDown">
                                 <button class="dropbtn menuDropBtn">Vendors <i class="fa fa-chevron-down"></i></button>
                                 <div class="dropdown-content">
@@ -46,10 +48,37 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="/bride">Bride</a></li>
+                        <div class="mob-screen">
+                            <li><a href="/vendors">Vendors</a></li>
+                            <li><a href="/wedding-photographers">Wedding Photographers</a></li>
+                            <li><a href="/wedding-planners">Wedding Planners</a></li>
+
+                             <li><a href="/wedding-photographers">Wedding Photographers</a></li>
+                            <li><a href="/bridal-makeup-artists">Bridal Makeup Artists</a></li>
+
+                            <li><a href="/wedding-venues">Wedding Venues</a></li>
+
+                            <li><a href="/wedding-decorators">Wedding Decorators</a></li>
+
+                            <li><a href="/wedding-videographers">Wedding Videographers</a></li>
+                            <li><a href="/mehndi-artists">Mehndi Artists</a></li> 
+                            <li><a href="/bridal-designers">Bridal Designers</a></li>
+     
+                         <li><a href="/bride">Bride</a></li>
                         <li><a href="/groom">Groom</a></li>
                         <li><a href="#">Ideas</a></li>
                         <li><a href="/blog">Blog</a></li>
+
+                         <li>
+                                <a href="{{ route('login') }}">
+                                    Login
+                                </a>
+                            </li>
+                        </div>
+                        <li class="bg-screen"><a href="/bride">Bride</a></li>
+                        <li class="bg-screen"><a href="/groom">Groom</a></li>
+                        <li class="bg-screen"><a href="#">Ideas</a></li>
+                        <li class="bg-screen"><a href="/blog">Blog</a></li>
                         @auth
                             @if(auth()->user()->getRoleNames()->first() == 'super admin')
                                 <li>
@@ -83,7 +112,7 @@
                                 @csrf
                             </form>
                         @else
-                            <li>
+                            <li class="bg-screen">
                                 <a href="{{ route('login') }}">
                                     Login
                                 </a>
@@ -187,3 +216,57 @@
         </div>
     </div>
 </header>
+<style>
+.mob-screen{display: none;}
+
+    @media screen and (max-width: 767px){
+        .site-main-menu{background-color: #fff;}
+        .d-flex {
+    display: block !important;
+
+}
+
+.mob-screen{display: block; padding-top: 18px;}
+ul.list-inline.d-flex.site-menu.site-main-menu.active {
+    height: 520px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.bg-screen{display: none!important;}
+
+#header ul{padding-top: 36px;}
+
+#header li>a, #header li button {
+    color: #212529;
+        line-height: 52px;
+}
+#menuCloser{top: 20px;}
+ .mob-screen>li{border-bottom: 1px solid #ebebeb;}
+
+#menuCloser{left: 15px; 
+    color: #212529!important;
+    border-bottom: 1px solid #ebebeb; 
+    padding-bottom: 13px;}
+      #header li>a, #header li button{
+            font-weight: 400;
+        }
+.dropdown.menuDropDown{margin-bottom: -17px;}
+
+.vendor-card .img-col{height: auto;}
+.text-col .title{font-size: 20px;}
+.text-col{text-align: center;}
+.search-header {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+    }
+
+@media screen and (max-width: 320px){
+.input-group.newsletter-group{min-width: 260px;}
+
+}
+
+
+</style>
