@@ -49,21 +49,25 @@
                             </div>
                         </li>
                         <div class="mob-screen">
-                            <li><a href="/vendors">Vendors</a></li>
-                            <li><a href="/wedding-photographers">Wedding Photographers</a></li>
-                            <li><a href="/wedding-planners">Wedding Planners</a></li>
+                            <li class="special-list"><a href="/vendors">Vendors</a></li>
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/camera 1.png"><a href="/wedding-photographers">Wedding Photographers</a></li>
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/weeding planner.png"><a href="/wedding-planners">Wedding Planners</a></li>
 
-                             <li><a href="/wedding-photographers">Wedding Photographers</a></li>
-                            <li><a href="/bridal-makeup-artists">Bridal Makeup Artists</a></li>
+                             <li><img src="http://127.0.0.1:8000/storage/type/icon/Wedding Videographers 7.png"><a href="/wedding-videographers">Wedding Videographers</a></li>
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/bridal.png"><a href="/bridal-makeup-artists">Bridal Makeup Artists</a></li>
 
-                            <li><a href="/wedding-venues">Wedding Venues</a></li>
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/wedding venue 4.png"><a href="/wedding-venues">Wedding Venues</a></li>
 
-                            <li><a href="/wedding-decorators">Wedding Decorators</a></li>
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/wedding-deco 3.png"><a href="/wedding-decorators">Wedding Decorators</a></li>
 
-                            <li><a href="/wedding-videographers">Wedding Videographers</a></li>
-                            <li><a href="/mehndi-artists">Mehndi Artists</a></li> 
-                            <li><a href="/bridal-designers">Bridal Designers</a></li>
-     
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/Wedding Videographers 7.png"><a href="/wedding-videographers">Wedding Videographers</a></li>
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/Mehndi Artists 7.png"><a href="/mehndi-artists">Mehndi Artists</a></li> 
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/Bridal-Designers 6.png"><a href="/bridal-designers">Bridal Designers</a></li>
+                                @if(!Auth::check())
+                                        <div class="inner-footer">
+                                            <p class="text-right">Are you a vendor? <a class="btn btn-primary" href="{{ route('register-vendor') }}">Register Now</a></p>
+                                        </div>
+                                    @endif
                          <li><a href="/bride">Bride</a></li>
                         <li><a href="/groom">Groom</a></li>
                         <li><a href="#">Ideas</a></li>
@@ -219,11 +223,52 @@
 <style>
 .mob-screen{display: none;}
 
+    .footer-col a {
+    display: flex;
+    justify-content: center;
+}
+    .footer-col a {
+    width: fit-content;
+}
+#newsletterForm {
+    max-width: 341px;
+}
+    .footer-col a{width: auto; margin-bottom: 7px;}
+
+
+#header{position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 999!important;}
+
+.footer-col{border-bottom: 0px;}
+
+
     @media screen and (max-width: 767px){
         .site-main-menu{background-color: #fff;}
-        .d-flex {
-    display: block !important;
+        .d-flex {display: block !important;}
+        .footer-col a {display: block;}
+.inner-footer{border-bottom: 1px solid #ebebeb;}
+.special-list a {
+    font-size: 19px!important;
+    font-weight: 600!important;
+}
 
+
+
+.mob-screen li:hover{
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+.mob-screen li {
+    display: flex;
+    align-items: center;
+}
+.mob-screen li img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    margin-right: 4px;
 }
 
 .mob-screen{display: block; padding-top: 18px;}

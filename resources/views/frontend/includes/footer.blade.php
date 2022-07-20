@@ -21,7 +21,33 @@
         </div>
         <br>
         <div class="row">
-            <div class="col-xs-12 col-sm-8 footer-col">
+
+            <div class="col-xs-12 col-sm-8 mb-lg-0  ">
+                <p class="footer-brand mr-lg-5 d-flex" > Are you a vendor? </p>
+                <p class="my-4">
+                    Sign up on {{ env('APP_NAME')}} to reach more couples and book more weddings!
+                </p>
+                <a target="_blank" rel="noopener" href="#" >Start Here <i class="fa fa-arrow-right"></i></a>
+
+
+                <h6>Contact us to get best deals</h6>
+                <p class="font-small">{{ env('MAIL_FROM_ADDRESS')}}</p>
+                <p class="font-small">+91 9888898888</p>
+
+
+                <h6>Get Latest Blog Alerts</h6>
+                 <form id="newsletterForm" action="">
+                            <div class="input-group newsletter-group" style="background: white;">
+                                <input id="newsletterEmail" type="text" class="form-control" name="email" placeholder="Email">
+                                <div class="input-group-append" style="background: white;">
+                                    <button class="btn btn-outline-secondary" style="background:#E4E4E4;" type="submit"><i
+                                            class="fas fa-check" style="color: rgb(235, 10, 62);"></i></button>
+                                </div>
+                            </div>
+                        </form>
+            </div>
+
+            <div class="col-lg-4  footer-col">
                 <p class="footer-brand mr-lg-5 d-flex" > Follow us for more ideas & fun</p>
                 @if(setting('instagram_url'))
                     <a href="{{setting('instagram_url')}}" target="_blank">
@@ -85,36 +111,19 @@
                     </a>
                 @endif
             </div>
-            <div class="col-lg-4  mb-lg-0">
-                <p class="footer-brand mr-lg-5 d-flex" > Are you a vendor? </p>
-                <p class="my-4">
-                    Sign up on {{ env('APP_NAME')}} to reach more couples and book more weddings!
-                </p>
-                <a target="_blank" rel="noopener" href="#" >Start Here <i class="fa fa-arrow-right"></i></a>
-            </div>
+            
         </div>
         
         <br>
         <div class="row">
              <div class="col-12 col-sm-8 col-lg-8">
 
-                <h6>Contact us to get best deals</h6>
-                <p class="font-small">{{ env('MAIL_FROM_ADDRESS')}}</p>
-                <p class="font-small">+91 9888898888</p>
                
             </div>
 
              <div class="col-6 col-sm-4 col-lg-4  mb-lg-0 text-left">
-                <h6>Get Latest Blog Alerts</h6>
-                 <form id="newsletterForm" action="">
-                            <div class="input-group newsletter-group" style="background: white;">
-                                <input id="newsletterEmail" type="text" class="form-control" name="email" placeholder="Email">
-                                <div class="input-group-append" style="background: white;">
-                                    <button class="btn btn-outline-secondary" style="background:#E4E4E4;" type="submit"><i
-                                            class="fas fa-check" style="color: rgb(235, 10, 62);"></i></button>
-                                </div>
-                            </div>
-                        </form>
+                
+                
               
             </div>
 
