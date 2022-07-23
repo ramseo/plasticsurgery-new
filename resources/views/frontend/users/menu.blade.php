@@ -68,7 +68,7 @@
                                 <i  id="menu_{{$type->slug}}" class="left-icon- icon-{{$type->slug}}">
                                     {{$type->name}} 
                                     @if(getTotalVendorUserMenu($type->id))
-                                        <span class="menu-counter" >{{getTotalVendorUserMenu($type->id)}}</span>
+                                        <span class="badge badge-secondary">{{getTotalVendorUserMenu($type->id)}}</span>
                                     @endif
                                 </i>
                             </a>

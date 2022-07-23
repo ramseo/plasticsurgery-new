@@ -38,6 +38,36 @@
 }
 
 
+.vndr-snippet{
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.profile-form-section{margin-top: 21px!important;}
+.my-requirements{
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  padding-left: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+
+.common-card img{
+  object-fit: cover;
+}
+
+.vndr-snippet:hover{
+  border: none!important;
+  background-color: #f6fafd;
+}
+
+.requirement{
+  padding-bottom: 0px!important;
+  border-bottom: 1px solid #ebebeb;
+}
+
+
   .vndr-snippet:hover {
   border: 1px solid #ebebeb;
 }
@@ -52,6 +82,15 @@
   height: 100px;
   width: 164px;
   object-fit: cover;
+}
+
+.vndr-pic > img {
+    border-radius: 2px;
+    height: 104px;
+    width: 104px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
 
 .vndr-content {

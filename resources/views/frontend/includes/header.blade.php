@@ -225,8 +225,15 @@
 
     .footer-col a {
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
 }
+
+.card-body ol li {
+    line-height: 37px!important;
+}
+
+
+
     .footer-col a {
     width: fit-content;
 }
