@@ -49,8 +49,8 @@
 
                         {{ html()->modelForm($user, 'POST', route('frontend.users.profileUpdate'))->class('form-horizontal')->acceptsFiles()->open() }}
 
-                        <div class="form-group row">
-                            <div class="col-md-2">
+                        <div class="form-group row ml-2">
+                            <div class="col-md-2 edit-pics">
 
                                 @if(file_exists(public_path().'/storage/user/profile/'. $user->avatar))
                                     <img src="{{asset('/storage/user/profile/'. $user->avatar)}}" class="user-profile-image img-fluid img-thumbnail" style="max-height:200px; max-width:200px;" />
@@ -254,3 +254,19 @@
 </section>
 
 @endsection
+<style>
+    .edit-pics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-pics img {
+    object-fit: cover;
+    object-position: -45px;
+}
+
+.profile-form-section {
+    margin-top: 28px;
+}
+    </style>
