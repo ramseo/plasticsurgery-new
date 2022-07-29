@@ -50,17 +50,24 @@
                         </li>
                         <div class="mob-screen">
                             <li class="special-list"><a href="/vendors">Vendors</a></li>
-                            @if($categories)
-                                @foreach($categories as $header_type)
-                                <li><img src="{{asset('storage/type/icon/'.$header_type->icon)}}"><a href="{{ route('register-vendor') }}">{{$header_type->name}}</a></li>
-                                @endforeach
-                            @endif
-                            
-                            @if(!Auth::check())
-                                <div class="inner-footer">
-                                    <p class="text-right">Are you a vendor? <a class="btn btn-primary" href="{{ route('register-vendor') }}">Register Now</a></p>
-                                </div>
-                            @endif
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/camera 1.png"><a href="/wedding-photographers">Wedding Photographers</a></li>
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/weeding planner.png"><a href="/wedding-planners">Wedding Planners</a></li>
+
+                             <li><img src="http://127.0.0.1:8000/storage/type/icon/Wedding Videographers 7.png"><a href="/wedding-videographers">Wedding Videographers</a></li>
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/bridal.png"><a href="/bridal-makeup-artists">Bridal Makeup Artists</a></li>
+
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/wedding venue 4.png"><a href="/wedding-venues">Wedding Venues</a></li>
+
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/wedding-deco 3.png"><a href="/wedding-decorators">Wedding Decorators</a></li>
+
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/Wedding Videographers 7.png"><a href="/wedding-videographers">Wedding Videographers</a></li>
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/Mehndi Artists 7.png"><a href="/mehndi-artists">Mehndi Artists</a></li> 
+                            <li><img src="http://127.0.0.1:8000/storage/type/icon/Bridal-Designers 6.png"><a href="/bridal-designers">Bridal Designers</a></li>
+                                @if(!Auth::check())
+                                        <div class="inner-footer">
+                                            <p class="text-right">Are you a vendor? <a class="btn btn-primary" href="{{ route('register-vendor') }}">Register Now</a></p>
+                                        </div>
+                                    @endif
                          <li><a href="/bride">Bride</a></li>
                         <li><a href="/groom">Groom</a></li>
                         <li><a href="#">Ideas</a></li>
@@ -92,6 +99,7 @@
                                 </li>
                             @endif
 
+{{--                            {{dd(auth()->user()->getRoleNames()->first())}}--}}
                             @if(auth()->user()->getRoleNames()->first() == 'user')
                                 <li>
                                     <a href="{{ route('frontend.users.profileEdit') }}">
@@ -311,6 +319,5 @@ ul.list-inline.d-flex.site-menu.site-main-menu.active {
 .input-group.newsletter-group{min-width: 260px;}
 
 }
-
 
 </style>
