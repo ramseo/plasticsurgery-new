@@ -275,5 +275,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 
 
     Route::get('search-by-vendors/', 'VendorController@vendorSearch')->name('vendor.search');
+
+    Route::get('search-by-city/', 'VendorController@vendorSearch')->name('vendor.search');
 });
 

@@ -415,4 +415,8 @@ class VendorController extends Controller
     public function vendorSearch(){
         return view('frontend.vendors.search-vendor');
     }
+
+     public function citySearch(){
+        return view('frontend.vendors.search-city');
+    }
 }
