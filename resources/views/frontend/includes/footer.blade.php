@@ -25,31 +25,15 @@
          <div class="on-selection">
             <!-- vendor type start -->
             <div class="optional-vendr">
-            <select style="border-right: none;" class="form-control" name="" id="typeField" required="">
-               <option value="">Search By Vendor</option>
-               option value="wedding-photographers">Wedding Photographers</option>
-               <option value="wedding-decorators">Wedding Decorators</option>
-               <option value="wedding-planners">Wedding Planners</option>
-               <option value="wedding-videographers">Wedding Videographers</option>
-               <option value="bridal-makeup-artists">Bridal Makeup Artists</option>
-               <option value="mehndi-artists">Mehndi Artists</option>
-               <option value="wedding-venues">Wedding Venues</option>
-               <option value="bridal-designers">Bridal Designers</option>
-            </select>
+            <div class="rgst-vndr">
+                <a class="btn btn-primary" href="http://127.0.0.1:8000/register-vendor">Serach By Vendor</a>
+            </div>
         </div>
             <!-- vendor type end -->
             <div class="optional-vendr">
-            <!-- select city start -->
-            <select style="border-right: none;" class="form-control" name="" id="cityField" required="">
-               <option value="">Search By City</option>
-               <option value="delhi">Delhi</option>
-               <option value="mumbai">Mumbai</option>
-               <option value="ludhiana">Ludhiana</option>
-               <option value="chennai">Chennai</option>
-               <option value="bangalore">Bangalore</option>
-               <option value="hyderabad">Hyderabad</option>
-               <option value="kolkata">Kolkata</option>
-            </select>
+            <div class="rgst-vndr">
+                <a class="btn btn-primary" href="http://127.0.0.1:8000/register-vendor">Search By City</a>
+            </div>
         </div>
             <!-- select city end -->
             <!-- register as a vendor start -->
