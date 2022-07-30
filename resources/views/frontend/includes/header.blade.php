@@ -42,7 +42,7 @@
                                     </div>
                                     @if(!Auth::check())
                                         <div class="inner-footer">
-                                            <p class="text-right">Are you a vendor? <a class="btn btn-primary" href="{{ route('register-vendor') }}">Register Now</a></p>
+                                            <p class="text-right"><a class="btn btn-primary" href="{{ route('register-vendor') }}">Register as a Vendor</a></p>
                                         </div>
                                     @endif
                                 </div>
@@ -65,7 +65,7 @@
                             <li><img src="http://127.0.0.1:8000/storage/type/icon/Bridal-Designers 6.png"><a href="/bridal-designers">Bridal Designers</a></li>
                                 @if(!Auth::check())
                                         <div class="inner-footer">
-                                            <p class="text-right">Are you a vendor? <a class="btn btn-primary" href="{{ route('register-vendor') }}">Register Now</a></p>
+                                            <p class="text-right">Are you a vendor? <a class="btn btn-primary" href="{{ route('register-vendor') }}"> Register as a Vendor</a></p>
                                         </div>
                                     @endif
                          <li><a href="/bride">Bride</a></li>

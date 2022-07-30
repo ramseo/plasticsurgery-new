@@ -411,4 +411,8 @@ class VendorController extends Controller
         }
         return response()->json(['success' => false, 'message' => $validator->errors()->all()]);
     }
+
+    public function vendorSearch(){
+        return view('frontend.vendors.search-vendor');
+    }
 }
