@@ -1,12 +1,5 @@
 <style type="text/css">
-   .button {    float: left;    width: 60px;    height: 60px;    cursor: pointer;    background: #fff;    overflow: hidden;    border-radius: 50px;    transition: all 0.3s ease-in-out;    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);}
-   .button span {    font-size: 20px;    font-weight: 500;    line-height: 60px;    margin-left: 10px;}
-   .button:hover {    width: 200px;}
-   .button:hover .icon {    background: rgb(235, 10, 62);}
-   .button span {    color: rgb(235, 10, 62);}
-   .button .icon {    width: 60px;    height: 60px;    text-align: center;    border-radius: 50px;    display: inline-block;    transition: all 0.3s ease-in-out;}
-   .button .icon i {    color: rgb(235, 10, 62); font-size: 25px;    line-height: 60px;    transition: all 0.3s ease-in-out;}
-   .button:hover i {    color: #fff;}
+
 </style>
 <footer  id="footer" class="footer pt-5 pb-3  text-white overflow-hidden" style=" background: rgb(235, 10, 62);">
    <!-- <div class="pattern pattern-soft top"></div> -->
@@ -39,7 +32,7 @@
             <!-- register as a vendor start -->
             <div class="optional-vendr">
             <div class="rgst-vndr">
-                <a class="btn btn-primary" href="http://127.0.0.1:8000/register-vendor">Register Now</a>
+                <a class="btn btn-primary" href="{{url('register')}}">Register Now</a>
             </div>
         </div>
             <!-- register as a vendor end -->
