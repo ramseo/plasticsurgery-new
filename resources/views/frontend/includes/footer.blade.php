@@ -26,13 +26,13 @@
             <!-- vendor type start -->
             <div class="optional-vendr">
             <div class="rgst-vndr">
-                <a class="btn btn-primary" href="http://127.0.0.1:8000/register-vendor">Serach By Vendor</a>
+                <a class="btn btn-primary" href="{{url('search-by-vendors')}}">Serach By Vendor</a>
             </div>
         </div>
             <!-- vendor type end -->
             <div class="optional-vendr">
             <div class="rgst-vndr">
-                <a class="btn btn-primary" href="http://127.0.0.1:8000/register-vendor">Search By City</a>
+                <a class="btn btn-primary" href="{{url('search-by-city')}}">Search By City</a>
             </div>
         </div>
             <!-- select city end -->

@@ -413,10 +413,29 @@ class VendorController extends Controller
     }
 
     public function vendorSearch(){
-        return view('frontend.vendors.search-vendor');
+        $types = Type::All()->toArray();
+        $type_vendors = array();
+        foreach($types as $type){
+            $vendors = Vendor::where('type_id',  $type['id'])->limit(5)->get()->toArray();
+            if($vendors){
+                $type_vendors[$type['id']] = $vendors ;
+            }
+        }
+        return view('frontend.vendors.search-vendor',compact('types', 'type_vendors'));
     }
 
      public function citySearch(){
-        return view('frontend.vendors.search-city');
+        $cities = City::All()->toArray();
+        $city_vendors = array();
+        foreach($cities as $city){
+            $types = Type::All()->toArray();
+            foreach($types as $type){
+                $vendor = Vendor::where('city_id',  $city['id'])->where('type_id',  $type['id'])->first();
+                if($vendor){
+                    $city_vendors[$city['id']][$type['id']] = $vendor ;
+                }
+            }
+        }
+        return view('frontend.vendors.search-city', compact('cities', 'city_vendors'));
     }
 }
