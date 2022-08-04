@@ -421,6 +421,11 @@ class VendorController extends Controller
                 $type_vendors[$type['id']] = $vendors ;
             }
         }
+
+        // $city = getData('cities', 'id', 1);   
+        // dd($city->slug);
+        // dd($types);
+        // dd($type_vendors);
         return view('frontend.vendors.search-vendor',compact('types', 'type_vendors'));
     }
 
