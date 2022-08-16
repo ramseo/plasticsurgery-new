@@ -36,7 +36,7 @@
                                                         background-image: url("{{asset('storage/type/icon/'.$header_type->icon)}}");
                                                     }
                                                 </style>
-                                                <a href="{{url('/') . '/' . $header_type->slug}}"><i class="icon-{{$header_type->slug}}">{{$header_type->name}}</i></a>
+                                                <a href="{{ url('/') . '/' . $header_type->slug }}/{{Session::get('vendor_city')}}"><i class="icon-{{$header_type->slug}}">{{$header_type->name}}</i></a>
                                             @endforeach
                                         @endif
                                     </div>
@@ -50,6 +50,7 @@
                         </li>
                         <div class="mob-screen">
                             <li class="special-list"><a href="/vendors">Vendors</a></li>
+                            {{Session::get('vendor_city')}}
                             @if($categories)
                                 @foreach($categories as $header_type)
                                    <li><img src="{{asset('storage/type/icon/'.$header_type->icon)}}"><a href="{{url('/') . '/' . $header_type->slug}}">{{$header_type->name}}</a></li>
