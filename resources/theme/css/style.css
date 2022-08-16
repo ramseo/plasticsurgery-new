@@ -195,6 +195,10 @@ span.days {
         filter: brightness(0) invert(1)!important;
 }
 
+#mainFeatures a:hover .left-icon- {
+    filter: brightness(0) invert(1)!important;
+}
+
 
 .ol-crsl .owl-item{
     background-color: #fff;
