@@ -419,16 +419,13 @@ class VendorController extends Controller
         $types = Type::All()->toArray();
         $type_vendors = array();
         foreach($types as $type){
-            $vendors = Vendor::where('type_id',  $type['id'])->limit(5)->get()->toArray();
+            $vendors = Vendor::where('type_id',  $type['id'])->limit(8)->get()->toArray();
             if($vendors){
                 $type_vendors[$type['id']] = $vendors ;
             }
         }
 
-        // $city = getData('cities', 'id', 1);   
-        // dd($city->slug);
-        // dd($types);
-        // dd($type_vendors);
+       
         return view('frontend.vendors.search-vendor',compact('types', 'type_vendors'));
     }
 

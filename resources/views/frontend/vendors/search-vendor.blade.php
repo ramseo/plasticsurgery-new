@@ -38,8 +38,7 @@
             @php $vendors = isset($type_vendors[$type['id']])?  $type_vendors[$type['id']] : array() ;  @endphp
                @if($vendors)
                   <div class="container ol-crsl">
-                        <div class="thumb-img">
-                           <img src="http://127.0.0.1:8000/storage/type/icon/camera 1.png">
+                           <img src="{{asset('storage/type/icon/'.$type['icon'])}}">
                         </div>
                         <h2>Top {{$type['name']}} in All Indian Cities</h2>
                         <span>To improve these suggestions - <a href="#">Fill Requirements for {{$type['name']}}</a></span>
