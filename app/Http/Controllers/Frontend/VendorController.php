@@ -20,7 +20,7 @@ use App\Mail\QuotationUser;
 use App\Mail\QuotationAdmin;
 use Illuminate\Support\Facades\Mail;
 use Auth;
-
+use Session;
 class VendorController extends Controller
 {
 
@@ -120,6 +120,9 @@ class VendorController extends Controller
 
     public function cities(Request $request, $city_slug)
     {
+
+        Session::put('vendor_city', $city_slug);
+        // dd(Session::get('vendor_city'));
         $type_slug = $request->segment(1);
         $body_class = '';
         $city = City::where('slug', $city_slug)->first();

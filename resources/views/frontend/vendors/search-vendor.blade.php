@@ -39,17 +39,7 @@
                @if($vendors)
                   <div class="container ol-crsl">
                         <div class="thumb-img">
-                           @php
-                              $vendor_profile_icon_img = '';
-                              if($type['icon']){
-                                    if(file_exists( public_path().'/storage/vendor/icon/'. $type['icon'] )){
-                                       $vendor_profile_icon_img = asset('storage/vendor/icon/'.$type['icon']);
-                                    }
-                              }
-                           @endphp
-                           @if($vendor_profile_icon_img)
-                           <img src="{{ $vendor_profile_icon_img }}" alt="">
-                           @endif
+                           <img src="http://127.0.0.1:8000/storage/type/icon/camera 1.png">
                         </div>
                         <h2>Top {{$type['name']}} in All Indian Cities</h2>
                         <span>To improve these suggestions - <a href="#">Fill Requirements for {{$type['name']}}</a></span>
@@ -73,7 +63,9 @@
                                                    <div class="carousel-content">
                                                       <h5>{{$vendor['business_name']}}</h5>
                                                       <p><span>₹</span> {{$vendor['price']}}</p>
+                                                      <p><span class="vndr-rating">★ 5 Mumbai</span></p>
                                                    <span class="days"> {{$vendor['label']}}</span>
+
                                                    </div> 
 
                                                    </div>
@@ -85,13 +77,17 @@
                            <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next disabled"><span aria-label="Next">›</span></button></div>
                            <div class="owl-nav enable"></div>
                         </div>
+
+
                   </div>
                   <br>
                   <br>
+                  <hr>
                @endif
             @endforeach
       </div>
    </div>
+
 </section>
 
 @endsection
@@ -116,7 +112,7 @@
        margin:5,
        // autoplay:true,
        // autoplayTimeout:3000,
-       autoplayHoverPause:true
+       // autoplayHoverPause:true
    });
 
 

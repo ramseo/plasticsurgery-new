@@ -5,7 +5,7 @@
 
 <section class="my-requirements">
   <div class="d-container">
-    <h2 class="bold-24 charcoal padb-8">My Requirements <a class="mr-edit myven-edit-req" href="{{ route('frontend.quotation.type', $type->slug)}}">Edit</a></h2>
+    <h2 class="bold-24 charcoal padb-8">My Requirements <a class="mr-edit myven-edit-req" href="{{ route('frontend.quotation.type', $type->slug)}}"><i class="fa fa-edit"></i></a></h2>
     <p class="normal-12 light padb-16">Your requirements are visible to your Vendors, so that they can send you quotations.</p>
 
 @foreach($services as $service)

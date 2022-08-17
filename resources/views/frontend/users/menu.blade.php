@@ -65,12 +65,12 @@
                     @foreach($types as $type)
                         <li>
                             <a href="{{ route('frontend.vendors.slug', ['slug'=> $type->slug ])}}"  class="{{ Request::segment(2) == $type->slug ? 'active' : '' }}">
-                                <i  id="menu_{{$type->slug}}" class="left-icon- icon-{{$type->slug}}">
+                                <i  id="menu_{{$type->slug}}" class="left-icon- icon-{{$type->slug}}"></i>
                                     {{$type->name}} 
                                     @if(getTotalVendorUserMenu($type->id))
                                         <span class="badge badge-secondary">{{getTotalVendorUserMenu($type->id)}}</span>
                                     @endif
-                                </i>
+                                
                             </a>
                         </li>
                     @endforeach
