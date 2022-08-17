@@ -199,6 +199,9 @@ span.days {
     filter: brightness(0) invert(1)!important;
 }
 
+.common-card .text-col {height: 172px;}
+.vendor-card .img-col img{height: 250px; object-fit: cover;}
+
 
 .ol-crsl .owl-item{
     background-color: #fff;
@@ -252,11 +255,22 @@ span.days {
     margin: 0 0 0 35px;
 }
 
+
+.vendor-detail-main-col {
+    padding-top: 50px;
+}
+#footer{margin-top: 0px;}
+
 .user-menu li {
     height: 20px;
     display: flex;
     align-items: center;
     padding: 0 15px;
+}
+
+.strt {
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 .user-menu {

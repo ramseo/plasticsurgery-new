@@ -19,7 +19,7 @@
             <!-- vendor type start -->
             <div class="optional-vendr">
             <div class="rgst-vndr">
-                <a class="btn btn-primary" href="{{url('search-by-vendors')}}">Serach By Vendor</a>
+                <a class="btn btn-primary" href="{{url('search-by-vendors')}}">Search By Vendor</a>
             </div>
         </div>
             <!-- vendor type end -->
@@ -45,7 +45,7 @@
             <p class="my-4">
                Sign up on {{ env('APP_NAME')}} to reach more couples and book more weddings!
             </p>
-            <a target="_blank" rel="noopener" href="#" >Start Here <i class="fa fa-arrow-right"></i></a>
+            <a target="_blank" rel="noopener" href="#" class="strt">Start Here <i class="fa fa-arrow-right"></i></a>
             <h6>Contact us to get best deals</h6>
             <p class="font-small">{{ env('MAIL_FROM_ADDRESS')}}</p>
             <p class="font-small">+91 9888898888</p>
