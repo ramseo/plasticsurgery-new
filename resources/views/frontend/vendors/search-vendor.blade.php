@@ -75,8 +75,8 @@
                                     @endforeach
                               </div>
                            </div>   
-                           <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next disabled"><span aria-label="Next">›</span></button></div>
-                           <div class="owl-nav enable"></div>
+                           <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next "><span aria-label="Next">›</span></button></div>
+                           <div class="owl-nav"></div>
                         </div>
 
 

@@ -275,7 +275,11 @@ span.days {
 
 
 
-
+.ol-crsl img {
+    height: 161px;
+    object-fit: cover;
+    border-radius: 5px 5px 0px 0px;
+}
 
 .user-menu {
     align-items: center;
@@ -2277,6 +2281,16 @@ span.days {
 .ol-crsl .owl-item{
     background-color: #fff;
     border-radius: 5px;
+}
+
+.thumb-img{
+    width: fit-content;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    margin-bottom: 10px;
 }
 
 .thumb-img img {
