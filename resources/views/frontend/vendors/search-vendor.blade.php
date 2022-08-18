@@ -38,8 +38,10 @@
             @php $vendors = isset($type_vendors[$type['id']])?  $type_vendors[$type['id']] : array() ;  @endphp
                @if($vendors)
                   <div class="container ol-crsl">
+                     <div class="thumb-img">
                            <img src="{{asset('storage/type/icon/'.$type['icon'])}}">
                         </div>
+                        
                         <h2>Top {{$type['name']}} in All Indian Cities</h2>
                         <span>To improve these suggestions - <a href="#">Fill Requirements for {{$type['name']}}</a></span>
                         <div class="owl-carousel owl-theme owl-loaded common-slider owl-drag ">
@@ -86,7 +88,7 @@
             @endforeach
       </div>
    </div>
-
+</div>
 </section>
 
 @endsection
