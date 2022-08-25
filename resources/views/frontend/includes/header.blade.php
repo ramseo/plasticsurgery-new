@@ -75,6 +75,7 @@
                         <li class="bg-screen"><a href="/bride">Bride</a></li>
                         <li class="bg-screen"><a href="/groom">Groom</a></li>
                         <li class="bg-screen"><a href="#">Ideas</a></li>
+                        <li><a href="{{ route('frontend.travel.index') }}">Travel</a></li>
                         <li class="bg-screen"><a href="/blog">Blog</a></li>
                         @auth
                             @if(auth()->user()->getRoleNames()->first() == 'super admin')

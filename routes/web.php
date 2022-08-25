@@ -41,6 +41,8 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('quotation/{slug}', 'VendorController@saveQuotation')->name('quotation');
     Route::post('quotation-save', 'VendorController@storeQuotation')->name('quotation-save');
 
+    Route::get('honeymoon-ideas', 'TravelController@index')->name('travel.index');
+
     Route::group(['middleware' => ['auth', 'verified']], function () {
         /*
         *
