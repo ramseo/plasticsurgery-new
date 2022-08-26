@@ -42,7 +42,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::post('quotation-save', 'VendorController@storeQuotation')->name('quotation-save');
 
     Route::get('honeymoon-ideas', 'TravelController@index')->name('travel.index');
-    Route::get('honeymoon-ideas-detail', 'TravelController@index')->name('travel.index-detail');
+    Route::get('honeymoon-ideas-detail', 'TravelController@detail')->name('travel.detail');
 
     Route::group(['middleware' => ['auth', 'verified']], function () {
         /*

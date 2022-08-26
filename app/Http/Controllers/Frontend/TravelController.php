@@ -19,5 +19,12 @@ class TravelController extends Controller
         return view('frontend.travel.listing', compact('travels'));
     }
 
-  
+    public function detail()
+    {
+
+        $travels = array();
+
+        return view('frontend.travel.detail', compact('travels'));
+    }
+
 }
