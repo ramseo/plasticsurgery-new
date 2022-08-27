@@ -87,6 +87,40 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
         Route::post("settings", "SettingController@store")->name("settings.store");
     });
 
+
+
+
+
+
+
+
+    
+
+
+
+
+    /*
+     * Travel Honeymoon idea 
+    */
+    Route::get('travel', 'TravelController@index')->name('travel.index');
+    Route::get('travel/create/', 'TravelController@create')->name('travel.create');
+    Route::post('travel/store/', 'TravelController@store')->name('travel.store');
+    Route::get('travel/edit/{id}', 'TravelController@edit')->name('travel.edit');
+    Route::post('travel/update/{id}', 'TravelController@update')->name('travel.update');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     Route::get("city", ['as' => "city.index", 'uses' => "CityController@index"]);
     Route::get("city/index_list", ['as' => "city.index_list", 'uses' => "CityController@index_list"]);
     Route::get("city/index_data", ['as' => "city.index_data", 'uses' => "CityController@index_data"]);
