@@ -59,6 +59,19 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
+                $menu->add('<i class="c-sidebar-nav-icon fas fa-user"></i> Travel', [
+                    'route' => 'backend.travel.index',
+                    'class' => 'c-sidebar-nav-item',
+                ])
+                    ->data([
+                        'order' => 101,
+                        'activematches' => 'admin/travel*',
+                        'permission' => [],
+                    ])
+                    ->link->attr([
+                        'class' => 'c-sidebar-nav-link',
+                    ]);
+
             $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-applications-settings"></i> Vendor ', [
                 'class' => 'c-sidebar-nav-dropdown',
             ])

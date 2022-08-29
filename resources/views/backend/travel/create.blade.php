@@ -1,11 +1,11 @@
 @extends('backend.layouts.app')
 
-@section('title') Create Content @endsection
+@section('title') Create Travel @endsection
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("backend.service.index")}}' icon='c-icon cil-people' >
-        Content
+    <x-backend-breadcrumb-item route='{{route("backend.travel.index")}}' icon='c-icon cil-people' >
+        Travel
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">Create</x-backend-breadcrumb-item>
 </x-backend-breadcrumbs>
@@ -17,59 +17,42 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="c-icon cil-people"></i> Content <small class="text-muted">Create</small>
+                    <i class="c-icon cil-people"></i> Travel <small class="text-muted">Create</small>
                 </h4>
                 <div class="small text-muted">
-                    Content Management Dashboard
+                    Travel Management Dashboard
                 </div>
             </div>
             <div class="col-4">
                 <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-                    <a href="{{ route('backend.content.index')}}" class="btn btn-secondary btn-sm ml-1" data-toggle="tooltip" title="Service List"><i class="fas fa-list-ul"></i> List</a>
+                    <a href="{{ route('backend.travel.index')}}" class="btn btn-secondary btn-sm ml-1" data-toggle="tooltip" title="Service List"><i class="fas fa-list-ul"></i> List</a>
                 </div>
             </div>
         </div>
         <hr>
         <div class="row mt-4">
             <div class="col">
-                {{ html()->form('POST', route('backend.content.store'))->class('form')->open() }}
+                {{ html()->form('POST', route('backend.travel.store'))->class('form')->open() }}
                 <div class="row">
 
-                    <div class="col-6">
-                        <div class="form-group">
-                            {{ Form::label('type_id', 'Vendor Category') }}   {!! fielf_required("required") !!}
-                            {{ Form::select('type_id', $types, null, array('class' => 'form-control')) }}
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group">
-                            {{ Form::label('city_id', 'City') }}
-                            {{ Form::select('city_id', $cities, null, array('class' => 'form-control')) }}
-                        </div>
-                    </div>
+                 
 
                     <div class="col-12">
                         <div class="form-group">
-                            {{ Form::label('title', 'Title') }}
-                            {{ Form::text('title', null, array('class' => 'form-control')) }}
+                            {{ Form::label('name', 'Name') }}
+                            {{ Form::text('name', null, array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            {{ Form::label('description', 'Description') }}
-                            {{ Form::textarea('description', null, array('class' => 'form-control','id'=> 'description')) }}
+                            {{ Form::label('intro', 'Short Description') }}
+                            {{ Form::textarea('intro', null, array('class' => 'form-control','id'=> 'intro', 'rows'=>'4')) }}
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
                             {{ Form::label('content', 'Content') }}
                             {{ Form::textarea('content', null, array('class' => 'form-control', 'id'=> 'content')) }}
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">
-                            {{ Form::label('faq_content', 'FAQ Content') }}
-                            {{ Form::textarea('faq_content', null, array('class' => 'form-control', 'id'=> 'faq')) }}
                         </div>
                     </div>
                 </div>
@@ -142,63 +125,11 @@
 @endpush
 
 @push ('after-scripts')
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.select2-category').select2({
-                theme: "bootstrap",
-                placeholder: '@lang("Select an option")',
-                minimumInputLength: 2,
-                allowClear: true,
-                ajax: {
-                    url: '{{route("backend.categories.index_list")}}',
-                    dataType: 'json',
-                    data: function (params) {
-                        return {
-                            q: $.trim(params.term)
-                        };
-                    },
-                    processResults: function (data) {
-                        return {
-                            results: data
-                        };
-                    },
-                    cache: true
-                }
-            });
-
-            $('.select2-tags').select2({
-                theme: "bootstrap",
-                placeholder: '@lang("Select an option")',
-                minimumInputLength: 2,
-                allowClear: true,
-                ajax: {
-                    url: '{{route("backend.tags.index_list")}}',
-                    dataType: 'json',
-                    data: function (params) {
-                        return {
-                            q: $.trim(params.term)
-                        };
-                    },
-                    processResults: function (data) {
-                        return {
-                            results: data
-                        };
-                    },
-                    cache: true
-                }
-            });
-        });
-    </script>
-
-
-
     <script type="text/javascript" src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
     <script type="text/javascript" src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 
     <script type="text/javascript">
-        CKEDITOR.replace('description', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
         CKEDITOR.replace('content', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
-        CKEDITOR.replace('faq', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
         document.addEventListener("DOMContentLoaded", function() {
 
             document.getElementById('button-image').addEventListener('click', (event) => {

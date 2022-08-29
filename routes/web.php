@@ -107,7 +107,9 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::post('travel/store/', 'TravelController@store')->name('travel.store');
     Route::get('travel/edit/{id}', 'TravelController@edit')->name('travel.edit');
     Route::post('travel/update/{id}', 'TravelController@update')->name('travel.update');
-
+    Route::get('travel/trashed/', 'TravelController@trashed')->name('travel.trashed');
+    Route::post('travel/trashed/{id}', 'TravelController@restore')->name('travel.restore');
+    Route::resource("travel", "TravelController");
 
 
 

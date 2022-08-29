@@ -1,7 +1,7 @@
 @extends('backend.layouts.app')
 
 @section('title')
-Content | Index
+Travel | Index
 @endsection
 
 @section('content')
@@ -10,10 +10,10 @@ Content | Index
             <div class="row">
                 <div class="col-8">
                     <h4 class="card-title mb-0">
-                        <i class="c-icon cil-people"></i> travel <small class="text-muted">Data Table Content</small>
+                        <i class="c-icon cil-people"></i> Travel <small class="text-muted">Data Table Travel</small>
                     </h4>
                     <div class="small text-muted">
-                    travel Management Dashboard
+                    Travel Management Dashboard
                     </div>
                 </div>
                 <div class="col-4">
@@ -38,7 +38,7 @@ Content | Index
                         <table id="datatable" class="table table-bordered table-hover table-responsive-sm">
                             <thead>
                             <th> # </th>
-                            <th> Title </th>
+                            <th> Name </th>
                             <th> Action </th>
                             </thead>
                             <tbody>
@@ -81,7 +81,7 @@ Content | Index
                 ajax: "{{ route('backend.travel.index')}}",
                 columns: [
                     {data: 'id', name: 'id'},
-                    {data: 'title', name: 'title'},
+                    {data: 'name', name: 'name'},
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ],
             columnDefs: [{

@@ -16,7 +16,7 @@ class TravelController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $travels = Travel::select(['id', 'title']);
+            $travels = Travel::select(['id', 'name']);
             return Datatables::of($travels)
                 ->addIndexColumn()
                 ->addColumn('action', function ($travel) {
@@ -31,41 +31,31 @@ class TravelController extends Controller
 
     public function create()
     {
-        $types = array();
-        $cities = array();
-        $types = custom_array_coloum($types, 'id', 'name', 'Select');
-        $cities = custom_array_coloum($cities, 'id', 'name', 'Select');
         Log::info(label_case('Travel Create | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view("backend.travel.create")->with('types', $types)->with('cities', $cities);
+        return view("backend.travel.create");
     }
 
     public function store(Request $request)
     {
-        $this->validate($request, ['type_id' => 'required'],['type_id.required' => "The Vendor Category field is required" ]);
-       
-        $content = Content::create($request->all());
+        $Travel = Travel::create($request->all());
         Flash::success("<i class='fas fa-check'></i> New Travel Added")->important();
-        Log::info(label_case('Travel Store | ' . $content->name . '(ID:' . $content->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        Log::info(label_case('Travel Store | ' . $Travel->name . '(ID:' . $Travel->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect(route('backend.travel.index'));
     }
 
     public function edit($id)
     {
-        $content = Content::findOrFail($id);
-        $types = Type::all();
-        $cities = City::all();
-        $types = custom_array_coloum($types, 'id', 'name', 'Select');
-        $cities = custom_array_coloum($cities, 'id', 'name', 'Select');
-        Log::info(label_case('Travel Edit | ' . $content->name . '(ID:' . $content->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view("backend.travel.edit")->with('content', $content)->with('types', $types)->with('cities', $cities);
+        $travel = Travel::findOrFail($id);
+        Log::info(label_case('Travel Edit | ' . $travel->name . '(ID:' . $travel->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return view("backend.travel.edit", compact('travel'));
     }
 
     public function update($id, Request $request)
     {
-        $content = Content::findOrFail($id);
-        $content->update($request->all());
+        $travel = Travel::findOrFail($id);
+        $travel->update($request->all());
         Flash::success("<i class='fas fa-check'></i> Travel Updated Successfully")->important();
-        Log::info(label_case('Travel Update | ' . $content->name . '(ID:' . $content->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        Log::info(label_case('Travel Update | ' . $travel->name . '(ID:' . $travel->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect(route('backend.travel.index'));
     }
 
