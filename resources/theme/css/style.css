@@ -2293,6 +2293,38 @@ span.days {
     margin-bottom: 10px;
 }
 
+.charcoal i {
+    float: right;
+    margin-right: 24px;
+}
+
+.honeymoon-thumbnail-img span {
+    text-align: center;
+    display: block;
+    padding-bottom: 20px;
+}
+.honeymoon-thumbnail-img p {
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 3px;
+}
+
+.honeyform {
+    max-width: 492px;
+    margin: auto;
+}
+
+.common-card{padding-top: 0px;}
+
+.honeymoon-thumbnail-img img {
+    margin-bottom: 26px;
+}
+
+.honeymoon-thumbnail-img {
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    border-radius: 5px;
+    margin-bottom: 34px;
+}
 .thumb-img img {
     width: 30px;
     height: 30px;
@@ -2300,7 +2332,6 @@ span.days {
     margin: 10px 0px;
     filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
 }
-
 
 @media screen and (max-width: 767px){
     .scl{display: none;}

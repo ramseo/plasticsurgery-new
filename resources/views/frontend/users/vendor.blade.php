@@ -30,8 +30,7 @@
                         @include('frontend.users.vendor.vendors', ['vendors'=> $vendors])
                     @endif
                  
-                @include('frontend.users.vendor.quotation', ['user_quotation'=> $user_quotation]) 
-                               
+                @include('frontend.users.vendor.quotation', ['user_quotation'=> $user_quotation])                
                     @if($more_vendors)
                         @include('frontend.users.vendor.more', ['more_vendors'=> $more_vendors])
                     @endif
