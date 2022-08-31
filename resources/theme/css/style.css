@@ -2190,8 +2190,20 @@ article blockquote {
     color: #eb0a3e;
 }
 
+.honeymoon-thumbnail-img img {
+ 
+    height: 150px;
+    object-fit: cover;
+}
+.hny a{color: #6a6a6a;}
+
 .rateit-font .rateit-range > div, .rateit-font .rateit-range > span {
     font-size: 30px;
+}
+
+.hny img {
+    margin-bottom: 10px;
+    border-radius: 4px;
 }
 
 .videos-main-col .videe-item {
@@ -2303,6 +2315,12 @@ span.days {
     display: block;
     padding-bottom: 20px;
 }
+
+.honeyform button {
+    margin: 20px 0px!important;
+}
+
+
 .honeymoon-thumbnail-img p {
     text-align: center;
     margin-bottom: 0px;
