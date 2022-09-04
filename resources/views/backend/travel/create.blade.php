@@ -55,7 +55,19 @@
                             {{ Form::textarea('content', null, array('class' => 'form-control', 'id'=> 'content')) }}
                         </div>
                     </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            {{ Form::label('featured_image', 'Featured Image') }}
+                            <div class="input-group mb-3">
+                                {{ html()->text('featured_image')->class('form-control')->attributes(['required', 'aria-label'=>'Image', 'aria-describedby'=>'button-image']) }}
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="button" id="button-image"><i class="fas fa-folder-open"></i> @lang('Browse')</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
 
 
                 <div class="row">

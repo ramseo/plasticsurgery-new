@@ -53,6 +53,18 @@
                             {{ Form::textarea('content', $travel->content, array('class' => 'form-control','id'=> 'content')) }}
                         </div>
                     </div>
+
+                    <div class="col-12">
+                        <div class="form-group">
+                            {{ Form::label('featured_image', 'Featured Image') }}
+                            <div class="input-group mb-3">
+                                {{ Form::text('featured_image', $travel->featured_image, array('class' => 'form-control')) }}
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="button" id="button-image"><i class="fas fa-folder-open"></i> @lang('Browse')</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
                 </div>
                 <div class="row">
@@ -83,7 +95,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                            {{ html()->button($text = "<i class='fas fa-plus-circle'></i>Create", $type = 'submit')->class('btn btn-success') }}
+                            {{ html()->button($text = "<i class='fas fa-plus-circle'></i>Update", $type = 'submit')->class('btn btn-success') }}
                         </div>
                     </div>
                     <div class="col-6">
