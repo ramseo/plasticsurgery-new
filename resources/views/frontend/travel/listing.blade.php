@@ -79,47 +79,8 @@
                </div>
             </div>
          </div>
-         <div class="col-xs-12 col-sm-5 vendor-detail-text-col">
-            <div class="inner bg-white-custom">
-               <div class="inner-col">
-                  <p class="title">What is Lorem Ipsum?</p>
-                  <p class="grey-text">It is a long established fact that a reader </p>
-               </div>
-               
-               <form class="form-inline-block honeyform">
-                  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                     <option selected>Find your Favorite</option>
-                     <option value="Photographers">Wedding Photographers</option>
-                     <option value="Planners">Wedding Planners</option>
-                     <option value="Makeup">Bridal Makeup Artists</option>
-                     <option value="Venues">Wedding Venues</option>
-                     <option value="Decorators">Wedding Decorators</option>
-                     <option value="Videographers">Wedding Videographers</option>
-                     <option value="Mehndi">Mehndi Artists</option>
-                     <option value="Bridal">Bridal Designers</option>
-                  </select>
-
-
-                  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                     <option selected>Select Your City </option>
-                     <option value="Delhi">Delhi </option>
-                     <option value="Mumbai">Mumbai</option>
-                     <option value="Bangalore">Bangalore</option>
-                     <option value="Ludhiana">Ludhiana</option>
-                     <option value="Chennai">Chennai</option>
-                     <option value="Kolkata">Kolkata</option>
-                     <option value="Hyderabad">Hyderabad</option>
-                  </select>
-
-                <button type="submit" class="btn btn-primary my-1">Search</button>
-            </form>
-            </div>
-            
-            
-            
-         </div>
+         @include('frontend.travel.side')
       </div>
-   </div>
    </div>
 </section>
 @endsection

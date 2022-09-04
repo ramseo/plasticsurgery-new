@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Travel;
 
 class TravelController extends Controller
 {
@@ -19,12 +20,10 @@ class TravelController extends Controller
         return view('frontend.travel.listing', compact('travels'));
     }
 
-    public function detail()
+    public function detail($slug)
     {
-
-        $travels = array();
-
-        return view('frontend.travel.detail', compact('travels'));
+        $travel = Travel::where('slug', '=', $slug)->firstOrFail();
+        return view('frontend.travel.detail', compact('travel'));
     }
 
 }
