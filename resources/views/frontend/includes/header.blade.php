@@ -20,10 +20,6 @@
                         @foreach($header_menu as $menu_item)
                             <li><a href="{{$menu_item->url}}">{{$menu_item->title}}</a></li>
                         @endforeach
-                        <!-- <li><a href="{{url('listing')}}">Vendors</a></li>
-                        <li><a href="{{url('detail')}}">Bride</a></li>
-                        <li><a href="#">Groom</a></li>
-                        <li><a href="{{ route('frontend.posts.index') }}">Blog</a></li> -->
                         <li class="bg-screen">
                             <div class="dropdown menuDropDown">
                                 <button class="dropbtn menuDropBtn">Vendors <i class="fa fa-chevron-down"></i></button>
@@ -36,7 +32,8 @@
                                                         background-image: url("{{asset('storage/type/icon/'.$header_type->icon)}}");
                                                     }
                                                 </style>
-                                                <a href="{{ url('/') . '/' . $header_type->slug }}/{{Session::get('vendor_city')}}"><i class="icon-{{$header_type->slug}}">{{$header_type->name}}</i></a>
+                                        @php $city = Session::get('vendor_city') != "" ? '/'. Session::get('vendor_city') : ''; @endphp
+                                                <a href="{{ url('/') . '/' . $header_type->slug }}{{$city}}"><i class="icon-{{$header_type->slug}}">{{$header_type->name}}</i></a>
                                             @endforeach
                                         @endif
                                     </div>
@@ -50,7 +47,6 @@
                         </li>
                         <div class="mob-screen">
                             <li class="special-list"><a href="/vendors">Vendors</a></li>
-                            {{Session::get('vendor_city')}}
                             @if($categories)
                                 @foreach($categories as $header_type)
                                    <li><img src="{{asset('storage/type/icon/'.$header_type->icon)}}"><a href="{{url('/') . '/' . $header_type->slug}}">{{$header_type->name}}</a></li>
