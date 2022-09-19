@@ -42,6 +42,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::post('quotation-save', 'VendorController@storeQuotation')->name('quotation-save');
 
     Route::get('honeymoon-ideas', 'TravelController@index')->name('travel.index');
+    Route::get('honeymoonAjax', 'TravelController@indexAjax')->name('travel.ajax');
     Route::get('honeymoon-ideas/{slug?}', 'TravelController@detail')->name('travel.detail');
 
     Route::group(['middleware' => ['auth', 'verified']], function () {

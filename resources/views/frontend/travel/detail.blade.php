@@ -30,77 +30,28 @@
                 </div>
                 <h3>Related Articles</h3>
                 <div class="row">
-
-
-                    <div class="col-lg-4 col-md-4">
-                        <a href="#">
-
-                            <div class="honeymoon-thumbnail-img">
-                                <img src="https://www.weddingsutra.com/images/travel/beach_wedding_thumb.jpg" class="img-fluid">
-                                <p>7 Honeymoon</p>
-                                <span>Destination for Game of</span>
-
-
+                    @if($related_travels)
+                        @foreach($related_travels as $r_travel)
+                            <div class="col-lg-4 col-md-4">
+                                <a href="{{url('/') . '/honeymoon-ideas/' . $r_travel->slug }}">
+                                     @php
+                                        $travel_img = asset('img/default-vendor.jpg');
+                                        if($r_travel->featured_image){
+                                            if(file_exists( public_path().'/'. $r_travel->featured_image )){
+                                                $travel_img = asset($r_travel->featured_image);
+                                            }
+                                        }
+                                    @endphp
+                                    <div class="honeymoon-thumbnail-img">
+                                        <img src="{{$travel_img}}" class="img-fluid">
+                                        <p>{{$travel->name}}7</p>
+                                        <span>{{$travel->intro}}</span>
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                        <a href="#">
-                            <div class="honeymoon-thumbnail-img">
-                                <img src="https://www.weddingsutra.com/images/travel/got_thumb.jpg" class="img-fluid">
-                                <p>7 Honeymoon</p>
-                                <span>Destination for Game of</span>
-
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                        <a href="#">
-                            <div class="honeymoon-thumbnail-img">
-                                <img src="https://www.weddingsutra.com/images/travel/divyanka_second_honeymoon_thumb.jpg" class="img-fluid">
-                                <p>7 Honeymoon</p>
-                                <span>Destination for Game of</span>
-
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                        <a href="#">
-                            <div class="honeymoon-thumbnail-img">
-                                <img src="https://www.weddingsutra.com/images/bestglamping-thumb-nw-350x350.jpg" class="img-fluid">
-                                <p>7 Honeymoon</p>
-                                <span>Destination for Game of</span>
-
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                        <a href="#">
-                            <div class="honeymoon-thumbnail-img">
-                                <img src="https://www.weddingsutra.com/images/honeymoon-destinations-in-Kerala-pic4-350x350.jpg" class="img-fluid">
-                                <p>7 Honeymoon</p>
-                                <span>Destination for Game of</span>
-
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-4">
-                        <a href="#">
-                            <div class="honeymoon-thumbnail-img">
-                                <img src="https://www.weddingsutra.com/images/honeymoon-destinations-in-Kerala-pic4-350x350.jpg" class="img-fluid">
-                                <p>7 Honeymoon</p>
-                                <span>Destination for Game of</span>
-
-
-                            </div>
-                        </a>
-                    </div>
+                       @endforeach
+                    @endif
                 </div>
-
             </div>
             @include('frontend.travel.side')
         </div>
