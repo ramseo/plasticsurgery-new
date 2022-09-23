@@ -10,6 +10,7 @@ use Illuminate\Http\Response;
 use Log;
 use Flash;
 use Yajra\DataTables\DataTables;
+use Validator;
 
 class VendorController extends Controller
 {
@@ -87,17 +88,34 @@ class VendorController extends Controller
         $user_id = auth()->user()->id;
 
         $vendor = Vendor::where('user_id', '=', $user_id)->first();
-//        Log::info(label_case('Vendor Profile | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        //        Log::info(label_case('Vendor Profile | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return view('backend.vendor.profile', compact('vendor'));
     }
 
     public function updateProfile(Request $request)
     {
+        // code
+        $request->validate([
+            'business_name' => 'required|string',
+            'price' => 'required|numeric',
+            'label' => 'required|string',
+            'business_address' => 'required|string',
+        ]);
+        // code
+
         $user_id = auth()->user()->id;
         $user = User::findOrFail($user_id);
         $vendor = Vendor::where('user_id', '=', $user_id)->first();
         $data = $request->all();
         $data = array_merge($data, ['user_id' => $user_id]);
+
+        // code
+        if (!$vendor->image) {
+            $request->validate([
+                'image' => 'required|image',
+            ]);
+        }
+        // code
 
         if ($request->file('image')) {
             $file_image = fileUpload($request, 'image', 'vendor/profile/');
@@ -117,11 +135,7 @@ class VendorController extends Controller
             $vendor = Vendor::create($data);
         }
         Flash::success("<i class='fas fa-check'></i> Profile Updated Successfully")->important();
-//        Log::info(label_case('Vendor Update | ' . $vendor->business_name . '(ID:' . $vendor->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return redirect("vendor/profile");
+        //        Log::info(label_case('Vendor Update | ' . $vendor->business_name . '(ID:' . $vendor->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return redirect("vendor/dashboard");
     }
-
-
-
-
 }
