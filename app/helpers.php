@@ -6,7 +6,7 @@ use Illuminate\Support\Str;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Auth;
+use Auth as Auth;
 
 function getData($table, $column = null, $value = null)
 {
