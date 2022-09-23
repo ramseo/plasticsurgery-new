@@ -24,3 +24,26 @@ a {
 .c-sidebar .c-sidebar-nav-dropdown-toggle:hover {
     background: #eb0a3e;
 }
+
+/* code */
+@media (max-width: 768px) {
+    .mob-col-cls {
+        flex: none;
+        max-width: 100%;
+    }
+
+    div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:last-child {
+        padding-left: 0;
+        margin: 10px 0 10px 0;
+    }
+
+    div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:first-child {
+        padding-right: 0;
+    }
+}
+
+.padding-null {
+    padding: 0;
+}
+
+/* code */

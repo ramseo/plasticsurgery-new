@@ -16,7 +16,7 @@
                 <h4 class="card-title mb-0">
                     <i class="c-icon cil-people"></i>  Profile <small class="text-muted">Create</small>
                 </h4>
-                <div class="small text-muted">
+                <div class="small text-muted"> 
                     Profile Management
                 </div>
             </div>
@@ -27,7 +27,7 @@
             <div class="col">
                 {{ Form::open(array('route' =>'vendor.profile.update', 'files' => true,'id' => 'profileForm')) }}
                 <div class="row">
-                    <div class="col-2" >
+                    <div class="col-2 mob-col-cls">
                         @php
                             $vendor_profile_img = asset('img/default-vendor.jpg');
                             if($vendor->image){
@@ -42,20 +42,20 @@
                 </div>
                 <div class="row">
 
-                    <div class="col-6 col-md-4">
+                    <div class="col-6 col-md-4 mob-col-cls"> 
                         <div class="form-group">
                             {{ Form::label('business_name', 'Business Name') }} {!! fielf_required("required") !!}
                             {{ Form::text('business_name', $vendor->business_name, array('class' => 'form-control')) }}
                         </div>
                     </div>
 
-                    <div class="col-6 col-md-4">
+                    <div class="col-6 col-md-4 mob-col-cls">
                         <div class="form-group">
                             {{ Form::label('wedding_covered', 'Number of weddings covered') }}
                             {{ Form::text('wedding_covered', $vendor->wedding_covered, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                    <div class="col-6 col-md-4">
+                    <div class="col-6 col-md-4 mob-col-cls">
                         <div class="form-group">
                             {{ Form::label('image', 'Profile Image') }} {!! fielf_required("required") !!}
                             <div class="custom-file">
@@ -66,19 +66,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-4 mob-col-cls">
                         <div class="form-group">
                             {{ Form::label('mobile', 'Phone Number') }}
                             {{ Form::text('mobile', $vendor->user->mobile, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 mob-col-cls">
                         <div class="form-group">
                             {{ Form::label('price', 'Default Price') }}  {!! fielf_required("required") !!}
                             {{ Form::number('price', $vendor->price, array('class' => 'form-control', 'placeholder'=> 'Service default price')) }}
                         </div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 mob-col-cls">
                         <div class="form-group">
                             {{ Form::label('label', 'Price Label') }}  {!! fielf_required("required") !!}
                             {{ Form::text('label', $vendor->label, array('class' => 'form-control', 'placeholder'=> 'Price label')) }}
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-md-3">
+                    <div class="col-12 col-md-3 mob-col-cls">
                         <div class="form-group">
                             {{ Form::label('travel_to_other_cities', 'Travel to other Indian cities?') }}
                             <br>
@@ -102,19 +102,19 @@
                            No {{ Form::radio('travel_to_other_cities', 0, $vendor->travel_to_other_cities == 0 ? true : false) }}
                         </div>
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="col-6 col-md-3 mob-col-cls">
                         <div class="form-group">
                             {{ Form::label('website_link', 'Website') }}
                             {{ Form::text('website_link', $vendor->website_link, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="col-6 col-md-3 mob-col-cls">
                         <div class="form-group">
                             {{ Form::label('facebook_link', 'Facebook') }}
                             {{ Form::text('facebook_link', $vendor->facebook_link, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="col-6 col-md-3 mob-col-cls">
                         <div class="form-group">
                             {{ Form::label('instagram_link', 'Instagram') }}
                             {{ Form::text('instagram_link', $vendor->instagram_link, array('class' => 'form-control')) }}
