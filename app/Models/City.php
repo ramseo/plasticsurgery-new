@@ -2,19 +2,26 @@
 
 namespace App\Models;
 
-use App\Models\Traits\HasHashedMediaTrait;
+// use App\Models\Traits\HasHashedMediaTrait;
 use Auth;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class City extends Model
+// code
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
+// code
+
+// class City extends Model
+class City extends Model implements HasMedia
 {
     protected $table = 'cities';
     use HasFactory;
     use SoftDeletes;
-    use HasHashedMediaTrait;
+    use InteractsWithMedia;
+    // use HasHashedMediaTrait;
     protected $guarded = [
         'id',
         'updated_at',
