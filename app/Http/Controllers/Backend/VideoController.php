@@ -22,13 +22,13 @@ class VideoController extends Controller
                 ->addIndexColumn()
                 ->addColumn('action', function ($video) {
                     $btn = '<a href="' . route("vendor.video.edit", $video->id) . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"> </i></a> ';
-                    $btn .= '<a href="' . route("vendor.video.delete", $video->id) . '" class="btn btn-sm btn-danger mt-1" data-toggle="tooltip" title="Album Delete"><i class="fas fa-trash"> </i></a>';
+                    $btn .= '<a href="' . route("vendor.video.delete", $video->id) . '" class="btn btn-sm btn-danger mt-1 del-link" data-toggle="tooltip" title="Album Delete" ><i class="fas fa-trash"></i></a>';
                     return $btn;
                 })
                 ->rawColumns(['action'])
                 ->make(true);
         }
-        return view('backend.video.index');
+        return view('backend.video.index'); 
     }
 
 
@@ -53,10 +53,16 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
+        // code
+        $request->validate([
+            'url' => 'required|string',
+        ]);
+        // code
+
         $data = $request->all();
-        if($request->file('image')){
-            $file_image = fileUpload($request, 'image','video/image/');
-            $data = array_merge($data,['image'=> $file_image]);
+        if ($request->file('image')) {
+            $file_image = fileUpload($request, 'image', 'video/image/');
+            $data = array_merge($data, ['image' => $file_image]);
         }
         $video = Video::create($data);
         Flash::success("<i class='fas fa-check'></i> New Video Added")->important();
@@ -89,11 +95,17 @@ class VideoController extends Controller
      */
     public function update($id, Request $request)
     {
+        // code
+        $request->validate([
+            'url' => 'required|string',
+        ]);
+        // code
+
         $video = Video::findOrFail($id);
         $data = $request->all();
-        if($request->file('image')){
-            $file_image = fileUpload($request, 'image','video/image/');
-            $data = array_merge($data,['image'=> $file_image]);
+        if ($request->file('image')) {
+            $file_image = fileUpload($request, 'image', 'video/image/');
+            $data = array_merge($data, ['image' => $file_image]);
         }
         $video->update($data);
         Flash::success("<i class='fas fa-check'></i> Video Updated Successfully")->important();

@@ -25,7 +25,7 @@ class AlbumController extends Controller
 
                     $btn = '<a href="' . route("vendor.album.edit", $album->id) . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"> </i></a> ';
                     $btn .= '<a href="' . route("vendor.image.index", $album->id) . '" class="btn btn-sm btn-success mt-1" data-toggle="tooltip" title="Album Gallery"><i class="fas fa-file-image"> </i></a>';
-                    $btn .= '<a href="' . route("vendor.album.delete", $album->id) . '" class="btn btn-sm btn-danger mt-1" data-toggle="tooltip" title="Album Delete"><i class="fas fa-trash"> </i></a>';
+                    $btn .= '<a href="' . route("vendor.album.delete", $album->id) . '" class="btn btn-sm btn-danger mt-1 del-link" data-toggle="tooltip" title="Album Delete"><i class="fas fa-trash"> </i></a>';
                     return $btn;
                 })
                 ->rawColumns(['action'])
@@ -56,7 +56,11 @@ class AlbumController extends Controller
      */
     public function store(Request $request)
     {
-
+        // code
+        $request->validate([
+            'name' => 'required|string',
+        ]);
+        // code
         $album = Album::create($request->all());
         Flash::success("<i class='fas fa-check'></i> New Album Added")->important();
         Log::info(label_case('Album Store | ' . $album->name . '(ID:' . $album->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
@@ -88,6 +92,11 @@ class AlbumController extends Controller
      */
     public function update($id, Request $request)
     {
+        // code
+        $request->validate([
+            'name' => 'required|string',
+        ]);
+        // code
         $album = Album::findOrFail($id);
         $album->update($request->all());
         Flash::success("<i class='fas fa-check'></i> Album Updated Successfully")->important();
@@ -103,8 +112,8 @@ class AlbumController extends Controller
      */
     public function delete($id)
     {
-//        Storage::deleteDirectory('album/'.$id);
-        rrmdir(storage_path('app/public/album/'.$id));
+        //        Storage::deleteDirectory('album/'.$id);
+        rrmdir(storage_path('app/public/album/' . $id));
         Album::where(['id' => $id])->delete();
         Image::where(['album_id' => $id])->delete();
         Flash::success("<i class='fas fa-check'></i> Album Deleted")->important();
