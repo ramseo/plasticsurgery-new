@@ -69,10 +69,11 @@ class TravelController extends Controller
      */
     public function destroy($id)
     {
-        $content = Content::findOrFail($id);
-        $content->delete();
+        $travel = Travel::findOrFail($id);
+        // $content = Content::findOrFail($id);
+        $travel->delete();
         Flash::success('<i class="fas fa-check"></i> Travel Deleted Successfully!')->important();
-        Log::info(label_case('Travel Delete | ' . $content->name . '(ID:' . $content->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        Log::info(label_case('Travel Delete | ' . $travel->name . '(ID:' . $travel->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect(route('backend.travel.index'));
     }
 
@@ -84,7 +85,8 @@ class TravelController extends Controller
      */
     public function trashed()
     {
-        $contents = Content::onlyTrashed()->orderBy('deleted_at', 'desc')->paginate();
+        $travel = Travel::onlyTrashed()->orderBy('deleted_at', 'desc')->paginate();
+        // $contents = Content::onlyTrashed()->orderBy('deleted_at', 'desc')->paginate();
         Log::info(label_case('Travel Trash List ').' | User:'.Auth::user()->name);
         return view("backend.travel.trash", compact('contents'));
     }
@@ -92,10 +94,11 @@ class TravelController extends Controller
 
     public function restore($id)
     {
-        $content = Content::withTrashed()->find($id);
-        $content->restore();
+        $travel = Travel::withTrashed()->find($id);
+        // $content = Content::withTrashed()->find($id);
+        $travel->restore();
         Flash::success('<i class="fas fa-check"></i> Travel Data Restoreded Successfully!')->important();
-        Log::info(label_case('Travel Delete | ' . $content->name . '(ID:' . $content->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        Log::info(label_case('Travel Delete | ' . $travel->name . '(ID:' . $travel->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect(route('backend.travel.index'));
     }
 }
