@@ -9,7 +9,7 @@ $(function () {
 
 
 $(document).on('click', '.del-link', function (e) {
-    var answer = confirm('Do you want to delete?');
+    var answer = confirm('Are you sure?');
     if (answer) {
         // Proceed
     } else {
