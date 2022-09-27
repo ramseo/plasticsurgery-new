@@ -72,7 +72,7 @@ class PriceController extends Controller
 
         Flash::success("<i class='fas fa-check'></i> New Image Added")->important();
 
-        return redirect("vendor/price");
+        return redirect("vendor/dashboard");
     }
 
 }
