@@ -13,6 +13,7 @@ use Illuminate\Support\Str;
 use Log;
 use Modules\Article\Http\Requests\Backend\CategoriesRequest;
 use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\DB;
 
 class CategoriesController extends Controller
 {
@@ -295,7 +296,8 @@ class CategoriesController extends Controller
 
         $$module_name_singular = $module_model::findOrFail($id);
 
-        $$module_name_singular->delete();
+        DB::table($module_name)->where('id', $id)->delete();
+        // $$module_name_singular->delete();
 
         Flash::success('<i class="fas fa-check"></i> '.label_case($module_name_singular).' Deleted Successfully!')->important();
 
