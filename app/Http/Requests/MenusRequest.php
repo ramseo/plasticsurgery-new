@@ -25,7 +25,7 @@ class MenusRequest extends FormRequest
     {
         return [
             'title' => "required|max:191|unique:menus,title",
-            'slug' => 'nullable|max:191',
+            'url' => 'nullable|max:191',
         ];
     }
     /**

@@ -16,8 +16,8 @@ class MenuController extends Controller
 
     use Authorizable;
 
-    public function __construct(){
-
+    public function __construct()
+    {
     }
 
     /**
@@ -31,10 +31,11 @@ class MenuController extends Controller
         $module_name = 'menu';
         $module_action = 'List';
         $page_heading = ucfirst('Menu');
-        $title = $page_heading.' '.ucfirst($module_action);
+        $title = $page_heading . ' ' . ucfirst($module_action);
         $menus = Menu::paginate();
 
-        return view("backend.menu.index_datatable",
+        return view(
+            "backend.menu.index_datatable",
             compact('module_title', 'module_name', "menus", 'module_action', 'page_heading', 'title')
         );
     }
@@ -68,8 +69,17 @@ class MenuController extends Controller
         $module_title = 'Menu';
         $module_name = 'menus';
         $module_action = 'Store';
-        $menu = Menu::create($request->all());
-        Flash::success("<i class='fas fa-check'></i> New '".Str::singular($module_title)."' Added")->important();
+
+        $data = array(
+            '_token' => $request->_token,
+            'menu' => $request->menu,
+            'title' => $request->title,
+            'url' => \Str::slug($request->title),
+        );
+    
+        $menu = Menu::create($data);
+        // $menu = Menu::create($request->all());
+        Flash::success("<i class='fas fa-check'></i> New '" . Str::singular($module_title) . "' Added")->important();
         return redirect("admin/$module_name");
     }
 
@@ -106,7 +116,7 @@ class MenuController extends Controller
         $$module_name_singular = Menu::findOrFail($id);
         $$module_name_singular->update($request->all());
 
-        Flash::success("<i class='fas fa-check'></i> '".Str::singular($module_title)."' Updated Successfully")->important();
+        Flash::success("<i class='fas fa-check'></i> '" . Str::singular($module_title) . "' Updated Successfully")->important();
 
         return redirect("admin/$module_name");
     }
@@ -128,7 +138,7 @@ class MenuController extends Controller
         $$module_name_singular = Menu::findOrFail($id);
         $$module_name_singular->delete();
 
-        Flash::success('<i class="fas fa-check"></i> '.label_case($module_name_singular).' Deleted Successfully!')->important();
+        Flash::success('<i class="fas fa-check"></i> ' . label_case($module_name_singular) . ' Deleted Successfully!')->important();
         return redirect("admin/$module_name");
     }
 }
