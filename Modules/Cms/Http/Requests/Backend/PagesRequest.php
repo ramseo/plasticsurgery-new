@@ -24,7 +24,7 @@ class PagesRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'              => 'required|max:191',
+            'name'              => 'required|max:191|unique:pages,name',
             'slug'              => 'nullable|max:191',
             'content'           => 'required',
             'featured_image'    => 'required|max:191',

@@ -13,6 +13,7 @@ use Yajra\DataTables\DataTables;
 use Auth;
 use Flash;
 use Log;
+use Illuminate\Support\Facades\DB;
 
 
 class CityController extends Controller
@@ -36,6 +37,9 @@ class CityController extends Controller
 
         // module model name, path
         $this->module_model = "App\Models\City";
+
+        // Table Name
+        $this->table_name = 'cities';
     }
 
     /**
@@ -55,11 +59,11 @@ class CityController extends Controller
         $module_action = 'List';
 
         $page_heading = ucfirst($module_title);
-        $title = $page_heading.' '.ucfirst($module_action);
+        $title = $page_heading . ' ' . ucfirst($module_action);
 
         $$module_name = $module_model::paginate();
 
-        Log::info("'$title' viewed by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
+        Log::info("'$title' viewed by User:" . auth()->user()->name . '(ID:' . auth()->user()->id . ')');
 
         return view(
             "backend.$module_path.index_datatable",
@@ -135,7 +139,7 @@ class CityController extends Controller
         foreach ($query_data as $row) {
             $$module_name[] = [
                 'id'   => $row->id,
-                'text' => $row->name.' (Slug: '.$row->slug.')',
+                'text' => $row->name . ' (Slug: ' . $row->slug . ')',
             ];
         }
 
@@ -149,9 +153,9 @@ class CityController extends Controller
      */
     public function create()
     {
-        
 
-        $city = false; 
+
+        $city = false;
 
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -162,11 +166,11 @@ class CityController extends Controller
 
         $module_action = 'Create';
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')');
 
         return view(
             "backend.$module_name.create",
-            compact('city','module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action')
+            compact('city', 'module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action')
         );
     }
 
@@ -179,6 +183,12 @@ class CityController extends Controller
      */
     public function store(Request $request)
     {
+        // code
+        $request->validate([
+            'name' => "required|max:191|unique:$this->table_name,name",
+            'slug' => 'nullable|max:191',
+        ]);
+        // code
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
@@ -191,23 +201,23 @@ class CityController extends Controller
 
 
         $data = $request->all();
-        if($request->file('icon')){
-            $file_icon = fileUpload($request, 'icon','city/icon');
-            $data = array_merge($data,['icon'=> $file_icon]);
+        if ($request->file('icon')) {
+            $file_icon = fileUpload($request, 'icon', 'city/icon');
+            $data = array_merge($data, ['icon' => $file_icon]);
         }
 
-        if($request->file('image')){
-            $file_image = fileUpload($request, 'image','city/image');
-            $data = array_merge($data,['image'=> $file_image]);
+        if ($request->file('image')) {
+            $file_image = fileUpload($request, 'image', 'city/image');
+            $data = array_merge($data, ['image' => $file_image]);
         }
 
         $$module_name_singular = $module_model::create($data);
 
 
 
-        Flash::success("<i class='fas fa-check'></i> New '".Str::singular($module_title)."' Added")->important();
+        Flash::success("<i class='fas fa-check'></i> New '" . Str::singular($module_title) . "' Added")->important();
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $$module_name_singular->name . '(ID:' . $$module_name_singular->id . ") ' by User:" . auth()->user()->name . '(ID:' . auth()->user()->id . ')');
 
         return redirect("admin/$module_name");
     }
@@ -234,7 +244,7 @@ class CityController extends Controller
 
         $posts = $$module_name_singular->posts()->latest()->paginate();
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name.'(ID:'.auth()->user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')');
 
         return view(
             "article::backend.$module_name.show",
@@ -261,7 +271,7 @@ class CityController extends Controller
         $module_action = 'Edit';
 
         $$module_name_singular = $module_model::findOrFail($id);
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $$module_name_singular->name . '(ID:' . $$module_name_singular->id . ") ' by User:" . auth()->user()->name . '(ID:' . auth()->user()->id . ')');
 
         return view(
             "backend.$module_name.edit",
@@ -292,22 +302,22 @@ class CityController extends Controller
 
 
         $data = $request->all();
-        if($request->file('icon')){
-            $file_icon = fileUpload($request, 'icon','city/icon/');
-            $data = array_merge($data,['icon'=> $file_icon]);
+        if ($request->file('icon')) {
+            $file_icon = fileUpload($request, 'icon', 'city/icon/');
+            $data = array_merge($data, ['icon' => $file_icon]);
         }
 
-        if($request->file('image')){
-            $file_image = fileUpload($request, 'image','city/image/');
-            $data = array_merge($data,['image'=> $file_image]);
+        if ($request->file('image')) {
+            $file_image = fileUpload($request, 'image', 'city/image/');
+            $data = array_merge($data, ['image' => $file_image]);
         }
 
         $$module_name_singular->update($data);
 
 
-        Flash::success("<i class='fas fa-check'></i> '".Str::singular($module_title)."' Updated Successfully")->important();
+        Flash::success("<i class='fas fa-check'></i> '" . Str::singular($module_title) . "' Updated Successfully")->important();
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $$module_name_singular->name . '(ID:' . $$module_name_singular->id . ") ' by User:" . auth()->user()->name . '(ID:' . auth()->user()->id . ')');
 
         return redirect("admin/$module_name");
     }
@@ -326,17 +336,19 @@ class CityController extends Controller
         $module_path = $this->module_path;
         $module_icon = $this->module_icon;
         $module_model = $this->module_model;
+        $table_name = $this->table_name;
         $module_name_singular = Str::singular($module_name);
 
         $module_action = 'destroy';
 
         $$module_name_singular = $module_model::findOrFail($id);
 
-        $$module_name_singular->delete();
+        DB::table($table_name)->where('id', $id)->delete();
+        // $$module_name_singular->delete();
 
-        Flash::success('<i class="fas fa-check"></i> '.label_case($module_name_singular).' Deleted Successfully!')->important();
+        Flash::success('<i class="fas fa-check"></i> ' . label_case($module_name_singular) . ' Deleted Successfully!')->important();
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.', ID:'.$$module_name_singular->id." ' by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $$module_name_singular->name . ', ID:' . $$module_name_singular->id . " ' by User:" . auth()->user()->name . '(ID:' . auth()->user()->id . ')');
 
         return redirect("admin/$module_name");
     }
@@ -360,7 +372,7 @@ class CityController extends Controller
 
         $$module_name = $module_model::onlyTrashed()->orderBy('deleted_at', 'desc')->paginate();
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.auth()->user()->name);
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . auth()->user()->name);
 
         return view(
             "article::backend.$module_name.trash",
@@ -390,9 +402,9 @@ class CityController extends Controller
         $$module_name_singular = $module_model::withTrashed()->find($id);
         $$module_name_singular->restore();
 
-        Flash::success('<i class="fas fa-check"></i> '.label_case($module_name_singular).' Data Restoreded Successfully!')->important();
+        Flash::success('<i class="fas fa-check"></i> ' . label_case($module_name_singular) . ' Data Restoreded Successfully!')->important();
 
-        Log::info(label_case($module_action)." '$module_name': '".$$module_name_singular->name.', ID:'.$$module_name_singular->id." ' by User:".auth()->user()->name.'(ID:'.auth()->user()->id.')');
+        Log::info(label_case($module_action) . " '$module_name': '" . $$module_name_singular->name . ', ID:' . $$module_name_singular->id . " ' by User:" . auth()->user()->name . '(ID:' . auth()->user()->id . ')');
 
         return redirect("admin/$module_name");
     }

@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Str;
 use App\Models\Menu;
+use App\Http\Requests\MenusRequest;
 
 class MenuController extends Controller
 {
@@ -62,7 +63,7 @@ class MenuController extends Controller
      *
      * @return Response
      */
-    public function store(Request $request)
+    public function store(MenusRequest $request)
     {
         $module_title = 'Menu';
         $module_name = 'menus';
