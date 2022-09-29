@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Log;
 use Yajra\DataTables\DataTables;
+use App\Http\Requests\ServiceRequest;
+use Illuminate\Support\Facades\DB;
 
 
 class ServiceController extends Controller
@@ -25,7 +27,7 @@ class ServiceController extends Controller
     public function index($typeId, Request $request)
     {
         if ($request->ajax()) {
-            $services = Service::where('type_id', $typeId)->select(['id', 'name','input_type']);
+            $services = Service::where('type_id', $typeId)->select(['id', 'name', 'input_type']);
             return Datatables::of($services)
                 ->addIndexColumn()
                 ->addColumn('action', function ($service) {
@@ -57,7 +59,7 @@ class ServiceController extends Controller
      *
      * @return Response
      */
-    public function store($typeId, Request $request)
+    public function store($typeId, ServiceRequest $request)
     {
         $service = Service::create($request->all());
         Flash::success("<i class='fas fa-check'></i> New Service Added")->important();
@@ -109,10 +111,12 @@ class ServiceController extends Controller
     public function destroy($id)
     {
         $service = Service::findOrFail($id);
-        $service->delete();
+        DB::table('services')->where('id', $id)->delete();
+        // $service->delete();
         Flash::success('<i class="fas fa-check"></i> Service Deleted Successfully!')->important();
         Log::info(label_case('Service Delete | ' . $service->name . '(ID:' . $service->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return redirect(route('backend.service.index', $service->type_id));
+        return redirect("admin/service/" . $service->type_id);
+        // return redirect(route('backend.service.index', $service->type_id));
     }
 
     /**
@@ -124,7 +128,7 @@ class ServiceController extends Controller
     public function trashed()
     {
         $services = Service::onlyTrashed()->orderBy('deleted_at', 'desc')->paginate();
-        Log::info(label_case('Service Trash List ').' | User:'.Auth::user()->name);
+        Log::info(label_case('Service Trash List ') . ' | User:' . Auth::user()->name);
         return view("backend.service.trash", compact('services'));
     }
 
@@ -137,5 +141,4 @@ class ServiceController extends Controller
         Log::info(label_case('Service Delete | ' . $service->name . '(ID:' . $service->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect(route('backend.service.index'));
     }
-
 }
