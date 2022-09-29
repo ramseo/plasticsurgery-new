@@ -13,6 +13,7 @@ use Yajra\DataTables\DataTables;
 use Auth;
 use Flash;
 use Log;
+use Illuminate\Support\Facades\DB;
 
 class TypeController extends Controller
 {
@@ -35,6 +36,9 @@ class TypeController extends Controller
 
         // module model name, path
         $this->module_model = "App\Models\Type";
+
+        // table name
+        $this->table_name = "types";
     }
 
     /**
@@ -176,7 +180,7 @@ class TypeController extends Controller
     public function store(Request $request)
     {
 
-        request()->validate([ 'colour' => 'required','icon' => 'required',  'icon.*' => 'mimes:jpeg,jpg,png', 'image' => 'required',  'image.*' => 'mimes:jpeg,jpg,png','banner' => 'required',  'banner.*' => 'mimes:jpeg,jpg,png']);
+        request()->validate(['name' => 'required|unique:types,name', 'colour' => 'required','icon' => 'required',  'icon.*' => 'mimes:jpeg,jpg,png', 'image' => 'required',  'image.*' => 'mimes:jpeg,jpg,png','banner' => 'required',  'banner.*' => 'mimes:jpeg,jpg,png']);
 
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -334,13 +338,15 @@ class TypeController extends Controller
         $module_path = $this->module_path;
         $module_icon = $this->module_icon;
         $module_model = $this->module_model;
+        $table_name = $this->table_name;
         $module_name_singular = Str::singular($module_name);
 
         $module_action = 'destroy';
 
         $$module_name_singular = $module_model::findOrFail($id);
 
-        $$module_name_singular->delete();
+        DB::table($table_name)->where('id', $id)->delete();
+        // $$module_name_singular->delete();
 
         Flash::success('<i class="fas fa-check"></i> '.label_case($module_name_singular).' Deleted Successfully!')->important();
 

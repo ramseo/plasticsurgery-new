@@ -53,7 +53,7 @@
     <div class="col-4">
 
         <div class="form-group">
-            {{ Form::label('icon', 'Icon') }}
+            {{ Form::label('icon', 'Icon') }} {!! fielf_required($required) !!}
             <div class="custom-file">
                 <input type="file" class="custom-file-input"  name="icon">
                 <label class="custom-file-label">Choose file</label>
@@ -76,7 +76,7 @@
     </div>
     <div class="col-4">
         <div class="form-group">
-            {{ Form::label('image', 'Image') }}
+            {{ Form::label('image', 'Image') }} {!! fielf_required($required) !!}
             <div class="custom-file">
                 <input type="file" class="custom-file-input"  name="image">
                 <label class="custom-file-label">Choose file</label>
@@ -98,7 +98,7 @@
     </div>
     <div class="col-4">
         <div class="form-group">
-            {{ Form::label('banner', 'Banner') }}
+            {{ Form::label('banner', 'Banner') }} {!! fielf_required($required) !!}
             <div class="custom-file">
                 <input type="file" class="custom-file-input"  name="banner">
                 <label class="custom-file-label">Choose file</label>
