@@ -4,7 +4,7 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{url("admin/budget/update/$budget->id")}}' icon='c-icon cil-people' >
+    <x-backend-breadcrumb-item route='{{url("admin/budget/update/$budget->id")}}' icon='c-icon cil-people'>
         Service
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">Edit</x-backend-breadcrumb-item>
@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="c-icon cil-people"></i>  Budget <small class="text-muted">Edit</small>
+                    <i class="c-icon cil-people"></i> Budget <small class="text-muted">Edit</small>
                 </h4>
                 <div class="small text-muted">
                     Budget Management Dashboard
@@ -26,7 +26,7 @@
             <!--/.col-->
             <div class="col-4">
                 <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-{{--                    <a href="{{ route("backend.$module_name.show", $$module_name_singular->id) }}" class="btn btn-primary btn-sm ml-1" data-toggle="tooltip" title="Show Details"><i class="fas fa-tv"></i> Show</a>--}}
+                    {{-- <a href="{{ route("backend.$module_name.show", $$module_name_singular->id) }}" class="btn btn-primary btn-sm ml-1" data-toggle="tooltip" title="Show Details"><i class="fas fa-tv"></i> Show</a>--}}
                 </div>
             </div>
             <!--/.col-->
@@ -42,9 +42,12 @@
                 <div class="row">
 
                     <div class="col-6 col-md-4">
-                        @php $filter =  array(''=>'Select', 'less_then'=> 'Less then ','between'=>'Between', 'above'=> 'Above');  @endphp
+                        @php $filter = array(''=>'Select', 'less_then'=> 'Less then ','between'=>'Between', 'above'=> 'Above'); @endphp
                         <div class="form-group">
-                            {{ Form::label('filter', 'Budget Filter') }}
+                            <?php
+                            $required = "required";
+                            ?>
+                            {{ Form::label('filter', 'Budget Filter') }} {!! fielf_required($required) !!}
                             {{ Form::select('filter', $filter, $budget->filter, array('class' => 'form-control filter')) }}
                         </div>
                     </div>
@@ -78,7 +81,7 @@
                     <div class="col-8">
                         <div class="float-right">
                             @can('delete_service')
-{{--                            <a href="{{route("backend.service.destroy", $service)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>--}}
+                            {{-- <a href="{{route("backend.service.destroy", $service)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>--}}
                             @endcan
                             <a href="{{ url("admin/budget/$budget->id") }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
                         </div>
@@ -105,19 +108,20 @@
 @stop
 
 @push('after-scripts')
-    <script>
-        input_filter();
-        function input_filter(){
-            let input_type = $('.filter').val();
-            if(input_type == 'between'){
-                $('.filter_amount').show();
-            }else{
-                $('.filter_amount').hide();
-            }
-        }
+<script>
+    input_filter();
 
-        $(document).on('change', '.filter', function () {
-            input_filter();
-        });
-    </script>
+    function input_filter() {
+        let input_type = $('.filter').val();
+        if (input_type == 'between') {
+            $('.filter_amount').show();
+        } else {
+            $('.filter_amount').hide();
+        }
+    }
+
+    $(document).on('change', '.filter', function() {
+        input_filter();
+    });
+</script>
 @endpush

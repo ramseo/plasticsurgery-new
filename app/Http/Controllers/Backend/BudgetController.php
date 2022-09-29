@@ -52,6 +52,11 @@ class BudgetController extends Controller
      */
     public function store($typeId, Request $request)
     {
+        // code
+        $request->validate([
+            'filter' => 'required|string',
+        ]);
+        // code
         $budget = Budget::create($request->all());
         Flash::success("<i class='fas fa-check'></i> New Budget Added")->important();
         Log::info(label_case('budget Store | ' . $budget->name . '(ID:' . $budget->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
@@ -83,11 +88,15 @@ class BudgetController extends Controller
      */
     public function update($id, Request $request)
     {
+        // code
+        $request->validate([
+            'filter' => 'required|string',
+        ]);
+        // code
         $budget = Budget::findOrFail($id);
         $budget->update($request->all());
         Flash::success("<i class='fas fa-check'></i> Budget Updated Successfully")->important();
         Log::info(label_case('Budget Update | ' . $budget->name . '(ID:' . $budget->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect("admin/budget/" . $budget->type_id);
     }
-
 }

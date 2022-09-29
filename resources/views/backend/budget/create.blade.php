@@ -4,7 +4,7 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("backend.service.index")}}' icon='c-icon cil-people' >
+    <x-backend-breadcrumb-item route='{{route("backend.service.index")}}' icon='c-icon cil-people'>
         Budget
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">Create</x-backend-breadcrumb-item>
@@ -36,9 +36,12 @@
                 <div class="row">
 
                     <div class="col-6 col-md-4">
-                        @php $filter =  array(''=>'Select', 'less_then'=> 'Less then ','between'=>'Between', 'above'=> 'Above');  @endphp
+                        @php $filter = array(''=>'Select', 'less_then'=> 'Less then ','between'=>'Between', 'above'=> 'Above'); @endphp
                         <div class="form-group">
-                            {{ Form::label('filter', 'Budget Filter') }}
+                            <?php
+                            $required = "required";
+                            ?>
+                            {{ Form::label('filter', 'Budget Filter') }} {!! fielf_required($required) !!}
                             {{ Form::select('filter', $filter, null, array('class' => 'form-control filter')) }}
                         </div>
                     </div>
@@ -96,19 +99,20 @@
 
 
 @push('after-scripts')
-    <script>
-        input_filter();
-        function input_filter(){
-            let input_type = $('.filter').val();
-            if(input_type == 'between'){
-                $('.filter_amount').show();
-            }else{
-                $('.filter_amount').hide();
-            }
-        }
+<script>
+    input_filter();
 
-        $(document).on('change', '.filter', function () {
-            input_filter();
-        });
-    </script>
+    function input_filter() {
+        let input_type = $('.filter').val();
+        if (input_type == 'between') {
+            $('.filter_amount').show();
+        } else {
+            $('.filter_amount').hide();
+        }
+    }
+
+    $(document).on('change', '.filter', function() {
+        input_filter();
+    });
+</script>
 @endpush
