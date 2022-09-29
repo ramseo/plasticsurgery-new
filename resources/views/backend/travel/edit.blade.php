@@ -49,14 +49,14 @@
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            {{ Form::label('content', 'Content') }}
+                            {{ Form::label('content', 'Content') }} {!! fielf_required("required") !!}
                             {{ Form::textarea('content', $travel->content, array('class' => 'form-control','id'=> 'content')) }}
                         </div>
                     </div>
 
                     <div class="col-12">
                         <div class="form-group">
-                            {{ Form::label('featured_image', 'Featured Image') }}
+                            {{ Form::label('featured_image', 'Featured Image') }} {!! fielf_required("required") !!}
                             <div class="input-group mb-3">
                                 {{ Form::text('featured_image', $travel->featured_image, array('class' => 'form-control')) }}
                                 <div class="input-group-append">

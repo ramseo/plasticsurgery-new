@@ -10,6 +10,7 @@ use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
 use Log;
 use Flash;
+use Illuminate\Support\Facades\DB;
 
 class TravelController extends Controller
 {
@@ -37,6 +38,12 @@ class TravelController extends Controller
 
     public function store(Request $request)
     {
+        // code
+        $request->validate([
+            'name' => "required|max:191|unique:travel,name",
+            'content' => 'required|string',
+        ]);
+        // code
         $Travel = Travel::create($request->all());
         Flash::success("<i class='fas fa-check'></i> New Travel Added")->important();
         Log::info(label_case('Travel Store | ' . $Travel->name . '(ID:' . $Travel->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
@@ -52,6 +59,12 @@ class TravelController extends Controller
 
     public function update($id, Request $request)
     {
+        // code
+        $request->validate([
+            'name' => "required|string",
+            'content' => 'required|string',
+        ]);
+        // code
         $travel = Travel::findOrFail($id);
         $travel->update($request->all());
         Flash::success("<i class='fas fa-check'></i> Travel Updated Successfully")->important();
@@ -71,7 +84,8 @@ class TravelController extends Controller
     {
         $travel = Travel::findOrFail($id);
         // $content = Content::findOrFail($id);
-        $travel->delete();
+        DB::table('travel')->where('id', $id)->delete();
+        // $travel->delete();
         Flash::success('<i class="fas fa-check"></i> Travel Deleted Successfully!')->important();
         Log::info(label_case('Travel Delete | ' . $travel->name . '(ID:' . $travel->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect(route('backend.travel.index'));
@@ -87,7 +101,7 @@ class TravelController extends Controller
     {
         $travel = Travel::onlyTrashed()->orderBy('deleted_at', 'desc')->paginate();
         // $contents = Content::onlyTrashed()->orderBy('deleted_at', 'desc')->paginate();
-        Log::info(label_case('Travel Trash List ').' | User:'.Auth::user()->name);
+        Log::info(label_case('Travel Trash List ') . ' | User:' . Auth::user()->name);
         return view("backend.travel.trash", compact('contents'));
     }
 
