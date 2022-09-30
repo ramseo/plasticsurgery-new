@@ -42,13 +42,13 @@
                     </div>
                     <div class="col-6">
                         <div class="form-group">
-                            {{ Form::label('city_id', 'City') }}
+                            {{ Form::label('city_id', 'City') }} {!! fielf_required("required") !!}
                             {{ Form::select('city_id', $cities, $content->city_id, array('class' => 'form-control', 'disabled')) }}
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="form-group">
-                            {{ Form::label('title', 'Title') }}
+                            {{ Form::label('title', 'Title') }} {!! fielf_required("required") !!}
                             {{ Form::text('title', $content->title, array('class' => 'form-control')) }}
                         </div>
                     </div>

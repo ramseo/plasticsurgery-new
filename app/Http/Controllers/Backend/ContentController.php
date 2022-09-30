@@ -44,15 +44,26 @@ class ContentController extends Controller
 
     public function store(Request $request)
     {
-        $this->validate($request, ['type_id' => 'required'],['type_id.required' => "The Vendor Category field is required" ]);
+        $this->validate(
+            $request,
+            [
+                'type_id' => 'required',
+                'city_id' => 'required',
+                'title' => 'required',
+            ],
+            [
+                'type_id.required' => "The vendor type field is required",
+                'city_id.required' => "The vendor city field is required",
+            ]
+        );
         $content_type = Content::where(array('type_id' => $request->type_id, 'city_id' => ''))->first();
         if ($content_type != null) {
-            Flash::error("<i class='fas fa-check'></i> Content already exist for Vendor Category." )->important();
+            Flash::error("<i class='fas fa-check'></i> Content already exist for vendor type.")->important();
             return redirect(route('backend.content.create'));
         }
         $content_exist = Content::where(array('type_id' => $request->type_id, 'city_id' => $request->city_id))->first();
         if ($content_exist) {
-            Flash::error("<i class='fas fa-check'></i> Content already exist for Vendor Category and City." )->important();
+            Flash::error("<i class='fas fa-check'></i> Content already exist for vendor type and City.")->important();
             return redirect(route('backend.content.create'));
         }
         $content = Content::create($request->all());
@@ -74,6 +85,10 @@ class ContentController extends Controller
 
     public function update($id, Request $request)
     {
+        $request->validate([
+            'title' => 'required|string',
+        ]);
+
         $content = Content::findOrFail($id);
         $content->update($request->all());
         Flash::success("<i class='fas fa-check'></i> Content Updated Successfully")->important();
@@ -108,7 +123,7 @@ class ContentController extends Controller
     public function trashed()
     {
         $contents = Content::onlyTrashed()->orderBy('deleted_at', 'desc')->paginate();
-        Log::info(label_case('Content Trash List ').' | User:'.Auth::user()->name);
+        Log::info(label_case('Content Trash List ') . ' | User:' . Auth::user()->name);
         return view("backend.content.trash", compact('contents'));
     }
 
