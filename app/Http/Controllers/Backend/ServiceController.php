@@ -78,8 +78,12 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $service = Service::findOrFail($id);
+
+        $getDataArray = getData('services', 'id', $id);
+        $typeId = $getDataArray->type_id;
+
         Log::info(label_case('Service Edit | ' . $service->name . '(ID:' . $service->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view('backend.service.edit', compact('service'));
+        return view('backend.service.edit', compact('service', 'typeId'));
     }
 
     /**

@@ -4,7 +4,7 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{url("admin/service/update/$service->id")}}' icon='c-icon cil-people' >
+    <x-backend-breadcrumb-item route='{{url("admin/service/update/$service->id")}}' icon='c-icon cil-people'>
         Service
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">Edit</x-backend-breadcrumb-item>
@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="c-icon cil-people"></i>  Service <small class="text-muted">Edit</small>
+                    <i class="c-icon cil-people"></i> Service <small class="text-muted">Edit</small>
                 </h4>
                 <div class="small text-muted">
                     Service Management Dashboard
@@ -45,14 +45,14 @@
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
-                        @php $positions =  array(''=>'Select', 'top'=> 'Under Price','bottom'=>'Under About');  @endphp
+                        @php $positions = array(''=>'Select', 'top'=> 'Under Price','bottom'=>'Under About'); @endphp
                         <div class="form-group">
                             {{ Form::label('positions', 'Position') }}
                             {{ Form::select('positions', $positions, $service->positions, array('class' => 'form-control positions')) }}
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
-                        @php $type =  array(''=>'Select', 'text'=> 'Text','price'=>'Price','number'=> 'Number');  @endphp
+                        @php $type = array(''=>'Select', 'text'=> 'Text','price'=>'Price','number'=> 'Number'); @endphp
                         <div class="form-group">
                             {{ Form::label('input_type', 'Type') }}
                             {{ Form::select('input_type', $type, $service->input_type, array('class' => 'form-control input_type')) }}
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                     <div class="col-6 col-md-4 input_type_price" style="display: none">
-                        @php $service_type = array(''=>'Select', 'minute'=> 'Minute','hour'=> 'Hour','day'=> 'Day','complete'=>'Complete');  @endphp
+                        @php $service_type = array(''=>'Select', 'minute'=> 'Minute','hour'=> 'Hour','day'=> 'Day','complete'=>'Complete'); @endphp
                         <div class="form-group">
                             {{ Form::label('service_type', 'Service Type') }}
                             {{ Form::select('service_type', $service_type, $service->service_type, array('class' => 'form-control')) }}
@@ -93,9 +93,9 @@
                     <div class="col-8">
                         <div class="float-right">
                             @can('delete_service')
-                                 <a href="{{route("backend.service.destroy", $service)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>
+                            <a href="{{route("backend.service.destroy", $service)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>
                             @endcan
-                            <a href="{{ url("admin/service/$service->id") }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
+                            <a href='{{ url("admin/service/$typeId") }}' class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
                         </div>
                     </div>
                 </div>
@@ -120,19 +120,20 @@
 @stop
 
 @push('after-scripts')
-    <script>
-        input_type();
-        function input_type(){
-            let input_type = $('.input_type').val();
-            if(input_type == 'price'){
-                $('.input_type_price').show();
-            }else{
-                $('.input_type_price').hide();
-            }
-        }
+<script>
+    input_type();
 
-        $(document).on('change', '.input_type', function () {
-            input_type();
-        });
-    </script>
+    function input_type() {
+        let input_type = $('.input_type').val();
+        if (input_type == 'price') {
+            $('.input_type_price').show();
+        } else {
+            $('.input_type_price').hide();
+        }
+    }
+
+    $(document).on('change', '.input_type', function() {
+        input_type();
+    });
+</script>
 @endpush
