@@ -24,9 +24,10 @@ class ServiceRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|unique:services,name',
-            'positions' => 'required|string',
+            // 'name' => 'required|string|unique:services,name,' . $typeId . ',type_id',
+            // 'name' => 'required|string|unique:services,name',
             'input_type' => 'required|string',
+            'positions' => 'required|string',
         ];
     }
 

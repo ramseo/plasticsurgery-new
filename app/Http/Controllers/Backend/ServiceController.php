@@ -17,6 +17,7 @@ use Log;
 use Yajra\DataTables\DataTables;
 use App\Http\Requests\ServiceRequest;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\Rule;
 
 
 class ServiceController extends Controller
@@ -26,6 +27,7 @@ class ServiceController extends Controller
 
     public function index($typeId, Request $request)
     {
+        $typeName = DB::table('types')->where('id', $typeId)->select('name')->first();
         if ($request->ajax()) {
             $services = Service::where('type_id', $typeId)->select(['id', 'name', 'input_type']);
             return Datatables::of($services)
@@ -38,7 +40,7 @@ class ServiceController extends Controller
                 ->make(true);
         }
 
-        return view('backend.service.index')->with('typeId', $typeId);
+        return view('backend.service.index', compact('typeName'))->with('typeId', $typeId);
     }
 
     /**
@@ -48,8 +50,9 @@ class ServiceController extends Controller
      */
     public function create($typeId)
     {
+        $typeName = DB::table('types')->where('id', $typeId)->select('name')->first();
         Log::info(label_case('Service Create | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view("backend.service.create", compact('typeId'));
+        return view("backend.service.create", compact('typeId', 'typeName'));
     }
 
     /**
@@ -59,8 +62,20 @@ class ServiceController extends Controller
      *
      * @return Response
      */
-    public function store($typeId, ServiceRequest $request)
+
+    // ServiceRequest
+    public function store($typeId, Request $request)
     {
+        $request->validate([
+            'name' => [
+                'required',
+                Rule::unique('services')->where(function ($query) use ($request) {
+                    return $query->where('name', $request->name)
+                        ->where('type_id', $request->type_id);
+                }),
+            ],
+        ]);
+
         $service = Service::create($request->all());
         Flash::success("<i class='fas fa-check'></i> New Service Added")->important();
         Log::info(label_case('Service Store | ' . $service->name . '(ID:' . $service->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
@@ -78,12 +93,12 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $service = Service::findOrFail($id);
-
+        $typeName = DB::table('types')->where('id', $service->type_id)->select('name')->first();
         $getDataArray = getData('services', 'id', $id);
         $typeId = $getDataArray->type_id;
 
         Log::info(label_case('Service Edit | ' . $service->name . '(ID:' . $service->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view('backend.service.edit', compact('service', 'typeId'));
+        return view('backend.service.edit', compact('service', 'typeId', 'typeName'));
     }
 
     /**

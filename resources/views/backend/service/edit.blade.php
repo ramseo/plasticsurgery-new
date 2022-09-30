@@ -17,7 +17,9 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="c-icon cil-people"></i> Service <small class="text-muted">Edit</small>
+                    <i class="c-icon cil-people"></i>
+                    <b><?= $typeName->name ?></b>
+                    <small class="text-muted">Service Edit</small>
                 </h4>
                 <div class="small text-muted">
                     Service Management Dashboard

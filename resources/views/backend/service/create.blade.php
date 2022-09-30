@@ -4,7 +4,7 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("backend.service.index")}}' icon='c-icon cil-people' >
+    <x-backend-breadcrumb-item route='{{route("backend.service.index")}}' icon='c-icon cil-people'>
         Service
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">Create</x-backend-breadcrumb-item>
@@ -17,7 +17,9 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="c-icon cil-people"></i> Service <small class="text-muted">Create</small>
+                    <i class="c-icon cil-people"></i>
+                    <b><?= $typeName->name ?></b>
+                    <small class="text-muted">Service Create</small>
                 </h4>
                 <div class="small text-muted">
                     Service Management Dashboard
@@ -47,14 +49,14 @@
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
-                        @php $positions =  array(''=>'Select', 'top'=> 'Under Price','bottom'=>'Under About');  @endphp
+                        @php $positions = array(''=>'Select', 'top'=> 'Under Price','bottom'=>'Under About'); @endphp
                         <div class="form-group">
                             {{ Form::label('positions', 'Position') }} {!! fielf_required("required") !!}
                             {{ Form::select('positions', $positions, null, array('class' => 'form-control positions')) }}
                         </div>
                     </div>
                     <div class="col-6 col-md-4">
-                        @php $type =  array(''=>'Select', 'text'=> 'Text','price'=>'Price','number'=> 'Number','textarea'=> 'Textarea');  @endphp
+                        @php $type = array(''=>'Select', 'text'=> 'Text','price'=>'Price','number'=> 'Number','textarea'=> 'Textarea'); @endphp
                         <div class="form-group">
                             {{ Form::label('input_type', 'Type') }} {!! fielf_required("required") !!}
                             {{ Form::select('input_type', $type, null, array('class' => 'form-control input_type')) }}
@@ -67,7 +69,7 @@
                         </div>
                     </div>
                     <div class="col-6 col-md-4 input_type_price" style="display: none">
-                        @php $service_type = array(''=>'Select', 'minute'=> 'Minute','hour'=> 'Hour','day'=> 'Day','complete'=>'Complete');  @endphp
+                        @php $service_type = array(''=>'Select', 'minute'=> 'Minute','hour'=> 'Hour','day'=> 'Day','complete'=>'Complete'); @endphp
                         <div class="form-group">
                             {{ Form::label('service_type', 'Service Price Type') }}
                             {{ Form::select('service_type', $service_type, null, array('class' => 'form-control service_type')) }}
@@ -124,19 +126,20 @@
 
 
 @push('after-scripts')
-    <script>
-        input_type();
-        function input_type(){
-            let input_type = $('.input_type').val();
-            if(input_type == 'price'){
-                $('.input_type_price').show();
-            }else{
-                $('.input_type_price').hide();
-            }
-        }
+<script>
+    input_type();
 
-        $(document).on('change', '.input_type', function () {
-            input_type();
-        });
-    </script>
+    function input_type() {
+        let input_type = $('.input_type').val();
+        if (input_type == 'price') {
+            $('.input_type_price').show();
+        } else {
+            $('.input_type_price').hide();
+        }
+    }
+
+    $(document).on('change', '.input_type', function() {
+        input_type();
+    });
+</script>
 @endpush
