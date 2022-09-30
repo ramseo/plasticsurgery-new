@@ -92,6 +92,12 @@ class ServiceController extends Controller
      */
     public function update($id, Request $request)
     {
+        $request->validate([
+            'name' => "required|string",
+            'positions' => 'required|string',
+            'input_type' => 'required|string',
+        ]);
+
         $service = Service::findOrFail($id);
         $service->update($request->all());
         Flash::success("<i class='fas fa-check'></i> Service Updated Successfully")->important();
