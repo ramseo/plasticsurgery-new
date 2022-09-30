@@ -37,7 +37,7 @@
 
                     <div class="col-6">
                         <div class="form-group">
-                            {{ Form::label('type_id', 'Vendor Category') }}   {!! fielf_required("required") !!}
+                            {{ Form::label('type_id', 'Vendor Type') }}   {!! fielf_required("required") !!}
                             {{ Form::select('type_id', $types, null, array('class' => 'form-control')) }}
                         </div>
                     </div>

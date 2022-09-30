@@ -12,6 +12,7 @@ use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
 use Log;
 use Flash;
+use Illuminate\Support\Facades\DB;
 
 class ContentController extends Controller
 {
@@ -91,7 +92,8 @@ class ContentController extends Controller
     public function destroy($id)
     {
         $content = Content::findOrFail($id);
-        $content->delete();
+        DB::table('contents')->where('id', $id)->delete();
+        // $content->delete();
         Flash::success('<i class="fas fa-check"></i> Content Deleted Successfully!')->important();
         Log::info(label_case('Content Delete | ' . $content->name . '(ID:' . $content->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect(route('backend.content.index'));
