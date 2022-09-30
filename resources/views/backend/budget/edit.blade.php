@@ -44,10 +44,7 @@
                     <div class="col-6 col-md-4">
                         @php $filter = array(''=>'Select', 'less_then'=> 'Less then ','between'=>'Between', 'above'=> 'Above'); @endphp
                         <div class="form-group">
-                            <?php
-                            $required = "required";
-                            ?>
-                            {{ Form::label('filter', 'Budget Filter') }} {!! fielf_required($required) !!}
+                            {{ Form::label('filter', 'Budget Filter') }}
                             {{ Form::select('filter', $filter, $budget->filter, array('class' => 'form-control filter')) }}
                         </div>
                     </div>
@@ -83,7 +80,7 @@
                             @can('delete_service')
                             {{-- <a href="{{route("backend.service.destroy", $service)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>--}}
                             @endcan
-                            <a href="{{ url("admin/budget/$budget->id") }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
+                            <a href='{{ url("admin/budget/$typeId") }}' class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
                         </div>
                     </div>
                 </div>

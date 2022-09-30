@@ -74,8 +74,12 @@ class BudgetController extends Controller
     public function edit($id)
     {
         $budget = Budget::findOrFail($id);
+
+        $getDataArray = getData('budgets', 'id', $id);
+        $typeId = $getDataArray->type_id;
+
         Log::info(label_case('Budget Edit | ' . $budget->name . '(ID:' . $budget->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view('backend.budget.edit', compact('budget'));
+        return view('backend.budget.edit', compact('budget', 'typeId'));
     }
 
     /**
