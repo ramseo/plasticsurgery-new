@@ -12,9 +12,9 @@ function getData($table, $column = null, $value = null)
 {
     $data = DB::table($table);
     if ($column != null) {
-        if (is_array($column)):
+        if (is_array($column)) :
             $data->where($column);
-        else:
+        else :
             $data->where(array($column => $value));
         endif;
     }
@@ -26,50 +26,51 @@ function getDataArray($table, $column = null, $value = null)
 {
     $data = DB::table($table);
     if ($column != null) {
-        if (is_array($column)):
+        if (is_array($column)) :
             $data->where($column);
-        else:
+        else :
             $data->where(array($column => $value));
         endif;
     }
     return $data->get();
 }
 
-function getDataCustom($table, $column=null, $custom=null, $results=null){
+function getDataCustom($table, $column = null, $custom = null, $results = null)
+{
     $data = DB::table($table);
-    if($column!= null):
+    if ($column != null) :
         $data->where($column);
     endif;
-    if($custom!= null && is_array($custom) == true):
-        if(isset($custom['sort'])):
+    if ($custom != null && is_array($custom) == true) :
+        if (isset($custom['sort'])) :
             $data->orderBy($custom['sort']);
         endif;
-        if(isset($custom['offset'])):
+        if (isset($custom['offset'])) :
             $data->offset($custom['offset']);
         endif;
-        if(isset($custom['limit'])):
+        if (isset($custom['limit'])) :
             $data->limit($custom['limit']);
         endif;
     endif;
     $data = $data->get();
-    if(!$data->isEmpty()):
-        return ($results)? $data->all(): $data->first();
+    if (!$data->isEmpty()) :
+        return ($results) ? $data->all() : $data->first();
     endif;
     return false;
 }
 
 function rrmdir($dir)
 {
-    if (is_dir($dir))
-    {
+    if (is_dir($dir)) {
         $objects = scandir($dir);
 
-        foreach ($objects as $object)
-        {
-            if ($object != '.' && $object != '..')
-            {
-                if (filetype($dir.'/'.$object) == 'dir') {rrmdir($dir.'/'.$object);}
-                else {unlink($dir.'/'.$object);}
+        foreach ($objects as $object) {
+            if ($object != '.' && $object != '..') {
+                if (filetype($dir . '/' . $object) == 'dir') {
+                    rrmdir($dir . '/' . $object);
+                } else {
+                    unlink($dir . '/' . $object);
+                }
             }
         }
 
@@ -81,10 +82,10 @@ function rrmdir($dir)
 function setData($table, $column = null, $where = null)
 {
     $data = DB::table($table);
-    if($where!= null):
+    if ($where != null) :
         $data->where($where);
         $data->update($column);
-    else:
+    else :
         $data->insert($column);
     endif;
 }
@@ -96,10 +97,12 @@ function getLatestBlogs()
 }
 
 
-function custom_array_coloum($array, $key, $value, $default =''){
+function custom_array_coloum($array, $key, $value, $default = '')
+{
     $array = $array->toArray();
-    if($default): @array_unshift($array, array($key =>'', $value => $default)); endif;
-    return @array_combine(array_column($array,$key), array_column( $array,$value));
+    if ($default) : @array_unshift($array, array($key => '', $value => $default));
+    endif;
+    return @array_combine(array_column($array, $key), array_column($array, $value));
 }
 
 function fileUpload(Request $request, $key, $folder, $realName = true)
@@ -182,12 +185,12 @@ function getTotalVendorUserMenu($type_id)
         ->where('vendors.type_id', $type_id)
         ->where('vendor_quotation.user_id', $user_id)
         ->get();
-        
-        if(count($data) > 0){
-            return count($data);        
-        }
 
-        return false;
+    if (count($data) > 0) {
+        return count($data);
+    }
+
+    return false;
 }
 
 function averageReview($reviews, $default = 0)
@@ -686,5 +689,23 @@ if (!function_exists('date_today')) {
         $str = \Carbon\Carbon::now()->isoFormat('dddd, LL');
 
         return $str;
+    }
+
+    function dynamic_menu($table, $column, $slug)
+    {
+        $data = DB::table($table);
+        if ($column != null) {
+            if (is_array($column)) :
+                $data->where($column);
+            else :
+                $data->where(array($column => $slug));
+            endif;
+        }
+        $item = $data->first();
+        if ($item) {
+            return DB::table('menuitem')->where('menu_id', $item->menu_id)->select('*')->get();
+        } else {
+            return [];
+        }
     }
 }

@@ -13,7 +13,7 @@ $city = getData('cities');
             </div>
             <div class="col-xs-6 col-sm-9 d-flex header-menu-col">
                 @php
-                $header_menu = getDataArray('menus','menu', 'header');
+                $header_menu = dynamic_menu('menutype','url','header');
                 @endphp
                 @if($header_menu)
                 <ul class="list-inline d-flex site-menu site-main-menu">
