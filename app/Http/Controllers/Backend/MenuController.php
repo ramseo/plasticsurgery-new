@@ -80,11 +80,17 @@ class MenuController extends Controller
         $module_title = 'Menu';
         $module_name = 'menus';
 
+        if ($request->input('url')) {
+            $url = $request->input('url');
+        } else {
+            $url = \Str::slug($request->title);
+        }
+
         $data = array(
             '_token' => $request->_token,
             'title' => $request->title,
             'menu_id' => $menu_id,
-            'url' => \Str::slug($request->title),
+            'url' =>  $url,
         );
 
         $menu = Menu::create($data);

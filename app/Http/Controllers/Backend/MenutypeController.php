@@ -65,10 +65,16 @@ class MenutypeController extends Controller
         $module_name = 'menutype';
         $module_action = 'Store';
 
+        if ($request->input('url')) {
+            $url = $request->input('url');
+        } else {
+            $url = \Str::slug($request->title);
+        }
+
         $data = array(
             '_token' => $request->_token,
             'title' => $request->title,
-            'url' => \Str::slug($request->title),
+            'url' => $url,
         );
 
         $menu = MenuType::create($data);
