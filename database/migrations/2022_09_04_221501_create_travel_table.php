@@ -13,6 +13,7 @@ class CreateTravelTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('travel');
         Schema::create('travel', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
             $table->string('name');
