@@ -39,7 +39,7 @@
                         <thead>
                             <th> # </th>
                             <th> Name </th>
-                            <th> Type </th>
+                            <th> Slug </th>
                             <th> Action </th>
                         </thead>
                         <tbody>
