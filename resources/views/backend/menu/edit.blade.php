@@ -4,7 +4,7 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("backend.$module_name.index")}}' icon='' >
+    <x-backend-breadcrumb-item route='{{route("backend.menus.index")}}' icon=''>
         {{ $module_title }}
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">{{ $module_action }}</x-backend-breadcrumb-item>
@@ -17,7 +17,9 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class=""></i>  {{ $module_title }} <small class="text-muted">{{ $module_action }}</small>
+                    <i class=""></i>
+                    <b class="text-capitalize">{{$menuTypeName->title}}</b>
+                    <small class="text-muted">{{ $module_action }}</small>
                 </h4>
                 <div class="small text-muted">
                     {{ ucwords($module_name) }} Management Dashboard
@@ -35,9 +37,9 @@
 
         <div class="row mt-4">
             <div class="col">
-                {{ html()->modelForm($$module_name_singular, 'PATCH', route("backend.$module_name.update", $$module_name_singular))->class('form')->open() }}
+                {{ html()->modelForm('menus', 'PATCH', url("admin/$module_name/update/$menuData->menu_id/$menuData->id"))->class('form')->open() }}
 
-                @include ("backend.$module_name.form")
+                @include ("backend.menu.form")
 
                 <div class="row">
                     <div class="col-4">
@@ -49,9 +51,9 @@
                     <div class="col-8">
                         <div class="float-right">
                             @can('delete_'.$module_name)
-                            <a href="{{route("backend.$module_name.destroy", $$module_name_singular)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>
+                            <a href='{{url("admin/$module_name/destroy/$menu_id/$menuData->id")}}' class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>
                             @endcan
-                            <a href="{{ route("backend.$module_name.index") }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
+                            <a href='{{url("admin/$module_name/$menu_id") }}' class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
                         </div>
                     </div>
                 </div>
@@ -65,7 +67,7 @@
     <div class="card-footer">
         <div class="row">
             <div class="col">
-                
+
             </div>
         </div>
     </div>

@@ -34,12 +34,12 @@ class GenerateMenus
 
 
             $menu->add('<i class="c-sidebar-nav-icon fas fa-file"></i> Menus', [
-                'route' => 'backend.menu.index',
+                'route' => 'backend.menutype.index',
                 'class' => 'c-sidebar-nav-item',
             ])
                 ->data([
                     'order' => 99,
-                    'activematches' => 'admin/menus*',
+                    'activematches' => 'admin/menutype*',
                     'permission' => [],
                 ])
                 ->link->attr([

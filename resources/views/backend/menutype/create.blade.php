@@ -4,7 +4,7 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("backend.menus.index")}}' icon=''>
+    <x-backend-breadcrumb-item route='{{route("backend.$module_name.index")}}' icon='' >
         {{ $module_title }}
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">{{ $module_action }}</x-backend-breadcrumb-item>
@@ -17,9 +17,7 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class=""></i>
-                    <b class="text-capitalize">{{$menuTypeName->title}}</b>
-                    <small class="text-muted">{{ $module_action }}</small>
+                    <i class=""></i> {{ $module_title }} <small class="text-muted">{{ $module_action }}</small>
                 </h4>
                 <div class="small text-muted">
                     {{ ucwords($module_name) }} Management Dashboard
@@ -28,7 +26,7 @@
             <!--/.col-->
             <div class="col-4">
                 <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-                    <a href='{{ url("admin/menus/$menu_id") }}' class="btn btn-secondary btn-sm ml-1" data-toggle="tooltip" title="{{ $module_title }} List"><i class="fas fa-list-ul"></i> List</a>
+                    <a href="{{ route("backend.$module_name.index") }}" class="btn btn-secondary btn-sm ml-1" data-toggle="tooltip" title="{{ $module_title }} List"><i class="fas fa-list-ul"></i> List</a>
                 </div>
             </div>
             <!--/.col-->
@@ -39,7 +37,7 @@
 
         <div class="row mt-4">
             <div class="col">
-                {{ html()->form('POST', url("admin/menus/store/$menu_id"))->class('form')->open() }}
+                {{ html()->form('POST', route("backend.$module_name.store"))->class('form')->open() }}
 
                 @include ("backend.$module_name.form")
 

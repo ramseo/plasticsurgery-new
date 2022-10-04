@@ -4,7 +4,7 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("backend.menus.index")}}' icon=''>
+    <x-backend-breadcrumb-item route='{{route("backend.$module_name.index")}}' icon=''>
         {{ $module_title }}
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">{{ $module_action }}</x-backend-breadcrumb-item>
@@ -17,9 +17,7 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class=""></i>
-                    <b class="text-capitalize">{{$menuTypeName->title}}</b>
-                    <small class="text-muted">{{ $module_action }}</small>
+                    <i class=""></i> {{ $module_title }} <small class="text-muted">{{ $module_action }}</small>
                 </h4>
                 <div class="small text-muted">
                     {{ ucwords($module_name) }} Management Dashboard
@@ -27,9 +25,7 @@
             </div>
             <!--/.col-->
             <div class="col-4">
-                <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-                    <a href='{{ url("admin/menus/$menu_id") }}' class="btn btn-secondary btn-sm ml-1" data-toggle="tooltip" title="{{ $module_title }} List"><i class="fas fa-list-ul"></i> List</a>
-                </div>
+
             </div>
             <!--/.col-->
         </div>
@@ -39,21 +35,23 @@
 
         <div class="row mt-4">
             <div class="col">
-                {{ html()->form('POST', url("admin/menus/store/$menu_id"))->class('form')->open() }}
+                {{ html()->modelForm($module_name_singular, 'PATCH', route("backend.$module_name.update", $data->menu_id))->class('form')->open() }}
 
                 @include ("backend.$module_name.form")
 
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-4">
                         <div class="form-group">
-                            {{ html()->button($text = "<i class='fas fa-plus-circle'></i> " . ucfirst($module_action) . "", $type = 'submit')->class('btn btn-success') }}
+                            {{ html()->submit($text = icon('fas fa-save')." Save")->class('btn btn-success') }}
                         </div>
                     </div>
-                    <div class="col-6">
+
+                    <div class="col-8">
                         <div class="float-right">
-                            <div class="form-group">
-                                <button type="button" class="btn btn-warning" onclick="history.back(-1)"><i class="fas fa-reply"></i> Cancel</button>
-                            </div>
+                            @can('delete_'.$module_name)
+                            <a href='{{route("backend.$module_name.destroy", "$data->menu_id")}}' class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>
+                            @endcan
+                            <a href="{{ route("backend.$module_name.index") }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
                         </div>
                     </div>
                 </div>

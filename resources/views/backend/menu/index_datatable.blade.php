@@ -1,12 +1,9 @@
 @extends('backend.layouts.app')
 
-@section('title') {{ $module_action }} {{ $module_title }} @endsection
+@section('title')Service @endsection
+{{--@section('header-title') Manage Service @endsection--}}
+{{--@section('styles') @endsection--}}
 
-@section('breadcrumbs')
-<x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item type="active" icon=''>{{ $module_title }}</x-backend-breadcrumb-item>
-</x-backend-breadcrumbs>
-@endsection
 
 @section('content')
 <div class="card">
@@ -14,55 +11,41 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    {{ $module_title }} <small class="text-muted">{{ $module_action }}</small>
+                    <i class="c-icon cil-people"></i>
+                    <b><?= $menuName->title ?></b>
+                    <small class="text-muted">Menu Items</small>
                 </h4>
                 <div class="small text-muted">
-                    {{ Str::title($module_name) }} Management Dashboard
+                    Service Management Dashboard
                 </div>
             </div>
             <div class="col-4">
+                <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+                    <a href='{{ url("admin/menutype") }}' class="btn btn-secondary btn-sm ml-1" data-toggle="tooltip" title="Type List"><i class="fas fa-list-ul"></i> List</a>
+                </div>
                 <div class="float-right">
-                    <x-buttons.create route='{{ route("backend.$module_name.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}"/>
+                    <a href="{{ route('backend.menus.create').'/'. $menu_id}}" class='btn btn-success btn-sm' data-toggle="tooltip" title="{{__('Create')}}">
+                        <i class="fas fa-plus-circle"></i>
+                    </a>
                 </div>
             </div>
         </div>
+        <!--/.row-->
 
         <div class="row mt-4">
             <div class="col">
-                <table id="datatable" class="table table-bordered table-hover table-responsive-sm">
-                    <thead>
-                        <tr>
-                            <th>
-                                #
-                            </th>
-                            <th>
-                                Menu Item
-                            </th>
-                            <th>
-                                Menu
-                            </th>
-                            <th>
-                                Action
-                            </th>
-                        </tr>
-                    </thead>
-                    @if($menus)
-                    <tbody>
-                        @php $count = 0; @endphp
-                        @foreach($menus as $item)
-                            @php $count++; @endphp
-                            <tr>
-                                <td>{{$count}}</td>
-                                <td>{{$item->title}}</td>
-                                <td>{{$item->menu}}</td>
-                                <td>
-                                    <x-buttons.edit route='{!!route("backend.$module_name.edit", $item->id)!!}' title="{{__('Edit')}} {{ ucwords(Str::singular($module_name)) }}" small="true" />
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                    @endif
-                </table>
+                <div class="table-responsive">
+                    <table id="datatable" class="table table-bordered table-hover table-responsive-sm">
+                        <thead>
+                            <th> # </th>
+                            <th> Name </th>
+                            <th> Type </th>
+                            <th> Action </th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -89,11 +72,40 @@
 <link rel="stylesheet" href="{{ asset('vendor/datatable/datatables.min.css') }}">
 
 @endpush
-
 @push ('after-scripts')
-<!-- DataTables Core and Extensions -->
 <script type="text/javascript" src="{{ asset('vendor/datatable/datatables.min.js') }}"></script>
+
 <script type="text/javascript">
-    $('#datatable').DataTable();
+    var table = $('#datatable').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: "{{ route('backend.menus.index').'/'. $menu_id}}",
+        columns: [{
+                data: 'id',
+                name: 'id'
+            },
+            {
+                data: 'title',
+                name: 'title'
+            },
+            {
+                data: 'url',
+                name: 'url'
+            },
+            {
+                data: 'action',
+                name: 'action',
+                orderable: false,
+                searchable: false
+            },
+        ],
+        columnDefs: [{
+            targets: [0, 1],
+        }],
+        "order": [
+            [1, 'desc']
+        ]
+    });
 </script>
+
 @endpush

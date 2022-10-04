@@ -95,7 +95,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
 
 
 
-    
+
 
 
 
@@ -240,13 +240,25 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
      *  Menu Routes
      *
      */
-    Route::get("menus", ['as' => "menu.index", 'uses' => "MenuController@index"]);
-    Route::get("menus-create", ['as' => "menu.create", 'uses' => "MenuController@create"]);
-    Route::post("menus-store", ['as' => "menu.store", 'uses' => "MenuController@store"]);
-    Route::get("menus-edit/{id}", ['as' => "menu.edit", 'uses' => "MenuController@edit"]);
-    Route::patch("menus-update/{id}", ['as' => "menu.update", 'uses' => "MenuController@update"]);
-    Route::delete("menus-destroy/{id}", ['as' => "menu.destroy", 'uses' => "MenuController@destroy"]);
+    Route::get("menus/{menu_id}", ['as' => "menu.index", 'uses' => "MenuController@index"]);
+    Route::get("menus/create/{menu_id}", ['as' => "menu.create", 'uses' => "MenuController@create"]);
+    Route::post("menus/store/{menu_id}", ['as' => "menu.store", 'uses' => "MenuController@store"]);
+    Route::get("menus/edit/{id}", ['as' => "menu.edit", 'uses' => "MenuController@edit"]);
+    Route::patch("menus/update/{menu_id}/{id}", ['as' => "menu.update", 'uses' => "MenuController@update"]);
+    Route::delete("menus/destroy/{menu_id}/{id}", ['as' => "menu.destroy", 'uses' => "MenuController@destroy"]);
+    Route::resource("menus", "MenuController");
 
+    /*
+     *
+     *  Menu Type Routes 
+     *
+     */
+    Route::get("menutype", ['as' => "menutype.index", 'uses' => "MenutypeController@index"]);
+    Route::get("menutype-create", ['as' => "menutype.create", 'uses' => "MenutypeController@create"]);
+    Route::post("menutype-store", ['as' => "menutype.store", 'uses' => "MenutypeController@store"]);
+    Route::get("menutype-edit/{id}", ['as' => "menutype.edit", 'uses' => "MenutypeController@edit"]);
+    Route::patch("menutype-update/{id}", ['as' => "menutype.update", 'uses' => "MenutypeController@update"]);
+    Route::delete("menutype-destroy/{id}", ['as' => "menutype.destroy", 'uses' => "MenutypeController@destroy"]);
 });
 
 /*
@@ -298,7 +310,6 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
     Route::get('profile', 'VendorController@profile')->name('profile');
     Route::post('profile/update', 'VendorController@updateProfile')->name('profile.update');
     Route::resource("vendor", "VendorController");
-
 });
 
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
@@ -318,4 +329,3 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
 
     Route::get('search-by-city/', 'VendorController@citySearch')->name('vendor.search.city');
 });
-

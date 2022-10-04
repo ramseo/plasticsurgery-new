@@ -2,14 +2,15 @@
 
 namespace App\Models;
 
-use DB;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Menu extends Model
+class Menutype extends Model
 {
+    use HasFactory;
     public $timestamps = false;
-    protected $table = 'menuitem';
-    protected $primaryKey = "id";
+    protected $table = 'menutype';
+    protected $primaryKey = "menu_id";
 
     protected $guarded = [
         'id',
@@ -19,5 +20,4 @@ class Menu extends Model
     protected $dates = [
         'created_at',
     ];
-
 }

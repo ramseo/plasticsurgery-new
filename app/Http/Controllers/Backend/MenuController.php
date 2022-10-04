@@ -10,6 +10,10 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Str;
 use App\Models\Menu;
 use App\Http\Requests\MenusRequest;
+use Illuminate\Support\Facades\DB;
+use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\Log;
+use \stdClass;
 
 class MenuController extends Controller
 {
@@ -21,23 +25,25 @@ class MenuController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource. 
      *
      * @return Response
      */
-    public function index()
+    public function index($menu_id, Request $request)
     {
-        $module_title = 'Menu';
-        $module_name = 'menu';
-        $module_action = 'List';
-        $page_heading = ucfirst('Menu');
-        $title = $page_heading . ' ' . ucfirst($module_action);
-        $menus = Menu::paginate();
-
-        return view(
-            "backend.menu.index_datatable",
-            compact('module_title', 'module_name', "menus", 'module_action', 'page_heading', 'title')
-        );
+        $menuName = DB::table('menutype')->where('menu_id', $menu_id)->select('title')->first();
+        if ($request->ajax()) {
+            $menus = Menu::where('menu_id', $menu_id)->select(['id', 'title', 'url', 'menu_id']);
+            return Datatables::of($menus)
+                ->addIndexColumn()
+                ->addColumn('action', function ($menu) {
+                    $btn = '<a href="' . url("admin/menus/edit/$menu->id") . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"></i></a>';
+                    return $btn;
+                })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+        return view('backend.menu.index_datatable', compact('menuName', 'menu_id'))->with('menu_id', $menu_id);
     }
 
     /**
@@ -45,15 +51,20 @@ class MenuController extends Controller
      *
      * @return Response
      */
-    public function create()
+    public function create($menu_id)
     {
-        $module_title = 'Menu';
+        $module_title = 'Menu Type';
         $module_name = 'menu';
-        $module_action = 'Create';
+        $module_action = 'Menu Item Create';
+        $menuTypeName = DB::table('menutype')->where('menu_id', $menu_id)->select('title')->first();
+
+        $menuData = new stdClass();
+        $menuData->title = '';
+        $menuData->url = '';
 
         return view(
             "backend.$module_name.create",
-            compact('module_title', 'module_name', 'module_action')
+            compact('module_title', 'module_name', 'module_action', 'menu_id', 'menuTypeName', 'menuData')
         );
     }
 
@@ -64,37 +75,36 @@ class MenuController extends Controller
      *
      * @return Response
      */
-    public function store(MenusRequest $request)
+    public function store($menu_id, MenusRequest $request)
     {
         $module_title = 'Menu';
         $module_name = 'menus';
-        $module_action = 'Store';
 
         $data = array(
             '_token' => $request->_token,
-            'menu' => $request->menu,
             'title' => $request->title,
+            'menu_id' => $menu_id,
             'url' => \Str::slug($request->title),
         );
-    
+
         $menu = Menu::create($data);
-        // $menu = Menu::create($request->all());
         Flash::success("<i class='fas fa-check'></i> New '" . Str::singular($module_title) . "' Added")->important();
-        return redirect("admin/$module_name");
+        return redirect("admin/$module_name/$menu_id");
     }
 
     public function edit($id)
     {
         $module_title = 'Menu';
-        $module_name = 'menu';
-        $module_action = 'Edit';
-        $module_name_singular = Str::singular($module_name);
+        $module_name = 'menus';
+        $module_action = 'Menu Item Edit';
 
-        $$module_name_singular = Menu::findOrFail($id);
+        $menuData = Menu::findOrFail($id);
+        $menu_id = $menuData->menu_id;
+        $menuTypeName = DB::table('menutype')->where('menu_id', $menu_id)->select('title')->first();
 
         return view(
-            "backend.$module_name.edit",
-            compact('module_title', 'module_name', 'module_name_singular', 'module_action', "$module_name_singular")
+            "backend.menu.edit",
+            compact('module_title', 'module_name', 'menuData', 'module_action', 'menu_id', 'menuTypeName')
         );
     }
 
@@ -106,19 +116,21 @@ class MenuController extends Controller
      *
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update($menu_id, $id, Request $request)
     {
+
         $module_title = 'Menu';
         $module_name = 'menus';
         $module_action = 'Update';
-        $module_name_singular = Str::singular($module_name);
 
-        $$module_name_singular = Menu::findOrFail($id);
-        $$module_name_singular->update($request->all());
+        $menutype = Menu::where('menu_id', $menu_id)->where('id', $id)->firstOrFail();
+        $menutype->title = $request->input('title');
+        $menutype->url = $request->input('url');
+        $menutype->update();
 
         Flash::success("<i class='fas fa-check'></i> '" . Str::singular($module_title) . "' Updated Successfully")->important();
 
-        return redirect("admin/$module_name");
+        return redirect("admin/$module_name/$menu_id");
     }
 
     /**
@@ -128,17 +140,14 @@ class MenuController extends Controller
      *
      * @return Response
      */
-    public function destroy($id)
+    public function destroy($menu_id, $id)
     {
         $module_title = 'Menu';
         $module_name = 'menus';
-        $module_action = 'destroy';
-        $module_name_singular = Str::singular($module_name);
 
-        $$module_name_singular = Menu::findOrFail($id);
-        $$module_name_singular->delete();
+        DB::table('menuitem')->where('id', $id)->where('menu_id', $menu_id)->delete();
 
-        Flash::success('<i class="fas fa-check"></i> ' . label_case($module_name_singular) . ' Deleted Successfully!')->important();
-        return redirect("admin/$module_name");
+        Flash::success('<i class="fas fa-check"></i> ' . label_case($module_title) . ' Deleted Successfully!')->important();
+        return redirect("admin/$module_name/$menu_id");
     }
 }
