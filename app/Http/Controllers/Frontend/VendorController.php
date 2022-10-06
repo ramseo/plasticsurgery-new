@@ -412,7 +412,13 @@ class VendorController extends Controller
 
             return response()->json(['success' => true, 'message' => 'Quotation requested successfully!']);
         }
-        return response()->json(['success' => false, 'message' => $validator->errors()->all()]);
+
+        $errArry = [];
+        foreach ($validator->errors()->all() as $error) {
+            $errArry[] =  '<li>' . $error . '</li>';
+        }
+
+        return response()->json(['success' => false, 'message' => $errArry]);
     }
 
     public function vendorSearch(){

@@ -69,7 +69,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="alert alert-danger alert-quotation" style="display: none;"></div>
+                <div class="alert alert-danger alert-quotation error-ul" style="display: none;"></div>
                 <form id="quotationForm" class="row" action="">
                     <div class="col-xs-12 col-sm-8">
                         @if($top_services)
