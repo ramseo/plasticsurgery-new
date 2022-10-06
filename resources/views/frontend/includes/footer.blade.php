@@ -61,17 +61,7 @@
          </div>
          <div class="col-lg-4  footer-col">
             <p class="footer-brand mr-lg-5 d-flex"> Follow us for more ideas & fun</p>
-            @if(setting('instagram_url'))
-            <a href="{{setting('instagram_url')}}" target="_blank">
-               <div class="button">
-                  <div class="icon">
-                     <i class="fab fa-instagram"></i>
-                  </div>
-                  <span>@wed.in</span>
-               </div>
-               <span class="scl">Instagram</span>
-            </a>
-            @endif
+          
             @if(setting('facebook_url'))
             <a href="{{setting('facebook_url')}}" target="_blank">
                <div class="button">
@@ -105,7 +95,18 @@
                <span class="scl">Pintrest</span>
             </a>
             @endif
-            @if(setting('linkedin_url'))
+            @if(setting('instagram_url'))
+            <a href="{{setting('instagram_url')}}" target="_blank">
+               <div class="button">
+                  <div class="icon">
+                     <i class="fab fa-instagram"></i>
+                  </div>
+                  <span>@wed.in</span>
+               </div>
+               <span class="scl">Instagram</span>
+            </a>
+            @endif
+            <!-- @if(setting('linkedin_url'))
             <a href="{{setting('linkedin_url')}}" target="_blank">
                <div class="button">
                   <div class="icon">
@@ -115,7 +116,7 @@
                </div>
                <span class="scl">Linked in</span>
             </a>
-            @endif
+            @endif -->
             @if(setting('youtube_url'))
             <a href="{{setting('youtube_url')}}" target="_blank">
                <div class="button">
