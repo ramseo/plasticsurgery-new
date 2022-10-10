@@ -46,4 +46,17 @@ a {
     padding: 0;
 }
 
+.password-container {
+    position: relative;
+}
+
+.displayPassword {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
 /* code */

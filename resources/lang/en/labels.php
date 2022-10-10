@@ -85,6 +85,7 @@ return [
                 'old_password'          => 'Old Password',
                 'new_password'          => 'New Password',
                 'password'              => 'Password',
+                'password_confirmation' => 'Password Confirmation',
                 'new_password_confirmation' => 'New Password Confirmation',
                 'confirmed'             => 'Confirmed',
                 'active'                => 'Active',

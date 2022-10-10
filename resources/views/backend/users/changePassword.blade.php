@@ -4,7 +4,7 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("backend.$module_name.index")}}' icon='{{ $module_icon }}' >
+    <x-backend-breadcrumb-item route='{{route("backend.$module_name.index")}}' icon='{{ $module_icon }}'>
         {{ $module_title }}
     </x-backend-breadcrumb-item>
 
@@ -57,23 +57,35 @@
                     {{ html()->label(__('labels.backend.users.fields.password'))->class('col-md-2 form-control-label')->for('password') }}
 
                     <div class="col-md-10">
-                        {{ html()->password('password')
+                        <div class="password-container">
+                            {{ html()->password('password')
                             ->class('form-control')
                             ->placeholder(__('labels.backend.users.fields.password'))
                             ->required() }}
+                            <span class="displayPassword">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </span>
+                        </div>
                     </div>
-                </div><!--form-group-->
+                </div>
+                <!--form-group-->
 
                 <div class="form-group row">
                     {{ html()->label(__('labels.backend.users.fields.password_confirmation'))->class('col-md-2 form-control-label')->for('password_confirmation') }}
 
                     <div class="col-md-10">
-                        {{ html()->password('password_confirmation')
+                        <div class="password-container">
+                            {{ html()->password('password_confirmation')
                             ->class('form-control')
                             ->placeholder(__('labels.backend.users.fields.password_confirmation'))
                             ->required() }}
+                            <span class="displayPassword">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </span>
+                        </div>
                     </div>
-                </div><!--form-group-->
+                </div>
+                <!--form-group-->
 
                 <div class="row">
                     <div class="col">
