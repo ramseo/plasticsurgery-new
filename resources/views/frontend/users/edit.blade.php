@@ -263,7 +263,7 @@
 
 .edit-pics img {
     object-fit: cover;
-    object-position: -45px;
+    /* object-position: -45px; */
 }
 
 .profile-form-section {
