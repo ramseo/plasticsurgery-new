@@ -2177,6 +2177,7 @@ article blockquote {
     height: 18px !important;
     background-color: #ffe4e9 !important;
     border-radius: 50px !important;
+    margin-top: 35px;
 }
 
 .asRange .asRange-selected {
@@ -2504,9 +2505,32 @@ span.days {
     padding: 0;
     list-style: none;
     margin-top: 40px;
+    margin-bottom: 0;
 }
 
 .error-ul li {
     margin: 5px 10px 5px 10px;
     font-weight: bold;
+}
+
+.fill-req-cls {
+    background: #eb0a3e;
+    border: none;
+}
+
+
+.fill-req-cls:hover {
+    background: #eb0a3e;
+    border: none;
+}
+
+.quotation-type {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #eb0a3e;
+}
+
+.quotation-top{
+    margin-top: 60px;
 }

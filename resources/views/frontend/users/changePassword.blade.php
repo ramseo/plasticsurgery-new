@@ -23,14 +23,14 @@
     <div class="container-fluid">
         <div class="col-xs-12 col-sm-12 user-profile-main-col">
 
-{{--            <div class="row text-right">--}}
-{{--                @if ($$module_name_singular->email_verified_at == null)--}}
-{{--                    <p class="lead">--}}
-{{--                        <a href="{{route('frontend.users.emailConfirmationResend', $$module_name_singular->id)}}">Confirm Email</a>--}}
-{{--                    </p>--}}
-{{--                @endif--}}
-{{--                @include('frontend.includes.messages')--}}
-{{--            </div>--}}
+            {{-- <div class="row text-right">--}}
+            {{-- @if ($$module_name_singular->email_verified_at == null)--}}
+            {{-- <p class="lead">--}}
+            {{-- <a href="{{route('frontend.users.emailConfirmationResend', $$module_name_singular->id)}}">Confirm Email</a>--}}
+            {{-- </p>--}}
+            {{-- @endif--}}
+            {{-- @include('frontend.includes.messages')--}}
+            {{-- </div>--}}
 
         </div>
     </div>
@@ -39,10 +39,11 @@
 <section class="profile-form-section">
     <div class="container-fluid">
         <div class="row">
-             <div class="col-xs-12 col-sm-3">
+            <div class="col-xs-12 col-sm-3">
                 @include('frontend.users.menu')
             </div>
             <div class="col-xs-12 col-sm-9">
+                @include('backend.includes.errors')
                 <div class="card bg-white border-light shadow-soft flex-md-row no-gutters p-4">
                     <div class="card-body d-flex flex-column justify-content-between col-auto py-4 p-lg-5">
                         <div class="row mt-4 mb-4">
@@ -50,24 +51,46 @@
                                 {{ html()->form('PATCH', route('frontend.users.changePasswordUpdate', auth()->user()->username))->class('form-horizontal')->open() }}
 
                                 <div class="form-group">
-                                    <div class="">
-                                        {{ html()->label(__('labels.backend.users.fields.password'))->class('form-control-label')->for('password') }}
-                                        {{ html()->password('password')
+                                    {{ html()->label(__('labels.backend.users.fields.old_password'))->class('form-control-label')->for('old_password') }}
+                                    <div class="password-container">
+                                        {{ html()->password('old_password')
                                             ->class('form-control')
-                                            ->placeholder(__('labels.backend.users.fields.password'))
+                                            ->placeholder(__('labels.backend.users.fields.old_password'))
                                             ->required() }}
+                                        <span class="displayPassword">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                        </span>
                                     </div>
-                                </div><!--form-group-->
+                                </div>
+                                <!--form-group-->
 
                                 <div class="form-group">
-                                    <div class="">
-                                        {{ html()->label(__('labels.backend.users.fields.password_confirmation'))->class('form-control-label')->for('password_confirmation') }}
-                                        {{ html()->password('password_confirmation')
+                                    {{ html()->label(__('labels.backend.users.fields.new_password'))->class('form-control-label')->for('new_password') }}
+                                    <div class="password-container">
+                                        {{ html()->password('new_password')
                                             ->class('form-control')
-                                            ->placeholder(__('labels.backend.users.fields.password_confirmation'))
+                                            ->placeholder(__('labels.backend.users.fields.new_password'))
                                             ->required() }}
+                                        <span class="displayPassword">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                        </span>
                                     </div>
-                                </div><!--form-group-->
+                                </div>
+                                <!--form-group-->
+
+                                <div class="form-group">
+                                    {{ html()->label(__('labels.backend.users.fields.new_password_confirmation'))->class('form-control-label')->for('new_password_confirmation') }}
+                                    <div class="password-container">
+                                        {{ html()->password('new_password_confirmation')
+                                            ->class('form-control')
+                                            ->placeholder(__('labels.backend.users.fields.new_password_confirmation'))
+                                            ->required() }}
+                                        <span class="displayPassword">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!--form-group-->
 
                                 <div class="row">
                                     <div class="col">
@@ -88,3 +111,7 @@
 </section>
 
 @endsection
+
+<script>
+
+</script>

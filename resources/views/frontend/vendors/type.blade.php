@@ -14,8 +14,9 @@ $max_price = 100000;
 <section id="quotation-section">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 quotation-top">
                 <!-- <p class="quotation-header" style="border: none; padding: 0px; margin: 0px 0 5px 0;">Get Quotation</p> -->
+                <div class="quotation-type">{{$type->name}}</div>
             </div>
 
             <ul class="alert alert-danger alert-quotation error-ul" style="display: none;">
@@ -242,7 +243,9 @@ $max_price = 100000;
                         }, 1000);
                     } else {
                         $('.alert-quotation').html(res.message).show();
-                        $("html, body").animate({ scrollTop: 0 }, "slow");
+                        $("html, body").animate({
+                            scrollTop: 0
+                        }, "slow");
                     }
                     $('body').unblock();
                 }

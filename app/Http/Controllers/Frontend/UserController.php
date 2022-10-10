@@ -20,6 +20,7 @@ use Illuminate\Support\Str;
 use App\Models\Type;
 use App\Models\City;
 use App\Models\Vendor;
+use App\Rules\MatchOldPassword;
 
 use Log;
 use Flash;
@@ -87,7 +88,7 @@ class UserController extends Controller
      */
     public function profile()
     {
-        if(Auth::check() == false) {
+        if (Auth::check() == false) {
             return redirect(base_url());
         }
         $user = Auth::user();
@@ -96,7 +97,7 @@ class UserController extends Controller
         if ($user) {
             $userprofile = Userprofile::where('user_id', $user->id)->first();
         } else {
-            Log::error('UserProfile Exception for Username: '.$username);
+            Log::error('UserProfile Exception for Username: ' . $username);
             abort(404);
         }
 
@@ -104,7 +105,7 @@ class UserController extends Controller
 
         $meta_page_type = 'profile';
 
-        return view("frontend.users.profile", compact( 'user', 'userprofile'));
+        return view("frontend.users.profile", compact('user', 'userprofile'));
     }
 
     /**
@@ -117,7 +118,7 @@ class UserController extends Controller
     public function profileEdit()
     {
 
-        if(Auth::check() == false) {
+        if (Auth::check() == false) {
             return redirect(base_url());
         }
         $user = Auth::user();
@@ -136,9 +137,9 @@ class UserController extends Controller
     public function profileUpdate(Request $request)
     {
 
-//        if ($id != auth()->user()->id) {
-//            return redirect()->route('frontend.users.profile', $id);
-//        }
+        //        if ($id != auth()->user()->id) {
+        //            return redirect()->route('frontend.users.profile', $id);
+        //        }
 
         $id = Auth::user()->id;
 
@@ -159,53 +160,53 @@ class UserController extends Controller
 
         Flash::success("<i class='fas fa-check'></i> Vendor Updated Successfully")->important();
         Log::info(label_case('Update | ' . $user->name . '(ID:' . $user->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-//        return redirect("admin/vendor/edit/" . $user->id);
+        //        return redirect("admin/vendor/edit/" . $user->id);
         return redirect()->route('frontend.users.profileEdit')->with('flash_success', 'Update successful!');
 
-//        $module_title = $this->module_title;
-//        $module_name = $this->module_name;
-//        $module_path = $this->module_path;
-//        $module_icon = $this->module_icon;
-//        $module_model = $this->module_model;
-//        $module_name_singular = Str::singular($module_name);
-//        $module_action = 'Profile Update';
-//
-//
-//
-//        $module_name = $this->module_name;
-//        $module_name_singular = Str::singular($this->module_name);
-//
-//        if (!auth()->user()->can('edit_users')) {
-//            $id = auth()->user()->id;
-//            $username = auth()->user()->username;
-//        }
-//
-//        $$module_name_singular = $module_model::findOrFail($id);
-//        $filename = $$module_name_singular->avatar;
-//
-//        // Handle Avatar upload
-//        if ($request->hasFile('avatar')) {
-//            if ($$module_name_singular->getMedia($module_name)->first()) {
-//                $$module_name_singular->getMedia($module_name)->first()->delete();
-//            }
-//
-//            $media = $$module_name_singular->addMedia($request->file('avatar'))->toMediaCollection($module_name);
-//
-//            $$module_name_singular->avatar = $media->getUrl();
-//
-//            $$module_name_singular->save();
-//        }
-//
-//        $data_array = $request->except('avatar');
-//        $data_array['avatar'] = $$module_name_singular->avatar;
-//        $data_array['name'] = $request->first_name.' '.$request->last_name;
-//
-//        $user_profile = Userprofile::where('user_id', '=', $$module_name_singular->id)->first();
-//        $user_profile->update($data_array);
-//
-//        event(new UserProfileUpdated($user_profile));
-//
-//        return redirect()->route('frontend.users.profile', $$module_name_singular->id)->with('flash_success', 'Update successful!');
+        //        $module_title = $this->module_title;
+        //        $module_name = $this->module_name;
+        //        $module_path = $this->module_path;
+        //        $module_icon = $this->module_icon;
+        //        $module_model = $this->module_model;
+        //        $module_name_singular = Str::singular($module_name);
+        //        $module_action = 'Profile Update';
+        //
+        //
+        //
+        //        $module_name = $this->module_name;
+        //        $module_name_singular = Str::singular($this->module_name);
+        //
+        //        if (!auth()->user()->can('edit_users')) {
+        //            $id = auth()->user()->id;
+        //            $username = auth()->user()->username;
+        //        }
+        //
+        //        $$module_name_singular = $module_model::findOrFail($id);
+        //        $filename = $$module_name_singular->avatar;
+        //
+        //        // Handle Avatar upload
+        //        if ($request->hasFile('avatar')) {
+        //            if ($$module_name_singular->getMedia($module_name)->first()) {
+        //                $$module_name_singular->getMedia($module_name)->first()->delete();
+        //            }
+        //
+        //            $media = $$module_name_singular->addMedia($request->file('avatar'))->toMediaCollection($module_name);
+        //
+        //            $$module_name_singular->avatar = $media->getUrl();
+        //
+        //            $$module_name_singular->save();
+        //        }
+        //
+        //        $data_array = $request->except('avatar');
+        //        $data_array['avatar'] = $$module_name_singular->avatar;
+        //        $data_array['name'] = $request->first_name.' '.$request->last_name;
+        //
+        //        $user_profile = Userprofile::where('user_id', '=', $$module_name_singular->id)->first();
+        //        $user_profile->update($data_array);
+        //
+        //        event(new UserProfileUpdated($user_profile));
+        //
+        //        return redirect()->route('frontend.users.profile', $$module_name_singular->id)->with('flash_success', 'Update successful!');
     }
 
     /**
@@ -218,7 +219,7 @@ class UserController extends Controller
     public function changePassword()
     {
 
-        if(Auth::check() == false) {
+        if (Auth::check() == false) {
             return redirect(base_url());
         }
 
@@ -243,7 +244,7 @@ class UserController extends Controller
         $$module_name_singular = $module_model::findOrFail($id);
 
         $body_class = 'profile-page';
-
+        // dd($module_name); 
         return view("frontend.$module_name.changePassword", compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", 'body_class'));
     }
 
@@ -257,14 +258,21 @@ class UserController extends Controller
      */
     public function changePasswordUpdate(Request $request)
     {
-        if(Auth::check() == false) {
+
+        if (Auth::check() == false) {
             return redirect(base_url());
         }
 
         $id = Auth::user()->id;
+        // code
+        $user = User::findOrFail($id);
+
+        // code
 
         $this->validate($request, [
-            'password' => 'required|confirmed|min:6',
+            'old_password' => ['required', new MatchOldPassword],
+            'new_password' => ['required'],
+            'new_password_confirmation' => ['same:new_password'],
         ]);
 
         $module_name = $this->module_name;
@@ -272,8 +280,8 @@ class UserController extends Controller
 
         $$module_name_singular = auth()->user();
 
-        $request_data = $request->only('password');
-        $request_data['password'] = Hash::make($request_data['password']);
+        $request_data = $request->only('new_password');
+        $request_data['password'] = Hash::make($request_data['new_password']);
 
         $$module_name_singular->update($request_data);
 
@@ -384,7 +392,7 @@ class UserController extends Controller
             if ($user_id == $user_provider->user->id) {
                 $user_provider->delete();
 
-                flash('<i class="fas fa-exclamation-triangle"></i> Unlinked from User, "'.$user_provider->user->name.'"!')->success();
+                flash('<i class="fas fa-exclamation-triangle"></i> Unlinked from User, "' . $user_provider->user->name . '"!')->success();
 
                 return redirect()->back();
             } else {
@@ -406,9 +414,9 @@ class UserController extends Controller
     {
         if ($id != auth()->user()->id) {
             if (auth()->user()->hasAnyRole(['administrator', 'super admin'])) {
-                Log::info(auth()->user()->name.' ('.auth()->user()->id.') - User Requested for Email Verification.');
+                Log::info(auth()->user()->name . ' (' . auth()->user()->id . ') - User Requested for Email Verification.');
             } else {
-                Log::warning(auth()->user()->name.' ('.auth()->user()->id.') - User trying to confirm another users email.');
+                Log::warning(auth()->user()->name . ' (' . auth()->user()->id . ') - User trying to confirm another users email.');
 
                 abort('404');
             }
@@ -418,7 +426,7 @@ class UserController extends Controller
 
         if ($user) {
             if ($user->email_verified_at == null) {
-                Log::info($user->name.' ('.$user->id.') - User Requested for Email Verification.');
+                Log::info($user->name . ' (' . $user->id . ') - User Requested for Email Verification.');
 
                 // Send Email To Registered User
                 $user->sendEmailVerificationNotification();
@@ -427,9 +435,9 @@ class UserController extends Controller
 
                 return redirect()->back();
             } else {
-                Log::info($user->name.' ('.$user->id.') - User Requested but Email already verified at.'.$user->email_verified_at);
+                Log::info($user->name . ' (' . $user->id . ') - User Requested but Email already verified at.' . $user->email_verified_at);
 
-                flash($user->name.', You already confirmed your email address at '.$user->email_verified_at->isoFormat('LL'))->success()->important();
+                flash($user->name . ', You already confirmed your email address at ' . $user->email_verified_at->isoFormat('LL'))->success()->important();
 
                 return redirect()->back();
             }
@@ -448,7 +456,7 @@ class UserController extends Controller
         $module_action = 'My Quotations';
 
         $page_heading = ucfirst($module_title);
-        $title = $page_heading.' '.ucfirst($module_action);
+        $title = $page_heading . ' ' . ucfirst($module_action);
 
         if (!auth()->user()->can('edit_users')) {
             $id = auth()->user()->id;
@@ -481,7 +489,7 @@ class UserController extends Controller
         $module_action = 'Quotation Details';
 
         $page_heading = ucfirst($module_title);
-        $title = $page_heading.' '.ucfirst($module_action);
+        $title = $page_heading . ' ' . ucfirst($module_action);
 
         if (!auth()->user()->can('edit_users')) {
             $id = auth()->user()->id;
@@ -495,13 +503,13 @@ class UserController extends Controller
         $quotations = Quotation::where('id', $quotation_id)->first();
 
 
-          $vendor = Vendor::where('id', $quotations->vendor_id)->first();
+        $vendor = Vendor::where('id', $quotations->vendor_id)->first();
 
         $vendor_user = User::where('id', $vendor->user_id)->first();
         $city = City::where('id', $vendor->city_id)->first();
         $type = Type::where('id', $vendor->type_id)->first();
-        $vendor_url = url('/').'/'.$type->slug.'/'.$city->slug.'/'.$vendor->slug;
-        $vendor_data =  array( 'vendor_business_name' => $vendor->business_name,            'vendor_url' => $vendor_url );
+        $vendor_url = url('/') . '/' . $type->slug . '/' . $city->slug . '/' . $vendor->slug;
+        $vendor_data =  array('vendor_business_name' => $vendor->business_name,            'vendor_url' => $vendor_url);
 
         $body_class = 'profile-page';
 
@@ -512,62 +520,60 @@ class UserController extends Controller
     }
 
 
-   public function getVendors($slug = 'wedding-photographers')
+    public function getVendors($slug = 'wedding-photographers')
     {
-         if(Auth::check() == false) {
+        if (Auth::check() == false) {
             return redirect(base_url());
         }
         $user_id = Auth::user()->id;
         $type = DB::table('types')->where('slug', $slug)->first();
 
 
-        $user_quotation = UserQuotation::where('type_id',$type->id)->where('user_id', $user_id)->first();
+        $user_quotation = UserQuotation::where('type_id', $type->id)->where('user_id', $user_id)->first();
         $quotations = Quotation::where('user_id', $user_id)->get();
 
         $vendors = array();
-        foreach($quotations as $quotation){
-            $vendors[]=$quotation['vendor_id'];
+        foreach ($quotations as $quotation) {
+            $vendors[] = $quotation['vendor_id'];
         }
 
 
         // DB::enableQueryLog();
-        if($user_quotation){
-        $more_vendors = DB::table('vendors')->select('vendors.*')
-        ->leftJoin('users', 'users.id', '=', 'vendors.user_id')
-        ->leftJoin('types', 'types.id', '=', 'vendors.type_id')
-        ->whereNotNull('users.email_verified_at')
-        ->where('types.slug', $slug)
-        ->where('vendors.city_id', $user_quotation->city_id)
-        ->whereNotIn('vendors.id', $vendors)
-        ->limit(20)
-        ->get();
-        
-         }else{
+        if ($user_quotation) {
             $more_vendors = DB::table('vendors')->select('vendors.*')
-        ->leftJoin('users', 'users.id', '=', 'vendors.user_id')
-        ->leftJoin('types', 'types.id', '=', 'vendors.type_id')
-        ->whereNotNull('users.email_verified_at')
-        ->where('types.slug', $slug)
-        ->whereNotIn('vendors.id', $vendors)
-        ->limit(20)
-        ->get();
-         }
+                ->leftJoin('users', 'users.id', '=', 'vendors.user_id')
+                ->leftJoin('types', 'types.id', '=', 'vendors.type_id')
+                ->whereNotNull('users.email_verified_at')
+                ->where('types.slug', $slug)
+                ->where('vendors.city_id', $user_quotation->city_id)
+                ->whereNotIn('vendors.id', $vendors)
+                ->limit(20)
+                ->get();
+        } else {
+            $more_vendors = DB::table('vendors')->select('vendors.*')
+                ->leftJoin('users', 'users.id', '=', 'vendors.user_id')
+                ->leftJoin('types', 'types.id', '=', 'vendors.type_id')
+                ->whereNotNull('users.email_verified_at')
+                ->where('types.slug', $slug)
+                ->whereNotIn('vendors.id', $vendors)
+                ->limit(20)
+                ->get();
+        }
 
-         $vendors = DB::table('vendors')->select('vendors.*')
-        ->leftJoin('users', 'users.id', '=', 'vendors.user_id')
-        ->leftJoin('types', 'types.id', '=', 'vendors.type_id')
-        ->whereNotNull('users.email_verified_at')
-        ->where('types.slug', $slug)
-        ->whereIn('vendors.id', $vendors)
-        ->limit(20)
-        ->get();
+        $vendors = DB::table('vendors')->select('vendors.*')
+            ->leftJoin('users', 'users.id', '=', 'vendors.user_id')
+            ->leftJoin('types', 'types.id', '=', 'vendors.type_id')
+            ->whereNotNull('users.email_verified_at')
+            ->where('types.slug', $slug)
+            ->whereIn('vendors.id', $vendors)
+            ->limit(20)
+            ->get();
 
-         // $vendors = DB::table('vendors')->whereIn('vendors.id', $vendors)->get();
+        // $vendors = DB::table('vendors')->whereIn('vendors.id', $vendors)->get();
 
         // dd(DB::getQueryLog());
         // dd($vendors);
 
         return view("frontend.users.vendor",  compact('user_quotation', 'type', 'more_vendors', 'vendors'));
     }
-
 }
