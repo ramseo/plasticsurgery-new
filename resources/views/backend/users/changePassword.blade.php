@@ -53,14 +53,31 @@
             <div class="col">
                 {{ html()->form('PATCH', route('backend.users.changePasswordUpdate', $$module_name_singular->id))->class('form-horizontal')->open() }}
 
+                <!-- code -->
                 <div class="form-group row">
-                    {{ html()->label(__('labels.backend.users.fields.password'))->class('col-md-2 form-control-label')->for('password') }}
+                    {{ html()->label(__('labels.backend.users.fields.old_password'))->class('col-md-2 form-control-label')->for('old_password') }}
+                    <div class="col-md-10">
+                        <div class="password-container">
+                            {{ html()->password('old_password')
+                            ->class('form-control')
+                            ->placeholder(__('labels.backend.users.fields.old_password'))
+                            ->required() }}
+                            <span class="displayPassword">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- code -->
+
+                <div class="form-group row">
+                    {{ html()->label(__('labels.backend.users.fields.new_password'))->class('col-md-2 form-control-label')->for('new_password') }}
 
                     <div class="col-md-10">
                         <div class="password-container">
-                            {{ html()->password('password')
+                            {{ html()->password('new_password')
                             ->class('form-control')
-                            ->placeholder(__('labels.backend.users.fields.password'))
+                            ->placeholder(__('labels.backend.users.fields.new_password'))
                             ->required() }}
                             <span class="displayPassword">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
@@ -71,13 +88,13 @@
                 <!--form-group-->
 
                 <div class="form-group row">
-                    {{ html()->label(__('labels.backend.users.fields.password_confirmation'))->class('col-md-2 form-control-label')->for('password_confirmation') }}
+                    {{ html()->label(__('labels.backend.users.fields.new_password_confirmation'))->class('col-md-2 form-control-label')->for('new_password_confirmation') }}
 
                     <div class="col-md-10">
                         <div class="password-container">
-                            {{ html()->password('password_confirmation')
+                            {{ html()->password('new_password_confirmation')
                             ->class('form-control')
-                            ->placeholder(__('labels.backend.users.fields.password_confirmation'))
+                            ->placeholder(__('labels.backend.users.fields.new_password_confirmation'))
                             ->required() }}
                             <span class="displayPassword">
                                 <i class="fa fa-eye" aria-hidden="true"></i>

@@ -518,8 +518,13 @@ class UserController extends Controller
      */
     public function changePasswordUpdate(Request $request, $id)
     {
+        // $this->validate($request, [
+        //     'password' => 'required|confirmed|min:6',
+        // ]);
         $this->validate($request, [
-            'password' => 'required|confirmed|min:6',
+            'old_password' => ['required'],
+            'new_password' => 'required|different:old_password',
+            'new_password_confirmation' => ['same:new_password'],
         ]);
 
         $module_title = $this->module_title;
@@ -535,8 +540,8 @@ class UserController extends Controller
 
         $$module_name_singular = User::findOrFail($id);
 
-        $request_data = $request->only('password');
-        $request_data['password'] = Hash::make($request_data['password']);
+        $request_data = $request->only('new_password');
+        $request_data['password'] = Hash::make($request_data['new_password']);
 
         $$module_name_singular->update($request_data);
 
