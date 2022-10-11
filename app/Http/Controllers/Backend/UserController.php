@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Log;
 use Yajra\DataTables\DataTables;
+use App\Rules\MatchOldPassword;
 
 class UserController extends Controller
 {
@@ -522,7 +523,7 @@ class UserController extends Controller
         //     'password' => 'required|confirmed|min:6',
         // ]);
         $this->validate($request, [
-            'old_password' => ['required'],
+            'old_password' => ['required', new MatchOldPassword],
             'new_password' => 'required|different:old_password',
             'new_password_confirmation' => ['same:new_password'],
         ]);
