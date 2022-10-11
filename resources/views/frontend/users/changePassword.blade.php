@@ -45,7 +45,8 @@
             <div class="col-xs-12 col-sm-9">
                 @include('backend.includes.errors')
                 <div class="card bg-white border-light shadow-soft flex-md-row no-gutters p-4">
-                    <div class="card-body d-flex flex-column justify-content-between col-auto py-4 p-lg-5">
+                <!-- <div class="card-body d-flex flex-column justify-content-between col-auto py-4 p-lg-5"> -->
+                    <div class="card-body d-flex flex-column justify-content-between col-auto">
                         <div class="row mt-4 mb-4">
                             <div class="col">
                                 {{ html()->form('PATCH', route('frontend.users.changePasswordUpdate', auth()->user()->username))->class('form-horizontal')->open() }}
