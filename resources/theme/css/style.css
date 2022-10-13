@@ -131,7 +131,8 @@ span.days {
 }
 
 .on-selection .rgst-vndr {
-    margin-left: 28px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .on-selection {
@@ -142,8 +143,9 @@ span.days {
 }
 
 span.scl {
-    margin-top: 14px;
-    margin-left: 9px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
     font-weight: 600;
 
 }
@@ -213,9 +215,9 @@ span.days {
     filter: brightness(0) invert(1) !important;
 }
 
-.common-card .text-col {
+/* .common-card .text-col {
     height: 172px;
-}
+} */
 
 .vendor-card .img-col img {
     height: 250px;
@@ -578,7 +580,9 @@ strong {
 
 .common-card .text-col {
     background: white;
-    padding: 25px 20px;
+    padding: 15px 20px;
+    /* padding: 25px 20px; */
+    text-align: center;
 }
 
 .common-card {
@@ -596,7 +600,7 @@ strong {
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-bottom: 0;
 }
 
 .common-card .text-col .text {
@@ -645,10 +649,10 @@ strong {
     margin: 40px 0;
 }
 
-#blogsSlider,
+/* #blogsSlider,
 #vendorsSlider {
     margin-top: 20px;
-}
+} */
 
 .vendor-card .text {
     color: gray;

@@ -353,7 +353,7 @@ $city = getData('cities');
         }
 
         .text-col .title {
-            font-size: 20px;
+            font-size: 15px;
         }
 
         .text-col {

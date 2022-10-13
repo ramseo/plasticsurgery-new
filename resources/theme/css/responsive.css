@@ -159,7 +159,7 @@
 
     #page-banner img {
         width: 100%;
-        height: 180px;
+        /* height: 180px; */
     }
 
     #category-section,
@@ -797,12 +797,53 @@
         font-size: 14px;
     }
 
-    .req-mob-cls .req-days{
+    .req-mob-cls .req-days {
         font-size: 14px;
     }
 
-    .avatar-menu-bar{
+    .avatar-menu-bar {
         padding-bottom: 15px;
+    }
+
+    .rgst-vndr .btn {
+        font-size: 10px;
+    }
+
+    .on-selection .rgst-vndr {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .button {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .button .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .button:hover{
+        width: 150px;
+    }
+
+    .button .icon i{
+        line-height: 40px;
+    }
+
+    .button span{
+        line-height: 40px;
+    }
+
+    .social-icons-footer a{
+        padding-right: 10px;
+    }
+
+    .footer .footer-brand{
+        font-size: 15px;
+        padding-top: 5px;
     }
     /* code */
 }

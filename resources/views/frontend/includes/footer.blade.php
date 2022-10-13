@@ -59,74 +59,69 @@
                </div>
             </form>
          </div>
+         <div style="clear:both"></div>
          <div class="col-lg-4  footer-col">
-            <p class="footer-brand mr-lg-5 d-flex"> Follow us for more ideas & fun</p>
-          
-            @if(setting('facebook_url'))
-            <a href="{{setting('facebook_url')}}" target="_blank">
-               <div class="button">
-                  <div class="icon">
-                     <i class="fab fa-facebook-f"></i>
+            <p class="footer-brand mr-lg-5 d-flex">
+               Follow us for more ideas & fun
+            </p>
+
+            <div class="social-icons-footer">
+               @if(setting('facebook_url'))
+               <a href="{{setting('facebook_url')}}" target="_blank">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                     </div>
+                     <span>@wed.in</span>
                   </div>
-                  <span>@wed.in</span>
-               </div>
-               <span class="scl">Facebook</span>
-            </a>
-            @endif
-            @if(setting('twitter_url'))
-            <a href="{{setting('twitter_url')}}" target="_blank">
-               <div class="button">
-                  <div class="icon">
-                     <i class="fab fa-twitter"></i>
+                  <span class="scl">Facebook</span>
+               </a>
+               @endif
+               @if(setting('twitter_url'))
+               <a href="{{setting('twitter_url')}}" target="_blank">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-twitter"></i>
+                     </div>
+                     <span>@wed.in</span>
                   </div>
-                  <span>@wed.in</span>
-               </div>
-               <span class="scl">Twitter</span>
-            </a>
-            @endif
-            @if(setting('pinterest_url'))
-            <a href="{{setting('pinterest_url')}}" target="_blank">
-               <div class="button">
-                  <div class="icon">
-                     <i class="fab fa-pinterest"></i>
+                  <span class="scl">Twitter</span>
+               </a>
+               @endif
+               @if(setting('pinterest_url'))
+               <a href="{{setting('pinterest_url')}}" target="_blank">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-pinterest"></i>
+                     </div>
+                     <span>@wed.in</span>
                   </div>
-                  <span>@wed.in</span>
-               </div>
-               <span class="scl">Pintrest</span>
-            </a>
-            @endif
-            @if(setting('instagram_url'))
-            <a href="{{setting('instagram_url')}}" target="_blank">
-               <div class="button">
-                  <div class="icon">
-                     <i class="fab fa-instagram"></i>
+                  <span class="scl">Pintrest</span>
+               </a>
+               @endif
+               @if(setting('instagram_url'))
+               <a href="{{setting('instagram_url')}}" target="_blank">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-instagram"></i>
+                     </div>
+                     <span>@wed.in</span>
                   </div>
-                  <span>@wed.in</span>
-               </div>
-               <span class="scl">Instagram</span>
-            </a>
-            @endif
-            <!-- @if(setting('linkedin_url'))
-            <a href="{{setting('linkedin_url')}}" target="_blank">
-               <div class="button">
-                  <div class="icon">
-                     <i class="fab fa-linkedin"></i>
+                  <span class="scl">Instagram</span>
+               </a>
+               @endif
+               @if(setting('youtube_url'))
+               <a href="{{setting('youtube_url')}}" target="_blank">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-youtube"></i>
+                     </div>
+                     <span>@wed.in</span>
                   </div>
-                  <span>@wed.in</span>
-               </div>
-               <span class="scl">Linked in</span>
-            </a>
-            @endif -->
-            @if(setting('youtube_url'))
-            <a href="{{setting('youtube_url')}}" target="_blank">
-               <div class="button">
-                  <div class="icon">
-                     <i class="fab fa-youtube"></i>
-                  </div>
-                  <span>@wed.in</span>
-               </div>
-            </a>
-            @endif
+               </a>
+               @endif
+            </div>
+
          </div>
       </div>
       <br>
