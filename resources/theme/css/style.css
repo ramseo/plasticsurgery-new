@@ -2533,6 +2533,15 @@ span.days {
     color: #eb0a3e;
 }
 
-.quotation-top{
+.quotation-top {
     margin-top: 60px;
+}
+
+.avatar-padding {
+    padding: 25px 0 0 0;
+}
+
+.avatar-save {
+    padding-top: 30px;
+    width: 200px;
 }

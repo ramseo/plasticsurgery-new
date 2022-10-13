@@ -56,7 +56,7 @@
             @endif
         </style>
 
-        <ul class="list-unstyled" >
+        <ul class="list-unstyled avatar-ul">
             <li><a href="{{ route('frontend.users.profileEdit') }}"  class="{{ Request::segment(2) == 'edit' ? 'active' : '' }}"><i class="fa fa-user"></i> My Profile</a></li>
             <!-- <li><a href="{{ route('frontend.users.quotations', auth()->user()->id) }}"><i class="far fa-file-alt"></i> Quotations</a></li> -->
             <li  data-toggle="collapse" data-target="#service" class="{{ Request::segment(1) == 'vendors' ? 'collapsed' : '' }} ">

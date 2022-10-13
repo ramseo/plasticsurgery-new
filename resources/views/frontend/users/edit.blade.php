@@ -39,7 +39,7 @@
 <section class="profile-form-section">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 col-sm-3">
+            <div class="col-xs-12 col-sm-3"> 
                 @include('frontend.users.menu')
             </div>
             <div class="col-xs-12 col-sm-9">
@@ -50,7 +50,7 @@
                         {{ html()->modelForm($user, 'POST', route('frontend.users.profileUpdate'))->class('form-horizontal')->acceptsFiles()->open() }}
 
                         <div class="form-group row ml-2">
-                            <div class="col-md-2 edit-pics">
+                            <div class="col-md-6 edit-pics avatar-padding">
 
                                 @if(file_exists(public_path().'/storage/user/profile/'. $user->avatar))
                                     <img src="{{asset('/storage/user/profile/'. $user->avatar)}}" class="user-profile-image img-fluid img-thumbnail" style="max-height:200px; max-width:200px;" />
@@ -59,22 +59,15 @@
                                 @endif
 
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-6 avatar-padding">
                                 {{ html()->label(__('labels.backend.users.fields.avatar'))->class('form-control-label')->for('name') }}
                                 <div class="form-group">
                                     <label for="file-multiple-input">Click here to update photo</label>
                                     <input id="file-multiple-input" name="avatar" multiple="" type="file" class="form-control-file">
+                                    <small>Please upload a 200*200 size image</small>
                                 </div>
                             </div>
-{{--                            <div class="col-md-6">--}}
-{{--                                <div class="form-group row">--}}
-{{--                                    <div class="col-12 text-right">--}}
-{{--                                        <a href="{{ route('frontend.users.changePassword', $user->id) }}" class="btn btn-warning btn-sm"><i class="now-ui-icons objects_key-25"></i>&nbsp;Change password</a>--}}
-{{--                                    </div>--}}
-{{--                                </div> --}}
-{{--                            </div>--}}
                         </div>
-{{--                        {{dd($user)}}--}}
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -237,13 +230,9 @@
 {{--                            </div>--}}
 {{--                        </div>--}}
 
-                        <div class="row mt-4">
-                            <div class="col-3 mx-auto">
-                                <div class="form-group">
-                                    {!! Form::button("Save", ['class' => 'btn btn-primary btn-block', 'type'=>'submit']) !!}
-                                </div>
+                            <div class="mx-auto avatar-save">
+                                {!! Form::button("Save", ['class' => 'btn btn-primary btn-block', 'type'=>'submit']) !!}
                             </div>
-                        </div>
 
                     {{ html()->closeModelForm() }}
                     </div>
