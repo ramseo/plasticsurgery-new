@@ -159,8 +159,8 @@
 
     #page-banner img {
         width: 100%;
-        height: 350px;
-        /* height: 180px; */
+        margin-top: 50px;
+        /* height: auto */
     }
 
     #category-section,
