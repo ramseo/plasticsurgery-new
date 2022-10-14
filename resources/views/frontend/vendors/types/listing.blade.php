@@ -37,36 +37,37 @@
                 ?>
                 <div class="vendor-img">
                     <img src="{{$vendor_banner}}" alt="" class="img-fluid">
-                </div>
-                <div class="banner-search-col">
-                    <div class="search-header">
-                        <p class="head">{{$type->name}}</p>
-                        <p class="text">Find best {{$type->name}} in your city</p>
+                    <div class="banner-search-col">
+                        <div class="search-header">
+                            <p class="head">{{$type->name}}</p>
+                            <p class="text">Find best {{$type->name}} in your city</p>
+                        </div>
+                        @if(isset($cities))
+                        <div class="vendor-location-links">
+                            <ul class="list-inline">
+                                @if(count($cities) > 4)
+                                @for ($x = 0; $x <= 3; $x++) <li class="list-inline-item">
+                                    <a href="{{url($type->slug.'/'.$cities[$x]->slug)}}" class="btn btn-secondary">{{$cities[$x]->name}}</a>
+                                    </li>
+                                    @endfor
+                                    <li class="list-inline-item">
+                                        <a href="#" class="city-modal-link btn btn-primary" data-link-type="{{$type->slug}}" data-toggle="modal" data-target="#cityModal">
+                                            Other Cities
+                                        </a>
+                                    </li>
+                                    @else
+                                    @foreach ($cities as $citie)
+                                    <li class="list-inline-item">
+                                        <a href="{{url($type->slug.'/'.$citie->slug)}}" class="btn btn-secondary">{{$citie->name}}</a>
+                                    </li>
+                                    @endforeach
+                                    @endif
+                            </ul>
+                        </div>
+                        @endif
                     </div>
-                    @if(isset($cities))
-                    <div class="vendor-location-links">
-                        <ul class="list-inline">
-                            @if(count($cities) > 4)
-                            @for ($x = 0; $x <= 3; $x++) <li class="list-inline-item">
-                                <a href="{{url($type->slug.'/'.$cities[$x]->slug)}}" class="btn btn-secondary">{{$cities[$x]->name}}</a>
-                                </li>
-                                @endfor
-                                <li class="list-inline-item">
-                                    <a href="#" class="city-modal-link btn btn-primary" data-link-type="{{$type->slug}}" data-toggle="modal" data-target="#cityModal">
-                                        Other Cities
-                                    </a>
-                                </li>
-                                @else
-                                @foreach ($cities as $citie)
-                                <li class="list-inline-item">
-                                    <a href="{{url($type->slug.'/'.$citie->slug)}}" class="btn btn-secondary">{{$citie->name}}</a>
-                                </li>
-                                @endforeach
-                                @endif
-                        </ul>
-                    </div>
-                    @endif
                 </div>
+
                 <div class="container-fluid">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
