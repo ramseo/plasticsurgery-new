@@ -55,19 +55,19 @@
         <div class="form-group">
             {{ Form::label('icon', 'Icon') }} {!! fielf_required($required) !!}
             <div class="custom-file">
-                <input type="file" class="custom-file-input"  name="icon">
+                <input type="file" class="custom-file-input" name="icon">
                 <label class="custom-file-label">Choose file</label>
             </div>
         </div>
         @if($type)
         <div>
             @php
-                $vendor_icon_img = asset('img/default-vendor.jpg');
-                if($type->icon){
-                    if(file_exists( public_path().'/storage/type/icon/'. $type->icon )){
-                        $vendor_icon_img = asset('storage/type/icon/'.$type->icon);
-                    }
-                }
+            $vendor_icon_img = asset('img/default-vendor.jpg');
+            if($type->icon){
+            if(file_exists( public_path().'/storage/type/icon/'. $type->icon )){
+            $vendor_icon_img = asset('storage/type/icon/'.$type->icon);
+            }
+            }
             @endphp
             <img id="imgPreview" src="{{ $vendor_icon_img }}" alt="" class="img-fluid">
         </div>
@@ -78,19 +78,19 @@
         <div class="form-group">
             {{ Form::label('image', 'Image') }} {!! fielf_required($required) !!}
             <div class="custom-file">
-                <input type="file" class="custom-file-input"  name="image">
+                <input type="file" class="custom-file-input" name="image">
                 <label class="custom-file-label">Choose file</label>
             </div>
         </div>
         @if($type)
-        <div >
+        <div>
             @php
-                $vendor_image = asset('img/default-vendor.jpg');
-                if($type->image){
-                    if(file_exists( public_path().'/storage/type/image/'. $type->image )){
-                        $vendor_image = asset('storage/type/image/'.$type->image);
-                    }
-                }
+            $vendor_image = asset('img/default-vendor.jpg');
+            if($type->image){
+            if(file_exists( public_path().'/storage/type/image/'. $type->image )){
+            $vendor_image = asset('storage/type/image/'.$type->image);
+            }
+            }
             @endphp
             <img id="imgPreview" src="{{ $vendor_image }}" alt="" class="img-fluid">
         </div>
@@ -100,24 +100,48 @@
         <div class="form-group">
             {{ Form::label('banner', 'Banner') }} {!! fielf_required($required) !!}
             <div class="custom-file">
-                <input type="file" class="custom-file-input"  name="banner">
+                <input type="file" class="custom-file-input" name="banner">
                 <label class="custom-file-label">Choose file</label>
             </div>
         </div>
         @if($type)
-        <div >
+        <div>
             @php
-                $vendor_banner_img = asset('img/default-vendor.jpg');
-                if($type->banner){
-                    if(file_exists( public_path().'/storage/type/banner/'. $type->banner )){
-                        $vendor_banner_img = asset('storage/type/banner/'.$type->banner);
-                    }
-                }
+            $vendor_banner_img = asset('img/default-vendor.jpg');
+            if($type->banner){
+            if(file_exists( public_path().'/storage/type/banner/'. $type->banner )){
+            $vendor_banner_img = asset('storage/type/banner/'.$type->banner);
+            }
+            }
             @endphp
             <img id="imgPreview" src="{{ $vendor_banner_img }}" alt="" class="img-fluid">
         </div>
         @endif
     </div>
+    <!-- code -->
+    <div class="col-4">
+        <div class="form-group">
+            {{ Form::label('Mobile banner ', 'Mobile Banner') }} {!! fielf_required($required) !!}
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" name="mobile_banner">
+                <label class="custom-file-label">Choose file</label>
+            </div>
+        </div>
+        @if($type)
+        <div>
+            @php
+            $vendor_mobile_banner_img = asset('img/default-vendor.jpg');
+            if($type->mobile_banner){
+            if(file_exists( public_path().'/storage/type/mobile_banner/'. $type->mobile_banner )){
+            $vendor_mobile_banner_img = asset('storage/type/mobile_banner/'.$type->mobile_banner);
+            }
+            }
+            @endphp
+            <img id="imgPreview" src="{{ $vendor_mobile_banner_img }}" alt="" class="img-fluid">
+        </div>
+        @endif
+    </div>
+    <!-- code -->
 
 </div>
 
@@ -141,99 +165,106 @@
 <x-library.datetime-picker />
 
 @push('after-styles')
-    <!-- File Manager -->
-    <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.6/css/bootstrap-colorpicker.css" rel="stylesheet">
+<!-- File Manager -->
+<link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.6/css/bootstrap-colorpicker.css" rel="stylesheet">
 @endpush
 
 @push ('after-scripts')
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.select2-category').select2({
-                theme: "bootstrap",
-                placeholder: '@lang("Select an option")',
-                minimumInputLength: 2,
-                allowClear: true,
-                ajax: {
-                    url: '{{route("backend.categories.index_list")}}',
-                    dataType: 'json',
-                    data: function (params) {
-                        return {
-                            q: $.trim(params.term)
-                        };
-                    },
-                    processResults: function (data) {
-                        return {
-                            results: data
-                        };
-                    },
-                    cache: true
-                }
-            });
-
-            $('.select2-tags').select2({
-                theme: "bootstrap",
-                placeholder: '@lang("Select an option")',
-                minimumInputLength: 2,
-                allowClear: true,
-                ajax: {
-                    url: '{{route("backend.tags.index_list")}}',
-                    dataType: 'json',
-                    data: function (params) {
-                        return {
-                            q: $.trim(params.term)
-                        };
-                    },
-                    processResults: function (data) {
-                        return {
-                            results: data
-                        };
-                    },
-                    cache: true
-                }
-            });
-        });
-    </script>
-
-    <!-- Date Time Picker & Moment Js-->
-    <script type="text/javascript">
-        $(function() {
-            $('.datetime').datetimepicker({
-                format: 'YYYY-MM-DD HH:mm:ss',
-                icons: {
-                    time: 'far fa-clock',
-                    date: 'far fa-calendar-alt',
-                    up: 'fas fa-arrow-up',
-                    down: 'fas fa-arrow-down',
-                    previous: 'fas fa-chevron-left',
-                    next: 'fas fa-chevron-right',
-                    today: 'far fa-calendar-check',
-                    clear: 'far fa-trash-alt',
-                    close: 'fas fa-times'
-                }
-            });
-        });
-    </script>
-
-    <script type="text/javascript" src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
-
-    <script type="text/javascript">
-
-        CKEDITOR.replace('content', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
-        CKEDITOR.replace('faq', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
-        document.addEventListener("DOMContentLoaded", function() {
-
-            document.getElementById('button-image').addEventListener('click', (event) => {
-                event.preventDefault();
-
-                window.open('/file-manager/fm-button', 'fm', 'width=800,height=600');
-            });
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.select2-category').select2({
+            theme: "bootstrap",
+            placeholder: '@lang("Select an option")',
+            minimumInputLength: 2,
+            allowClear: true,
+            ajax: {
+                url: '{{route("backend.categories.index_list")}}',
+                dataType: 'json',
+                data: function(params) {
+                    return {
+                        q: $.trim(params.term)
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data
+                    };
+                },
+                cache: true
+            }
         });
 
-        // set file link
-        function fmSetLink($url) {
-            document.getElementById('featured_image').value = $url;
-        }
-    </script>
+        $('.select2-tags').select2({
+            theme: "bootstrap",
+            placeholder: '@lang("Select an option")',
+            minimumInputLength: 2,
+            allowClear: true,
+            ajax: {
+                url: '{{route("backend.tags.index_list")}}',
+                dataType: 'json',
+                data: function(params) {
+                    return {
+                        q: $.trim(params.term)
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data
+                    };
+                },
+                cache: true
+            }
+        });
+    });
+</script>
+
+<!-- Date Time Picker & Moment Js-->
+<script type="text/javascript">
+    $(function() {
+        $('.datetime').datetimepicker({
+            format: 'YYYY-MM-DD HH:mm:ss',
+            icons: {
+                time: 'far fa-clock',
+                date: 'far fa-calendar-alt',
+                up: 'fas fa-arrow-up',
+                down: 'fas fa-arrow-down',
+                previous: 'fas fa-chevron-left',
+                next: 'fas fa-chevron-right',
+                today: 'far fa-calendar-check',
+                clear: 'far fa-trash-alt',
+                close: 'fas fa-times'
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript" src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
+
+<script type="text/javascript">
+    CKEDITOR.replace('content', {
+        filebrowserImageBrowseUrl: '/file-manager/ckeditor',
+        language: '{{App::getLocale()}}',
+        defaultLanguage: 'en'
+    });
+    CKEDITOR.replace('faq', {
+        filebrowserImageBrowseUrl: '/file-manager/ckeditor',
+        language: '{{App::getLocale()}}',
+        defaultLanguage: 'en'
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+
+        document.getElementById('button-image').addEventListener('click', (event) => {
+            event.preventDefault();
+
+            window.open('/file-manager/fm-button', 'fm', 'width=800,height=600');
+        });
+    });
+
+    // set file link
+    function fmSetLink($url) {
+        document.getElementById('featured_image').value = $url;
+    }
+</script>
 @endpush

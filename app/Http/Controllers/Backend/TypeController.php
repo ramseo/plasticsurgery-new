@@ -180,7 +180,7 @@ class TypeController extends Controller
     public function store(Request $request)
     {
 
-        request()->validate(['name' => 'required|unique:types,name', 'colour' => 'required','icon' => 'required',  'icon.*' => 'mimes:jpeg,jpg,png', 'image' => 'required',  'image.*' => 'mimes:jpeg,jpg,png','banner' => 'required',  'banner.*' => 'mimes:jpeg,jpg,png']);
+        request()->validate(['name' => 'required|unique:types,name', 'colour' => 'required','icon' => 'required',  'icon.*' => 'mimes:jpeg,jpg,png', 'image' => 'required',  'image.*' => 'mimes:jpeg,jpg,png','banner' => 'required',  'banner.*' => 'mimes:jpeg,jpg,png','mobile_banner' => 'required',  'mobile_banner.*' => 'mimes:jpeg,jpg,png']);
 
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -206,6 +206,11 @@ class TypeController extends Controller
         if($request->file('banner')){
             $file_banner = fileUpload($request, 'banner','type/banner/');
             $data = array_merge($data,['banner'=> $file_banner]);
+        }
+
+        if($request->file('mobile_banner')){
+            $file_banner = fileUpload($request, 'mobile_banner','type/mobile_banner/');
+            $data = array_merge($data,['mobile_banner'=> $file_banner]);
         }
 
         $$module_name_singular = $module_model::create($data);
@@ -312,6 +317,11 @@ class TypeController extends Controller
         if($request->file('banner')){
             $file_banner = fileUpload($request, 'banner','type/banner/');
             $data = array_merge($data,['banner'=> $file_banner]);
+        }
+
+        if($request->file('mobile_banner')){
+            $file_banner = fileUpload($request, 'mobile_banner','type/mobile_banner/');
+            $data = array_merge($data,['mobile_banner'=> $file_banner]);
         }
 
 
