@@ -159,8 +159,6 @@
 
     #page-banner img {
         width: 100%;
-        margin-top: 50px;
-        /* height: auto */
     }
 
     #category-section,
@@ -848,7 +846,7 @@
     }
 
     .vendor-img {
-        margin-top: 0;
+        margin-top: 50px;
     }
     /* code */
 }
