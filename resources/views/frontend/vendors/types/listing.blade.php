@@ -35,7 +35,9 @@
                     }
                 }
                 ?>
-                <img src="{{$vendor_banner}}" alt="" class="img-fluid">
+                <div class="vendor-img">
+                    <img src="{{$vendor_banner}}" alt="" class="img-fluid">
+                </div>
                 <div class="banner-search-col">
                     <div class="search-header">
                         <p class="head">{{$type->name}}</p>
