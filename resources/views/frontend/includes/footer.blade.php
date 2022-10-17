@@ -48,7 +48,10 @@
             <a target="_blank" rel="noopener" href="#" class="strt">Start Here <i class="fa fa-arrow-right"></i></a>
             <h6>Contact us to get best deals</h6>
             <p class="font-small">{{ env('MAIL_FROM_ADDRESS')}}</p>
-            <p class="font-small">+91 9888898888</p>
+            <p class="font-small">
+               <!-- +91 9888898888 -->
+               <?= setting('support_telephone') ?>
+            </p>
             <h6>Get Latest Blog Alerts</h6>
             <form id="newsletterForm" action="">
                <div class="input-group newsletter-group" style="background: white;">
