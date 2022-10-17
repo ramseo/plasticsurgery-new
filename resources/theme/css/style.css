@@ -2566,3 +2566,7 @@ span.days {
 #newsletterForm button i{
     color: rgb(235, 10, 62);
 }
+
+.min-height-img img{
+    min-height: 270px;
+}

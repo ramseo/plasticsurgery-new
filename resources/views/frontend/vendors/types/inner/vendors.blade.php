@@ -18,7 +18,7 @@
                                 }
                             }
                         @endphp
-                        <div class="img-col">
+                        <div class="img-col min-height-img">
                             <img src="{{$vendor_profile_img}}" alt="" class="img-fluid">
                         </div>
                         <div class="text-col">
