@@ -825,23 +825,23 @@
         height: 40px;
     }
 
-    .button:hover{
+    .button:hover {
         width: 150px;
     }
 
-    .button .icon i{
+    .button .icon i {
         line-height: 40px;
     }
 
-    .button span{
+    .button span {
         line-height: 40px;
     }
 
-    .social-icons-footer a{
+    .social-icons-footer a {
         padding-right: 10px;
     }
 
-    .footer .footer-brand{
+    .footer .footer-brand {
         font-size: 15px;
         padding-top: 5px;
     }
@@ -849,6 +849,11 @@
     .vendor-img {
         margin-top: 50px;
     }
+
+    .min-height-img img {
+        min-height: auto;
+    }
+
     /* code */
 }
 
