@@ -2570,3 +2570,7 @@ span.days {
 .min-height-img img{
     min-height: 270px;
 }
+
+.filter-cls{
+    filter: brightness(40%);
+}
