@@ -2547,10 +2547,22 @@ span.days {
 
 .avatar-save {
     padding-top: 30px;
-    width: 200px; 
+    width: 200px;
 }
 
 .vendor-img {
     margin-top: 75px;
     position: relative;
+}
+
+#newsletterEmail {
+    background: #fff;
+}
+
+#newsletterForm button {
+    background: #E4E4E4;
+}
+
+#newsletterForm button i{
+    color: rgb(235, 10, 62);
 }

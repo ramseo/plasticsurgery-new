@@ -54,10 +54,12 @@
             </p>
             <h6>Get Latest Blog Alerts</h6>
             <form id="newsletterForm" action="">
-               <div class="input-group newsletter-group" style="background: white;">
+               <div class="input-group newsletter-group">
                   <input id="newsletterEmail" type="text" class="form-control" name="email" placeholder="Email">
-                  <div class="input-group-append" style="background: white;">
-                     <button class="btn btn-outline-secondary" style="background:#E4E4E4;" type="submit"><i class="fas fa-check" style="color: rgb(235, 10, 62);"></i></button>
+                  <div class="input-group-append">
+                     <button class="btn btn-outline-secondary" type="submit">
+                        <i class="fas fa-check"></i>
+                     </button>
                   </div>
                </div>
             </form>
