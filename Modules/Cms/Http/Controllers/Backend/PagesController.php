@@ -57,7 +57,7 @@ class PagesController extends Controller
 
         $$module_name = $module_model::paginate();
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return view(
             "cms::backend.$module_path.index_datatable",
@@ -81,30 +81,30 @@ class PagesController extends Controller
         $data = $$module_name;
 
         return Datatables::of($$module_name)
-                        ->addColumn('action', function ($data) {
-                            $module_name = $this->module_name;
+            ->addColumn('action', function ($data) {
+                $module_name = $this->module_name;
 
-                            return view('backend.includes.action_column', compact('module_name', 'data'));
-                        })
-//                        ->editColumn('name', function ($data) {
-//                            $is_featured = ($data->is_featured) ? '<span class="badge badge-primary">Featured</span>' : '';
-//
-//                            return $data->name.' '.$data->status_formatted.' '.$is_featured;
-//                        })
-                        ->editColumn('updated_at', function ($data) {
-                            $module_name = $this->module_name;
+                return view('backend.includes.action_column', compact('module_name', 'data'));
+            })
+            //                        ->editColumn('name', function ($data) {
+            //                            $is_featured = ($data->is_featured) ? '<span class="badge badge-primary">Featured</span>' : '';
+            //
+            //                            return $data->name.' '.$data->status_formatted.' '.$is_featured;
+            //                        })
+            ->editColumn('updated_at', function ($data) {
+                $module_name = $this->module_name;
 
-                            $diff = Carbon::now()->diffInHours($data->updated_at);
+                $diff = Carbon::now()->diffInHours($data->updated_at);
 
-                            if ($diff < 25) {
-                                return $data->updated_at->diffForHumans();
-                            } else {
-                                return $data->updated_at->isoFormat('LLLL');
-                            }
-                        })
-                        ->rawColumns(['name', 'status', 'action'])
-                        ->orderColumns(['id'], '-:column $1')
-                        ->make(true);
+                if ($diff < 25) {
+                    return $data->updated_at->diffForHumans();
+                } else {
+                    return $data->updated_at->isoFormat('LLLL');
+                }
+            })
+            ->rawColumns(['name', 'status', 'action'])
+            ->orderColumns(['id'], '-:column $1')
+            ->make(true);
     }
 
     /**
@@ -159,9 +159,9 @@ class PagesController extends Controller
 
         $module_action = 'Create';
 
-//        $categories = Category::pluck('name', 'id');
+        //        $categories = Category::pluck('name', 'id');
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return view(
             "cms::backend.$module_name.create",
@@ -178,6 +178,10 @@ class PagesController extends Controller
      */
     public function store(PagesRequest $request)
     {
+        $request->validate([
+            'name' => 'required|max:191|unique:pages,name',
+        ]);
+
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
@@ -187,18 +191,18 @@ class PagesController extends Controller
 
         $module_action = 'Store';
 
-//        $data = $request->except('tags_list');
+        //        $data = $request->except('tags_list');
         $data = $request->all();
         $data['created_by_name'] = auth()->user()->name;
 
         $$module_name_singular = $module_model::create($data);
-//        $$module_name_singular->tags()->attach($request->input('tags_list'));
+        //        $$module_name_singular->tags()->attach($request->input('tags_list'));
 
         event(new PageCreated($$module_name_singular));
 
-        Flash::success("<i class='fas fa-check'></i> New '".Str::singular($module_title)."' Added")->important();
+        Flash::success("<i class='fas fa-check'></i> New '" . Str::singular($module_title) . "' Added")->important();
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $$module_name_singular->name . '(ID:' . $$module_name_singular->id . ") ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return redirect("admin/$module_name");
     }
@@ -224,12 +228,12 @@ class PagesController extends Controller
         $$module_name_singular = $module_model::findOrFail($id);
 
         $activities = Activity::where('subject_type', '=', $module_model)
-                                ->where('log_name', '=', $module_name)
-                                ->where('subject_id', '=', $id)
-                                ->latest()
-                                ->paginate();
+            ->where('log_name', '=', $module_name)
+            ->where('subject_id', '=', $id)
+            ->latest()
+            ->paginate();
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return view(
             "cms::backend.$module_name.show",
@@ -257,13 +261,13 @@ class PagesController extends Controller
 
         $$module_name_singular = $module_model::findOrFail($id);
 
-//        $categories = Category::pluck('name', 'id');
+        //        $categories = Category::pluck('name', 'id');
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $$module_name_singular->name . '(ID:' . $$module_name_singular->id . ") ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return view(
             "cms::backend.$module_name.edit",
-            compact( 'module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action', "$module_name_singular")
+            compact('module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action', "$module_name_singular")
         );
     }
 
@@ -277,6 +281,10 @@ class PagesController extends Controller
      */
     public function update(PagesRequest $request, $id)
     {
+        $request->validate([
+            'name' => 'required|max:191',
+        ]);
+
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
@@ -288,20 +296,20 @@ class PagesController extends Controller
 
         $$module_name_singular = $module_model::findOrFail($id);
         $$module_name_singular->update($request->all());
-//        $$module_name_singular->update($request->except('tags_list'));
+        //        $$module_name_singular->update($request->except('tags_list'));
 
-//        if ($request->input('tags_list') == null) {
-//            $tags_list = [];
-//        } else {
-//            $tags_list = $request->input('tags_list');
-//        }
-//        $$module_name_singular->tags()->sync($tags_list);
+        //        if ($request->input('tags_list') == null) {
+        //            $tags_list = [];
+        //        } else {
+        //            $tags_list = $request->input('tags_list');
+        //        }
+        //        $$module_name_singular->tags()->sync($tags_list);
 
         event(new PageUpdated($$module_name_singular));
 
-        Flash::success("<i class='fas fa-check'></i> '".Str::singular($module_title)."' Updated Successfully")->important();
+        Flash::success("<i class='fas fa-check'></i> '" . Str::singular($module_title) . "' Updated Successfully")->important();
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $$module_name_singular->name . '(ID:' . $$module_name_singular->id . ") ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return redirect("admin/$module_name");
     }
@@ -328,9 +336,9 @@ class PagesController extends Controller
 
         $$module_name_singular->delete();
 
-        Flash::success('<i class="fas fa-check"></i> '.label_case($module_name_singular).' Deleted Successfully!')->important();
+        Flash::success('<i class="fas fa-check"></i> ' . label_case($module_name_singular) . ' Deleted Successfully!')->important();
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.', ID:'.$$module_name_singular->id." ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $$module_name_singular->name . ', ID:' . $$module_name_singular->id . " ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return redirect("admin/$module_name");
     }
@@ -354,7 +362,7 @@ class PagesController extends Controller
 
         $$module_name = $module_model::onlyTrashed()->orderBy('deleted_at', 'desc')->paginate();
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name);
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . Auth::user()->name);
 
         return view(
             "article::backend.$module_name.trash",
@@ -384,9 +392,9 @@ class PagesController extends Controller
         $$module_name_singular = $module_model::withTrashed()->find($id);
         $$module_name_singular->restore();
 
-        Flash::success('<i class="fas fa-check"></i> '.label_case($module_name_singular).' Data Restoreded Successfully!')->important();
+        Flash::success('<i class="fas fa-check"></i> ' . label_case($module_name_singular) . ' Data Restoreded Successfully!')->important();
 
-        Log::info(label_case($module_action)." '$module_name': '".$$module_name_singular->name.', ID:'.$$module_name_singular->id." ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_action) . " '$module_name': '" . $$module_name_singular->name . ', ID:' . $$module_name_singular->id . " ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return redirect("admin/$module_name");
     }
