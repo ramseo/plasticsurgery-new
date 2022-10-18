@@ -30,7 +30,7 @@
 
     <section id="vendor-detail-section">
         <div class="container-fluid">
-            <div class="row vendor-detail-main-col">
+            <div class="row vendor-detail-main-col padd-top-o">
                 <div class="col-xs-12 col-sm-7 vendor-detail-img-col">
                     @php
                         $vendor_profile_img = asset('img/default-vendor.jpg');

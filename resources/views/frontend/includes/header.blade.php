@@ -25,9 +25,15 @@ $city = getData('cities');
                                     @if($categories)
                                     @foreach($categories as $header_type)
                                     <style>
-                                          .icon-{{$header_type->slug}} {
-                                               background-image: url("{{asset('storage/type/icon/'.$header_type->icon)}}");
-                                           }
+                                        .icon- {
+                                                {
+                                                $header_type->slug
+                                            }
+                                        }
+
+                                            {
+                                            background-image: url("{{asset('storage/type/icon/'.$header_type->icon)}}");
+                                        }
                                     </style>
                                     @php $city = Session::get('vendor_city') != "" ? '/'. Session::get('vendor_city') : ''; @endphp
                                     <a href="{{ url('/') . '/' . $header_type->slug }}{{$city}}"><i class="icon-{{$header_type->slug}}">{{$header_type->name}}</i></a>
@@ -56,7 +62,7 @@ $city = getData('cities');
                         @endif
                         <!-- header menu -->
                         @foreach($header_menu as $menu_item)
-                        <li><a href="{{$menu_item->url}}">{{$menu_item->title}}</a></li>
+                        <li><a href="{{url('/') . '/' .$menu_item->url}}">{{$menu_item->title}}</a></li>
                         @endforeach
                         <!-- header menu -->
                         <!-- <li><a href="/bride">Bride</a></li>
@@ -70,11 +76,11 @@ $city = getData('cities');
                             </a>
                         </li>
                     </div>
-                       <!-- header menu -->
+                    <!-- header menu -->
                     @foreach($header_menu as $menu_item)
-                    <li class="bg-screen"><a href="{{$menu_item->url}}">{{$menu_item->title}}</a></li>
+                    <li class="bg-screen"><a href="{{url('/') . '/' .$menu_item->url}}">{{$menu_item->title}}</a></li>
                     @endforeach
-                       <!-- header menu -->
+                    <!-- header menu -->
                     <!-- <li class="bg-screen"><a href="/bride">Bride</a></li>
                     <li class="bg-screen"><a href="/groom">Groom</a></li>
                     <li class="bg-screen"><a href="#">Ideas</a></li>

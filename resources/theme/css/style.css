@@ -979,10 +979,15 @@ strong {
     font-weight: 500;
 }
 
+#breadcrumb-section{
+    margin-top: 50px;
+}
+
 #breadcrumb-section .breadcrumb {
-    padding: 15px;
+    /* padding: 15px; */
     background: transparent;
-    margin: 30px 0 20px 0;
+    margin: 25px 0 0 0;
+    /* margin: 30px 0 20px 0; */
     font-size: 14px;
 }
 
@@ -1009,7 +1014,8 @@ strong {
 }
 
 .vendor-detail-text-col .inner-col {
-    padding: 15px 20px;
+    padding: 15px 15px;
+    /* padding: 15px 20px; */
     position: relative;
 }
 
@@ -2469,8 +2475,9 @@ span.days {
 }
 
 .honeyform {
-    max-width: 492px;
-    margin: auto;
+    margin: 0 15px 0 15px;
+    /* max-width: 492px;
+    margin: auto; */
 }
 
 .common-card {
@@ -2573,4 +2580,8 @@ span.days {
 
 .filter-cls{
     filter: brightness(40%);
+}
+
+.padd-top-o{
+    padding-top: 0!important;
 }

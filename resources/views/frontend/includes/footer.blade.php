@@ -150,11 +150,8 @@
             </h6>
             <ul class="links-vertical">
                @foreach($start_planning as $menu_item)
-               <li><a target="_blank" href="{{$menu_item->url}}">{{$menu_item->title}}</a></li>
+               <li><a target="_blank" href="{{url('/') . '/' .$menu_item->url}}">{{$menu_item->title}}</a></li>
                @endforeach
-               <!-- <li><a target="_blank" href="#">Search By City</a></li>
-               <li><a target="_blank" href="#">Top Rated Vendors</a></li>
-               <li><a target="_blank" href="#">Destination Wedding</a></li> -->
             </ul>
          </div>
          <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left">
@@ -163,11 +160,8 @@
             </h6>
             <ul class="links-vertical">
                @foreach($wedding_ideas as $menu_item)
-               <li><a target="_blank" href="{{$menu_item->url}}">{{$menu_item->title}}</a></li>
+               <li><a target="_blank" href="{{url('/') . '/' .$menu_item->url}}">{{$menu_item->title}}</a></li>
                @endforeach
-               <!-- <li><a target="_blank" href="#">Wedding Inspiration Gallery</a></li>
-               <li><a target="_blank" href="#">Real Wedding</a></li>
-               <li><a target="_blank" href="#">Submit Wedding</a></li> -->
             </ul>
          </div>
          <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left">
@@ -176,15 +170,8 @@
             </h6>
             <ul class="links-vertical">
                @foreach($photo_gallery as $menu_item)
-               <li><a target="_blank" href="{{$menu_item->url}}">{{$menu_item->title}}</a></li>
+               <li><a target="_blank" href="{{url('/') . '/' .$menu_item->url}}">{{$menu_item->title}}</a></li>
                @endforeach
-               <!-- <li><a target="_blank" href="#">Wedding Jewellery</a></li>
-               <li><a target="_blank" href="#">Bridal Makeup</a></li>
-               <li><a target="_blank" href="#">Wedding Decor</a></li>
-               <li><a target="_blank" href="#">Wedding Photography</a></li>
-               <li><a target="_blank" href="#">Groom Wear</a></li>
-               <li><a target="_blank" href="#">Wedding Accessories</a></li>
-               <li><a target="_blank" href="#">Mehendi Designs</a></li> -->
             </ul>
          </div>
          <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left">
@@ -193,11 +180,8 @@
             </h6>
             <ul class="links-vertical">
                @foreach($pages_menu as $menu_item)
-               <li><a target="_blank" href="{{$menu_item->url}}">{{$menu_item->title}}</a></li>
+               <li><a target="_blank" href="{{url('/') . '/' .$menu_item->url}}">{{$menu_item->title}}</a></li>
                @endforeach
-               <!-- <li><a target="_blank" href="#">Themes</a></li>
-               <li><a target="_blank" href="#">Support</a></li>
-               <li><a target="_blank" href="#">Contact Us</a></li> -->
             </ul>
          </div>
       </div>
