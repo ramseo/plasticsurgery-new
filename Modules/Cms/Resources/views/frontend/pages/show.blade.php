@@ -52,7 +52,9 @@
                                 <p class="shadow-text">{{$$module_name_singular->name}}</p>
                                 <p class="head">{{$$module_name_singular->name}}</p>
                             </div>
-                            <p>{!!$$module_name_singular->content!!}</p>
+                            <div class="mob-content">
+                                <p>{!!$$module_name_singular->content!!}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

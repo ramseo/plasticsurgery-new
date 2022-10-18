@@ -854,6 +854,10 @@
         min-height: auto;
     }
 
+    .mob-content p {
+        font-size: 15px;
+    }
+
     /* code */
 }
 
