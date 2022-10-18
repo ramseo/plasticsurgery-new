@@ -858,6 +858,10 @@
         font-size: 15px;
     }
 
+    .vendor-detail-main-col{
+        padding-top:0;
+    }
+
     /* code */
 }
 
