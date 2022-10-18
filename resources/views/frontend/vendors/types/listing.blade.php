@@ -36,7 +36,7 @@
                 }
                 ?>
                 <div class="vendor-img">
-                    <img src="{{$vendor_banner}}" alt="" class="img-fluid">
+                    <img src="{{$vendor_banner}}" alt="{{$type->name}}" class="img-fluid vendor-img-min-height">
                     <div class="banner-search-col">
                         <div class="search-header">
                             <p class="head">{{$type->name}}</p>

@@ -39,7 +39,7 @@
                 ?>
                
                 <div class="vendor-img">
-                    <img src="{{$vendor_banner}}" alt="" class="img-fluid">
+                    <img src="{{$vendor_banner}}" alt="{{$type->name}}" class="img-fluid">
                     <div class="banner-search-col">
                         <div class="search-header">
                             <p class="text">Best {{$type->name}} in {{$city->name}}</p>

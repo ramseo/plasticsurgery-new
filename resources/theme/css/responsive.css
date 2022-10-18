@@ -853,7 +853,7 @@
     }
 
     .min-height-img img {
-        min-height: auto;
+        min-height: 150px;
     }
 
     .mob-content p {
@@ -866,6 +866,10 @@
 
     .bg-white-custom {
         margin: 15px 0 15px 0;
+    }
+
+    .vendor-img-min-height {
+        min-height: 250px;
     }
 
     /* code */
