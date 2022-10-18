@@ -2313,7 +2313,8 @@ article blockquote {
 .videos-main-col .videe-item iframe {
     width: 100%;
     height: 180px;
-    padding: 0 5px;
+    padding: 0 0px;
+    /* padding: 0 5px; */
 }
 
 .menu-menu-col {
@@ -2584,4 +2585,12 @@ span.days {
 
 .padd-top-o{
     padding-top: 0!important;
+}
+
+.margin-null{
+    margin: 0;
+}
+
+.padding-null{
+    padding: 0;
 }

@@ -30,7 +30,7 @@
                 $album_images = getDataArray('images', 'album_id', $albums_item->id);
             @endphp
             @if(count($album_images) > 0)
-                <div class="tab-pane container {{$count == 1 ? 'active' : ''}}" id="album_{{$albums_item->id}}">
+                <div class="margin-null padding-null tab-pane container {{$count == 1 ? 'active' : ''}}" id="album_{{$albums_item->id}}">
                     <div class="containerCollage">
                         @if(count($album_images) > 0)
                             @foreach($album_images as $album_image)
