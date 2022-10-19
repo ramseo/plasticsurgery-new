@@ -5,17 +5,15 @@
 @section('content')
 
 
-
-<section id="page-banner" class="page-banner-height">
+<!-- page-banner-height -->
+<section id="page-banner" class="">
     <div class="container-fluid">
         <div class="row">
             <div class="banner-container">
                 <div class="vendor-img">
-                    <img src="/storage/files/vendor-banner-min.jpg" alt="image alt" class="img-fluid">
+                    <img src="/storage/files/vendor-banner-min.jpg" alt="image alt" class="img-fluid filter-cls">
                     <div class="banner-search-col">
                         <div class="search-header">
-                            <br>
-                            <br>
                             <p class="text">Search By City</p>
                         </div>
                     </div>
