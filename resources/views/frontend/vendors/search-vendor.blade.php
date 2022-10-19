@@ -36,7 +36,7 @@
          @foreach($types as $type)
          @php $vendors = isset($type_vendors[$type['id']])? $type_vendors[$type['id']] : array() ; @endphp
          @if($vendors)
-         <div class="container-fluid ol-crsl">
+         <div class="container-fluid ol-crsl padding-null">
             <div class="thumb-img">
                <img src="{{asset('storage/type/icon/'.$type['icon'])}}">
             </div>
