@@ -872,6 +872,27 @@
         min-height: 250px;
     }
 
+    .blog-detail-main-col h1 {
+        margin: 10px 0 10px 0px;
+        font-size: 20px;
+    }
+
+    .desc-top p {
+        font-size: 13px;
+    }
+
+    .blog-intro {
+        font-size: 13px;
+    }
+
+    .blog-comments-col {
+        margin: 0px 0 0 0;
+    }
+
+    .blog-comments-col .mb-4 {
+        margin-bottom: 1rem !important;
+    }
+
     /* code */
 }
 

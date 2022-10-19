@@ -65,7 +65,7 @@
                 <div class="desc-top">
                     {!!$$module_name_singular->content!!}
                 </div>
-                <div>
+                <div class="tags-cls" >
                     @foreach ($$module_name_singular->tags as $tag)
                     <a href="{{route('frontend.tags.show', [encode_id($tag->id), $tag->slug])}}" class="badge badge-sm badge-info text-uppercase px-3">{{$tag->name}}</a>
                     @endforeach
