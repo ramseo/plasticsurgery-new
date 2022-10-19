@@ -42,12 +42,18 @@
             </div>
 
             <h2>Top {{$type['name']}} in All Indian Cities</h2>
-            <span>To improve these suggestions - <a href="#">Fill Requirements for {{$type['name']}}</a></span>
-            <div class="owl-carousel owl-theme owl-loaded common-slider owl-drag ">
+            <span>
+               To improve these suggestions -
+               <a href="#">
+                  Fill Requirements for {{$type['name']}}
+               </a>
+            </span>
+            <!-- owl-carousel owl-theme owl-loaded common-slider owl-drag -->
+            <div class="owl-carousel owl-theme owl-loaded common-slider">
                <div class="owl-stage-outer">
-                  <div class="owl-stage" style="transform: translate3d(-1527px, 0px, 0px); transition: all 0.25s ease 0s; width: 3334px;">
+                  <div class="owl-stage">
                      @foreach($vendors as $vendor)
-                     <div class="owl-item cloned" style="width: 128.906px; margin-right: 10px;">
+                     <div class="owl-item">
                         @php $city = getData('cities', 'id', $vendor['city_id']); @endphp
                         <a href="{{url('/') . '/' . $type['slug'] . '/' . $city->slug . '/' . $vendor['slug'] }}">
                            <div class="item">
@@ -65,9 +71,7 @@
                                  <p><span>₹</span> {{$vendor['price']}}</p>
                                  <p><span class="vndr-rating">★ 5 Mumbai</span></p>
                                  <span class="days"> {{$vendor['label']}}</span>
-
                               </div>
-
                            </div>
                         </a>
                      </div>
