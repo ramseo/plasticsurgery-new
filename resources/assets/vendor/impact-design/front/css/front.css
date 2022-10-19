@@ -27397,6 +27397,7 @@ button.section-gray-800:focus {
     font-size: 66%;
     line-height: 1.9;
     font-weight: 700;
+    margin-left: 10px;
 }
 
 .badge a {
