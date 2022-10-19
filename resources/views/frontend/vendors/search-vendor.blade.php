@@ -7,7 +7,7 @@
 <section id="page-banner" class="">
    <div class="container-fluid">
       <div class="row">
-      <!-- here -->
+         <!-- here -->
          <div class="banner-container">
             <div class="vendor-img">
                <img src="/storage/files/vendor-banner-min.jpg" alt="image alt" class="img-fluid filter-cls">
@@ -29,9 +29,6 @@
       </div>
    </div>
 </section>
-<br>
-<br>
-
 
 <section id="vendor-detail-section">
    <div class="container-fluid">
@@ -39,7 +36,7 @@
          @foreach($types as $type)
          @php $vendors = isset($type_vendors[$type['id']])? $type_vendors[$type['id']] : array() ; @endphp
          @if($vendors)
-         <div class="container ol-crsl">
+         <div class="container-fluid ol-crsl">
             <div class="thumb-img">
                <img src="{{asset('storage/type/icon/'.$type['icon'])}}">
             </div>
@@ -77,19 +74,21 @@
                      @endforeach
                   </div>
                </div>
-               <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button><button type="button" role="presentation" class="owl-next "><span aria-label="Next">›</span></button></div>
+               <!-- <div class="owl-nav">
+                  <button type="button" role="presentation" class="owl-prev">
+                     <span aria-label="Previous">‹</span>
+                  </button>
+                  <button type="button" role="presentation" class="owl-next ">
+                     <span aria-label="Next">›</span>
+                  </button>
+               </div> -->
                <div class="owl-nav"></div>
             </div>
-
-
          </div>
-         <br>
-         <br>
          <hr>
          @endif
          @endforeach
       </div>
-   </div>
    </div>
 </section>
 
