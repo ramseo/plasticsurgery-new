@@ -1236,11 +1236,11 @@ strong {
 }
 
 .blog-detail-main-col h1 {
-    margin: -10px 0 0 0;
-    font-size: 30px;
+    margin: -7px 0 0 0;
+    font-size: 25px;
 }
 
-article img {
+article img { 
     margin: 0;
 }
 
