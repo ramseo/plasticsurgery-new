@@ -709,7 +709,23 @@ if (!function_exists('date_today')) {
         }
     }
 
-    function isMobile() {
+    function isMobile()
+    {
         return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+    }
+
+
+    function getServiceByType($table, $column = null, $value = null, $type_id)
+    {
+        $data = DB::table($table);
+        if ($column != null) {
+            if (is_array($column)) :
+                $data->where($column);
+            else :
+                $data->where(array($column => $value));
+            endif;
+            $data->where('type_id', $type_id);
+        }
+        return $data->get();
     }
 }

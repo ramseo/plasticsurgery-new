@@ -15,7 +15,7 @@
 @endpush
 
 @section('content')
-@include('frontend.vendors.filters', ['selected_city' => $city, 'selected_type' => $type])
+@include('frontend.vendors.filters', ['selected_city' => $city, 'selected_type' => $type,'type_id' => $type->id])
 
 <section id="page-banner">
     <div class="container-fluid">
@@ -37,7 +37,7 @@
                     }
                 }
                 ?>
-               
+
                 <div class="vendor-img">
                     <img src="{{$vendor_banner}}" alt="{{$type->name}}" class="img-fluid">
                     <div class="banner-search-col">
