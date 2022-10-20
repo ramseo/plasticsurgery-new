@@ -24,19 +24,16 @@ $city = getData('cities');
                                 <div class="inner">
                                     @if($categories)
                                     @foreach($categories as $header_type)
-                                    <style>
-                                        .icon- {
-                                                {
-                                                $header_type->slug
-                                            }
-                                        }
 
-                                            {
-                                            background-image: url("{{asset('storage/type/icon/'.$header_type->icon)}}");
-                                        }
-                                    </style>
-                                    @php $city = Session::get('vendor_city') != "" ? '/'. Session::get('vendor_city') : ''; @endphp
-                                    <a href="{{ url('/') . '/' . $header_type->slug }}{{$city}}"><i class="icon-{{$header_type->slug}}">{{$header_type->name}}</i></a>
+                                    @php
+                                    $city = Session::get('vendor_city') != "" ? '/'. Session::get('vendor_city') : '';
+                                    $bgImg = asset('storage/type/icon/'.$header_type->icon);
+                                    @endphp
+                                    <a href="{{ url('/') . '/' . $header_type->slug }}{{$city}}">
+                                        <i style="background-image:url(<?= $bgImg ?>)" class="icon-{{$header_type->slug}}">
+                                            {{$header_type->name}}
+                                        </i>
+                                    </a>
                                     @endforeach
                                     @endif
                                 </div>
@@ -52,7 +49,12 @@ $city = getData('cities');
                         <li class="special-list"><a href="/vendors">Vendors</a></li>
                         @if($categories)
                         @foreach($categories as $header_type)
-                        <li><img src="{{asset('storage/type/icon/'.$header_type->icon)}}"><a href="{{url('/') . '/' . $header_type->slug}}">{{$header_type->name}}</a></li>
+                        <li>
+                            <img src="{{asset('storage/type/icon/'.$header_type->icon)}}">
+                            <a href="{{url('/') . '/' . $header_type->slug}}">
+                                {{$header_type->name}}
+                            </a>
+                        </li>
                         @endforeach
                         @endif
                         @if(!Auth::check())
