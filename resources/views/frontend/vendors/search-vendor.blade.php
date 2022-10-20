@@ -48,7 +48,6 @@
                   Fill Requirements for {{$type['name']}}
                </a>
             </span>
-            <!-- owl-carousel owl-theme owl-loaded common-slider owl-drag -->
             <div class="owl-carousel owl-theme owl-loaded common-slider">
                <div class="owl-stage-outer">
                   <div class="owl-stage">
@@ -78,15 +77,6 @@
                      @endforeach
                   </div>
                </div>
-               <!-- <div class="owl-nav">
-                  <button type="button" role="presentation" class="owl-prev">
-                     <span aria-label="Previous">‹</span>
-                  </button>
-                  <button type="button" role="presentation" class="owl-next ">
-                     <span aria-label="Next">›</span>
-                  </button>
-               </div> -->
-               <div class="owl-nav"></div>
             </div>
          </div>
          <hr>
@@ -98,31 +88,34 @@
 
 @endsection
 
-@push('after-styles')
-<style>
-   .owl-item {
-      width: 128.906px;
-      margin-right: 10px;
-      background: powderblue;
-   }
-</style>
-@endpush
 @push('before-scripts')
 <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
 <script>
    $(document).ready(function() {
       var owl = $('.owl-carousel');
+   
       owl.owlCarousel({
-         items: 4.1,
-         // items change number for slider display on desktop
+         items: 4,
          dots: false,
          nav: true,
          navText: ["<i class='fas fa-arrow-left'></i>", "<i class='fas fa-arrow-right'></i>"],
-         loop: true,
+         // loop: $('.owl-carousel .owl-item').length > 5 ? true : false,
+         loop: false,
          margin: 5,
-         // autoplay:true,
-         // autoplayTimeout:3000,
-         // autoplayHoverPause:true
+         autoplay: false,
+         autoplayTimeout: 3000,
+         autoplayHoverPause: true,
+         responsive: {
+            0: {
+               items: 2
+            },
+            600: {
+               items: 4
+            },
+            1000: {
+               items: 4
+            }
+         }
       });
 
 
