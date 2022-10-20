@@ -38,7 +38,7 @@
          @if($vendors)
          <div class="container-fluid ol-crsl padding-null">
             <div class="thumb-img">
-               <img src="{{asset('storage/type/icon/'.$type['icon'])}}">
+               <img src="{{asset('storage/type/icon/'.$type['icon'])}}" alt="image alt">
             </div>
 
             <h2>Top {{$type['name']}} in All Indian Cities</h2>
