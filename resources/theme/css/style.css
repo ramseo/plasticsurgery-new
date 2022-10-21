@@ -2611,3 +2611,11 @@ span.days {
 .desc-top {
     padding-top: 30px;
 }
+
+.margin-login {
+    margin-top: 100px;
+}
+
+.margin-register {
+    margin-top: 200px;
+} 

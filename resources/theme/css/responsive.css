@@ -893,6 +893,14 @@
         margin-bottom: 1rem !important;
     }
 
+    .margin-register {
+        margin-top: 100px;
+    }
+
+    .margin-login {
+        margin-top: 0;
+    }
+
     /* code */
 }
 
