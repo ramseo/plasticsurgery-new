@@ -1240,7 +1240,7 @@ strong {
     font-size: 25px;
 }
 
-article img { 
+article img {
     margin: 0;
 }
 
@@ -2618,4 +2618,8 @@ span.days {
 
 .margin-register {
     margin-top: 200px;
-} 
+}
+
+.mob-content ul {
+    padding-left: 15px;
+}
