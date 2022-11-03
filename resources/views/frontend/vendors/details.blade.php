@@ -269,11 +269,16 @@ $average = averageReview($reviews);
                     'rating': $('#review-rating-hidden').val(),
                     'description': $('#reviewDescription').val()
                 },
-                success: function(res) {
+                success: function(res) { 
                     if (res.success) {
                         $('.reviewAlert').html('').hide();
-                        $('#reviewForm').trigger('reset');
+                        $('#reviewForm').trigger('reset'); 
                         toastr.success(res.message, 'Review posted Successfully!');
+
+                        setTimeout(function() {
+                            $('#reviewModal').modal('hide');
+                            $('#rateit-reset-2').trigger("click");
+                        }, 1000);
                     } else {
                         $('.reviewAlert').html(res.message).show();
                     }
