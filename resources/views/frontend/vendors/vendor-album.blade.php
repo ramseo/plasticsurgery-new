@@ -45,10 +45,10 @@
                                 @if($image_path != '')
                                     <div class="item">
                                         @php
-                                            $caption_view = '<div class="caption-col">';
+                                            $caption_view = '<div class="caption-col new-caption-col">';
 
                                             $caption_view .= '<ul class="list-inline quotation-vendor">';
-                                            $caption_view .= '<li class="list-inline-item img-li"><div class="img-col"><img src="'.$vendor_profile_img.'" class="img-fluid" alt=""></div></li>';
+                                            $caption_view .= '<li class="list-inline-item img-li"><div class="img-col"><img src="'.$vendor_profile_img.'" class="img-fluid" alt="img"></div></li>';
                                             $caption_view .= '<li class="list-inline-item details-li">';
                                             $caption_view .= '<p class="title">'.$vendor_details->business_name.'</p>';
                                             $caption_view .= '<p class="grey-text">';
@@ -131,10 +131,10 @@
         .caption-col .vendor-rating {
             margin-right: 6px;
         }
-        .quotation-vendor .img-li {
+        /* .quotation-vendor .img-li {
             width: 40px;
             height: 40px;
-        }
+        } */
         button.carousel__button.is-next {
             right: 430px !important;
         }

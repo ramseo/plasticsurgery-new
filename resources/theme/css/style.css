@@ -2631,3 +2631,8 @@ span.days {
     width: 70px;
     height: 70px;
 }
+
+.new-caption-col .img-fluid{
+    height: 50px;
+    width: 50px;
+}
