@@ -55,7 +55,7 @@
                     <ul class="list-inline quotation-vendor">
                         <li class="list-inline-item img-li">
                             <div class="img-col">
-                                <img src="{{$vendor_profile_img}}" class="img-fluid" alt="">
+                                <img src="{{$vendor_profile_img}}" class="img-fluid width-75-cls" alt="">
                             </div>
                         </li>
                         <li class="list-inline-item details-li">

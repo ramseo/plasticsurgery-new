@@ -2240,9 +2240,11 @@ article blockquote {
 }
 
 .quotation-vendor .img-li {
-    width: 70px;
+    width: auto;
+    /* width: 70px; */
     overflow: hidden;
-    height: 70px;
+    height: auto;
+    /* height: 70px; */
     border-radius: 50%;
 }
 
@@ -2623,4 +2625,8 @@ span.days {
 
 .mob-content ul {
     padding-left: 15px;
+}
+
+.width-75-cls{
+    width: 75px;
 }
