@@ -72,10 +72,10 @@
                     @foreach ($images as $image)
                         <div class="col-3 gallery-col">
                             <div class="gallery-img-col">
-                                <img class="img-fluid" src="{{ asset('storage/album').'/'.$image->album_id.'/'.$image->name }}" alt="" />
+                                <img class="img-fluid" src="{{ asset('storage/album').'/'.$image->album_id.'/'.$image->name }}" alt="img" />
                             </div>
                             <div class="gallery-action-col text-center">
-                                <a class="" href="{{ route('vendor.image.delete', $image->id) }}"><i class="fas fa-trash-alt"></i> Delete</a>
+                                <a onclick="return confirm('Are you sure?')" class="" href="{{ route('vendor.image.delete', $image->id) }}"><i class="fas fa-trash-alt"></i></a>
                             </div>
                         </div>
                     @endforeach
@@ -85,6 +85,17 @@
 
 
     </div>
+
+</div>
+
+<div class="col-12">
+<div class="btn-toolbar float-right vendor-img-bk-btn" role="toolbar" aria-label="Toolbar with button groups">
+    <a href="{{ route("vendor.album.index") }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}">
+        <i class="fas fa-reply"></i>
+        Cancel
+    </a>
+</div>
+</div>
 
 </div>
 @endsection
