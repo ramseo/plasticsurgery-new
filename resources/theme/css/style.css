@@ -2604,7 +2604,7 @@ span.days {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding-top: 5px; 
+    padding-top: 5px;
 }
 
 .blog-intro {
@@ -2627,6 +2627,7 @@ span.days {
     padding-left: 15px;
 }
 
-.width-80-cls{
-    width: 80px;
+.wid-hei-70-cls {
+    width: 70px;
+    height: 70px;
 }
