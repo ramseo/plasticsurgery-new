@@ -21,6 +21,7 @@ use App\Mail\QuotationAdmin;
 use Illuminate\Support\Facades\Mail;
 use Auth;
 use Session;
+
 class VendorController extends Controller
 {
 
@@ -34,8 +35,8 @@ class VendorController extends Controller
             ->where('type_id', $type->id)
             ->where('email_verified_at', '!=', null)
             ->paginate(6);
-        $view = view('frontend.vendors.types.inner.vendors',compact('vendors'))->render();
-        return response()->json(['html'=>$view]);
+        $view = view('frontend.vendors.types.inner.vendors', compact('vendors'))->render();
+        return response()->json(['html' => $view]);
     }
 
     public function types(Request $request)
@@ -47,9 +48,9 @@ class VendorController extends Controller
         $cities = getDataArray('cities');
         $vendors_total = DB::table('vendors')->where('type_id', $type->id)->get()->count();
         $vendors_total = Vendor::join('users', 'users.id', '=', 'vendors.user_id')->where('type_id', $type->id)->get()->count();
-//        $vendors_total= count($vendors_total);
+        //        $vendors_total= count($vendors_total);
         $content = Content::where(array('type_id' => $type->id, 'city_id' => null))->first();
-        return view('frontend.vendors.types.listing', compact('content','body_class', 'cities', 'type', 'vendors_total'));
+        return view('frontend.vendors.types.listing', compact('content', 'body_class', 'cities', 'type', 'vendors_total'));
     }
 
     public function cityAjax(Request $request)
@@ -58,15 +59,15 @@ class VendorController extends Controller
         $type = Type::where('slug', $request->type)->first();
 
         $service_ids = [];
-        if(isset($_GET['service'])){
-            foreach($_GET['service'] as $service){
+        if (isset($_GET['service'])) {
+            foreach ($_GET['service'] as $service) {
                 $service_id = getData('services', 'name', $service);
                 array_push($service_ids, $service_id->id);
             }
         }
 
         $budget = null;
-        if(isset($_GET['budget'])){
+        if (isset($_GET['budget'])) {
             $budget = getData('budgets', 'id', $_GET['budget']);
         }
 
@@ -75,47 +76,47 @@ class VendorController extends Controller
             ->where('email_verified_at', '!=', null)
             ->where(array('type_id' => $type->id, 'city_id' => $city->id));
 
-        if(count($service_ids) > 0){
+        if (count($service_ids) > 0) {
             $vendorsDB->join('services', 'vendors.type_id', '=', 'services.type_id');
             $vendorsDB->join('prices', 'prices.service_id', '=', 'services.id');
             $vendorsDB->whereIn('services.id', $service_ids);
         }
 
-        if($budget){
-            if($budget->filter == 'less_then'){
-                $vendorsDB->where('vendors.price', '<' , $budget->min);
-            }elseif($budget->filter == 'between'){
-                $vendorsDB->where('vendors.price', '>' , $budget->min);
-                $vendorsDB->where('vendors.price', '<' , $budget->max);
-            }elseif($budget->filter == 'above'){
-                $vendorsDB->where('vendors.price', '>' , $budget->min);
+        if ($budget) {
+            if ($budget->filter == 'less_then') {
+                $vendorsDB->where('vendors.price', '<', $budget->min);
+            } elseif ($budget->filter == 'between') {
+                $vendorsDB->where('vendors.price', '>', $budget->min);
+                $vendorsDB->where('vendors.price', '<', $budget->max);
+            } elseif ($budget->filter == 'above') {
+                $vendorsDB->where('vendors.price', '>', $budget->min);
             }
         }
 
-        if(isset($_GET['sort'])){
-            if($_GET['sort'] == 'low_to_high'){
+        if (isset($_GET['sort'])) {
+            if ($_GET['sort'] == 'low_to_high') {
                 $vendorsDB->orderBy('vendors.price', 'ASC');
-            }elseif($_GET['sort'] == 'high_to_low'){
+            } elseif ($_GET['sort'] == 'high_to_low') {
                 $vendorsDB->orderBy('vendors.price', 'DESC');
             }
         }
 
-//        if(isset($_GET['type'])){
-//            $vendorsDB->where('vendors.type_id', $_GET['type']);
-//        }else{
-//            $vendorsDB->where('vendors.type_id', $type->id);
-//        }
-//
-//        if(isset($_GET['city'])){
-//            $vendorsDB->where('vendors.city_id', $_GET['city']);
-//        }else{
-//            $vendorsDB->where('vendors.city_id', $city->id);
-//        }
+        //        if(isset($_GET['type'])){
+        //            $vendorsDB->where('vendors.type_id', $_GET['type']);
+        //        }else{
+        //            $vendorsDB->where('vendors.type_id', $type->id);
+        //        }
+        //
+        //        if(isset($_GET['city'])){
+        //            $vendorsDB->where('vendors.city_id', $_GET['city']);
+        //        }else{
+        //            $vendorsDB->where('vendors.city_id', $city->id);
+        //        }
 
         $vendors = $vendorsDB->groupBy('vendors.user_id')->paginate(15);
 
-        $view = view('frontend.vendors.types.inner.vendors',compact('vendors'))->render();
-        return response()->json(['html'=>$view]);
+        $view = view('frontend.vendors.types.inner.vendors', compact('vendors'))->render();
+        return response()->json(['html' => $view]);
     }
 
     public function cities(Request $request, $city_slug)
@@ -128,66 +129,66 @@ class VendorController extends Controller
         $city = City::where('slug', $city_slug)->first();
         $type = Type::where('slug', $type_slug)->first();
 
-//        $service_ids = [];
-//        if(isset($_GET['service'])){
-//            foreach($_GET['service'] as $service){
-//                $service_id = getData('services', 'name', $service);
-//                array_push($service_ids, $service_id->id);
-//            }
-//        }
-//
-//        $budget = null;
-//        if(isset($_GET['budget'])){
-//            $budget = getData('budgets', 'id', $_GET['budget']);
-//        }
-//
-//        $vendorsDB = DB::table('vendors');
-//
-//        if(count($service_ids) > 0){
-//            $vendorsDB->join('services', 'vendors.type_id', '=', 'services.type_id');
-//            $vendorsDB->join('prices', 'prices.service_id', '=', 'services.id');
-//            $vendorsDB->whereIn('services.id', $service_ids);
-//        }
-//
-//        if($budget){
-//            if($budget->filter == 'less_then'){
-//                $vendorsDB->where('vendors.price', '<' , $budget->min);
-//            }elseif($budget->filter == 'between'){
-//                $vendorsDB->where('vendors.price', '>' , $budget->min);
-//                $vendorsDB->where('vendors.price', '<' , $budget->max);
-//            }elseif($budget->filter == 'above'){
-//                $vendorsDB->where('vendors.price', '>' , $budget->min);
-//            }
-//        }
-//
-//        if(isset($_GET['sort'])){
-//            if($_GET['sort'] == 'low_to_high'){
-//                $vendorsDB->orderBy('vendors.price', 'ASC');
-//            }elseif($_GET['sort'] == 'high_to_low'){
-//                $vendorsDB->orderBy('vendors.price', 'DESC');
-//            }
-//        }
-//
-//        if(isset($_GET['type'])){
-//            $vendorsDB->where('vendors.type_id', $_GET['type']);
-//        }else{
-//            $vendorsDB->where('vendors.type_id', $type->id);
-//        }
-//
-//        if(isset($_GET['city'])){
-//            $vendorsDB->where('vendors.city_id', $_GET['city']);
-//        }else{
-//            $vendorsDB->where('vendors.city_id', $city->id);
-//        }
-//
-//        $vendors = $vendorsDB->groupBy('vendors.user_id')->paginate(15);
+        //        $service_ids = [];
+        //        if(isset($_GET['service'])){
+        //            foreach($_GET['service'] as $service){
+        //                $service_id = getData('services', 'name', $service);
+        //                array_push($service_ids, $service_id->id);
+        //            }
+        //        }
+        //
+        //        $budget = null;
+        //        if(isset($_GET['budget'])){
+        //            $budget = getData('budgets', 'id', $_GET['budget']);
+        //        }
+        //
+        //        $vendorsDB = DB::table('vendors');
+        //
+        //        if(count($service_ids) > 0){
+        //            $vendorsDB->join('services', 'vendors.type_id', '=', 'services.type_id');
+        //            $vendorsDB->join('prices', 'prices.service_id', '=', 'services.id');
+        //            $vendorsDB->whereIn('services.id', $service_ids);
+        //        }
+        //
+        //        if($budget){
+        //            if($budget->filter == 'less_then'){
+        //                $vendorsDB->where('vendors.price', '<' , $budget->min);
+        //            }elseif($budget->filter == 'between'){
+        //                $vendorsDB->where('vendors.price', '>' , $budget->min);
+        //                $vendorsDB->where('vendors.price', '<' , $budget->max);
+        //            }elseif($budget->filter == 'above'){
+        //                $vendorsDB->where('vendors.price', '>' , $budget->min);
+        //            }
+        //        }
+        //
+        //        if(isset($_GET['sort'])){
+        //            if($_GET['sort'] == 'low_to_high'){
+        //                $vendorsDB->orderBy('vendors.price', 'ASC');
+        //            }elseif($_GET['sort'] == 'high_to_low'){
+        //                $vendorsDB->orderBy('vendors.price', 'DESC');
+        //            }
+        //        }
+        //
+        //        if(isset($_GET['type'])){
+        //            $vendorsDB->where('vendors.type_id', $_GET['type']);
+        //        }else{
+        //            $vendorsDB->where('vendors.type_id', $type->id);
+        //        }
+        //
+        //        if(isset($_GET['city'])){
+        //            $vendorsDB->where('vendors.city_id', $_GET['city']);
+        //        }else{
+        //            $vendorsDB->where('vendors.city_id', $city->id);
+        //        }
+        //
+        //        $vendors = $vendorsDB->groupBy('vendors.user_id')->paginate(15);
 
         $content = Content::where(array('type_id' => $type->id, 'city_id' => $city->id))->first();
         $vendors_total = DB::table('vendors')
             ->join('users', 'users.id', '=', 'vendors.user_id')
-//            ->where('email_verified_at', '!=', null)
+            //            ->where('email_verified_at', '!=', null)
             ->where(array('type_id' => $type->id, 'city_id' => $city->id))->get()->count();
-        return view('frontend.vendors.types.cities.listing', compact('content','body_class', 'city', 'type', 'vendors_total'));
+        return view('frontend.vendors.types.cities.listing', compact('content', 'body_class', 'city', 'type', 'vendors_total'));
     }
 
 
@@ -207,9 +208,10 @@ class VendorController extends Controller
     public function postReview(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'rating' => 'required',
+            'rating' => 'required|not_in:0',
             'description' => 'required',
         ]);
+
         if ($validator->passes()) {
             $data = $request->all();
             // dd($data);
@@ -223,18 +225,24 @@ class VendorController extends Controller
             $vendor->save();
             return response()->json(['success' => true, 'message' => 'Review posted successfully!']);
         }
+        $var_err = "";
+        $var_err .= "<ul style='list-style:none;padding:0'>";
+        foreach ($validator->errors()->all() as $error) {
+            $var_err .=  "<li>"   . $error . "</li>";
+        }
+        $var_err .= "</ul>";
 
-        return response()->json(['success' => false, 'message' => $validator->errors()->all()]);
+        return response()->json(['success' => false, 'message' => $var_err]);
     }
 
 
     public function callView(Request $request)
     {
         $data = $request->all();
-      
+
         if ($data['user_id'] != '' && $data['vendor_id'] != '') {
-            $callChat =getData('call_chat', array('user_id' => $data['user_id'], 'vendor_id' => $data['vendor_id']));
-            if($callChat == ''){
+            $callChat = getData('call_chat', array('user_id' => $data['user_id'], 'vendor_id' => $data['vendor_id']));
+            if ($callChat == '') {
                 $vendor = new CallChat();
                 $vendor->user_id = $data['user_id'];
                 $vendor->vendor_id = $data['vendor_id'];
@@ -242,7 +250,6 @@ class VendorController extends Controller
                 $vendor->save();
                 return response()->json(['success' => true, 'message' => 'successfully!']);
             }
-            
         }
 
         return response()->json(['success' => true, 'message' => 'Already Viewed']);
@@ -254,7 +261,7 @@ class VendorController extends Controller
         $data = $request->all();
         if ($data['user_id'] != '' && $data['vendor_id'] != '') {
             $callChat = CallChat::where(array('user_id' => $data['user_id'], 'vendor_id' => $data['vendor_id']))->first();
-            if($callChat != ''){
+            if ($callChat != '') {
                 $callChat->review = $data['review'];
                 $callChat->save();
                 return response()->json(['success' => true, 'message' => 'Successfully!']);
@@ -263,18 +270,19 @@ class VendorController extends Controller
         return response()->json(['success' => false, 'message' => 'Already Reviewed']);
     }
 
-    public function saveQuotation($vendor_slug){
+    public function saveQuotation($vendor_slug)
+    {
 
         // $vendor_id = base64_decode($vendor_id);
         $body_class = '';
         $vendor = DB::table('vendors')->where('slug', $vendor_slug)->first();
 
 
-        if(Auth::check() == false) {
+        if (Auth::check() == false) {
             return redirect(base_url());
         }
         $user_id = Auth::user()->id;
-        $user_quotation = UserQuotation::where('type_id',$vendor->type_id)->where('user_id', $user_id)->first();
+        $user_quotation = UserQuotation::where('type_id', $vendor->type_id)->where('user_id', $user_id)->first();
 
         $vendor_details = $vendor;
         $top_services  = DB::table('services')
@@ -287,7 +295,8 @@ class VendorController extends Controller
         return view('frontend.vendors.quotation', compact('user_quotation', 'vendor_details', 'top_services'));
     }
 
-    public function storeQuotation(Request $request){
+    public function storeQuotation(Request $request)
+    {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required',
@@ -297,9 +306,9 @@ class VendorController extends Controller
         if ($validator->passes()) {
             $data = $request->all();
             $services = [];
-            if(isset($data['service'])){
-                foreach($data['service'] as $service){
-                    if(!isset($service['service_val'])){
+            if (isset($data['service'])) {
+                foreach ($data['service'] as $service) {
+                    if (!isset($service['service_val'])) {
                         $tmp = [];
                         $tmp['service_id'] = $service['service_id'];
                         $tmp['quantity'] = $service['quantity'];
@@ -316,8 +325,8 @@ class VendorController extends Controller
             $data['dates'] =  date('Y-m-d');
 
 
-            $quotation = Quotation::where('vendor_id',$data['vendor_id'])->where('user_id', Auth::user()->id)->first();
-            if($quotation == ''){
+            $quotation = Quotation::where('vendor_id', $data['vendor_id'])->where('user_id', Auth::user()->id)->first();
+            if ($quotation == '') {
                 $quotation = new Quotation();
             }
             $quotation->vendor_id = $data['vendor_id'];
@@ -331,10 +340,10 @@ class VendorController extends Controller
             $quotation->service_json = json_encode($services);
             $quotation->save();
 
-            $vendor_url = url('/').'/'.$type->slug.'/'.$city->slug.'/'.$vendor->slug;
-            $vendor_data =  array( 'vendor_business_name' => $vendor->business_name,            'vendor_url' => $vendor_url );
+            $vendor_url = url('/') . '/' . $type->slug . '/' . $city->slug . '/' . $vendor->slug;
+            $vendor_data =  array('vendor_business_name' => $vendor->business_name,            'vendor_url' => $vendor_url);
 
-            $quotation->vendor_data = array( 'vendor_business_name' => $vendor->business_name,            'vendor_url' => $vendor_url , 'city' => $city->name);
+            $quotation->vendor_data = array('vendor_business_name' => $vendor->business_name,            'vendor_url' => $vendor_url, 'city' => $city->name);
 
             // Mail::to($vendor->email)->send(new QuotationUser($quotation));
             // Mail::to(env('MAIL_FROM_ADDRESS'))->send(new QuotationUser($quotation));
@@ -345,13 +354,14 @@ class VendorController extends Controller
         return response()->json(['success' => false, 'message' => $validator->errors()->all()]);
     }
 
-     public function saveQuotationType($type_alias){
+    public function saveQuotationType($type_alias)
+    {
         $type = DB::table('types')->where('slug', $type_alias)->first();
-        if(Auth::check() == false) {
+        if (Auth::check() == false) {
             return redirect(base_url());
         }
         $user_id = Auth::user()->id;
-        $user_quotation = UserQuotation::where('type_id',$type->id)->where('user_id', $user_id)->first();
+        $user_quotation = UserQuotation::where('type_id', $type->id)->where('user_id', $user_id)->first();
         $top_services  = DB::table('services')
             ->select('services.*')
             ->where('services.type_id', $type->id)
@@ -360,8 +370,9 @@ class VendorController extends Controller
             ->get();
         return view('frontend.vendors.type', compact('user_quotation', 'type', 'top_services'));
     }
-    
-    public function storeQuotationType(Request $request){
+
+    public function storeQuotationType(Request $request)
+    {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'email' => 'required',
@@ -371,9 +382,9 @@ class VendorController extends Controller
         if ($validator->passes()) {
             $data = $request->all();
             $services = [];
-            if(isset($data['service'])){
-                foreach($data['service'] as $service){
-                    if(!isset($service['service_val'])){
+            if (isset($data['service'])) {
+                foreach ($data['service'] as $service) {
+                    if (!isset($service['service_val'])) {
                         $tmp = [];
                         $tmp['service_id'] = $service['service_id'];
                         $tmp['quantity'] = $service['quantity'];
@@ -382,13 +393,13 @@ class VendorController extends Controller
                 }
             }
 
-            $quotation = UserQuotation::where('type_id',$data['type_id'])->where('user_id', Auth::user()->id)->first();
-            if($quotation == ''){
+            $quotation = UserQuotation::where('type_id', $data['type_id'])->where('user_id', Auth::user()->id)->first();
+            if ($quotation == '') {
                 $quotation = new    UserQuotation();
             }
             $dates = '';
-            if(isset($data['start_date']) && isset($data['end_date'])){
-            $dates =  $data['start_date'] . ' - ' . $data['end_date'];
+            if (isset($data['start_date']) && isset($data['end_date'])) {
+                $dates =  $data['start_date'] . ' - ' . $data['end_date'];
             }
             $quotation->user_id = Auth::user()->id;
             $quotation->type_id = $data['type_id'];
@@ -421,29 +432,31 @@ class VendorController extends Controller
         return response()->json(['success' => false, 'message' => $errArry]);
     }
 
-    public function vendorSearch(){
+    public function vendorSearch()
+    {
         $types = Type::All()->toArray();
         $type_vendors = array();
-        foreach($types as $type){
+        foreach ($types as $type) {
             $vendors = Vendor::where('type_id',  $type['id'])->limit(8)->get()->toArray();
-            if($vendors){
-                $type_vendors[$type['id']] = $vendors ;
+            if ($vendors) {
+                $type_vendors[$type['id']] = $vendors;
             }
         }
 
-       
-        return view('frontend.vendors.search-vendor',compact('types', 'type_vendors'));
+
+        return view('frontend.vendors.search-vendor', compact('types', 'type_vendors'));
     }
 
-     public function citySearch(){
+    public function citySearch()
+    {
         $cities = City::All()->toArray();
         $city_vendors = array();
-        foreach($cities as $city){
+        foreach ($cities as $city) {
             $types = Type::All()->toArray();
-            foreach($types as $type){
+            foreach ($types as $type) {
                 $vendor = Vendor::where('city_id',  $city['id'])->where('type_id',  $type['id'])->first();
-                if($vendor){
-                    $city_vendors[$city['id']][$type['id']] = $vendor ;
+                if ($vendor) {
+                    $city_vendors[$city['id']][$type['id']] = $vendor;
                 }
             }
         }

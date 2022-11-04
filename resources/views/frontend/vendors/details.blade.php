@@ -254,7 +254,7 @@ $average = averageReview($reviews);
         };
         $(".containerCollage").justifiedGallery();
 
-        $('#reviewForm').submit(function(e) {
+        $('#reviewForm').submit(function(e) { 
             e.preventDefault();
             $.ajax({
                 type: 'POST',
@@ -280,6 +280,7 @@ $average = averageReview($reviews);
                             $('#rateit-reset-2').trigger("click");
                         }, 1000);
                     } else {
+                        console.log(res.message);
                         $('.reviewAlert').html(res.message).show();
                     }
                 }

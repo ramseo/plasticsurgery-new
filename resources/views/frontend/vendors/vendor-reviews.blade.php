@@ -66,7 +66,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="reviewModal">
+<div class="modal fade" id="reviewModal"> 
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -76,6 +76,7 @@
             <div class="modal-body">
                 <div class="review-form-main-col">
                     <div class="alert alert-danger reviewAlert" style="display: none;"></div>
+                    
                     <form id="reviewForm" action="">
                         <div class="form-group">
                             <div class="review-rating" data-rateit-mode="font" data-rateit-resetable="false"></div>
