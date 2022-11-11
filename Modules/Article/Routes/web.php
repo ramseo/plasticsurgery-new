@@ -1,4 +1,15 @@
 <?php
+// code
+use App\Http\Controllers\ExcelController;
+use Illuminate\Support\Facades\Route;
+
+Route::group(['namespace' => '\Modules\Article\Http\Controllers\Backend', 'as' => 'backend.', 'middleware' => ['web', 'auth', 'can:view_backend'], 'prefix' => 'admin'], function () {
+
+    Route::get('importExportView', 'ExcelController@importExportView')->name('importExportView');
+    Route::post('export', 'ExcelController@export')->name('export');
+    Route::post('import','ExcelController@import')->name('import');
+});
+// code 
 
 /*
 *

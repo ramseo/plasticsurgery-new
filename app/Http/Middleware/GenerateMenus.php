@@ -59,6 +59,21 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
+            // export
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-file-export"></i>Vendor Export', [
+                'route' => 'backend.importExportView',
+                'class' => 'c-sidebar-nav-item',
+            ])
+                ->data([
+                    'order' => 101,
+                    'activematches' => 'admin/importExportView*',
+                    'permission' => [],
+                ])
+                ->link->attr([
+                    'class' => 'c-sidebar-nav-link',
+                ]);
+            // export
+
             $menu->add('<i class="c-sidebar-nav-icon fas fa-user"></i> Travel', [
                 'route' => 'backend.travel.index',
                 'class' => 'c-sidebar-nav-item',
