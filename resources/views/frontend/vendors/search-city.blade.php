@@ -38,7 +38,7 @@
             @php $vendors = isset($city_vendors[$city['id']])? $city_vendors[$city['id']] : array() ; @endphp
             @if($vendors)
             <div class="container-fluid ol-crsl padding-null">
-                <div class="thumb-img">
+                <div class="thumb-img-city">
                     <img src="{{asset('storage/city/icon/'.$city['icon'])}}" alt="image alt">
                 </div>
                 <h2>Top Vendors in {{$city['name']}} Cities</h2>
