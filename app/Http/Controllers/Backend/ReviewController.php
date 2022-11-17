@@ -239,8 +239,8 @@ class ReviewController extends Controller
 
     function is_active() 
     {
-        $is_active = $_GET['is_active'];
-        $review_id = $_GET['review_id'];
+        $is_active = $_REQUEST['is_active'];
+        $review_id = $_REQUEST['review_id'];
 
         $status = DB::table('vendor_reviews')
             ->where('id', $review_id)
