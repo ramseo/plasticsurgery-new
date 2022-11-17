@@ -74,6 +74,21 @@ class GenerateMenus
                 ]);
             // export
 
+            // reviews
+            $menu->add('<i class="c-sidebar-nav-icon fas fa-star"></i>Reviews', [
+                'route' => 'backend.review.index',
+                'class' => 'c-sidebar-nav-item',
+            ])
+                ->data([
+                    'order' => 102,
+                    'activematches' => 'admin/review*',
+                    'permission' => [],
+                ])
+                ->link->attr([
+                    'class' => 'c-sidebar-nav-link',
+                ]);
+            // reviews
+
             $menu->add('<i class="c-sidebar-nav-icon fas fa-user"></i> Travel', [
                 'route' => 'backend.travel.index',
                 'class' => 'c-sidebar-nav-item',
