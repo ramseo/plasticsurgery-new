@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 use Log;
 use Carbon\Carbon;
 use Flash;
-use Illuminate\Support\Facades\DB;
+use DB;
 use Yajra\DataTables\DataTables;
 
 class ReviewController extends Controller
@@ -61,7 +61,7 @@ class ReviewController extends Controller
             "backend.$module_path.index_datatable",
             compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', 'page_heading', 'title')
         );
-    }
+    } 
 
 
     public function index_data()
@@ -237,7 +237,7 @@ class ReviewController extends Controller
     }
 
 
-    function is_active()
+    function is_active() 
     {
         $is_active = $_GET['is_active'];
         $review_id = $_GET['review_id'];
