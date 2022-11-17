@@ -751,4 +751,18 @@ if (!function_exists('date_today')) {
         }
         return $data->get();
     }
+
+    function getContent($vendor)
+    {
+        $data = DB::table('contents');
+        $data->select('description', 'content');
+        $data->where('type_id', $vendor->type_id);
+        $data->where('city_id', $vendor->city_id);
+        $rs = $data->first();
+        if ($rs) {
+            return $rs->description;
+        } else {
+            return "";
+        }
+    }
 }

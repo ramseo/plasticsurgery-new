@@ -102,7 +102,7 @@
                             <th>
                                 #
                             </th>
-                            <th>
+                            <th width="60%">
                                 Description
                             </th>
                             <th>

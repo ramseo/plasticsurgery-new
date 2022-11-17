@@ -46,10 +46,10 @@ class VendorController extends Controller
         $body_class = '';
         $cities = getDataArray('cities');
         $vendors_total = DB::table('vendors')
-        ->join('users', 'users.id', '=', 'vendors.user_id')
-        ->where('email_verified_at', '!=', null)
-        ->where('type_id', $type->id)
-        ->get()->count();
+            ->join('users', 'users.id', '=', 'vendors.user_id')
+            ->where('email_verified_at', '!=', null)
+            ->where('type_id', $type->id)
+            ->get()->count();
         // $vendors_total = Vendor::join('users', 'users.id', '=', 'vendors.user_id')->where('type_id', $type->id)->get()->count();
         //        $vendors_total= count($vendors_total);
         $content = Content::where(array('type_id' => $type->id, 'city_id' => null))->first();
@@ -189,7 +189,7 @@ class VendorController extends Controller
         $content = Content::where(array('type_id' => $type->id, 'city_id' => $city->id))->first();
         $vendors_total = DB::table('vendors')
             ->join('users', 'users.id', '=', 'vendors.user_id')
-                       ->where('email_verified_at', '!=', null)
+            ->where('email_verified_at', '!=', null)
             ->where(array('type_id' => $type->id, 'city_id' => $city->id))->get()->count();
         return view('frontend.vendors.types.cities.listing', compact('content', 'body_class', 'city', 'type', 'vendors_total'));
     }
@@ -208,11 +208,12 @@ class VendorController extends Controller
         return view('frontend.vendors.details', compact('body_class', 'vendor_details', 'city', 'type'));
     }
 
-    public function postReview(Request $request)
+    public function postReview(Request $request) 
     {
         $validator = Validator::make($request->all(), [
             'rating' => 'required|not_in:0',
             'description' => 'required',
+            // 'name' => 'required',
         ]);
 
         if ($validator->passes()) {
@@ -225,6 +226,7 @@ class VendorController extends Controller
             $vendor->city_id = $data['city_id'];
             $vendor->rating = $data['rating'];
             $vendor->description = $data['description'];
+            // $vendor->title = $data['name'];
             $vendor->save();
             return response()->json(['success' => true, 'message' => 'Review posted successfully!']);
         }

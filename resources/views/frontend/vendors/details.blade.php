@@ -1,4 +1,4 @@
-@extends('frontend.layouts.app')
+@extends('frontend.layouts.app') 
 @section('title') {{ __("Vendor") . ' | ' . $vendor_details->business_name }} @endsection
 
 @section('content')
@@ -11,7 +11,7 @@ $average = averageReview($reviews);
 
 @endphp
 
-<section id="breadcrumb-section">
+<section id="breadcrumb-section"> 
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -265,7 +265,7 @@ $average = averageReview($reviews);
                     'vendor_id': $('#reviewVendorId').val(),
                     'type_id': $('#reviewVendorTypeId').val(),
                     'city_id': $('#reviewVendorCityId').val(),
-                    'title': $('#reviewTitle').val(),
+                    'name': $('#reviewTitle').val(),
                     'rating': $('#review-rating-hidden').val(),
                     'description': $('#reviewDescription').val()
                 },
