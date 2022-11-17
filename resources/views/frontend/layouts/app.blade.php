@@ -74,19 +74,6 @@
                     "bestRating": "5",
                     "ratingCount": "{{$rating_count}}"
                 },
-                "offers": {
-                    "@type": "Offer",
-                    "url": "https://example.com/offers/catcher-in-the-rye",
-                    "priceCurrency": "USD",
-                    "price": "5.99",
-                    "priceValidUntil": "2020-11-05",
-                    "itemCondition": "https://schema.org/UsedCondition",
-                    "availability": "https://schema.org/InStock",
-                    "seller": {
-                        "@type": "Organization",
-                        "name": "eBay"
-                    }
-                }
             }
         </script>
     <?php } ?>
