@@ -193,11 +193,15 @@
 
         if ($(elm).is(":checked")) {
             $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
                 url: "{{url('admin/review/is_active')}}",
-                type: 'get',
+                type: 'GET',
                 data: {
                     is_active: 1,
                     review_id: review_id,
+                    _token: '{{ csrf_token() }}',
                 },
                 dataType: 'json',
                 success: function(response) {
@@ -206,11 +210,15 @@
             });
         } else {
             $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
                 url: "{{url('admin/review/is_active')}}",
-                type: 'get',
+                type: 'GET',
                 data: {
                     is_active: 0,
                     review_id: review_id,
+                    _token: '{{ csrf_token() }}',
                 },
                 dataType: 'json',
                 success: function(response) {

@@ -61,7 +61,7 @@ class ReviewController extends Controller
             "backend.$module_path.index_datatable",
             compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', 'page_heading', 'title')
         );
-    } 
+    }
 
 
     public function index_data()
@@ -237,10 +237,14 @@ class ReviewController extends Controller
     }
 
 
-    function is_active() 
+    function is_active(Request $request)
     {
-        $is_active = $_REQUEST['is_active'];
-        $review_id = $_REQUEST['review_id'];
+
+        $is_active = $request->get('is_active');
+        $review_id = $request->get('review_id');
+
+        // $is_active = $_REQUEST['is_active'];
+        // $review_id = $_REQUEST['review_id'];
 
         $status = DB::table('vendor_reviews')
             ->where('id', $review_id)
