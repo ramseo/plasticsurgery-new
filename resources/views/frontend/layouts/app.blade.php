@@ -59,8 +59,8 @@
                 "@context": "https://schema.org/",
                 "@type": "Product",
                 "brand": {
-                    "@type": "Brand",
-                    "name": "Penguin Books"
+                    "@type": "Wed.in",
+                    "name": "{{$vendor_details->business_name}}"
                 },
                 "description": "{{strip_tags($getContent)}}",
                 "sku": "{{$vendor_details->slug}}",
