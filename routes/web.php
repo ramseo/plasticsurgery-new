@@ -131,6 +131,15 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::patch("city/trashed/{id}", ['as' => "city.restore", 'uses' => "CityController@restore"]);
     Route::resource("city", "CityController");
 
+    // Review
+    Route::get("review", ['as' => "review.index", 'uses' => "ReviewController@index"]);
+    Route::get("review/index_list", ['as' => "review.index_list", 'uses' => "ReviewController@index_list"]);
+    Route::get("review/index_data", ['as' => "review.index_data", 'uses' => "ReviewController@index_data"]);
+    Route::get("review/destroy/{id}", ['as' => "review.destroy", 'uses' => "ReviewController@destroy"]);
+    Route::get("review/is_active", ['as' => "review.is_active", 'uses' => "ReviewController@is_active"]);
+    Route::resource("review", "ReviewController");
+    // Review
+
     Route::get("type", ['as' => "type.index", 'uses' => "TypeController@index"]);
     Route::get("type/index_list", ['as' => "type.index_list", 'uses' => "TypeController@index_list"]);
     Route::get("type/index_data", ['as' => "type.index_data", 'uses' => "TypeController@index_data"]);

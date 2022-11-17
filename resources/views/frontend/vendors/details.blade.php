@@ -6,7 +6,7 @@
 $vendorUser = getData('users', 'id', $vendor_details->user_id);
 $albums = getDataArray('albums', 'vendor_id', $vendor_details->id);
 $videos = getDataArray('videos', 'vendor_id', $vendor_details->id);
-$reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor_details->id);
+$reviews = getReviewArray('vendor_reviews', 'vendor_id', $vendor_details->id);
 $average = averageReview($reviews);
 
 @endphp

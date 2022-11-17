@@ -728,4 +728,27 @@ if (!function_exists('date_today')) {
         }
         return $data->get();
     }
+
+    function getVendorById($vendor_id)
+    {
+        $data = DB::table('vendors');
+        $data->select('business_name');
+        $data->where('id', $vendor_id);
+        $rs = $data->first();
+        return $rs->business_name;
+    }
+
+    function getReviewArray($table, $column = null, $value = null)
+    {
+        $data = DB::table($table);
+        if ($column != null) {
+            if (is_array($column)) :
+                $data->where($column);
+            else :
+                $data->where(array($column => $value));
+            endif;
+            $data->where(array("is_active" => 1));
+        }
+        return $data->get();
+    }
 }
