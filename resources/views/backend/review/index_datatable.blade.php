@@ -91,11 +91,6 @@
                     {{ Str::title($module_name) }} Management Dashboard
                 </div>
             </div>
-            <div class="col-4">
-                <div class="float-right">
-                    <x-buttons.create route='{{ route("backend.$module_name.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}" />
-                </div>
-            </div>
         </div>
         <!--/.row-->
 
@@ -116,7 +111,7 @@
                             <th>
                                 Vendor
                             </th>
-                            <th class="text-center">
+                            <th width="15%" class="text-center">
                                 Action
                             </th>
                         </tr>
