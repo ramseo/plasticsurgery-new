@@ -14,7 +14,7 @@
       </div>
       <br>
       <!-- searches start -->
-      <div class="main-selection-option">
+      <div class="main-selection-option" data-aos="zoom-in">
          <div class="on-selection">
             <!-- vendor type start -->
             <div class="optional-vendr">
@@ -40,7 +40,7 @@
       </div>
       <!-- searches end -->
       <div class="row">
-         <div class="col-xs-12 col-sm-8 mb-lg-0  ">
+         <div class="col-xs-12 col-sm-8 mb-lg-0" data-aos="slide-right">
             <p class="footer-brand mr-lg-5 d-flex"> Are you a vendor? </p>
             <p class="my-4">
                Sign up on {{ env('APP_NAME')}} to reach more couples and book more weddings!
@@ -65,7 +65,7 @@
             </form>
          </div>
          <div style="clear:both"></div>
-         <div class="col-lg-4  footer-col">
+         <div class="col-lg-4  footer-col" data-aos="slide-left">
             <p class="footer-brand mr-lg-5 d-flex">
                Follow us for more ideas & fun
             </p>
@@ -138,7 +138,7 @@
       </div>
       <hr style="background: #ddd;">
       <div class="row">
-         <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left">
+         <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left" data-aos="zoom-in">
             <?php
             $start_planning = dynamic_menu('menutype', 'url', 'start-planning');
             $wedding_ideas = dynamic_menu('menutype', 'url', 'wedding-ideas');
@@ -154,7 +154,7 @@
                @endforeach
             </ul>
          </div>
-         <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left">
+         <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left" data-aos="zoom-in">
             <h6>
                Wedding Ideas
             </h6>
@@ -164,7 +164,7 @@
                @endforeach
             </ul>
          </div>
-         <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left">
+         <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left" data-aos="zoom-in">
             <h6>
                Photo Gallery
             </h6>
@@ -174,7 +174,7 @@
                @endforeach
             </ul>
          </div>
-         <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left">
+         <div class="col-6 col-sm-3 mb-4 mb-lg-0 text-left" data-aos="zoom-in">
             <h6>
                Pages
             </h6>
@@ -186,7 +186,7 @@
          </div>
       </div>
       <hr style="background: #ddd;">
-      <div class="row">
+      <div class="row" data-aos="zoom-in">
          <div class="col mb-md-0">
             <div class="d-flex text-center justify-content-center align-items-center">
                <p class="font-weight-normal mb-0">
