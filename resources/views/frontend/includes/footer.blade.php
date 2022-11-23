@@ -4,7 +4,7 @@
 <footer id="footer" class="footer pt-5 pb-3  text-white overflow-hidden" style=" background: rgb(235, 10, 62);">
    <!-- <div class="pattern pattern-soft top"></div> -->
    <div class="container-fluid">
-      <div class="row">
+      <div class="row" data-aos="zoom-in">
          <div class="col-12 col-sm-12 col-lg-12">
             <h5>{{ env('APP_NAME') }} - Your Personal Wedding Planner</h5>
             @if(setting('footer_about_us'))

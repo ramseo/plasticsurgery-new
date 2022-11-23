@@ -6,7 +6,7 @@
     <section id="featured-vendors">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 common-heading light-heading text-center with-lines">
+                <div class="col-xs-12 col-sm-12 common-heading light-heading text-center with-lines" data-aos="slide-right">
                     <p class="shadow-text">Vendors</p>
                     <p class="head">Featured Vendors</p>
                 </div>
@@ -17,7 +17,7 @@
                                 $vendorCity = getData('cities', 'id', $vendor->city_id);
                                 $vendorType = getData('types', 'id', $vendor->type_id); 
                             @endphp
-                            <div>
+                            <div data-aos="zoom-in-down">
                                 <div class="common-card vendor-card">
                                     <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $vendor->slug }}">
                                         @php

@@ -74,10 +74,10 @@
                     "bestRating": "5",
                     "ratingCount": "{{$rating_count}}"
                 }
-                
+
             }
         </script>
-        
+
     <?php } ?>
 
     <!-- Rating code -->
@@ -89,6 +89,9 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
 
+    <!-- scrollcode -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- scrollcode -->
     <x-google-analytics />
 </head>
 
@@ -124,6 +127,19 @@
 </script>
 
 @stack('after-scripts')
+<!-- scrollcode -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    $(document).ready(function() {
+        AOS.init({
+            offset: 200,
+            duration: 1000,
+            easing: 'ease', // default easing for AOS animations
+        });
+        AOS.refresh();
+    });
+</script>
+<!-- scrollcode -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 

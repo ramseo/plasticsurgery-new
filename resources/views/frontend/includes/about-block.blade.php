@@ -1,17 +1,17 @@
 <section id="about-us">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 col-sm-3 img-col">
+            <div class="col-xs-12 col-sm-3 img-col" data-aos="slide-right">
                 <img src="images/about.jpg" alt="" class="img-fluid">
             </div>
-            <div class="col-xs-12 col-sm-9 text-col">
+            <div class="col-xs-12 col-sm-9 text-col" data-aos="slide-left">
                 <div class="col-xs-12 common-heading">
                     <p class="shadow-text">About Us</p>
                     <p class="head">About Us</p>
                 </div>
                 <div class="mt-2">
                     @if(setting('about_us'))
-                        {!! setting('about_us') !!}
+                    {!! setting('about_us') !!}
                     @endif
                 </div>
                 @if(setting('about_link'))
