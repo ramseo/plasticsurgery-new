@@ -13,16 +13,17 @@ $latestBlogs = getLatestBlogs();
                 <div id="blogsSlider" class="owl-carousel owl-theme common-slider">
                     @php
                     $count = 0;
-                    $evenArr = array('2','4','6','8','10','12','14','16');
                     @endphp
                     @foreach ($latestBlogs as $latestBlog)
                     @php
                     $count++;
 
-                    if(in_array($count,$evenArr)){
+                    if($count == 1){
+                    $aos_animate = "data-aos='fade-right'";
+                    }elseif($count == 3){
                     $aos_animate = "data-aos='fade-left'";
                     }else{
-                    $aos_animate = "data-aos='fade-right'";
+                    $aos_animate = "data-aos='zoom-in'";
                     }
 
                     $details_url = route("frontend.posts.show",[$latestBlog->slug]);

@@ -587,7 +587,7 @@ strong {
 
 .common-card {
     border-radius: 5px;
-    box-shadow: 0 0 10px #ffcaf0;
+    /* box-shadow: 0 0 10px #ffcaf0; */
     overflow: hidden;
     padding-top: 15px;
 }
