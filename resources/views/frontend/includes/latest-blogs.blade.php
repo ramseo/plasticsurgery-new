@@ -52,7 +52,7 @@ $latestBlogs = getLatestBlogs();
 <script>
     $(document).ready(function() {
         $('#blogsSlider').owlCarousel({
-            loop: false,
+            loop: "<?= (count($latestBlogs) > 3) ? true : false ?>",
             margin: 20,
             nav: true,
             items: 3,
@@ -60,13 +60,16 @@ $latestBlogs = getLatestBlogs();
             autoplay: 2000,
             responsive: {
                 0: {
-                    items: 1
+                    items: 1,
+                    loop: "<?= (count($latestBlogs) > 1) ? true : false ?>",
                 },
                 767: {
-                    items: 2
+                    items: 2,
+                    loop: "<?= (count($latestBlogs) > 2) ? true : false ?>",
                 },
                 991: {
-                    items: 3
+                    items: 3,
+                    loop: "<?= (count($latestBlogs) > 3) ? true : false ?>",
                 }
             }
         });
