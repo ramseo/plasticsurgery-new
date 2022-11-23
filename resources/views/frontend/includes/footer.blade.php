@@ -186,7 +186,7 @@
          </div>
       </div>
       <hr style="background: #ddd;">
-      <div class="row" data-aos="zoom-in">
+      <div class="row">
          <div class="col mb-md-0">
             <div class="d-flex text-center justify-content-center align-items-center">
                <p class="font-weight-normal mb-0">
