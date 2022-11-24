@@ -18,7 +18,7 @@ $average = averageReview($reviews);
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{{url('/') . '/' . $type->slug . '/' . $city->slug}}">{{$type->name}}</a></li>
+                        <li class="breadcrumb-item"><a href="{{url('/') . '/' . $type->slug}}">{{$type->name}}</a></li>
                         <li class="breadcrumb-item"><a href="{{url('/') . '/' . $type->slug . '/' . $city->slug}}">{{$city->name}}</a></li>
                         <li class="breadcrumb-item active" aria-current="page">{{$vendor_details->business_name}}</li>
                     </ol>
