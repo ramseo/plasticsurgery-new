@@ -67,4 +67,8 @@ a {
     margin-left: 10px;
 }
 
+#sidebar ul li .c-active.c-show{
+    background: #eb0a3e;
+}
+
 /* code */

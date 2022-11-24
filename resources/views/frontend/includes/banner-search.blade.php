@@ -13,7 +13,7 @@
                             <p class="text">{{ setting('homepage_sub_title') }}</p>
                             @endif
                         </div>
-                        <div class="search-form-col text-center">
+                        <div class="search-form-col text-center" data-aos="zoom-in">
                             <form id="searchForm" action="">
                                 <div class="form-list">
                                     <ul class="list-inline">
