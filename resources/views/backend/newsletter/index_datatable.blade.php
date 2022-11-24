@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="col-4">
-                
+
             </div>
         </div>
 
@@ -39,18 +39,26 @@
                             <th>
                                 Added On
                             </th>
+                            <th>
+                                Action
+                            </th>
                         </tr>
                     </thead>
                     @if($newsletter)
                     <tbody>
                         @php $count = 0; @endphp
                         @foreach($newsletter as $item)
-                            @php $count++; @endphp
-                            <tr>
-                                <td>{{$count}}</td>
-                                <td>{{$item->email}}</td>
-                                <td>{{date('d-m-Y h:i:s', strtotime($item->created_at))}}</td>
-                            </tr>
+                        @php $count++; @endphp
+                        <tr>
+                            <td>{{$count}}</td>
+                            <td>{{$item->email}}</td>
+                            <td>{{date('d-m-Y h:i:s', strtotime($item->created_at))}}</td>
+                            <td>
+                                <a href="<?= url("admin/newsletter/destroy/$item->id") ?>" class="btn btn-danger " data-method="DELETE" data-token="<?= csrf_token() ?>" data-toggle="tooltip" title="Delete Newsletter" data-confirm="Are you sure?">
+                                    <i class="fas fa-trash-alt"></i>
+                                </a>
+                            </td>
+                        </tr>
                         @endforeach
                     </tbody>
                     @endif

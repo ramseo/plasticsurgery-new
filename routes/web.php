@@ -243,6 +243,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
      *
      */
     Route::get("newsletter", ['as' => "newsletter.index", 'uses' => "NewsletterController@index"]);
+    Route::delete("newsletter/destroy/{id}", ['as' => "newsletter.destroy", 'uses' => "NewsletterController@destroy"]);
 
     /*
      *
