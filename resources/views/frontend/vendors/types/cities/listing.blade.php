@@ -93,7 +93,10 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{$type->name}}</li>
+                            <li class="breadcrumb-item"><a href="{{url('/') . '/' . $type->slug}}">{{$type->name}}</a></li>
+                            <?php if (isset($city->name)) { ?>
+                                <li class="breadcrumb-item active" aria-current="page">{{$city->name}}</li>
+                            <?php } ?>
                         </ol>
                     </nav>
                 </div>

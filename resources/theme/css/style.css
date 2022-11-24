@@ -2654,3 +2654,18 @@ span.days {
     object-fit: cover;
     margin: 10px 0px;
 }
+
+.menuDropDown .dropdown-content a.active {
+    background: #f8f8f8;
+    text-decoration: none;
+    color: #fa4a6f !Important;
+    border-radius: 4px;
+}
+
+.menuDropDown .dropdown-content a.active i {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+#header li>a.active {
+    color: #fcb4c6;
+}

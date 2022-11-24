@@ -28,8 +28,14 @@ $city = getData('cities');
                                     @php
                                     $city = Session::get('vendor_city') != "" ? '/'. Session::get('vendor_city') : '';
                                     $bgImg = asset('storage/type/icon/'.$header_type->icon);
+                                    if(request()->segment(1) == $header_type->slug){
+                                    $active_cls = "active";
+                                    }else{
+                                    $active_cls = "";
+                                    }
+
                                     @endphp
-                                    <a href="{{ url('/') . '/' . $header_type->slug }}{{$city}}">
+                                    <a class="<?= $active_cls ?>" href="{{ url('/') . '/' . $header_type->slug }}{{$city}}">
                                         <i style="background-image:url(<?= $bgImg ?>)" class="icon-{{$header_type->slug}}">
                                             {{$header_type->name}}
                                         </i>
@@ -64,13 +70,16 @@ $city = getData('cities');
                         @endif
                         <!-- header menu -->
                         @foreach($header_menu as $menu_item)
-                        <li><a href="{{url('/') . '/' .$menu_item->url}}">{{$menu_item->title}}</a></li>
+                        <?php
+                        if (request()->segment(1) == $menu_item->url) {
+                            $active_mob_cls = "active";
+                        } else {
+                            $active_mob_cls = "";
+                        }
+                        ?>
+                        <li><a class="<?= $active_mob_cls ?>" href="{{url('/') . '/' .$menu_item->url}}">{{$menu_item->title}}</a></li>
                         @endforeach
                         <!-- header menu -->
-                        <!-- <li><a href="/bride">Bride</a></li>
-                        <li><a href="/groom">Groom</a></li>
-                        <li><a href="#">Ideas</a></li>
-                        <li><a href="/blog">Blog</a></li> -->
 
                         <li>
                             <a href="{{ route('login') }}">
@@ -80,7 +89,14 @@ $city = getData('cities');
                     </div>
                     <!-- header menu -->
                     @foreach($header_menu as $menu_item)
-                    <li class="bg-screen"><a href="{{url('/') . '/' .$menu_item->url}}">{{$menu_item->title}}</a></li>
+                    <?php
+                    if (request()->segment(1) == $menu_item->url) {
+                        $active_desk_cls = "active";
+                    } else {
+                        $active_desk_cls = "";
+                    }
+                    ?>
+                    <li class="bg-screen"><a class="<?= $active_desk_cls ?>" href="{{url('/') . '/' .$menu_item->url}}">{{$menu_item->title}}</a></li>
                     @endforeach
                     <!-- header menu -->
                     <!-- <li class="bg-screen"><a href="/bride">Bride</a></li>
