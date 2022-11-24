@@ -180,6 +180,10 @@ class PostsController extends Controller
      */
     public function store(PostsRequest $request)
     {
+        $request->validate([
+            'name' => "required|max:191|unique:posts,name",
+        ]);
+        
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
