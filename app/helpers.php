@@ -789,6 +789,9 @@ if (!function_exists('date_today')) {
 
     function isParent($itemId)
     {
+        if ($itemId == 0) {
+            return [];
+        }
         $data = DB::table('menuitem');
         $data->select('id', 'title', 'parent_id');
         $data->where('parent_id', $itemId);
