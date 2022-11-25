@@ -33,14 +33,28 @@ class MenuController extends Controller
     {
         $menuName = DB::table('menutype')->where('menu_id', $menu_id)->select('title')->first();
         if ($request->ajax()) {
-            $menus = Menu::where('menu_id', $menu_id)->select(['id', 'title', 'url', 'menu_id']);
+            $menus = Menu::where('menu_id', $menu_id)->select(['id', 'title', 'url', 'menu_id', 'parent_id']);
             return Datatables::of($menus)
                 ->addIndexColumn()
+                ->editColumn('title', function ($menu) {
+                    $getParentItem = getParentItem($menu->parent_id);
+                    $isParent = isParent($menu->id);
+                    if ($getParentItem) {
+                        $parentItem = "<div>$menu->title<span class='parent-menu-cls'>Child of $getParentItem->title<span></div>";
+                    } elseif ($isParent) {
+                        $parentItem = "<div>$menu->title<span class='parent-menu-red-cls'>Parent</span></div>";
+                    } else {
+                        $parentItem = "<div>$menu->title</div>";
+                    }
+
+                    $nameContent = $parentItem;
+                    return $nameContent;
+                })
                 ->addColumn('action', function ($menu) {
                     $btn = '<a href="' . url("admin/menus/edit/$menu->id") . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"></i></a>';
                     return $btn;
                 })
-                ->rawColumns(['action'])
+                ->rawColumns(['action', 'title'])
                 ->make(true);
         }
         return view('backend.menu.index_datatable', compact('menuName', 'menu_id'))->with('menu_id', $menu_id);
@@ -91,6 +105,7 @@ class MenuController extends Controller
             'title' => $request->title,
             'menu_id' => $menu_id,
             'url' =>  $url,
+            'parent_id' =>  $request->parent_id,
         );
 
         $menu = Menu::create($data);
@@ -122,9 +137,9 @@ class MenuController extends Controller
      *
      * @return Response
      */
+
     public function update($menu_id, $id, Request $request)
     {
-
         $module_title = 'Menu';
         $module_name = 'menus';
         $module_action = 'Update';
@@ -132,6 +147,7 @@ class MenuController extends Controller
         $menutype = Menu::where('menu_id', $menu_id)->where('id', $id)->firstOrFail();
         $menutype->title = $request->input('title');
         $menutype->url = $request->input('url');
+        $menutype->parent_id = $request->input('parent_id');
         $menutype->update();
 
         Flash::success("<i class='fas fa-check'></i> '" . Str::singular($module_title) . "' Updated Successfully")->important();

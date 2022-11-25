@@ -765,4 +765,35 @@ if (!function_exists('date_today')) {
             return "";
         }
     }
+
+    function getMenuItems($menu_id)
+    {
+        $data = DB::table('menuitem');
+        $data->select('id', 'title', 'url', 'parent_id');
+        $data->where('menu_id', $menu_id);
+        $data->where('parent_id', 0);
+        return $data->get();
+    }
+
+    function getParentItem($parent_id)
+    {
+        if ($parent_id == 0) {
+            return [];
+        };
+
+        $data = DB::table('menuitem');
+        $data->select('id', 'title');
+        $data->where('id', $parent_id);
+        return $data->first();
+    }
+
+    function isParent($itemId)
+    {
+        $data = DB::table('menuitem');
+        $data->select('id', 'title', 'parent_id');
+        $data->where('parent_id', $itemId);
+        $rr = $data->get()->toArray();
+        $array = json_decode(json_encode($rr), true);
+        return $array;
+    }
 }

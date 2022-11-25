@@ -59,16 +59,28 @@ a {
     cursor: pointer;
 }
 
-.vendor-img-bk-btn{
+.vendor-img-bk-btn {
     padding: 0px 0 15px 0;
 }
 
-.mar-lef-10{
+.mar-lef-10 {
     margin-left: 10px;
 }
 
-#sidebar ul li .c-active.c-show{
+#sidebar ul li .c-active.c-show {
     background: #eb0a3e;
+}
+
+.parent-menu-cls {
+    font-weight: bolder;
+    color: #2eb85c;
+    padding-left: 20px;
+}
+
+.parent-menu-red-cls {
+    font-weight: bolder;
+    color: #eb0a3e;
+    padding-left: 20px;
 }
 
 /* code */
