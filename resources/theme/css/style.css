@@ -2711,3 +2711,11 @@ span.days {
     list-style: none;
     display: inline-block !important;
 }
+
+.margin-404 {
+    margin-top: 135px;
+}
+
+.margin-404 h2{
+    color: #000;
+}

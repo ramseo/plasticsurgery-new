@@ -3119,15 +3119,15 @@ fieldset:disabled a.btn {
 
 .btn-warning {
     color: #ffffff;
-    background-color: #f5b759;
-    border-color: #f5b759;
+    background-color: #eb0a3e;
+    border-color: #eb0a3e;
     box-shadow: 0 0.125rem 0.25rem rgba(13, 20, 49, 0.07);
 }
 
 .btn-warning:hover {
     color: #ffffff;
-    background-color: #f3a735;
-    border-color: #f2a229;
+    background-color: #eb0a3e;
+    border-color: #eb0a3e;
 }
 
 .btn-warning:focus,
