@@ -2674,7 +2674,7 @@ span.days {
 .menu-child-item {
     display: inline-block !important;
     list-style: none;
-    padding: 5px 10px 5px 10px;
+    padding: 10px 10px 10px 10px;
     position: absolute;
     background: #f1f1f1;
     top: 65px;
@@ -2702,7 +2702,7 @@ span.days {
 }
 
 .hr-cls {
-    margin: 0 0 5px 0;
+    margin: 10px 0 10px 0;
     border-top: 0.1rem solid rgb(234, 14, 106);
 }
 
