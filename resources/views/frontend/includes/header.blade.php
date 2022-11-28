@@ -122,9 +122,11 @@ $city = getData('cities');
                     @foreach($header_menu as $menu_item)
                     <?php
                     $getChildItem = dynamicMenuChildItem($menu_item->id);
-                    $is_child_exists = 0;
+
                     if ($getChildItem) {
                         $is_child_exists = 1;
+                    } else {
+                        $is_child_exists = 0;
                     }
 
                     if (request()->segment(1) == $menu_item->url) {
@@ -134,7 +136,7 @@ $city = getData('cities');
                     }
                     ?>
                     <li class="bg-screen">
-                        <a class="<?= $active_desk_cls . " " . ($is_child_exists == 1) ? "is-parent-menu-exists" : "" ?>" href="{{url('/') . '/' .$menu_item->url}}">
+                        <a class="<?= $active_desk_cls . ' ' . ($is_child_exists == 1) ? 'is-parent-menu-exists' : '' ?>" href="<?= url('/') . '/' . $menu_item->url ?>">
                             {{$menu_item->title}}
                             <?php
                             if ($getChildItem) {
