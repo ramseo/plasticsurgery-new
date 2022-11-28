@@ -123,12 +123,6 @@ $city = getData('cities');
                     <?php
                     $getChildItem = dynamicMenuChildItem($menu_item->id);
 
-                    if ($getChildItem) {
-                        $is_child_exists = 1;
-                    } else {
-                        $is_child_exists = 0;
-                    }
-
                     if (request()->segment(1) == $menu_item->url) {
                         $active_desk_cls = "active";
                     } else {
@@ -136,7 +130,7 @@ $city = getData('cities');
                     }
                     ?>
                     <li class="bg-screen">
-                        <a class="<?= $active_desk_cls . ' ' . ($is_child_exists == 1) ? 'is-parent-menu-exists' : '' ?>" href="<?= url('/') . '/' . $menu_item->url ?>">
+                        <a class="<?= $active_desk_cls ?>  is-parent-menu-exists" href="<?= url('/') . '/' . $menu_item->url ?>">
                             {{$menu_item->title}}
                             <?php
                             if ($getChildItem) {
