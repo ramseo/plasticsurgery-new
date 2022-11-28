@@ -156,7 +156,8 @@ $city = getData('cities');
                                 $childHtml .= "<a class='$active_child_cls' href='" . url('/') . '/' . $child['url'] . "'>";
                                 $childHtml .= $child['title'];
                                 $childHtml .= "</a>";
-                                $childHtml .= "</li><hr class='hr-cls'>";
+                                $childHtml .= "<hr class='hr-cls'>";
+                                $childHtml .= "</li>";
                             }
                             $childHtml .= "</ul>";
                             echo $childHtml;
