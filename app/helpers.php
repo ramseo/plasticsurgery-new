@@ -703,7 +703,22 @@ if (!function_exists('date_today')) {
         }
         $item = $data->first();
         if ($item) {
-            return DB::table('menuitem')->where('menu_id', $item->menu_id)->select('*')->get();
+            return DB::table('menuitem')->where('menu_id', $item->menu_id)->where('parent_id', 0)->select('*')->get();
+        } else {
+            return [];
+        }
+    }
+
+    function dynamicMenuChildItem($menuId)
+    {
+        $data = DB::table('menuitem')
+            ->where('parent_id', $menuId)
+            ->select('*')
+            ->get()->toArray();
+        $array = json_decode(json_encode($data), true);
+
+        if ($array) {
+            return $array;
         } else {
             return [];
         }

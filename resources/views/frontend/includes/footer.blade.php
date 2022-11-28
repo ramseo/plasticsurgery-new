@@ -219,6 +219,13 @@
             }
          });
       });
+
+      $(".is-parent-menu-exists,.menu-child-item").hover(function() {
+         $($(this).parent().find('ul')).attr('style', 'display: block !important');
+      }, function() {
+         $($(this).parent().find('ul')).attr('style', 'display: none !important');
+      });
+
    });
 </script>
 @endpush

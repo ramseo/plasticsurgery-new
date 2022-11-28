@@ -68,7 +68,7 @@ $city = getData('cities');
                             <p class="text-right">Are you a vendor? <a class="btn btn-primary" href="{{ route('register-vendor') }}"> Register as a Vendor</a></p>
                         </div>
                         @endif
-                        <!-- header menu -->
+                        <!-- mob header menu -->
                         @foreach($header_menu as $menu_item)
                         <?php
                         if (request()->segment(1) == $menu_item->url) {
@@ -76,10 +76,41 @@ $city = getData('cities');
                         } else {
                             $active_mob_cls = "";
                         }
+
+                        $getChildItem_mob = dynamicMenuChildItem($menu_item->id);
                         ?>
-                        <li><a class="<?= $active_mob_cls ?>" href="{{url('/') . '/' .$menu_item->url}}">{{$menu_item->title}}</a></li>
+                        <li>
+                            <a class="<?= $active_mob_cls ?>" href="{{url('/') . '/' .$menu_item->url}}">
+                                {{$menu_item->title}}
+                                <?php
+                                if ($getChildItem_mob) {
+                                    echo "<i class='fa fa-chevron-down'></i>";
+                                }
+                                ?>
+                            </a>
+                        </li>
+                        <?php
+                        if ($getChildItem_mob) {
+                            $childHtml = "";
+                            $childHtml .= "<ul class='menu-child-item-mob'>";
+                            foreach ($getChildItem_mob as $childMob) {
+                                if (request()->segment(1) == $childMob['url']) {
+                                    $active_child_cls_mob = "active";
+                                } else {
+                                    $active_child_cls_mob = "";
+                                }
+                                $childHtml .= "<li>";
+                                $childHtml .= "<a class='$active_child_cls_mob' href='" . url('/') . '/' . $childMob['url'] . "'>";
+                                $childHtml .= $childMob['title'];
+                                $childHtml .= "</a>";
+                                $childHtml .= "</li>";
+                            }
+                            $childHtml .= "</ul>";
+                            echo $childHtml;
+                        }
+                        ?>
                         @endforeach
-                        <!-- header menu -->
+                        <!-- mob header menu -->
 
                         <li>
                             <a href="{{ route('login') }}">
@@ -90,20 +121,50 @@ $city = getData('cities');
                     <!-- header menu -->
                     @foreach($header_menu as $menu_item)
                     <?php
+                    $getChildItem = dynamicMenuChildItem($menu_item->id);
+                    $is_child_exists = 0;
+                    if ($getChildItem) {
+                        $is_child_exists = 1;
+                    }
+
                     if (request()->segment(1) == $menu_item->url) {
                         $active_desk_cls = "active";
                     } else {
                         $active_desk_cls = "";
                     }
                     ?>
-                    <li class="bg-screen"><a class="<?= $active_desk_cls ?>" href="{{url('/') . '/' .$menu_item->url}}">{{$menu_item->title}}</a></li>
+                    <li class="bg-screen">
+                        <a class="<?= $active_desk_cls . " " . ($is_child_exists == 1) ? "is-parent-menu-exists" : "" ?>" href="{{url('/') . '/' .$menu_item->url}}">
+                            {{$menu_item->title}}
+                            <?php
+                            if ($getChildItem) {
+                                echo "<i class='fa fa-chevron-down'></i>";
+                            }
+                            ?>
+                        </a>
+                        <?php
+                        if ($getChildItem) {
+                            $childHtml = "";
+                            $childHtml .= "<ul class='menu-child-item'>";
+                            foreach ($getChildItem as $child) {
+                                if (request()->segment(1) == $child['url']) {
+                                    $active_child_cls = "active";
+                                } else {
+                                    $active_child_cls = "";
+                                }
+                                $childHtml .= "<li class='bg-screen'>";
+                                $childHtml .= "<a class='$active_child_cls' href='" . url('/') . '/' . $child['url'] . "'>";
+                                $childHtml .= $child['title'];
+                                $childHtml .= "</a>";
+                                $childHtml .= "</li><hr class='hr-cls'>";
+                            }
+                            $childHtml .= "</ul>";
+                            echo $childHtml;
+                        }
+                        ?>
+                    </li>
                     @endforeach
                     <!-- header menu -->
-                    <!-- <li class="bg-screen"><a href="/bride">Bride</a></li>
-                    <li class="bg-screen"><a href="/groom">Groom</a></li>
-                    <li class="bg-screen"><a href="#">Ideas</a></li>
-                    <li><a href="{{ route('frontend.travel.index') }}">Travel</a></li>
-                    <li class="bg-screen"><a href="/blog">Blog</a></li> -->
                     @auth
                     @if(auth()->user()->getRoleNames()->first() == 'super admin')
                     <li>

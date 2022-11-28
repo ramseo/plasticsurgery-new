@@ -285,6 +285,7 @@ span.days {
 
 .site-main-menu>li {
     margin: 0 0 0 35px;
+    position: relative;
 }
 
 
@@ -2668,4 +2669,45 @@ span.days {
 
 #header li>a.active {
     color: #fcb4c6;
+}
+
+.menu-child-item {
+    display: inline-block !important;
+    list-style: none;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 65px;
+    display: none !important;
+}
+
+.menu-child-item li {
+    width: 150px;
+}
+
+.menu-child-item li a {
+    padding: 0;
+    color: black !important;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+}
+
+.menu-child-item li a:hover {
+    color: #fa4a6f !important;
+}
+
+.menu-child-item li a.active {
+    color: #fa4a6f !important;
+}
+
+.hr-cls {
+    margin: 0;
+    border-top: 0.1rem solid rgb(234, 14, 106);
+}
+
+.menu-child-item-mob {
+    padding: 0px 0px 0 15px !important;
+    list-style: none;
+    display: inline-block !important;
 }

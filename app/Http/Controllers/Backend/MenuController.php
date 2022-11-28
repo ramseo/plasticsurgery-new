@@ -42,7 +42,7 @@ class MenuController extends Controller
                     if ($getParentItem) {
                         $parentItem = "<div>$menu->title<span class='parent-menu-cls'>Child of $getParentItem->title<span></div>";
                     } elseif ($isParent) {
-                        $parentItem = "<div>$menu->title<span class='parent-menu-red-cls'>Parent</span></div>";
+                        $parentItem = "<div>$menu->title<span class='parent-menu-red-cls'>Parent Item</span></div>";
                     } else {
                         $parentItem = "<div>$menu->title</div>";
                     }
