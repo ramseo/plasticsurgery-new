@@ -55,7 +55,7 @@
                             <th>
                                 Updated At
                             </th>
-                            <th class="text-right">
+                            <th class="text-center">
                                 Action
                             </th>
                         </tr>

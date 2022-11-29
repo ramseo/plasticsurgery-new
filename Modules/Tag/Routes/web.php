@@ -46,8 +46,7 @@ Route::group(['namespace' => '\Modules\Tag\Http\Controllers\Backend', 'as' => 'b
     Route::get("tags/index_list", ['as' => "tags.index_list", 'uses' => "TagsController@index_list"]);
     Route::get("tags/index_data", ['as' => "tags.index_data", 'uses' => "TagsController@index_data"]);
     Route::get("tags/trashed", ['as' => "tags.trashed", 'uses' => "TagsController@trashed"]);
+    Route::get("tags/destroy/{id}", ['as' => "tags.destroy", 'uses' => "TagsController@destroy"]);
     Route::patch("tags/trashed/{id}", ['as' => "tags.restore", 'uses' => "TagsController@restore"]);
     Route::resource("tags", "TagsController");
 });
-
-

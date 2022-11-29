@@ -175,17 +175,9 @@
                 data: 'action',
                 name: 'action',
                 orderable: false,
-                searchable: false
+                searchable: false 
             }
         ]
-    });
-
-    $(document).on("click", '.del-review-popup', function(event) {
-        event.preventDefault();
-        var r = confirm("Are you sure you want to delete?");
-        if (r == true) {
-            window.location = $(this).attr('href');
-        }
     });
 
     function checkBox(elm) {

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{App::getLocale()}}">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,13 +26,18 @@
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+Bengali+UI&display=swap" rel="stylesheet" />
-    <style>body{font-family:Ubuntu,"Noto Sans Bengali UI", Arial, Helvetica, sans-serif}</style>
+    <style>
+        body {
+            font-family: Ubuntu, "Noto Sans Bengali UI", Arial, Helvetica, sans-serif
+        }
+    </style>
 
     @stack('after-styles')
 
     <x-google-analytics />
 
 </head>
+
 <body class="c-app">
 
     <!-- Sidebar -->
@@ -74,8 +80,19 @@
 
         <script src="{{ mix('js/backend.js') }}"></script>
 
+        <script>
+            $(document).on("click", '.del-review-popup', function(event) {
+                event.preventDefault();
+                var r = confirm("Are you sure you want to delete?");
+                if (r == true) {
+                    window.location = $(this).attr('href');
+                }
+            });
+        </script>
+
         @stack('after-scripts')
         <!-- / Scripts -->
 
-    </body>
-    </html>
+</body>
+
+</html>
