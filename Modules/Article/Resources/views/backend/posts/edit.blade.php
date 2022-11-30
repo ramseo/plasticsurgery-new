@@ -28,7 +28,7 @@
             <div class="col-4">
                 <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
                     <a href="{{ route("backend.$module_name.index") }}" class="btn btn-secondary mt-1 btn-sm" data-toggle="tooltip" title="{{ ucwords($module_name) }} List"><i class="fas fa-list"></i> List</a>
-{{--                    <a href="{{ route("backend.$module_name.show", $$module_name_singular->id) }}" class="btn btn-primary btn-sm ml-1" data-toggle="tooltip" title="Show Details"><i class="fas fa-tv"></i> Show</a>--}}
+{{--                    <a href="{{ route("backend.$module_name.show", $module_name_singular->id) }}" class="btn btn-primary btn-sm ml-1" data-toggle="tooltip" title="Show Details"><i class="fas fa-tv"></i> Show</a>--}}
                 </div>
             </div>
             <!--/.col-->
@@ -39,7 +39,7 @@
 
         <div class="row mt-4">
             <div class="col">
-                {{ html()->modelForm($$module_name_singular, 'PATCH', route("backend.$module_name.update", $$module_name_singular))->class('form')->open() }}
+                {{ html()->modelForm($module_name_singular, 'PATCH', route("backend.$module_name.update", $module_name_singular))->class('form')->open() }}
 
                 @include ("article::backend.$module_name.form")
 
@@ -53,7 +53,7 @@
                     <div class="col-8">
                         <div class="float-right">
                             @can('delete_'.$module_name)
-                            <a href="{{route("backend.$module_name.destroy", $$module_name_singular)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>
+                            <a href="{{route("backend.$module_name.destroy", $module_name_singular)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>
                             @endcan
                             <a href="{{ route("backend.$module_name.index") }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>
                         </div>
@@ -70,8 +70,8 @@
         <div class="row">
             <div class="col">
                 <small class="float-right text-muted">
-                    Updated: {{$$module_name_singular->updated_at->diffForHumans()}},
-                    Created at: {{$$module_name_singular->created_at->isoFormat('LLLL')}}
+                    Updated: {{$module_name_singular->updated_at->diffForHumans()}},
+                    Created at: {{$module_name_singular->created_at->isoFormat('LLLL')}}
                 </small>
             </div>
         </div>

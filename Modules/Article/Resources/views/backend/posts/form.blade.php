@@ -94,11 +94,39 @@
             $field_relation = "category";
             $field_placeholder = __("Select an option");
             $required = "required";
+
             ?>
             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-            {{ html()->select($field_name, isset($$module_name_singular)?optional($$module_name_singular->$field_relation)->pluck('name', 'id'):'')->placeholder($field_placeholder)->class('form-control select2-category')->attributes(["$required"]) }}
+            {{ html()->select($field_name, ($module_name_singular) ? optional($module_name_singular->$field_relation)->pluck('name', 'id'):'')->placeholder($field_placeholder)->class('form-control select2-category')->attributes(["$required"]) }}
         </div>
     </div>
+    <!-- Multiple Tags -->
+    <div class="col-4">
+        <div class="form-group tags-group">
+            <?php
+            $field_name = 'tag_ids[]';
+            $field_lable = __("article::$module_name.tag_ids");
+            $field_relation = "tag_ids";
+            $required = "";
+
+            if (!$module_name_singular) {
+            ?>
+                {{ html()->label($field_lable, "tag_ids") }}
+                {{ html()->select($field_name, ($module_name_singular) ?optional($module_name_singular->$field_relation)->pluck('name', 'id'):'')->class('form-control select2-tags')->attributes(['multiple']) }}
+            <?php
+            } else {
+                $getSelectedTagVal = getSelectedTagVal(json_decode($module_name_singular->tag_ids));
+            ?>
+                <label for="tag_ids">Tags</label>
+                <select name="tag_ids[]" class="form-control select2-tags" multiple>
+                    <?php foreach ($getSelectedTagVal as $item) { ?>
+                        <option value="<?= $item['id'] ?>" selected><?= $item['name'] ?></option>
+                    <?php } ?>
+                </select>
+            <?php } ?>
+        </div>
+    </div>
+    <!-- Multiple Tags -->
     <div class="col-4">
         <div class="form-group">
             <?php
@@ -107,9 +135,9 @@
             $field_placeholder = __("Select an option");
             $required = "required";
             $select_options = [
-                'Article'=>'Article',
-                'Feature'=>'Feature',
-                'News'=>'News',
+                'Article' => 'Article',
+                'Feature' => 'Feature',
+                'News' => 'News',
             ];
             ?>
             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
@@ -124,8 +152,8 @@
             $field_placeholder = __("Select an option");
             $required = "required";
             $select_options = [
-                '1'=>'Yes',
-                '0'=>'No',
+                '1' => 'Yes',
+                '0' => 'No',
             ];
             ?>
             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
@@ -133,24 +161,7 @@
         </div>
     </div>
 </div>
-{{--<div class="row">--}}
-{{--    <div class="col">--}}
-{{--        <div class="form-group">--}}
-{{--            <?php--}}
-{{--            $field_name = 'tags_list[]';--}}
-{{--            $field_lable = __("article::$module_name.tags");--}}
-{{--            $field_relation = "tags";--}}
-{{--            $field_placeholder = __("Select an option");--}}
-{{--            $required = "";--}}
-{{--            ?>--}}
-{{--            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}--}}
-{{--            {{ html()->multiselect($field_name,--}}
-{{--                isset($$module_name_singular)?optional($$module_name_singular->$field_relation)->pluck('name', 'id'):'',--}}
-{{--                isset($$module_name_singular)?optional($$module_name_singular->$field_relation)->pluck('id')->toArray():''--}}
-{{--                )->class('form-control select2-tags')->attributes(["$required"]) }}--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
+
 <div class="row">
     <div class="col-6">
         <div class="form-group">
@@ -160,9 +171,9 @@
             $field_placeholder = __("Select an option");
             $required = "required";
             $select_options = [
-                '1'=>'Published',
-                '0'=>'Unpublished',
-                '2'=>'Draft'
+                '1' => 'Published',
+                '0' => 'Unpublished',
+                '2' => 'Draft'
             ];
             ?>
             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
@@ -279,92 +290,98 @@
 
 @push ('after-scripts')
 <script type="text/javascript">
-$(document).ready(function() {
-    $('.select2-category').select2({
-        theme: "bootstrap",
-        placeholder: '@lang("Select an option")',
-        minimumInputLength: 2,
-        allowClear: true,
-        ajax: {
-            url: '{{route("backend.categories.index_list")}}',
-            dataType: 'json',
-            data: function (params) {
-                return {
-                    q: $.trim(params.term)
-                };
-            },
-            processResults: function (data) {
-                return {
-                    results: data
-                };
-            },
-            cache: true
-        }
-    });
+    $(document).ready(function() {
+        $('.select2-category').select2({
+            theme: "bootstrap",
+            placeholder: '@lang("Select an option")',
+            minimumInputLength: 0,
+            allowClear: true,
+            ajax: {
+                url: '{{route("backend.categories.index_list")}}',
+                dataType: 'json',
+                data: function(params) {
+                    return {
+                        q: $.trim(params.term)
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data
+                    };
+                },
+                cache: true
+            }
+        });
 
-    $('.select2-tags').select2({
-        theme: "bootstrap",
-        placeholder: '@lang("Select an option")',
-        minimumInputLength: 2,
-        allowClear: true,
-        ajax: {
-            url: '{{route("backend.tags.index_list")}}',
-            dataType: 'json',
-            data: function (params) {
-                return {
-                    q: $.trim(params.term)
-                };
-            },
-            processResults: function (data) {
-                return {
-                    results: data
-                };
-            },
-            cache: true
-        }
+
+        $('.select2-tags').select2({
+            theme: "bootstrap",
+            multiple: true,
+            placeholder: '@lang("Select an option")',
+            minimumInputLength: 0,
+            allowClear: true,
+            ajax: {
+                url: '{{route("backend.tags.index_list")}}',
+                dataType: 'json',
+                data: function(params) {
+                    return {
+                        q: $.trim(params.term)
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data
+                    };
+                },
+                cache: true
+            }
+        });
+
     });
-});
 </script>
 
 <!-- Date Time Picker & Moment Js-->
 <script type="text/javascript">
-$(function() {
-    $('.datetime').datetimepicker({
-        format: 'YYYY-MM-DD HH:mm:ss',
-        icons: {
-            time: 'far fa-clock',
-            date: 'far fa-calendar-alt',
-            up: 'fas fa-arrow-up',
-            down: 'fas fa-arrow-down',
-            previous: 'fas fa-chevron-left',
-            next: 'fas fa-chevron-right',
-            today: 'far fa-calendar-check',
-            clear: 'far fa-trash-alt',
-            close: 'fas fa-times'
-        }
+    $(function() {
+        $('.datetime').datetimepicker({
+            format: 'YYYY-MM-DD HH:mm:ss',
+            icons: {
+                time: 'far fa-clock',
+                date: 'far fa-calendar-alt',
+                up: 'fas fa-arrow-up',
+                down: 'fas fa-arrow-down',
+                previous: 'fas fa-chevron-left',
+                next: 'fas fa-chevron-right',
+                today: 'far fa-calendar-check',
+                clear: 'far fa-trash-alt',
+                close: 'fas fa-times'
+            }
+        });
     });
-});
 </script>
 
 <script type="text/javascript" src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
 <script type="text/javascript" src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 
 <script type="text/javascript">
+    CKEDITOR.replace('content', {
+        filebrowserImageBrowseUrl: '/file-manager/ckeditor',
+        language: '{{App::getLocale()}}',
+        defaultLanguage: 'en'
+    });
 
-CKEDITOR.replace('content', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
+    document.addEventListener("DOMContentLoaded", function() {
 
-document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById('button-image').addEventListener('click', (event) => {
+            event.preventDefault();
 
-  document.getElementById('button-image').addEventListener('click', (event) => {
-    event.preventDefault();
+            window.open('/file-manager/fm-button', 'fm', 'width=800,height=600');
+        });
+    });
 
-    window.open('/file-manager/fm-button', 'fm', 'width=800,height=600');
-  });
-});
-
-// set file link
-function fmSetLink($url) {
-  document.getElementById('featured_image').value = $url;
-}
+    // set file link
+    function fmSetLink($url) {
+        document.getElementById('featured_image').value = $url;
+    }
 </script>
 @endpush

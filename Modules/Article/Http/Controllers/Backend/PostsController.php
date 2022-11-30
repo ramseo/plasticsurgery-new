@@ -38,7 +38,7 @@ class PostsController extends Controller
         $this->module_icon = 'fas fa-file-alt';
 
         // module model name, path
-        $this->module_model = "Modules\Article\Entities\Post"; 
+        $this->module_model = "Modules\Article\Entities\Post";
     }
 
     /**
@@ -59,7 +59,7 @@ class PostsController extends Controller
 
         $$module_name = $module_model::paginate();
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return view(
             "article::backend.$module_path.index_datatable",
@@ -83,30 +83,30 @@ class PostsController extends Controller
         $data = $$module_name;
 
         return Datatables::of($$module_name)
-                        ->addColumn('action', function ($data) {
-                            $module_name = $this->module_name;
+            ->addColumn('action', function ($data) {
+                $module_name = $this->module_name;
 
-                            return view('backend.includes.action_column', compact('module_name', 'data'));
-                        })
-                        ->editColumn('name', function ($data) {
-                            $is_featured = ($data->is_featured) ? '<span class="badge badge-primary">Featured</span>' : '';
+                return view('backend.includes.action_column', compact('module_name', 'data'));
+            })
+            ->editColumn('name', function ($data) {
+                $is_featured = ($data->is_featured) ? '<span class="badge badge-primary">Featured</span>' : '';
 
-                            return $data->name.' '.$data->status_formatted.' '.$is_featured;
-                        })
-                        ->editColumn('updated_at', function ($data) {
-                            $module_name = $this->module_name;
+                return $data->name . ' ' . $data->status_formatted . ' ' . $is_featured;
+            })
+            ->editColumn('updated_at', function ($data) {
+                $module_name = $this->module_name;
 
-                            $diff = Carbon::now()->diffInHours($data->updated_at);
+                $diff = Carbon::now()->diffInHours($data->updated_at);
 
-                            if ($diff < 25) {
-                                return $data->updated_at->diffForHumans();
-                            } else {
-                                return $data->updated_at->isoFormat('LLLL');
-                            }
-                        })
-                        ->rawColumns(['name', 'status', 'action'])
-                        ->orderColumns(['id'], '-:column $1')
-                        ->make(true);
+                if ($diff < 25) {
+                    return $data->updated_at->diffForHumans();
+                } else {
+                    return $data->updated_at->isoFormat('LLLL');
+                }
+            })
+            ->rawColumns(['name', 'status', 'action'])
+            ->orderColumns(['id'], '-:column $1')
+            ->make(true);
     }
 
     /**
@@ -152,18 +152,20 @@ class PostsController extends Controller
      */
     public function create()
     {
+
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
         $module_icon = $this->module_icon;
         $module_model = $this->module_model;
         $module_name_singular = Str::singular($module_name);
+        $module_name_singular = ""; 
 
         $module_action = 'Create';
 
         $categories = Category::pluck('name', 'id');
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return view(
             "article::backend.$module_name.create",
@@ -183,7 +185,7 @@ class PostsController extends Controller
         $request->validate([
             'name' => "required|max:191|unique:posts,name",
         ]);
-        
+
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
@@ -193,17 +195,25 @@ class PostsController extends Controller
 
         $module_action = 'Store';
 
-        $data = $request->except('tags_list');
+        $data = $request->all();
+        // $data = $request->except('tag_ids');
         $data['created_by_name'] = auth()->user()->name;
 
-        $$module_name_singular = $module_model::create($data);
-        $$module_name_singular->tags()->attach($request->input('tags_list'));
+        if ($data['tag_ids']) {
+            $jsonEncodeTags = json_encode($data['tag_ids']);
+            $data['tag_ids'] = $jsonEncodeTags;
+        } else {
+            $data['tag_ids'] = Null;
+        }
 
-        event(new PostCreated($$module_name_singular));
+        $module_name_singular = $module_model::create($data);
+        // $module_name_singular->tags()->attach($request->input('tag_ids'));
 
-        Flash::success("<i class='fas fa-check'></i> New '".Str::singular($module_title)."' Added")->important();
+        event(new PostCreated($module_name_singular));
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Flash::success("<i class='fas fa-check'></i> New '" . Str::singular($module_title) . "' Added")->important();
+
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $module_name_singular->name . '(ID:' . $module_name_singular->id . ") ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return redirect("admin/$module_name");
     }
@@ -229,12 +239,12 @@ class PostsController extends Controller
         $$module_name_singular = $module_model::findOrFail($id);
 
         $activities = Activity::where('subject_type', '=', $module_model)
-                                ->where('log_name', '=', $module_name)
-                                ->where('subject_id', '=', $id)
-                                ->latest()
-                                ->paginate();
+            ->where('log_name', '=', $module_name)
+            ->where('subject_id', '=', $id)
+            ->latest()
+            ->paginate();
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return view(
             "article::backend.$module_name.show",
@@ -256,19 +266,19 @@ class PostsController extends Controller
         $module_path = $this->module_path;
         $module_icon = $this->module_icon;
         $module_model = $this->module_model;
-        $module_name_singular = Str::singular($module_name);
+        $module_name_singular_ac = Str::singular($module_name);
 
         $module_action = 'Edit';
 
-        $$module_name_singular = $module_model::findOrFail($id);
+        $module_name_singular = $module_model::findOrFail($id);
 
         $categories = Category::pluck('name', 'id');
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $module_name_singular->name . '(ID:' . $module_name_singular->id . ") ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return view(
             "article::backend.$module_name.edit",
-            compact('categories', 'module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action', "$module_name_singular")
+            compact('categories', 'module_title', 'module_name', 'module_icon', 'module_name_singular', 'module_action')
         );
     }
 
@@ -291,22 +301,24 @@ class PostsController extends Controller
 
         $module_action = 'Update';
 
-        $$module_name_singular = $module_model::findOrFail($id);
+        $module_name_singular = $module_model::findOrFail($id);
 
-        $$module_name_singular->update($request->except('tags_list'));
-
-        if ($request->input('tags_list') == null) {
-            $tags_list = [];
+        if ($request->input('tag_ids') == null) {
+            $tags_list = Null;
         } else {
-            $tags_list = $request->input('tags_list');
+            $tags_list = json_encode($request->input('tag_ids'));
         }
-        $$module_name_singular->tags()->sync($tags_list);
 
-        event(new PostUpdated($$module_name_singular));
+        $module_name_singular->tag_ids = $tags_list;
+        $module_name_singular->update($request->except('tag_ids'));
 
-        Flash::success("<i class='fas fa-check'></i> '".Str::singular($module_title)."' Updated Successfully")->important();
+        // $module_name_singular->tags()->sync($tags_list);
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        event(new PostUpdated($module_name_singular));
+
+        Flash::success("<i class='fas fa-check'></i>" . " " . Str::singular($module_title) . " " . "Updated Successfully")->important();
+
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $module_name_singular->name . '(ID:' . $module_name_singular->id . ") ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return redirect("admin/$module_name");
     }
@@ -334,9 +346,9 @@ class PostsController extends Controller
         DB::table($module_name)->where('id', $id)->delete();
         // $$module_name_singular->delete();
 
-        Flash::success('<i class="fas fa-check"></i> '.label_case($module_name_singular).' Deleted Successfully!')->important();
+        Flash::success('<i class="fas fa-check"></i> ' . label_case($module_name_singular) . ' Deleted Successfully!')->important();
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.', ID:'.$$module_name_singular->id." ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $$module_name_singular->name . ', ID:' . $$module_name_singular->id . " ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return redirect("admin/$module_name");
     }
@@ -360,7 +372,7 @@ class PostsController extends Controller
 
         $$module_name = $module_model::onlyTrashed()->orderBy('deleted_at', 'desc')->paginate();
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name);
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . Auth::user()->name);
 
         return view(
             "article::backend.$module_name.trash",
@@ -390,9 +402,9 @@ class PostsController extends Controller
         $$module_name_singular = $module_model::withTrashed()->find($id);
         $$module_name_singular->restore();
 
-        Flash::success('<i class="fas fa-check"></i> '.label_case($module_name_singular).' Data Restoreded Successfully!')->important();
+        Flash::success('<i class="fas fa-check"></i> ' . label_case($module_name_singular) . ' Data Restoreded Successfully!')->important();
 
-        Log::info(label_case($module_action)." '$module_name': '".$$module_name_singular->name.', ID:'.$$module_name_singular->id." ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_action) . " '$module_name': '" . $$module_name_singular->name . ', ID:' . $$module_name_singular->id . " ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return redirect("admin/$module_name");
     }

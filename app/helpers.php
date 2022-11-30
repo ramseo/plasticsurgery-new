@@ -814,4 +814,18 @@ if (!function_exists('date_today')) {
         $array = json_decode(json_encode($rr), true);
         return $array;
     }
+
+    function getSelectedTagVal($tags)
+    {
+        if (!$tags) {
+            return;
+        }
+    
+        $data = DB::table('tags');
+        $data->select('id', 'name');
+        $data->whereIn('id', $tags);
+        $rr = $data->get()->toArray();
+        $array = json_decode(json_encode($rr), true);
+        return $array;
+    }
 }

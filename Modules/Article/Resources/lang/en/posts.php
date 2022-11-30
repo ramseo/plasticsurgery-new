@@ -9,6 +9,7 @@ return [
     'content'          => 'Content',
     'featured_image'   => 'Featured Image',
     'category_id'      => 'Category',
+    'tag_ids'      => 'Tags',
     'type'             => 'Type',
     'is_featured'      => 'Is Featured',
     'tags'             => 'Tags',
