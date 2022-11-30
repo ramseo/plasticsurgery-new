@@ -820,7 +820,7 @@ if (!function_exists('date_today')) {
         if (!$tags) {
             return;
         }
-    
+
         $data = DB::table('tags');
         $data->select('id', 'name');
         $data->whereIn('id', $tags);

@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Yajra\DataTables\DataTables;
 use Carbon\Carbon;
+use DB;
 
 class TagsController extends BackendBaseController
 {
@@ -82,11 +83,19 @@ class TagsController extends BackendBaseController
             return response()->json([]);
         }
 
-        $query_data = $module_model::where('name', 'LIKE', "%$term%")->orWhere('slug', 'LIKE', "%$term%")->limit(7)->get();
+        $query_data = DB::table($module_name)->where('status', 1);
+        $query_data->where(function ($query_data) use ($term) {
+            $query_data->orWhere('name', 'LIKE', "%$term%");
+            $query_data->orWhere('slug', 'LIKE', "%$term%");
+        });
+        $query_data_result = $query_data->get();
+        // $query_data = $module_model::where('name', 'LIKE', "%$term%")
+        //     ->orWhere('slug', 'LIKE', "%$term%")
+        //     ->orWhere('status', 1)->limit(7)->get();
 
         $$module_name = [];
 
-        foreach ($query_data as $row) {
+        foreach ($query_data_result as $row) {
             $$module_name[] = [
                 'id'   => $row->id,
                 'text' => $row->name . ' (Slug: ' . $row->slug . ')',
@@ -315,7 +324,7 @@ class TagsController extends BackendBaseController
      * @return Response
      */
     public function destroy($id)
-    {   
+    {
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
@@ -326,8 +335,7 @@ class TagsController extends BackendBaseController
         $module_action = 'destroy';
 
         $module_name_singular = $module_model::findOrFail($id);
-
-        $module_name_singular->delete();
+        DB::table($module_name)->where('id', $id)->delete();
 
         flash('<i class="fas fa-check"></i> ' . label_case($module_name_singular->name) . ' Deleted Successfully!')->success()->important();
 
