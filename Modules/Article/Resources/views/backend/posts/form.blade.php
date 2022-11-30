@@ -119,9 +119,15 @@
             ?>
                 <label for="tag_ids">Tags</label>
                 <select name="tag_ids[]" class="form-control select2-tags" multiple>
-                    <?php foreach ($getSelectedTagVal as $item) { ?>
-                        <option value="<?= $item['id'] ?>" selected><?= $item['name'] ?></option>
-                    <?php } ?>
+                    <?php
+                    if ($getSelectedTagVal) {
+                        foreach ($getSelectedTagVal as $item) {
+                    ?>
+                            <option value="<?= $item['id'] ?>" selected><?= $item['name'] ?></option>
+                    <?php
+                        }
+                    }
+                    ?>
                 </select>
             <?php } ?>
         </div>
