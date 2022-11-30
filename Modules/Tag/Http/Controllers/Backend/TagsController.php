@@ -98,7 +98,8 @@ class TagsController extends BackendBaseController
         foreach ($query_data_result as $row) {
             $$module_name[] = [
                 'id'   => $row->id,
-                'text' => $row->name . ' (Slug: ' . $row->slug . ')',
+                'text' => $row->name,
+                // 'text' => $row->name . ' (Slug: ' . $row->slug . ')',
             ];
         }
 
