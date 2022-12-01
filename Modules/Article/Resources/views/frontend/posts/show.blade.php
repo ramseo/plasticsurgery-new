@@ -57,6 +57,29 @@
                     </span>
                     <a target="_blank" href="{{route('frontend.categories.show', [$$module_name_singular->category->slug])}}" class="badge badge-sm badge-warning text-uppercase px-3">{{$$module_name_singular->category_name}}</a>
                 </div>
+                <!-- Multiple Tags -->
+                <?php
+                if ($$module_name_singular->tag_ids) {
+                    $arr = json_decode($$module_name_singular->tag_ids);
+                    $getPostTags = getSelectedTagVal($arr);
+                ?>
+                    <div class="blog-flex-cat">
+                        <span class="font-weight-bold">
+                            Tags:
+                        </span>
+                        <?php
+                        foreach ($getPostTags as $tag) {
+                            $tagSlug = $tag['slug'];
+                        ?>
+                            <a target="_blank" href="{{route('frontend.tags.show', [$tagSlug])}}" class="badge badge-sm badge-warning text-uppercase px-3">
+                                <?= $tag['name'] ?>
+                            </a>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                <?php } ?>
+                <!-- Multiple Tags -->
                 <div class="blog-intro">
                     {{$$module_name_singular->intro}}
                 </div>
@@ -65,7 +88,7 @@
                 <div class="desc-top">
                     {!!$$module_name_singular->content!!}
                 </div>
-                <div class="tags-cls" >
+                <div class="tags-cls">
                     @foreach ($$module_name_singular->tags as $tag)
                     <a href="{{route('frontend.tags.show', [encode_id($tag->id), $tag->slug])}}" class="badge badge-sm badge-info text-uppercase px-3">{{$tag->name}}</a>
                     @endforeach

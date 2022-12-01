@@ -822,10 +822,19 @@ if (!function_exists('date_today')) {
         }
 
         $data = DB::table('tags');
-        $data->select('id', 'name');
+        $data->select('id', 'name', 'slug');
         $data->whereIn('id', $tags);
         $rr = $data->get()->toArray();
         $array = json_decode(json_encode($rr), true);
         return $array;
+    }
+
+    function getPostsByTag($tagId)
+    {
+        $data = DB::table('posts')
+            ->select('*')
+            ->whereJsonContains('tag_ids', ["$tagId"])
+            ->paginate(6);
+        return $data;
     }
 }

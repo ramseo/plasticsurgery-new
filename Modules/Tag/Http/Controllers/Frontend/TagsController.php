@@ -31,24 +31,25 @@ class TagsController extends Controller
      *
      * @return Response
      */
-    public function index()
-    {
-        $module_title = $this->module_title;
-        $module_name = $this->module_name;
-        $module_path = $this->module_path;
-        $module_icon = $this->module_icon;
-        $module_model = $this->module_model;
-        $module_name_singular = Str::singular($module_name);
 
-        $module_action = 'List';
+    // public function index()
+    // {
+    //     $module_title = $this->module_title;
+    //     $module_name = $this->module_name;
+    //     $module_path = $this->module_path;
+    //     $module_icon = $this->module_icon;
+    //     $module_model = $this->module_model;
+    //     $module_name_singular = Str::singular($module_name);
 
-        $$module_name = $module_model::with('posts')->paginate();
+    //     $module_action = 'List';
 
-        return view(
-            "tag::frontend.$module_path.index",
-            compact('module_title', 'module_name', "$module_name", 'module_icon', 'module_action', 'module_name_singular')
-        );
-    }
+    //     $$module_name = $module_model::with('posts')->paginate();
+
+    //     return view(
+    //         "tag::frontend.$module_path.index",
+    //         compact('module_title', 'module_name', "$module_name", 'module_icon', 'module_action', 'module_name_singular')
+    //     );
+    // }
 
     /**
      * Display the specified resource.
@@ -57,10 +58,9 @@ class TagsController extends Controller
      *
      * @return Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        $id = decode_id($id);
-
+        // code
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
@@ -70,12 +70,32 @@ class TagsController extends Controller
 
         $module_action = 'Show';
 
-        $$module_name_singular = $module_model::findOrFail($id);
+        $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
         $posts = $$module_name_singular->posts()->with('category', 'tags', 'comments')->paginate();
 
         return view(
-            "tag::frontend.$module_name.show",
+            "article::frontend.$module_name.show",
             compact('module_title', 'module_name', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", 'posts')
         );
+        // code
+
+        // $id = decode_id($id);
+
+        // $module_title = $this->module_title;
+        // $module_name = $this->module_name;
+        // $module_path = $this->module_path;
+        // $module_icon = $this->module_icon;
+        // $module_model = $this->module_model;
+        // $module_name_singular = Str::singular($module_name);
+
+        // $module_action = 'Show';
+
+        // $$module_name_singular = $module_model::findOrFail($id);
+        // $posts = $$module_name_singular->posts()->with('category', 'tags', 'comments')->paginate();
+
+        // return view(
+        //     "tag::frontend.$module_name.show",
+        //     compact('module_title', 'module_name', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", 'posts')
+        // );
     }
 }

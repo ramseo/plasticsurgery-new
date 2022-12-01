@@ -6,19 +6,19 @@
 *
 * --------------------------------------------------------------------
 */
-Route::group(['namespace' => '\Modules\Tag\Http\Controllers\Frontend', 'as' => 'frontend.', 'middleware' => 'web', 'prefix' => ''], function () {
+// Route::group(['namespace' => '\Modules\Tag\Http\Controllers\Frontend', 'as' => 'frontend.', 'middleware' => 'web', 'prefix' => ''], function () {
 
-    /*
-     *
-     *  Tags Routes
-     *
-     * ---------------------------------------------------------------------
-     */
-    $module_name = 'tags';
-    $controller_name = 'TagsController';
-    Route::get("tags", ['as' => "tags.index", 'uses' => "TagsController@index"]);
-    Route::get("tags/{id}/{slug?}", ['as' => "tags.show", 'uses' => "TagsController@show"]);
-});
+//     /*
+//      *
+//      *  Tags Routes
+//      *
+//      * ---------------------------------------------------------------------
+//      */
+//     $module_name = 'tags';
+//     $controller_name = 'TagsController';
+//     Route::get("tags", ['as' => "tags.index", 'uses' => "TagsController@index"]);
+//     Route::get("tags/{id}/{slug?}", ['as' => "tags.show", 'uses' => "TagsController@show"]);
+// });
 
 /*
 *

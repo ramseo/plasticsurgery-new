@@ -7,7 +7,7 @@ Route::group(['namespace' => '\Modules\Article\Http\Controllers\Backend', 'as' =
 
     Route::get('importExportView', 'ExcelController@importExportView')->name('importExportView');
     Route::post('export', 'ExcelController@export')->name('export');
-    Route::post('import','ExcelController@import')->name('import');
+    Route::post('import', 'ExcelController@import')->name('import');
 });
 // code 
 
@@ -40,6 +40,11 @@ Route::group(['namespace' => '\Modules\Article\Http\Controllers\Frontend', 'as' 
     $controller_name = 'CategoriesController';
     Route::get("categories", ['as' => "categories.index", 'uses' => "CategoriesController@index"]);
     Route::get("categories/{slug?}", ['as' => "categories.show", 'uses' => "CategoriesController@show"]);
+
+    $module_name = 'tags';
+    $controller_name = 'TagsController'; 
+    Route::get("tags", ['as' => "tags.index", 'uses' => "TagsController@index"]);
+    Route::get("tags/{slug?}", ['as' => "tags.show", 'uses' => "TagsController@show"]);
 });
 
 /*
