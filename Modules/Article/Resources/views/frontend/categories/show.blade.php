@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title') {{$$module_name_singular->name}} @endsection
+@section('title') {{($$module_name_singular->meta_title) ? $$module_name_singular->meta_title : $$module_name_singular->name}} @endsection
 
 @section('content')
 
@@ -43,7 +43,9 @@
                         <a href="{{$details_url}}" class="h3">{{$post->name}}</a>
                         <div class="d-flex align-items-center my-4">
                             <img class="avatar avatar-sm rounded-circle" src="{{asset('img/avatars/'.rand(1, 8).'.jpg')}}" alt="">
-                            {!!isset($post->created_by_alias)? $post->created_by_alias : '<a href="'.route('frontend.users.profile', $$module_name_singular->created_by).'"><h6 class="text-muted small ml-2 mb-0">'.$post->created_by_name.'</h6></a>'!!}
+                            {!!isset($post->created_by_alias)? $post->created_by_alias : '<a href="'.route('frontend.users.profile', $$module_name_singular->created_by).'">
+                                <h6 class="text-muted small ml-2 mb-0">'.$post->created_by_name.'</h6>
+                            </a>'!!}
                         </div>
                         <p class="mb-3">{{$post->intro}}</p>
                     </div>

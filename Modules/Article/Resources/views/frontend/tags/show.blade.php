@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title') {{$$module_name_singular->name}} @endsection
+@section('title') {{($$module_name_singular->meta_title) ? $$module_name_singular->meta_title : $$module_name_singular->name}} @endsection
 
 @section('content')
 

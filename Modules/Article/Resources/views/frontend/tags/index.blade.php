@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title') {{ __("Categories") }} @endsection
+@section('title') {{ __("Tags") }} @endsection
 
 @section('content')
 
