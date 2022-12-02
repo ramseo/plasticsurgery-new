@@ -59,26 +59,26 @@
                 </div>
                 <!-- Multiple Tags -->
                 <?php
-                if ($$module_name_singular->tag_ids) {
-                    $arr = json_decode($$module_name_singular->tag_ids);
-                    $getPostTags = getSelectedTagVal($arr);
+                // if ($$module_name_singular->tag_ids) {
+                //     $arr = json_decode($$module_name_singular->tag_ids);
+                //     $getPostTags = getSelectedTagVal($arr);
                 ?>
-                    <div class="blog-flex-cat">
+                    <!-- <div class="blog-flex-cat">
                         <span class="font-weight-bold">
                             Tags:
                         </span>
                         <?php
-                        foreach ($getPostTags as $tag) {
-                            $tagSlug = $tag['slug'];
+                        // foreach ($getPostTags as $tag) {
+                        //     $tagSlug = $tag['slug'];
                         ?>
-                            <a target="_blank" href="{{route('frontend.tags.show', [$tagSlug])}}" class="badge badge-sm badge-warning text-uppercase px-3">
-                                <?= $tag['name'] ?>
+                            <a target="_blank" href="<?//= route('frontend.tags.show', [$tagSlug]) ?>" class="badge badge-sm badge-warning text-uppercase px-3">
+                                <?//= $tag['name'] ?>
                             </a>
                         <?php
-                        }
+                     //   }
                         ?>
-                    </div>
-                <?php } ?>
+                    </div> -->
+                <?php // } ?>
                 <!-- Multiple Tags -->
                 <div class="blog-intro">
                     {{$$module_name_singular->intro}}
