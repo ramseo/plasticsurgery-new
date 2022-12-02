@@ -2716,6 +2716,10 @@ span.days {
     margin-top: 140px;
 }
 
-.margin-404 h2{
+.margin-404 h2 {
     color: #000;
+}
+
+.blog-index-cls {
+    padding-top: 30px;
 }

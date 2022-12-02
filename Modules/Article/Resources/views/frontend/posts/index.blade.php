@@ -45,7 +45,7 @@
 </section> -->
 
 @if(count($$module_name))
-<section class="listing-section">
+<section class="listing-section blog-index-cls">
     <div class="container-fluid">
         <div class="row">
             @foreach ($$module_name as $$module_name_singular)
