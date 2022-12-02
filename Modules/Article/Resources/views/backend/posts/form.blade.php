@@ -28,12 +28,12 @@
     <div class="col-4">
         <div class="form-group">
             <?php
-            $field_name = 'created_by_alias';
+            $field_name = 'author';
             $field_lable = __("article::$module_name.$field_name");
-            $field_placeholder = "Hide Author User's Name and use Alias";
+            $field_placeholder = "Author Name";
             $required = "";
             ?>
-            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
+            {{ html()->label($field_lable, $field_name) }}
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
     </div>
