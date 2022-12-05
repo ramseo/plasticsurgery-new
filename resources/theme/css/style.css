@@ -2755,7 +2755,7 @@ span.days {
 
 #posts-categories .owl-next {
     position: absolute;
-    top: 40%;
+    top: 41%;
     transform: translateY(-50%);
     right: 0;
     margin: auto;
@@ -2763,7 +2763,7 @@ span.days {
 
 #posts-categories .owl-prev {
     position: absolute;
-    top: 40%;
+    top: 41%;
     transform: translateY(-50%);
     left: 0;
     margin: auto;
