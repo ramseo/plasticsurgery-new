@@ -2723,3 +2723,33 @@ span.days {
 .blog-index-cls {
     padding-top: 30px;
 }
+
+/* posts categories  */
+
+#posts-categories {
+    padding-top: 20px;
+}
+    
+#posts-categories .item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+#posts-categories .item h5 {
+    font-size: 12px;
+}
+
+.carousel-content-posts {
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.carousel-content-posts a h5 {
+    color: #FA5170;
+    padding: 0;
+}
+
+/* posts categories */
