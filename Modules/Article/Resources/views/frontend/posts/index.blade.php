@@ -10,7 +10,7 @@
         <div class="row">
             <div class="banner-container">
                 <div class="vendor-img">
-                    <img class="filter-cls" src="{{asset('images/vendor-banner-min.jpg')}}" alt="page banner" class="img-fluid">
+                    <img class="filter-cls" src="{{asset('images/blog-banner.jpg')}}" alt="page banner" class="img-fluid">
                     <div class="banner-search-col">
                         <div class="search-header">
                             <p class="text">Blog</p>
@@ -42,11 +42,12 @@ if ($catIds) {
 $getPostCat = getPostCat($catIds);
 
 if ($getPostCat) {
+
 ?>
     <section class="posts-cat-sec">
         <div class="container-fluid">
             <div class="row">
-                <div id="posts-categories" class="owl-carousel owl-theme owl-loaded">
+                <div id="posts-categories" class="owl-carousel owl-theme owl-loaded <?= (count($getPostCat) > 6) ? "posts-categories" : "posts-cat-flex-cls" ?>">
                     <div class="owl-stage-outer">
                         <div class="owl-stage">
                             <?php
@@ -118,30 +119,30 @@ if ($getPostCat) {
 <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
 <script>
     $(document).ready(function() {
-        var owl = $('#posts-categories');
+        var owl = $('.posts-categories');
 
         owl.owlCarousel({
-            items: 1,
+            items: 6,
             dots: false,
             nav: true,
             navText: ["<i class='fas fa-arrow-left'></i>", "<i class='fas fa-arrow-right'></i>"],
-            loop: $('#posts-categories .owl-item').length > 1 ? true : false,
+            loop: $('.posts-categories .owl-item').length > 6 ? true : false,
             margin: 5,
-            autoplay: $('#posts-categories .owl-item').length > 1 ? true : false,
+            autoplay: $('.posts-categories .owl-item').length > 6 ? true : false,
             autoplayTimeout: 3000,
             autoplayHoverPause: true,
             responsive: {
                 0: {
                     items: 2,
-                    loop: $('#posts-categories .owl-item').length > 2 ? true : false,
+                    loop: $('.posts-categories .owl-item').length > 2 ? true : false,
                 },
                 600: {
-                    items: 5,
-                    loop: $('#posts-categories .owl-item').length > 5 ? true : false,
+                    items: 4,
+                    loop: $('.posts-categories .owl-item').length > 4 ? true : false,
                 },
                 1000: {
-                    items: 1,
-                    loop: $('#posts-categories .owl-item').length > 1 ? true : false,
+                    items: 6,
+                    loop: $('.posts-categories .owl-item').length > 6 ? true : false,
                 }
             }
         });

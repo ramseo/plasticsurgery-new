@@ -2777,4 +2777,14 @@ span.days {
     background: none;
 }
 
+.posts-cat-flex-cls .owl-stage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.posts-cat-flex-cls .owl-item {
+    width: calc(100% / 6);
+}
+
 /* posts categories */
