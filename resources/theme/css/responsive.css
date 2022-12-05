@@ -910,6 +910,14 @@
         margin-bottom: 100px;
     }
 
+    .posts-cat-flex-cls .owl-item {
+        width: calc(100% / 2);
+    }
+
+    #posts-categories .item h5 {
+        font-size: 10px;
+    }
+
     /* code */
 }
 
