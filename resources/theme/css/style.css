@@ -2740,6 +2740,7 @@ span.days {
 
 #posts-categories .item h5 {
     font-size: 12px;
+    text-transform: capitalize;
 }
 
 .carousel-content-posts {
