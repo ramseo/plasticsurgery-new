@@ -5,7 +5,7 @@
 @section('content')
 
 
-<section id="page-banner" class="">
+<section id="page-banner">
     <div class="container-fluid">
         <div class="row">
             <div class="banner-container">
@@ -29,20 +29,53 @@
         </div>
     </div>
 </section>
-<!-- <section id="breadcrumb-section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Blog</li>
-                    </ol>
-                </nav>
+
+<?php
+$catIds = [];
+foreach ($$module_name as $module_name_singular) {
+    $catIds[] = $module_name_singular->category_id;
+}
+if ($catIds) {
+    $catIds = array_unique($catIds);
+}
+
+$getPostCat = getPostCat($catIds);
+
+if ($getPostCat) {
+?>
+    <section class="posts-cat-sec">
+        <div class="container-fluid">
+            <div class="row">
+                <div id="posts-categories" class="owl-carousel owl-theme owl-loaded">
+                    <div class="owl-stage-outer">
+                        <div class="owl-stage">
+                            <?php
+                            foreach ($getPostCat as $item) {
+                                $vendor_profile_img = asset('img/default-vendor.jpg');
+                                if ($item['image']) {
+                                    if (file_exists(public_path() . '/storage/categories/image/' . $item['image'])) {
+                                        $vendor_profile_img = asset('storage/categories/image/' . $item['image']);
+                                    }
+                                }
+                            ?>
+                                <div class="owl-item">
+                                    <div class="item">
+                                        <img src="<?= $vendor_profile_img ?>" alt="category alt">
+                                        <div class="carousel-content-posts">
+                                            <a href="<?= url("categories/" . $item['slug']) ?>">
+                                                <h5><?= $item['name'] ?></h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section> -->
+    </section>
+<?php } ?>
 
 @if(count($$module_name))
 <section class="listing-section blog-index-cls">
@@ -80,3 +113,41 @@
 @endif
 
 @endsection
+
+@push('before-scripts')
+<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var owl = $('#posts-categories');
+
+        owl.owlCarousel({
+            items: 5,
+            dots: false,
+            nav: true,
+            navText: ["<i class='fas fa-arrow-left'></i>", "<i class='fas fa-arrow-right'></i>"],
+            loop: $('#posts-categories .owl-item').length > 5 ? true : false,
+            margin: 5,
+            autoplay: false,
+            autoplayTimeout: 3000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2,
+                    loop: $('#posts-categories .owl-item').length > 2 ? true : false,
+                },
+                600: {
+                    items: 5,
+                    loop: $('#posts-categories .owl-item').length > 5 ? true : false,
+                },
+                1000: {
+                    items: 5,
+                    loop: $('#posts-categories .owl-item').length > 5 ? true : false,
+                }
+            }
+        });
+
+
+    });
+</script>
+
+@endpush

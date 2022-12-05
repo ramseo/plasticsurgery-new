@@ -837,4 +837,18 @@ if (!function_exists('date_today')) {
             ->paginate(6);
         return $data;
     }
+
+    function getPostCat($catIds)
+    {
+        if (!$catIds) {
+            return [];
+        }
+
+        $data = DB::table('categories');
+        $data->select('id', 'name', 'slug', 'image');
+        $data->whereIn('id', $catIds);
+        $rr = $data->get()->toArray();
+        $array = json_decode(json_encode($rr), true);
+        return $array;
+    }
 }
