@@ -121,13 +121,13 @@ if ($getPostCat) {
         var owl = $('#posts-categories');
 
         owl.owlCarousel({
-            items: 6,
+            items: 1,
             dots: false,
             nav: true,
             navText: ["<i class='fas fa-arrow-left'></i>", "<i class='fas fa-arrow-right'></i>"],
-            loop: $('#posts-categories .owl-item').length > 6 ? true : false,
+            loop: $('#posts-categories .owl-item').length > 1 ? true : false,
             margin: 5,
-            autoplay: $('#posts-categories .owl-item').length > 6 ? true : false,
+            autoplay: $('#posts-categories .owl-item').length > 1 ? true : false,
             autoplayTimeout: 3000,
             autoplayHoverPause: true,
             responsive: {
@@ -140,8 +140,8 @@ if ($getPostCat) {
                     loop: $('#posts-categories .owl-item').length > 5 ? true : false,
                 },
                 1000: {
-                    items: 6,
-                    loop: $('#posts-categories .owl-item').length > 6 ? true : false,
+                    items: 1,
+                    loop: $('#posts-categories .owl-item').length > 1 ? true : false,
                 }
             }
         });

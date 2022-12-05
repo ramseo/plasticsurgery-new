@@ -2729,7 +2729,7 @@ span.days {
 #posts-categories {
     padding-top: 20px;
 }
-    
+
 #posts-categories .item img {
     width: 100px;
     height: 100px;
@@ -2751,6 +2751,22 @@ span.days {
 .carousel-content-posts a h5 {
     color: #FA5170;
     padding: 0;
+}
+
+#posts-categories .owl-next {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    right: 0;
+    margin: auto;
+}
+
+#posts-categories .owl-prev {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 0;
+    margin: auto;
 }
 
 /* posts categories */
