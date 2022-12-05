@@ -2769,4 +2769,8 @@ span.days {
     margin: auto;
 }
 
+#posts-categories .owl-nav button i {
+    color: #FA5170;
+}
+
 /* posts categories */
