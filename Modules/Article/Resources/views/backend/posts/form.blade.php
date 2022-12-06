@@ -31,9 +31,9 @@
             $field_name = 'author';
             $field_lable = __("article::$module_name.$field_name");
             $field_placeholder = "Author Name";
-            $required = "";
+            $required = "required";
             ?>
-            {{ html()->label($field_lable, $field_name) }}
+            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
     </div>

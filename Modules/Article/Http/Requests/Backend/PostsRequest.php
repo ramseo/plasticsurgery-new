@@ -24,7 +24,7 @@ class PostsRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name'              => 'required|max:191|unique:posts,name',
+            'author'            => 'required',
             'slug'              => 'nullable|max:191',
             'intro'             => 'required',
             'content'           => 'required',

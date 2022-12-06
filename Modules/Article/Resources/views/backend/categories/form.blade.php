@@ -79,6 +79,7 @@
             <div class="custom-file">
                 <input type="file" class="custom-file-input" name="image" <?= $img_required ?>>
                 <label class="custom-file-label">Choose file</label>
+                <small>Please upload W: 200 H: 200 file</small>
             </div>
         </div>
     </div>

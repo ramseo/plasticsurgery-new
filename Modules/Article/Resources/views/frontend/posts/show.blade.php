@@ -43,7 +43,7 @@
                 <div class="blog-meta">
                     <span class="">
                         <i class="fa fa-user"></i>
-                        {{isset($$module_name_singular->created_by_alias)? $$module_name_singular->created_by_alias : $$module_name_singular->created_by_name}}
+                        <?= $$module_name_singular->author ?>
                     </span>
                     &nbsp;
                     <span class="post-date">
@@ -51,19 +51,19 @@
                         {{$$module_name_singular->published_at_formatted}}
                     </span>
                 </div>
-                <div class="blog-flex-cat">
+                <!-- <div class="blog-flex-cat">
                     <span class="font-weight-bold">
                         Category:
                     </span>
                     <a target="_blank" href="{{route('frontend.categories.show', [$$module_name_singular->category->slug])}}" class="badge badge-sm badge-warning text-uppercase px-3">{{$$module_name_singular->category_name}}</a>
-                </div>
+                </div> -->
                 <!-- Multiple Tags -->
                 <?php
                 // if ($$module_name_singular->tag_ids) {
                 //     $arr = json_decode($$module_name_singular->tag_ids);
                 //     $getPostTags = getSelectedTagVal($arr);
                 ?>
-                    <!-- <div class="blog-flex-cat">
+                <!-- <div class="blog-flex-cat">
                         <span class="font-weight-bold">
                             Tags:
                         </span>
@@ -71,14 +71,17 @@
                         // foreach ($getPostTags as $tag) {
                         //     $tagSlug = $tag['slug'];
                         ?>
-                            <a target="_blank" href="<?//= route('frontend.tags.show', [$tagSlug]) ?>" class="badge badge-sm badge-warning text-uppercase px-3">
-                                <?//= $tag['name'] ?>
+                            <a target="_blank" href="<? //= route('frontend.tags.show', [$tagSlug]) 
+                                                        ?>" class="badge badge-sm badge-warning text-uppercase px-3">
+                                <? //= $tag['name'] 
+                                ?>
                             </a>
                         <?php
-                     //   }
+                        //   }
                         ?>
                     </div> -->
-                <?php // } ?>
+                <?php // } 
+                ?>
                 <!-- Multiple Tags -->
                 <div class="blog-intro">
                     {{$$module_name_singular->intro}}
