@@ -223,9 +223,12 @@
                 </div>
                 @endauth
                 @guest
-                <div class="col-12 col-sm-6 align-self-center">
+                <div class="col-12 col-sm-6 align-self-center padding-null">
                     <p>
-                        <a href="{{route('login')}}?redirectTo={{url()->current()}}" class="btn btn-primary btn-block"><i class="fas fa-user-shield"></i> Login & Write comment</a>
+                        <a href="{{route('login')}}?redirectTo={{url()->current()}}" class="btn btn-primary btn-block">
+                            <i class="fas fa-user-shield"></i>
+                            Login & Write comment
+                        </a>
                     </p>
                 </div>
                 @endguest
