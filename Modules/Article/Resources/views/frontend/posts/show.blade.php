@@ -55,7 +55,7 @@
                     <span class="font-weight-bold">
                         Category:
                     </span>
-                    <a target="_blank" href="{{route('frontend.categories.show', [$$module_name_singular->category->slug])}}" class="badge badge-sm badge-warning text-uppercase px-3">{{$$module_name_singular->category_name}}</a>
+                    <a target="_blank" href="<?//= route('frontend.categories.show', [$$module_name_singular->category->slug]) ?>" class="badge badge-sm badge-warning text-uppercase px-3"><?//= $$module_name_singular->category_name ?></a>
                 </div> -->
                 <!-- Multiple Tags -->
                 <?php
