@@ -2830,8 +2830,9 @@ span.days {
     font-weight: 700;
     width: 100%;
     color: #ffffff;
-    padding-left: 15px;
+    padding: 10px;
     background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+    font-size: 13px;
 }
 
 #more-blogs .col-sm-3 {
