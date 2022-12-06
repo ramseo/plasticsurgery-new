@@ -55,7 +55,9 @@
                     <span class="font-weight-bold">
                         Category:
                     </span>
-                    <a target="_blank" href="<?//= route('frontend.categories.show', [$$module_name_singular->category->slug]) ?>" class="badge badge-sm badge-warning text-uppercase px-3"><?//= $$module_name_singular->category_name ?></a>
+                    <a target="_blank" href="<? //= route('frontend.categories.show', [$$module_name_singular->category->slug]) 
+                                                ?>" class="badge badge-sm badge-warning text-uppercase px-3"><? //= $$module_name_singular->category_name 
+                                                                                                                ?></a>
                 </div> -->
                 <!-- Multiple Tags -->
                 <?php
@@ -130,16 +132,23 @@
                 <?php
                 $getNextPost = getNextPost($$module_name_singular->id);
                 $getPrevPost = getPrevPost($$module_name_singular->id);
+                dd();
                 ?>
                 <div class="posts-next-prev">
-                    <a href="<?= route("frontend.posts.show", [$getPrevPost->slug]) ?>">
-                        <i class="fa fa-arrow-left"></i>
-                        <span class="post-prev">Previous</span>
-                    </a>
-                    <a href="<?= route("frontend.posts.show", [$getNextPost->slug]) ?>">
-                        <span class="post-next">Next</span>
-                        <i class="fa fa-arrow-right"></i>
-                    </a>
+                    <?php if ($getPrevPost != Null) { ?>
+                        <a href="<?= route("frontend.posts.show", [$getPrevPost->slug]) ?>">
+                            <i class="fa fa-arrow-left"></i>
+                            <span class="post-prev">Previous</span>
+                        </a>
+                    <?php
+                    }
+                    if ($getNextPost != Null) {
+                    ?>
+                        <a href="<?= route("frontend.posts.show", [$getNextPost->slug]) ?>">
+                            <span class="post-next">Next</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    <?php } ?>
                 </div>
                 <!-- Next Prev -->
             </div>
