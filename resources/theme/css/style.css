@@ -2839,4 +2839,25 @@ span.days {
     padding-bottom: 30px;
 }
 
+.posts-next-prev {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0 15px 0;
+}
+
+.posts-next-prev a{
+    color: #eb0a3e;
+}
+
+.post-next {
+    font-weight: 600;
+    padding-right: 5px;
+}
+
+.post-prev {
+    font-weight: 600;
+    padding-left: 5px;
+}
+
 /* posts categories */

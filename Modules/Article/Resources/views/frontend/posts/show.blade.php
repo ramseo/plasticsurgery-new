@@ -125,6 +125,23 @@
                     @endif
                 </ul>
                 <!-- social icons -->
+
+                <!-- Next Prev -->
+                <?php
+                $getNextPost = getNextPost($$module_name_singular->id);
+                $getPrevPost = getPrevPost($$module_name_singular->id);
+                ?>
+                <div class="posts-next-prev">
+                    <a href="<?= route("frontend.posts.show", [$getPrevPost->slug]) ?>">
+                        <i class="fa fa-arrow-left"></i>
+                        <span class="post-prev">Previous</span>
+                    </a>
+                    <a href="<?= route("frontend.posts.show", [$getNextPost->slug]) ?>">
+                        <span class="post-next">Next</span>
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Next Prev -->
             </div>
             <div class="col-xs-12 col-sm-12">
                 <div class="desc-top">

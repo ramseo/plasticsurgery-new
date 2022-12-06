@@ -851,4 +851,18 @@ if (!function_exists('date_today')) {
         $array = json_decode(json_encode($rr), true);
         return $array;
     }
+
+    function getNextPost($id)
+    {
+        $next = DB::table('posts')->where('id', '>', $id)->min('id');
+        $result = DB::table('posts')->select('id', 'name', 'slug')->where('id', $next)->first();
+        return $result;
+    }
+
+    function getPrevPost($id)
+    {
+        $next = DB::table('posts')->where('id', '<', $id)->min('id');
+        $result = DB::table('posts')->select('id', 'name', 'slug')->where('id', $next)->first();
+        return $result;
+    }
 }
