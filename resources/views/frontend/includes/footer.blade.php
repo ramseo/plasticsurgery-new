@@ -82,6 +82,19 @@
                   <span class="scl">Facebook</span>
                </a>
                @endif
+
+               @if(setting('instagram_url'))
+               <a href="{{setting('instagram_url')}}" target="_blank">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-instagram"></i>
+                     </div>
+                     <span>@wed.in</span>
+                  </div>
+                  <span class="scl">Instagram</span>
+               </a>
+               @endif
+
                @if(setting('twitter_url'))
                <a href="{{setting('twitter_url')}}" target="_blank">
                   <div class="button">
@@ -93,6 +106,19 @@
                   <span class="scl">Twitter</span>
                </a>
                @endif
+
+               @if(setting('linkedin_url'))
+               <a href="{{setting('linkedin_url')}}" target="_blank">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                     </div>
+                     <span>@wed.in</span>
+                  </div>
+                  <span class="scl">Linkedin</span>
+               </a>
+               @endif
+
                @if(setting('pinterest_url'))
                <a href="{{setting('pinterest_url')}}" target="_blank">
                   <div class="button">
@@ -102,17 +128,6 @@
                      <span>@wed.in</span>
                   </div>
                   <span class="scl">Pintrest</span>
-               </a>
-               @endif
-               @if(setting('instagram_url'))
-               <a href="{{setting('instagram_url')}}" target="_blank">
-                  <div class="button">
-                     <div class="icon">
-                        <i class="fab fa-instagram"></i>
-                     </div>
-                     <span>@wed.in</span>
-                  </div>
-                  <span class="scl">Instagram</span>
                </a>
                @endif
                @if(setting('youtube_url'))

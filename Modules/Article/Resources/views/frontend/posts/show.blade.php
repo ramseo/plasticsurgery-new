@@ -86,6 +86,45 @@
                 <div class="blog-intro">
                     {{$$module_name_singular->intro}}
                 </div>
+                <!-- social icons -->
+                <ul class="post-social-icon">
+                    @if(setting('facebook_url'))
+                    <li>
+                        <a href="{{setting('facebook_url')}}" target="_blank">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                    </li>
+                    @endif
+                    @if(setting('twitter_url'))
+                    <li>
+                        <a href="{{setting('twitter_url')}}" target="_blank">
+                            <i class="fab fa-twitter fa-2x"></i>
+                        </a>
+                    </li>
+                    @endif
+                    @if(setting('instagram_url'))
+                    <li>
+                        <a href="{{setting('instagram_url')}}" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    </li>
+                    @endif
+                    @if(setting('linkedin_url'))
+                    <li>
+                        <a href="{{setting('linkedin_url')}}" target="_blank">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                    </li>
+                    @endif
+                    @if(setting('pinterest_url'))
+                    <li>
+                        <a href="{{setting('pinterest_url')}}" target="_blank">
+                            <i class="fab fa-pinterest fa-2x"></i>
+                        </a>
+                    </li>
+                    @endif
+                </ul>
+                <!-- social icons -->
             </div>
             <div class="col-xs-12 col-sm-12">
                 <div class="desc-top">
