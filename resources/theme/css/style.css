@@ -2820,4 +2820,22 @@ span.days {
     color: #0077b5;
 }
 
+#more-blogs .maim-more-post {
+    position: relative;
+}
+
+#more-blogs .item-name {
+    position: absolute;
+    bottom: 0;
+    font-weight: 700;
+    width: 100%;
+    color: #ffffff;
+    padding-left: 15px;
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+}
+
+#more-blogs .col-sm-3 {
+    padding-bottom: 30px;
+}
+
 /* posts categories */

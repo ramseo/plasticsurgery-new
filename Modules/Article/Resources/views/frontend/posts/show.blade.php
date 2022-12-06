@@ -51,7 +51,7 @@
                         {{$$module_name_singular->published_at_formatted}}
                     </span>
                 </div>
-                <!-- <div class="blog-flex-cat">
+                <!-- <div class="blog-flex-cat"> 
                     <span class="font-weight-bold">
                         Category:
                     </span>
@@ -363,6 +363,44 @@
         </div>
     </div>
 </div>
+
+<?php
+$getMorePosts = getLatestBlogs();
+if ($getMorePosts) {
+?>
+    <section id="more-blogs">
+        <div class="container-fluid">
+            <h5 class="mb-4">
+                Recent Posts
+            </h5>
+            <div class="row">
+                <?php
+                foreach ($getMorePosts as $item) {
+
+                    $img = asset('img/default-vendor.jpg');
+                    if ($item->featured_image) {
+                        if (file_exists(public_path() . $item->featured_image)) {
+                            $img = asset($item->featured_image);
+                        }
+                    }
+                ?>
+                    <div class="col-sm-3">
+                        <div class="maim-more-post">
+                            <a href="<?= route("frontend.posts.show", [$item->slug]) ?>">
+                                <div class="item-img">
+                                    <img class="img-fluid" src="<?= $img ?>" alt="<?= $item->name ?>">
+                                </div>
+                                <div class="item-name">
+                                    <?= $item->name ?>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </section>
+<?php } ?>
 @endsection
 
 @push ("after-scripts")
