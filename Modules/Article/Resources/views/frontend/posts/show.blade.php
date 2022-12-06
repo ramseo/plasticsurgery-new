@@ -132,7 +132,6 @@
                 <?php
                 $getNextPost = getNextPost($$module_name_singular->id);
                 $getPrevPost = getPrevPost($$module_name_singular->id);
-                dd();
                 ?>
                 <div class="posts-next-prev">
                     <?php if ($getPrevPost != Null) { ?>
