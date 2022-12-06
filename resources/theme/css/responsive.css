@@ -563,7 +563,8 @@
 
     .vendor-list-row {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        /* flex-wrap: nowrap; */
         overflow-x: auto;
         white-space: nowrap;
     }
@@ -575,7 +576,7 @@
     .vendor-list-row .col-xs-12.col-sm-4 {
         min-width: 250px;
         /* width: 250px; */
-        padding-right: 0;
+        /* padding-right: 0; */
     }
 
     .vendor-card-col .vendor-card li {
