@@ -854,15 +854,13 @@ if (!function_exists('date_today')) {
 
     function getNextPost($id)
     {
-        $next = DB::table('posts')->where('id', '>', $id)->min('id');
-        $result = DB::table('posts')->select('id', 'name', 'slug')->where('id', $next)->first();
-        return $result;
+        $nextUser = DB::table('posts')->where('id', '>', $id)->select('id','slug')->orderby('id','asc')->first();
+        return $nextUser;
     }
 
     function getPrevPost($id)
     {
-        $next = DB::table('posts')->where('id', '<', $id)->min('id');
-        $result = DB::table('posts')->select('id', 'name', 'slug')->where('id', $next)->first();
-        return $result;
+        $previousUser = DB::table('posts')->where('id', '<', $id)->select('id', 'slug')->orderby('id', 'desc')->first();
+        return $previousUser;
     }
 }
