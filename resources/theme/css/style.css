@@ -1239,7 +1239,7 @@ strong {
 
 .blog-detail-main-col h1 {
     margin: -7px 0 0 0;
-    font-size: 35px;
+    font-size: 40px;
     font-weight: 400;
 }
 
@@ -2796,13 +2796,23 @@ span.days {
 
 .post-social-icon li {
     display: inline-block;
-    padding-right: 10px;
+    padding: 5px 10px 5px 10px;
     margin: 0;
     font-size: 20px;
+    border-radius: 50px;
+    background: #eb0a3e;
+}
+
+.post-social-icon li:nth-child(2) {
+    padding: 5px 14px 5px 14px;
+}
+
+.post-social-icon li i {
+    color: #ffffff;
 }
 
 .post-social-icon li a i {
-    color: #eb0a3e;
+    color: #ffffff;
 }
 
 #more-blogs .maim-more-post {
@@ -2831,7 +2841,7 @@ span.days {
     padding: 15px 0 15px 0;
 }
 
-.posts-next-prev a{
+.posts-next-prev a {
     color: #eb0a3e;
 }
 
