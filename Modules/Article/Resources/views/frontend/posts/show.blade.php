@@ -90,41 +90,31 @@
                 </div>
                 <!-- social icons -->
                 <ul class="post-social-icon">
-                    @if(setting('facebook_url'))
                     <li>
-                        <a href="{{setting('facebook_url')}}" target="_blank">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?= url()->current() ?>" target="_blank">
                             <i class="fab fa-facebook-f fa-2x"></i>
                         </a>
                     </li>
-                    @endif
-                    @if(setting('twitter_url'))
                     <li>
-                        <a href="{{setting('twitter_url')}}" target="_blank">
+                        <a href="https://twitter.com/intent/tweet?url=<?= url()->current() ?>" target="_blank">
                             <i class="fab fa-twitter fa-2x"></i>
                         </a>
                     </li>
-                    @endif
-                    @if(setting('instagram_url'))
-                    <li>
-                        <a href="{{setting('instagram_url')}}" target="_blank">
+                    <!-- <li>
+                        <a href="https://www.instagram.com/sharer.php?u=<?//= url()->current() ?>" target="_blank">
                             <i class="fab fa-instagram fa-2x"></i>
                         </a>
-                    </li>
-                    @endif
-                    @if(setting('linkedin_url'))
+                    </li> -->
                     <li>
-                        <a href="{{setting('linkedin_url')}}" target="_blank">
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?= url()->current() ?>&title=Post" target="_blank">
                             <i class="fab fa-linkedin fa-2x"></i>
                         </a>
                     </li>
-                    @endif
-                    @if(setting('pinterest_url'))
                     <li>
-                        <a href="{{setting('pinterest_url')}}" target="_blank">
+                        <a href="http://pinterest.com/pin/create/button/?url=<?= url()->current() ?>&description=Post" target="_blank">
                             <i class="fab fa-pinterest fa-2x"></i>
                         </a>
                     </li>
-                    @endif
                 </ul>
                 <!-- social icons -->
 
