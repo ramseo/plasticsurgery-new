@@ -2856,3 +2856,7 @@ span.days {
 }
 
 /* posts categories */
+
+.vendor-card-col .grey-text i{
+    color: #eb0a3e;
+}

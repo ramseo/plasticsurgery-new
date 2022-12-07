@@ -25,7 +25,7 @@
                             <ul class="list-inline space-list">
                                 <li>
                                     <p class="title">{{$vendor->business_name}}</p>
-                                    <p class="grey-text">{{$vendorCity->name}}</p>
+                                    <p class="grey-text"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> {{$vendorCity->name}}</p>
                                 </li>
                                 @if($average > 0)
                                     <li class="text-right">
