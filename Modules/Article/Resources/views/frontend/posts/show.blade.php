@@ -91,28 +91,32 @@
                 <!-- social icons -->
                 <ul class="post-social-icon">
                     <li>
+                        <i class="fab fa fa-share-alt"></i>
+                    </li>
+                    <li>
                         <a href="https://www.facebook.com/sharer/sharer.php?u=<?= url()->current() ?>" target="_blank">
-                            <i class="fab fa-facebook-f fa-2x"></i>
+                            <i class="fab fa-facebook-f"></i>
                         </a>
                     </li>
                     <li>
                         <a href="https://twitter.com/intent/tweet?url=<?= url()->current() ?>" target="_blank">
-                            <i class="fab fa-twitter fa-2x"></i>
+                            <i class="fab fa-twitter"></i>
                         </a>
                     </li>
                     <!-- <li>
-                        <a href="https://www.instagram.com/sharer.php?u=<?//= url()->current() ?>" target="_blank">
+                        <a href="https://www.instagram.com/sharer.php?u=<? //= url()->current() 
+                                                                        ?>" target="_blank">
                             <i class="fab fa-instagram fa-2x"></i>
                         </a>
                     </li> -->
                     <li>
                         <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?= url()->current() ?>&title=Post" target="_blank">
-                            <i class="fab fa-linkedin fa-2x"></i>
+                            <i class="fab fa-linkedin"></i>
                         </a>
                     </li>
                     <li>
                         <a href="http://pinterest.com/pin/create/button/?url=<?= url()->current() ?>&description=Post" target="_blank">
-                            <i class="fab fa-pinterest fa-2x"></i>
+                            <i class="fab fa-pinterest"></i>
                         </a>
                     </li>
                 </ul>

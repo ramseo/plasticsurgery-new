@@ -2798,26 +2798,11 @@ span.days {
     display: inline-block;
     padding-right: 10px;
     margin: 0;
+    font-size: 20px;
 }
 
-.post-social-icon .fa-facebook-f {
-    color: #1d78f2;
-}
-
-.post-social-icon .fa-twitter {
-    color: #1da1f2;
-}
-
-.post-social-icon .fa-pinterest {
-    color: #c8232c;
-}
-
-.post-social-icon .fa-instagram {
-    color: #bc2a8d;
-}
-
-.post-social-icon .fa-linkedin {
-    color: #0077b5;
+.post-social-icon li a i {
+    color: #eb0a3e;
 }
 
 #more-blogs .maim-more-post {
