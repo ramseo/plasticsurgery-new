@@ -1188,6 +1188,20 @@
     .vendor-img{
         margin-top: 60px;
     }
+
+    .menu-child-item{
+        top: 50px;
+    }
+
+    .menu-child-item li a{
+        font-size: 10px;
+    }
+    .hr-cls{
+        margin: 5px 0 5px 0;
+    }
+    .menu-child-item li{
+        width: auto;
+    }
     /* code */
 }
 
