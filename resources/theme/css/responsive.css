@@ -960,7 +960,8 @@
     }
 
     .site-menu a {
-        padding: 20px 0;
+        padding: 10px 0;
+        /* padding: 20px 0; */
     }
 
     .user-menu li img {
@@ -1181,27 +1182,35 @@
     }
 
     /* code */
-    .site-main-menu > li{
+    .site-main-menu>li {
         margin: 0 0 0 15px;
     }
-    
-    .vendor-img{
+
+    .vendor-img {
         margin-top: 60px;
     }
 
-    .menu-child-item{
+    .menu-child-item {
         top: 50px;
     }
 
-    .menu-child-item li a{
+    .menu-child-item li a {
         font-size: 10px;
     }
-    .hr-cls{
+
+    .hr-cls {
         margin: 5px 0 5px 0;
     }
-    .menu-child-item li{
+
+    .menu-child-item li {
         width: auto;
     }
+
+    .menuDropDown .dropdown-content a>i {
+        height: 15px;
+        padding-top: 0;
+    }
+
     /* code */
 }
 
