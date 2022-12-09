@@ -1184,6 +1184,10 @@
     .site-main-menu > li{
         margin: 0 0 0 15px;
     }
+    
+    .vendor-img{
+        margin-top: 60px;
+    }
     /* code */
 }
 
