@@ -951,7 +951,8 @@
     }
 
     .site-main-menu {
-        padding-right: 30px;
+        padding-right: 0;
+        /* padding-right: 30px; */
     }
 
     .user-menu {
@@ -1178,6 +1179,10 @@
     .vendor-list-row+.load-more-col {
         margin-top: 0px;
     }
+
+    /* code */
+
+    /* code */
 }
 
 @media(min-width: 1023px) and (max-width: 1199px) {
