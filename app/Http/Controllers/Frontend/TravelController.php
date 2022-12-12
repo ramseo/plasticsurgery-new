@@ -7,6 +7,8 @@ use App\Models\Travel;
 use DB;
 use Illuminate\Http\Request;
 
+// new
+
 class TravelController extends Controller
 {
     /**
