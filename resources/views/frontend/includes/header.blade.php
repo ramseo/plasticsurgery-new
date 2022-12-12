@@ -8,10 +8,11 @@ $city = getData('cities');
     <div class="container-fluid">
         <div class="row header-main-col">
             <div class="col-xs-6 col-sm-3 header-logo-col">
-                <span id="menuOpener" style="display: none;"><i class="fa fa-bars"></i></span>
+                <!-- <span id="menuOpener" style="display: none;"><i class="fa fa-bars"></i></span> -->
                 <a href="{{url('/')}}"><img src="{{asset('images/logo.png')}}" alt="" class="img-fluid"></a>
             </div>
             <div class="col-xs-6 col-sm-9 d-flex header-menu-col">
+                <span id="menuOpener" style="display: none;"><i class="fa fa-bars"></i></span>
                 @php
                 $header_menu = dynamic_menu('menutype','url','header');
                 @endphp

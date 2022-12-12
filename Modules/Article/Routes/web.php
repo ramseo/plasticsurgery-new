@@ -39,7 +39,7 @@ Route::group(['namespace' => '\Modules\Article\Http\Controllers\Frontend', 'as' 
     $module_name = 'categories';
     $controller_name = 'CategoriesController';
     Route::get("categories", ['as' => "categories.index", 'uses' => "CategoriesController@index"]);
-    Route::get("categories/{slug?}", ['as' => "categories.show", 'uses' => "CategoriesController@show"]);
+    Route::get("c/{slug?}", ['as' => "categories.show", 'uses' => "CategoriesController@show"]);
 
     $module_name = 'tags';
     $controller_name = 'TagsController'; 

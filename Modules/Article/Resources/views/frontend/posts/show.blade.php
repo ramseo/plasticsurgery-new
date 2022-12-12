@@ -43,7 +43,7 @@
                 <div class="blog-meta">
                     <span class="">
                         <i class="fa fa-user"></i>
-                        {{isset($$module_name_singular->created_by_alias)? $$module_name_singular->created_by_alias : $$module_name_singular->created_by_name}}
+                        <?= $$module_name_singular->author ?>
                     </span>
                     &nbsp;
                     <span class="post-date">
@@ -51,38 +51,99 @@
                         {{$$module_name_singular->published_at_formatted}}
                     </span>
                 </div>
-                <div class="blog-flex-cat">
+                <!-- <div class="blog-flex-cat"> 
                     <span class="font-weight-bold">
                         Category:
                     </span>
-                    <a target="_blank" href="{{route('frontend.categories.show', [$$module_name_singular->category->slug])}}" class="badge badge-sm badge-warning text-uppercase px-3">{{$$module_name_singular->category_name}}</a>
-                </div>
+                    <a target="_blank" href="<? //= route('frontend.categories.show', [$$module_name_singular->category->slug]) 
+                                                ?>" class="badge badge-sm badge-warning text-uppercase px-3"><? //= $$module_name_singular->category_name 
+                                                                                                                ?></a>
+                </div> -->
                 <!-- Multiple Tags -->
                 <?php
-                if ($$module_name_singular->tag_ids) {
-                    $arr = json_decode($$module_name_singular->tag_ids);
-                    $getPostTags = getSelectedTagVal($arr);
+                // if ($$module_name_singular->tag_ids) {
+                //     $arr = json_decode($$module_name_singular->tag_ids);
+                //     $getPostTags = getSelectedTagVal($arr);
                 ?>
-                    <div class="blog-flex-cat">
+                <!-- <div class="blog-flex-cat">
                         <span class="font-weight-bold">
                             Tags:
                         </span>
                         <?php
-                        foreach ($getPostTags as $tag) {
-                            $tagSlug = $tag['slug'];
+                        // foreach ($getPostTags as $tag) {
+                        //     $tagSlug = $tag['slug'];
                         ?>
-                            <a target="_blank" href="{{route('frontend.tags.show', [$tagSlug])}}" class="badge badge-sm badge-warning text-uppercase px-3">
-                                <?= $tag['name'] ?>
+                            <a target="_blank" href="<? //= route('frontend.tags.show', [$tagSlug]) 
+                                                        ?>" class="badge badge-sm badge-warning text-uppercase px-3">
+                                <? //= $tag['name'] 
+                                ?>
                             </a>
                         <?php
-                        }
+                        //   }
                         ?>
-                    </div>
-                <?php } ?>
+                    </div> -->
+                <?php // } 
+                ?>
                 <!-- Multiple Tags -->
                 <div class="blog-intro">
                     {{$$module_name_singular->intro}}
                 </div>
+                <!-- social icons -->
+                <ul class="post-social-icon">
+                    <li>
+                        <i class="fab fa fa-share-alt"></i>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?= url()->current() ?>" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/intent/tweet?url=<?= url()->current() ?>" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://www.instagram.com/sharer.php?u=<? //= url()->current() 
+                                                                        ?>" target="_blank">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    </li> -->
+                    <li>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?= url()->current() ?>&title=Post" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://pinterest.com/pin/create/button/?url=<?= url()->current() ?>&description=Post" target="_blank">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- social icons -->
+
+                <!-- Next Prev -->
+                <?php
+                $getNextPost = getNextPost($$module_name_singular->id);
+                $getPrevPost = getPrevPost($$module_name_singular->id);
+                ?>
+                <div class="posts-next-prev">
+                    <?php if ($getPrevPost != Null) { ?>
+                        <a href="<?= route("frontend.posts.show", [$getPrevPost->slug]) ?>">
+                            <i class="fa fa-arrow-left"></i>
+                            <span class="post-prev">Previous</span>
+                        </a>
+                    <?php
+                    }
+                    if ($getNextPost != Null) {
+                    ?>
+                        <a href="<?= route("frontend.posts.show", [$getNextPost->slug]) ?>">
+                            <span class="post-next">Next</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    <?php } ?>
+                </div>
+                <!-- Next Prev -->
             </div>
             <div class="col-xs-12 col-sm-12">
                 <div class="desc-top">
@@ -181,9 +242,12 @@
                 </div>
                 @endauth
                 @guest
-                <div class="col-12 col-sm-6 align-self-center">
+                <div class="col-12 col-sm-6 align-self-center padding-null">
                     <p>
-                        <a href="{{route('login')}}?redirectTo={{url()->current()}}" class="btn btn-primary btn-block"><i class="fas fa-user-shield"></i> Login & Write comment</a>
+                        <a href="{{route('login')}}?redirectTo={{url()->current()}}" class="btn btn-primary btn-block">
+                            <i class="fas fa-user-shield"></i>
+                            Login & Write comment
+                        </a>
                     </p>
                 </div>
                 @endguest
@@ -321,6 +385,44 @@
         </div>
     </div>
 </div>
+
+<?php
+$getMorePosts = getLatestBlogs();
+if ($getMorePosts) {
+?>
+    <section id="more-blogs">
+        <div class="container-fluid">
+            <h5 class="mb-4">
+                Recent Posts
+            </h5>
+            <div class="row">
+                <?php
+                foreach ($getMorePosts as $item) {
+
+                    $img = asset('img/default-vendor.jpg');
+                    if ($item->featured_image) {
+                        if (file_exists(public_path() . $item->featured_image)) {
+                            $img = asset($item->featured_image);
+                        }
+                    }
+                ?>
+                    <div class="col-sm-3">
+                        <div class="maim-more-post">
+                            <a href="<?= route("frontend.posts.show", [$item->slug]) ?>">
+                                <div class="item-img">
+                                    <img class="img-fluid" src="<?= $img ?>" alt="<?= $item->name ?>">
+                                </div>
+                                <div class="item-name">
+                                    <?= $item->name ?>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </section>
+<?php } ?>
 @endsection
 
 @push ("after-scripts")

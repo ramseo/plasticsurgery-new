@@ -63,18 +63,18 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
             // Submenu: Tags
-            $articles_menu->add('<i class="c-sidebar-nav-icon fas fa-tags"></i> Tags', [
-                'route' => 'backend.tags.index',
-                'class' => 'c-sidebar-nav-item',
-            ])
-                ->data([
-                    'order'         => 84,
-                    'activematches' => 'admin/tags*',
-                    'permission'    => ['edit_tags'],
-                ])
-                ->link->attr([
-                    'class' => 'c-sidebar-nav-link',
-                ]);
+            // $articles_menu->add('<i class="c-sidebar-nav-icon fas fa-tags"></i> Tags', [
+            //     'route' => 'backend.tags.index',
+            //     'class' => 'c-sidebar-nav-item',
+            // ])
+            //     ->data([
+            //         'order'         => 84,
+            //         'activematches' => 'admin/tags*',
+            //         'permission'    => ['edit_tags'],
+            //     ])
+            //     ->link->attr([
+            //         'class' => 'c-sidebar-nav-link',
+            //     ]);
         })->sortBy('order');
 
         return $next($request);

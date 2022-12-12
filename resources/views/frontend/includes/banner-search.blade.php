@@ -3,7 +3,7 @@
         <div class="row">
             <div class="banner-container">
                 <div class="vendor-img">
-                    <img src="images/slider.jpg" alt="home banner" class="img-fluid">
+                    <img src="{{asset('images/slider.jpg')}}" alt="home banner" class="img-fluid">
                     <div class="banner-search-col">
                         <div class="search-header">
                             @if(setting('homepage_title'))
