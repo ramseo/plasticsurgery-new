@@ -31,6 +31,7 @@ class VendorController extends Controller
     {
         $type = Type::where('slug', $request->type)->first();
         $vendors = DB::table('vendors')
+            ->select('users.*', 'vendors.*', 'vendors.id as primary_id')
             ->join('users', 'users.id', '=', 'vendors.user_id')
             ->where('type_id', $type->id)
             ->where('email_verified_at', '!=', null)
@@ -208,7 +209,7 @@ class VendorController extends Controller
         return view('frontend.vendors.details', compact('body_class', 'vendor_details', 'city', 'type'));
     }
 
-    public function postReview(Request $request) 
+    public function postReview(Request $request)
     {
         $validator = Validator::make($request->all(), [
             'rating' => 'required|not_in:0',

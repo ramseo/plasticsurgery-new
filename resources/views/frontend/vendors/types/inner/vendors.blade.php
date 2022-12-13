@@ -3,8 +3,10 @@
 @php
 $vendorCity = getData('cities', 'id', $vendor->city_id);
 $vendorType = getData('types', 'id', $vendor->type_id);
-$reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor->id);
+$reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor->primary_id);
+
 $average = averageReview($reviews);
+
 @endphp
 <div class="col-xs-12 col-sm-4">
     <div class="common-card vendor-card-col">
@@ -18,7 +20,7 @@ $average = averageReview($reviews);
             }
             @endphp
             <div class="img-col min-height-img">
-                <img src="{{$vendor_profile_img}}" alt="" class="img-fluid">
+                <img src="{{$vendor_profile_img}}" alt="image" class="img-fluid">
                 <?php if ($vendor->most_popular == 1) { ?>
                     <div class="ribbon ribbon-top-left">
                         <span>Most Popular</span>
