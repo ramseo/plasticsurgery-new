@@ -4,7 +4,8 @@
     }
 
     .search-header .head {
-        font-size: 70px;
+        font-size: 40px;
+        font-weight: 400;
     }
 
     .search-header .text {
@@ -129,7 +130,7 @@
     }
 
     .common-heading .shadow-text {
-        font-size: 30px;
+        font-size: 20px;
         line-height: 50px;
     }
 
@@ -159,6 +160,7 @@
 
     #page-banner img {
         width: 100%;
+        margin: auto;
     }
 
     #category-section,
@@ -323,6 +325,8 @@
 
     .vendor-location-links {
         margin-top: 15px;
+        position: relative;
+        bottom: 0;
     }
 
     .search-header .text {
@@ -855,7 +859,14 @@
 
     .vendor-img {
         margin-top: 50px;
+        height: auto;
+        overflow: revert;
     }
+
+    .vendor-img-home {
+        margin-top: 50px;
+    }
+
 
     .min-height-img img {
         min-height: 150px;
@@ -917,6 +928,14 @@
 
     #posts-categories .item h5 {
         font-size: 10px;
+    }
+
+    .mob-visible-item {
+        display: block;
+    }
+
+    .desktop-visible-item {
+        display: none;
     }
 
     /* code */
@@ -1187,6 +1206,10 @@
     }
 
     .vendor-img {
+        margin-top: 56px;
+    }
+
+    .vendor-img-home {
         margin-top: 56px;
     }
 

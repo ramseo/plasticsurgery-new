@@ -331,6 +331,7 @@ span.days {
 
 #page-banner img {
     width: 100%;
+    margin: -100px 0 0 0;
 }
 
 .banner-container {
@@ -353,7 +354,7 @@ span.days {
 }
 
 .search-header .head {
-    font-size: 80px;
+    font-size: 50px;
     font-family: 'Arapey', serif;
     font-weight: 400;
     line-height: normal;
@@ -784,7 +785,12 @@ strong {
 }
 
 .vendor-location-links {
-    margin-top: 30px;
+    position: absolute;
+    bottom: 15px;
+    margin: auto 0;
+    right: 0;
+    left: 0;
+    text-align: center;
 }
 
 .vendor-location-links li {
@@ -1264,7 +1270,7 @@ article ol li {
 }
 
 .breadcrumb-item.active {
-    font-weight: 700;
+    font-weight: normal;
 }
 
 article p,
@@ -2569,6 +2575,8 @@ span.days {
 .vendor-img {
     margin-top: 75px;
     position: relative;
+    height: 350px;
+    overflow: hidden;
 }
 
 #newsletterEmail {
@@ -2857,6 +2865,15 @@ span.days {
 
 /* posts categories */
 
-.vendor-card-col .grey-text i{
+.vendor-card-col .grey-text i {
     color: #eb0a3e;
+}
+
+.vendor-img-home {
+    margin-top: 75px;
+    position: relative;
+}
+
+.mob-visible-item {
+    display: none;
 }

@@ -44,7 +44,7 @@
                         <div class="search-header">
                             <p class="text">Best {{$type->name}} in {{$city->name}}</p>
                         </div>
-                        <div class="vendor-location-links">
+                        <div class="vendor-location-links mob-visible-item">
                             <ul class="list-inline">
                                 <li class="list-inline-item">
                                     <a href="#" class="btn btn-primary filter-link">{{$type->name}} <i class="fas fa-chevron-down"></i></a>
@@ -88,20 +88,66 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="container-fluid">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{url('/') . '/' . $type->slug}}">{{$type->name}}</a></li>
-                            <?php if (isset($city->name)) { ?>
-                                <li class="breadcrumb-item active" aria-current="page">{{$city->name}}</li>
-                            <?php } ?>
-                        </ol>
-                    </nav>
+                <!-- ggggg -->
+                <div class="vendor-location-links desktop-visible-item">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" class="btn btn-primary filter-link">{{$type->name}} <i class="fas fa-chevron-down"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" class="btn btn-primary filter-link">{{$city->name}} <i class="fas fa-chevron-down"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            @php
+                            $selected_budget = '';
+                            $budget_label = 'Total Budget';
+                            if(isset($_GET['budget'])){
+                            $selected_budget = getData('budgets', 'id', $_GET['budget']);
+                            if($selected_budget->filter == 'less_then'){
+                            $budget_label = "Less than Rs.".$selected_budget->min;
+                            }elseif($selected_budget->filter == 'between'){
+                            $budget_label = 'Rs.'.$selected_budget->min . ' - ' . $selected_budget->max;
+                            }elseif($selected_budget->filter == 'above'){
+                            $budget_label = 'Above Rs.'. $selected_budget->min;
+                            }
+                            }
+                            @endphp
+                            <a href="#" class="btn btn-secondary filter-link">{{$budget_label}} <i class="fas fa-chevron-down"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            @php
+                            $sort_text = 'Relevance';
+                            if(isset($_GET['sort'])){
+                            if($_GET['sort'] == 'relevance'){
+                            $sort_text = 'Relevance';
+                            }elseif($_GET['sort'] == 'low_to_high'){
+                            $sort_text = 'Price (Low to High)';
+                            }elseif($_GET['sort'] == 'high_to_low'){
+                            $sort_text = 'Price (High to Low)';
+                            }
+                            }
+                            @endphp
+                            <a href="#" class="btn btn-secondary filter-link">Sort: {{$sort_text}} <i class="fas fa-chevron-down"></i></a>
+                        </li>
+                    </ul>
                 </div>
+                <!-- ggggg -->
             </div>
         </div>
+    </div>
+</section>
+
+<section id="breadcrumb-sec">
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{url('/') . '/' . $type->slug}}">{{$type->name}}</a></li>
+                <?php if (isset($city->name)) { ?>
+                    <li class="breadcrumb-item active" aria-current="page">{{$city->name}}</li>
+                <?php } ?>
+            </ol>
+        </nav>
     </div>
 </section>
 

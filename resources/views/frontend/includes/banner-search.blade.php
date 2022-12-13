@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="banner-container">
-                <div class="vendor-img">
+                <div class="vendor-img-home">
                     <img src="{{asset('images/slider.jpg')}}" alt="home banner" class="img-fluid">
                     <div class="banner-search-col">
                         <div class="search-header">
