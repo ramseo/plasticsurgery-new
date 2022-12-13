@@ -31,7 +31,6 @@ class VendorController extends Controller
     {
         $type = Type::where('slug', $request->type)->first();
         $vendors = DB::table('vendors')
-            ->select('users.*', 'vendors.*', 'vendors.id as primary_id')
             ->join('users', 'users.id', '=', 'vendors.user_id')
             ->where('type_id', $type->id)
             ->where('email_verified_at', '!=', null)

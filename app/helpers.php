@@ -863,4 +863,11 @@ if (!function_exists('date_today')) {
         $previousUser = DB::table('posts')->where('id', '<', $id)->select('id', 'slug')->orderby('id', 'desc')->first();
         return $previousUser;
     }
+
+    function getIdBySlug($slug){
+        $data = DB::table('vendors');
+        $data->select('id');
+        $data->where('slug', $slug);
+        return $data->first();
+    }
 }

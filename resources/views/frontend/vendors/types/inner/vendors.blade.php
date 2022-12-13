@@ -1,9 +1,18 @@
 @if($vendors->count() > 0)
 @foreach($vendors as $vendor)
 @php
+
+$vendorId = getIdBySlug($vendor->slug);
+
+if(isset($vendorId->id)){
+$vId = $vendorId->id;
+}else{
+$vId = $vendor->id;
+}
+
 $vendorCity = getData('cities', 'id', $vendor->city_id);
 $vendorType = getData('types', 'id', $vendor->type_id);
-$reviews = getDataArray('vendor_reviews', 'vendor_id', $vendor->primary_id);
+$reviews = getDataArray('vendor_reviews', 'vendor_id', $vId);
 
 $average = averageReview($reviews);
 
