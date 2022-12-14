@@ -2915,6 +2915,11 @@ span.days {
     z-index: 99;
 }
 
+.featured-ribbon-top-left {
+    top: -7px;
+    left: -10px;
+}
+
 .ribbon-top-left::before,
 .ribbon-top-left::after {
     border-top-color: transparent;
