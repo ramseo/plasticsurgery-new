@@ -7185,7 +7185,7 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb li:first-child a{
-    color: #eb0a3e;
+    color: #eb0a3e!important;
 }
 
 .breadcrumb-item+.breadcrumb-item {
