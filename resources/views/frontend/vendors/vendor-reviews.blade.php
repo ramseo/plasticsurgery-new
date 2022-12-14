@@ -81,10 +81,10 @@
                             <div class="review-rating" data-rateit-mode="font" data-rateit-resetable="false"></div>
                             <input type="hidden" id="review-rating-hidden" value="0">
                         </div>
-                        <!-- <div class="form-group">
+                        <div class="form-group">
                             <label for="">Name</label>
                             <input id="reviewTitle" name="name" type="text" class="form-control">
-                        </div> -->
+                        </div>
                         <div class="form-group">
                             <label for="">Your Review</label>
                             <textarea id="reviewDescription" name="" class="form-control"></textarea>
