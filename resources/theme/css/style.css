@@ -2915,11 +2915,6 @@ span.days {
     z-index: 99;
 }
 
-.featured-ribbon-top-left {
-    top: -7px;
-    left: -10px;
-}
-
 .ribbon-top-left::before,
 .ribbon-top-left::after {
     border-top-color: transparent;
@@ -2941,6 +2936,35 @@ span.days {
     top: 30px;
     transform: rotate(-45deg);
 }
+
+/* featured */
+.featured-ribbon-top-left {
+    top: -7px;
+    left: -7px;
+}
+
+.featured-ribbon-top-left::before,
+.featured-ribbon-top-left::after {
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+
+.featured-ribbon-top-left::before {
+    top: 0;
+    right: 0;
+}
+
+.featured-ribbon-top-left::after {
+    bottom: 0;
+    left: 0;
+}
+
+.featured-ribbon-top-left span {
+    right: -33px;
+    top: 30px;
+    transform: rotate(-45deg);
+}
+/* featured */
 
 /* vishal css */
 
