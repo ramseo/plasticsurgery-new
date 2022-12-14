@@ -2938,3 +2938,7 @@ span.days {
 }
 
 /* vishal css */
+
+.margin-img-auto {
+    margin: 0 !important;
+}

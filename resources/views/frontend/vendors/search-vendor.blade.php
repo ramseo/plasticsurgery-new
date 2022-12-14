@@ -10,23 +10,27 @@
          <!-- here -->
          <div class="banner-container">
             <div class="vendor-img">
-               <img src="/storage/files/vendor-banner-min.jpg" alt="image alt" class="img-fluid filter-cls">
+               <!-- /storage/files/vendor-banner-min.jpg -->
+               <img src="{{asset('storage/files/vendor-banner-min.jpg'}}" alt="image alt" class="img-fluid filter-cls margin-img-auto">
                <div class="banner-search-col">
                   <div class="search-header">
                      <p class="text">Search By Vendor</p>
                   </div>
                </div>
             </div>
-            <div class="container-fluid">
-               <nav aria-label="breadcrumb">
-                  <ol class="breadcrumb">
-                     <li class="breadcrumb-item"><a href="/">Home</a></li>
-                     <li class="breadcrumb-item active" aria-current="page">Search By Vendor</li>
-                  </ol>
-               </nav>
-            </div>
          </div>
       </div>
+   </div>
+</section>
+
+<section id="breadcrumb-sec">
+   <div class="container-fluid">
+      <nav aria-label="breadcrumb">
+         <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Search By Vendor</li>
+         </ol>
+      </nav>
    </div>
 </section>
 
@@ -93,7 +97,7 @@
 <script>
    $(document).ready(function() {
       var owl = $('.owl-carousel');
-   
+
       owl.owlCarousel({
          items: 4,
          dots: false,
