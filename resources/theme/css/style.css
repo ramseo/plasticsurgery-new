@@ -2880,8 +2880,8 @@ span.days {
 
 /* vishal css */
 .ribbon {
-    width: 110px;
-    height: 110px;
+    width: 130px;
+    height: 130px;
     overflow: hidden;
     position: absolute;
 }
@@ -2907,7 +2907,6 @@ span.days {
     text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
     text-transform: uppercase;
     text-align: center;
-    padding-left: 35px
 }
 
 .ribbon-top-left {
