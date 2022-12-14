@@ -18,11 +18,11 @@
         </ul>
         @endif
         </li>
-        @auth
+        <!-- @auth
+        @endauth -->
         <li class="list-inline-item">
             <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#reviewModal">Write a Review</a>
         </li>
-        @endauth
         </ul>
     </div>
     <hr>

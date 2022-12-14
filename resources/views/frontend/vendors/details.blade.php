@@ -68,11 +68,11 @@ $average = averageReview($reviews);
                             <li class="list-inline-item">
                                 <a href="#" class="grey-text" data-toggle="modal" data-target="#shareModal"><i class="far fa-share-square text-primary"></i> Share</a>
                             </li>
-                            @auth
+                            <!-- @auth
+                            @endauth -->
                             <li class="list-inline-item">
                                 <a href="#" class="grey-text" data-toggle="modal" data-target="#reviewModal"><i class="far fa-star text-primary"></i> Write Review</a>
                             </li>
-                            @endauth
                         </ul>
                     </div>
 
