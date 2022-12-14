@@ -7,11 +7,9 @@
 <section id="page-banner" class="">
    <div class="container-fluid">
       <div class="row">
-         <!-- here -->
          <div class="banner-container">
             <div class="vendor-img">
-               <!-- /storage/files/vendor-banner-min.jpg -->
-               <img src="/storage/files/vendor-banner-min.jpg" alt="image alt" class="img-fluid filter-cls margin-img-auto">
+               <img src="<?= asset('images/vendor-banner-min.jpg') ?>" alt="image alt" class="img-fluid filter-cls margin-img-0">
                <div class="banner-search-col">
                   <div class="search-header">
                      <p class="text">Search By Vendor</p>
