@@ -686,9 +686,9 @@ strong {
     color: white;
 }
 
-#featured-vendors .container-fluid {
+/* #featured-vendors .container-fluid {
     max-width: 80%;
-}
+} */
 
 #latest-blogs {
     padding: 40px 0 0 0;
@@ -3015,4 +3015,8 @@ span.days {
 
 .pos-rel-cls {
     position: relative;
+}
+
+#featured-vendors .featured-title{
+    padding: 10px 0 20px 0;
 }

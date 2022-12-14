@@ -6,7 +6,7 @@ $featured_vendors = get_featured_vendors();
 <section id="featured-vendors">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 common-heading light-heading text-center with-lines" data-aos="slide-right">
+            <div class="col-xs-12 col-sm-12 common-heading light-heading text-center with-lines featured-title" data-aos="slide-right">
                 <p class="shadow-text">Vendors</p>
                 <p class="head">Featured Vendors</p>
             </div>
@@ -43,7 +43,6 @@ $featured_vendors = get_featured_vendors();
                                     <img src="{{$vendor_profile_img}}" alt="image alt" class="img-fluid">
                                 </div>
                                 <div class="text-col">
-                                    <!-- ffff -->
                                     <ul class="list-inline space-list">
                                         <li>
                                             <p class="title">{{$vendor->business_name}}</p>
@@ -58,7 +57,7 @@ $featured_vendors = get_featured_vendors();
                                                 <i class="fa fa-star"></i>
                                                 {{number_format($average, 1)}}
                                             </span>
-                                            <p>
+                                            <p class="margin-null">
                                                 <a href="javascript:void(0)" class="grey-text">
                                                     {{count($reviews)}} Reviews
                                                 </a>
@@ -76,7 +75,6 @@ $featured_vendors = get_featured_vendors();
                                         </li>
                                     </ul>
                                     @endif
-                                    <!-- ffff -->
                                     <!-- <p class="title">{{$vendor->business_name}}</p>
                                     @if($vendor->business_address)
                                     <p class="text">{{ \Illuminate\Support\Str::limit($vendor->business_address, 45, '...') }}</p>
@@ -98,24 +96,24 @@ $featured_vendors = get_featured_vendors();
 <script>
     $(document).ready(function() {
         $('#vendorsSlider').owlCarousel({
-            loop: "<?= (count($featured_vendors) > 3) ? false : false ?>",
+            loop: "<?= (count($featured_vendors) > 3) ? true : false ?>",
             margin: 20,
-            nav: false,
+            nav: true,
             items: 3,
             dots: false,
-            autoplay: false,
+            autoplay: 4000,
             responsive: {
                 0: {
                     items: 1,
-                    loop: "<?= (count($featured_vendors) > 1) ? false : false ?>",
+                    loop: "<?= (count($featured_vendors) > 1) ? true : false ?>",
                 },
                 767: {
                     items: 2,
-                    loop: "<?= (count($featured_vendors) > 2) ? false : false ?>",
+                    loop: "<?= (count($featured_vendors) > 2) ? true : false ?>",
                 },
                 991: {
                     items: 3,
-                    loop: "<?= (count($featured_vendors) > 3) ? false : false ?>",
+                    loop: "<?= (count($featured_vendors) > 3) ? true : false ?>",
                 }
             }
         });
