@@ -10,23 +10,26 @@
         <div class="row">
             <div class="banner-container">
                 <div class="vendor-img">
-                    <img class="filter-cls" src="{{asset('images/blog-banner.jpg')}}" alt="page banner" class="img-fluid">
+                    <img src="{{asset('images/blog-banner.jpg')}}" alt="blog banner" class="img-fluid filter-cls margin-img-0">
                     <div class="banner-search-col">
                         <div class="search-header">
                             <p class="text">Blog</p>
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Blog</li>
-                        </ol>
-                    </nav>
-                </div>
             </div>
         </div>
+    </div>
+</section>
+
+<section id="breadcrumb-sec">
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+            </ol>
+        </nav>
     </div>
 </section>
 
