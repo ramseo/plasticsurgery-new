@@ -28,13 +28,18 @@ $average = averageReview($reviews);
             }
             }
             @endphp
-            <div class="img-col min-height-img">
+            <?php if ($vendor->most_popular == 1) { ?>
+                <div class="ribbon ribbon-top-left">
+                    <span>Most Popular</span>
+                </div>
+            <?php } ?>
+            <div class="img-col min-height-img pos-rel-cls">
                 <img src="{{$vendor_profile_img}}" alt="image" class="img-fluid">
-                <?php if ($vendor->most_popular == 1) { ?>
-                    <div class="ribbon ribbon-top-left">
-                        <span>Most Popular</span>
-                    </div>
-                <?php } ?>
+                <!-- caption -->
+                <div class="image__overlay image__overlay--primary">
+                    <div class="image__title">see profile</div>
+                </div>
+                <!-- caption -->
             </div>
             <div class="text-col">
                 <ul class="list-inline space-list">
