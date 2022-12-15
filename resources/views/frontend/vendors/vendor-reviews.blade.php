@@ -31,11 +31,7 @@
         @php
 
         $review_user = getData('users', 'id', $review->user_id);
-        if($review_user == NULL){
         $currentUser = $review->title;
-        }else{
-        $currentUser = $review_user->first_name . ' '. $review_user->last_name;
-        }
         @endphp
         <div class="col-xs-12 single-review">
             <div class="review-header">

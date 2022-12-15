@@ -75,7 +75,7 @@ class ReviewController extends Controller
 
         $module_action = 'List';
 
-        $module_name = $module_model::select('id', 'rating', 'description', 'vendor_id', 'is_active');
+        $module_name = $module_model::select('id', 'title', 'rating', 'description', 'vendor_id', 'is_active');
 
         $data = $module_name;
 

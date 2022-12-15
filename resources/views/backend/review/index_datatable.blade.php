@@ -102,8 +102,11 @@
                             <th>
                                 #
                             </th>
-                            <th width="60%">
+                            <th width="40%">
                                 Description
+                            </th>
+                            <th>
+                                Name
                             </th>
                             <th>
                                 Rating
@@ -164,6 +167,10 @@
                 name: 'description'
             },
             {
+                data: 'title',
+                name: 'title'
+            },
+            {
                 data: 'rating',
                 name: 'rating'
             },
@@ -175,7 +182,7 @@
                 data: 'action',
                 name: 'action',
                 orderable: false,
-                searchable: false 
+                searchable: false
             }
         ]
     });
