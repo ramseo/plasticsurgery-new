@@ -1,6 +1,37 @@
 <style type="text/css">
+   
+.button .icon i {
+    
+    font-size: 22px;
+    line-height: 58px;
+    transition: all 0.3s ease-in-out;
+}
+.button:hover {
+    width: 180px;
+}
+.button .icon {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
 
+.button {
+    float: left;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
+}
 </style>
+
+
 <footer id="footer" class="footer pt-5 pb-3  text-white overflow-hidden" style=" background: rgb(235, 10, 62);">
    <!-- <div class="pattern pattern-soft top"></div> -->
    <div class="container-fluid">

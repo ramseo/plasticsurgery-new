@@ -946,6 +946,7 @@
         font-size: 40px;
     }
 
+
     .search-header .text {
         font-size: 25px;
     }
@@ -977,10 +978,11 @@
     .user-menu {
         margin-left: 15px !important;
     }
-
+  
     .site-menu a {
-        padding: 10px 0;
-        /* padding: 20px 0; */
+      
+         padding: 10px 0;
+       /*padding: 20px 0; */
     }
 
     .user-menu li img {
@@ -1228,11 +1230,20 @@
     .menu-child-item li {
         width: auto;
     }
+    /*pooja tab css start*/
+
+    .menuDropDown .dropdown-content {
+        width: 510px;
+        padding-left: 20px;
+
+    }
+     /*pooja tab css end*/
 
     .menuDropDown .dropdown-content a>i {
         height: 15px;
         padding-top: 0;
     }
+
 
     /* code */
 }
