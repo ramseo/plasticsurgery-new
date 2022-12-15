@@ -231,6 +231,7 @@ class VendorController extends Controller
             $vendor->rating = $data['rating'];
             $vendor->description = $data['description'];
             $vendor->title = $data['name'];
+            $vendor->created_at = date("Y-m-d", time());
             $vendor->save();
             return response()->json(['success' => true, 'message' => 'Review posted successfully!']);
         }

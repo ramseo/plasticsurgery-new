@@ -909,8 +909,8 @@ strong {
 }
 
 .review-header .img-col {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 10px;
@@ -2964,6 +2964,7 @@ span.days {
     top: 30px;
     transform: rotate(-45deg);
 }
+
 /* featured */
 
 /* vishal css */
@@ -3017,6 +3018,24 @@ span.days {
     position: relative;
 }
 
-#featured-vendors .featured-title{
+#featured-vendors .featured-title {
     padding: 10px 0 20px 0;
+}
+
+.review-title {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.review-date {
+    font-size: 12px;
+}
+
+.review-title-date span {
+    display: block;
+}
+
+.review-body {
+    font-weight: 400;
 }
