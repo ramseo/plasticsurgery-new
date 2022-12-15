@@ -29,7 +29,13 @@
     <div class="detail-review-body">
         @foreach($reviews as $review)
         @php
+
         $review_user = getData('users', 'id', $review->user_id);
+        if($review_user == NULL){
+        $currentUser = $review->title;
+        }else{
+        $currentUser = $review_user->first_name . ' '. $review_user->last_name;
+        }
         @endphp
         <div class="col-xs-12 single-review">
             <div class="review-header">
@@ -40,7 +46,7 @@
                                 <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
                             </div>
                             <div class="text-col">
-                                <p class="name">{{$review_user->first_name . ' '. $review_user->last_name}}</p>
+                                <p class="name">{{$currentUser}}</p>
                                 <ul class="list-inline rating-list">
                                     <li class="list-inline-item">
                                         <ul class="list-inline">
@@ -81,9 +87,20 @@
                             <div class="review-rating" data-rateit-mode="font" data-rateit-resetable="false"></div>
                             <input type="hidden" id="review-rating-hidden" value="0">
                         </div>
+
                         <div class="form-group">
-                            <label for="">Name</label>
-                            <input id="reviewTitle" name="name" type="text" class="form-control">
+                            <label for="name">Name</label>
+                            <?php
+                            if (auth()->user() != Null) {
+                                $currentUser = auth()->user()->first();
+                                $nameVal = $currentUser->first_name . " " . $currentUser->last_name;
+                            ?>
+                                <input id="reviewTitle" value="<?= $nameVal ?>" name="name" type="text" class="form-control" readonly>
+                            <?php
+                            } else {
+                            ?>
+                                <input id="reviewTitle" name="name" type="text" class="form-control">
+                            <?php } ?>
                         </div>
                         <div class="form-group">
                             <label for="">Your Review</label>

@@ -210,23 +210,27 @@ class VendorController extends Controller
 
     public function postReview(Request $request)
     {
+
         $validator = Validator::make($request->all(), [
             'rating' => 'required|not_in:0',
             'description' => 'required',
-            // 'name' => 'required',
+            'name' => 'required',
         ]);
 
         if ($validator->passes()) {
             $data = $request->all();
-            // dd($data);
             $vendor = new VendorReview();
-            $vendor->user_id = $data['user_id'];
+            if (isset($data['user_id'])) {
+                $vendor->user_id = $data['user_id'];
+            } else {
+                $vendor->user_id = 0;
+            }
             $vendor->vendor_id = $data['vendor_id'];
             $vendor->type_id = $data['type_id'];
             $vendor->city_id = $data['city_id'];
             $vendor->rating = $data['rating'];
             $vendor->description = $data['description'];
-            // $vendor->title = $data['name'];
+            $vendor->title = $data['name'];
             $vendor->save();
             return response()->json(['success' => true, 'message' => 'Review posted successfully!']);
         }
