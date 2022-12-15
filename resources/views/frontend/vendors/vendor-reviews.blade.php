@@ -42,7 +42,9 @@
                                 <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
                             </div>
                             <div class="text-col">
-                                <p class="name">{{$currentUser}}</p>
+                                <p class="name review-title">
+                                    {{$currentUser}}
+                                </p>
                                 <ul class="list-inline rating-list">
                                     <li class="list-inline-item">
                                         <ul class="list-inline">
@@ -51,6 +53,9 @@
                                                     <i class="fa fa-star"></i>
                                                 </li>
                                                 @endfor
+                                                <li class="list-inline-item review-listing">
+                                                    <?= date('d', strtotime($review->created_at)) . " , " . date("F", strtotime($review->created_at)) . " , " . date('Y', strtotime($review->created_at)) ?>
+                                                </li>
                                         </ul>
                                     </li>
                                 </ul>

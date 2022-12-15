@@ -31,9 +31,7 @@ $latestReviews = getDataArray('vendor_reviews', array('type_id'=> $type->id, 'ci
                                             {{$review->title}}
                                         </span>
                                         <span class="review-date">
-                                            <?=
-                                            date('d', strtotime($review->created_at)) . " , " . date("F", strtotime($review->created_at)) . " , " . date('Y', strtotime($review->created_at));
-                                            ?>
+                                            <?= date('d', strtotime($review->created_at)) . " , " . date("F", strtotime($review->created_at)) . " , " . date('Y', strtotime($review->created_at)) ?>
                                         </span>
                                     </div>
                                 </div>
