@@ -92,10 +92,9 @@
                             <label for="name">Name</label>
                             <?php
                             if (auth()->user() != Null) {
-                                $currentUser = auth()->user()->first();
-                                $nameVal = $currentUser->first_name . " " . $currentUser->last_name;
+                                $currentUser = auth()->user()->getRoleNames()->first();
                             ?>
-                                <input id="reviewTitle" value="<?= $nameVal ?>" name="name" type="text" class="form-control" readonly>
+                                <input id="reviewTitle" value="<?= $currentUser ?>" name="name" type="text" class="form-control" readonly>
                             <?php
                             } else {
                             ?>
