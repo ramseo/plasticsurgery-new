@@ -186,6 +186,9 @@
 
 @include('frontend.includes.featured-vendors')
 @include('frontend.vendors.types.inner.reviews')
+<!-- latest blogs -->
+@include('frontend.vendors.types.inner.latest-blog')
+<!-- latest blogs -->
 @include('frontend.vendors.types.inner.content')
 
 @endsection
