@@ -3047,7 +3047,7 @@ span.days {
 }
 
 .blog-header img {
-    width: 150px;
+    width: 120px;
     max-width: inherit;
 }
 
@@ -3062,7 +3062,6 @@ span.days {
 
 #latest-blogs-sec .d-flex {
     padding: 15px;
-    align-items: center;
 }
 
 .blog-by span {
