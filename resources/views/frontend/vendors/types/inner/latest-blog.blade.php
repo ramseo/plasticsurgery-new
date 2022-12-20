@@ -28,7 +28,7 @@ $latestBlogs = getLatestBlogs();
                             </a>
                         </div>
                         <div class="blog-desc">
-                            <?= Str::words($post->intro, '15') ?>
+                            <?= Str::words($post->intro, '10') ?>
                         </div>
                         <div class="blog-by">
                             By <span><?= $post->author ?></span>
