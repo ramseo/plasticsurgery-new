@@ -3056,7 +3056,7 @@ span.days {
 }
 
 .blog-title a {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -3066,4 +3066,17 @@ span.days {
 
 .blog-by span {
     font-weight: 500;
+}
+
+.vendor-blog-box-shadow {
+    border-radius: 8px;
+    box-shadow: 0 1px 4px 0 #dadada;
+}
+
+.vendor-blog-item {
+    padding-bottom: 30px;
+}
+
+.vendor-blog-box-shadow:hover {
+    box-shadow: 0 1px 12px 0 #cdcdcd
 }
