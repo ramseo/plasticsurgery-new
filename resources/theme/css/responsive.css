@@ -950,6 +950,14 @@
         font-size: 12px;
     }
 
+    #latest-reviews .text-col {
+        text-align: left;
+    }
+
+    #featured-vendors .container-fluid {
+        max-width: 90%;
+    }
+
     /* code */
 }
 
