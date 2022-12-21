@@ -3056,7 +3056,7 @@ span.days {
 }
 
 .blog-title a {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -3066,6 +3066,7 @@ span.days {
 
 .blog-by span {
     font-weight: 500;
+    font-size: 13px;
 }
 
 .vendor-blog-box-shadow {
