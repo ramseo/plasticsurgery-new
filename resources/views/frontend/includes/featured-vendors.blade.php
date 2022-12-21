@@ -96,24 +96,24 @@ $featured_vendors = get_featured_vendors();
 <script>
     $(document).ready(function() {
         $('#vendorsSlider').owlCarousel({
-            loop: "<?= (count($featured_vendors) > 3) ? false : false ?>",
+            loop: "<?= (count($featured_vendors) > 3) ? true : false ?>",
             margin: 20,
             nav: true,
             items: 3,
             dots: false,
-            autoplay: false,
+            autoplay: 4000,
             responsive: {
                 0: {
                     items: 1,
-                    loop: "<?= (count($featured_vendors) > 1) ? false : false ?>",
+                    loop: "<?= (count($featured_vendors) > 1) ? true : false ?>",
                 },
                 767: {
                     items: 2,
-                    loop: "<?= (count($featured_vendors) > 2) ? false : false ?>",
+                    loop: "<?= (count($featured_vendors) > 2) ? true : false ?>",
                 },
                 991: {
                     items: 3,
-                    loop: "<?= (count($featured_vendors) > 3) ? false : false ?>",
+                    loop: "<?= (count($featured_vendors) > 3) ? true : false ?>",
                 }
             }
         });
