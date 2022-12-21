@@ -942,6 +942,14 @@
         padding: 0px 0 0px 0;
     }
 
+    .blog-title a {
+        font-size: 13px;
+    }
+
+    .blog-by span {
+        font-size: 12px;
+    }
+
     /* code */
 }
 
