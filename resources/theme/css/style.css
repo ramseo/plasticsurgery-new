@@ -143,8 +143,8 @@ span.days {
 }
 
 span.scl {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     margin-left: 10px;
     font-weight: 600;
 
@@ -2359,14 +2359,15 @@ article blockquote {
 
 .button {
     float: left;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     background: #fff;
     overflow: hidden;
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .button span {
@@ -2374,6 +2375,10 @@ article blockquote {
     font-weight: 500;
     line-height: 60px;
     margin-left: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(235, 10, 62);
 }
 
 .button:hover {
@@ -2384,24 +2389,28 @@ article blockquote {
     background: rgb(235, 10, 62);
 }
 
-.button span {
-    color: rgb(235, 10, 62);
-}
-
 .button .icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     text-align: center;
     border-radius: 50px;
     display: inline-block;
     transition: all 0.3s ease-in-out;
+    position: relative;
 }
 
 .button .icon i {
     color: rgb(235, 10, 62);
     font-size: 25px;
-    line-height: 60px;
+    /* line-height: 55px; */
     transition: all 0.3s ease-in-out;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto 0;
 }
 
 .button:hover i {

@@ -1,37 +1,3 @@
-<style type="text/css">
-   
-.button .icon i {
-    
-    font-size: 22px;
-    line-height: 58px;
-    transition: all 0.3s ease-in-out;
-}
-.button:hover {
-    width: 180px;
-}
-.button .icon {
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 50px;
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
-}
-
-.button {
-    float: left;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    background: #fff;
-    overflow: hidden;
-    border-radius: 50px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 10px 10px rgb(0 0 0 / 10%);
-}
-</style>
-
-
 <footer id="footer" class="footer pt-5 pb-3  text-white overflow-hidden" style=" background: rgb(235, 10, 62);">
    <!-- <div class="pattern pattern-soft top"></div> -->
    <div class="container-fluid">
@@ -96,7 +62,84 @@
             </form>
          </div>
          <div style="clear:both"></div>
-         <div class="col-lg-4  footer-col" data-aos="slide-left">
+         <!-- code -->
+         <div class="col-lg-4 footer-col" data-aos="slide-left">
+            <p class="footer-brand mr-lg-5 d-flex">
+               Follow us for more ideas & fun
+            </p>
+
+            <div class="social-icons-footer">
+               @if(setting('facebook_url'))
+               <a href="{{setting('facebook_url')}}" target="_blank">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                     </div>
+                     <span>@wed.in</span>
+                  </div>
+                  <span class="scl">Facebook</span>
+               </a>
+               @endif
+               @if(setting('instagram_url'))
+               <a href="{{setting('instagram_url')}}" target="_blank">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-instagram"></i>
+                     </div>
+                     <span>@wed.in</span>
+                  </div>
+                  <span class="scl">Instagram</span>
+               </a>
+               @endif
+               @if(setting('twitter_url'))
+               <a href="{{setting('twitter_url')}}" target="_blank">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-twitter"></i>
+                     </div>
+                     <span>@wed.in</span>
+                  </div>
+                  <span class="scl">Twitter</span>
+               </a>
+               @endif
+               @if(setting('linkedin_url'))
+               <a href="{{setting('linkedin_url')}}" target="_blank">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                     </div>
+                     <span>@wed.in</span>
+                  </div>
+                  <span class="scl">Linkedin</span>
+               </a>
+               @endif
+               @if(setting('pinterest_url'))
+               <a href="{{setting('pinterest_url')}}" target="_blank">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-pinterest"></i>
+                     </div>
+                     <span>@wed.in</span>
+                  </div>
+                  <span class="scl">Pintrest</span>
+               </a>
+               @endif
+
+               @if(setting('youtube_url'))
+               <a href="{{setting('youtube_url')}}" target="_blank">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-youtube"></i>
+                     </div>
+                     <span>@wed.in</span>
+                  </div>
+               </a>
+               @endif
+            </div>
+         </div>
+         <!-- code -->
+
+         <!-- <div class="col-lg-4  footer-col" data-aos="slide-left">
             <p class="footer-brand mr-lg-5 d-flex">
                Follow us for more ideas & fun
             </p>
@@ -172,8 +215,7 @@
                </a>
                @endif
             </div>
-
-         </div>
+         </div> -->
       </div>
       <br>
       <div class="row">

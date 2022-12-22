@@ -307,29 +307,17 @@ $city = getData('cities');
 
     .footer-col a {
         display: flex;
-        /*justify-content: center;*/
+        width: fit-content;
+        width: auto;
+        margin-bottom: 7px;
     }
 
     .card-body ol li {
         line-height: 37px !important;
     }
-
-
-
-    .footer-col a {
-        width: fit-content;
-    }
-
     #newsletterForm {
         max-width: 341px;
     }
-
-    .footer-col a {
-        width: auto;
-        margin-bottom: 7px;
-    }
-
-
     #header {
         position: fixed;
         width: 100%;
