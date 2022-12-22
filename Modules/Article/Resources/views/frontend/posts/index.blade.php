@@ -64,7 +64,7 @@ if ($getPostCat) {
                             ?>
                                 <div class="owl-item">
                                     <div class="item">
-                                        <a href="<?= url("c/" . $item['slug']) ?>">
+                                        <a href="<?= url("blog/c/" . $item['slug']) ?>">
                                             <img src="<?= $vendor_profile_img ?>" alt="category alt">
                                         </a>
                                         <div class="carousel-content-posts">
