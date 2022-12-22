@@ -4,7 +4,7 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("backend.$module_name.index")}}' icon='{{ $module_icon }}' >
+    <x-backend-breadcrumb-item route='{{route("backend.$module_name.index")}}' icon='{{ $module_icon }}'>
         {{ $module_title }}
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">{{ $module_action }}</x-backend-breadcrumb-item>
@@ -47,7 +47,10 @@
             <div class="col-12 col-sm-7">
 
                 <div class="text-center">
-                    <a href="{{route("frontend.$module_name.show", [encode_id($$module_name_singular->id), $$module_name_singular->slug])}}" class="btn btn-success" target="_blank"><i class="fas fa-link"></i> Public View</a>
+                    <a href="<?= route("frontend.$module_name.show", [$$module_name_singular->slug]) ?>" class="btn btn-success" target="_blank">
+                        <i class="fas fa-link"></i>
+                        Public View
+                    </a>
                 </div>
                 <hr>
 
@@ -61,29 +64,29 @@
                             @forelse($posts as $row)
                             @php
                             switch ($row->status) {
-                                case 0:
-                                    // Unpublished
-                                    $text_class = 'text-danger';
-                                    break;
+                            case 0:
+                            // Unpublished
+                            $text_class = 'text-danger';
+                            break;
 
-                                case 1:
-                                    // Published
-                                    $text_class = 'text-success';
-                                    break;
+                            case 1:
+                            // Published
+                            $text_class = 'text-success';
+                            break;
 
-                                case 2:
-                                    // Draft
-                                    $text_class = 'text-warning';
-                                    break;
+                            case 2:
+                            // Draft
+                            $text_class = 'text-warning';
+                            break;
 
-                                default:
-                                    // Default
-                                    $text_class = 'text-primary';
-                                    break;
+                            default:
+                            // Default
+                            $text_class = 'text-primary';
+                            break;
                             }
                             @endphp
                             <li>
-                                <span class="fa-li"><i class="fas fa-check-square {{$text_class}}"></i></span> <a href="{{route('backend.posts.show', $row->id)}}">{{$row->name}}</a> <a href="{{route('frontend.posts.show', [encode_id($row->id), $row->slug])}}" class="btn btn-sm btn-outline-primary" target="_blank" data-toggle="tooltip" title="Public View" > <i class="fas fa-external-link-square-alt"></i> </a>
+                                <span class="fa-li"><i class="fas fa-check-square {{$text_class}}"></i></span> <a href="{{route('backend.posts.show', $row->id)}}">{{$row->name}}</a> <a href="{{route('frontend.posts.show', [encode_id($row->id), $row->slug])}}" class="btn btn-sm btn-outline-primary" target="_blank" data-toggle="tooltip" title="Public View"> <i class="fas fa-external-link-square-alt"></i> </a>
                             </li>
                             @empty
                             <p class="text-center">
