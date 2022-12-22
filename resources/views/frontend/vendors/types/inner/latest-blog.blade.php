@@ -1,11 +1,8 @@
 <?php
-$latestBlogs = array();
-$latestBlogs = getLatestBlogs();
-// dd($latestBlogs);
-
+$getBlogsByVendor = getBlogsByVendor($type->id);
 ?>
 
-@if(count($latestBlogs) > 0)
+@if(count($getBlogsByVendor) > 0)
 <section id="latest-blogs-sec">
     <div class="container-fluid">
         <div class="row">
@@ -14,7 +11,7 @@ $latestBlogs = getLatestBlogs();
                 <p class="head">Latest Blogs of {{$type->name}} on Wed.in</p>
             </div>
             <div class="col-xs-12 col-sm-12 row reviews-list-col">
-                @foreach($latestBlogs as $post)
+                @foreach($getBlogsByVendor as $post)
                 <div class="col-xs-12 col-sm-6 vendor-blog-item">
                     <div class="col-xs-12 d-flex vendor-blog-box-shadow">
                         <div class="blog-header">

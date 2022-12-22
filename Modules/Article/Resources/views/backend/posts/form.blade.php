@@ -123,16 +123,38 @@
                     // if ($getSelectedTagVal) {
                     //     foreach ($getSelectedTagVal as $item) {
                     ?>
-                            <option value="<?//= $item['id'] ?>" selected><?//= $item['name'] ?></option>
+                            <option value="<? //= $item['id'] 
+                                            ?>" selected><? //= $item['name'] 
+                                                            ?></option>
                     <?php
                     //     }
                     // }
                     ?>
                 </select>
-            <?php // } ?>
+            <?php // } 
+            ?>
         </div>
     </div> -->
     <!-- Multiple Tags -->
+
+    <!-- Vendor type assignment -->
+    <div class="col-4">
+        <div class="form-group">
+            <?php
+            $field_name = 'vendor_type';
+            $field_lable = __("article::$module_name.$field_name");
+            $field_placeholder = __("Select an option");
+            $required = "";
+
+            $select_options_types = custom_array_coloum(getDataArray('types'), 'id', 'name');
+
+            ?>
+            {{ html()->label($field_lable, $field_name) }}
+            {{ html()->select($field_name, $select_options_types)->placeholder($field_placeholder)->class('form-control select2')->attributes(["$required"]) }}
+        </div>
+    </div>
+    <!-- vendor type assignment -->
+
     <div class="col-4">
         <div class="form-group">
             <?php

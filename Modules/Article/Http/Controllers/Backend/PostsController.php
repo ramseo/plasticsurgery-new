@@ -151,7 +151,7 @@ class PostsController extends Controller
      * @return Response
      */
     public function create()
-    {
+    { 
 
         $module_title = $this->module_title;
         $module_name = $this->module_name;

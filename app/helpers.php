@@ -854,7 +854,7 @@ if (!function_exists('date_today')) {
 
     function getNextPost($id)
     {
-        $nextUser = DB::table('posts')->where('id', '>', $id)->select('id','slug')->orderby('id','asc')->first();
+        $nextUser = DB::table('posts')->where('id', '>', $id)->select('id', 'slug')->orderby('id', 'asc')->first();
         return $nextUser;
     }
 
@@ -864,10 +864,17 @@ if (!function_exists('date_today')) {
         return $previousUser;
     }
 
-    function getIdBySlug($slug){
+    function getIdBySlug($slug)
+    {
         $data = DB::table('vendors');
         $data->select('id');
         $data->where('slug', $slug);
         return $data->first();
+    }
+
+    function getBlogsByVendor($type_id)
+    {
+        $data = DB::table('posts')->where('vendor_type', $type_id)->take(5)->orderBy('id', 'desc');
+        return $data->get();
     }
 }

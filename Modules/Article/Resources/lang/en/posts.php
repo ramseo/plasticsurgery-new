@@ -12,6 +12,7 @@ return [
     'category_id'      => 'Category',
     'tag_ids'      => 'Tags',
     'type'             => 'Type',
+    'vendor_type'             => 'Vendor Type',
     'is_featured'      => 'Is Featured',
     'tags'             => 'Tags',
     'status'           => 'Status',
