@@ -29,7 +29,7 @@ $similar_vendors = get_similar_vendors($vendor_details->type_id);
                             }
                             }
                             @endphp
-                            <img src="{{$vendor_profile_img}}" alt="" class="img-fluid">
+                            <img src="{{$vendor_profile_img}}" alt="image alt" class="img-fluid min-height-270">
                             <?php if ($similar_vendor->most_popular == 1) { ?>
                                 <div class="ribbon ribbon-top-left">
                                     <span>Most Popular</span>

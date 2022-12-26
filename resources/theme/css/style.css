@@ -3090,3 +3090,7 @@ span.days {
 .vendor-blog-box-shadow:hover {
     box-shadow: 0 1px 12px 0 #cdcdcd
 }
+
+.min-height-270 {
+    min-height: 270px;
+}
