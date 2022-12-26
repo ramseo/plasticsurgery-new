@@ -1,4 +1,4 @@
-@extends('frontend.layouts.app') 
+@extends('frontend.layouts.app')
 @section('title') {{ __("Vendor") . ' | ' . $vendor_details->business_name }} @endsection
 
 @section('content')
@@ -11,7 +11,7 @@ $average = averageReview($reviews);
 
 @endphp
 
-<section id="breadcrumb-section"> 
+<section id="breadcrumb-section">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -42,9 +42,13 @@ $average = averageReview($reviews);
                 }
                 @endphp
                 <div class="img-col">
-                    <img src="{{$vendor_profile_img}}" class="img-fluid" alt="">
+                    <img src="{{$vendor_profile_img}}" class="img-fluid" alt="image alt">
+                    <?php if ($vendor_details->most_popular == 1) { ?>
+                        <div class="ribbon ribbon-top-left">
+                            <span>Most Popular</span>
+                        </div>
+                    <?php } ?>
                 </div>
-
                 <!-- replaced content -->
 
             </div>
@@ -254,7 +258,7 @@ $average = averageReview($reviews);
         };
         $(".containerCollage").justifiedGallery();
 
-        $('#reviewForm').submit(function(e) { 
+        $('#reviewForm').submit(function(e) {
             e.preventDefault();
             $.ajax({
                 type: 'POST',
@@ -269,10 +273,10 @@ $average = averageReview($reviews);
                     'rating': $('#review-rating-hidden').val(),
                     'description': $('#reviewDescription').val()
                 },
-                success: function(res) { 
+                success: function(res) {
                     if (res.success) {
                         $('.reviewAlert').html('').hide();
-                        $('#reviewForm').trigger('reset'); 
+                        $('#reviewForm').trigger('reset');
                         toastr.success(res.message, 'Review posted Successfully!');
 
                         setTimeout(function() {

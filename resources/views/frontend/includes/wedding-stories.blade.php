@@ -39,21 +39,24 @@ $weddingStories = getDataArray('posts', 'is_featured', 1);
 <script>
     $(document).ready(function() {
         $('#storySlider').owlCarousel({
-            loop: false,
+            items: 3,
+            loop: <?= (count($weddingStories) > 3) ? true : false ?>,
             margin: 20,
             nav: true,
-            items: 3,
             dots: false,
-            autoplay: 3000,
+            autoplay: 4000,
             responsive: {
                 0: {
-                    items: 1
+                    items: 1,
+                    loop: <?= (count($weddingStories) > 1) ? true : false ?>,
                 },
                 767: {
-                    items: 2
+                    items: 2,
+                    loop: <?= (count($weddingStories) > 2) ? true : false ?>,
                 },
                 991: {
-                    items: 3
+                    items: 3,
+                    loop: <?= (count($weddingStories) > 3) ? true : false ?>,
                 }
             }
         });
