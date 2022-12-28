@@ -918,7 +918,8 @@ strong {
 
 .single-review {
     font-size: 14px;
-    margin: 25px 0px;
+    margin: 15px 0px;
+    /* margin: 25px 0px; */
 }
 
 .single-review p {
