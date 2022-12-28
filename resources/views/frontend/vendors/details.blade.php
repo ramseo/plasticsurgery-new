@@ -48,6 +48,29 @@ $average = averageReview($reviews);
                             <span>Most Popular</span>
                         </div>
                     <?php } ?>
+                    <!-- code -->
+                    <?php
+                    $imgCount = 0;
+                    if ($albums && count($albums) > 0) {
+                        foreach ($albums as $albums_item) {
+                            $album_images = getDataArray('images', 'album_id', $albums_item->id);
+                            $imgCount = ($imgCount + count($album_images));
+                        }
+                    }
+                    if ($imgCount > 0) {
+                    ?>
+                        <div class="album-cls album-count">
+                            <span>
+                                <div>
+                                    <i class="fa fa-chevron-down album-count-cls"></i>
+                                </div>
+                                <div>
+                                    <?= $imgCount . " " . "Photos" ?>
+                                </div>
+                            </span>
+                        </div>
+                    <?php } ?>
+                    <!-- code -->
                 </div>
                 <!-- replaced content -->
 

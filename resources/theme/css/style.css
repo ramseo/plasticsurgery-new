@@ -3094,3 +3094,51 @@ span.days {
 .min-height-270 {
     min-height: 270px;
 }
+
+.album-cls {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.album-cls span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    padding: 10px 0;
+    background-color: #fff;
+    color: #000;
+    font: 700 12px/1 'Lato', sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.9;
+    border-radius: 18px 0px 0px 18px;
+    cursor: pointer;
+}
+
+.album-count-cls {
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+.rev-flex-cls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rev-flex-cls .text-col {
+    text-align: left;
+}
+
+.detail-review-body .single-review {
+    border-radius: 8px;
+    box-shadow: 0 1px 4px 0 #dadada;
+    padding: 15px;
+}
+
+.detail-review-body .single-review:hover {
+    box-shadow: 0 1px 12px 0 #cdcdcd;
+}

@@ -37,7 +37,7 @@
             <div class="review-header">
                 <ul class="list-inline space-list">
                     <li>
-                        <div class="d-flex">
+                        <div class="rev-flex-cls">
                             <div class="img-col">
                                 <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
                             </div>

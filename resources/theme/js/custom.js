@@ -8,3 +8,10 @@ $(document).on('click', '.displayPassword', function () {
         $(this).html('<i class="fa fa-eye" aria-hidden="true"></i>');
     }
 });
+
+
+$(document).on('click', '.album-cls', function () {
+    $('html,body').animate({
+        scrollTop: $(".new-div").offset().top - 100
+    }, 'slow');
+});

@@ -356,10 +356,10 @@
         padding: 0;
     }
 
-    .review-header .img-col {
+    /* .review-header .img-col {
         width: 25px;
         height: 25px;
-    }
+    } */
 
     .single-review {
         font-size: 12px;
@@ -956,6 +956,17 @@
 
     #featured-vendors .container-fluid {
         max-width: 90%;
+    }
+
+    .album-cls span {
+        font-size: 13px;
+        width: 100px;
+        padding: 8px 0;
+    }
+
+    .album-count-cls {
+        padding-right: 5px;
+        font-size: 15px;
     }
 
     /* code */
