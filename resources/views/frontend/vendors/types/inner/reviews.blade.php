@@ -44,7 +44,7 @@ $latestReviews = getDataArray('vendor_reviews', array('type_id'=> $type->id, 'ci
                         </div>
                         <div class="review-body">
                             <p>Review for - <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $review_vendor->slug }}">{{$review_vendor->business_name}}</a></p>
-                            <p>{{$review->description}}</p>
+                            <p><?= Str::words($review->description, 5, ' (...)') ?></p>
                         </div>
                     </div>
                 </div>
