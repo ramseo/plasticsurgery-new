@@ -23,7 +23,8 @@ $latestReviews = getDataArray('vendor_reviews', array('type_id'=> $type->id, 'ci
                         <div class="review-header">
                             <ul class="list-inline space-list">
                                 <li>
-                                    <div class="d-flex">
+                                <!-- d-flex -->
+                                    <div class="rev-flex-cls">
                                         <div class="img-col">
                                             <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
                                         </div>
