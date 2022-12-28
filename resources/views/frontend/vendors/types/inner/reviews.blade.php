@@ -19,31 +19,33 @@ $latestReviews = getDataArray('vendor_reviews', array('type_id'=> $type->id, 'ci
                 $vendorType = getData('types', 'id', $review_vendor->type_id);
                 @endphp
                 <div class="col-xs-12 col-sm-6 single-review">
-                    <div class="review-header">
-                        <ul class="list-inline space-list">
-                            <li>
-                                <div class="d-flex">
-                                    <div class="img-col">
-                                        <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+                    <div class="review-of-vendor">
+                        <div class="review-header">
+                            <ul class="list-inline space-list">
+                                <li>
+                                    <div class="d-flex">
+                                        <div class="img-col">
+                                            <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="text-col review-title-date">
+                                            <span class="name review-title">
+                                                {{$review->title}}
+                                            </span>
+                                            <span class="review-date">
+                                                <?= date('d', strtotime($review->created_at)) . " , " . date("F", strtotime($review->created_at)) . " , " . date('Y', strtotime($review->created_at)) ?>
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="text-col review-title-date">
-                                        <span class="name review-title">
-                                            {{$review->title}}
-                                        </span>
-                                        <span class="review-date">
-                                            <?= date('d', strtotime($review->created_at)) . " , " . date("F", strtotime($review->created_at)) . " , " . date('Y', strtotime($review->created_at)) ?>
-                                        </span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="vendor-rating"><i class="fa fa-star"></i> {{number_format($review->rating, 1)}}</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="review-body">
-                        <p>Review for - <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $review_vendor->slug }}">{{$review_vendor->business_name}}</a></p>
-                        <p>{{$review->description}}</p>
+                                </li>
+                                <li>
+                                    <span class="vendor-rating"><i class="fa fa-star"></i> {{number_format($review->rating, 1)}}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="review-body">
+                            <p>Review for - <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $review_vendor->slug }}">{{$review_vendor->business_name}}</a></p>
+                            <p>{{$review->description}}</p>
+                        </div>
                     </div>
                 </div>
                 @endforeach

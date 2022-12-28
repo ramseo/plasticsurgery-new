@@ -3142,3 +3142,13 @@ span.days {
 .detail-review-body .single-review:hover {
     box-shadow: 0 1px 12px 0 #cdcdcd;
 }
+
+.review-of-vendor {
+    border-radius: 8px;
+    box-shadow: 0 1px 4px 0 #dadada;
+    padding: 15px;
+}
+
+.review-of-vendor:hover {
+    box-shadow: 0 1px 12px 0 #cdcdcd;
+}
