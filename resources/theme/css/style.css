@@ -874,8 +874,8 @@ strong {
     /* background: #2ca600; */
     color: white;
     font-size: 14px;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 0px 10px 0 10px;
+    font-weight: 400;
 }
 
 .vendor-rating .fa {
@@ -3169,6 +3169,28 @@ span.days {
     justify-content: space-between;
 }
 
-.rating-scroll-event{
+.rating-scroll-event {
     cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.copy-btn-cls {
+    text-align: center;
+}
+
+#shareModal .modal-header {
+    justify-content: center;
+}
+
+.twitter i {
+    color: #00acee;
+}
+
+.linkedin i {
+    color: #0A66C2
+}
+
+.pinterest i {
+    color: #BD081C;
 }

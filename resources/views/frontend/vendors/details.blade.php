@@ -195,19 +195,39 @@ $average = averageReview($reviews);
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Share</h4>
+                <h4 class="modal-title">Share This Profile</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="vendor-social-main-col">
                     <ul class="list-inline text-center">
                         <li class="list-inline-item">
-                            <a class="facebook" href="{{$vendor_details->facebook_link}}" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                            <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?= url()->current() ?>" target="_blank">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="instagram" href="{{$vendor_details->instagram_link}}" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a class="twitter" href="https://twitter.com/intent/tweet?url=<?= url()->current() ?>" target="_blank">
+                                <i class="fab fa-twitter-square"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=<?= url()->current() ?>&title=Post" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="pinterest" href="http://pinterest.com/pin/create/button/?url=<?= url()->current() ?>&description=Post" target="_blank">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
                         </li>
                     </ul>
+                </div>
+                <div class="copy-btn-cls">
+                    <p style="display: none;" id="copyInput"><?= url()->current() ?></p>
+                    <button id="text-copy-btn" onclick="copyToClipboard('copyInput')" class="btn btn-default">
+                        Copy Link
+                    </button>
                 </div>
             </div>
         </div>

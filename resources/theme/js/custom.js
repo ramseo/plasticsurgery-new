@@ -27,3 +27,32 @@ $(document).on('click', '.rating-scroll-event', function () {
         scrollTop: $(".detail-review-header").offset().top - 140
     }, 'slow');
 });
+
+function copyToClipboard(elementId) {
+
+    // Create a "hidden" input
+    var aux = document.createElement("input");
+
+    // Assign it the value of the specified element
+    aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+
+    // Append it to the body
+    document.body.appendChild(aux);
+
+    // Highlight its content
+    aux.select();
+
+    // Copy the highlighted text
+    document.execCommand("copy");
+
+    // change text
+    $("#text-copy-btn").html("Copied!");
+    setTimeout(function () {
+        $("#shareModal").modal("hide");
+        $("#text-copy-btn").html("Copy Link");
+    }, 2000)
+
+    // Remove it from the body
+    document.body.removeChild(aux);
+
+}
