@@ -21,3 +21,9 @@ $(document).on('click', '.price-arrow-down', function () {
         scrollTop: $(".pricing-col").offset().top - 100
     }, 'slow');
 });
+
+$(document).on('click', '.rating-scroll-event', function () {
+    $('html,body').animate({
+        scrollTop: $(".detail-review-header").offset().top - 140
+    }, 'slow');
+});

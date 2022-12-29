@@ -870,11 +870,12 @@ strong {
 }
 
 .vendor-rating {
-    background: #2ca600;
+    background: #08540a;
+    /* background: #2ca600; */
     color: white;
     font-size: 14px;
-    padding: 0 6px;
-    border-radius: 2px;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 .vendor-rating .fa {
@@ -1076,7 +1077,9 @@ strong {
 .vendor-detail-text-col .inner-col .vendor-rating {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    font-weight: 500;
 }
 
 .vendor-detail-cols .head {
@@ -3164,4 +3167,8 @@ span.days {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.rating-scroll-event{
+    cursor: pointer;
 }

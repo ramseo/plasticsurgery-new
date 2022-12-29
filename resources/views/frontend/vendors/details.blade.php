@@ -79,13 +79,17 @@ $average = averageReview($reviews);
                 <div class="inner bg-white-custom">
                     <div class="inner-col">
                         @if($average > 0)
-                        <span class="vendor-rating"><i class="fa fa-star"></i> {{number_format($average, 1)}}</span>
+                        <span class="vendor-rating rating-scroll-event">
+                            <i class="fa fa-star"></i>
+                            {{number_format($average, 1)}}
+                            <span>(<?= count($reviews) ?>)</span>
+                        </span>
                         @endif
                         <p class="title">{{$vendor_details->business_name}}</p>
                         <p class="grey-text">{{$type->name}} in {{$city->name}}</p>
                     </div>
                     <hr>
-                    <div class="inner-col"> 
+                    <div class="inner-col">
                         <p class="price price-arrow-cls">
                             Rs. {{$vendor_details->price}}
                             <span class="float-right price-arrow-down">
