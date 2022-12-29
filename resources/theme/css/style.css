@@ -3194,3 +3194,9 @@ span.days {
 .pinterest i {
     color: #BD081C;
 }
+
+.review-chevron-down {
+    font-size: 15px;
+    padding-left: 10px;
+    top: 0;
+}

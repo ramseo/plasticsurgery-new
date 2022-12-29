@@ -83,6 +83,7 @@ $average = averageReview($reviews);
                             <i class="fa fa-star"></i>
                             {{number_format($average, 1)}}
                             <span>(<?= count($reviews) ?>)</span>
+                            <i class="fa fa-chevron-down review-chevron-down"></i>
                         </span>
                         @endif
                         <p class="title">{{$vendor_details->business_name}}</p>
