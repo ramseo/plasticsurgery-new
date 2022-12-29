@@ -26,49 +26,60 @@
         </ul>
     </div>
     <hr>
-    <div class="detail-review-body">
-        @foreach($reviews as $review)
-        @php
 
-        $review_user = getData('users', 'id', $review->user_id);
-        $currentUser = $review->title;
-        @endphp
-        <div class="col-xs-12 single-review">
-            <div class="review-header">
-                <ul class="list-inline space-list">
-                    <li>
-                        <div class="rev-flex-cls">
-                            <div class="img-col">
-                                <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+    <div class="detail-review-body">
+        <?php
+        foreach ($reviews as $key => $review) {
+            if ($key > 2) {
+                $style = "style='display:none'";
+                $cls = "rev-mor-cls";
+            } else {
+                $style = "";
+                $cls = "";
+            }
+
+            $review_user = getData('users', 'id', $review->user_id);
+            $currentUser = $review->title;
+        ?>
+            <div <?= $style ?> class="col-xs-12 single-review  <?= $cls ?>">
+                <div class="review-header">
+                    <ul class="list-inline space-list">
+                        <li>
+                            <div class="rev-flex-cls">
+                                <div class="img-col">
+                                    <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="text-col">
+                                    <p class="name review-title">
+                                        {{$currentUser}}
+                                    </p>
+                                    <ul class="list-inline rating-list">
+                                        <li class="list-inline-item">
+                                            <ul class="list-inline">
+                                                @for($i = 1; $i <= $review->rating; $i++)
+                                                    <li class="list-inline-item text-success">
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    @endfor
+                                                    <li class="list-inline-item review-listing">
+                                                        <?= date('d', strtotime($review->created_at)) . " , " . date("F", strtotime($review->created_at)) . " , " . date('Y', strtotime($review->created_at)) ?>
+                                                    </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="text-col">
-                                <p class="name review-title">
-                                    {{$currentUser}}
-                                </p>
-                                <ul class="list-inline rating-list">
-                                    <li class="list-inline-item">
-                                        <ul class="list-inline">
-                                            @for($i = 1; $i <= $review->rating; $i++)
-                                                <li class="list-inline-item text-success">
-                                                    <i class="fa fa-star"></i>
-                                                </li>
-                                                @endfor
-                                                <li class="list-inline-item review-listing">
-                                                    <?= date('d', strtotime($review->created_at)) . " , " . date("F", strtotime($review->created_at)) . " , " . date('Y', strtotime($review->created_at)) ?>
-                                                </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="review-body">
+                    <p>{{$review->description}}</p>
+                </div>
             </div>
-            <div class="review-body">
-                <p>{{$review->description}}</p>
-            </div>
+        <?php } ?>
+        <div class="btn btn-default show-more-reviews">
+            <!-- Generate text -->
         </div>
-        @endforeach
     </div>
 </div>
 

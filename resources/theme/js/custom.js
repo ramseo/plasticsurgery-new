@@ -29,7 +29,6 @@ $(document).on('click', '.rating-scroll-event', function () {
 });
 
 function copyToClipboard(elementId) {
-
     // Create a "hidden" input
     var aux = document.createElement("input");
 
@@ -54,5 +53,14 @@ function copyToClipboard(elementId) {
 
     // Remove it from the body
     document.body.removeChild(aux);
-
 }
+
+$(document).on('click', '.show-more-reviews', function () {
+    $('.detail-review-body .single-review').css("display", 'block');
+    $('.show-more-reviews').hide();
+});
+
+$(document).ready(function () {
+    var showReviews = $('.detail-review-body .rev-mor-cls').length;
+    $('.show-more-reviews').html("Show More" + " " + showReviews + " " + "Reviews");
+})
