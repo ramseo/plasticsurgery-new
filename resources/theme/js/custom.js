@@ -15,3 +15,9 @@ $(document).on('click', '.album-cls', function () {
         scrollTop: $(".new-div").offset().top - 100
     }, 'slow');
 });
+
+$(document).on('click', '.price-arrow-down', function () {
+    $('html,body').animate({
+        scrollTop: $(".pricing-col").offset().top - 100
+    }, 'slow');
+});

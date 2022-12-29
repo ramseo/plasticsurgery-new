@@ -85,8 +85,13 @@ $average = averageReview($reviews);
                         <p class="grey-text">{{$type->name}} in {{$city->name}}</p>
                     </div>
                     <hr>
-                    <div class="inner-col">
-                        <p class="price">Rs. {{$vendor_details->price}}</p>
+                    <div class="inner-col"> 
+                        <p class="price price-arrow-cls">
+                            Rs. {{$vendor_details->price}}
+                            <span class="float-right price-arrow-down">
+                                <i class="fa fa-chevron-down"></i>
+                            </span>
+                        </p>
                         <p class="grey-text">{{$vendor_details->label}} <a id="see-full-list" class="grey-text" href="javascript:void(0)">(See Full Pricelist)</a></p>
                     </div>
                     <hr>

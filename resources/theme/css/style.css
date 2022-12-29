@@ -3153,3 +3153,15 @@ span.days {
 .review-of-vendor:hover {
     box-shadow: 0 1px 12px 0 #cdcdcd;
 }
+
+.price-arrow-down {
+    cursor: pointer;
+    font-size: 20px;
+    color: darkgray;
+}
+
+.price-arrow-cls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
