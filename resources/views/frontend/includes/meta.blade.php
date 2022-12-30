@@ -36,13 +36,12 @@ $meta_page_type = 'website';
 
 <!-- code -->
 <?php
-$vendor_profile_img = asset(setting('meta_image'));
 if (isset($vendor_details->image)) {
     if (file_exists(public_path() . '/storage/vendor/profile/' . $vendor_details->image)) {
         $vendor_profile_img = asset('storage/vendor/profile/' . $vendor_details->image);
     }
-} elseif ($$module_name_singular->featured_image) {
-    $vendor_profile_img = $$module_name_singular->featured_image;
+} else {
+    $vendor_profile_img = asset(setting('meta_image'));
 }
 ?>
 <!-- code -->
