@@ -203,12 +203,12 @@ $average = averageReview($reviews);
                 <div class="vendor-social-main-col">
                     <ul class="list-inline text-center">
                         <li class="list-inline-item">
-                            <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?= url()->current() ?>" target="_blank">
+                            <a class="facebook" href="https://www.facebook.com/sharer.php?u=https://dev.wed.in/wedding-photographers/delhi/business-name-2&t=TEst" target="_blank">
                                 <i class="fab fa-facebook-square"></i>
-                            </a>
+                            </a> 
                         </li>
                         <li class="list-inline-item">
-                            <a class="twitter" href="https://twitter.com/intent/tweet?url=<?= url()->current() ?>" target="_blank">
+                            <a class="twitter" href="https://twitter.com/share?text=<?= $vendor_details->business_name ?>&url=<?= url()->current() ?>&hashtags=wed.in" target="_blank">
                                 <i class="fab fa-twitter-square"></i>
                             </a>
                         </li>
