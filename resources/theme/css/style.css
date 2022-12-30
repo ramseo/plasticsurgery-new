@@ -583,8 +583,9 @@ strong {
 .common-card .text-col {
     background: white;
     padding: 15px 20px;
+    text-align: left;
     /* padding: 25px 20px; */
-    text-align: center;
+    /* text-align: center; */
 }
 
 .common-card {

@@ -61,6 +61,13 @@ $(document).on('click', '.show-more-reviews', function () {
 });
 
 $(document).ready(function () {
+    var totalReviews = $('.detail-review-body .single-review').length;
+    if (totalReviews > 3) {
+        $('.show-more-reviews').show();
+    } else {
+        $('.show-more-reviews').hide();
+    }
+
     var showReviews = $('.detail-review-body .rev-mor-cls').length;
     $('.show-more-reviews').html("Show More" + " " + showReviews + " " + "Reviews");
 })

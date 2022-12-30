@@ -61,7 +61,7 @@ if (isset($vendor_details->image)) {
 <meta name="twitter:creator" content="{{ setting('meta_twitter_creator') }}">
 <meta name="twitter:title" content="@yield('title') | {{ config('app.name') }}">
 <meta name="twitter:description" content="{{ setting('meta_description') }}">
-<meta name="twitter:image" content="{{ asset(setting('meta_image')) }}">
+<meta name="twitter:image" content="<?= $vendor_profile_img ?>">
 
 <!--canonical link-->
 <link rel="canonical" href="{{url()->current()}}">
