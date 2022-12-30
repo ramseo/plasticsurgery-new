@@ -203,7 +203,7 @@ $average = averageReview($reviews);
                 <div class="vendor-social-main-col">
                     <ul class="list-inline text-center">
                         <li class="list-inline-item">
-                            <a class="facebook" href="https://www.facebook.com/sharer.php?u=https://dev.wed.in/wedding-photographers/delhi/business-name-2&t=TEst" target="_blank">
+                            <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?= url()->current() ?>&t=<?= $vendor_details->business_name ?>" target="_blank">
                                 <i class="fab fa-facebook-square"></i>
                             </a> 
                         </li>
