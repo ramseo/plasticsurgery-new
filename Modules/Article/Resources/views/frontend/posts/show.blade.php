@@ -94,21 +94,15 @@
                         <i class="fab fa fa-share-alt"></i>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?= url()->current() ?>" target="_blank">
+                        <a href="https://www.facebook.com/sharer.php?u=<?= url()->current() ?>&t=<?= $$module_name_singular->name ?>" target="_blank">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/intent/tweet?url=<?= url()->current() ?>" target="_blank">
+                        <a href="https://twitter.com/share?text=<?= $$module_name_singular->name ?>&url=<?= url()->current() ?>&hashtags=wed.in" target="_blank">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </li>
-                    <!-- <li>
-                        <a href="https://www.instagram.com/sharer.php?u=<? //= url()->current() 
-                                                                        ?>" target="_blank">
-                            <i class="fab fa-instagram fa-2x"></i>
-                        </a>
-                    </li> -->
                     <li>
                         <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?= url()->current() ?>&title=Post" target="_blank">
                             <i class="fab fa-linkedin"></i>
