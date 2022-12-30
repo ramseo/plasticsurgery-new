@@ -56,7 +56,8 @@ if (isset($vendor_details->image)) {
 
 <!-- Twitter Meta -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="{{ setting('meta_twitter_site') }}">
+<!-- {{ setting('meta_twitter_site') }} -->
+<meta name="twitter:site" content="<?= url()->current() ?>">
 <meta name="twitter:url" content="{{url()->full()}}" />
 <meta name="twitter:creator" content="{{ setting('meta_twitter_creator') }}">
 <meta name="twitter:title" content="@yield('title') | {{ config('app.name') }}">
