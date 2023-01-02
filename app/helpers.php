@@ -877,4 +877,10 @@ if (!function_exists('date_today')) {
         $data = DB::table('posts')->where('vendor_type', $type_id)->take(5)->orderBy('id', 'desc');
         return $data->get();
     }
+
+    function getBlogViaSlug($lastUri)
+    {
+        $data = DB::table('posts')->select('featured_image','content')->where('slug', $lastUri);
+        return $data->get()->first();
+    }
 }

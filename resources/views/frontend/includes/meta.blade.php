@@ -36,7 +36,14 @@ $meta_page_type = 'website';
 
 <!-- code -->
 <?php
-if (isset($vendor_details->image)) {
+
+$getBlogViaSlug = getBlogViaSlug(last(request()->segments()));
+
+if ($getBlogViaSlug) {
+    if (file_exists(public_path() . $getBlogViaSlug->featured_image)) {
+        $vendor_profile_img = asset($getBlogViaSlug->featured_image);
+    }
+} elseif (isset($vendor_details->image)) {
     if (file_exists(public_path() . '/storage/vendor/profile/' . $vendor_details->image)) {
         $vendor_profile_img = asset('storage/vendor/profile/' . $vendor_details->image);
     }
