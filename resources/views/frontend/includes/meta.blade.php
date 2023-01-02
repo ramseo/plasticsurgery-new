@@ -71,7 +71,7 @@ if ($getBlogViaSlug) {
 <meta name="twitter:url" content="{{url()->full()}}" />
 <meta name="twitter:creator" content="{{ setting('meta_twitter_creator') }}">
 <meta name="twitter:title" content="@yield('title') | {{ config('app.name') }}">
-<meta name="twitter:description" content="{{ setting('meta_description') }}">
+<meta name="twitter:description" content="<?= $meta_description ?>">
 <meta name="twitter:image" content="<?= $vendor_profile_img ?>">
 
 <!--canonical link-->
