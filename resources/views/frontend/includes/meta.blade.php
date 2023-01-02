@@ -36,6 +36,8 @@ $meta_page_type = 'website';
 
 <!-- code -->
 <?php
+$vendor_profile_img = asset(setting('meta_image'));
+$meta_description = asset(setting('meta_description'));
 
 $getBlogViaSlug = getBlogViaSlug(last(request()->segments()));
 
@@ -43,12 +45,13 @@ if ($getBlogViaSlug) {
     if (file_exists(public_path() . $getBlogViaSlug->featured_image)) {
         $vendor_profile_img = asset($getBlogViaSlug->featured_image);
     }
+    if ($getBlogViaSlug->content) {
+        $meta_description = $getBlogViaSlug->content;
+    }
 } elseif (isset($vendor_details->image)) {
     if (file_exists(public_path() . '/storage/vendor/profile/' . $vendor_details->image)) {
         $vendor_profile_img = asset('storage/vendor/profile/' . $vendor_details->image);
     }
-} else {
-    $vendor_profile_img = asset(setting('meta_image'));
 }
 ?>
 <!-- code -->
@@ -57,7 +60,7 @@ if ($getBlogViaSlug) {
 <meta property="og:url" content="{{url()->full()}}" />
 <meta property="og:title" content="@yield('title') | {{ config('app.name') }}" />
 <meta property="og:site_name" content="{{setting('meta_site_name')}}" />
-<meta property="og:description" content="{{ setting('meta_description') }}" />
+<meta property="og:description" content="<?= $meta_description ?>" />
 <meta property="og:image" content="<?= $vendor_profile_img ?>" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
