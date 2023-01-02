@@ -11,6 +11,7 @@ use Yajra\DataTables\DataTables;
 use Log;
 use Flash;
 use Storage;
+use Illuminate\Support\Str;
 
 class AlbumController extends Controller
 {
@@ -18,17 +19,20 @@ class AlbumController extends Controller
     {
         $vendor = getData('vendors', 'user_id', auth()->user()->id);
         if ($request->ajax()) {
-            $albums = Album::where('vendor_id', $vendor->id)->select(['id', 'name', 'description'])->orderBy('id','desc');
+            $albums = Album::where('vendor_id', $vendor->id)->select(['id', 'name', 'description'])->orderBy('id', 'desc');
             return Datatables::of($albums)
                 ->addIndexColumn()
+                ->editColumn('description', function ($album) {
+                    return '<strong>' . Str::words($album->description, '25') . '</strong>';
+                })
                 ->addColumn('action', function ($album) {
-
-                    $btn = '<a href="' . route("vendor.album.edit", $album->id) . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"> </i></a> ';
-                    $btn .= '<a href="' . route("vendor.image.index", $album->id) . '" class="btn btn-sm btn-success mt-1" data-toggle="tooltip" title="Album Gallery"><i class="fas fa-file-image"> </i></a>';
+                    $btn = "";
+                    $btn .= '<a href="' . route("vendor.album.edit", $album->id) . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"> </i></a> ';
+                    $btn .= '<a href="' . route("vendor.image.index", $album->id) . '" class="btn btn-sm btn-success mt-1" data-toggle="tooltip" title="Album Gallery"><i class="fas fa-file-image"> </i></a> ';
                     $btn .= '<a href="' . route("vendor.album.delete", $album->id) . '" class="btn btn-sm btn-danger mt-1 del-link" data-toggle="tooltip" title="Album Delete"><i class="fas fa-trash"> </i></a>';
                     return $btn;
                 })
-                ->rawColumns(['action'])
+                ->rawColumns(['action', 'description'])
                 ->make(true);
         }
         return view('backend.album.index');
@@ -45,7 +49,7 @@ class AlbumController extends Controller
         $vendor = getData('vendors', 'user_id', auth()->user()->id);
         Log::info(label_case('Album Create | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return view("backend.album.create")->with('vendor', $vendor);
-    } 
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -56,11 +60,10 @@ class AlbumController extends Controller
      */
     public function store(Request $request)
     {
-        // code
         $request->validate([
             'name' => 'required|string',
         ]);
-        // code
+
         $album = Album::create($request->all());
         Flash::success("<i class='fas fa-check'></i> New Album Added")->important();
         Log::info(label_case('Album Store | ' . $album->name . '(ID:' . $album->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));

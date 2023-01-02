@@ -4,7 +4,7 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("vendor.album.index")}}' icon='c-icon cil-people' >
+    <x-backend-breadcrumb-item route='{{route("vendor.album.index")}}' icon='c-icon cil-people'>
         Album
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">Create</x-backend-breadcrumb-item>
@@ -15,7 +15,7 @@
 <div class="card">
     <div class="card-body">
         <div class="row">
-            <div class="col-8"> 
+            <div class="col-8">
                 <h4 class="card-title mb-0">
                     <i class="c-icon cil-people"></i> Album <small class="text-muted">Create</small>
                 </h4>
@@ -37,41 +37,32 @@
 
         <div class="row mt-4">
             <div class="col">
-                {{ html()->form('POST', route("vendor.album.store"))->class('form')->open() }}
+                {{ html()->form('POST', route("vendor.album.store"))->class('form')->attributes(["enctype"=>"multipart/form-data"])->open() }}
                 {{ Form::hidden('vendor_id', $vendor->id) }}
                 <div class="row">
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-6">
                         <div class="form-group">
                             {{ Form::label('name', 'Name') }} {!! fielf_required("required") !!}
                             {{ Form::text('name', null, array('class' => 'form-control')) }}
                         </div>
                     </div>
-
-                    <!-- <div class="col-6 col-md-4">
-                        <div class="form-group">
-                            {{ Form::label('order', 'Order') }}
-                            {{ Form::text('order', null, array('class' => 'form-control')) }}
-                        </div>
-                    </div> -->
-                    <div class="col-6 col-md-4">
+                    <div class="col-6 col-md-6">
                         <div class="form-group">
                             {{ Form::label('status', 'Status?') }}
                             <br>
-                            Yes  {{ Form::radio('status', 1) }}
-                            No {{ Form::radio('status', 0) }}
-                            {{--                            Yes  {{ Form::radio('status', 1, $vendor->travel_to_other_cities == 1?  true : false) }}--}}
-                            {{--                            No {{ Form::radio('status', 0, $vendor->travel_to_other_cities == 0 ? true : false) }}--}}
+                            Enable {{ Form::radio('status', 1, true) }}
+                            Disable {{ Form::radio('status', 0) }}
                         </div>
                     </div>
                 </div>
-{{--                <div class="row">--}}
-{{--                    <div class="col-12 ">--}}
-{{--                        <div class="form-group">--}}
-{{--                            {{ Form::label('description', 'Description') }}--}}
-{{--                            {{ Form::text('description', null, array('class' => 'form-control')) }}--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                <div class="row">
+                    <div class="col-12 ">
+                        <div class="form-group">
+                            {{ Form::label('description', 'Description') }}
+                            {{ Form::textarea('description', null, array('class' => 'form-control')) }}
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-6">
@@ -104,3 +95,29 @@
 </div>
 
 @stop
+
+<!-- code -->
+@push ('after-scripts')
+
+<script type="text/javascript" src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
+
+<script type="text/javascript">
+    CKEDITOR.replace('description', {
+        filebrowserImageBrowseUrl: '/file-manager/ckeditor',
+        language: '{{App::getLocale()}}',
+        defaultLanguage: 'en'
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+        document.getElementById('button-image').addEventListener('click', (event) => {
+            event.preventDefault();
+
+            window.open('/file-manager/fm-button', 'fm', 'width=800,height=600');
+        });
+    });
+</script>
+
+@endpush
+<!-- code -->
