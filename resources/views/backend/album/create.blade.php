@@ -15,7 +15,7 @@
 <div class="card">
     <div class="card-body">
         <div class="row">
-            <div class="col-8">
+            <div class="col-8"> 
                 <h4 class="card-title mb-0">
                     <i class="c-icon cil-people"></i> Album <small class="text-muted">Create</small>
                 </h4>
@@ -47,12 +47,12 @@
                         </div>
                     </div>
 
-                    <div class="col-6 col-md-4">
+                    <!-- <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('order', 'Order') }}
                             {{ Form::text('order', null, array('class' => 'form-control')) }}
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-6 col-md-4">
                         <div class="form-group">
                             {{ Form::label('status', 'Status?') }}

@@ -18,7 +18,7 @@ class AlbumController extends Controller
     {
         $vendor = getData('vendors', 'user_id', auth()->user()->id);
         if ($request->ajax()) {
-            $albums = Album::where('vendor_id', $vendor->id)->select(['id', 'name', 'description']);
+            $albums = Album::where('vendor_id', $vendor->id)->select(['id', 'name', 'description'])->orderBy('id','desc');
             return Datatables::of($albums)
                 ->addIndexColumn()
                 ->addColumn('action', function ($album) {
@@ -45,7 +45,7 @@ class AlbumController extends Controller
         $vendor = getData('vendors', 'user_id', auth()->user()->id);
         Log::info(label_case('Album Create | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return view("backend.album.create")->with('vendor', $vendor);
-    }
+    } 
 
     /**
      * Store a newly created resource in storage.
