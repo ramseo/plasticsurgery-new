@@ -37,7 +37,7 @@ $meta_page_type = 'website';
 <!-- code -->
 <?php
 $vendor_profile_img = asset(setting('meta_image'));
-$meta_description = asset(setting('meta_description'));
+$meta_description = setting('meta_description');
 
 $getBlogViaSlug = getBlogViaSlug(last(request()->segments()));
 
