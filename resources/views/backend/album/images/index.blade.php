@@ -1,75 +1,40 @@
 @extends ('backend.layouts.app')
 
-@section('title')  @endsection
+@section('title') @endsection
 
 @section('breadcrumbs')
-    <x-backend-breadcrumbs>
-        <x-backend-breadcrumb-item type="active" icon=''></x-backend-breadcrumb-item>
-    </x-backend-breadcrumbs>
+<x-backend-breadcrumbs>
+    <x-backend-breadcrumb-item type="active" icon=''></x-backend-breadcrumb-item>
+</x-backend-breadcrumbs>
 @endsection
 
 @section('content')
 <div class="card">
-<div class="card-body">
+    <div class="card-body">
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="c-icon cil-people"></i> Images <small class="text-muted">Data Images</small>
+                    <i class="c-icon cil-people"></i>
+                    <span class="text-capitalize"><?= $album->name ?></span>
+                    <small class="text-muted">Album Images</small>
                 </h4>
                 <div class="small text-muted">
                     {{ Str::title('Images') }} Management Dashboard
                 </div>
-
-            </div>
-            <div class="col-4">
-
-{{--                <div class="float-right">--}}
-{{--                    <a href='{{ route("vendor.album.create")}}'--}}
-{{--                       class='btn btn-success btn-sm'--}}
-{{--                       data-toggle="tooltip"--}}
-{{--                       title="{{__('Create')}}">--}}
-{{--                        <i class="fas fa-plus-circle"></i>--}}
-{{--                    </a>--}}
-{{--                </div>--}}
             </div>
         </div>
-{{--    <div class="row">--}}
-{{--        {{ Form::open(array('url' => route("vendor.image.store"), 'files' => true,'id' => 'profileForm')) }}--}}
-{{--        {{ Form::hidden('album_id', $album->id) }}--}}
-{{--        <div class="col-8">--}}
-{{--            <div class="form-group">--}}
-{{--                {{ Form::label('image', 'Image') }}--}}
-{{--                <div class="custom-file">--}}
-{{--                    <input type="file" class="custom-file-input"  name="file[]" multiple>--}}
-{{--                    <label class="custom-file-label">Choose file</label>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        <div class="col-4">--}}
-{{--            <div class="form-group">--}}
-{{--                {{ html()->submit($text = icon('fas fa-save')." Save")->class('btn btn-success') }}--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--        {{ Form::close() }}--}}
-{{--    </div>--}}
 
-
-{{--    <div class="container">--}}
-{{--        <h2 style="margin-top: 12px;" class="alert alert-success">Multiple Files Upload Using Dropzone--}}
-{{--            <a href="https://www.codingdriver.com" target="_blank" >CodingDriver</a>--}}
-{{--        </h2>--}}
         <div class="row" style="clear: both;margin-top: 18px;">
             <div class="col-12">
                 <div class="dropzone" id="file-dropzone"></div>
             </div>
         </div>
-{{--    </div>--}}
         <!--/.row-->
-    <div>
-        <div class="container">
-            <div class="row">
-                <div class="gallery1 row">
-                    @foreach ($images as $image)
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="gallery1 row">
+                        @foreach ($images as $image)
                         <div class="col-3 gallery-col">
                             <div class="gallery-img-col">
                                 <img class="img-fluid" src="{{ asset('storage/album').'/'.$image->album_id.'/'.$image->name }}" alt="img" />
@@ -78,147 +43,154 @@
                                 <a onclick="return confirm('Are you sure?')" class="" href="{{ route('vendor.image.delete', $image->id) }}"><i class="fas fa-trash-alt"></i></a>
                             </div>
                         </div>
-                    @endforeach
+                        @endforeach
+                    </div>
                 </div>
             </div>
-        </div>
 
+
+        </div>
 
     </div>
 
-</div>
-
-<div class="col-12">
-<div class="btn-toolbar float-right vendor-img-bk-btn" role="toolbar" aria-label="Toolbar with button groups">
-    <a href="{{ route("vendor.album.index") }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}">
-        <i class="fas fa-reply"></i>
-        Cancel
-    </a>
-</div>
-</div>
+    <div class="col-12">
+        <div class="btn-toolbar float-right vendor-img-bk-btn" role="toolbar" aria-label="Toolbar with button groups">
+            <a href="{{ route('vendor.album.index') }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}">
+                <i class="fas fa-reply"></i>
+                Cancel
+            </a>
+        </div>
+    </div>
 
 </div>
 @endsection
 
 
 
-    @push ('after-styles')
-        <style>
-            .gallery-img-col {
-                height: 200px;
-                overflow: hidden;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .gallery-action-col {
-                background: #eb0a3e;
-            }
-            .gallery-action-col a {
-                color: white;
-                display: block;
-                width: 100%;
-                padding: 5px 0;
-                text-decoration: none !important;
-            }
-            .gallery-col {
-                margin-bottom: 30px;
-            }
-            *,
-            *::before,
-            *::after {
-                box-sizing: border-box;
-            }
+@push ('after-styles')
+<style>
+    .gallery-img-col {
+        height: 200px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-            img {
-                display: block;
-            }
+    .gallery-action-col {
+        background: #eb0a3e;
+    }
 
-            .gallery {
-                position: relative;
-                z-index: 2;
-                padding: 10px;
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -ms-flex-flow: row wrap;
-                flex-flow: row wrap;
-                -webkit-box-pack: justify;
-                -ms-flex-pack: justify;
-                justify-content: space-between;
-                -webkit-transition: all .5s ease-in-out;
-                transition: all .5s ease-in-out;
-            }
-            .gallery.pop {
-                -webkit-filter: blur(10px);
-                filter: blur(10px);
-            }
-            .gallery figure {
-                -ms-flex-preferred-size: 33.333%;
-                flex-basis: 33.333%;
-                padding: 10px;
-                overflow: hidden;
-                border-radius: 10px;
-                cursor: pointer;
-            }
-            .gallery figure img {
-                width: 100%;
-                border-radius: 10px;
-                -webkit-transition: all .3s ease-in-out;
-                transition: all .3s ease-in-out;
-            }
-            .gallery figure figcaption {
-                display: none;
-            }
+    .gallery-action-col a {
+        color: white;
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+        text-decoration: none !important;
+    }
 
+    .gallery-col {
+        margin-bottom: 30px;
+    }
 
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
 
-        </style>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/min/dropzone.min.css">
-    @endpush
+    img {
+        display: block;
+    }
+
+    .gallery {
+        position: relative;
+        z-index: 2;
+        padding: 10px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+
+    .gallery.pop {
+        -webkit-filter: blur(10px);
+        filter: blur(10px);
+    }
+
+    .gallery figure {
+        -ms-flex-preferred-size: 33.333%;
+        flex-basis: 33.333%;
+        padding: 10px;
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .gallery figure img {
+        width: 100%;
+        border-radius: 10px;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+
+    .gallery figure figcaption {
+        display: none;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/min/dropzone.min.css">
+@endpush
 @push ('after-scripts')
 
-    <script type="text/javascript">
-        // Add the following code if you want the name of the file appear on select
-        $(".custom-file-input").on("change", function() {
-            var fileName = $(this).val().split("\\").pop();
-            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-        });
-    </script>
+<script type="text/javascript">
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/min/dropzone.min.js"></script>
-        <script>
-            Dropzone.options.fileDropzone = {
-                url: '{{ route('vendor.image.store', $album->id) }}',
-                acceptedFiles: ".jpeg,.jpg,.png,.gif",
-                addRemoveLinks: true,
-                maxFilesize: 1000,
-                headers: {
-                    'X-CSRF-TOKEN': "{{ csrf_token() }}"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/min/dropzone.min.js"></script>
+<script>
+    Dropzone.options.fileDropzone = {
+        url: '<?= route('vendor.image.store', $album->id) ?>',
+        acceptedFiles: ".jpeg,.jpg,.png,.gif",
+        addRemoveLinks: true,
+        maxFilesize: 1000,
+        headers: {
+            'X-CSRF-TOKEN': "<?= csrf_token() ?>"
+        },
+        removedfile: function(file) {
+            var name = file.upload.filename;
+            $.ajax({
+                type: 'POST',
+                url: '<?= route('vendor.image.remove') ?>',
+                data: {
+                    "_token": "<?= csrf_token() ?>",
+                    name: name
                 },
-                removedfile: function(file)
-                {
-                    var name = file.upload.filename;
-                    $.ajax({
-                        type: 'POST',
-                        url: '{{ route('vendor.image.remove') }}',
-                        data: { "_token": "{{ csrf_token() }}", name: name},
-                        success: function (data){
-                            console.log("File has been successfully removed!!");
-                        },
-                        error: function(e) {
-                            console.log(e);
-                        }});
-                    var fileRef;
-                    return (fileRef = file.previewElement) != null ?
-                        fileRef.parentNode.removeChild(file.previewElement) : void 0;
+                success: function(data) {
+                    console.log("File has been successfully removed!!");
                 },
-                success: function (file, response) {
-                    console.log(file);
-                },
-            }
-        </script>
+                error: function(e) {
+                    console.log(e);
+                }
+            });
+            var fileRef;
+            return (fileRef = file.previewElement) != null ?
+                fileRef.parentNode.removeChild(file.previewElement) : void 0;
+        },
+        success: function(file, response) {
+            console.log(file);
+        },
+    }
+</script>
 
 
 @endpush
-
