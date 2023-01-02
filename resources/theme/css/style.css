@@ -3201,3 +3201,8 @@ span.days {
     padding-left: 10px;
     top: 0!important;
 }
+
+#albumSlider .owl-nav button{
+    width: 60px;
+    height: 60px;
+}
