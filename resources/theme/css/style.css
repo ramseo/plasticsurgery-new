@@ -3197,12 +3197,12 @@ span.days {
 }
 
 .review-chevron-down {
-    font-size: 15px!important;
+    font-size: 15px !important;
     padding-left: 10px;
-    top: 0!important;
+    top: 0 !important;
 }
 
-#albumSlider .owl-nav button{
+#albumSlider .owl-nav button {
     width: 60px;
     height: 60px;
 }

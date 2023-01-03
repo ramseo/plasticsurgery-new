@@ -402,8 +402,8 @@
     }
 
     .tab-img-menu {
-        width: 40px;
-        height: 40px;
+        width: 60px;
+        height: 60px;
     }
 
     .photo-album-col .nav-tabs .nav-link {
@@ -459,6 +459,7 @@
 
     .vendor-detail-text-col .actions-ul {
         font-size: 12px;
+        text-align: center;
     }
 
     .common-left-heading .head {
@@ -967,6 +968,19 @@
     .album-count-cls {
         padding-right: 5px;
         font-size: 15px;
+    }
+
+    .list-inline.share-ul {
+        text-align: center;
+    }
+
+    .share-ul li {
+        margin-right: 30px!important;
+        margin-left: 30px;
+    }
+
+    .list-inline-item:not(:last-child){
+        margin-right: 30px;
     }
 
     /* code */
