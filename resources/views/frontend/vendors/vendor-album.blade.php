@@ -148,6 +148,10 @@
     .fancybox__backdrop {
         background: #efefef;
     }
+    
+    .carousel__button svg{
+        color: darkgray;
+    }
 </style>
 @endpush
 @push('after-scripts')
