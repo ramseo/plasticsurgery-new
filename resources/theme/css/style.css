@@ -3206,3 +3206,8 @@ span.days {
     width: 60px;
     height: 60px;
 }
+
+.offscreen-cls {
+    position: absolute;
+    left: -999em;
+}

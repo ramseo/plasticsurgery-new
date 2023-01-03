@@ -205,7 +205,7 @@ $average = averageReview($reviews);
                         <li class="list-inline-item">
                             <a class="facebook" href="https://www.facebook.com/sharer.php?u=<?= url()->current() ?>&t=<?= $vendor_details->business_name ?>" target="_blank">
                                 <i class="fab fa-facebook-square"></i>
-                            </a> 
+                            </a>
                         </li>
                         <li class="list-inline-item">
                             <a class="twitter" href="https://twitter.com/share?text=<?= $vendor_details->business_name ?>&url=<?= url()->current() ?>&hashtags=wed.in" target="_blank">
@@ -224,9 +224,10 @@ $average = averageReview($reviews);
                         </li>
                     </ul>
                 </div>
+                
+                <input type="text" class="offscreen-cls" value="<?= url()->current() ?>" id="GfGInput" aria-hidden="true">
                 <div class="copy-btn-cls">
-                    <p style="display: none;" id="copyInput"><?= url()->current() ?></p>
-                    <button id="text-copy-btn" onclick="copyToClipboard('copyInput')" class="btn btn-default">
+                    <button id="text-copy-btn" onclick="copyLinkText('GfGInput')" class="btn btn-default">
                         Copy Link
                     </button>
                 </div>

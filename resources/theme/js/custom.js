@@ -28,20 +28,14 @@ $(document).on('click', '.rating-scroll-event', function () {
     }, 'slow');
 });
 
-function copyToClipboard(elementId) {
-    // Create a "hidden" input
-    var aux = document.createElement("input");
+function copyLinkText(GfGInput) {
+    /* Get the text field */
+    var copyGfGText = document.getElementById(GfGInput);
 
-    // Assign it the value of the specified element
-    aux.setAttribute("value", document.getElementById(elementId).innerHTML);
+    /* Select the text field */
+    copyGfGText.select();
 
-    // Append it to the body
-    document.body.appendChild(aux);
-
-    // Highlight its content
-    aux.select();
-
-    // Copy the highlighted text
+    /* Copy the text inside the text field */
     document.execCommand("copy");
 
     // change text
@@ -50,9 +44,6 @@ function copyToClipboard(elementId) {
         $("#shareModal").modal("hide");
         $("#text-copy-btn").html("Copy Link");
     }, 2000)
-
-    // Remove it from the body
-    document.body.removeChild(aux);
 }
 
 $(document).on('click', '.show-more-reviews', function () {
