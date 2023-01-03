@@ -976,13 +976,48 @@
     }
 
     .share-ul li {
-        margin-right: 30px!important;
+        margin-right: 30px !important;
         margin-left: 30px;
     }
 
-    .list-inline-item:not(:last-child){
+    .list-inline-item:not(:last-child) {
         margin-right: 30px;
     }
+
+    /* fancybox css */
+    .fancybox__slide {
+        padding-right: 0 !important;
+    }
+
+    button.carousel__button.is-next {
+        right: 0 !important;
+    }
+
+    .fancybox__caption {
+        position: inherit !important;
+        top: 0 !important;
+        right: 0px !important;
+        z-index: inherit !important;
+        background: white;
+        width: auto !important;
+        height: auto !important;
+        left: initial !important;
+        bottom: initial !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: inherit !important;
+        padding: 10px!important;
+    }
+
+    .fancybox__slide {
+        padding: 40px 0px 40px 0px!important;
+    }
+
+    .caption-col.new-caption-col .inner-col{
+        text-align: center;
+    }
+
+    /* fancybox css */
 
     /* code */
 }

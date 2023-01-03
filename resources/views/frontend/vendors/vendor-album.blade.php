@@ -111,9 +111,9 @@
     }
 
     .fancybox__caption {
-        position: absolute !important;
-        top: 0 !important;
-        right: 0px !important;
+        position: absolute;
+        top: 0;
+        right: 0px;
         z-index: 1111111111;
         background: white;
         width: 400px;
@@ -141,16 +141,8 @@
         margin: 0 0 30px 0;
     }
 
-    .caption-col .vendor-rating {
-        margin-right: 6px;
-    }
-
-    /* .quotation-vendor .img-li {
-            width: 40px;
-            height: 40px;
-        } */
     button.carousel__button.is-next {
-        right: 430px !important;
+        right: 430px;
     }
 
     .fancybox__backdrop {
