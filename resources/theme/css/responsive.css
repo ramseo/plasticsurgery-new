@@ -412,7 +412,8 @@
 
     .photo-album-col .nav-tabs .nav-link {
         font-size: 12px;
-        padding: 0 10px;
+        padding: 0 0px;
+        /* padding: 0 10px; */
     }
 
     #vendor-detail-section .tab-pane {
