@@ -73,7 +73,9 @@
                     </ul>
                 </div>
                 <div class="review-body">
-                    <p>{{$review->description}}</p>
+                    <p class="comment more-content-cls">
+                        {{$review->description}}
+                    </p>
                 </div>
             </div>
         <?php } ?>

@@ -3211,3 +3211,7 @@ span.days {
     position: absolute;
     left: -999em;
 }
+
+.morecontent span {
+    display: none;
+}

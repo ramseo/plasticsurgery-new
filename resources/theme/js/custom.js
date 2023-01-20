@@ -62,3 +62,40 @@ $(document).ready(function () {
     var showReviews = $('.detail-review-body .rev-mor-cls').length;
     $('.show-more-reviews').html("Show More" + " " + showReviews + " " + "Reviews");
 })
+
+
+// read more less code
+//  $(document).ready(function() {
+var showChar = 250;
+var ellipsestext = "...";
+var moretext = "Read More";
+var lesstext = "Read Less";
+$('.more-content-cls').each(function () {
+    var content = $(this).html();
+
+    if (content.length > showChar) {
+
+        var c = content.substr(0, showChar);
+        var h = content.substr(showChar - 1, content.length - showChar);
+
+        var html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+        $(this).html(html);
+    }
+
+});
+
+$(document).on('click', '.morelink', function () {
+    if ($(this).hasClass("less")) {
+        $(this).removeClass("less");
+        $(this).html(moretext);
+    } else {
+        $(this).addClass("less");
+        $(this).html(lesstext);
+    }
+    $(this).parent().prev().toggle();
+    $(this).prev().toggle();
+    return false;
+});
+// });
+// read more less code
