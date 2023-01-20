@@ -763,6 +763,7 @@ if (!function_exists('date_today')) {
                 $data->where(array($column => $value));
             endif;
             $data->where(array("is_active" => 1));
+            $data->orderBy("id", 'desc');
         }
         return $data->get();
     }
@@ -880,7 +881,7 @@ if (!function_exists('date_today')) {
 
     function getBlogViaSlug($lastUri)
     {
-        $data = DB::table('posts')->select('featured_image','content')->where('slug', $lastUri);
+        $data = DB::table('posts')->select('featured_image', 'content')->where('slug', $lastUri);
         return $data->get()->first();
     }
 }
