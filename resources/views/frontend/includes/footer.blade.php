@@ -284,6 +284,12 @@
          </div>
       </div>
    </div>
+
+   <!-- dsfsdfds -->
+   <a id="button-scroll" style="visibility: visible; opacity: 1;display:none">
+      <i class="fas fa-chevron-circle-up" aria-hidden="true"></i>
+   </a>
+   <!-- dsfdsf -->
 </footer>
 @push('after-scripts')
 <script>

@@ -65,7 +65,6 @@ $(document).ready(function () {
 
 
 // read more less code
-//  $(document).ready(function() {
 var showChar = 250;
 var ellipsestext = "...";
 var moretext = "Read More";
@@ -97,5 +96,34 @@ $(document).on('click', '.morelink', function () {
     $(this).prev().toggle();
     return false;
 });
-// });
 // read more less code
+
+
+var timeout;
+
+$(window).scroll(function () {
+    if (typeof timeout == "number") {
+        window.clearTimeout(timeout);
+        delete timeout;
+    }
+    timeout = window.setTimeout(check, 100);
+});
+
+function check() {
+    if (($(window).scrollTop() + $(window).height()) >= ($('body').height() * 0.7)) {
+        // alert('Call me!')
+        button_scroll();
+    } else {
+        $("#button-scroll").hide();
+    }
+}
+
+function button_scroll() {
+    $("#button-scroll").show();
+
+    const goblogFreeBtnTop = document.getElementById("button-scroll");
+    goblogFreeBtnTop.addEventListener('click', () => window.scrollTo({
+        top: 0.1,
+        behavior: 'smooth',
+    }));
+}
