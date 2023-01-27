@@ -5,9 +5,9 @@
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
     @php
-        $vendor_id = Auth::user()->id;
+    $vendor_id = Auth::user()->id;
     @endphp
-    <x-backend-breadcrumb-item route='{{url("admin/quotations/$vendor_id")}}' icon='c-icon cil-people' >
+    <x-backend-breadcrumb-item route='{{url("admin/quotations/$vendor_id")}}' icon='c-icon cil-people'>
         Quotations
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">Details</x-backend-breadcrumb-item>
@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="c-icon cil-people"></i>  Quotation Details
+                    <i class="c-icon cil-people"></i> Quotation Details
                 </h4>
                 <div class="small text-muted">
                     Quotation Details Dashboard
@@ -52,35 +52,35 @@
                     </tr>
                     <tr>
                         <th>Dates</th>
-                        <td>{{$details->dates}}</td>
+                        <td><?= date('d-m-Y', strtotime($details->dates)); ?></td>
                     </tr>
                     <tr>
                         <th>Services</th>
                         <td>
                             @php
-                                $services = json_decode($details->service_json, true);
+                            $services = json_decode($details->service_json, true);
                             @endphp
                             <div>
                                 <p class="h4">Selected Services</p>
                             </div>
                             @foreach($services as $service)
-                                @php
-                                    $selected_services = get_vendor_selected_services($details->vendor_id, 'top', $service['service_id']);
-                                @endphp
-                                <div class="service-col">
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <strong class="text-primary">Service: </strong> {{$selected_services->name}}
-                                        </li>
-                                        <li>
-                                            <strong>Current Service Price: </strong> {{$selected_services->input_type_value}}
-                                        </li>
-                                        <li>
-                                            <strong>Time: </strong> {{$selected_services->service_type == 'complete' ? 'Complete Service' : 'For '. $service['quantity'] . ' ' . $selected_services->service_type}}
-                                        </li>
-                                    </ul>
-                                </div>
-                                <hr style="border-top: 1px dashed rgba(0, 0, 21, 0.2);">
+                            @php
+                            $selected_services = get_vendor_selected_services($details->vendor_id, 'top', $service['service_id']);
+                            @endphp
+                            <div class="service-col">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <strong class="text-primary">Service: </strong> {{$selected_services->name}}
+                                    </li>
+                                    <li>
+                                        <strong>Current Service Price: </strong> {{$selected_services->input_type_value}}
+                                    </li>
+                                    <li>
+                                        <strong>Time: </strong> {{$selected_services->service_type == 'complete' ? 'Complete Service' : 'For '. $service['quantity'] . ' ' . $selected_services->service_type}}
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr style="border-top: 1px dashed rgba(0, 0, 21, 0.2);">
                             @endforeach
                         </td>
                     </tr>
@@ -91,4 +91,3 @@
 </div>
 
 @stop
-
