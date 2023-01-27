@@ -27,3 +27,13 @@ $(document).on('click', '.displayPassword', function () {
         $(this).html('<i class="fa fa-eye" aria-hidden="true"></i>');
     }
 });
+
+$(document).on("click", '#sidebar-show-hide', function () {
+    var elm = $(this).parent();
+    var cls = $(elm).attr("class");
+    if (cls == "fa fa-chevron-left") {
+        $(elm).attr("class", "fa fa-chevron-right");
+    } else {
+        $(elm).attr("class", "fa fa-chevron-left");
+    }
+})
