@@ -2550,10 +2550,14 @@ span.days {
     list-style: none;
     margin-top: 40px;
     margin-bottom: 0;
+    background: transparent;
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .error-ul li {
-    margin: 5px 10px 5px 10px;
+    margin: 5px 0px 5px 0px;
     font-weight: bold;
 }
 
@@ -3230,6 +3234,10 @@ span.days {
 }
 
 
- html {
-    scroll-behavior: smooth!important;
- }
+html {
+    scroll-behavior: smooth !important;
+}
+
+.list-style-none {
+    list-style: none;
+}

@@ -69,7 +69,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="alert alert-danger alert-quotation error-ul" style="display: none;"></div>
+                <div class="alert-danger alert-quotation error-ul" style="display: none;"></div>
                 <form id="quotationForm" class="row" action="">
                     <div class="col-xs-12 col-sm-8">
                         @if($top_services)
@@ -141,7 +141,7 @@
                                 <ul class="list-inline justified-list">
                                     <li class="list-inline-item">
                                         <div class="q-service-col">
-                                            <div class="q-service-title">
+                                            <div class="q-service-title"> 
                                                 <p class="title">{{$top_service->name}}</p>
                                             </div>
                                             @if($top_service->description)
@@ -335,7 +335,7 @@
                     $('#submitQuotation').prop('disabled', true);
                 }
             });
-
+ 
             $(document).on('submit','#quotationForm', function(e){
                 e.preventDefault();
                 $('body').block({ message: "Processing..." });
@@ -359,6 +359,7 @@
                             }, 1000);
                         }else{
                             $('.alert-quotation').html(res.message).show();
+                            window.scrollTo(0, 0);
                         }
                         $('body').unblock();
                     }

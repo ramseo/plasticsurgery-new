@@ -361,7 +361,15 @@ class VendorController extends Controller
 
             return response()->json(['success' => true, 'message' => 'Quotation requested successfully!']);
         }
-        return response()->json(['success' => false, 'message' => $validator->errors()->all()]);
+
+        $err_html = "";
+        $err_html .= "<ul class='padding-null list-style-none'>";
+        foreach ($validator->errors()->all() as $er) {
+            $err_html .= "<li>$er</li>";
+        }
+        $err_html .= "</ul>";
+
+        return response()->json(['success' => false, 'message' => $err_html]);
     }
 
     public function saveQuotationType($type_alias)
