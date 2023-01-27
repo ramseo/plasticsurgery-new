@@ -91,8 +91,14 @@ a {
     padding: 5px 0 5px 0 !important;
 }
 
-.dropzone{
-    min-height:auto!important;
+.dropzone {
+    min-height: auto !important;
 }
 
 /* code */
+
+#sidebar-show-hide {
+    background: no-repeat;
+    border: none;
+    outline: none;
+}

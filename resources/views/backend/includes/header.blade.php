@@ -5,9 +5,12 @@
     <a class="c-header-brand d-sm-none" href="<?= route('backend.dashboard') ?>">
         <img class="c-header-brand" src="<?= asset('img/backend-logo.jpg') ?>" style="max-height:50px;min-height:40px;" alt="{{ app_name() }}">
     </a>
-    <button id="sidebar-show-hide" class="c-header-toggler c-class-toggler ml-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
-        <!-- <span class="c-header-toggler-icon"></span> --> 
-        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    <!-- <button class="c-header-toggler c-class-toggler ml-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
+        <span class="c-header-toggler-icon"></span>
+    </button> -->
+
+    <button id="sidebar-show-hide" class="ml-3">
+        <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
     </button>
 
     <ul class="c-header-nav d-md-down-none">

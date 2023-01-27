@@ -29,11 +29,16 @@ $(document).on('click', '.displayPassword', function () {
 });
 
 $(document).on("click", '#sidebar-show-hide', function () {
-    var elm = $(this).parent();
+    var elm = $(this).children();
     var cls = $(elm).attr("class");
-    if (cls == "fa fa-chevron-left") {
-        $(elm).attr("class", "fa fa-chevron-right");
+    if (cls == "fa fa-chevron-left fa-2x") {
+        $('#sidebar').css({ "margin-left": "-256px", "position": "fixed" });
+        $('.c-wrapper').css({ "margin-left": "0" });
+
+        $(elm).attr("class", "fa fa-chevron-right fa-2x");
     } else {
-        $(elm).attr("class", "fa fa-chevron-left");
+        $('#sidebar').css({ "margin-left": "0", "position": "fixed" });
+        $('.c-wrapper').css({ "margin-left": "256px" });
+        $(elm).attr("class", "fa fa-chevron-left fa-2x");
     }
 })
