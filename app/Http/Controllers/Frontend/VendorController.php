@@ -309,10 +309,10 @@ class VendorController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required',
-            'email' => 'required',
+            'email' => 'email:rfc',
             'phone' => 'required',
             'city' => 'required',
-        ]);
+        ]); 
         if ($validator->passes()) {
             $data = $request->all();
             $services = [];
