@@ -3227,3 +3227,8 @@ span.days {
     z-index: 10;
     font-size: 30px;
 }
+
+
+ html {
+    scroll-behavior: smooth!important;
+ }
