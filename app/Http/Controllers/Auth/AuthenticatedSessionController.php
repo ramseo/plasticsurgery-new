@@ -18,6 +18,10 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
+        if ($_GET['current_url']) {
+            \Session::forget('currentUrl');
+            \Session::put('currentUrl', $_GET['current_url']);
+        }
         return view('auth.login');
     }
 
@@ -43,7 +47,12 @@ class AuthenticatedSessionController extends Controller
 
         $role = auth()->user()->getRoleNames()->first();
 
-        if ($role){
+        if ($role == "user" || $role == "vendor") {
+            $currentUrl = \Session::get('currentUrl');
+            return redirect($currentUrl);
+        }
+
+        if ($role) {
             switch ($role) {
                 case 'super admin':
                     return redirect('/admin/dashboard');
@@ -61,7 +70,6 @@ class AuthenticatedSessionController extends Controller
         }
 
         return redirect(RouteServiceProvider::HOME);
-
     }
 
     public function vendorCreate()
@@ -87,7 +95,7 @@ class AuthenticatedSessionController extends Controller
 
         $role = auth()->user()->getRoleNames()->first();
 
-        if ($role){
+        if ($role) {
             switch ($role) {
                 case 'super admin':
                     return redirect('/admin/dashboard');
@@ -105,8 +113,6 @@ class AuthenticatedSessionController extends Controller
         }
 
         return redirect(RouteServiceProvider::HOME);
-
-
     }
 
     /**

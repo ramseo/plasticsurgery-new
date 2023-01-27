@@ -118,11 +118,17 @@ $average = averageReview($reviews);
                         <ul class="list-inline actions-ul">
                             @if (Auth::check())
                             <li class="list-inline-item">
-                                <a href="{{ route('frontend.quotation', ['slug' => $vendor_details->slug]) }}" class="btn btn-primary"><i class="fas fa-rupee-sign"></i> Get Quotation</a>
+                                <a href="<?= route('frontend.quotation', ['slug' => $vendor_details->slug]) ?>" class="btn btn-primary">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    Get Quotation
+                                </a>
                             </li>
                             @else
                             <li class="list-inline-item">
-                                <a href="{{ route('login') }}" class="btn btn-primary">Get Quotation</a>
+                                <?php $currentUrl = url()->current(); ?>
+                                <a href="<?= route('login') . "?current_url=$currentUrl" ?>" class="btn btn-primary">
+                                    Get Quotation
+                                </a>
                             </li>
                             @endif
                             <li class="list-inline-item">
@@ -224,7 +230,7 @@ $average = averageReview($reviews);
                         </li>
                     </ul>
                 </div>
-                
+
                 <input type="text" class="offscreen-cls" value="<?= url()->current() ?>" id="GfGInput" aria-hidden="true">
                 <div class="copy-btn-cls">
                     <button id="text-copy-btn" onclick="copyLinkText('GfGInput')" class="btn btn-default">
