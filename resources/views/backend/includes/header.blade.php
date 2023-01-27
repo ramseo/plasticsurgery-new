@@ -1,6 +1,14 @@
 <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
-    <button class="c-header-toggler c-class-toggler d-lg-none mr-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show"><span class="c-header-toggler-icon"></span></button><a class="c-header-brand d-sm-none" href="{{route("backend.dashboard")}}"><img class="c-header-brand" src="{{asset("img/backend-logo.jpg")}}" style="max-height:50px;min-height:40px;" alt="{{ app_name() }}"></a>
-    <button class="c-header-toggler c-class-toggler ml-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true"><span class="c-header-toggler-icon"></span></button>
+    <button class="c-header-toggler c-class-toggler d-lg-none mr-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show">
+        <span class="c-header-toggler-icon"></span>
+    </button>
+    <a class="c-header-brand d-sm-none" href="<?= route('backend.dashboard') ?>">
+        <img class="c-header-brand" src="<?= asset('img/backend-logo.jpg') ?>" style="max-height:50px;min-height:40px;" alt="{{ app_name() }}">
+    </a>
+    <button id="sidebar-show-hide" class="c-header-toggler c-class-toggler ml-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-lg-show" responsive="true">
+        <!-- <span class="c-header-toggler-icon"></span> --> 
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+    </button>
 
     <ul class="c-header-nav d-md-down-none">
         <li class="c-header-nav-item px-3">
