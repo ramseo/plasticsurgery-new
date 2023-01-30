@@ -18,7 +18,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
-        if ($_GET['current_url']) {
+        if (isset($_GET['current_url'])) {
             \Session::forget('currentUrl');
             \Session::put('currentUrl', $_GET['current_url']);
         }
