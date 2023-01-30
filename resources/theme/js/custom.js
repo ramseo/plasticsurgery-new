@@ -127,3 +127,19 @@ function button_scroll() {
         behavior: 'smooth',
     }));
 }
+
+$(document).on('click', '#filter-validation', function (event) {
+    var typeFilter = $('#typeFilter').find(":selected").val();
+    var cityFilter = $('#cityFilter').find(":selected").val();
+
+    if (typeFilter == 0) {
+        alert("Please Select Category!");
+        event.preventDefault();
+    }
+
+    if (cityFilter == 0) {
+        alert("Please Select City!");
+        event.preventDefault();
+    }
+
+});

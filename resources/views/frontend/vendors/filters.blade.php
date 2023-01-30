@@ -17,7 +17,7 @@ $budgets = getDataArray('budgets');
                     </li>
                     <li class="list-inline-item">
                         <select class="form-control" name="type" id="typeFilter">
-                            <option value="">Select Category</option>
+                            <option value="0">Select Category</option>
                             @if(isset($categories) && $categories)
                             @foreach($categories as $category)
                             <option data-type-slug="{{$category->slug}}" value="{{$category->id}}" {{$selected_type->slug == $category->slug ? 'selected' : ''}}>{{$category->name}}</option>
@@ -30,7 +30,7 @@ $budgets = getDataArray('budgets');
                     </li>
                     <li class="list-inline-item">
                         <select class="form-control" name="city" id="cityFilter">
-                            <option value="">Select City</option>
+                            <option value="0">Select City</option>
                             @if(isset($cities) && $cities)
                             @foreach($cities as $filter_city)
                             <option data-city-slug="{{$filter_city->slug}}" value="{{$filter_city->id}}" {{$selected_city->slug == $filter_city->slug ? 'selected' : ''}}>{{$filter_city->name}}</option>
@@ -136,7 +136,7 @@ $budgets = getDataArray('budgets');
                         <button class="btn btn-warning cancel-filter" type="button">Cancel</button>
                     </li>
                     <li class="list-inline-item">
-                        <button class="btn btn-primary" type="submit">Search</button>
+                        <button id="filter-validation" class="btn btn-primary" type="submit">Search</button>
                     </li>
                 </ul>
             </div>
