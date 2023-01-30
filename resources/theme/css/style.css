@@ -3259,3 +3259,7 @@ html {
     top: -7px;
     left: 7px;
 }
+
+#featured-vendors .text-col {
+    padding: 15px 15px;
+}
