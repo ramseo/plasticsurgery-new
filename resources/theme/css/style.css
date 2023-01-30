@@ -2930,8 +2930,8 @@ span.days {
 }
 
 .ribbon-top-left {
-    top: -7px;
-    left: 7px;
+    top: 5px;
+    left: 20px;
     z-index: 99;
 }
 
