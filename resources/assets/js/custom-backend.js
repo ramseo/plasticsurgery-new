@@ -41,4 +41,4 @@ $(document).on("click", '#sidebar-show-hide', function () {
         $('.c-wrapper').css({ "margin-left": "256px" });
         $(elm).attr("class", "fa fa-chevron-left fa-2x");
     }
-})
+});

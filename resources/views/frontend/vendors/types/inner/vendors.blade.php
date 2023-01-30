@@ -18,7 +18,7 @@ $average = averageReview($reviews);
 
 @endphp
 <div class="col-xs-12 col-sm-4">
-    <div class="common-card vendor-card-col">
+    <div class="common-card vendor-card-col vendor-box-cls">
         <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $vendor->slug }}">
             @php
             $vendor_profile_img = asset('img/default-vendor.jpg');

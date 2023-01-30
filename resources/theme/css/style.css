@@ -3241,3 +3241,16 @@ html {
 .list-style-none {
     list-style: none;
 }
+
+.vendor-box-cls {
+    box-shadow: 0 1px 4px 0 #dadada;
+    padding: 10px;
+    transition: border 0.4s;
+    border-radius: 8px;
+    height: auto;
+    margin: auto;
+}
+
+.vendor-box-cls:hover {
+    box-shadow: 0 1px 12px 0 #cdcdcd;
+}

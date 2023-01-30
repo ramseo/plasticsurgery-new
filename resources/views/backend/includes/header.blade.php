@@ -141,8 +141,12 @@ function showTime(){
     seconds = seconds < 10 ? '0'+seconds : seconds;
 
     var time = hours + ":" + minutes + ":" + seconds + " " + session;
-    document.getElementById("liveClock").innerText = time;
-    document.getElementById("liveClock").textContent = time;
+
+    var liveClock = document.getElementById("liveClock");
+    if(typeof liveClock !== 'undefined' && liveClock !== null) {
+        document.getElementById("liveClock").innerText = time;
+        document.getElementById("liveClock").textContent = time;
+    }
 
     setTimeout(showTime, 1000);
 }
