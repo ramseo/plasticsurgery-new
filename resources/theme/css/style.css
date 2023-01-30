@@ -2961,6 +2961,7 @@ span.days {
 .featured-ribbon-top-left {
     top: -7px;
     left: -7px;
+    z-index: 99;
 }
 
 .featured-ribbon-top-left::before,

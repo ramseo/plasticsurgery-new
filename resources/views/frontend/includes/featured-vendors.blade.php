@@ -24,11 +24,7 @@ $featured_vendors = get_featured_vendors();
 
                     <div data-aos="zoom-in-down">
                         <div class="common-card vendor-card vendor-card-col">
-                            <?php if ($vendor->is_featured == 1) { ?>
-                                <div class="ribbon featured-ribbon-top-left">
-                                    <span>Featured</span>
-                                </div>
-                            <?php } ?>
+
                             <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $vendor->slug }}">
                                 @php
                                 $vendor_profile_img = asset('img/default-vendor.jpg');
@@ -39,9 +35,22 @@ $featured_vendors = get_featured_vendors();
                                 }
                                 @endphp
 
-                                <div class="img-col">
-                                    <img src="{{$vendor_profile_img}}" alt="image alt" class="img-fluid">
+                                <?php if ($vendor->is_featured == 1) { ?>
+                                    <div class="ribbon featured-ribbon-top-left">
+                                        <span>Featured</span>
+                                    </div>
+                                <?php } ?>
+                                <div class="img-col min-height-img pos-rel-cls">
+                                    <div class="img-col">
+                                        <img src="{{$vendor_profile_img}}" alt="image alt" class="img-fluid">
+                                        <!-- caption -->
+                                        <div class="image__overlay image__overlay--primary">
+                                            <div class="image__title">see profile</div>
+                                        </div>
+                                        <!-- caption -->
+                                    </div>
                                 </div>
+
                                 <div class="text-col">
                                     <ul class="list-inline space-list">
                                         <li>
