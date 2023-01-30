@@ -16,20 +16,20 @@
             <!-- vendor type start -->
             <div class="optional-vendr">
                <div class="rgst-vndr">
-                  <a class="btn btn-primary" href="{{url('search-by-vendors')}}">Search By Vendor</a>
+                  <a target="_blank" class="btn btn-primary" href="{{url('search-by-vendors')}}">Search By Vendor</a>
                </div>
             </div>
             <!-- vendor type end -->
             <div class="optional-vendr">
                <div class="rgst-vndr">
-                  <a class="btn btn-primary" href="{{url('search-by-city')}}">Search By City</a>
+                  <a target="_blank" class="btn btn-primary" href="{{url('search-by-city')}}">Search By City</a>
                </div>
             </div>
             <!-- select city end -->
             <!-- register as a vendor start -->
             <div class="optional-vendr">
                <div class="rgst-vndr">
-                  <a class="btn btn-primary" href="{{url('register')}}">Register Now</a>
+                  <a target="_blank" class="btn btn-primary" href="{{url('register')}}">Register Now</a>
                </div>
             </div>
             <!-- register as a vendor end -->

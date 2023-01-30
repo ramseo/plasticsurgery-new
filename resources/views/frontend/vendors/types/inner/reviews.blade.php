@@ -23,7 +23,7 @@ $latestReviews = getDataArray('vendor_reviews', array('type_id'=> $type->id, 'ci
                         <div class="review-header">
                             <ul class="list-inline space-list">
                                 <li>
-                                <!-- d-flex -->
+                                    <!-- d-flex -->
                                     <div class="rev-flex-cls">
                                         <div class="img-col">
                                             <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
@@ -39,13 +39,18 @@ $latestReviews = getDataArray('vendor_reviews', array('type_id'=> $type->id, 'ci
                                     </div>
                                 </li>
                                 <li>
-                                    <span class="vendor-rating"><i class="fa fa-star"></i> {{number_format($review->rating, 1)}}</span>
+                                    <a target="_blank" href="<?= url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $review_vendor->slug ?>">
+                                        <span class="vendor-rating">
+                                            <i class="fa fa-star"></i>
+                                            {{number_format($review->rating, 1)}}
+                                        </span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="review-body">
-                            <p>Review for - <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $review_vendor->slug }}">{{$review_vendor->business_name}}</a></p>
-                            <p><?= Str::words($review->description, 15, '...') ?></p>
+                            <p>Review for - <a target="_blank" href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $review_vendor->slug }}">{{$review_vendor->business_name}}</a></p>
+                            <p><?= Str::words($review->description, 10, '...') ?></p>
                         </div>
                     </div>
                 </div>
