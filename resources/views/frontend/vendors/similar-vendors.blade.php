@@ -18,7 +18,7 @@ $similar_vendors = get_similar_vendors($vendor_details->type_id);
             $average = averageReview($reviews);
             @endphp
             <div class="col-xs-12 col-sm-4">
-                <div class="common-card vendor-card-col">
+                <div class="common-card vendor-card-col vendor-box-cls">
                     <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $similar_vendor->slug }}">
                         <div class="img-col">
                             @php
