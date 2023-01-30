@@ -29,12 +29,21 @@ $similar_vendors = get_similar_vendors($vendor_details->type_id);
                             }
                             }
                             @endphp
-                            <img src="{{$vendor_profile_img}}" alt="image alt" class="img-fluid min-height-270">
+
                             <?php if ($similar_vendor->most_popular == 1) { ?>
                                 <div class="ribbon ribbon-top-left">
                                     <span>Most Popular</span>
                                 </div>
                             <?php } ?>
+                            <div class="img-col min-height-img pos-rel-cls">
+                                <img src="{{$vendor_profile_img}}" alt="image alt" class="img-fluid min-height-270">
+                                <!-- caption -->
+                                <div class="image__overlay image__overlay--primary">
+                                    <div class="image__title">see profile</div>
+                                </div>
+                                <!-- caption -->
+                            </div>
+
                         </div>
                         <div class="text-col">
                             <ul class="list-inline space-list">
