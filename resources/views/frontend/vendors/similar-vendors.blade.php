@@ -19,7 +19,7 @@ $similar_vendors = get_similar_vendors($vendor_details->type_id);
             @endphp
             <div class="col-xs-12 col-sm-4">
                 <div class="common-card vendor-card-col vendor-box-cls">
-                    <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $similar_vendor->slug }}">
+                    <a target="_blank" href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $similar_vendor->slug }}">
                         <div class="img-col">
                             @php
                             $vendor_profile_img = asset('img/default-vendor.jpg');

@@ -25,7 +25,7 @@ $featured_vendors = get_featured_vendors();
                     <div data-aos="zoom-in-down">
                         <div class="common-card vendor-card vendor-card-col">
 
-                            <a href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $vendor->slug }}">
+                            <a target="_blank" href="{{url('/') . '/' . $vendorType->slug . '/' . $vendorCity->slug . '/' . $vendor->slug }}">
                                 @php
                                 $vendor_profile_img = asset('img/default-vendor.jpg');
                                 if($vendor->image){
