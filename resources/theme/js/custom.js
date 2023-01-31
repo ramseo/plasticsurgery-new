@@ -143,3 +143,7 @@ $(document).on('click', '#filter-validation', function (event) {
     }
 
 });
+
+$(document).on("click", "#eliminate-val-error", function () {
+    $('.reviewAlert').hide();
+})
