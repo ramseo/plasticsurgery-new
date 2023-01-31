@@ -63,7 +63,9 @@ $similar_vendors = get_similar_vendors($vendor_details->type_id);
                                     <p class="price"><span>Rs. {{$similar_vendor->price}}</span></p>
                                 </li>
                                 <li class="text-right">
-                                    <p class="grey-text" style="margin: 0px;">{{$similar_vendor->business_name}}</p>
+                                    <p class="grey-text" style="margin: 0px;">
+                                        <?= Str::words($similar_vendor->label, '5')  ?>
+                                    </p>
                                 </li>
                             </ul>
                         </div>
