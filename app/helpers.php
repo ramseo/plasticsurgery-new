@@ -884,4 +884,19 @@ if (!function_exists('date_today')) {
         $data = DB::table('posts')->select('featured_image', 'content')->where('slug', $lastUri);
         return $data->get()->first();
     }
+
+    function getVendorTypes($cityId)
+    {
+        $data = DB::table('vendors')->select('business_name', 'slug', 'type_id')->where("city_id", $cityId);
+        $vendors = $data->get();
+        $vendors =  json_decode($vendors, true);
+        if ($vendors) {
+            $vendors = array_column($vendors, 'type_id');
+            $vendors = array_unique($vendors);
+
+            $data = DB::table('types')->select('name', 'slug')->whereIn("id", $vendors);
+            $vendors_return = $data->get();
+            return $vendors_return;
+        }
+    }
 }

@@ -80,3 +80,27 @@ $similar_vendors = get_similar_vendors($vendor_details->type_id);
     </div>
 </section>
 @endif
+
+<?php
+$getSpecificCityVendors = getVendorTypes($city->id);
+if ($getSpecificCityVendors) {
+?>
+    <section id="find-more">
+        <div class="container-fluid">
+            <div class="col-xs-12 common-left-heading">
+                <p class="head">Didn't find what you want?</p>
+            </div>
+            <div class="row">
+                <?php foreach ($getSpecificCityVendors as $item) { ?>
+                    <div class="col-md-6">
+                        <div class="vendor-item">
+                            <a target="_blank" href="<?= url('/') . '/' . $item->slug . '/' . $city->slug ?>">
+                                <?= $item->name . " " . "in" . " " . $city->name ?>
+                            </a>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </section>
+<?php } ?>

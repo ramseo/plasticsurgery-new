@@ -903,7 +903,7 @@ strong {
 }
 
 .vendor-list-row .common-card {
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 
 .vendor-list-row+.load-more-col {
@@ -3244,7 +3244,7 @@ html {
 }
 
 .vendor-box-cls {
-    box-shadow: 0 1px 4px 0 #dadada;
+    box-shadow: 0 1px 4px 2px #dadada;
     padding: 15px;
     transition: border 0.4s;
     border-radius: 8px;
@@ -3253,7 +3253,7 @@ html {
 }
 
 .vendor-box-cls:hover {
-    box-shadow: 0 1px 12px 0 #cdcdcd;
+    box-shadow: 0 1px 12px 2px #cdcdcd;
 }
 
 .vendor-detail-img-col .ribbon-top-left {
@@ -3267,4 +3267,16 @@ html {
 
 #see-full-list {
     color: #eb0a3e;
+}
+
+#find-more .col-md-6 {
+    padding: 5px 15px 5px 15px;
+}
+
+#find-more a {
+    font-weight: 600;
+}
+
+#find-more .row {
+    padding: 10px 0 15px 0;
 }
