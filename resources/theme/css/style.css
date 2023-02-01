@@ -3282,5 +3282,5 @@ html {
 }
 
 .faq-cls p {
-    color: #ccc;
+    color: var(--dark-text);
 }
