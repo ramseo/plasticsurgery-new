@@ -187,7 +187,6 @@
 <!-- code -->
 <?php
 // dd($city->toArray());
-
 $getSpecificCityVendors = getVendorTypes($city->id);
 if ($getSpecificCityVendors) {
 ?>
@@ -199,15 +198,22 @@ if ($getSpecificCityVendors) {
                 </p>
             </div>
             <div class="row">
-                <?php foreach ($getSpecificCityVendors as $item) { ?>
-                    <div class="col-md-6">
-                        <div class="vendor-item">
-                            <a target="_blank" href="<?= url('/') . '/' . $item->slug . '/' . $city->slug ?>">
-                                <?= $item->name . " " . "in" . " " . $city->name ?>
-                            </a>
+                <?php
+                foreach ($getSpecificCityVendors as $item) {
+                    $itemUrl = url('/') . '/' . $item->slug . '/' . $city->slug;
+                    if (URL::current() != $itemUrl) {
+                ?>
+                        <div class="col-md-6">
+                            <div class="vendor-item">
+                                <a target="_blank" href="<?= $itemUrl ?>">
+                                    <?= $item->name . " " . "in" . " " . $city->name ?>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                <?php } ?>
+                <?php
+                    }
+                }
+                ?>
             </div>
         </div>
     </section>
