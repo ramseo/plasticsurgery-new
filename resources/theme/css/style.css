@@ -3091,7 +3091,7 @@ span.days {
 
 .vendor-blog-box-shadow {
     border-radius: 8px;
-    box-shadow: 0 1px 4px 0 #dadada;
+    box-shadow: 0 1px 4px 2px #dadada;
 }
 
 .vendor-blog-item {
@@ -3099,7 +3099,7 @@ span.days {
 }
 
 .vendor-blog-box-shadow:hover {
-    box-shadow: 0 1px 12px 0 #cdcdcd
+    box-shadow: 0 1px 12px 2px #cdcdcd
 }
 
 .min-height-270 {
@@ -3156,12 +3156,12 @@ span.days {
 
 .review-of-vendor {
     border-radius: 8px;
-    box-shadow: 0 1px 4px 0 #dadada;
+    box-shadow: 0 1px 4px 2px #dadada;
     padding: 15px;
 }
 
 .review-of-vendor:hover {
-    box-shadow: 0 1px 12px 0 #cdcdcd;
+    box-shadow: 0 1px 12px 2px #cdcdcd;
 }
 
 .price-arrow-down {
