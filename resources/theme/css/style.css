@@ -293,9 +293,9 @@ span.days {
     padding-top: 50px;
 }
 
-#footer {
+/* #footer {
     margin-top: 0px;
-}
+} */
 
 .user-menu li {
     height: 20px;
@@ -455,7 +455,7 @@ span.days {
 #footer {
     padding: 65px 0 0;
     background: #f4f4f4;
-    margin-top: 60px;
+    margin-top: 0px;
     font-size: 16px;
 }
 
@@ -758,7 +758,7 @@ strong {
 #category-section,
 #photographers-section,
 #latest-reviews {
-    margin: 30px 0 50px;
+    margin: 30px 0 30px;
 }
 
 .category-main-row {
@@ -3278,5 +3278,5 @@ html {
 }
 
 #find-more .row {
-    padding: 10px 0 15px 0;
+    padding: 10px 0 50px 0;
 }
