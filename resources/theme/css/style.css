@@ -3280,3 +3280,7 @@ html {
 #find-more .row {
     padding: 10px 0 50px 0;
 }
+
+.faq-cls p {
+    color: #ccc;
+}
