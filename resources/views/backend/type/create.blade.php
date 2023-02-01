@@ -41,7 +41,7 @@
 
                 @include ("backend.$module_name.form")
 
-                <div class="row">
+                <div class="row margin-top-1rem">
                     <div class="col-6">
                         <div class="form-group">
                             {{ html()->button($text = "<i class='fas fa-plus-circle'></i> " . ucfirst($module_action) . "", $type = 'submit')->class('btn btn-success') }}

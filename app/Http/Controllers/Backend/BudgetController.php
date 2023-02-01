@@ -10,6 +10,7 @@ use Illuminate\Http\Response;
 use Yajra\DataTables\DataTables;
 use Log;
 use Flash;
+use DB;
 
 class BudgetController extends Controller
 {
@@ -17,6 +18,7 @@ class BudgetController extends Controller
 
     public function index($typeId, Request $request)
     {
+        $typeName = DB::table('types')->where('id', $typeId)->select('name')->first();
         if ($request->ajax()) {
             $budgets = Budget::where('type_id', $typeId)->select(['id', 'filter', 'min', 'max']);
             return Datatables::of($budgets)
@@ -29,7 +31,7 @@ class BudgetController extends Controller
                 ->make(true);
         }
 
-        return view('backend.budget.index')->with('typeId', $typeId);
+        return view('backend.budget.index', compact('typeName'))->with('typeId', $typeId);
     }
 
     /**
@@ -39,8 +41,9 @@ class BudgetController extends Controller
      */
     public function create($typeId)
     {
+        $typeName = DB::table('types')->where('id', $typeId)->select('name')->first();
         Log::info(label_case('Budget Create | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view("backend.budget.create", compact('typeId'));
+        return view("backend.budget.create", compact('typeId', 'typeName'));
     }
 
     /**
@@ -74,12 +77,13 @@ class BudgetController extends Controller
     public function edit($id)
     {
         $budget = Budget::findOrFail($id);
+        $typeName = DB::table('types')->where('id', $budget->type_id)->select('name')->first();
 
         $getDataArray = getData('budgets', 'id', $id);
         $typeId = $getDataArray->type_id;
 
         Log::info(label_case('Budget Edit | ' . $budget->name . '(ID:' . $budget->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-        return view('backend.budget.edit', compact('budget', 'typeId'));
+        return view('backend.budget.edit', compact('budget', 'typeId', 'typeName'));
     }
 
     /**

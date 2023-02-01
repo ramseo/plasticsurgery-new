@@ -17,7 +17,10 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="c-icon cil-people"></i> Budget <small class="text-muted">Edit</small>
+                    <i class="c-icon cil-people"></i>
+                    <?= $typeName->name ?>
+                    Budget
+                    <small class="text-muted">Edit</small>
                 </h4>
                 <div class="small text-muted">
                     Budget Management Dashboard
