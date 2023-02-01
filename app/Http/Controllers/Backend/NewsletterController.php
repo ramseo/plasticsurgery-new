@@ -36,7 +36,7 @@ class NewsletterController extends Controller
         $module_action = 'List';
         $page_heading = ucfirst('Newsletter');
         $title = $page_heading . ' ' . ucfirst($module_action);
-        $newsletter = Newsletter::paginate();
+        $newsletter = Newsletter::orderBy('id', 'desc')->paginate();
 
         return view(
             "backend.newsletter.index_datatable",
