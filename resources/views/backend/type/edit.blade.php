@@ -41,14 +41,14 @@
 
                 @include ("backend.$module_name.form")
 
-                <div class="row">
+                <div class="row margin-top-1rem">
                     <div class="col-4">
                         <div class="form-group">
                             {{ html()->submit($text = icon('fas fa-save')." Save")->class('btn btn-success') }}
                         </div>
                     </div>
 
-                    <div class="col-8">
+                    <div class="col-8"> 
                         <div class="float-right">
                             @can('delete_'.$module_name)
                             <a href="{{route("backend.$module_name.destroy", $$module_name_singular)}}" class="btn btn-danger" data-method="DELETE" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.delete')}}" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>
