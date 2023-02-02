@@ -78,7 +78,12 @@
                     </p>
                 </div>
                 <?php
-                $loggedInUser = auth()->user()->getRoleNames()->first();
+                if (auth()->user()) {
+                    $loggedInUser = auth()->user()->getRoleNames()->first();
+                } else {
+                    $loggedInUser = "";
+                }
+
                 if ($loggedInUser == "super admin") {
                 ?>
                     <div class="reply-review">
