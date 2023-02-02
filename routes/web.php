@@ -34,6 +34,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('terms', 'FrontendController@terms')->name('terms');
     Route::post('newsletter', 'NewsletterController@store')->name('newsletter');
     Route::post('post-review', 'VendorController@postReview')->name('post-review');
+    Route::post('post-reply', 'VendorController@postReply')->name('post-reply');
     Route::post('call', 'VendorController@callView')->name('call');
     Route::post('call-review', 'VendorController@callReview')->name('call-review');
     Route::get('quotation/type/{alias?}', 'VendorController@saveQuotationType')->name('quotation.type');

@@ -77,6 +77,57 @@
                         {{$review->description}}
                     </p>
                 </div>
+                <?php
+                $loggedInUser = auth()->user()->getRoleNames()->first();
+                if ($loggedInUser == "super admin") {
+                ?>
+                    <div class="reply-review">
+                        <a href="javascript:void(0)" class="show_reply_popup" review_id="<?= $review->id ?>">
+                            Reply
+                        </a>
+                    </div>
+                <?php } ?>
+                <!-- admin reply -->
+                <?php
+                $getReviewReply = getReviewReply($review->id);
+                foreach ($getReviewReply as $reply) {
+                ?>
+                    <div class="admin-reply">
+                        <div class="col-xs-12 reply-review-cls">
+                            <div class="review-header">
+                                <ul class="list-inline space-list">
+                                    <li>
+                                        <div class="rev-flex-cls">
+                                            <div class="img-col">
+                                                <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="text-col">
+                                                <p class="name review-title">
+                                                    <?= $reply->name ?>
+                                                </p>
+                                                <ul class="list-inline rating-list">
+                                                    <li class="list-inline-item">
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item review-listing">
+                                                                <?= date('d', strtotime($reply->created_at)) . " , " . date("F", strtotime($review->created_at)) . " , " . date('Y', strtotime($review->created_at)) ?>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="review-body">
+                                <p class="comment more-content-cls">
+                                    <?= $reply->description ?>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <!-- admin reply -->
             </div>
         <?php } ?>
         <div class="btn btn-default show-more-reviews">
@@ -134,6 +185,43 @@
         </div>
     </div>
 </div>
+
+
+<!-- reply model -->
+<?php
+if ($loggedInUser == "super admin") {
+?>
+    <div class="modal fade" id="replyModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Write Reply</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="review-form-main-col">
+                        <div class="alert alert-danger replyAlert" style="display: none;"></div>
+                        <form id="replyForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input id="replyTitle" value="super admin" name="name" type="text" class="form-control" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Your Reply</label>
+                                <textarea id="replyDescription" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input name="update_review_id" id="update_review_id" type="hidden">
+                                <input type="submit" class="btn btn-primary" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+<!-- reply model -->
 
 @push('after-scripts')
 <script>

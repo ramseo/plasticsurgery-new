@@ -351,6 +351,36 @@ $average = averageReview($reviews);
             });
         });
 
+        // reply modal
+        $('#replyForm').submit(function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: "{{route('frontend.post-reply')}}",
+                data: {
+                    '_token': "<?php echo csrf_token() ?>",
+                    'review_id': $('#update_review_id').val(),
+                    'name': $('#replyTitle').val(),
+                    'your_reply': $('#replyDescription').val()
+                },
+                success: function(res) {
+                    if (res.success) {
+                        $('.replyAlert').html('').hide();
+                        $('#replyForm').trigger('reset');
+                        toastr.success(res.message, 'Reply posted Successfully!');
+
+                        setTimeout(function() {
+                            $('#replyModal').modal('hide');
+                        }, 1000);
+                    } else {
+                        console.log(res.message);
+                        $('.replyAlert').html(res.message).show();
+                    }
+                }
+            });
+        });
+        // reply modal
+
         $('#see-full-list').click(function(e) {
             e.preventDefault();
             $('html, body').animate({

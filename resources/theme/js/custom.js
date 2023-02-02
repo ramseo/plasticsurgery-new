@@ -146,4 +146,11 @@ $(document).on('click', '#filter-validation', function (event) {
 
 $(document).on("click", "#eliminate-val-error", function () {
     $('.reviewAlert').hide();
+});
+
+$(document).on("click", '.show_reply_popup', function () {
+    var review_id = $(this).attr("review_id");
+    $("#update_review_id").val(review_id);
+
+    $("#replyModal").modal("show");
 })

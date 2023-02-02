@@ -9,6 +9,7 @@ use App\Models\Content;
 use App\Models\Type;
 use App\Models\Vendor;
 use App\Models\VendorReview;
+use App\Models\VendorReviewReply;
 use App\Models\CallChat;
 use App\Models\Quotation;
 use App\Models\UserQuotation;
@@ -245,6 +246,36 @@ class VendorController extends Controller
         return response()->json(['success' => false, 'message' => $var_err]);
     }
 
+    public function postReply(Request $request)
+    {
+
+        $validator = Validator::make($request->all(), [
+            'your_reply' => 'required',
+            'name' => 'required',
+        ]);
+
+        if ($validator->passes()) {
+            $data = $request->all();
+
+            $vendor = new VendorReviewReply();
+
+            $vendor->description = $data['your_reply'];
+            $vendor->name = $data['name'];
+            $vendor->review_id = $data['review_id'];
+            $vendor->save();
+            return response()->json(['success' => true, 'message' => 'Reply posted successfully!']);
+        }
+
+        $var_err = "";
+        $var_err .= "<ul style='list-style:none;padding:0'>";
+        foreach ($validator->errors()->all() as $error) {
+            $var_err .=  "<li>"   . $error . "</li>";
+        }
+        $var_err .= "</ul>";
+
+        return response()->json(['success' => false, 'message' => $var_err]);
+    }
+
 
     public function callView(Request $request)
     {
@@ -312,7 +343,7 @@ class VendorController extends Controller
             'email' => 'email:rfc',
             'phone' => 'required',
             'city' => 'required',
-        ]); 
+        ]);
         if ($validator->passes()) {
             $data = $request->all();
             $services = [];
