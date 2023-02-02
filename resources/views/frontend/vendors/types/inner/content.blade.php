@@ -16,10 +16,13 @@
 @endif
 
 @if($content->faq_content != '')
-<section id="text-only-section" class="mt-5 faq-cls">
+<section id="text-only-section" class="faq-cls">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-12">
+                <div class="faq-head-cls">
+                    <?= "Frequently asked Question about" . " " . $type->name . " " . "in" . " " . $city->name ?>
+                </div>
                 <div class="text-header">
                     <div class="text">
                         <?php

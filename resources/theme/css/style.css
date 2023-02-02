@@ -3280,3 +3280,17 @@ html {
 #find-more .row {
     padding: 10px 0 50px 0;
 }
+
+.faq-cls h4 {
+    color: grey;
+    font-size: 22px;
+}
+
+.faq-head-cls {
+    text-align: center;
+    font-size: 25px;
+    color: #000;
+    font-weight: 500;
+    padding: 30px 0px 25px 0;
+    text-transform: capitalize;
+}
