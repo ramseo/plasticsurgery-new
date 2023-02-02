@@ -104,7 +104,7 @@
                                     <li>
                                         <div class="rev-flex-cls">
                                             <div class="img-col">
-                                                <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+                                                <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="alt img">
                                             </div>
                                             <div class="text-col">
                                                 <p class="name review-title">
@@ -114,7 +114,7 @@
                                                     <li class="list-inline-item">
                                                         <ul class="list-inline">
                                                             <li class="list-inline-item review-listing">
-                                                                <?= date('d', strtotime($reply->created_at)) . " , " . date("F", strtotime($review->created_at)) . " , " . date('Y', strtotime($review->created_at)) ?>
+                                                                <?= date('d', strtotime($reply->created_at)) . " , " . date("F", strtotime($reply->created_at)) . " , " . date('Y', strtotime($reply->created_at)) ?>
                                                             </li>
                                                         </ul>
                                                     </li>
