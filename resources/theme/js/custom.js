@@ -43,7 +43,7 @@ function copyLinkText(GfGInput) {
     setTimeout(function () {
         $("#shareModal").modal("hide");
         $("#text-copy-btn").html("Copy Link");
-    }, 2000)
+    }, 1000)
 }
 
 $(document).on('click', '.show-more-reviews', function () {
