@@ -77,21 +77,21 @@
                         {{$review->description}}
                     </p>
                 </div>
+
                 <?php
                 if (auth()->user()) {
                     $loggedInUser = auth()->user()->getRoleNames()->first();
-                } else {
-                    $loggedInUser = "";
-                }
-
-                if ($loggedInUser == "super admin") {
+                    if ($loggedInUser == "super admin") {
                 ?>
-                    <div class="reply-review">
-                        <a href="javascript:void(0)" class="show_reply_popup" review_id="<?= $review->id ?>">
-                            Reply
-                        </a>
-                    </div>
-                <?php } ?>
+                        <div class="reply-review">
+                            <a href="javascript:void(0)" class="show_reply_popup" review_id="<?= $review->id ?>">
+                                Reply
+                            </a>
+                        </div>
+                <?php
+                    }
+                }
+                ?>
                 <!-- admin reply -->
                 <?php
                 $getReviewReply = getReviewReply($review->id);
@@ -194,38 +194,43 @@
 
 <!-- reply model -->
 <?php
-if ($loggedInUser == "super admin") {
+if (auth()->user()) {
+    $loggedInUser = auth()->user()->getRoleNames()->first();
+    if ($loggedInUser == "super admin") {
 ?>
-    <div class="modal fade" id="replyModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Write Reply</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="review-form-main-col">
-                        <div class="alert alert-danger replyAlert" style="display: none;"></div>
-                        <form id="replyForm">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input id="replyTitle" value="super admin" name="name" type="text" class="form-control" readonly>
-                            </div>
-                            <div class="form-group">
-                                <label>Your Reply</label>
-                                <textarea id="replyDescription" class="form-control"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input name="update_review_id" id="update_review_id" type="hidden">
-                                <input type="submit" class="btn btn-primary" value="Submit">
-                            </div>
-                        </form>
+        <div class="modal fade" id="replyModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Write Reply</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="review-form-main-col">
+                            <div class="alert alert-danger replyAlert" style="display: none;"></div>
+                            <form id="replyForm">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input id="replyTitle" value="super admin" name="name" type="text" class="form-control" readonly>
+                                </div>
+                                <div class="form-group">
+                                    <label>Your Reply</label>
+                                    <textarea id="replyDescription" class="form-control"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <input name="update_review_id" id="update_review_id" type="hidden">
+                                    <input type="submit" class="btn btn-primary" value="Submit">
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-<?php } ?>
+<?php
+    }
+}
+?>
 <!-- reply model -->
 
 @push('after-scripts')
