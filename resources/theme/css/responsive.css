@@ -1006,18 +1006,26 @@
         display: flex !important;
         align-items: center !important;
         justify-content: inherit !important;
-        padding: 10px!important;
+        padding: 10px !important;
     }
 
     .fancybox__slide {
-        padding: 40px 0px 40px 0px!important;
+        padding: 40px 0px 40px 0px !important;
     }
 
-    .caption-col.new-caption-col .inner-col{
+    .caption-col.new-caption-col .inner-col {
         text-align: center;
     }
 
     /* fancybox css */
+
+    .faq-head-cls {
+        font-size: 20px;
+    }
+
+    .faq-cls h4 {
+        font-size: 16px;
+    }
 
     /* code */
 }
