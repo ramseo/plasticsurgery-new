@@ -3,6 +3,7 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .switch {
@@ -86,7 +87,11 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="{{ $module_icon }}"></i> {{ $module_title }} <small class="text-muted">Data Table {{ $module_action }}</small>
+                    <i class="{{ $module_icon }}"></i>
+                    {{ $module_title }} reply
+                    <small class="text-muted">
+                        Data Table {{ $module_action }}
+                    </small>
                 </h4>
                 <div class="small text-muted">
                     {{ Str::title($module_name) }} Management Dashboard
@@ -108,12 +113,6 @@
                             </th>
                             <th>
                                 Name
-                            </th>
-                            <th>
-                                Rating
-                            </th>
-                            <th>
-                                Vendor
                             </th>
                             <th width="20%" class="text-center">
                                 Action
@@ -158,7 +157,7 @@
         serverSide: true,
         autoWidth: true,
         responsive: true,
-        ajax: '{{ route("backend.$module_name.index_data") }}',
+        ajax: '{{ route("backend.$module_name.reply_index_data",[$review_id]) }}',
         columns: [{
                 data: 'id',
                 name: 'id'
@@ -168,16 +167,8 @@
                 name: 'description'
             },
             {
-                data: 'title',
-                name: 'title'
-            },
-            {
-                data: 'rating',
-                name: 'rating'
-            },
-            {
-                data: 'vendor_id',
-                name: 'vendor_id'
+                data: 'name',
+                name: 'name'
             },
             {
                 data: 'action',
@@ -187,45 +178,5 @@
             }
         ]
     });
-
-    function checkBox(elm) {
-        var review_id = $(elm).attr("review_id");
-
-        if ($(elm).is(":checked")) {
-            $.ajax({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                url: "{{url('admin/review/is_active')}}",
-                type: 'GET',
-                data: {
-                    is_active: 1,
-                    review_id: review_id,
-                    _token: '{{ csrf_token() }}',
-                },
-                dataType: 'json',
-                success: function(response) {
-                    console.log(response);
-                }
-            });
-        } else {
-            $.ajax({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                url: "{{url('admin/review/is_active')}}",
-                type: 'GET',
-                data: {
-                    is_active: 0,
-                    review_id: review_id,
-                    _token: '{{ csrf_token() }}',
-                },
-                dataType: 'json',
-                success: function(response) {
-                    console.log(response);
-                }
-            });
-        }
-    }
 </script>
 @endpush

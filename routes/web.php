@@ -138,6 +138,12 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::get("review/index_data", ['as' => "review.index_data", 'uses' => "ReviewController@index_data"]);
     Route::get("review/destroy/{id}", ['as' => "review.destroy", 'uses' => "ReviewController@destroy"]);
     Route::get("review/is_active", ['as' => "review.is_active", 'uses' => "ReviewController@is_active"]);
+    // reply routes
+    Route::get("review/reply/{id}", ['as' => "reply.index", 'uses' => "ReviewController@reply"]);
+    Route::get("review/reply_index_list", ['as' => "review.reply_index_list", 'uses' => "ReviewController@reply_index_list"]);
+    Route::get("review/reply_index_data/{id}", ['as' => "review.reply_index_data", 'uses' => "ReviewController@reply_index_data"]);
+    Route::get("review/reply_destroy/{id}/{review_id}", ['as' => "review.reply_destroy", 'uses' => "ReviewController@reply_destroy"]);
+    // reply routes
     Route::resource("review", "ReviewController");
     // Review
 
