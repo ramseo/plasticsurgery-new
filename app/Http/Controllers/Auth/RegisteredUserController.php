@@ -40,11 +40,11 @@ class RegisteredUserController extends Controller
             'email'      => 'required|string|email|max:191|unique:users',
             'password'   => 'required|string|confirmed|min:8',
             'agree' => 'required',
-            // 'g-recaptcha-response' => 'required|recaptchav3:register,0.5',
+            'g-recaptcha-response' => 'required|recaptchav3:register,0.5',
         ],
             [
                 'agree.required' => 'Please read and agree the terms and privacy policy',
-                // 'g-recaptcha-response.recaptchav3' => 'Recaptchav3 response is no longer valid: either is too old or has been used previously.'
+                'g-recaptcha-response.recaptchav3' => 'Recaptchav3 response is no longer valid: either is too old or has been used previously.'
             ]
         );
 
