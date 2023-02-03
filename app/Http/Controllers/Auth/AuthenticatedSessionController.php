@@ -47,9 +47,11 @@ class AuthenticatedSessionController extends Controller
 
         $role = auth()->user()->getRoleNames()->first();
 
-        if ($role == "user" || $role == "vendor") {
-            $currentUrl = \Session::get('currentUrl');
-            return redirect($currentUrl);
+        $currentUrl = \Session::get('currentUrl');
+        if ($currentUrl) {
+            if ($role == "user" || $role == "vendor") {
+                return redirect($currentUrl);
+            }
         }
 
         if ($role) {
