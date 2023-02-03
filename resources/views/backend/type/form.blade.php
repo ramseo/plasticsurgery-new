@@ -69,7 +69,7 @@
             }
             }
             @endphp
-            <img id="imgPreview" src="{{ $vendor_icon_img }}" alt="" class="img-fluid">
+            <img id="imgPreview" src="{{ $vendor_icon_img }}" alt="alt img" class="img-fluid">
         </div>
         @endif
 
@@ -92,7 +92,7 @@
             }
             }
             @endphp
-            <img id="imgPreview" src="{{ $vendor_image }}" alt="" class="img-fluid">
+            <img id="imgPreview" src="{{ $vendor_image }}" alt="alt img" class="img-fluid">
         </div>
         @endif
     </div>
@@ -114,7 +114,7 @@
             }
             }
             @endphp
-            <img id="imgPreview" src="{{ $vendor_banner_img }}" alt="" class="img-fluid">
+            <img id="imgPreview" src="{{ $vendor_banner_img }}" alt="alt img" class="img-fluid">
         </div>
         @endif
     </div>
@@ -137,7 +137,7 @@
             }
             }
             @endphp
-            <img id="imgPreview" src="{{ $vendor_mobile_banner_img }}" alt="" class="img-fluid">
+            <img id="imgPreview" src="{{ $vendor_mobile_banner_img }}" alt="alt img" class="img-fluid">
         </div>
         @endif
     </div>

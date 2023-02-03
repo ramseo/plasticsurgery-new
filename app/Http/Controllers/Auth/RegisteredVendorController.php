@@ -43,7 +43,7 @@ class RegisteredVendorController extends Controller
             'password'   => 'required|string|confirmed|min:8',
             'city_id' => 'required',
             'type_id'  => 'required',
-            'g-recaptcha-response' => 'required|recaptchav3:register,0.5',
+            // 'g-recaptcha-response' => 'required|recaptchav3:register,0.5',
         ]);
         if(trim($request->email) != 'mywedindia@gmail.com'){
             $request->validate(['email'      => 'required|string|email|max:191|unique:users']);

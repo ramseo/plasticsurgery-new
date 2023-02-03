@@ -50,7 +50,7 @@
                             }
                         @endphp
                         {{--                                @if ($user->userImages->isEmpty())--}}
-                        <img id="imgPreview" src="{{ $vendor_profile_img }}" alt="" class="img-fluid">
+                        <img id="imgPreview" src="{{ $vendor_profile_img }}" alt="alt img" class="img-fluid">
                     </div>
                 </div>
                 <div class="row">

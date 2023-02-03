@@ -80,15 +80,18 @@
 
                 <?php
                 if (auth()->user()) {
-                    $loggedInUser = auth()->user()->getRoleNames()->first();
-                    if ($loggedInUser == "super admin") {
+                    $userRole = auth()->user()->getRoleNames()->first();
+                    $getLoggedInVendor = getLoggedInVendor(auth()->user()->id);
+                    if ($userRole == "vendor") {
+                        if ($getLoggedInVendor->business_name == $vendor_details->business_name) {
                 ?>
-                        <div class="reply-review">
-                            <a href="javascript:void(0)" class="show_reply_popup" review_id="<?= $review->id ?>">
-                                Reply
-                            </a>
-                        </div>
+                            <div class="reply-review">
+                                <a href="javascript:void(0)" class="show_reply_popup" review_id="<?= $review->id ?>">
+                                    Reply
+                                </a>
+                            </div>
                 <?php
+                        }
                     }
                 }
                 ?>
@@ -104,7 +107,15 @@
                                     <li>
                                         <div class="rev-flex-cls">
                                             <div class="img-col">
-                                                <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="alt img">
+                                                <?php
+                                                $vendor_profile_img = asset('img/default-vendor.jpg');
+                                                if ($vendor_details->image) {
+                                                    if (file_exists(public_path() . '/storage/vendor/profile/' . $vendor_details->image)) {
+                                                        $vendor_profile_img = asset('storage/vendor/profile/' . $vendor_details->image);
+                                                    }
+                                                }
+                                                ?>
+                                                <img src="<?= $vendor_profile_img ?>" class="img-fluid" alt="alt img">
                                             </div>
                                             <div class="text-col">
                                                 <p class="name review-title">
@@ -195,39 +206,43 @@
 <!-- reply model -->
 <?php
 if (auth()->user()) {
-    $loggedInUser = auth()->user()->getRoleNames()->first();
-    if ($loggedInUser == "super admin") {
+    $userRole = auth()->user()->getRoleNames()->first();
+    $getLoggedInVendor = getLoggedInVendor(auth()->user()->id);
+
+    if ($userRole == "vendor") {
+        if ($getLoggedInVendor->business_name == $vendor_details->business_name) {
 ?>
-        <div class="modal fade" id="replyModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Write Reply</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="review-form-main-col">
-                            <div class="alert alert-danger replyAlert" style="display: none;"></div>
-                            <form id="replyForm">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input id="replyTitle" value="super admin" name="name" type="text" class="form-control" readonly>
-                                </div>
-                                <div class="form-group">
-                                    <label>Your Reply</label>
-                                    <textarea id="replyDescription" class="form-control"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <input name="update_review_id" id="update_review_id" type="hidden">
-                                    <input type="submit" class="btn btn-primary" value="Submit">
-                                </div>
-                            </form>
+            <div class="modal fade" id="replyModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Write Reply</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="review-form-main-col">
+                                <div class="alert alert-danger replyAlert" style="display: none;"></div>
+                                <form id="replyForm">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input id="replyTitle" value="<?= $getLoggedInVendor->business_name ?>" name="name" type="text" class="form-control" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Your Reply</label>
+                                        <textarea id="replyDescription" class="form-control"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <input name="update_review_id" id="update_review_id" type="hidden">
+                                        <input type="submit" class="btn btn-primary" value="Submit">
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 <?php
+        }
     }
 }
 ?>

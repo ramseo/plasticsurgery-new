@@ -384,7 +384,7 @@ $average = averageReview($reviews);
         $('#see-full-list').click(function(e) {
             e.preventDefault();
             $('html, body').animate({
-                scrollTop: $(".pricing-col").offset().top
+                scrollTop: $(".pricing-col").offset().top - 100
             }, 1500);
         });
     });

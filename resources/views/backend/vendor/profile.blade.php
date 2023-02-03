@@ -14,9 +14,9 @@
         <div class="row">
             <div class="col-12">
                 <h4 class="card-title mb-0">
-                    <i class="c-icon cil-people"></i>  Profile <small class="text-muted">Create</small>
+                    <i class="c-icon cil-people"></i> Profile <small class="text-muted">Create</small>
                 </h4>
-                <div class="small text-muted"> 
+                <div class="small text-muted">
                     Profile Management
                 </div>
             </div>
@@ -26,23 +26,10 @@
         <div class="row mt-4">
             <div class="col">
                 {{ Form::open(array('route' =>'vendor.profile.update', 'files' => true,'id' => 'profileForm')) }}
-                <div class="row">
-                    <div class="col-2 mob-col-cls">
-                        @php
-                            $vendor_profile_img = asset('img/default-vendor.jpg');
-                            if($vendor->image){
-                                if(file_exists( public_path().'/storage/vendor/profile/'. $vendor->image )){
-                                    $vendor_profile_img = asset('storage/vendor/profile/'.$vendor->image);
-                                }
-                            }
-                        @endphp
-                        {{--                                @if ($user->userImages->isEmpty())--}}
-                        <img id="imgPreview" src="{{ $vendor_profile_img }}" alt="" class="img-fluid">
-                    </div>
-                </div>
+               
                 <div class="row">
 
-                    <div class="col-6 col-md-4 mob-col-cls"> 
+                    <div class="col-6 col-md-4 mob-col-cls">
                         <div class="form-group">
                             {{ Form::label('business_name', 'Business Name') }} {!! fielf_required("required") !!}
                             {{ Form::text('business_name', $vendor->business_name, array('class' => 'form-control')) }}
@@ -58,8 +45,17 @@
                     <div class="col-6 col-md-4 mob-col-cls">
                         <div class="form-group">
                             {{ Form::label('image', 'Profile Image') }} {!! fielf_required("required") !!}
+                            <?php
+                            if ($vendor->image) {
+                                if (file_exists(public_path() . '/storage/vendor/profile/' . $vendor->image)) {
+                            ?>
+                                    <img id="imgPreview" src="<?= asset('storage/vendor/profile/' . $vendor->image) ?>" alt="alt img" class="img-fluid">
+                            <?php
+                                }
+                            }
+                            ?>
                             <div class="custom-file">
-                                <input type="file" class="custom-file-input"  name="image">
+                                <input type="file" class="custom-file-input" name="image">
                                 <label class="custom-file-label">Choose file</label>
                             </div>
                         </div>
@@ -74,13 +70,13 @@
                     </div>
                     <div class="col-4 mob-col-cls">
                         <div class="form-group">
-                            {{ Form::label('price', 'Default Price') }}  {!! fielf_required("required") !!}
+                            {{ Form::label('price', 'Default Price') }} {!! fielf_required("required") !!}
                             {{ Form::number('price', $vendor->price, array('class' => 'form-control', 'placeholder'=> 'Service default price')) }}
                         </div>
                     </div>
                     <div class="col-4 mob-col-cls">
                         <div class="form-group">
-                            {{ Form::label('label', 'Price Label') }}  {!! fielf_required("required") !!}
+                            {{ Form::label('label', 'Price Label') }} {!! fielf_required("required") !!}
                             {{ Form::text('label', $vendor->label, array('class' => 'form-control', 'placeholder'=> 'Price label')) }}
                         </div>
                     </div>
@@ -88,7 +84,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            {{ Form::label('business_address', 'Address') }}  {!! fielf_required("required") !!}
+                            {{ Form::label('business_address', 'Address') }} {!! fielf_required("required") !!}
                             {{ Form::textarea('business_address', $vendor->business_address, array('class' => 'form-control')) }}
                         </div>
                     </div>
@@ -98,8 +94,8 @@
                         <div class="form-group">
                             {{ Form::label('travel_to_other_cities', 'Travel to other Indian cities?') }}
                             <br>
-                           Yes  {{ Form::radio('travel_to_other_cities', 1, $vendor->travel_to_other_cities == 1?  true : false) }}
-                           No {{ Form::radio('travel_to_other_cities', 0, $vendor->travel_to_other_cities == 0 ? true : false) }}
+                            Yes {{ Form::radio('travel_to_other_cities', 1, $vendor->travel_to_other_cities == 1?  true : false) }}
+                            No {{ Form::radio('travel_to_other_cities', 0, $vendor->travel_to_other_cities == 0 ? true : false) }}
                         </div>
                     </div>
                     <div class="col-6 col-md-3 mob-col-cls">
@@ -137,7 +133,7 @@
                     <div class="col-8">
                         <div class="float-right">
 
-{{--                            <a href="{{route("backend.profile")}}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>--}}
+                            {{-- <a href="{{route("backend.profile")}}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}"><i class="fas fa-reply"></i> Cancel</a>--}}
                         </div>
                     </div>
                 </div>
@@ -162,11 +158,11 @@
 @stop
 
 @push ('after-scripts')
-    <script type="text/javascript">
-        // Add the following code if you want the name of the file appear on select
-        $(".custom-file-input").on("change", function() {
-            var fileName = $(this).val().split("\\").pop();
-            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-        });
-    </script>
+<script type="text/javascript">
+    // Add the following code if you want the name of the file appear on select
+    $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+    });
+</script>
 @endpush

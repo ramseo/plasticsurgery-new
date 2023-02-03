@@ -906,4 +906,10 @@ if (!function_exists('date_today')) {
         $replies = $data->get();
         return $replies;
     }
+
+
+    function getLoggedInVendor($id)
+    {
+        return DB::table('vendors')->select('business_name', 'slug', 'image')->where("user_id", $id)->get()->first();
+    }
 }

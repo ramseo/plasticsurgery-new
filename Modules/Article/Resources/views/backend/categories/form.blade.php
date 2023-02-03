@@ -73,7 +73,7 @@
                 }
                 }
                 @endphp
-                <img id="imgPreview" src="{{ $vendor_image }}" alt="" class="img-fluid">
+                <img id="imgPreview" src="{{ $vendor_image }}" alt="alt img" class="img-fluid">
             </div>
             @endif
             <div class="custom-file">

@@ -57,7 +57,7 @@
                     }
                 }
             @endphp
-            <img id="imgPreview" src="{{ $vendor_icon_img }}" alt="" class="img-fluid">
+            <img id="imgPreview" src="{{ $vendor_icon_img }}" alt="img" class="img-fluid">
         </div>
         @endif
     </div>
@@ -79,7 +79,7 @@
                     }
                 }
             @endphp
-            <img id="imgPreview" src="{{ $vendor_image }}" alt="" class="img-fluid">
+            <img id="imgPreview" src="{{ $vendor_image }}" alt="img" class="img-fluid">
         </div>
         @endif
     </div>
