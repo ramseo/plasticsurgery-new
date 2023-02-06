@@ -96,53 +96,56 @@
                 }
                 ?>
                 <!-- admin reply -->
-                <?php
-                $getReviewReply = getReviewReply($review->id);
-                foreach ($getReviewReply as $reply) {
-                ?>
-                    <div class="admin-reply">
-                        <div class="col-xs-12 reply-review-cls">
-                            <div class="review-header">
-                                <ul class="list-inline space-list">
-                                    <li>
-                                        <div class="rev-flex-cls">
-                                            <div class="img-col">
-                                                <?php
-                                                $vendor_profile_img = asset('img/default-vendor.jpg');
-                                                if ($vendor_details->image) {
-                                                    if (file_exists(public_path() . '/storage/vendor/profile/' . $vendor_details->image)) {
-                                                        $vendor_profile_img = asset('storage/vendor/profile/' . $vendor_details->image);
+                <div id="AjaxUpdateReply-<?= $review->id ?>">
+                    <?php
+                    $getReviewReply = getReviewReply($review->id);
+                    foreach ($getReviewReply as $reply) {
+                    ?>
+                        <div class="admin-reply">
+                            <div class="col-xs-12 reply-review-cls">
+                                <div class="review-header">
+                                    <ul class="list-inline space-list">
+                                        <li>
+                                            <div class="rev-flex-cls">
+                                                <div class="img-col">
+                                                    <?php
+                                                    $vendor_profile_img = asset('img/default-vendor.jpg');
+                                                    if ($vendor_details->image) {
+                                                        if (file_exists(public_path() . '/storage/vendor/profile/' . $vendor_details->image)) {
+                                                            $vendor_profile_img = asset('storage/vendor/profile/' . $vendor_details->image);
+                                                        }
                                                     }
-                                                }
-                                                ?>
-                                                <img src="<?= $vendor_profile_img ?>" class="img-fluid" alt="alt img">
+                                                    ?>
+                                                    <img src="<?= $vendor_profile_img ?>" class="img-fluid" alt="alt img">
+                                                </div>
+                                                <div class="text-col">
+                                                    <p class="name review-title">
+                                                        <?= $reply->name ?>
+                                                    </p>
+                                                    <ul class="list-inline rating-list">
+                                                        <li class="list-inline-item">
+                                                            <ul class="list-inline">
+                                                                <li class="list-inline-item review-listing">
+                                                                    <?= date('d', strtotime($reply->created_at)) . " , " . date("F", strtotime($reply->created_at)) . " , " . date('Y', strtotime($reply->created_at)) ?>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
                                             </div>
-                                            <div class="text-col">
-                                                <p class="name review-title">
-                                                    <?= $reply->name ?>
-                                                </p>
-                                                <ul class="list-inline rating-list">
-                                                    <li class="list-inline-item">
-                                                        <ul class="list-inline">
-                                                            <li class="list-inline-item review-listing">
-                                                                <?= date('d', strtotime($reply->created_at)) . " , " . date("F", strtotime($reply->created_at)) . " , " . date('Y', strtotime($reply->created_at)) ?>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="review-body">
-                                <p class="comment more-content-cls">
-                                    <?= $reply->description ?>
-                                </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="review-body">
+                                    <p class="comment more-content-cls">
+                                        <?= $reply->description ?>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                <?php } ?>
+                    <?php } ?>
+                </div>
                 <!-- admin reply -->
             </div>
         <?php } ?>

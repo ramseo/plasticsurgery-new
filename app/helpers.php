@@ -902,7 +902,7 @@ if (!function_exists('date_today')) {
 
     function getReviewReply($reviewId)
     {
-        $data = DB::table('vendor_reviews_reply')->select('name', 'description', 'review_id', 'created_at')->where("review_id", $reviewId);
+        $data = DB::table('vendor_reviews_reply')->select('name', 'description', 'review_id', 'created_at')->where("review_id", $reviewId)->orderBy("id", 'desc');
         $replies = $data->get();
         return $replies;
     }

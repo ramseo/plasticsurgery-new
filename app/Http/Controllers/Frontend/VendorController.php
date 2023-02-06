@@ -254,16 +254,66 @@ class VendorController extends Controller
             'name' => 'required',
         ]);
 
+        $html = "";
         if ($validator->passes()) {
             $data = $request->all();
-
             $vendor = new VendorReviewReply();
 
             $vendor->description = $data['your_reply'];
             $vendor->name = $data['name'];
             $vendor->review_id = $data['review_id'];
             $vendor->save();
-            return response()->json(['success' => true, 'message' => 'Reply posted successfully!']);
+
+            // Ajax code
+            $replyData = DB::table('vendor_reviews_reply')->select('*')->where("review_id", $request->review_id)->orderBy("id", 'desc')->get();
+
+            if ($replyData) {
+                foreach ($replyData as $item) {
+                    $html .= '<div class="admin-reply">';
+                    $html .= '<div class="col-xs-12 reply-review-cls">';
+                    $html .= '<div class="review-header">';
+                    $html .= '<ul class="list-inline space-list">';
+                    $html .= '<li>';
+                    $html .= '<div class="rev-flex-cls">';
+                    $html .= '<div class="img-col">';
+                    $vendor_profile_img = asset('img/default-vendor.jpg');
+                    if ($data['vendor_image']) {
+                        if (file_exists(public_path() . '/storage/vendor/profile/' . $data['vendor_image'])) {
+                            $vendor_profile_img = asset('storage/vendor/profile/' . $data['vendor_image']);
+                        }
+                    }
+                    $html .= '<img src="' . $vendor_profile_img . '" class="img-fluid" alt="alt img">';
+                    $html .= '</div>';
+
+                    $html .= '<div class="text-col">';
+                    $html .= '<p class="name review-title">' .  $item->name . '</p>';
+                    $html .= '<ul class="list-inline rating-list">';
+                    $html .= '<li class="list-inline-item">';
+                    $html .= '<ul class="list-inline">';
+                    $html .= '<li class="list-inline-item review-listing">';
+                    $html .= date('d', strtotime($item->created_at)) . " , " . date("F", strtotime($item->created_at)) . " , " . date('Y', strtotime($item->created_at));
+                    $html .= '</li>';
+                    $html .= '</ul>';
+                    $html .= '</li>';
+                    $html .= '</ul>';
+
+                    $html .= '</div>';
+
+                    $html .= '</div>';
+                    $html .= '</li>';
+                    $html .= '</ul>';
+                    $html .= '</div>';
+                    $html .= '<div class="review-body">';
+                    $html .=  $item->description;
+                    $html .= '</div>';
+                    $html .= '</div>';
+                    $html .= '</div>';
+                }
+            }
+
+            // Ajax code
+
+            return response()->json(['success' => true, 'message' => 'Reply posted successfully!', 'reply_html' => $html, 'review_id' => $data['review_id']]);
         }
 
         $var_err = "";
@@ -273,7 +323,7 @@ class VendorController extends Controller
         }
         $var_err .= "</ul>";
 
-        return response()->json(['success' => false, 'message' => $var_err]);
+        return response()->json(['success' => false, 'message' => $var_err, 'reply_html' => $html, 'review_id' => $request->review_id]);
     }
 
 

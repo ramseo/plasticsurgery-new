@@ -361,17 +361,25 @@ $average = averageReview($reviews);
                     '_token': "<?php echo csrf_token() ?>",
                     'review_id': $('#update_review_id').val(),
                     'name': $('#replyTitle').val(),
-                    'your_reply': $('#replyDescription').val()
+                    'your_reply': $('#replyDescription').val(),
+                    'vendor_image': "<?= $vendor_details->image ?>",
                 },
                 success: function(res) {
+
                     if (res.success) {
+                        console.log(res.review_id);
+
                         $('.replyAlert').html('').hide();
                         $('#replyForm').trigger('reset');
                         toastr.success(res.message, 'Reply posted Successfully!');
 
                         setTimeout(function() {
                             $('#replyModal').modal('hide');
+                            if (res.reply_html) {
+                                $("#AjaxUpdateReply-" + res.review_id).html(res.reply_html);
+                            }
                         }, 1000);
+
                     } else {
                         console.log(res.message);
                         $('.replyAlert').html(res.message).show();
