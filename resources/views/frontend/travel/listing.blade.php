@@ -5,7 +5,7 @@
 <section id="breadcrumb-section">
    <div class="container-fluid">
       <div class="row">
-         <div class="col-xs-12 col-sm-12" >
+         <div class="col-xs-12 col-sm-12">
             <nav aria-label="breadcrumb">
                <ol class="breadcrumb">
                   <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -27,9 +27,9 @@
             <div class="row vendor-list-row" id="post-data">
             </div>
             <div class="ajax-load text-center" style="display:none">
-              <p><img src="{{asset('img/loader.gif')}}" alt="Loading More... "></p>
+               <p><img src="{{asset('img/loader.gif')}}" alt="Loading More... "></p>
             </div>
-           
+
          </div>
          @include('frontend.travel.side')
       </div>
@@ -42,44 +42,42 @@
 
 
 <script type="text/javascript">
-     var page = 1;
+   var page = 1;
 
-     let footerOffsetHeight = document.getElementById('footer').offsetHeight;
-     let textOnlySectionOffsetHeight = document.getElementById('vendor-detail-section').offsetHeight;
-     let totalHeight = footerOffsetHeight+textOnlySectionOffsetHeight;
-     loadMoreData(page);
-    $(window).scroll(function() {
-        if ($(window).scrollTop() >= ($(document).height() - $(window).height() - totalHeight)) {
-            page++;
-            loadMoreData(page);
-        }
-    });
+   let footerOffsetHeight = document.getElementById('footer').offsetHeight;
+   let textOnlySectionOffsetHeight = document.getElementById('vendor-detail-section').offsetHeight;
+   let totalHeight = footerOffsetHeight + textOnlySectionOffsetHeight;
+   loadMoreData(page);
+   $(window).scroll(function() {
+      if ($(window).scrollTop() >= ($(document).height() - $(window).height() - totalHeight)) {
+         page++;
+         loadMoreData(page);
+      }
+   });
 
 
-    function loadMoreData(page){
-        $.ajax(
-            {
-                url: '{{route("frontend.travel.ajax")}}'+'?page=' + page,
-                type: "get",
-                beforeSend: function()
-                {
-                    $('.ajax-load').show();
-                }
-            })
-            .done(function(data)
-            {
-                if(!data.html){
-                  // No more records found
-                    $('.ajax-load').html("");
-                    return;
-                }
-                $('.ajax-load').hide();
-                $("#post-data").append(data.html);
-            })
-            .fail(function(jqXHR, ajaxOptions, thrownError)
-            {
-                alert('server not responding...');
-            });
-    }
+   function loadMoreData(page) {
+      $.ajax({
+            url: '{{route("frontend.travel.ajax")}}' + '?page=' + page,
+            type: "get",
+            beforeSend: function() {
+               $('.ajax-load').show();
+            }
+         })
+         .done(function(data) {
+            if (!data.html) {
+               $('.ajax-load').html("No more records found").css({
+                  'color': 'red',
+                  'font-weight': '500',
+               });
+               return;
+            }
+            $('.ajax-load').hide();
+            $("#post-data").append(data.html);
+         })
+         .fail(function(jqXHR, ajaxOptions, thrownError) {
+            alert('server not responding...');
+         });
+   }
 </script>
 @endpush

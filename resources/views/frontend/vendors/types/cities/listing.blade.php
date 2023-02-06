@@ -268,8 +268,10 @@ if ($getSpecificCityVendors) {
             })
             .done(function(data) {
                 if (!data.html) {
-                    // No more records found
-                    $('.ajax-load').html("");
+                    $('.ajax-load').html("No more records found").css({
+                        'color': 'red',
+                        'font-weight': '500',
+                    });
                     return;
                 }
                 $('.ajax-load').hide();
