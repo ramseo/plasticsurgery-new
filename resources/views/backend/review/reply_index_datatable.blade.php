@@ -88,7 +88,7 @@
             <div class="col-8">
                 <h4 class="card-title mb-0">
                     <i class="{{ $module_icon }}"></i>
-                    {{ $module_title }} reply
+                    <?= $review_data->title . " " . $module_title ?> reply
                     <small class="text-muted">
                         Data Table {{ $module_action }}
                     </small>

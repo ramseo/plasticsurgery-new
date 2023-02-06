@@ -70,6 +70,7 @@ class ReviewController extends Controller
         $module_name = $this->module_name;
         $module_path = $this->module_path;
         $module_icon = $this->module_icon;
+        $module_model = $this->module_model;
         $module_name_singular = Str::singular($module_name);
 
         $module_action = 'List';
@@ -77,13 +78,13 @@ class ReviewController extends Controller
         $page_heading = ucfirst($module_title);
         $title = $page_heading . ' ' . ucfirst($module_action);
 
-        // $module_name = $module_model::paginate();
+        $review_data = $module_model::findOrFail($review_id);
 
         Log::info("'$title' viewed by User:" . auth()->user()->name . '(ID:' . auth()->user()->id . ')');
 
         return view(
             "backend.$module_path.reply_index_datatable",
-            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', 'page_heading', 'title', 'review_id')
+            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', 'page_heading', 'title', 'review_id','review_data')
         );
     }
 
