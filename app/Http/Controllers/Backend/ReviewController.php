@@ -84,7 +84,7 @@ class ReviewController extends Controller
 
         return view(
             "backend.$module_path.reply_index_datatable",
-            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', 'page_heading', 'title', 'review_id','review_data')
+            compact('module_title', 'module_name', 'module_path', 'module_icon', 'module_action', 'module_name_singular', 'page_heading', 'title', 'review_id', 'review_data')
         );
     }
 
@@ -324,6 +324,7 @@ class ReviewController extends Controller
 
     public function reply_destroy($id, $review_id)
     {
+    
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_name_singular = Str::singular($module_name);
@@ -332,7 +333,7 @@ class ReviewController extends Controller
 
         $module_name_singular_data = VendorReviewReply::findOrFail($id);
 
-        DB::table("vendor_reviews_reply")->where('id', $id)->orWhere('review_id', $review_id)->delete();
+        DB::table("vendor_reviews_reply")->where('id', $id)->delete();
 
         Flash::success('<i class="fas fa-check"></i> ' . label_case($module_name_singular) . ' Deleted Successfully!')->important();
 
