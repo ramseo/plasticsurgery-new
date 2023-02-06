@@ -164,7 +164,8 @@
             })
             .done(function(data) {
                 if (!data.html) {
-                    $('.ajax-load').html("No more records found");
+                    // No more records found
+                    $('.ajax-load').html("");
                     return;
                 }
                 $('.ajax-load').hide();
