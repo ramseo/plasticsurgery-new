@@ -88,6 +88,7 @@
                             <div class="reply-review">
                                 <a href="javascript:void(0)" class="show_reply_popup" review_id="<?= $review->id ?>">
                                     Reply
+                                    <i class="fa fa-reply" aria-hidden="true"></i>
                                 </a>
                             </div>
                 <?php

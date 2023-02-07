@@ -33,6 +33,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('privacy', 'FrontendController@privacy')->name('privacy');
     Route::get('terms', 'FrontendController@terms')->name('terms');
     Route::post('newsletter', 'NewsletterController@store')->name('newsletter');
+    Route::post('newsletter-save-phone', 'NewsletterController@save_phone')->name('newsletter-save-phone');
     Route::post('post-review', 'VendorController@postReview')->name('post-review');
     Route::post('post-reply', 'VendorController@postReply')->name('post-reply');
     Route::post('call', 'VendorController@callView')->name('call');
@@ -330,7 +331,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
 });
 
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-    Route::get('typeAjax', 'VendorController@typeAjax')->name('type-ajax');
+    Route::get('typeAjax', 'VendorController@typeAjax')->name('type-ajax'); 
     Route::get('cityAjax', 'VendorController@cityAjax')->name('city-ajax');
     $paths = getDataArray('types');
     if ($paths) :

@@ -104,3 +104,129 @@ if ($getSpecificCityVendors) {
         </div>
     </section>
 <?php } ?>
+
+<section id="best-matching">
+    <div class="container-fluid">
+        <div class="col-xs-12 common-left-heading">
+            <p class="head">Get Best Matching Bridal Makeup Artists on your phone</p>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="err-div text-center">
+                    <div class="full_name_err"></div>
+                    <div class="mobile_number_err"></div>
+                </div>
+                <div class="bridal-matching-form">
+
+                    <form id="best-matching-form" class="form-inline">
+                        <div class="form-group mb-2">
+                            <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Full Name">
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="number" name="mobile_number" class="form-control" id="mobile_number" placeholder="Mobile Number">
+                        </div>
+                        <button id="save-best-matching" type="submit" class="btn btn-primary mb-2">
+                            Save
+                        </button>
+                    </form>
+                </div>
+                <div class="bridal-matching-form-content">
+                    <div>
+                        <span class="icon-img">
+                            <img src="<?= asset('images/whatsapp-icon.png') ?>">
+                        </span>
+                        <span class="bridal-matching-text">
+                            WhatsApp/Call with your personal wedding manager
+                        </span>
+                    </div>
+                    <div>
+                        <span class="icon-img">
+                            <img src="<?= asset('images/icon-notepad.png') ?>">
+                        </span>
+                        <span class="bridal-matching-text">
+                            Tell her your doubts, requirements, budget and get best recommendations
+                        </span>
+                    </div>
+                    <div>
+                        <span class="icon-img">
+                            <img src="<?= asset('images/icon-checkmark.png') ?>">
+                        </span>
+                        <span class="bridal-matching-text">
+                            Get the best deal in your budget and plan!
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- popup -->
+<div class="modal fade" id="enquiry-phone-Modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="review-form-main-col">
+                    <h4>Thank you for your enquiry</h4>
+                    <div>
+                        We received your details and contact you soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- popup -->
+
+@push('after-scripts')
+<script>
+    $(document).ready(function() {
+        $('#best-matching-form').submit(function(event) {
+            event.preventDefault();
+
+            var status = true;
+            $('.full_name_err').html("");
+            $('.mobile_number_err').html("");
+
+            if ($('input[name="full_name"]').val() == "") {
+                $('.full_name_err').html("Please enter full name").css({
+                    'color': 'red',
+                    'font-weight': 500
+                });
+                status = false;
+            }
+
+            if ($('input[name="mobile_number"]').val() == "") {
+                $('.mobile_number_err').html("Please enter mobile number").css({
+                    'color': 'red',
+                    'font-weight': 500
+                });
+                status = false;
+            }
+
+            if (status) {
+                $.ajax({
+                    url: "<?= route('frontend.newsletter-save-phone') ?>",
+                    type: "POST",
+                    data: {
+                        '_token': "<?= csrf_token() ?>",
+                        'full_name': $('input[name="full_name"]').val(),
+                        'mobile_number': $('input[name="mobile_number"]').val(),
+                    },
+                    dataType: 'json',
+                    success: function(response) {
+                        if (response.success) {
+                            $("#enquiry-phone-Modal").modal("show");
+                            $('#best-matching-form').trigger('reset');
+
+                            setTimeout(function() {
+                                $("#enquiry-phone-Modal").modal("hide");
+                            }, 2000);
+                        }
+                    }
+                });
+            }
+        })
+    });
+</script>
+@endpush
