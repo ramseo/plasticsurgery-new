@@ -221,7 +221,7 @@ if ($getSpecificCityVendors) {
 
                             setTimeout(function() {
                                 $("#enquiry-phone-Modal").modal("hide");
-                            }, 2000);
+                            }, 4000);
                         }
                     }
                 });
