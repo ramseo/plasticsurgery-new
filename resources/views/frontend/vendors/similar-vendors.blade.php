@@ -189,7 +189,7 @@ if ($getSpecificCityVendors) {
             $('.mobile_number_err').html("");
 
             if ($('input[name="full_name"]').val() == "") {
-                $('.full_name_err').html("Please enter full name").css({
+                $('.full_name_err').html("Please enter your full name").css({
                     'color': 'red',
                     'font-weight': 500
                 });
@@ -197,7 +197,7 @@ if ($getSpecificCityVendors) {
             }
 
             if ($('input[name="mobile_number"]').val() == "") {
-                $('.mobile_number_err').html("Please enter mobile number").css({
+                $('.mobile_number_err').html("Please enter your mobile number").css({
                     'color': 'red',
                     'font-weight': 500
                 });
