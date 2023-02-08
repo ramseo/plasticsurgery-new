@@ -3311,6 +3311,8 @@ html {
 
 .bridal-matching-form input {
     border-radius: 170px;
+    border: none;
+    outline: none;
 }
 
 .bridal-matching-form-content {
@@ -3339,4 +3341,26 @@ html {
 
 #best-matching .head {
     color: #fff;
+}
+
+#best-matching-form button {
+    border: none;
+    outline: none;
+}
+
+#best-matching-form button:hover,
+#best-matching-form button:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+#best-matching-form .g-recaptcha {
+    border: none;
+    outline: none;
+}
+
+.bridal-matching-form-content .icon-img img {
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
 }
