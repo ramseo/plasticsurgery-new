@@ -105,59 +105,61 @@ if ($getSpecificCityVendors) {
     </section>
 <?php } ?>
 
-<section id="best-matching">
-    <div class="container-fluid">
-        <div class="col-xs-12 common-left-heading">
-            <p class="head">Get Best Matching Bridal Makeup Artists on your phone</p>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="err-div text-center">
-                    <div class="full_name_err"></div>
-                    <div class="mobile_number_err"></div>
-                    <div class="google_recaptcha_err"></div>
-                </div>
-                <div class="bridal-matching-form">
+<section id="best-matching" style="background-image:url('<?= asset("images/best-matching-bg.webp") ?>');background-size:cover;">
+    <div style="background:rgba(0,0,0,0.5);" class="reachus-overlay">
+        <div class="container-fluid">
+            <div class="col-xs-12 common-left-heading">
+                <p class="head">Get Best Matching Bridal Makeup Artists on your phone</p>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="err-div text-center">
+                        <div class="full_name_err"></div>
+                        <div class="mobile_number_err"></div>
+                        <div class="google_recaptcha_err"></div>
+                    </div>
+                    <div class="bridal-matching-form">
 
-                    <form id="best-matching-form" class="form-inline">
-                        <div class="form-group mb-2">
-                            <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Full Name">
-                        </div>
-                        <div class="form-group mx-sm-3 mb-2">
-                            <input type="number" name="mobile_number" class="form-control" id="mobile_number" placeholder="Mobile Number">
-                        </div>
-                        <div class="form-group mx-sm-3 mb-2">
-                            <div class="g-recaptcha" data-sitekey="<?= env("DATA_SITEKEY_V2") ?>"></div>
-                        </div>
-                        <button id="save-best-matching" type="submit" class="btn btn-primary mb-2">
-                            Save
-                        </button>
-                    </form>
-                </div>
-                <div class="bridal-matching-form-content">
-                    <div>
-                        <span class="icon-img">
-                            <img src="<?= asset('images/whatsapp-icon.png') ?>">
-                        </span>
-                        <span class="bridal-matching-text">
-                            WhatsApp/Call with your personal wedding manager
-                        </span>
+                        <form id="best-matching-form" class="form-inline">
+                            <div class="form-group mb-2">
+                                <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Full Name">
+                            </div>
+                            <div class="form-group mx-sm-3 mb-2">
+                                <input type="number" name="mobile_number" class="form-control" id="mobile_number" placeholder="Mobile Number">
+                            </div>
+                            <div class="form-group mx-sm-3 mb-2">
+                                <div class="g-recaptcha" data-sitekey="<?= env("DATA_SITEKEY_V2") ?>"></div>
+                            </div>
+                            <button id="save-best-matching" type="submit" class="btn btn-primary mb-2">
+                                Save
+                            </button>
+                        </form>
                     </div>
-                    <div>
-                        <span class="icon-img">
-                            <img src="<?= asset('images/icon-notepad.png') ?>">
-                        </span>
-                        <span class="bridal-matching-text">
-                            Tell her your doubts, requirements, budget and get best recommendations
-                        </span>
-                    </div>
-                    <div>
-                        <span class="icon-img">
-                            <img src="<?= asset('images/icon-checkmark.png') ?>">
-                        </span>
-                        <span class="bridal-matching-text">
-                            Get the best deal in your budget and plan!
-                        </span>
+                    <div class="bridal-matching-form-content">
+                        <div>
+                            <span class="icon-img">
+                                <img src="<?= asset('images/whatsapp-icon.png') ?>">
+                            </span>
+                            <span class="bridal-matching-text">
+                                WhatsApp/Call with your personal wedding manager
+                            </span>
+                        </div>
+                        <div>
+                            <span class="icon-img">
+                                <img src="<?= asset('images/icon-notepad.png') ?>">
+                            </span>
+                            <span class="bridal-matching-text">
+                                Tell her your doubts, requirements, budget and get best recommendations
+                            </span>
+                        </div>
+                        <div>
+                            <span class="icon-img">
+                                <img src="<?= asset('images/icon-checkmark.png') ?>">
+                            </span>
+                            <span class="bridal-matching-text">
+                                Get the best deal in your budget and plan!
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -195,7 +197,7 @@ if ($getSpecificCityVendors) {
 
             if ($('input[name="full_name"]').val() == "") {
                 $('.full_name_err').html("Please enter your full name!").css({
-                    'color': 'red',
+                    'color': '#fff',
                     'font-weight': 500
                 });
                 status = false;
@@ -203,7 +205,7 @@ if ($getSpecificCityVendors) {
 
             if ($('input[name="mobile_number"]').val() == "") {
                 $('.mobile_number_err').html("Please enter your mobile number!").css({
-                    'color': 'red',
+                    'color': '#fff',
                     'font-weight': 500
                 });
                 status = false;
@@ -213,7 +215,7 @@ if ($getSpecificCityVendors) {
             if (CURRENT_SERVER != "local") {
                 if (grecaptcha.getResponse() == "") {
                     $('.google_recaptcha_err').html("You can't proceed without captcha!").css({
-                        'color': 'red',
+                        'color': '#fff',
                         'font-weight': 500
                     });
                     status = false;
