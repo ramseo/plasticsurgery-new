@@ -63,7 +63,7 @@ $similar_vendors = get_similar_vendors($vendor_details->type_id);
                                     <p class="price"><span>Rs. {{$similar_vendor->price}}</span></p>
                                 </li>
                                 <li class="text-right">
-                                    <p class="grey-text" style="margin: 0px;">
+                                    <p class="grey-text margin-null">
                                         <?= Str::words($similar_vendor->label, '5')  ?>
                                     </p>
                                 </li>
@@ -105,8 +105,8 @@ if ($getSpecificCityVendors) {
     </section>
 <?php } ?>
 
-<section id="best-matching" style="background-image:url('<?= asset("images/best-matching-bg.webp") ?>');background-size:cover;">
-    <div style="background:rgba(0,0,0,0.5);" class="reachus-overlay">
+<section id="best-matching">
+    <div class="reachus-overlay">
         <div class="container-fluid">
             <div class="col-xs-12 common-left-heading">
                 <p class="head">Get Best Matching Bridal Makeup Artists on your phone</p>

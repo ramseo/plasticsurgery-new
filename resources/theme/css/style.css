@@ -3335,6 +3335,15 @@ html {
     font-weight: 500;
 }
 
+#best-matching {
+    background-image: url("../images/best-matching-bg.webp");
+    background-size: cover;
+}
+
+.reachus-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
 #best-matching .container-fluid {
     padding: 50px 0 50px 0;
 }
