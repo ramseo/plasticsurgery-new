@@ -209,12 +209,15 @@ if ($getSpecificCityVendors) {
                 status = false;
             }
 
-            if (grecaptcha.getResponse() == "") {
-                $('.google_recaptcha_err').html("You can't proceed without captcha!").css({
-                    'color': 'red',
-                    'font-weight': 500
-                });
-                status = false;
+            var CURRENT_SERVER = "<?= env("CURRENT_SERVER") ?>";
+            if (CURRENT_SERVER != "local") {
+                if (grecaptcha.getResponse() == "") {
+                    $('.google_recaptcha_err').html("You can't proceed without captcha!").css({
+                        'color': 'red',
+                        'font-weight': 500
+                    });
+                    status = false;
+                }
             }
 
             if (status) {
