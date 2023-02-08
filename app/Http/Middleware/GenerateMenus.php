@@ -188,6 +188,19 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
+                $menu->add('<i class="c-sidebar-nav-icon fas fa-envelope"></i>Phone Inquiry', [
+                    'route' => 'backend.inquiry.index',
+                    'class' => 'c-sidebar-nav-item',
+                ])
+                    ->data([
+                        'order' => 100,
+                        'activematches' => 'admin/inquiry*',
+                        'permission' => [],
+                    ])
+                    ->link->attr([
+                        'class' => 'c-sidebar-nav-link',
+                    ]);
+
             // Notifications
 
             //                        $menu->add('<i class="c-sidebar-nav-icon fas fa-bell"></i> Notifications', [

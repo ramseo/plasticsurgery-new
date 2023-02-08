@@ -253,6 +253,12 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::get("newsletter", ['as' => "newsletter.index", 'uses' => "NewsletterController@index"]);
     Route::delete("newsletter/destroy/{id}", ['as' => "newsletter.destroy", 'uses' => "NewsletterController@destroy"]);
 
+
+    // Inquiry routes
+    Route::get("inquiry", ['as' => "inquiry.index", 'uses' => "InquiryController@index"]);
+    Route::delete("inquiry/destroy/{id}", ['as' => "inquiry.destroy", 'uses' => "InquiryController@destroy"]);
+    // Inquiry routes
+
     /*
      *
      *  Menu Routes
@@ -331,7 +337,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'vendor', 'as' => 'vendor.',
 });
 
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-    Route::get('typeAjax', 'VendorController@typeAjax')->name('type-ajax'); 
+    Route::get('typeAjax', 'VendorController@typeAjax')->name('type-ajax');
     Route::get('cityAjax', 'VendorController@cityAjax')->name('city-ajax');
     $paths = getDataArray('types');
     if ($paths) :
