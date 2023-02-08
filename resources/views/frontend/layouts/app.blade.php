@@ -93,6 +93,8 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- scrollcode -->
     <x-google-analytics />
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>

@@ -115,6 +115,7 @@ if ($getSpecificCityVendors) {
                 <div class="err-div text-center">
                     <div class="full_name_err"></div>
                     <div class="mobile_number_err"></div>
+                    <div class="google_recaptcha_err"></div>
                 </div>
                 <div class="bridal-matching-form">
 
@@ -124,6 +125,9 @@ if ($getSpecificCityVendors) {
                         </div>
                         <div class="form-group mx-sm-3 mb-2">
                             <input type="number" name="mobile_number" class="form-control" id="mobile_number" placeholder="Mobile Number">
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <div class="g-recaptcha" data-sitekey="<?= env("DATA_SITEKEY_V2") ?>"></div>
                         </div>
                         <button id="save-best-matching" type="submit" class="btn btn-primary mb-2">
                             Save
@@ -183,13 +187,14 @@ if ($getSpecificCityVendors) {
     $(document).ready(function() {
         $('#best-matching-form').submit(function(event) {
             event.preventDefault();
-
             var status = true;
+
             $('.full_name_err').html("");
             $('.mobile_number_err').html("");
+            $('.google_recaptcha_err').html("");
 
             if ($('input[name="full_name"]').val() == "") {
-                $('.full_name_err').html("Please enter your full name").css({
+                $('.full_name_err').html("Please enter your full name!").css({
                     'color': 'red',
                     'font-weight': 500
                 });
@@ -197,7 +202,15 @@ if ($getSpecificCityVendors) {
             }
 
             if ($('input[name="mobile_number"]').val() == "") {
-                $('.mobile_number_err').html("Please enter your mobile number").css({
+                $('.mobile_number_err').html("Please enter your mobile number!").css({
+                    'color': 'red',
+                    'font-weight': 500
+                });
+                status = false;
+            }
+
+            if (grecaptcha.getResponse() == "") {
+                $('.google_recaptcha_err').html("You can't proceed without captcha!").css({
                     'color': 'red',
                     'font-weight': 500
                 });
