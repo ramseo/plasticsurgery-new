@@ -236,6 +236,7 @@ if ($getSpecificCityVendors) {
                         if (response.success) {
                             $("#enquiry-phone-Modal").modal("show");
                             $('#best-matching-form').trigger('reset');
+                            grecaptcha.reset();
 
                             setTimeout(function() {
                                 $("#enquiry-phone-Modal").modal("hide");
