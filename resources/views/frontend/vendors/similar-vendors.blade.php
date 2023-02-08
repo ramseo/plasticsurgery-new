@@ -198,7 +198,7 @@ if ($getSpecificCityVendors) {
             if ($('input[name="full_name"]').val() == "") {
                 $('.full_name_err').html("Please enter your full name!").css({
                     'color': '#fff',
-                    'font-weight': 500
+                    'font-weight': 600
                 });
                 status = false;
             }
@@ -206,7 +206,7 @@ if ($getSpecificCityVendors) {
             if ($('input[name="mobile_number"]').val() == "") {
                 $('.mobile_number_err').html("Please enter your mobile number!").css({
                     'color': '#fff',
-                    'font-weight': 500
+                    'font-weight': 600
                 });
                 status = false;
             }
@@ -216,7 +216,7 @@ if ($getSpecificCityVendors) {
                 if (grecaptcha.getResponse() == "") {
                     $('.google_recaptcha_err').html("You can't proceed without captcha!").css({
                         'color': '#fff',
-                        'font-weight': 500
+                        'font-weight': 600
                     });
                     status = false;
                 }
