@@ -3373,3 +3373,7 @@ html {
     -webkit-filter: grayscale(1) invert(1);
     filter: grayscale(1) invert(1);
 }
+
+#best-matching-form button {
+    padding: 10px 45px;
+}
