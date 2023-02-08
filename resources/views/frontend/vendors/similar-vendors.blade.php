@@ -240,7 +240,7 @@ if ($getSpecificCityVendors) {
 
                             setTimeout(function() {
                                 $("#enquiry-phone-Modal").modal("hide");
-                            }, 4000);
+                            }, 5000);
                         }
                     }
                 });
