@@ -159,49 +159,52 @@
 <div class="modal fade" id="reviewModal">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Write Review</h4>
-                <button id="eliminate-val-error" type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="review-form-main-col">
-                    <div class="alert alert-danger reviewAlert" style="display: none;"></div>
+            <div class="reachus-overlay">
+                <div class="modal-header">
+                    <h4 class="modal-title">Write Review</h4>
+                    <button id="eliminate-val-error" type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="review-form-main-col">
+                        <div class="alert alert-danger reviewAlert" style="display: none;"></div>
 
-                    <form id="reviewForm" action="">
-                        <div class="form-group">
-                            <div class="review-rating" data-rateit-mode="font" data-rateit-resetable="false"></div>
-                            <input type="hidden" id="review-rating-hidden" value="0">
-                        </div>
+                        <form id="reviewForm" action="">
+                            <div class="form-group stars-cls">
+                                <div class="review-rating" data-rateit-mode="font" data-rateit-resetable="false"></div>
+                                <input type="hidden" id="review-rating-hidden" value="0">
+                            </div>
 
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <?php
-                            if (auth()->user() != Null) {
-                                $currentUser = auth()->user()->getRoleNames()->first();
-                            ?>
-                                <input id="reviewTitle" value="<?= $currentUser ?>" name="name" type="text" class="form-control" readonly>
-                            <?php
-                            } else {
-                            ?>
-                                <input id="reviewTitle" name="name" type="text" class="form-control">
-                            <?php } ?>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Your Review</label>
-                            <textarea id="reviewDescription" name="" class="form-control"></textarea>
-                        </div>
-                        <div class="form-group">
-                            @auth
-                            <input id="reviewUserId" type="hidden" value="{{Auth::user()->id}}">
-                            @endauth
-                            <input id="reviewVendorTypeId" type="hidden" value="{{$vendor_details->type_id}}">
-                            <input id="reviewVendorCityId" type="hidden" value="{{$vendor_details->city_id}}">
-                            <input id="reviewVendorId" type="hidden" value="{{$vendor_details->id}}">
-                            <input type="submit" class="btn btn-primary" value="Submit">
-                        </div>
-                    </form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <?php
+                                if (auth()->user() != Null) {
+                                    $currentUser = auth()->user()->getRoleNames()->first();
+                                ?>
+                                    <input id="reviewTitle" value="<?= $currentUser ?>" name="name" type="text" class="form-control" readonly>
+                                <?php
+                                } else {
+                                ?>
+                                    <input id="reviewTitle" name="name" type="text" class="form-control">
+                                <?php } ?>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Your Review</label>
+                                <textarea id="reviewDescription" name="" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group save-btn-cls">
+                                @auth
+                                <input id="reviewUserId" type="hidden" value="{{Auth::user()->id}}">
+                                @endauth
+                                <input id="reviewVendorTypeId" type="hidden" value="{{$vendor_details->type_id}}">
+                                <input id="reviewVendorCityId" type="hidden" value="{{$vendor_details->city_id}}">
+                                <input id="reviewVendorId" type="hidden" value="{{$vendor_details->id}}">
+                                <input type="submit" class="btn btn-primary" value="Submit">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -219,27 +222,29 @@ if (auth()->user()) {
             <div class="modal fade" id="replyModal">
                 <div class="modal-dialog">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h4 class="modal-title">Write Reply</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="review-form-main-col">
-                                <div class="alert alert-danger replyAlert" style="display: none;"></div>
-                                <form id="replyForm">
-                                    <div class="form-group">
-                                        <label for="name">Name</label>
-                                        <input id="replyTitle" value="<?= $getLoggedInVendor->business_name ?>" name="name" type="text" class="form-control" readonly>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Your Reply</label>
-                                        <textarea id="replyDescription" class="form-control"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <input name="update_review_id" id="update_review_id" type="hidden">
-                                        <input type="submit" class="btn btn-primary" value="Submit">
-                                    </div>
-                                </form>
+                        <div class="reachus-overlay">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Write Reply</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="review-form-main-col">
+                                    <div class="alert alert-danger replyAlert" style="display: none;"></div>
+                                    <form id="replyForm">
+                                        <div class="form-group">
+                                            <label for="name">Name</label>
+                                            <input id="replyTitle" value="<?= $getLoggedInVendor->business_name ?>" name="name" type="text" class="form-control" readonly>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Your Reply</label>
+                                            <textarea id="replyDescription" class="form-control"></textarea>
+                                        </div>
+                                        <div class="form-group save-btn-cls">
+                                            <input name="update_review_id" id="update_review_id" type="hidden">
+                                            <input type="submit" class="btn btn-primary" value="Submit">
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

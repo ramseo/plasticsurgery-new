@@ -3387,3 +3387,57 @@ html {
 #enquiry-phone-Modal .modal-content {
     border-radius: 20px;
 }
+
+#reviewModal .modal-title {
+    color: #fff;
+}
+
+#reviewModal .modal-header {
+    justify-content: center;
+    border-bottom: none;
+}
+
+#reviewModal label {
+    color: #fff;
+    font-weight: 600;
+}
+
+#reviewModal .stars-cls {
+    text-align: center;
+}
+
+#reviewModal .save-btn-cls {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+#reviewModal .modal-content {
+    background-image: url('../images/popup.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#replyModal .modal-content {
+    background-image: url('../images/popup.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#replyModal .modal-title {
+    color: #fff;
+}
+
+#replyModal .modal-header {
+    justify-content: center;
+    border-bottom: none;
+}
+
+#replyModal label {
+    color: #fff;
+    font-weight: 600;
+}
+
+#replyModal .save-btn-cls {
+    text-align: center;
+    margin-bottom: 0;
+}
