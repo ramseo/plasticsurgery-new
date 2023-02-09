@@ -173,7 +173,10 @@ if ($getSpecificCityVendors) {
         <div class="modal-content">
             <div class="modal-body">
                 <div class="review-form-main-col">
-                    <h4>Thank you for your enquiry</h4>
+                    <div class="inquiry-modal-logo">
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </div>
+                    <h4>Thank you for your inquiry</h4>
                     <div>
                         We received your details and contact you soon.
                     </div>

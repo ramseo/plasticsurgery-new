@@ -3377,3 +3377,13 @@ html {
 #best-matching-form button {
     padding: 10px 45px;
 }
+
+.inquiry-modal-logo i {
+    font-size: 60px;
+    padding: 0 0 15px 0;
+    color: #08540a;
+}
+
+#enquiry-phone-Modal .modal-content {
+    border-radius: 20px;
+}
