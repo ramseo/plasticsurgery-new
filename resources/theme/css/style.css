@@ -3463,6 +3463,7 @@ html {
 
 .d-flex.justify-content-center.w-100.mt-3 {
     background: lightgray;
+    margin-bottom:1rem;
 }
 
 .d-flex.justify-content-center.w-100.mt-3 .pagination {
