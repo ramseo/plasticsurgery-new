@@ -3456,3 +3456,7 @@ html {
     font-weight: 600;
     font-size: 14px;
 }
+
+.blog-index-cls .pagination {
+    justify-content: center;
+}
