@@ -77,7 +77,7 @@
             ?>
             {!! Form::label("$field_name", "$field_lable") !!} {!! fielf_required($required) !!}
             <!-- code -->
-            <?php if ($module_name_singular->featured_image) { ?>
+            <?php if (isset($module_name_singular->featured_image)) { ?>
                 <br>
                 <img width="150" src="<?= $module_name_singular->featured_image ?>" class="img-responsive">
             <?php } ?>
