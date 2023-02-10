@@ -37,7 +37,7 @@
                         </a>
 
                         <p class="mb-3">
-                            {{$$module_name_singular->description}}
+                            <?= $$module_name_singular->description ?>
                         </p>
                         <p class="mb-3 font-weight-bold">
                             Total {{$$module_name_singular->posts->count()}} posts.
