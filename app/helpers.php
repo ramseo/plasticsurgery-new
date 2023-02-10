@@ -846,7 +846,7 @@ if (!function_exists('date_today')) {
         }
 
         $data = DB::table('categories');
-        $data->select('id', 'name', 'slug', 'image');
+        $data->select('id', 'name', 'slug', 'image','alt');
         $data->whereIn('id', $catIds);
         $rr = $data->get()->toArray();
         $array = json_decode(json_encode($rr), true);
