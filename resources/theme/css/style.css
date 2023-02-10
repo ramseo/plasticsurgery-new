@@ -3460,3 +3460,11 @@ html {
 .blog-index-cls .pagination {
     justify-content: center;
 }
+
+.d-flex.justify-content-center.w-100.mt-3 {
+    background: lightgray;
+}
+
+.d-flex.justify-content-center.w-100.mt-3 .pagination {
+    margin-top: 1rem;
+}
