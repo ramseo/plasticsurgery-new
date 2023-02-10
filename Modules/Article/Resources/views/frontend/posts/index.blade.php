@@ -103,7 +103,7 @@ if ($getPostCat) {
                         <a href="{{$details_url}}">
                             <p class="title">{{$item->name}}</p>
                         </a>
-                        <p class="text">
+                        <p class="text margin-null">
                             {{Str::words($item->intro, '15')}}
                         </p>
                     </div>
