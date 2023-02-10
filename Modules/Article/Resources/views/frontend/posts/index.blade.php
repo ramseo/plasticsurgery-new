@@ -35,9 +35,10 @@
 
 <?php
 $catIds = [];
-foreach ($$module_name as $module_name_singular) {
-    $catIds[] = $module_name_singular->category_id;
+foreach ($post_data as $item) {
+    $catIds[] = $item->category_id;
 }
+
 if ($catIds) {
     $catIds = array_unique($catIds);
 }
@@ -83,28 +84,34 @@ if ($getPostCat) {
     </section>
 <?php } ?>
 
-@if(count($$module_name))
+@if(count($post_data))
 <section class="listing-section blog-index-cls">
     <div class="container-fluid">
         <div class="row">
-            @foreach ($$module_name as $$module_name_singular)
+            @foreach ($post_data as $item)
             @php
-            $details_url = route("frontend.$module_name.show",[$$module_name_singular->slug]);
+            $details_url = route("frontend.$module_name.show",[$item->slug]);
             @endphp
             <div class="col-12 col-md-4 mb-4">
                 <div class="common-card">
                     <div class="img-col">
-                        <a href="{{$details_url}}"><img src="{{$$module_name_singular->featured_image}}" class="img-fluid" alt=""></a>
+                        <a href="{{$details_url}}">
+                            <img src="{{$item->featured_image}}" class="img-fluid" alt="">
+                        </a>
                     </div>
                     <div class="text-col">
                         <a href="{{$details_url}}">
-                            <p class="title">{{$$module_name_singular->name}}</p>
+                            <p class="title">{{$item->name}}</p>
                         </a>
                         <p class="text">
-                            <!-- {!!isset($$module_name_singular->created_by_alias)? $$module_name_singular->created_by_alias : '<a href="'.route('frontend.users.profile', $$module_name_singular->created_by).'"><h6 class="text-muted small ml-2 mb-0">'.$$module_name_singular->created_by_name.'</h6></a>'!!} -->
-                            {{Str::words($$module_name_singular->intro, '15')}}
+                            {!!isset($item->created_by_alias)? $item->created_by_alias :
+                            '<a href="'.route('frontend.users.profile', $item->created_by).'">
+                                <h6 class="text-muted small ml-2 mb-0">'.$item->created_by_name.'</h6>
+                            </a>'
+                            !!}
+                            {{Str::words($item->intro, '15')}}
                         </p>
-                        <!-- <p class="date">09 June 2021</p> -->
+                        <p class="date">09 June 2021</p>
                     </div>
                 </div>
             </div>
@@ -112,7 +119,7 @@ if ($getPostCat) {
         </div>
 
         <div class="d-flex justify-content-center w-100 mt-3">
-            {{$$module_name->links()}}
+            {{$post_data->links()}}
         </div>
     </div>
 </section>

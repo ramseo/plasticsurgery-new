@@ -42,11 +42,11 @@ class PostsController extends Controller
 
         $module_action = 'List';
 
-        $$module_name = $module_model::latest()->with(['category', 'tags', 'comments'])->paginate();
+        $post_data = $module_model::latest()->with(['category', 'tags', 'comments'])->paginate(6);
 
         return view(
             "article::frontend.$module_path.index",
-            compact('module_title', 'module_name', "$module_name", 'module_icon', 'module_action', 'module_name_singular')
+            compact('module_title', 'module_name', 'module_icon', 'module_action', 'module_name_singular', 'post_data')
         );
     }
 
@@ -59,7 +59,7 @@ class PostsController extends Controller
      */
     public function show($slug)
     {
-//        $id = decode_id($hashid);
+        //        $id = decode_id($hashid);
 
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -72,7 +72,7 @@ class PostsController extends Controller
 
         $meta_page_type = 'article';
 
-//        $$module_name_singular = $module_model::findOrFail($id);
+        //        $$module_name_singular = $module_model::findOrFail($id);
         $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
 
         event(new PostViewed($$module_name_singular));
