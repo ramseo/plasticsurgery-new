@@ -96,7 +96,7 @@ if ($getPostCat) {
                 <div class="common-card">
                     <div class="img-col">
                         <a href="{{$details_url}}">
-                            <img src="{{$item->featured_image}}" class="img-fluid" alt="">
+                            <img src="{{$item->featured_image}}" class="img-fluid" alt="<?= $item->alt ?>">
                         </a>
                     </div>
                     <div class="text-col">

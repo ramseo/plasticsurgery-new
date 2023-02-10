@@ -9,6 +9,7 @@ return [
     'intro'            => 'Intro',
     'content'          => 'Content',
     'featured_image'   => 'Featured Image',
+    'alt'   => 'Alt',
     'category_id'      => 'Category',
     'tag_ids'      => 'Tags',
     'type'             => 'Type',
