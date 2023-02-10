@@ -3451,3 +3451,8 @@ html {
 .post-author-date .dot {
     padding: 0 5px 0 5px;
 }
+
+.post-author-date {
+    font-weight: 600;
+    font-size: 14px;
+}
