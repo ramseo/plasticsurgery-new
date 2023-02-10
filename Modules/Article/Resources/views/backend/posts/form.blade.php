@@ -77,10 +77,16 @@
             ?>
             {!! Form::label("$field_name", "$field_lable") !!} {!! fielf_required($required) !!}
             <!-- code -->
-            <?php if (isset($module_name_singular->featured_image)) { ?>
-                <br>
-                <img width="150" src="<?= $module_name_singular->featured_image ?>" class="img-responsive">
-            <?php } ?>
+            <?php
+            if (isset($module_name_singular->featured_image)) {
+                if (file_exists($module_name_singular->featured_image)) {
+            ?>
+                    <br>
+                    <img width="150" src="<?= $module_name_singular->featured_image ?>" class="img-responsive">
+            <?php
+                }
+            }
+            ?>
             <!-- code -->
             <div class="input-group mb-3">
                 {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required", 'aria-label'=>'Image', 'aria-describedby'=>'button-image']) }}

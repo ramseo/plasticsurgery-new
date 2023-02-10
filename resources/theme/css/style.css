@@ -3441,3 +3441,13 @@ html {
     text-align: center;
     margin-bottom: 0;
 }
+
+.post-author-date {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.post-author-date .dot {
+    padding: 0 5px 0 5px;
+}

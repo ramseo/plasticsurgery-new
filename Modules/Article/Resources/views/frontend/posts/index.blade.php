@@ -104,14 +104,21 @@ if ($getPostCat) {
                             <p class="title">{{$item->name}}</p>
                         </a>
                         <p class="text">
-                            {!!isset($item->created_by_alias)? $item->created_by_alias :
-                            '<a href="'.route('frontend.users.profile', $item->created_by).'">
-                                <h6 class="text-muted small ml-2 mb-0">'.$item->created_by_name.'</h6>
-                            </a>'
-                            !!}
                             {{Str::words($item->intro, '15')}}
                         </p>
-                        <p class="date">09 June 2021</p>
+                    </div>
+                    <div class="post-author-date">
+                        <div class="author">
+                            <?= $item->author ?>
+                        </div>
+                        <div class="dot">
+                            •
+                        </div>
+                        <?php if ($item->published_at) { ?>
+                            <div class="date">
+                                <?= date('d', strtotime($item->published_at)) . " " . date('F', strtotime($item->published_at)) . " " . date('Y', strtotime($item->published_at)); ?>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
