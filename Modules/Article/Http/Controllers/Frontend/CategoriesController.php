@@ -72,7 +72,7 @@ class CategoriesController extends Controller
 
 //        $$module_name_singular = $module_model::findOrFail($id);
         $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
-        $posts = $$module_name_singular->posts()->with('category', 'tags', 'comments')->paginate();
+        $posts = $$module_name_singular->posts()->with('category', 'tags', 'comments')->paginate(3);
 
         return view(
             "article::frontend.$module_name.show",
