@@ -19,11 +19,13 @@
                     @endauth
                 </h1>
                 <p class="lead">
-                    Username: {{$user->username}}
+                    Username: {{$user->name}}
                 </p>
                 @if ($user->email_verified_at == null)
                 <p class="lead">
-                    <a href="{{route('frontend.users.emailConfirmationResend')}}">Confirm Email</a>
+                    <a href="{{route('frontend.users.emailConfirmationResend')}}">
+                        Confirm Email
+                    </a>
                 </p>
                 @endif
 
@@ -43,24 +45,24 @@
                     </div>
                     <div class="card-body d-flex flex-column justify-content-between col-auto py-4 p-lg-5">
 
-{{--                        @if($userprofile->bio)--}}
-{{--                        <h5 class="description">--}}
-{{--                            {{$userprofile->bio}}--}}
-{{--                        </h5>--}}
-{{--                        @endif--}}
+                        {{-- @if($userprofile->bio)--}}
+                        {{-- <h5 class="description">--}}
+                        {{-- {{$userprofile->bio}}--}}
+                        {{-- </h5>--}}
+                        {{-- @endif--}}
 
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <tbody>
                                     <?php $fields_array = [
-                                        [ 'name' => 'first_name' ],
-                                        [ 'name' => 'last_name' ],
+                                        ['name' => 'first_name'],
+                                        ['name' => 'last_name'],
                                         // [ 'name' => 'email' ],
                                         // [ 'name' => 'mobile' ],
-                                        [ 'name' => 'username' ],
-                                        [ 'name' => 'gender' ],
+                                        ['name' => 'username'],
+                                        ['name' => 'gender'],
                                         // [ 'name' => 'date_of_birth', 'type' => 'date'],
-                                        [ 'name' => 'url_website', 'type' => 'url' ],
+                                        ['name' => 'url_website', 'type' => 'url'],
                                         // [ 'name' => 'url_facebook', 'type' => 'url' ],
                                         // [ 'name' => 'url_twitter', 'type' => 'url' ],
                                         // [ 'name' => 'url_linkedin', 'type' => 'url' ],
@@ -72,38 +74,38 @@
                                         // [ 'name' => 'last_ip' ],
                                     ]; ?>
                                     @foreach ($fields_array as $field)
-                                        <tr>
-                                            @php
-                                            $field_name = $field['name'];
-                                            $field_type = isset($field['type'])? $field['type'] : '';
-                                            @endphp
+                                    <tr>
+                                        @php
+                                        $field_name = $field['name'];
+                                        $field_type = isset($field['type'])? $field['type'] : '';
+                                        @endphp
 
-                                            <th>{{ __("labels.backend.users.fields.".$field_name) }}</th>
+                                        <th>{{ __("labels.backend.users.fields.".$field_name) }}</th>
 
-                                            @if ($field_name == 'date_of_birth' && $userprofile->$field_name != '')
-                                            <td>
-                                                @if(auth()->user()->id == $userprofile->user_id)
-                                                {{ $userprofile->$field_name->isoFormat('LL') }}
-                                                @else
-                                                {{ $userprofile->$field_name->format('jS \\of F') }}
-                                                @endif
-                                            </td>
-                                            @elseif ($field_type == 'date' && $userprofile->$field_name != '')
-                                            <td>
-                                                {{ $userprofile->$field_name->isoFormat('LL') }}
-                                            </td>
-                                            @elseif ($field_type == 'datetime' && $userprofile->$field_name != '')
-                                            <td>
-                                                {{ $userprofile->$field_name->isoFormat('llll') }}
-                                            </td>
-                                            @elseif ($field_type == 'url')
-                                            <td>
-                                                <a href="{{ $userprofile->$field_name }}" target="_blank">{{ $userprofile->$field_name }}</a>
-                                            </td>
+                                        @if ($field_name == 'date_of_birth' && $userprofile->$field_name != '')
+                                        <td>
+                                            @if(auth()->user()->id == $userprofile->user_id)
+                                            {{ $userprofile->$field_name->isoFormat('LL') }}
                                             @else
-                                            <td>{{ $userprofile->$field_name }}</td>
+                                            {{ $userprofile->$field_name->format('jS \\of F') }}
                                             @endif
-                                        </tr>
+                                        </td>
+                                        @elseif ($field_type == 'date' && $userprofile->$field_name != '')
+                                        <td>
+                                            {{ $userprofile->$field_name->isoFormat('LL') }}
+                                        </td>
+                                        @elseif ($field_type == 'datetime' && $userprofile->$field_name != '')
+                                        <td>
+                                            {{ $userprofile->$field_name->isoFormat('llll') }}
+                                        </td>
+                                        @elseif ($field_type == 'url')
+                                        <td>
+                                            <a href="{{ $userprofile->$field_name }}" target="_blank">{{ $userprofile->$field_name }}</a>
+                                        </td>
+                                        @else
+                                        <td>{{ $userprofile->$field_name }}</td>
+                                        @endif
+                                    </tr>
                                     @endforeach
                                 </tbody>
                             </table>
@@ -142,4 +144,3 @@
 @push ("after-scripts")
 <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
 @endpush
-
