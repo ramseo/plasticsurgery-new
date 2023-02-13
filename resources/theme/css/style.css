@@ -3475,3 +3475,7 @@ html {
     display: flex;
     justify-content: center;
 }
+
+.min-height-505{
+    min-height: 505px;
+}
