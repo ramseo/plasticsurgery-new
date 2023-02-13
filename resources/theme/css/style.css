@@ -3463,9 +3463,20 @@ html {
 
 .d-flex.justify-content-center.w-100.mt-3 {
     background: lightgray;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
 }
 
 .d-flex.justify-content-center.w-100.mt-3 .pagination {
     margin-top: 1rem;
 }
+
+.btn.btn-sm.mr-3.btn-icon-only.btn-pill.btn-twitter.d-inline .btn-inner-icon,
+.btn.btn-sm.mr-3.btn-icon-only.btn-pill.btn-facebook.d-inline .btn-inner-icon {
+    display: flex;
+    justify-content: center;
+}
+
+/* .btn.btn-sm.mr-3.btn-icon-only.btn-pill.btn-twitter.d-inline .btn-inner-icon {
+    display: flex;
+    justify-content: center;
+} */

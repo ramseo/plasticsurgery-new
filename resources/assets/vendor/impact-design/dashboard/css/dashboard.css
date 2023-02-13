@@ -16735,7 +16735,7 @@ a.btn-icon-only {
 
 .btn-icon-only.btn-sm, .btn-group-sm > .btn-icon-only.btn {
     width: 2rem;
-    height: 2rem;
+    height: auto;
 }
 
 .btn-icon-clipboard {
