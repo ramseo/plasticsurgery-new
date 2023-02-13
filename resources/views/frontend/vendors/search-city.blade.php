@@ -42,7 +42,7 @@
             @if($vendors)
             <div class="container-fluid ol-crsl padding-null">
                 <div class="thumb-img-city">
-                    <img src="{{asset('storage/city/icon/'.$city['icon'])}}" alt="image alt">
+                    <img src="{{asset('storage/city/icon/'.$city['icon'])}}" alt="<?= $city['alt'] ?>">
                 </div>
                 <h2>Top Vendors in {{$city['name']}} Cities</h2>
                 <span>To improve these suggestions -
