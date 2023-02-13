@@ -42,11 +42,10 @@
                     </a>
                     <div class="card-body p-0 pt-4">
                         <a href="{{$details_url}}" class="h3">
-                            {{$$module_name_singular->name}}
+                            <?= Str::words($$module_name_singular->name, '5') ?>
                         </a>
-
                         <p class="mb-3">
-                            <?= Str::words($$module_name_singular->description, 50) ?>
+                            <?= Str::words($$module_name_singular->description, 25) ?>
                         </p>
                         <p class="mb-3 font-weight-bold">
                             Total {{$$module_name_singular->posts->count()}} posts.
