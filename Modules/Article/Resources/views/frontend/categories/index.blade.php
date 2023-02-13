@@ -26,11 +26,20 @@
     <div class="container mt-n7 mt-lg-n12 z-2">
         <div class="row">
             @foreach ($$module_name as $$module_name_singular)
-            @php
-            $details_url = route("frontend.$module_name.show",[$$module_name_singular->slug]);
-            @endphp
+            <?php
+            $details_url = route("frontend.$module_name.show", [$$module_name_singular->slug]);
+            $cat_image = asset('img/default-vendor.jpg');
+            if ($$module_name_singular->image) {
+                if (file_exists(public_path() . '/storage/categories/image/' . $$module_name_singular->image)) {
+                    $cat_image = asset('storage/categories/image/' . $$module_name_singular->image);
+                }
+            }
+            ?>
             <div class="col-12 col-md-4 mb-4">
-                <div class="card bg-white border-light shadow-soft p-4 rounded">
+                <div class="card bg-white border-light shadow-soft p-4 rounded min-height-505">
+                    <a href="{{$details_url}}">
+                        <img src="<?= $cat_image ?>" class="card-img-top" alt="<?= ($$module_name_singular->alt) ? $$module_name_singular->alt : $$module_name_singular->name ?>">
+                    </a>
                     <div class="card-body p-0 pt-4">
                         <a href="{{$details_url}}" class="h3">
                             {{$$module_name_singular->name}}
