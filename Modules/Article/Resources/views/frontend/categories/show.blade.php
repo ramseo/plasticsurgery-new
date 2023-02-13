@@ -37,7 +37,7 @@
             @endphp
 
             <div class="col-12 col-md-4 mb-4">
-                <div class="card bg-white border-light shadow-soft p-4 rounded">
+                <div class="card bg-white border-light shadow-soft p-4 rounded min-height-505">
                     <a href="{{$details_url}}">
                         <img src="{{$post->featured_image}}" class="card-img-top" alt="<?= ($post->alt) ? $post->alt : $post->name ?>">
                     </a>
