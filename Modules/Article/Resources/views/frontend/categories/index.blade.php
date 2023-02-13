@@ -36,7 +36,7 @@
             }
             ?>
             <div class="col-12 col-md-4 mb-4">
-                <div class="card bg-white border-light shadow-soft p-4 rounded min-height-505">
+                <div class="card bg-white border-light shadow-soft p-4 rounded min-height-505 cat-a-cls">
                     <a href="{{$details_url}}">
                         <img src="<?= $cat_image ?>" class="card-img-top" alt="<?= ($$module_name_singular->alt) ? $$module_name_singular->alt : $$module_name_singular->name ?>">
                     </a>

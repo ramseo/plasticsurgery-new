@@ -3476,6 +3476,14 @@ html {
     justify-content: center;
 }
 
-.min-height-505{
+.min-height-505 {
     min-height: 505px;
+}
+
+.cat-a-cls a {
+    text-align: center;
+}
+
+.cat-a-cls a img {
+    width: auto;
 }
