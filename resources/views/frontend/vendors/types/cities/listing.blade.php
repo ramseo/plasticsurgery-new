@@ -188,7 +188,7 @@
 <?php
 // dd($city->toArray());
 $getSpecificCityVendors = getVendorTypes($city->id);
-if ($getSpecificCityVendors) {
+if (count($getSpecificCityVendors) > 1) {
 ?>
     <section id="find-more">
         <div class="container-fluid">

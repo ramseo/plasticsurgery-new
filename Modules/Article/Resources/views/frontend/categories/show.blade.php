@@ -14,7 +14,7 @@
                     </a>
                 </div>
                 <h1 class="display-2 mb-4">
-                    <?= $$module_name_singular->nam ?>
+                    <?= $$module_name_singular->name ?>
                 </h1>
                 <p class="lead">
                     <?= $$module_name_singular->description ?>
@@ -42,7 +42,9 @@
                         <img src="{{$post->featured_image}}" class="card-img-top" alt="<?= ($post->alt) ? $post->alt : $post->name ?>">
                     </a>
                     <div class="card-body p-0 pt-4">
-                        <a href="{{$details_url}}" class="h3">{{$post->name}}</a>
+                        <a href="{{$details_url}}" class="h3">
+                            <?= Str::words($post->name, '5') ?>
+                        </a>
                         <div class="d-flex align-items-center my-4">
                             <img class="avatar avatar-sm rounded-circle" src="{{asset('img/avatars/'.rand(1, 8).'.jpg')}}" alt="alt">
                             {!!isset($post->created_by_alias)? $post->created_by_alias : '<a target="_blank" href="'.route('frontend.users.profile', $$module_name_singular->created_by).'">
