@@ -7184,8 +7184,8 @@ input[type="button"].btn-block {
     margin: 0;
 }
 
-.breadcrumb li:first-child a{
-    color: #eb0a3e!important;
+.breadcrumb li:first-child a {
+    color: #eb0a3e !important;
 }
 
 .breadcrumb-item+.breadcrumb-item {
@@ -7220,21 +7220,21 @@ input[type="button"].btn-block {
 
 .page-link {
     position: relative;
-    display: block;
+    display: inline-block;
     padding: 0.5rem 0.75rem;
     margin-left: -0.0625rem;
     line-height: 1.25;
     color: #93a5be;
-    background-color: #ffffff;
+    background-color: lightgray;
     border: 0.0625rem solid #f4f6fc;
 }
 
 .page-link:hover {
     z-index: 2;
-    color: #93a5be;
+    color: #fff !important;
     text-decoration: none;
-    background-color: #f4f6fc;
-    border-color: #f4f6fc;
+    background-color: #FA5170 !important;
+    border-color: #FA5170 !important;
 }
 
 .page-link:focus {
@@ -7245,28 +7245,37 @@ input[type="button"].btn-block {
 
 .page-item:first-child .page-link {
     margin-left: 0;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+    /* border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem; */
 }
 
-.page-item:last-child .page-link {
+/* .page-item:last-child .page-link {
     border-top-right-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
-}
+} */
 
 .page-item.active .page-link {
     z-index: 1;
     color: #ffffff;
     background-color: #FA5170;
     border-color: #FA5170;
+
+    border-radius: 50%;
+    padding: 10px 15px 10px 15px;
+    line-height: 15px;
 }
 
 .page-item.disabled .page-link {
-    color: #93a5be;
-    pointer-events: none;
+    color: #000;
+    /* pointer-events: none; */
     cursor: auto;
-    background-color: #ffffff;
-    border-color: #F0F3F6;
+    background-color: lightgray;
+    border-color: lightgray;
+
+    border-radius: 50%;
+    padding: 10px 15px 10px 15px;
+    line-height: 15px;
+    cursor: not-allowed;
 }
 
 .pagination-lg .page-link {
@@ -33552,9 +33561,13 @@ textarea[resize="horizontal"] {
 .page-item .page-link,
 .page-item span {
     margin: 0 3px;
-    font-size: 0.875rem;
+    /* font-size: 0.875rem; */
     color: #0d1431;
     font-weight: 600;
+
+    border-radius: 50%;
+    padding: 10px 15px 10px 15px;
+    line-height: 15px;
 }
 
 .pagination-lg .page-item .page-link,
