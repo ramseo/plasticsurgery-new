@@ -846,7 +846,7 @@ if (!function_exists('date_today')) {
         }
 
         $data = DB::table('categories');
-        $data->select('id', 'name', 'slug', 'image','alt');
+        $data->select('id', 'name', 'slug', 'image', 'alt');
         $data->whereIn('id', $catIds);
         $rr = $data->get()->toArray();
         $array = json_decode(json_encode($rr), true);
@@ -911,5 +911,12 @@ if (!function_exists('date_today')) {
     function getLoggedInVendor($id)
     {
         return DB::table('vendors')->select('business_name', 'slug', 'image')->where("user_id", $id)->get()->first();
+    }
+
+
+    function getUserAvatar($user_id)
+    {
+        $data = DB::table('users')->select('avatar')->where("id", $user_id)->get()->first();
+        return $data;
     }
 }

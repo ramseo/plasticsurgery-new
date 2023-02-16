@@ -38,6 +38,16 @@
                 $cls = "";
             }
 
+            $getUserAvatar = getUserAvatar($review->user_id);
+            $profile_avatar = "https://cdn.landesa.org/wp-content/uploads/default-user-image.png";
+            if (isset($getUserAvatar->avatar)) {
+                if ($getUserAvatar->avatar != "img/default-avatar.jpg") {
+                    if (file_exists(public_path() . '/storage/user/profile/' . $getUserAvatar->avatar)) {
+                        $profile_avatar = asset('/storage/user/profile/' . $getUserAvatar->avatar);
+                    }
+                }
+            }
+
             $review_user = getData('users', 'id', $review->user_id);
             $currentUser = $review->title;
         ?>
@@ -47,7 +57,7 @@
                         <li>
                             <div class="rev-flex-cls">
                                 <div class="img-col">
-                                    <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+                                    <img src="<?= $profile_avatar ?>" class="img-fluid" alt="profile">
                                 </div>
                                 <div class="text-col">
                                     <p class="name review-title">
@@ -178,9 +188,9 @@
                                 <label for="name">Name</label>
                                 <?php
                                 if (auth()->user() != Null) {
-                                    $currentUser = auth()->user()->getRoleNames()->first();
+                                    $loggedInUserName = auth()->user()->first_name . " " . auth()->user()->last_name;
                                 ?>
-                                    <input id="reviewTitle" value="<?= $currentUser ?>" name="name" type="text" class="form-control" readonly>
+                                    <input id="reviewTitle" value="<?= $loggedInUserName ?>" name="name" type="text" class="form-control" readonly>
                                 <?php
                                 } else {
                                 ?>
