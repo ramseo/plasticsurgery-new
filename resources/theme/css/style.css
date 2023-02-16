@@ -2080,7 +2080,7 @@ article blockquote {
 }
 
 .vendor-card-col .img-col {
-    height: 270px;
+    height: 250px; 
     overflow: hidden;
 }
 
@@ -2612,7 +2612,7 @@ span.days {
 }
 
 .min-height-img img {
-    min-height: 270px;
+    min-height: 250px;
 }
 
 .filter-cls {
