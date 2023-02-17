@@ -21,8 +21,6 @@ class SocialLoginController extends Controller
      */
     public function redirectTo()
     {
-
-        dd('redirectTo');
         $redirectTo = request()->redirectTo;
 
         if ($redirectTo) {
@@ -57,7 +55,6 @@ class SocialLoginController extends Controller
      */
     public function handleProviderCallback($provider)
     {
-        dd('handleProviderCallback');
         try {
             $user = Socialite::driver($provider)->stateless()->user();
 
@@ -80,7 +77,7 @@ class SocialLoginController extends Controller
      */
     private function findOrCreateUser($socialUser, $provider)
     {
-        dd('findOrCreateUser');
+
 
 
 
