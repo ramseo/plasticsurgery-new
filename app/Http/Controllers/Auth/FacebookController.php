@@ -32,7 +32,7 @@ class FacebookController extends Controller
     public function handleCallback()
     {
         $user = Socialite::driver('facebook')->user();
-        dd($user);
+        // dd($user);
 
         $data = User::where('email', $user->email)->first();
         if (is_null($data)) {
@@ -40,7 +40,7 @@ class FacebookController extends Controller
             $users['email'] = $user->email;
             $data = User::create($users);
         }
-        dd($data->toArray());
+        // dd($data->toArray());
 
         Auth::login($data);
         return redirect('home');
