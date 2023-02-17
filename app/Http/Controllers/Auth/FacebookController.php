@@ -32,7 +32,7 @@ class FacebookController extends Controller
     public function handleCallback()
     {
         $user = Socialite::driver('facebook')->user();
-        dd($user);
+        // dd($user);
     }
     
 }
