@@ -20,9 +20,18 @@
         </li>
         <!-- @auth
         @endauth -->
-        <li class="list-inline-item">
-            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#reviewModal">Write a Review</a>
-        </li>
+        <?php
+        $current_user = "";
+        if (auth()->user()) {
+            $current_user = auth()->user()->getRoleNames()->first();
+        }
+
+        if ($current_user != "vendor") {
+        ?>
+            <li class="list-inline-item">
+                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#reviewModal">Write a Review</a>
+            </li>
+        <?php } ?>
         </ul>
     </div>
     <hr>
