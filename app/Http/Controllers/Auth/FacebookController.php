@@ -9,7 +9,7 @@ use App\Models\UserProvider;
 use App\Providers\RouteServiceProvider;
 use Auth;
 use Log;
-use Socialite;
+use Laravel\Socialite\Facades\Socialite;
 use Session;
 
 class FacebookController extends Controller
@@ -31,7 +31,7 @@ class FacebookController extends Controller
      */
     public function handleCallback()
     {
-        $user = Socialite::driver('facebook')->redirect();
+        $user = Socialite::driver('facebook')->user();
         dd($user);
     }
     
