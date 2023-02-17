@@ -180,7 +180,7 @@ $city = getData('cities');
                     @endif
 
                     {{-- {{dd(auth()->user()->getRoleNames()->first())}}--}}
-                    @if(auth()->user()->getRoleNames()->first() == 'user' || auth()->user()->username == "facebook")
+                    @if(auth()->user()->getRoleNames()->first() == 'user')
                     <li>
                         <a href="{{ route('frontend.users.profileEdit') }}">
                             My Profile
