@@ -91,6 +91,6 @@ Route::group(['namespace' => 'Auth', 'middleware' => 'guest'], function () {
     Route::get('vendorlogin/{provider}', ['as' => 'social.vendorlogin', 'uses' => 'SocialLoginController@redirectToProviderVendor']);
     Route::get('login/{provider}/callback', 'SocialLoginController@handleProviderCallback');
 
-    Route::get('facebook/login', 'FacebookController@provider')->name('facebook.login');
-    Route::get('facebook/callback', 'FacebookController@handleCallback')->name('facebook.callback');
+    // Route::get('facebook/login', 'FacebookController@provider')->name('facebook.login');
+    // Route::get('facebook/callback', 'FacebookController@handleCallback')->name('facebook.callback');
 });
