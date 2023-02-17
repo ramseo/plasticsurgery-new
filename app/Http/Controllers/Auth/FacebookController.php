@@ -31,7 +31,7 @@ class FacebookController extends Controller
      */
     public function handleCallback()
     {
-        return Socialite::driver('facebook')->user();
+        return Socialite::driver('facebook')->redirect();
         // $user = Socialite::driver('facebook')->user();
         // Auth::login($user);
         // return redirect('/');
