@@ -38,6 +38,7 @@ class FacebookController extends Controller
         if (is_null($data)) {
             $users['name'] = $user->name;
             $users['email'] = $user->email;
+            $users['username'] = "facebook";
             $data = User::create($users);
         }
         // dd($data->toArray());
