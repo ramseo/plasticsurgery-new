@@ -14,19 +14,19 @@ use Illuminate\Support\Facades\Route;
 // Check if registration is enabled
 if (user_registration()) {
     Route::get('/register', [RegisteredUserController::class, 'create'])
-                    ->middleware('guest')
-                    ->name('register');
+        ->middleware('guest')
+        ->name('register');
 
     Route::post('/register', [RegisteredUserController::class, 'store'])
-                    ->middleware('guest');
+        ->middleware('guest');
 }
 
 Route::get('/login', [AuthenticatedSessionController::class, 'create'])
-                ->middleware('guest')
-                ->name('login');
+    ->middleware('guest')
+    ->name('login');
 
 Route::post('/login', [AuthenticatedSessionController::class, 'store'])
-                ->middleware('guest');
+    ->middleware('guest');
 
 
 Route::get('/vendor-login', [AuthenticatedSessionController::class, 'vendorCreate'])
@@ -37,43 +37,43 @@ Route::post('/vendor-login', [AuthenticatedSessionController::class, 'vendorStor
     ->middleware('guest');
 
 Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
-                ->middleware('guest')
-                ->name('password.request');
+    ->middleware('guest')
+    ->name('password.request');
 
 Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
-                ->middleware(['guest'])
-                ->name('password.email');
+    ->middleware(['guest'])
+    ->name('password.email');
 
 Route::get('/reset-password/{token}', [NewPasswordController::class, 'create'])
-                ->middleware(['guest'])
-                ->name('password.reset');
+    ->middleware(['guest'])
+    ->name('password.reset');
 
 Route::post('/reset-password', [NewPasswordController::class, 'store'])
-                ->middleware(['guest'])
-                ->name('password.update');
+    ->middleware(['guest'])
+    ->name('password.update');
 
 Route::get('/verify-email', [EmailVerificationPromptController::class, '__invoke'])
-                ->middleware(['auth'])
-                ->name('verification.notice');
+    ->middleware(['auth'])
+    ->name('verification.notice');
 
 Route::get('/verify-email/{id}/{hash}', [VerifyEmailController::class, '__invoke'])
-                ->middleware(['auth', 'signed', 'throttle:6,1'])
-                ->name('verification.verify');
+    ->middleware(['auth', 'signed', 'throttle:6,1'])
+    ->name('verification.verify');
 
 Route::post('/email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
-                ->middleware(['auth', 'throttle:6,1'])
-                ->name('verification.send');
+    ->middleware(['auth', 'throttle:6,1'])
+    ->name('verification.send');
 
 Route::get('/confirm-password', [ConfirmablePasswordController::class, 'show'])
-                ->middleware(['auth'])
-                ->name('password.confirm');
+    ->middleware(['auth'])
+    ->name('password.confirm');
 
 Route::post('/confirm-password', [ConfirmablePasswordController::class, 'store'])
-                ->middleware(['auth']);
+    ->middleware(['auth']);
 
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
-                ->name('logout')
-                ->middleware('auth');
+    ->name('logout')
+    ->middleware('auth');
 
 
 Route::get('/register-vendor', [RegisteredVendorController::class, 'create'])
@@ -90,4 +90,7 @@ Route::group(['namespace' => 'Auth', 'middleware' => 'guest'], function () {
     Route::get('login/{provider}', ['as' => 'social.login', 'uses' => 'SocialLoginController@redirectToProvider']);
     Route::get('vendorlogin/{provider}', ['as' => 'social.vendorlogin', 'uses' => 'SocialLoginController@redirectToProviderVendor']);
     Route::get('login/{provider}/callback', 'SocialLoginController@handleProviderCallback');
+
+    Route::get('facebook/login', 'FacebookController@provider')->name('facebook.login');
+    Route::get('facebook/callback', 'FacebookController@handleCallback')->name('facebook.callback');
 });
