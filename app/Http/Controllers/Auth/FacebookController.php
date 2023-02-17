@@ -38,7 +38,7 @@ class FacebookController extends Controller
             $users['email'] = $user->email;
             $data = User::create($users);
         }
-        dd($data);
+        dd($data->toArray());
 
         Auth::login($data);
         return redirect('home');
