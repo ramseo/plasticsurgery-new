@@ -50,10 +50,12 @@
             $getUserAvatar = getUserAvatar($review->user_id);
             $profile_avatar = "https://cdn.landesa.org/wp-content/uploads/default-user-image.png";
             if (isset($getUserAvatar->avatar)) {
-                if ($getUserAvatar->avatar != "img/default-avatar.jpg") {
-                    if (file_exists(public_path() . '/storage/user/profile/' . $getUserAvatar->avatar)) {
-                        $profile_avatar = asset('/storage/user/profile/' . $getUserAvatar->avatar);
-                    }
+                if ($getUserAvatar->avatar == "img/default-avatar.jpg") {
+                    $profile_avatar = "https://cdn.landesa.org/wp-content/uploads/default-user-image.png";
+                } elseif (file_exists(public_path() . '/storage/user/profile/' . $getUserAvatar->avatar)) {
+                    $profile_avatar = asset('/storage/user/profile/' . $getUserAvatar->avatar);
+                } else {
+                    $profile_avatar = $getUserAvatar;
                 }
             }
 
