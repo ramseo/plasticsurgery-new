@@ -55,7 +55,7 @@
                 } elseif (file_exists(public_path() . '/storage/user/profile/' . $getUserAvatar->avatar)) {
                     $profile_avatar = asset('/storage/user/profile/' . $getUserAvatar->avatar);
                 } else {
-                    $profile_avatar = $getUserAvatar;
+                    $profile_avatar = $getUserAvatar->avatar;
                 }
             }
 
