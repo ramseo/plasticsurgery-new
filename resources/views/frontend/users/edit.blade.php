@@ -40,7 +40,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-3 avatar-menu-bar"> 
-                @include('frontend.users.menu',compact('user'))
+                @include('frontend.users.menu')
             </div>
             <div class="col-xs-12 col-sm-9">
                 <div class="card bg-white border-light shadow-soft flex-md-row no-gutters p-4">

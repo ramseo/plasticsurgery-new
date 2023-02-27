@@ -77,6 +77,7 @@
                 </ul>
             </li> 
             <?php 
+                $user = Auth::user();
                 $getUserProvider = getUserProvider($user->id);
                 if($getUserProvider == NULL) {
             ?> 
