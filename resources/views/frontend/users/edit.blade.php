@@ -59,6 +59,10 @@
                                 @endif
 
                             </div>
+                            <?php  
+                            $getUserProvider = getUserProvider($user->id);
+                             if($getUserProvider == NULL) {
+                            ?>
                             <div class="col-md-6 avatar-padding">
                                 {{ html()->label(__('labels.backend.users.fields.avatar'))->class('form-control-label')->for('name') }}
                                 <div class="form-group">
@@ -67,6 +71,7 @@
                                     <small>Please upload a 200*200 size image</small>
                                 </div>
                             </div>
+                            <?php } ?>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
