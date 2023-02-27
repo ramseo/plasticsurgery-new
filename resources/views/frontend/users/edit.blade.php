@@ -45,12 +45,14 @@
             <div class="col-xs-12 col-sm-9">
                 <div class="card bg-white border-light shadow-soft flex-md-row no-gutters p-4">
                     <div class="card-body d-flex flex-column justify-content-between col-auto">
-
+                        <?php 
+                        $getUserProvider = getUserProvider($user->id);
+                        ?>
 
                         {{ html()->modelForm($user, 'POST', route('frontend.users.profileUpdate'))->class('form-horizontal')->acceptsFiles()->open() }}
 
                         <div class="form-group row ml-2">
-                            <div class="col-md-6 edit-pics avatar-padding">
+                            <div class="<?= ($getUserProvider == NULL) ? "col-md-12" : "col-md-6" ?> edit-pics avatar-padding">
 
                                 @if(file_exists(public_path().'/storage/user/profile/'. $user->avatar))
                                     <img src="{{asset('/storage/user/profile/'. $user->avatar)}}" class="user-profile-image img-fluid img-thumbnail" style="max-height:200px; max-width:200px;" />
@@ -59,8 +61,7 @@
                                 @endif
 
                             </div>
-                            <?php  
-                            $getUserProvider = getUserProvider($user->id);
+                            <?php
                              if($getUserProvider == NULL) {
                             ?>
                             <div class="col-md-6 avatar-padding">
