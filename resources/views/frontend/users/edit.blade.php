@@ -51,7 +51,10 @@
 
                         <div class="form-group row ml-2">
                             <div class="col-md-6 edit-pics avatar-padding">
-
+                                <?php
+                                 $getUserProvider = getUserProvider($user->id);
+                                 dd($getUserProvider);
+                                ?>
                                 @if(file_exists(public_path().'/storage/user/profile/'. $user->avatar))
                                     <img src="{{asset('/storage/user/profile/'. $user->avatar)}}" class="user-profile-image img-fluid img-thumbnail" style="max-height:200px; max-width:200px;" />
                                 @else
