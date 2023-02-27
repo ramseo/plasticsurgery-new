@@ -75,8 +75,13 @@
                         </li>
                     @endforeach
                 </ul>
-            </li>  
+            </li> 
+            <?php 
+                $getUserProvider = getUserProvider($user->id);
+                if($getUserProvider == NULL) {
+            ?> 
             <li><a href="{{ route('frontend.users.changePassword') }}"  class="{{ Request::segment(2) == 'changePassword' ? 'active' : '' }}" ><i class="fa fa-key"></i> Change Password</a></li>
+            <?php } ?>
             <li>
                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('account-logout-form').submit();">
                     Logout
