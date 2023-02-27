@@ -52,7 +52,7 @@
                         {{ html()->modelForm($user, 'POST', route('frontend.users.profileUpdate'))->class('form-horizontal')->acceptsFiles()->open() }}
 
                         <div class="form-group row ml-2">
-                            <div class="<?= ($getUserProvider == NULL) ? "col-md-12" : "col-md-6" ?> edit-pics avatar-padding">
+                            <div class="<?= ($getUserProvider == NULL) ? "col-md-6" : "col-md-12" ?> edit-pics avatar-padding">
 
                                 @if(file_exists(public_path().'/storage/user/profile/'. $user->avatar))
                                     <img src="{{asset('/storage/user/profile/'. $user->avatar)}}" class="user-profile-image img-fluid img-thumbnail" style="max-height:200px; max-width:200px;" />
