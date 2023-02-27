@@ -919,10 +919,4 @@ if (!function_exists('date_today')) {
         $data = DB::table('users')->select('avatar')->where("id", $user_id)->get()->first();
         return $data;
     }
-
-    function getUserProvider($user_id)
-    {
-        $data = DB::table('user_providers')->select('provider')->where("user_id", $user_id)->get()->first();
-        return $data;
-    }
 }
