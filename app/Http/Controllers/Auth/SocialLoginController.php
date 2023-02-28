@@ -39,7 +39,7 @@ class SocialLoginController extends Controller
     {
         session('loginType', 'user');
         return Socialite::driver($provider)->fields([
-            'name','first_name', 'last_name', 'email', 'gender', 'birthday'
+            'name', 'first_name', 'last_name', 'email', 'gender', 'birthday'
         ])->scopes([
             'email', 'user_birthday'
         ])->redirect();
@@ -61,7 +61,7 @@ class SocialLoginController extends Controller
     {
         try {
             $user = Socialite::driver($provider)->stateless()->fields([
-                'name','first_name', 'last_name', 'email', 'gender', 'birthday'
+                'name', 'first_name', 'last_name', 'email', 'gender', 'birthday'
             ])->user();
 
             $authUser = $this->findOrCreateUser($user, $provider);
@@ -102,8 +102,14 @@ class SocialLoginController extends Controller
 
             return $authUser;
         } else {
-            $name = $socialUser->getName();
 
+            $userDetails = $socialUser->user;
+            $dob = $userDetails['birthday'];
+            if ($dob != NULL) {
+                $dob = date('Y-m-d', strtotime($dob));
+            }
+
+            $name = $socialUser->getName();
             $name_parts = $this->split_name($name);
             $first_name = $name_parts[0];
             $last_name = $name_parts[1];
@@ -122,10 +128,11 @@ class SocialLoginController extends Controller
                 'last_name'   => $last_name,
                 'name'        => $name,
                 'email'       => $email,
+                'date_of_birth' => $dob,
                 'email_verified_at' => time(),
             ]);
 
-          
+
             $media = $user->addMediaFromUrl($socialUser->getAvatar())->toMediaCollection('users');
             $user->avatar = $media->getUrl();
             $user->save();
@@ -140,10 +147,10 @@ class SocialLoginController extends Controller
                 'email_verified_at' => time(),
             ]);
 
-            if(Session::get('loginType')){
+            if (Session::get('loginType')) {
                 $role = Session::get('loginType');
                 Session::forget('loginType');
-            }else{
+            } else {
                 $role = 'user';
             }
             $user->assignRole($role);
@@ -160,7 +167,7 @@ class SocialLoginController extends Controller
         $name = trim($name);
 
         $last_name = (strpos($name, ' ') === false) ? '' : preg_replace('#.*\s([\w-]*)$#', '$1', $name);
-        $first_name = trim(preg_replace('#'.$last_name.'#', '', $name));
+        $first_name = trim(preg_replace('#' . $last_name . '#', '', $name));
 
         return [$first_name, $last_name];
     }
