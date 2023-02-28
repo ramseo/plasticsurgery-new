@@ -102,11 +102,13 @@ class SocialLoginController extends Controller
 
             return $authUser;
         } else {
-
             $userDetails = $socialUser->user;
-            $dob = $userDetails['birthday'];
-            if ($dob != NULL) {
-                $dob = date('Y-m-d', strtotime($dob));
+
+            $dob = NULL;
+            if (isset($userDetails['birthday'])) {
+                if ($userDetails['birthday']) {
+                    $dob = date('Y-m-d', strtotime($userDetails['birthday']));
+                }
             }
 
             $name = $socialUser->getName();
