@@ -68,7 +68,7 @@
                               @endphp
                               <img src="{{$vendor_profile_img}}" alt="">
                               <div class="carousel-content">
-                                 <h5>{{$vendor['business_name']}}</h5>
+                                 <h5><?= Str::words($vendor['business_name'], '2') ?></h5>
                                  <p><span>₹</span> {{$vendor['price']}}</p>
                                  <p><span class="vndr-rating">★ 5 Mumbai</span></p>
                                  <span class="days"> {{$vendor['label']}}</span>
