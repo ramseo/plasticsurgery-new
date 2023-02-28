@@ -38,7 +38,11 @@ class SocialLoginController extends Controller
     public function redirectToProvider($provider)
     {
         session('loginType', 'user');
-        return Socialite::driver($provider)->redirect();
+        return Socialite::driver($provider)->fields([
+            'name','first_name', 'last_name', 'email', 'gender', 'birthday'
+        ])->scopes([
+            'email', 'user_birthday'
+        ])->redirect();
     }
 
     public function redirectToProviderVendor($provider)
@@ -56,7 +60,9 @@ class SocialLoginController extends Controller
     public function handleProviderCallback($provider)
     {
         try {
-            $user = Socialite::driver($provider)->stateless()->user();
+            $user = Socialite::driver($provider)->stateless()->fields([
+                'name','first_name', 'last_name', 'email', 'gender', 'birthday'
+            ])->user();
 
             $authUser = $this->findOrCreateUser($user, $provider);
 
