@@ -40,7 +40,7 @@
                             <th> # </th>
                             <th> Name </th>
                             <th> Slug </th>
-                            <th> Action </th>
+                            <th class="text-center" > Action </th>
                         </thead>
                         <tbody>
                         </tbody>
