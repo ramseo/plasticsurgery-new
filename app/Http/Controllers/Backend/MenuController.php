@@ -53,7 +53,7 @@ class MenuController extends Controller
                 ->addColumn('action', function ($menu) {
                     $btn = "";
                     $btn .= "<div class='switch-flex-cls posts-cls'>";
-                    $btn .= '<a href="' . url("admin/menus/edit/$menu->id") . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"></i></a>';
+                    $btn .= '<a href="' . url("admin/menus/edit/$menu->id") . '" class="btn btn-danger" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"></i></a>';
                     $btn .= '<a href="' . url("admin/menus/destroy/$menu->menu_id/$menu->id") . '" class="btn btn-danger del-review-popup" data-method="DELETE" data-token="' . csrf_token() . '" data-toggle="tooltip" title="Delete Post" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>';
                     $btn .= "</div>";
                     return $btn;
