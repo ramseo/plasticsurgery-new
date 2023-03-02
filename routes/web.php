@@ -270,7 +270,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::post("menus/store/{menu_id}", ['as' => "menu.store", 'uses' => "MenuController@store"]);
     Route::get("menus/edit/{id}", ['as' => "menu.edit", 'uses' => "MenuController@edit"]);
     Route::patch("menus/update/{menu_id}/{id}", ['as' => "menu.update", 'uses' => "MenuController@update"]);
-    Route::delete("menus/destroy/{menu_id}/{id}", ['as' => "menu.destroy", 'uses' => "MenuController@destroy"]);
+    Route::get("menus/destroy/{menu_id}/{id}", ['as' => "menu.destroy", 'uses' => "MenuController@destroy"]);
     Route::resource("menus", "MenuController");
 
     /*
