@@ -114,7 +114,14 @@ class CommentsController extends Controller
                         ->addColumn('action', function ($data) {
                             $module_name = $this->module_name;
 
-                            return view('backend.includes.action_column', compact('module_name', 'data'));
+                            $btn = "";
+                            $btn .= "<div class='switch-flex-cls posts-cls'>";
+                            $btn .= '<a href="' . url("admin/comments/destroy/$data->id") . '" class="btn btn-danger del-review-popup" data-method="DELETE" data-token="' . csrf_token() . '" data-toggle="tooltip" title="Delete Post" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>';
+                            $btn .= '<a href="' . url("admin/comments/$data->id/edit") . '" class="btn btn-danger"><i class="fa fa-edit" aria-hidden="true"></i></a>';
+                            $btn .= "</div>";
+                            return $btn;
+
+                            // return view('backend.includes.action_column', compact('module_name', 'data'));
                         })
                         // ->editColumn('name', '<strong>{{$name}}</strong> | {{$status_formatted}}')
                         ->editColumn('name', function ($data) {
@@ -297,7 +304,8 @@ class CommentsController extends Controller
 
         $$module_name_singular = $module_model::findOrFail($id);
 
-        $$module_name_singular->delete();
+        DB::table($module_name)->where('id', $id)->delete();
+        // $$module_name_singular->delete();
 
         Flash::success('<i class="fas fa-check"></i> '.label_case($module_name_singular).' Deleted Successfully!')->important();
 

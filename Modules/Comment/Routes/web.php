@@ -42,11 +42,12 @@ Route::group(['namespace' => '\Modules\Comment\Http\Controllers\Backend', 'as' =
      *
      * ---------------------------------------------------------------------
      */
-    $module_name = 'comments';
+    $module_name = 'comments'; 
     $controller_name = 'CommentsController';
     Route::get("comments/index_list", ['as' => "comments.index_list", 'uses' => "CommentsController@index_list"]);
     Route::get("comments/index_data", ['as' => "comments.index_data", 'uses' => "CommentsController@index_data"]);
     Route::get("comments/trashed", ['as' => "comments.trashed", 'uses' => "CommentsController@trashed"]);
     Route::patch("comments/trashed/{id}", ['as' => "comments.restore", 'uses' => "CommentsController@restore"]);
+    Route::get("comments/destroy/{id}", ['as' => "comments.destroy", 'uses' => "CommentsController@destroy"]);
     Route::resource("comments", "CommentsController");
 });
