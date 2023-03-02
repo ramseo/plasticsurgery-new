@@ -79,7 +79,7 @@
             <!-- code -->
             <?php
             if (isset($module_name_singular->featured_image)) {
-                if (file_exists($module_name_singular->featured_image)) {
+                if ($module_name_singular->featured_image) {
             ?>
                     <br>
                     <img width="150" src="<?= $module_name_singular->featured_image ?>" class="img-responsive">
