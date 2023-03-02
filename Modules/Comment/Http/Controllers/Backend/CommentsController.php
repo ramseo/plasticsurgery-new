@@ -16,6 +16,7 @@ use Modules\Comment\Http\Requests\Backend\CommentsRequest;
 use Modules\Comment\Notifications\NewCommentAdded;
 use Spatie\Activitylog\Models\Activity;
 use Yajra\DataTables\DataTables;
+use Illuminate\Support\Facades\DB;
 
 class CommentsController extends Controller
 {
