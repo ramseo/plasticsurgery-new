@@ -68,12 +68,13 @@ Route::group(['namespace' => '\Modules\Article\Http\Controllers\Backend', 'as' =
      *
      * ---------------------------------------------------------------------
      */
-    $module_name = 'posts';
+    $module_name = 'posts'; 
     $controller_name = 'PostsController';
     Route::get("posts/index_list", ['as' => "posts.index_list", 'uses' => "PostsController@index_list"]);
     Route::get("posts/index_data", ['as' => "posts.index_data", 'uses' => "PostsController@index_data"]);
     Route::get("posts/trashed", ['as' => "posts.trashed", 'uses' => "PostsController@trashed"]);
     Route::patch("posts/trashed/{id}", ['as' => "posts.restore", 'uses' => "PostsController@restore"]);
+    Route::get("posts/destroy/{id}", ['as' => "posts.destroy", 'uses' => "PostsController@destroy"]);
     Route::resource("posts", "PostsController");
 
     /*
