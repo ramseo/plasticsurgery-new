@@ -131,6 +131,7 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::get("city/index_data", ['as' => "city.index_data", 'uses' => "CityController@index_data"]);
     Route::get("city/trashed", ['as' => "city.trashed", 'uses' => "CityController@trashed"]);
     Route::patch("city/trashed/{id}", ['as' => "city.restore", 'uses' => "CityController@restore"]);
+    Route::get("city/destroy/{id}", ['as' => "city.destroy", 'uses' => "CityController@destroy"]);
     Route::resource("city", "CityController");
 
     // Review
