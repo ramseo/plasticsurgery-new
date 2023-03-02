@@ -1,10 +1,10 @@
 <style>
-    .switch-flex-cls {
+    /* .switch-flex-cls {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
-    }
+    } */
 
     .switch {
         position: relative;

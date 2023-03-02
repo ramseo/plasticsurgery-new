@@ -106,3 +106,10 @@ a {
 .margin-top-1rem {
     margin-top: 1rem;
 }
+
+.switch-flex-cls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
