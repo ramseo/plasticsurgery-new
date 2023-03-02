@@ -120,7 +120,7 @@ class CategoriesController extends Controller
 
                 $btn = "";
                 $btn .= "<div class='switch-flex-cls posts-cls'>";
-                $btn .= '<a href="' . url("admin/categories/trashed/$data->id") . '" class="btn btn-danger del-review-popup" data-method="DELETE" data-token="' . csrf_token() . '" data-toggle="tooltip" title="Delete Post" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>';
+                $btn .= '<a href="' . url("admin/categories/destroy/$data->id") . '" class="btn btn-danger del-review-popup" data-method="DELETE" data-token="' . csrf_token() . '" data-toggle="tooltip" title="Delete Post" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>';
                 $btn .= '<a href="' . url("admin/categories/$data->id/edit") . '" class="btn btn-danger"><i class="fa fa-edit" aria-hidden="true"></i></a>';
                 $btn .= "</div>";
                 return $btn;

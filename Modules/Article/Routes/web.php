@@ -89,5 +89,6 @@ Route::group(['namespace' => '\Modules\Article\Http\Controllers\Backend', 'as' =
     Route::get("categories/index_data", ['as' => "categories.index_data", 'uses' => "CategoriesController@index_data"]);
     Route::get("categories/trashed", ['as' => "categories.trashed", 'uses' => "CategoriesController@trashed"]);
     Route::patch("categories/trashed/{id}", ['as' => "categories.restore", 'uses' => "CategoriesController@restore"]);
+    Route::get("categories/destroy/{id}", ['as' => "categories.destroy", 'uses' => "CategoriesController@destroy"]);
     Route::resource("categories", "CategoriesController");
 });
