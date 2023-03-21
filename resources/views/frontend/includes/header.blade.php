@@ -21,7 +21,8 @@ $city = getData('cities');
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a target="_blank" class="nav-link text-white" href="https://twitter.com/CosmeticSurgIN"><i class="fa fa-twitter" aria-hidden="true"></i>
+                    <a target="_blank" class="nav-link text-white" href="https://twitter.com/CosmeticSurgIN">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -30,11 +31,13 @@ $city = getData('cities');
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a target="_blank" class="nav-link text-white" href="https://www.instagram.com/cosmeticsurgery.in/"><i class="fa fa-instagram" aria-hidden="true"></i>
+                    <a target="_blank" class="nav-link text-white" href="https://www.instagram.com/cosmeticsurgery.in/">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a target="_blank" class="nav-link text-white" href="https://api.whatsapp.com/send?phone=919888550489&text=Hello-CosmeticSurgery.in-Team"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    <a target="_blank" class="nav-link text-white" href="https://api.whatsapp.com/send?phone=919888550489&text=Hello-CosmeticSurgery.in-Team">
+                        <i class="fa fa-whatsapp" aria-hidden="true"></i>
                     </a>
                 </li>
             </ul>
@@ -50,6 +53,107 @@ $city = getData('cities');
             </ul>
         </div>
     </nav>
+    <nav class="navbar navbar-expand-lg nv">
+        <div class="container">
+            <a class="navbar-brand" href="https://cosmeticsurgery.in/">
+                <img src="img/logo-cosmeticsurgery.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="https://cosmeticsurgery.in/">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="https://cosmeticsurgery.in/about">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Face
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/rhinoplasty">Rhinoplasty </a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/blepharoplasty">Blepharoplasty</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/facelift">Facelift </a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/brow-lift">Brow Lift</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/neck-lift">Neck Lift</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/chin-surgery">Chin Augmentation</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/cheek-augmentation">Cheek Augmentation</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/lip-augmentation">Lip Augmentation</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/buccal-fat-removal">Buccal Fat Removal</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/ear-surgery">Ear Surgery</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/procedures">View All Procedures</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Breast
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/breast-augmentation">Breast Augmentation</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/breast-lift">Breast Lift</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/breast-reduction">Breast Reduction</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/breast-asymmetry-correction">Breast Asymmetry Correction</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/nipple-correction">Inverted Nipple Correction </a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/breast-implant-removal">Breast Implant Removal</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/breast-implant-revision">Breast Revision Surgery </a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/gynecomastia">Male Breast Reduction</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/procedures">View All Procedures</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Body
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/body-contouring">Body Contouring</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/mommy-makeover">Mommy Makeover</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/liposuction">Liposuction</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/tummy-tuck">Tummy Tuck </a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/buttock-enhancement">Buttock Enhancement </a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/body-lift">Body Lift </a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/arm-lift">Arm Lift </a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/thigh-lift">Thigh Lift</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/procedures">View All Procedures </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cosmeticsurgery.in/hair-transplant">Hair</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cosmeticsurgery.in/surgeons">Doctors</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Clinics
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/hyderabad">Hyderabad</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/pune">Pune</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/bangalore">Bangalore</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/delhi">Delhi</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/chandigarh">Chandigarh</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/lucknow">Lucknow</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/bhubaneswar">Bhubaneswar</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/surat">Surat</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/thiruvananthapuram">Trivandrum</a>
+                            <a class="dropdown-item" href="https://cosmeticsurgery.in/clinics">View All Clinics</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cosmeticsurgery.in/before-after-results">Before/After photos </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cosmeticsurgery.in/blog">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!-- code -->
     <div class="container-fluid">
         <div class="row header-main-col">

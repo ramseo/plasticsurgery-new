@@ -63,13 +63,13 @@ mix.scripts(
 // frontend-theme
 mix.styles(
     [
-        "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-        "public/vendor/impact-design/front/css/front.css",
-        "resources/theme/css/justifiedGallery.min.css",
-        "resources/theme/css/owl.carousel.min.css",
-        "resources/theme/css/owl.theme.default.min.css",
-        "resources/theme/css/rateit.css",
-        "resources/theme/css/asRange.min.css",
+        // "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+        // "public/vendor/impact-design/front/css/front.css",
+        // "resources/theme/css/justifiedGallery.min.css",
+        // "resources/theme/css/owl.carousel.min.css",
+        // "resources/theme/css/owl.theme.default.min.css",
+        // "resources/theme/css/rateit.css",
+        // "resources/theme/css/asRange.min.css",
         "resources/theme/css/style.css",
         "resources/theme/css/responsive.css"
     ],
