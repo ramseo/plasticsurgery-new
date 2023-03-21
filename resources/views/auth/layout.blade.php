@@ -65,7 +65,7 @@
     <section id="auth-section">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 cs-bg-color">
                     <a href="/"><img class="auth-logo" src="{{asset('img/logo.png')}}" alt=""></a>
                 </div>
                 <div class="col-md-6 auth-form-col">

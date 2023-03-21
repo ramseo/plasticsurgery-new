@@ -67,9 +67,9 @@
             </div>
          </div>
       </div>
-      <a id="button-scroll" style="visibility: visible; opacity: 1;display:none">
+      <!-- <a id="button-scroll" style="visibility: visible; opacity: 1;display:none">
          <i class="fas fa-chevron-circle-up" aria-hidden="true"></i>
-      </a>
+      </a> -->
    </footer>
 </div>
 
@@ -116,7 +116,7 @@
 <div class="container-fluid" style="background-color:#1a508b; border-top:1px dashed #fff">
    <div class="small-footer">
       <div class="floatt-left">
-         Copyright© <?= date('Y') ?> - CosmeticSurgery.in - All rights reserved
+         Copyright © <?= date('Y') ?> - CosmeticSurgery.in - All rights reserved
       </div>
       <div class="floatt-right">
          <a href="<?= url('disclaimer') ?>">Disclaimer |</a>
