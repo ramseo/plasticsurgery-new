@@ -1,55 +1,29 @@
-<section id="page-banner">
-    <div class="container-fluid">
+<div class="container-fluid" style="background-color:#f4d8cd">
+    <div class="container banner">
         <div class="row">
-            <div class="banner-container">
-                <div class="vendor-img-home">
-                    <img src="{{asset('images/slider.jpg')}}" alt="home banner" class="img-fluid">
-                    <div class="banner-search-col">
-                        <div class="search-header">
-                            @if(setting('homepage_title'))
-                            <p class="head">{{ setting('homepage_title') }}</p>
-                            @endif
-                            @if(setting('homepage_sub_title'))
-                            <p class="text">{{ setting('homepage_sub_title') }}</p>
-                            @endif
+            <div class="col-lg-6 col-md-12">
+                <div class="trans">
+                    <h2>Your Ultimate Advisor for Cosmetic Surgery</h2>
+                    <p>
+                        From understanding the cosmetic procedures to finding the
+                        best cosmetic surgeons, we help you at every step.
+                    </p>
+                    <div class="row pt-3">
+                        <div class="col-md-5">
+                            <button type="button" class="btn" style="background-color:#f3413a; color:#fff"><a href="procedures">Explore Procedures</a></button>
                         </div>
-                        <div class="search-form-col text-center" data-aos="zoom-in">
-                            <form id="searchForm" action="">
-                                <div class="form-list">
-                                    <ul class="list-inline">
-                                        <li style="border-right: none; padding-right: 10px; background-color: white;" class="list-inline-item">
-                                            <select style="border-right: none;" class="form-control" name="" id="typeField" required>
-                                                <option value="">Select Vendor Type</option>
-                                                @if(isset($types) && $types)
-                                                @foreach($types as $type)
-                                                <option value="{{$type->slug}}">{{$type->name}}</option>
-                                                @endforeach
-                                                @endif
-                                            </select>
-                                        </li>
-                                        <li style="padding-right: 10px; background-color: white;" class="list-inline-item">
-                                            <select style="border-right: none;" class="form-control" name="" id="cityField" required>
-                                                <option value="">Select City</option>
-                                                @if(isset($cities) && $cities)
-                                                @foreach($cities as $city)
-                                                <option value="{{$city->slug}}">{{$city->name}}</option>
-                                                @endforeach
-                                                @endif
-                                            </select>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <input type="submit" class="btn btn-primary" value="GET STARTED">
-                                        </li>
-                                    </ul>
-                                </div>
-                            </form>
+                        <div class="col-md-5 pb-5">
+                            <button type="button" class="btn bto"><a href="surgeons">Find Doctors</a></button>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-6 col-md-12 pt-5 pb-3">
+                <img src="<?= asset('img/cosmeticsurgery-main.png') ?>" style="width: 100%;">
+            </div>
         </div>
     </div>
-</section>
+</div>
 
 @push ("after-scripts")
 <script>
