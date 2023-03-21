@@ -3,29 +3,24 @@
 @section('title') {{app_name()}} @endsection
 
 @section('content')
-    @php
-        $cities = getDataArray('cities');
-        $types = getDataArray('types');
-    @endphp
+@php
+$cities = getDataArray('cities');
+$types = getDataArray('types');
+@endphp
 
-    <!-- Banner search -->
-    @include('frontend.includes.banner-search')
+<!-- Banner search -->
+@include('frontend.includes.banner-search')
 
-    <!-- Category list -->
-    @include('frontend.includes.category-list')
+<!-- Home content list -->
+@include('frontend.includes.home-content')
 
-    <!-- About block -->
-    @include('frontend.includes.about-block')
+<!-- Category list -->
+@include('frontend.includes.category-list')
 
-    <!-- Wedding stories -->
-    @include('frontend.includes.wedding-stories')
+<!-- About block -->
+@include('frontend.includes.about-block') 
 
-    <!-- Featured vendors -->
-    @include('frontend.includes.featured-vendors')
-
-    <!-- Latest blogs -->
-    @include('frontend.includes.latest-blogs')
+<!-- Home cities -->
+@include('frontend.includes.home-cities')
 
 @endsection
-
-
