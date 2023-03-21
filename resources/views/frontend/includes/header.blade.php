@@ -5,10 +5,55 @@ $city = getData('cities');
 
 
 <header id="header">
+    <!-- code -->
+    <div class="xg">
+        <div class="bar">
+            <a href="mailto:info@cosmeticsurgery.in"><i class="fa fa-envelope-o" aria-hidden="true"></i> Mail us</a>
+            <a href="book-an-appointment"><i class="fa fa-calendar" aria-hidden="true"></i> Appointment</a>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg desk kc" style="background-color:#1877F2;">
+        <div class="container">
+            <ul class="navbar-nav soc">
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link text-white" href="https://www.facebook.com/CosmeticSurgery.in">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link text-white" href="https://twitter.com/CosmeticSurgIN"><i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link text-white" href="https://www.linkedin.com/company/cosmeticsurgeryindia/">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link text-white" href="https://www.instagram.com/cosmeticsurgery.in/"><i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a target="_blank" class="nav-link text-white" href="https://api.whatsapp.com/send?phone=919888550489&text=Hello-CosmeticSurgery.in-Team"><i class="fa fa-whatsapp" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="mailto:info@cosmeticsurgery.in"><i class="fa fa-envelope" aria-hidden="true"></i>
+                        info@cosmeticsurgery.in |
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn mt-1 kl btn-sm" style="background-color:#2abfb7"><a href="https://cosmeticsurgery.in/book-an-appointment" style="color:#fff">Book an Appointment</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- code -->
     <div class="container-fluid">
         <div class="row header-main-col">
             <div class="col-xs-6 col-sm-3 header-logo-col">
-                <!-- <span id="menuOpener" style="display: none;"><i class="fa fa-bars"></i></span> -->
                 <a href="{{url('/')}}"><img src="{{asset('images/logo.png')}}" alt="" class="img-fluid"></a>
             </div>
             <div class="col-xs-6 col-sm-9 d-flex header-menu-col">
@@ -69,7 +114,7 @@ $city = getData('cities');
                             <p class="text-right">Are you a vendor? <a class="btn btn-primary" href="{{ route('register-vendor') }}"> Register as a Vendor</a></p>
                         </div>
                         @endif
-                        <!-- mob header menu -->
+
                         @foreach($header_menu as $menu_item)
                         <?php
                         if (request()->segment(1) == $menu_item->url) {
@@ -111,7 +156,6 @@ $city = getData('cities');
                         }
                         ?>
                         @endforeach
-                        <!-- mob header menu -->
 
                         <li>
                             <a href="{{ route('login') }}">
@@ -119,7 +163,7 @@ $city = getData('cities');
                             </a>
                         </li>
                     </div>
-                    <!-- header menu -->
+
                     @foreach($header_menu as $menu_item)
                     <?php
                     $getChildItem = dynamicMenuChildItem($menu_item->id);
@@ -162,7 +206,7 @@ $city = getData('cities');
                         ?>
                     </li>
                     @endforeach
-                    <!-- header menu -->
+
                     @auth
                     @if(auth()->user()->getRoleNames()->first() == 'super admin')
                     <li>
@@ -201,248 +245,11 @@ $city = getData('cities');
                             Login
                         </a>
                     </li>
-                    <!--   @if(user_registration())
-                                <li>
-                                    <a href="{{ route('register') }}">
-                                        Register
-                                    </a>
-                                </li>
-                            @endif -->
-
                     @endauth
                     <span id="menuCloser" style="display: none;"><i class="fa fa-times"></i></span>
                 </ul>
                 @endif
-                <!-- <ul class="list-inline d-flex site-menu user-menu">
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" aria-expanded="false" data-toggle="dropdown">
-                            <img src="images/login.png" alt="">
-                            Account
-                            <i class="fas fa-angle-down nav-link-arrow"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-lg">
-                            <div class="col-auto px-0" data-dropdown-content>
-                                <div class="list-group list-group-flush">
-                                    @auth
-                                        @if(auth()->user()->getRoleNames()->first() == 'super admin')
-                                            <a href="{{ route('backend.dashboard') }}"
-                                               class="list-group-item list-group-item-action">
-                                                <span class="icon icon-sm icon-success"><i class="fas fa-user"></i></span>
-                                                <div class="">
-                                                    <span class="text-dark d-block">Dashboard</span>
-                                                </div>
-                                            </a>
-                                        @endif
-                                        @if(auth()->user()->getRoleNames()->first() == 'vendor')
-                                            <a href="{{ route('vendor.dashboard') }}"
-                                               class="list-group-item list-group-item-action">
-                                                <span class="icon icon-sm icon-success"><i class="fas fa-user"></i></span>
-                                                <div class="">
-                                                    <span class="text-dark d-block">Dashboard</span>
-                                                </div>
-                                            </a>
-                                        @endif
-                                        @if(auth()->user()->getRoleNames()->first() == 'user')
-                                            <a href="{{ route('frontend.users.profileEdit', auth()->user()->id) }}"
-                                               class="list-group-item list-group-item-action">
-                                                <span class="icon icon-sm icon-success"><i class="fas fa-user"></i></span>
-                                                <div class="">
-                                                <span class="text-dark d-block">
-                                                    {{ Auth::user()->name }}
-                                                </span>
-                                                    <span class="small">View profile details!</span>
-                                                </div>
-                                            </a>
-                                        @endif
-                                        <a href="{{ route('logout') }}"
-                                           class="list-group-item list-group-item-action" onclick="event.preventDefault(); document.getElementById('account-logout-form').submit();">
-                                        <span class="icon icon-sm icon-secondary">
-                                            <i class="fas fa-sign-out-alt"></i>
-                                        </span>
-                                            <div class="">
-                                                <span class="text-dark d-block">
-                                                    Logout
-                                                </span>
-                                            </div>
-                                        </a>
-                                        <form id="account-logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                                    @else
-                                        <a href="{{ route('login') }}"
-                                           class="list-group-item list-group-item-action">
-                                            <span class="icon icon-sm icon-secondary"><i class="fas fa-key"></i></span>
-                                            <div class="">
-                                                <span class="text-dark d-block">
-                                                    Login
-                                                </span>
-                                            </div>
-                                        </a>
-                                        @if(user_registration())
-                                            <a href="{{ route('register') }}"
-                                               class="list-group-item list-group-item-action">
-                                        <span class="icon icon-sm icon-primary">
-                                            <i class="fas fa-address-card"></i>
-                                        </span>
-                                                <div class="">
-                                                    <span class="text-dark d-block">Register</span>
-                                                </div>
-                                            </a>
-                                        @endif
-
-                                    @endauth
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul> -->
             </div>
         </div>
     </div>
 </header>
-<style>
-    .mob-screen {
-        display: none;
-    }
-
-    .footer-col a {
-        display: flex;
-        width: fit-content;
-        width: auto;
-        margin-bottom: 7px;
-    }
-
-    .card-body ol li {
-        line-height: 37px !important;
-    }
-    #newsletterForm {
-        max-width: 341px;
-    }
-    #header {
-        position: fixed;
-        width: 100%;
-        top: 0px;
-        z-index: 999 !important;
-    }
-
-    .footer-col {
-        border-bottom: 0px;
-    }
-
-
-    @media screen and (max-width: 767px) {
-        .site-main-menu {
-            background-color: #fff;
-        }
-
-        .d-flex {
-            display: block !important;
-        }
-
-        .footer-col a {
-            display: block;
-        }
-
-        .inner-footer {
-            border-bottom: 1px solid #ebebeb;
-        }
-
-        .special-list a {
-            font-size: 19px !important;
-            font-weight: 600 !important;
-        }
-
-
-
-        .mob-screen li:hover {
-            filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
-        }
-
-        .mob-screen li {
-            display: flex;
-            align-items: center;
-        }
-
-        .mob-screen li img {
-            height: 20px;
-            width: 20px;
-            object-fit: cover;
-            margin-right: 4px;
-        }
-
-        .mob-screen {
-            display: block;
-            padding-top: 18px;
-        }
-
-        ul.list-inline.d-flex.site-menu.site-main-menu.active {
-            height: 520px;
-            overflow: hidden;
-            overflow-y: scroll;
-        }
-
-        .bg-screen {
-            display: none !important;
-        }
-
-        #header ul {
-            padding-top: 36px;
-        }
-
-        #header li>a,
-        #header li button {
-            color: #212529;
-            line-height: 52px;
-        }
-
-        #menuCloser {
-            top: 20px;
-        }
-
-        .mob-screen>li {
-            border-bottom: 1px solid #ebebeb;
-        }
-
-        #menuCloser {
-            left: 15px;
-            color: #212529 !important;
-            border-bottom: 1px solid #ebebeb;
-            padding-bottom: 13px;
-        }
-
-        #header li>a,
-        #header li button {
-            font-weight: 400;
-        }
-
-        .dropdown.menuDropDown {
-            margin-bottom: -17px;
-        }
-
-        .vendor-card .img-col {
-            height: auto;
-        }
-
-        .text-col .title {
-            font-size: 15px;
-        }
-
-        .text-col {
-            text-align: center;
-        }
-
-        .search-header {
-            padding-left: 5px;
-            padding-right: 5px;
-        }
-
-
-    }
-
-    @media screen and (max-width: 320px) {
-        .input-group.newsletter-group {
-            min-width: 260px;
-        }
-
-    }
-</style>
