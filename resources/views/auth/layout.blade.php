@@ -64,11 +64,13 @@
 
     <section id="auth-section">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row height-100vh">
                 <div class="col-md-6 cs-bg-color">
-                    <a href="/"><img class="auth-logo" src="{{asset('img/logo.png')}}" alt=""></a>
+                    <a href="<?= url('/') ?>">
+                        <img class="auth-logo" src="{{asset('img/logo-cosmeticsurgery.png')}}" alt="logo">
+                    </a>
                 </div>
-                <div class="col-md-6 auth-form-col">
+                <div class="col-md-6 auth-form-col position-relative">
                     @yield('content')
                 </div>
             </div>
@@ -82,8 +84,8 @@
     <script src="{{ mix('js/dashboard.js') }}"></script>
 
     <script>
-        $(document).ready(function(){
-            $('.displayPassword').click(function(){
+        $(document).ready(function() {
+            $('.displayPassword').click(function() {
                 var inputType = $(this).parents('.password-container').find('input').attr('type');
                 if (inputType == 'password') {
                     $(this).parents('.password-container').find('input').attr('type', 'text');
