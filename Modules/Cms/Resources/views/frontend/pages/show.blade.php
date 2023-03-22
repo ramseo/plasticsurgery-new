@@ -8,9 +8,9 @@
 @endsection
 
 @section('page-banner')
-@if($$module_name_singular->featured_image)
+<!-- @if($$module_name_singular->featured_image) -->
 <!-- page-banner-height -->
-<section id="page-banner" class="">
+<!-- <section id="page-banner" class="">
     <div class="container-fluid">
         <div class="row">
             <div class="banner-container">
@@ -25,9 +25,24 @@
             </div>
         </div>
     </div>
-</section>
-@endif
-<section id="breadcrumb-sec">
+</section> -->
+<!-- @endif -->
+
+<div class="header-space"></div>
+<div class="cit">
+    <div class="container">
+        <p>{{$$module_name_singular->name}}</p>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container">
+        <?= $$module_name_singular->content ?>
+        <!-- {!!$$module_name_singular->content!!} -->
+    </div>
+</div>
+
+<!-- <section id="breadcrumb-sec">
     <div class="container-fluid">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -36,12 +51,12 @@
             </ol>
         </nav>
     </div>
-</section>
+</section> -->
 @endsection
 
 
 @section('content')
-<article>
+<!-- <article>
     <div class="container-fluid">
         <div class="row">
             @php
@@ -64,7 +79,7 @@
             </div>
         </div>
     </div>
-</article>
+</article> -->
 
 @endsection
 

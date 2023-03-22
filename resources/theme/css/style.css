@@ -2586,7 +2586,7 @@ footer img {
     position: relative;
 }
 
-
+.position-relative .margin-register,
 .position-relative .auth-inner-form-col.margin-login {
     position: absolute;
     top: 50%;
@@ -2594,4 +2594,104 @@ footer img {
     right: 0;
     left: 0;
     margin: 0 auto;
+}
+
+.password-container .displayPassword {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.mat-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.mat-group label {
+    position: absolute;
+    top: -13px;
+    left: 16px;
+    display: table;
+    width: auto;
+    background: white;
+    padding: 0 5px;
+    font-size: 16px;
+    color: #818181;
+    z-index: 1;
+    font-weight: 500;
+}
+
+.mat-group .form-control {
+    border-color: #818181;
+    border-radius: 8px;
+    min-height: 55px;
+    padding: 0 20px;
+}
+
+.list-top-group {
+    margin-top: -20px;
+    position: relative;
+    z-index: 1;
+}
+
+.mat-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.space-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.mat-group .space-list li {
+    margin: 0 !important;
+}
+
+.custom-control {
+    padding-left: 21px;
+    position: relative;
+    display: block;
+    min-height: 1.5rem;
+}
+
+.mat-group .custom-control-input {
+    z-index: 1;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-input~.custom-control-label {
+    cursor: pointer;
+    font-size: 0.875rem;
+    height: 1rem;
+}
+
+.custom-control-label {
+    position: static !important;
+    font-weight: 300 !important;
+}
+
+.custom-control-label span {
+    position: relative;
+    top: 2px;
+}
+
+.text-muted {
+    color: #93a5be !important;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border: solid 1px;
+    border-radius: 4px;
+}
+
+.custom-control-alternative .custom-control-label::before {
+    box-shadow: 0 1px 3px rgba(50, 50, 93, 0.15), 0 1px 0 rgba(0, 0, 0, 0.02);
+}
+
+.custom-control-label::before {
+    left: 0;
 }

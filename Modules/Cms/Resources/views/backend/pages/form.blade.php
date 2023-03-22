@@ -351,7 +351,7 @@ $(function() {
 
 <script type="text/javascript">
 
-CKEDITOR.replace('content', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
+CKEDITOR.replace('content', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en',allowedContent: true});
 
 document.addEventListener("DOMContentLoaded", function() {
 

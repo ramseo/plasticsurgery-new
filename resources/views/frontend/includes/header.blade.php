@@ -144,12 +144,51 @@ $city = getData('cities');
                             <a class="dropdown-item" href="<?= url('clinics') ?>">View All Clinics</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= url('before-after-results') ?>">Before/After photos </a>
-                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="<?//= url('before-after-results') ?>">
+                            Before/After photos
+                        </a>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="<?= url('blog') ?>">Blog</a>
                     </li>
+                    @auth
+                    @if(auth()->user()->getRoleNames()->first() == 'super admin')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('backend.dashboard') }}">
+                            Dashboard
+                        </a>
+                    </li>
+                    @endif
+                    @if(auth()->user()->getRoleNames()->first() == 'vendor')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('vendor.dashboard') }}">
+                            Dashboard
+                        </a>
+                    </li>
+                    @endif
+                    @if(auth()->user()->getRoleNames()->first() == 'user')
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('frontend.users.profileEdit') }}">
+                            My Profile
+                        </a>
+                    </li>
+                    @endif
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('account-logout-form').submit();">
+                            Logout
+                        </a>
+                    </li>
+                    <form id="account-logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                    @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">
+                            Login
+                        </a>
+                    </li>
+                    @endauth
                 </ul>
             </div>
         </div>
