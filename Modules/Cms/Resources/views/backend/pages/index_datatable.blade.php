@@ -17,23 +17,18 @@
                     @lang(":module_name Management Dashboard", ['module_name'=>Str::title($module_name)])
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-2">
                 <div class="float-right">
-                    <x-buttons.create route='{{ route("backend.$module_name.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}"/>
-
-                    {{--                    <div class="btn-group" role="group" aria-label="Toolbar button groups">--}}
-                    {{--                        <div class="btn-group" role="group">--}}
-                    {{--                            <button id="btnGroupToolbar" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-                    {{--                                <i class="fas fa-cog"></i>--}}
-                    {{--                            </button>--}}
-                    {{--                            <div class="dropdown-menu" aria-labelledby="btnGroupToolbar">--}}
-                    {{--                                <a class="dropdown-item" href="{{ route("backend.$module_name.trashed") }}">--}}
-                    {{--                                    <i class="fas fa-eye-slash"></i> View trash--}}
-                    {{--                                </a>--}}
-                    {{--                            </div>--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
-
+                    <a href="<?= route("backend.$module_name.createcities") ?>">
+                        <button class="btn btn-success generate-cities-cls">
+                            generate city pages
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="float-right">
+                    <x-buttons.create route='{{ route("backend.$module_name.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}" />
                 </div>
             </div>
         </div>
@@ -89,19 +84,27 @@
 <script type="text/javascript" src="{{ asset('vendor/datatable/datatables.min.js') }}"></script>
 
 <script type="text/javascript">
-
     $('#datatable').DataTable({
         processing: true,
         serverSide: true,
         autoWidth: true,
         responsive: true,
         ajax: '{{ route("backend.$module_name.index_data") }}',
-        columns: [
-            {data: 'id', name: 'id'},
-            {data: 'name', name: 'name'},
-            {data: 'action', name: 'action', orderable: false, searchable: false}
+        columns: [{
+                data: 'id',
+                name: 'id'
+            },
+            {
+                data: 'name',
+                name: 'name'
+            },
+            {
+                data: 'action',
+                name: 'action',
+                orderable: false,
+                searchable: false
+            }
         ]
     });
-
 </script>
 @endpush

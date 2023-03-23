@@ -114,6 +114,14 @@ a {
     justify-content: center;
 }
 
-.posts-cls a{
+.posts-cls a {
     margin: 5px;
+}
+
+.generate-cities-cls {
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 5px 10px 5px 10px;
+    font-size: 15px;
+    width: 180px;
 }

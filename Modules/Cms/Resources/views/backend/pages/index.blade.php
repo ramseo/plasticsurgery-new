@@ -14,7 +14,9 @@
         <div class="row">
             <div class="col-8">
                 <h4 class="card-title mb-0">
-                    <i class="{{ $module_icon }}"></i> {{ $module_title }} <small class="text-muted">{{ __($module_action) }}</small>
+                    <i class="{{ $module_icon }}"></i>
+                    {{ $module_title }}
+                    <small class="text-muted">{{ __($module_action) }}</small>
                 </h4>
                 <div class="small text-muted">
                     @lang(":module_name Management Dashboard", ['module_name'=>Str::title($module_name)])
@@ -23,20 +25,7 @@
             <!--/.col-->
             <div class="col-4">
                 <div class="float-right">
-                    <x-buttons.create route='{{ route("backend.$module_name.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}"/>
-
-{{--                    <div class="btn-group" role="group" aria-label="Toolbar button groups">--}}
-{{--                        <div class="btn-group" role="group">--}}
-{{--                            <button id="btnGroupToolbar" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--                                <i class="fas fa-cog"></i>--}}
-{{--                            </button>--}}
-{{--                            <div class="dropdown-menu" aria-labelledby="btnGroupToolbar">--}}
-{{--                                <a class="dropdown-item" href="{{ route("backend.$module_name.trashed") }}">--}}
-{{--                                    <i class="fas fa-eye-slash"></i> View trash--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                    <x-buttons.create route='{{ route("backend.$module_name.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}" />
                 </div>
             </div>
             <!--/.col-->

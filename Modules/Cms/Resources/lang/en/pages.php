@@ -17,5 +17,6 @@ return [
     'meta_og_image'    => 'Meta Open Graph Image',
     'meta_og_url'      => 'Meta Open Graph URL',
     'order'            => 'Order',
+    'city'            => 'Cities',
 
 ];
