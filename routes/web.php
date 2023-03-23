@@ -30,8 +30,8 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('home', 'FrontendController@index')->name('home');
     Route::get('listing', 'FrontendController@listing')->name('listing');
     Route::get('detail', 'FrontendController@detail')->name('detail');
-    Route::get('privacy', 'FrontendController@privacy')->name('privacy');
-    Route::get('terms', 'FrontendController@terms')->name('terms');
+    // Route::get('privacy', 'FrontendController@privacy')->name('privacy');
+    // Route::get('terms', 'FrontendController@terms')->name('terms');
     Route::post('newsletter', 'NewsletterController@store')->name('newsletter');
     Route::post('newsletter-save-phone', 'NewsletterController@save_phone')->name('newsletter-save-phone');
     Route::post('post-review', 'VendorController@postReview')->name('post-review');

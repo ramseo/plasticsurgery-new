@@ -26,7 +26,7 @@ class PagesRequest extends FormRequest
         return [
             'slug'              => 'nullable|max:191',
             'content'           => 'required',
-            'featured_image'    => 'required|max:191',
+            // 'featured_image'    => 'required|max:191',
             'order'             => 'nullable|numeric',
             'status'            => 'required',
         ];

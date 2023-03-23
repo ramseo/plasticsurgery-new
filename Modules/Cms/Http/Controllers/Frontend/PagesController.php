@@ -60,7 +60,6 @@ class PagesController extends Controller
      */
     public function show($slug)
     {
-        //        $id = decode_id($hashid);
 
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -75,9 +74,9 @@ class PagesController extends Controller
 
         $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
         //        dd($$module_name_singular);
-        event(new PageViewed($$module_name_singular));
+        event(new PageViewed($$module_name_singular)); 
 
-        return view(
+        return view( 
             "cms::frontend.$module_name.show",
             compact('module_title', 'module_name', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular")
         );

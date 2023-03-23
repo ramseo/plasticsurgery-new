@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Log;
+use DB;
 use Modules\Cms\Events\PageCreated;
 use Modules\Cms\Events\PageUpdated;
 use Modules\Cms\Http\Requests\Backend\PagesRequest;
@@ -334,7 +335,8 @@ class PagesController extends Controller
 
         $$module_name_singular = $module_model::findOrFail($id);
 
-        $$module_name_singular->delete();
+        DB::table("pages")->where('id', $id)->delete();
+        // $$module_name_singular->delete(); 
 
         Flash::success('<i class="fas fa-check"></i> ' . label_case($module_name_singular) . ' Deleted Successfully!')->important();
 
