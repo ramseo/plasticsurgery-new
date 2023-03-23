@@ -926,4 +926,19 @@ if (!function_exists('date_today')) {
         return $data;
     }
 
+
+    function getAllCities()
+    {
+        $getAllCities = DB::table('cities')->select('name', 'slug', 'id')->get()->toArray();
+
+        $array = json_decode(json_encode($getAllCities), true);
+
+        $city_options = [];
+        if ($array) {
+            foreach ($array as $item) {
+                $city_options[$item['id']] = $item['name'];
+            }
+        }
+        return $city_options;
+    }
 }
