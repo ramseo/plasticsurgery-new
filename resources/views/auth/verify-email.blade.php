@@ -31,7 +31,7 @@
                 <div class="card bg-secondary border border-soft">
 
                     <div class="card-body px-lg-5 py-lg-5">
-                        <div style="color: white;" class="text-center mb-4">
+                        <div class="text-center mb-4">
                             {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
                         </div>
 

@@ -1031,13 +1031,14 @@ ul.nav.nav-tabs {
 
 .card-body button {
     font-size: 14px;
-    background-color: #e95110;
+    background-color: #0069d9;
     border: none;
     outline: none;
+    font-weight: 600;
 }
 
 .heading {
-    background-color: #e95110;
+    background-color: #0069d9;
     color: #fff;
     padding: 10px 89px;
     margin-bottom: 20px;
@@ -2694,4 +2695,62 @@ footer img {
 
 .custom-control-label::before {
     left: 0;
+}
+
+
+.menu-menu-col {
+    height: 100%;
+    background: #f0f0f0;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-unstyled {
+    list-style: none;
+}
+
+.menu-menu-col a:hover,
+.menu-menu-col a.active {
+    background-color: #1877F2;
+    color: white;
+    text-decoration: none;
+}
+
+
+.menu-menu-col a {
+    display: block;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-bottom: solid 1px #dcdcdc;
+    transition: 0.2s;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+.menu-menu-col a i,
+.menu-menu-col a svg {
+    width: 22px;
+}
+
+.fa,
+.fas {
+    font-weight: 900;
+}
+
+.card.margin-404:hover,
+.card.margin-404 {
+    border: none;
+    box-shadow: none;
+}
+
+.card.margin-404 button {
+    color: #fff;
 }

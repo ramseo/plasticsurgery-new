@@ -28,20 +28,6 @@
 </section> -->
 <!-- @endif -->
 
-<div class="header-space"></div>
-<div class="cit">
-    <div class="container">
-        <p>{{$$module_name_singular->name}}</p>
-    </div>
-</div>
-
-<div class="container-fluid">
-    <div class="container">
-        <?= $$module_name_singular->content ?>
-        <!-- {!!$$module_name_singular->content!!} -->
-    </div>
-</div>
-
 <!-- <section id="breadcrumb-sec">
     <div class="container-fluid">
         <nav aria-label="breadcrumb">
@@ -56,6 +42,21 @@
 
 
 @section('content')
+
+<div class="header-space"></div>
+<div class="cit">
+    <div class="container">
+        <p>{{$$module_name_singular->name}}</p>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container">
+        <?= $$module_name_singular->content ?>
+        <!-- {!!$$module_name_singular->content!!} -->
+    </div>
+</div>
+
 <!-- <article>
     <div class="container-fluid">
         <div class="row">

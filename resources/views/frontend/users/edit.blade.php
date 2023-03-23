@@ -4,7 +4,7 @@
 
 @section('content')
 
-<section id="breadcrumb-section">
+<!-- <section id="breadcrumb-section">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12 col-sm-12">
@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 {{--<section id="user-profile-section">--}}
 {{--    <div class="container-fluid">--}}
 {{--        <div class="col-xs-12 col-sm-12 user-profile-main-col">--}}
@@ -35,6 +35,12 @@
 {{--    </div>--}}
 {{--</section>--}}
 
+<div class="header-space"></div>
+<div class="cit">
+    <div class="container">
+        <p>My Profile</p>
+    </div>
+</div>
 
 <section class="profile-form-section">
     <div class="container-fluid">

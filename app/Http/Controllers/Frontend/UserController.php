@@ -117,7 +117,6 @@ class UserController extends Controller
      */
     public function profileEdit()
     {
-
         if (Auth::check() == false) {
             return redirect(base_url());
         }
