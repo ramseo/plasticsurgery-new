@@ -48,7 +48,11 @@ $city = getData('cities');
                     </a>
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="btn mt-1 kl btn-sm" style="background-color:#2abfb7"><a href="https://cosmeticsurgery.in/book-an-appointment" style="color:#fff">Book an Appointment</button>
+                    <button type="button" class="btn mt-1 kl btn-sm" style="background-color:#2abfb7">
+                        <a href="<?= url('book-an-appointment') ?>" style="color:#fff">
+                            Book an Appointment
+                        </a>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -65,93 +69,32 @@ $city = getData('cities');
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="<?= url('/') ?>">Home</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="<?= url('about') ?>">About</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Face
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="<?= url('rhinoplasty') ?>">Rhinoplasty </a>
-                            <a class="dropdown-item" href="<?= url('blepharoplasty') ?>">Blepharoplasty</a>
-                            <a class="dropdown-item" href="<?= url('facelift') ?>">Facelift </a>
-                            <a class="dropdown-item" href="<?= url('brow-lift') ?>">Brow Lift</a>
-                            <a class="dropdown-item" href="<?= url('neck-lift') ?>">Neck Lift</a>
-                            <a class="dropdown-item" href="<?= url('chin-surgery') ?>">Chin Augmentation</a>
-                            <a class="dropdown-item" href="<?= url('cheek-augmentation') ?>">Cheek Augmentation</a>
-                            <a class="dropdown-item" href="<?= url('lip-augmentation') ?>">Lip Augmentation</a>
-                            <a class="dropdown-item" href="<?= url('buccal-fat-removal') ?>">Buccal Fat Removal</a>
-                            <a class="dropdown-item" href="<?= url('ear-surgery') ?>">Ear Surgery</a>
-                            <a class="dropdown-item" href="<?= url('procedures') ?>">View All Procedures</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Breast
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="<?= url('breast-augmentation') ?>">Breast Augmentation</a>
-                            <a class="dropdown-item" href="<?= url('breast-lift') ?>">Breast Lift</a>
-                            <a class="dropdown-item" href="<?= url('breast-reduction') ?>">Breast Reduction</a>
-                            <a class="dropdown-item" href="<?= url('breast-asymmetry-correction') ?>">Breast Asymmetry Correction</a>
-                            <a class="dropdown-item" href="<?= url('nipple-correction') ?>">Inverted Nipple Correction </a>
-                            <a class="dropdown-item" href="<?= url('breast-implant-removal') ?>">Breast Implant Removal</a>
-                            <a class="dropdown-item" href="<?= url('breast-implant-revision') ?>">Breast Revision Surgery </a>
-                            <a class="dropdown-item" href="<?= url('gynecomastia') ?>">Male Breast Reduction</a>
-                            <a class="dropdown-item" href="<?= url('procedures') ?>">View All Procedures</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Body
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="<?= url('body-contouring') ?>">Body Contouring</a>
-                            <a class="dropdown-item" href="<?= url('mommy-makeover') ?>">Mommy Makeover</a>
-                            <a class="dropdown-item" href="<?= url('liposuction') ?>">Liposuction</a>
-                            <a class="dropdown-item" href="<?= url('tummy-tuck') ?>">Tummy Tuck </a>
-                            <a class="dropdown-item" href="<?= url('buttock-enhancement') ?>">Buttock Enhancement </a>
-                            <a class="dropdown-item" href="<?= url('body-lift') ?>">Body Lift </a>
-                            <a class="dropdown-item" href="<?= url('arm-lift') ?>">Arm Lift </a>
-                            <a class="dropdown-item" href="<?= url('thigh-lift') ?>">Thigh Lift</a>
-                            <a class="dropdown-item" href="<?= url('procedures') ?>">View All Procedures </a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://cosmeticsurgery.in/hair-transplant">Hair</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://cosmeticsurgery.in/surgeons">Doctors</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Clinics
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="<?= url('hyderabad') ?>">Hyderabad</a>
-                            <a class="dropdown-item" href="<?= url('pune') ?>">Pune</a>
-                            <a class="dropdown-item" href="<?= url('bangalore') ?>">Bangalore</a>
-                            <a class="dropdown-item" href="<?= url('delhi') ?>">Delhi</a>
-                            <a class="dropdown-item" href="<?= url('chandigarh') ?>">Chandigarh</a>
-                            <a class="dropdown-item" href="<?= url('lucknow') ?>">Lucknow</a>
-                            <a class="dropdown-item" href="<?= url('bhubaneswar') ?>">Bhubaneswar</a>
-                            <a class="dropdown-item" href="<?= url('surat') ?>">Surat</a>
-                            <a class="dropdown-item" href="<?= url('thiruvananthapuram') ?>">Trivandrum</a>
-                            <a class="dropdown-item" href="<?= url('clinics') ?>">View All Clinics</a>
-                        </div>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="<?//= url('before-after-results') ?>">
-                            Before/After photos
-                        </a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?= url('blog') ?>">Blog</a>
-                    </li>
+                    <!-- code -->
+                    <?php
+                    $header_menu = dynamic_menu('menutype', 'url', 'header');
+                    if ($header_menu) {
+                        foreach ($header_menu as $item) {
+                            $child_item = dynamicMenuChildItem($item->id);
+                    ?>
+                            <li class="nav-item <?= ($child_item) ? "dropdown" : "" ?>">
+                                <a class="nav-link <?= ($child_item) ? "dropdown-toggle" : "" ?> " href="<?= ($child_item) ? "#" : $item->url ?>" <?= ($child_item) ? 'role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : '' ?>>
+                                    <?= $item->title ?>
+                                </a>
+                                <?php if ($child_item) { ?>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <?php foreach ($child_item as $c_item) { ?>
+                                            <a class="dropdown-item" href="<?= $c_item['url'] ?>">
+                                                <?= $c_item['title'] ?>
+                                            </a>
+                                        <?php } ?>
+                                    </div>
+                                <?php } ?>
+                            </li>
+                    <?php
+                        }
+                    }
+                    ?>
+                    <!-- code -->
                     @auth
                     @if(auth()->user()->getRoleNames()->first() == 'super admin')
                     <li class="nav-item">

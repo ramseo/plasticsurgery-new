@@ -2754,3 +2754,53 @@ a:focus {
 .card.margin-404 button {
     color: #fff;
 }
+
+.preloader {
+    background: #f8f8f8 !important;
+}
+
+.preloader {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity .2s linear;
+    width: 100%;
+    z-index: 9999;
+}
+
+.align-items-center {
+    align-items: center !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.flex-column {
+    flex-direction: column !important;
+}
+
+.preloader .loader-element {
+    position: relative;
+}
+
+.preloader .loader-element .loader-animated-dot {
+    display: block;
+    width: 9px;
+    height: 9px;
+    background: #f8f8f8;
+    border-radius: 50%;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    animation: bounce 0.6s cubic-bezier(0.6, -0.28, 0.74, 0.05) infinite;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border-style: none;
+}

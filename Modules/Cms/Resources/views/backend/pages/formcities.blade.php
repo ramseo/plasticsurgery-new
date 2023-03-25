@@ -101,7 +101,7 @@
             success: function(response) {
                 console.log(response);
                 if (response.status == false) {
-                    alert(selected_city + " " + 'page was already added!');
+                    alert(selected_city + " " + 'pages was already added!');
                     $("#this-select-item").val(null).trigger("change");
                 }
             },

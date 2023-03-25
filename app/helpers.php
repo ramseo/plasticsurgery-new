@@ -998,4 +998,91 @@ if (!function_exists('date_today')) {
 
         return $target;
     }
+
+
+
+    function contains_str($str, array $arr)
+    {
+        foreach ($arr as $a) {
+            if (stripos($str, $a) !== false) return true;
+        }
+        return false;
+    }
+
+    function citiesArr()
+    {
+        return array(
+            "chandigarh",
+            "hyderabad",
+            "pune",
+            "delhi",
+            "bangalore",
+            "bhubaneswar",
+            "lucknow",
+            "surat",
+            "trivandrum",
+            "ludhiana",
+            "kolkata",
+            "ahmedabad",
+            "chennai",
+            "nagpur",
+            "bhopal",
+            "patna",
+            "jaipur",
+            "raipur",
+            "indore",
+            "mumbai",
+            "gurgaon",
+            "noida",
+            "aurangabad",
+            "meerut",
+        );
+    }
+
+
+    function getAssignedDoctors($city)
+    {
+        $cityId = DB::table('cities')->select('id')->where('name', $city)->get()->first();
+
+        if ($cityId) {
+            $doctors = DB::table('users')->select('*')->where('city', $cityId->id)->get();
+            return $doctors;
+        } else {
+            return Null;
+        }
+    }
+
+    function popular_cities_surgeries($uri, $skip, $take)
+    {
+        if ($uri == "popular-surgeries") {
+            $menu_id = DB::table('menutype')->where('url', $uri)->select('menu_id')->get()->first();
+            if ($menu_id) {
+                $menu_items = DB::table('menuitem')->where('menu_id', $menu_id->menu_id)->select('*')->skip($skip)->take($take)->get();
+                return $menu_items;
+            } else {
+                return NULL;
+            }
+        } else {
+            $cities = DB::table($uri)->select('*')->skip($skip)->take($take)->get();
+            if ($cities) {
+                return $cities;
+            } else {
+                return NULL;
+            }
+        }
+    }
+
+    function popular_surgeries_arr($uri)
+    {
+        $menu_id = DB::table('menutype')->where('url', $uri)->select('menu_id')->get()->first();
+        if ($menu_id) {
+            $menu_items = DB::table('menuitem')->where('menu_id', $menu_id->menu_id)->select('*')->get()->toArray();
+            $array = json_decode(json_encode($menu_items), true);
+            if ($array) {
+                return array_column($array, 'url');
+            }
+        }
+
+        return Null;
+    }
 }
