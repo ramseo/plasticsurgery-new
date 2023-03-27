@@ -714,6 +714,7 @@ if (!function_exists('date_today')) {
         $data = DB::table('menuitem')
             ->where('parent_id', $menuId)
             ->select('*')
+            ->limit('10')
             ->get()->toArray();
         $array = json_decode(json_encode($data), true);
 
