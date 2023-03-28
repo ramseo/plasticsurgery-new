@@ -36,7 +36,7 @@
                                         <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
                                             <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" style="width:100%" />
                                         <?php } else { ?>
-                                            <img src="<?= asset($user->avatar) ?>" style="width:100%" />
+                                            <img src="<?= asset($item->avatar) ?>" style="width:100%" />
                                         <?php } ?>
                                     </div>
                                     <div class="doc-star-rating">
@@ -554,24 +554,35 @@
 <div class="spacer">
     <div class="container-fluid">
         <div class="container">
-            <p class="small-heading m-auto">Get the right procedure</p>
+            <p class="small-heading m-auto">
+                Get the right procedure
+            </p>
             <br>
-            <h2 class="apt text-center"><span style="color:#082092"><strong>Book an Appointment </strong></span>with your <span style="color:green;"><strong class="animate animated">Top Cosmetic Surgeon</strong></span></h2>
+            <h2 class="apt text-center">
+                <span style="color:#082092">
+                    <strong>Book an Appointment</strong>
+                </span>
+                with your
+                <span style="color:green">
+                    <strong class="animate animated">
+                        Top Cosmetic Surgeon
+                    </strong>
+                </span>
+            </h2>
             <br>
-            <p class="small-heading m-auto">It will be our pleasure to serve you with our specialisation.</p>
+            <p class="small-heading m-auto">
+                It will be our pleasure to serve you with our specialisation.
+            </p>
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="ico">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <h6>Visit us in person</h6>
-                        <h6>Next to Model Colony Lake, Off FC Road, Pune, Maharashtra.</h6>
-                    </div>
-                </div>
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="ico">
                         <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                        <h6>Email us</h6>
-                        <h6><a href="mailto:drashish@cosmeticsurgery.in">drashish@cosmeticsurgery.in</a></h6>
+                        <h6>For any query related to treatment email us</h6>
+                        <h6>
+                            <a href="mailto:info@cosmeticsurgery.in">
+                                info@cosmeticsurgery.in
+                            </a>
+                        </h6>
                     </div>
                 </div>
             </div>
