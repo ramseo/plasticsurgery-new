@@ -77,6 +77,7 @@ class PagesController extends Controller
             } else {
                 $city = "";
             }
+
         } elseif (in_array($slug, $popular_surgeries_arr)) {
             $templaate_view = "popular-surgeries";
             $city = "";
@@ -105,4 +106,5 @@ class PagesController extends Controller
             compact('module_title', 'module_name', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", "city")
         );
     }
+
 }

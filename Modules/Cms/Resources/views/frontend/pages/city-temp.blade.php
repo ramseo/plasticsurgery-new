@@ -20,46 +20,42 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-            <?php
-            $getAssignedDoctors = getAssignedDoctors($city);
-            if ($getAssignedDoctors) {
-                foreach ($getAssignedDoctors as $item) {
-            ?>
-                    <div class="col-lg-12">
-                        <p class="identity">
-                            DR. <?= $item->first_name . " " . $item->last_name ?>
-                            – THE BEST RECONSTRUCTIVE AND AESTHETIC PLASTIC SURGEON IN <?= $city ?>
-                        </p>
-                        <div class="row">
-                            <div class="col-lg-2">
-                                <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
-                                    <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" style="width:100%" />
-                                <?php } else { ?>
-                                    <img src="<?= asset($user->avatar) ?>" style="width:100%" />
-                                <?php } ?>
-                                <div class="profile">
-                                    <a href="dr-ashish-davalbhakta">
-                                        <button class="btn-btn">View DR. PROFILE</button>
-                                    </a>
+            <div class="col-lg-12">
+                <p class="identity">
+                    top cosmetic surgeons in <?= $city ?>
+                </p>
+                <div class="row">
+                    <?php
+                    $getAssignedDoctors = getAssignedDoctors($city);
+                    if ($getAssignedDoctors) {
+                        foreach ($getAssignedDoctors as $item) {
+                    ?>
+                            <div class="col-lg-3 doc-flex-cls">
+                                <div class="col-lg-5 padd-null">
+                                    <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
+                                        <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" style="width:100%" />
+                                    <?php } else { ?>
+                                        <img src="<?= asset($user->avatar) ?>" style="width:100%" />
+                                    <?php } ?>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="profile">
+                                        <div class="doc-name">
+                                            Dr. <?= $item->first_name . " " . $item->last_name  ?>
+                                        </div>
+                                        <div class="doc-city">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <?= $city ?>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-9">
-                                <p>
-                                    <strong>
-                                        Dr. <?= $item->first_name . " " . $item->last_name ?>
-                                    </strong>
-                                </p>
-                                <p>Dr. <?= $item->first_name . " " . $item->last_name ?> (MB MS MCH, Plastic Surgery and FRCS from Glasgow) is an experienced Board Certified Plastic Surgeon who has acquired most of Cosmetic Surgery training in USA and UK. After doing MS General Surgery in 1993 from B J Medical College, he completed Masters in Plastic Surgery from Bombay University in 1996. Later, he went to the United Kingdom to get specialized training in cosmetic and reconstructive surgery. He also did fellowships in various aesthetic surgery domains from renowned hospitals in the United States. He has so far treated more than 5000 patients from India and all across the globe including Middle East, Africa, Australia, Canada, USA and UK.</p>
-                                <br>
-                                <p>At present, he serves the cosmetic and plastic surgery patients in his clinic in Pune, which he started in 2009 after returning from UK. He dons the role of Managing Director and Chief Aesthetic Plastic Surgeon, respectively in the clinic. Alongside, Dr. Davalbhakta is also serving an Honorary Consultant Aesthetic Plastic Surgeon at Oyster and Pearl Hospitals, and Ruby Hall Clinic, both in Pune. Among his major specialties include ethnic Rhinoplasty, Facial rejuvenation, scar less Gynaecomastia (Male Breasts), Breast Augmentation, Breast reduction and asymmetry correction, Mummy Makeover (including Breast Lift), and body Contouring using High Definition VASER and Microaire liposuction among others.</p>
-                            </div>
-                        </div>
-                    </div>
-            <?php
-                }
-            }
-            ?>
-
+                    <?php
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
         </div>
     </div>
 </div>

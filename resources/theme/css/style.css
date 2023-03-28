@@ -2804,3 +2804,8 @@ img {
     vertical-align: middle;
     border-style: none;
 }
+
+.doc-flex-cls {
+    display: flex;
+    flex-wrap: wrap;
+}
