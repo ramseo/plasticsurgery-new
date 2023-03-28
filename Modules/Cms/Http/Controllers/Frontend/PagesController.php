@@ -61,6 +61,8 @@ class PagesController extends Controller
 
     public function show($slug)
     {
+        // dd($slug);
+
         $citiesArr = citiesArr();
         $checkForCityView = contains_str($slug, $citiesArr);
 
