@@ -6,14 +6,14 @@
 
 
 <section id="page-banner">
-    <div class="container-fluid"> 
+    <div class="container-fluid">
         <div class="row">
             <div class="banner-container">
                 <div class="vendor-img">
-                    <img src="{{asset('images/blog-banner.jpg')}}" alt="blog banner" class="img-fluid filter-cls margin-img-0">
+                    <img src="" alt="blog banner" class="img-fluid filter-cls margin-img-0">
                     <div class="banner-search-col">
                         <div class="search-header">
-                            <p class="text">Blog ffg</p>
+                            <p class="text">Blog gggggg</p>
                         </div>
                     </div>
                 </div>
