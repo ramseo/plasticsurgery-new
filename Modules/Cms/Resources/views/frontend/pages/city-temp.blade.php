@@ -32,21 +32,51 @@
                     ?>
                             <div class="col-lg-3 doc-flex-cls">
                                 <div class="col-lg-5 padd-null">
-                                    <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
-                                        <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" style="width:100%" />
-                                    <?php } else { ?>
-                                        <img src="<?= asset($user->avatar) ?>" style="width:100%" />
-                                    <?php } ?>
+                                    <div class="doc-img-div">
+                                        <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
+                                            <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" style="width:100%" />
+                                        <?php } else { ?>
+                                            <img src="<?= asset($user->avatar) ?>" style="width:100%" />
+                                        <?php } ?>
+                                    </div>
+                                    <div class="doc-star-rating">
+                                        <ul class="list-inline space-list">
+                                            <li class="list-inline-item">
+                                                <ul class="list-inline">
+                                                    <li class="list-inline-item yellow-star">
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item yellow-star">
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item yellow-star">
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item yellow-star">
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li class="list-inline-item yellow-star">
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="col-lg-7">
-                                    <div class="profile">
-                                        <div class="doc-name">
-                                            Dr. <?= $item->first_name . " " . $item->last_name  ?>
-                                        </div>
-                                        <div class="doc-city">
-                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <?= $city ?>
-                                        </div>
+                                <div class="col-lg-7 doc-details-sec">
+                                    <div class="doc-name">
+                                        Dr. <?= $item->first_name . " " . $item->last_name  ?>
+                                    </div>
+                                    <div class="doc-tagline">
+                                        Plastic/Cosmetic
+                                        Surgeon
+                                    </div>
+                                    <div class="doc-city">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <?= $city ?>
+                                    </div>
+                                    <div class="btn btn-default doc-view-btn">
+                                        view more
                                     </div>
                                 </div>
                             </div>
@@ -54,6 +84,23 @@
                         }
                     }
                     ?>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            At present, he serves the cosmetic and plastic surgery patients in his clinic in <?= $city ?>,
+                            which he started in 2009 after returning from UK.
+                            He dons the role of Managing Director and Chief Aesthetic Plastic Surgeon,
+                            respectively in the clinic.
+                            Alongside, They are also serving an Honorary Consultant Aesthetic Plastic Surgeon at Oyster and Pearl Hospitals,
+                            and Ruby Hall Clinic, both in <?= $city ?>.
+                            Among his major specialties include ethnic Rhinoplasty,
+                            Facial rejuvenation, scar less Gynaecomastia (Male Breasts),
+                            Breast Augmentation, Breast reduction and asymmetry correction,
+                            Mummy Makeover (including Breast Lift),
+                            and body Contouring using High Definition VASER and Microaire liposuction among others.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
