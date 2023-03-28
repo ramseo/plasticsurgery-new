@@ -110,23 +110,6 @@
 <div class="container-fluid">
     <div class="container">
         <?= $$module_name_singular->content ?>
-        <!-- <div class="row">
-            <div class="col">
-                <p class="identity">COSMETIC SURGERY COST IN PUNE</p>
-                <p>The cosmetic surgery charges depend on the type of surgery you are about to undergo. Much will rely on the clinic and the surgeon through which you have agreed to go under the knife. You may have to pay somewhere between 50,000 INR to 150000 as per the surgery you opt for.
-                    Contacting the clinic will help you know
-                    about the involved costs in detail.</p>
-
-                <p class="identity">Our Services</p>
-                <p>In Dr. Ashish Davalbhakta’s clinic in Pune, you can get the treatment at affordable cost under the supervision of Dr. Ashish Davalbhakta himself. You can know about the respective treatment in detail by seeking an appointment with him via call. If you cannot make it to the
-                    clinic in person, there is also the option of e-consultation.</p>
-                <p>The Pune based clinic offers varied treatments under Cosmetic Surgery, Cosmetology and Wellness domains. It has even received “The Best Cosmetic Surgery Clinic in Pune” by TOI in 2017, 2018 and 2019, for its excellent efforts in the healthcare field. Much credit for this recognition goes to the robust techniques, safety standards and the high
-                    satisfaction levels that the clinic ensures during the treatment.</p>
-                <p>As a part of aesthetic plastic surgery services, the clinic provides body and facial reshaping, fat grafting,
-                    chin or cheek augmentation, breast augmentation, nose reshaping, vaginal
-                    rejuvenation or genital surgery for men and women, and so on.<. /p>
-            </div>
-        </div> -->
     </div>
 </div>
 
