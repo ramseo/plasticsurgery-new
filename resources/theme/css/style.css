@@ -2873,3 +2873,8 @@ img {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
+.item-middle {
+    display: flex;
+    justify-content: center;
+}

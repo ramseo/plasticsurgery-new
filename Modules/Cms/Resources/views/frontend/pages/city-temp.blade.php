@@ -575,14 +575,16 @@
             </p>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="ico">
-                        <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                        <h6>For any query related to treatment email us</h6>
-                        <h6>
-                            <a href="mailto:info@cosmeticsurgery.in">
-                                info@cosmeticsurgery.in
-                            </a>
-                        </h6>
+                    <div class="item-middle">
+                        <div class="ico">
+                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                            <h6>For any query related to treatment email us</h6>
+                            <h6>
+                                <a href="mailto:info@cosmeticsurgery.in">
+                                    info@cosmeticsurgery.in
+                                </a>
+                            </h6>
+                        </div>
                     </div>
                 </div>
             </div>
