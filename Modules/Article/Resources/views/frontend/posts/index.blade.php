@@ -56,7 +56,7 @@ if ($getPostCat) {
                         <div class="owl-stage">
                             <?php
                             foreach ($getPostCat as $item) {
-                                $vendor_profile_img = asset('img/default-vendor.jpg');
+                                $vendor_profile_img = asset('');
                                 if ($item['image']) {
                                     if (file_exists(public_path() . '/storage/categories/image/' . $item['image'])) {
                                         $vendor_profile_img = asset('storage/categories/image/' . $item['image']);
