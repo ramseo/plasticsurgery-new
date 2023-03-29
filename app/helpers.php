@@ -1040,6 +1040,38 @@ if (!function_exists('date_today')) {
         );
     }
 
+    function citiesSurgeriesArr()
+    {
+        return array(
+            "rhinoplasty",
+            "blepharoplasty",
+            "facelift",
+            "brow-lift",
+            "neck-lift",
+            "chin-surgery",
+            "cheek-augmentation",
+            "lip-augmentation",
+            "buccal-fat-removal",
+            "ear-surgery",
+            "breast-augmentation",
+            "breast-lift",
+            "breast-reduction",
+            "breast-implant-removal",
+            "breast-implant-revision",
+            "gynecomastia",
+            "liposuction",
+            "tummy-tuck",
+            "buttock-enhancement",
+            "body-lift",
+            "arm-lift",
+            "thigh-lif",
+            "body-contouring",
+            "mommy-makeover",
+            "hair-transplant",
+            "men-and-plastic-surgery",
+        );
+    }
+
 
     function getAssignedDoctors($city)
     {
