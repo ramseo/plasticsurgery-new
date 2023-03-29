@@ -10,10 +10,10 @@
         <div class="row">
             <div class="banner-container">
                 <div class="vendor-img">
-                    <img src="" alt="blog banner" class="img-fluid filter-cls margin-img-0">
+                    <img src=""<?= asset('img/blog.jpg') ?>" style="width:100%">" alt="blog banner" class="img-fluid filter-cls margin-img-0">
                     <div class="banner-search-col">
                         <div class="search-header">
-                            <p class="text">Blog gggggg</p>
+                            <p class="text">Blog</p>
                         </div>
                     </div>
                 </div>
@@ -56,14 +56,14 @@ if ($getPostCat) {
                         <div class="owl-stage">
                             <?php
                             foreach ($getPostCat as $item) {
-                                $vendor_profile_img = asset('');
+                                $vendor_profile_img = asset('img/default-vendor.jpg');
                                 if ($item['image']) {
                                     if (file_exists(public_path() . '/storage/categories/image/' . $item['image'])) {
                                         $vendor_profile_img = asset('storage/categories/image/' . $item['image']);
                                     }
                                 }
                             ?>
-                                <div class="owl-item">
+                                <!-- <div class="owl-item">
                                     <div class="item">
                                         <a href="<?= url("blog/c/" . $item['slug']) ?>">
                                             <img src="<?= $vendor_profile_img ?>" alt="<?= $item['alt'] ?>">
@@ -74,7 +74,7 @@ if ($getPostCat) {
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             <?php } ?>
                         </div>
                     </div>
