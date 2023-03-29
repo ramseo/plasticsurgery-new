@@ -501,13 +501,14 @@
     </div>
 </div>
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="container">
         <p class="identity m-auto text-center" style="width:fit-content">
             View All Cosmetic Surgery Procedures
         </p>
         <div class="pro-list" style="height: auto;">
-            <h3 class="text-center">COSMETIC SURGERY IN <?= $city ?> – AESTHETICS MEDISPA</h3>
+            <h3 class="text-center">COSMETIC SURGERY IN <? //= $city 
+                                                        ?> – AESTHETICS MEDISPA</h3>
             <ul>
                 <li>The clinic offers the services of duly trained and vastly experienced doctors and staff under the supervision of Dr. Ashish Davalbhakta.</li>
                 <li>The hospital features a full-fledged O.T, consisting of all the advanced equipment required for performing state-of-the-art surgical procedures.</li>
@@ -524,9 +525,9 @@
             </ul>
         </div>
     </div>
-</div>
+</div> -->
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="container text-center">
         <p class="identity text-center m-auto" style="width:fit-content">
             OUR PUNE CLINIC LOCATION:
@@ -549,7 +550,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <div class="spacer">
     <div class="container-fluid">
