@@ -2866,6 +2866,8 @@ img {
 .doc-img-div img {
     border-top-left-radius: 10px;
     border: 1px solid black;
+    height: 110px;
+    width: 110px;
 }
 
 .doc-details-sec {

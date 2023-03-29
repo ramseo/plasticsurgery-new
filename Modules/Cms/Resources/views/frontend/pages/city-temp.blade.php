@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="col-lg-7 doc-details-sec">
                                     <div class="doc-name">
-                                        Dr. <?= $item->first_name . " " . $item->last_name  ?>
+                                        Dr. <?= Str::words($item->first_name . " " . $item->last_name, '2')  ?>
                                     </div>
                                     <div class="doc-tagline">
                                         Plastic/Cosmetic
