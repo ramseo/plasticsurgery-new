@@ -77,13 +77,13 @@ $city = getData('cities');
                             $child_item = dynamicMenuChildItem($item->id);
                     ?>
                             <li class="nav-item <?= ($child_item) ? "dropdown" : "" ?>">
-                                <a class="nav-link <?= ($child_item) ? "dropdown-toggle" : "" ?> " href="<?= ($child_item) ? "#" : $item->url ?>" <?= ($child_item) ? 'role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : '' ?>>
+                                <a class="nav-link <?= ($child_item) ? "dropdown-toggle" : "" ?> " href="<?= ($child_item) ? "#" : url("/") . "/" . $item->url ?>" <?= ($child_item) ? 'role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : '' ?>>
                                     <?= $item->title ?>
                                 </a>
                                 <?php if ($child_item) { ?>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <?php foreach ($child_item as $c_item) { ?>
-                                            <a class="dropdown-item" href="<?= $c_item['url'] ?>">
+                                            <a class="dropdown-item" href="<?= url("/") . "/" . $c_item['url'] ?>">
                                                 <?= $c_item['title'] ?>
                                             </a>
                                         <?php } ?>
