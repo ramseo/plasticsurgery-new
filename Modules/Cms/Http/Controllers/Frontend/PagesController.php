@@ -61,32 +61,26 @@ class PagesController extends Controller
 
     public function show($slug)
     {
-        // dd($slug);
+        // if ($checkForCityView == true) {
+        //     $templaate_view = "city-temp"; 
 
-        $citiesArr = citiesArr();
-        $checkForCityView = contains_str($slug, $citiesArr);
+        //     $explodeArr = explode('-', $slug);
 
-        $popular_surgeries_arr = popular_surgeries_arr("popular-surgeries");
+        //     $duplicateArr = array_intersect($explodeArr, $citiesArr);
+        //     if ($duplicateArr) {
+        //         $city = reset($duplicateArr);
+        //     } else {
+        //         $city = "";
+        //     }
 
-        if ($checkForCityView == true) {
-            $templaate_view = "city-temp";
+        // } elseif (in_array($slug, $popular_surgeries_arr)) {
+        //     $templaate_view = "popular-surgeries";
+        //     $city = "";
+        // } else {
+        //     $templaate_view = "show";
+        //     $city = "";
+        // }
 
-            $explodeArr = explode('-', $slug);
-
-            $duplicateArr = array_intersect($explodeArr, $citiesArr);
-            if ($duplicateArr) {
-                $city = reset($duplicateArr);
-            } else {
-                $city = "";
-            }
-
-        } elseif (in_array($slug, $popular_surgeries_arr)) {
-            $templaate_view = "popular-surgeries";
-            $city = "";
-        } else {
-            $templaate_view = "show";
-            $city = "";
-        }
 
         $module_title = $this->module_title;
         $module_name = $this->module_name;
@@ -97,16 +91,64 @@ class PagesController extends Controller
 
         $module_action = 'Show';
 
-        //        $meta_page_type = 'article';
+        // template functions
+        $citiesArr = citiesArr();
+        $citiesSurgeriesArr = citiesSurgeriesArr();
+        $checkForCityView = contains_str($slug, $citiesSurgeriesArr);
+        $popular_surgeries_arr = popular_surgeries_arr("popular-surgeries");
 
-        $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
-        //        dd($$module_name_singular);
-        event(new PageViewed($$module_name_singular));
+        if ($checkForCityView == true) {
+
+            $template_view = "rhinoplasty-city";
+            $explodeArr = explode('-', $slug);
+
+            $duplicateArr = array_intersect($explodeArr, $citiesArr);
+
+            if ($duplicateArr) {
+                $city = reset($duplicateArr);
+            } else {
+                $city = "";
+            }
+
+            $surgery_explodeArr = explode('-', $slug);
+            $key = array_search($city, $surgery_explodeArr, true);
+            if ($key !== false) {
+                unset($surgery_explodeArr[$key]);
+            }
+
+            $surgery_str = implode(" ", $surgery_explodeArr);
+
+
+            $$module_name_singular = (object) array(
+                'meta_title' => $slug,
+                'meta_description' => $slug,
+                'meta_keywords' => $slug,
+                'name' => ucwords("Best $surgery_str Surgeon in $city"),
+            );
+        } elseif (in_array($slug, $citiesArr)) {
+            $$module_name_singular = (object) array(
+                'meta_title' => $slug,
+                'meta_description' => $slug,
+                'meta_keywords' => $slug,
+                'name' => $slug,
+            );
+
+            $template_view = "city-temp";
+            $city = $slug;
+            $surgery_str = "";
+        } else {
+            $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
+            event(new PageViewed($$module_name_singular));
+
+            $template_view = "show";
+            $city = "";
+            $surgery_str = "";
+        }
+        // template functions
 
         return view(
-            "cms::frontend.$module_name.$templaate_view",
-            compact('module_title', 'module_name', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", "city")
+            "cms::frontend.$module_name.$template_view",
+            compact('module_title', 'module_name', 'module_icon', 'module_action', 'module_name_singular', "$module_name_singular", "city", "surgery_str")
         );
     }
-
 }
