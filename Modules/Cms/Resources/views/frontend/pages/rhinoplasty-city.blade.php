@@ -851,7 +851,7 @@
             <div id="menu1" class="container tab-pane fade">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="img/breast.jpg" style="width:100%">
+                        <img src="<?= asset('img/breast.jpg') ?>" style="width:100%">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="row">
@@ -890,7 +890,7 @@
             <div id="menu2" class="container tab-pane fade">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="img/body.jpg" style="width:100%">
+                        <img src="<?= asset('img/body.jpg') ?>" style="width:100%">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="row">
@@ -934,7 +934,7 @@
             <div id="menu3" class="container tab-pane fade">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="img/male.jpg" style="width:100%">
+                        <img src="<?= asset('img/male.jpg') ?>" style="width:100%">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="row">
@@ -959,7 +959,7 @@
             <div id="menu4" class="container tab-pane fade">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="img/body-hair-to-head.jpg" style="width:100%">
+                        <img src="<?= asset('img/body-hair-to-head.jpg') ?>" style="width:100%">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="row">
@@ -984,7 +984,7 @@
             <div id="menu5" class="container tab-pane fade">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="img/failed-hair-transplant-repair.jpg" style="width:100%">
+                        <img src="<?= asset('img/failed-hair-transplant-repair.jpg') ?>" style="width:100%">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="row">
@@ -1020,7 +1020,7 @@
 
             <div id="collapseOne" class="collapse in show" aria-labelledby="headingOne" data-parent="#accordion" aria-expanded="true" style="">
                 <div class="card-body">
-                    <img src="img/face.jpg" style="width:100%">
+                    <img src="<?= asset('img/face.jpg') ?>" style="width:100%">
                     <ul>
                         <li>
                             <a href="rhinoplasty-<?= $city ?>">Rhinoplasty</a>
@@ -1065,7 +1065,7 @@
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                 <div class="card-body">
-                    <img src="img/breast.jpg" style="width:100%">
+                    <img src="<?= asset('img/breast.jpg') ?>" style="width:100%">
                     <ul>
                         <li>
                             <a href="breast-augmentation-<?= $city ?>">Breast Augmentation</a>
@@ -1098,7 +1098,7 @@
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                 <div class="card-body">
-                    <img src="img/body.jpg" style="width:100%">
+                    <img src="<?= asset('img/body.jpg') ?>" style="width:100%">
                     <ul>
                         <li>
                             <a href="liposuction-<?= $city ?>">Liposuction</a>
@@ -1137,7 +1137,7 @@
             </div>
             <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion">
                 <div class="card-body">
-                    <img src="img/male.jpg" style="width:100%">
+                    <img src="<?= asset('img/male.jpg') ?>" style="width:100%">
                     <ul>
                         <li>
                             <a href="hair-transplant-<?= $city ?>">Hair Transplant</a>
