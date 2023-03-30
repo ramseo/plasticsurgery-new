@@ -270,7 +270,7 @@
                         You do not need to bother any more if you have fat cheeks! Now, you can reduce your cheeks and have a thin facial contour with <?= $surgery_str ?> performed by <?= $city ?> best cosmetic surgeon.
                     </p>
                 </div>
-            <?php } elseif ($surgery_str == "ear-surgery") { ?>
+            <?php } elseif ($surgery_str == "ear surgery") { ?>
                 <div class="col">
                     <div class="top-content">
                         <p>
@@ -293,6 +293,82 @@
                     </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>Are you troubled with unnatural looking ears? Do not worry! Go for Otoplasty from our cosmetic surgeon in <?= $city ?> to reconstruct the ear shape and position. The professional will end up making your ears look as natural as possible.</p>
+                </div>
+            <?php } elseif ($surgery_str == "breast augmentation") { ?>
+                <div class="col">
+                    <div class="top-content">
+                        <p>
+                            If you feel the size of your breasts to be smaller than usual, you can go for <?= $surgery_str ?> surgery. The qualified cosmetic surgeon from <?= $city ?> will help you to realize your required size of breasts. You can achieve fuller, bigger and rounder breasts through <?= $surgery_str ?> procedure.
+                        </p>
+                    </div>
+                    <p class="identity">
+                        WHY CHOOSE DR FOR <?= $surgery_str ?> IN <?= $city ?>? </p>
+                    <ul>
+                        <li>The trusted cosmetic surgeon in <?= $city ?> is most qualified to perform <?= $surgery_str ?> surgery.</li>
+                        <li>Holds many years of experience in performing <?= $surgery_str ?> procedures using the methods of fat transfer or breast implants.</li>
+                        <li>Has worked with both saline-filled breast implants and silicone gel-filled implants.</li>
+                        <li>Highly skilled at choosing the right size of the implant and positioning it at the perfect location that gives the impression of naturally fuller breasts.</li>
+                        <li>Has the ability to perform touch-ups to maintain the size and look of the breasts.</li>
+                        <li>A certified cosmetic surgeon in <?= $city ?> by many prestigious national and international associations for cosmetic surgeons.</li>
+                    </ul>
+                    <p class="identity">
+                        COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?>
+                    </p>
+                    <p>
+                        When it comes to <?= $surgery_str ?>, the type of material you prefer to use – fat or implant – will influence the cost of the surgery. Usually, the cost of the procedure is around 1,00,000 INR and the cost of the implants is between 50,000 INR to 1,00,000 INR. Apart from these costs, the medication, consultations, mammograms and check-ups will also factor into the total cost. Visit the cosmetic surgeon in <?= $city ?> for a good estimate.
+                    </p>
+                    <p class="identity">OUR SERVICES</p>
+                    <p>
+                        Choose from the different options for augmentation like fat transfers, silicone implants or saline implants. Let the best cosmetic surgeon in <?= $city ?> increase your breast size and still make it look natural.
+                    </p>
+                </div>
+            <?php } elseif ($surgery_str == "breast lift") { ?>
+                <div class="col">
+                    <div class="top-content">
+                        <p>
+                            If you are feeling insecure about how your breasts droop, then a simple <?= $surgery_str ?> will improve your complete physical look. Mastopexy, also known as <?= $surgery_str ?>, is a cosmetic surgery where the surgeon raises the location of nipples and removes sagging tissues to create an impression of tightened and fuller breasts. Our cosmetic surgeon is one of the best in <?= $city ?> to create amazing results with <?= $surgery_str ?> surgery.
+                        </p>
+                    </div>
+                    <p class="identity">
+                        WHY CHOOSE DR. PRITI SHUKLA FOR <?= $surgery_str ?> IN <?= $city ?>?
+                    </p>
+                    <ul>
+                        <li>Proven expertise to help patients fix the issue of sagging breasts.</li>
+                        <li>The top cosmetic surgeon in <?= $city ?> with full practical knowledge of breast-related surgeries.</li>
+                        <li>Ability to customize the <?= $surgery_str ?> surgery based on just what the patient wants.</li>
+                        <li>A reputed cosmetic surgeon from <?= $city ?> with memberships from several national and international boards of cosmetic surgeries.</li>
+                    </ul>
+                    <p class="identity">
+                        COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?></p>
+                    <p>
+                        While the main reason for the Mastopexy is to ‘lift’ the breasts, many also opt to get reshaped or rounder breasts. So, if you are looking for such accompanying results, then the total cost of the <?= $surgery_str ?> surgery will differ. It is important to find the right cosmetic surgeon from <?= $city ?> who can advise you on a safer course of treatment.
+                    </p>
+                    <p class="identity">OUR SERVICES</p>
+                    <p>
+                        Due to aging, pregnancy or weight gain, breasts tend to sag which spoils the overall appearance even when you wear the best clothes. A <?= $surgery_str ?> surgery will help you by lifting and reshaping your breasts. Visit our cosmetic surgeon in <?= $city ?> to know more about <?= $surgery_str ?> surgery.
+                    </p>
+                </div>
+            <?php } elseif ($surgery_str == "breast reduction") {  ?>
+                <div class="col">
+                    <p class="identity">
+                        WHY CHOOSE DR. PRITI SHUKLA FOR <?= $surgery_str ?> IN <?= $city ?>? </p>
+                    <ul>
+                        <li>Highly adept at performing <?= $surgery_str ?> procedures to help patients relieve from physical constraints.</li>
+                        <li>The best cosmetic surgeon in <?= $city ?>, perfectly skilled at performing <?= $surgery_str ?> surgeries that leave minimal scarring.</li>
+                        <li>An expert cosmetic surgeon, certified by many national and international boards for cosmetic surgeons.</li>
+                        <li>Specialization in different types of <?= $surgery_str ?> surgeries like liposuction, vertical <?= $surgery_str ?> and inverted-T <?= $surgery_str ?>.</li>
+                        <li>Expert in reshaping the breasts and repositioning the nipples to achieve natural-looking breasts.</li>
+                    </ul>
+                    <p class="identity">
+                        COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?>
+                    </p>
+                    <p>
+                        <?= $surgery_str ?> surgery involves a dedicated procedure and extensive care during the recovery phase. So, apart from the main cost of surgery, you will also have to take care of your breasts after the completion of the procedure. The typical cost of a <?= $surgery_str ?> procedure is between 1,00,000 INR to 2,00,000 INR depending on the scale of the surgery. Our cosmetic surgeon in <?= $city ?> will be able to guide you better in this regard.
+                    </p>
+                    <p class="identity">OUR SERVICES</p>
+                    <p>
+                        Do not let those big breasts be a hindrance to your movements, leading to physical pain. Consult with our best cosmetic surgeon in <?= $city ?> and customize your <?= $surgery_str ?> procedure for a happy and comfortable tomorrow.
+                    </p>
                 </div>
             <?php } ?>
         </div>
