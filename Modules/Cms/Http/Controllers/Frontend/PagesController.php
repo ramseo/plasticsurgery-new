@@ -126,6 +126,7 @@ class PagesController extends Controller
                 'name' => ucwords("Best $surgery_str Surgeon in $city"),
             );
         } elseif (in_array($slug, $citiesArr)) {
+            $city = ucwords($slug);
             $$module_name_singular = (object) array(
                 'meta_title' => str_replace("-", " ", $slug),
                 'meta_description' => "Top Cosmetic Surgery Clinic in $city. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
