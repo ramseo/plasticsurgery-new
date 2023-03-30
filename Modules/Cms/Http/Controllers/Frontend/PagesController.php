@@ -120,17 +120,17 @@ class PagesController extends Controller
 
 
             $$module_name_singular = (object) array(
-                'meta_title' => $slug,
-                'meta_description' => $slug,
-                'meta_keywords' => $slug,
+                'meta_title' => str_replace("-", " ", $slug),
+                'meta_description' => "Board certified surgeon for $surgery_str in $city. Visit the cost-effective Cosmetic surgery clinic for nose surgery or nose job today",
+                'meta_keywords' => str_replace("-", " ", $slug),
                 'name' => ucwords("Best $surgery_str Surgeon in $city"),
             );
         } elseif (in_array($slug, $citiesArr)) {
             $$module_name_singular = (object) array(
-                'meta_title' => $slug,
-                'meta_description' => $slug,
-                'meta_keywords' => $slug,
-                'name' => $slug,
+                'meta_title' => str_replace("-", " ", $slug),
+                'meta_description' => "Top Cosmetic Surgery Clinic in $city. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
+                'meta_keywords' => str_replace("-", " ", $slug),
+                'name' => str_replace("-", " ", $slug),
             );
 
             $template_view = "city-temp";

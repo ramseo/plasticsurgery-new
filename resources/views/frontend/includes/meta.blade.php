@@ -34,45 +34,36 @@ $meta_page_type = 'website';
 
 @endswitch
 
-<!-- code -->
 <?php
-$vendor_profile_img = asset(setting('meta_image'));
-$meta_description = setting('meta_description');
 
-$getBlogViaSlug = getBlogViaSlug(last(request()->segments()));
-
-if ($getBlogViaSlug) {
-    if (file_exists(public_path() . $getBlogViaSlug->featured_image)) {
-        $vendor_profile_img = asset($getBlogViaSlug->featured_image);
-    }
-    if ($getBlogViaSlug->content) {
-        $meta_description = $getBlogViaSlug->content;
-    }
-} elseif (isset($vendor_details->image)) {
-    if (file_exists(public_path() . '/storage/vendor/profile/' . $vendor_details->image)) {
-        $vendor_profile_img = asset('storage/vendor/profile/' . $vendor_details->image);
+$meta_img_target = asset("img/Buccal-Fat-Removal-Cheek-Reduction-1-1024x683.jpg");
+$meta_description_target = "";
+if (isset($$module_name_singular)) {
+    if (isset($$module_name_singular->meta_description)) {
+        $meta_description_target = $$module_name_singular->meta_description;
     }
 }
-?>
-<!-- code -->
 
-<!-- Facebook Meta -->
-<meta property="og:url" content="{{url()->full()}}" />
+?>
+
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" contnet="website" />
+<meta property="og:site_name" content="CosmeticSurgery.in" />
 <meta property="og:title" content="@yield('title') | {{ config('app.name') }}" />
-<meta property="og:site_name" content="{{setting('meta_site_name')}}" />
-<meta property="og:description" content="<?= $meta_description ?>" />
-<meta property="og:image" content="<?= $vendor_profile_img ?>" />
+<meta property="og:description" content="<?= $meta_description_target ?>" />
+<meta property="og:url" content="<?= url()->full() ?>" />
+<meta property="og:image" content="<?= $meta_img_target ?>" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 
 <!-- Twitter Meta -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="{{ setting('meta_twitter_site') }}">
-<meta name="twitter:url" content="{{url()->full()}}" />
-<meta name="twitter:creator" content="{{ setting('meta_twitter_creator') }}">
+<meta name="twitter:site" content="@CosmeticSurgIN">
 <meta name="twitter:title" content="@yield('title') | {{ config('app.name') }}">
-<meta name="twitter:description" content="<?= $meta_description ?>">
-<meta name="twitter:image" content="<?= $vendor_profile_img ?>">
+<meta name="twitter:description" content="<?= $meta_description_target ?>">
+<meta name="twitter:creator" content="<?= url()->current() ?>">
+<meta name="twitter:image" content="<?= $meta_img_target ?>">
+<meta name="twitter:url" content="<?= url()->full() ?>" />
 
 <!--canonical link-->
-<link rel="canonical" href="{{url()->current()}}">
+<link rel="canonical" href="<?= url()->current() ?>">
