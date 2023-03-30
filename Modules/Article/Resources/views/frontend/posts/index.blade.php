@@ -10,11 +10,33 @@
         <div class="row">
             <div class="banner-container">
                 <div class="vendor-img">
-                    <img src=""<?= asset('img/blog.jpg') ?>" style="width:100%">" alt="blog banner" class="img-fluid filter-cls margin-img-0">
+                    <img src="<?= asset('img/blog.jpg') ?>" style="width:100%" alt="blog banner" class="img-fluid filter-cls margin-img-0">
                     <div class="banner-search-col">
-                        <div class="search-header">
+                        <!-- <div class="search-header">
                             <p class="text">Blog</p>
-                        </div>
+                        </div> -->
+  <div class="row row-xs-center">
+				<div class="col-md-6">
+							<div class="page-title-bar-heading">
+			<h1 class="bloggg">
+				Blog Grid 1			</h1>
+		</div>
+						</div>
+
+									<div class="col-md-6">
+							<div id="page-breadcrumb" class="page-breadcrumb">
+		<div class="page-breadcrumb-inner">
+			<ul class="insight_core_breadcrumb">
+	<li class="level-1 top"><a href="https://healsoul.thememove.com/">Home</a></li>
+	<li class="level-2 sub tail current"><span>Blog Grid 1</span></li>
+</ul>
+		</div>
+	</div>
+					</div>
+					
+			</div>
+
+                        
                     </div>
                 </div>
             </div>

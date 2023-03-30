@@ -1,7 +1,15 @@
 /* test css */
+
+#page-banner
+{
+ padding-top:130px;
+}
+
+
+
 #breadcrumb-sec
 {
-     padding-top: 100px!important;
+ padding-top: 100px!important;
 
 }
 
@@ -34,4 +42,17 @@
     font-size: 20px;
     border-radius: 50px;
     background: #2abfb7;
+}
+
+.page-title-bar-02 .bloggg {
+    font-weight: 700;
+    letter-spacing: 0em;
+    line-height: 1.2;
+    text-transform: none;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 0px;
+    position: absolute;
+    bottom: 250px;
+    left: 50px;
 }
