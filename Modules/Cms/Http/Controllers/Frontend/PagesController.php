@@ -61,27 +61,6 @@ class PagesController extends Controller
 
     public function show($slug)
     {
-        // if ($checkForCityView == true) {
-        //     $templaate_view = "city-temp"; 
-
-        //     $explodeArr = explode('-', $slug);
-
-        //     $duplicateArr = array_intersect($explodeArr, $citiesArr);
-        //     if ($duplicateArr) {
-        //         $city = reset($duplicateArr);
-        //     } else {
-        //         $city = "";
-        //     }
-
-        // } elseif (in_array($slug, $popular_surgeries_arr)) {
-        //     $templaate_view = "popular-surgeries";
-        //     $city = "";
-        // } else {
-        //     $templaate_view = "show";
-        //     $city = "";
-        // }
-
-
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
