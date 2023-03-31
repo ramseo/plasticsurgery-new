@@ -106,14 +106,15 @@ class PagesController extends Controller
                 'name' => ucwords("Best $uc_surgery_str Surgeon in $uc_city"),
             );
         } elseif (in_array($slug, $citiesArr)) {
-            $city = ucwords($slug);
+            $city = $slug;
+            $uc_city = ucwords($slug);
             $template_view = "city-temp";
             $surgery_str = "";
             $$module_name_singular = (object) array(
-                'meta_title' => ucwords(str_replace("-", " ", $city)),
-                'meta_description' => "Top Cosmetic Surgery Clinic in $city. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
+                'meta_title' => ucwords(str_replace("-", " ", $uc_city)),
+                'meta_description' => "Top Cosmetic Surgery Clinic in $uc_city. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
                 'meta_keywords' => "",
-                'name' => ucwords(str_replace("-", " ", $city)),
+                'name' => str_replace("-", " ", $uc_city),
             );
         } else {
             $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
