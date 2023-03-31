@@ -55,7 +55,7 @@
                             </strong>
                         </p>
                         <p>
-                            While healthy eyes have the tendency to enhance your entire appearance, sagging upper eyelids or dark circles can make you look dull. Blepharoplasty is an ideal cosmetic surgery for aesthetically correcting droopy or sagging upper eyelids and removing the unwanted skin on the lower eyelids. When performed by our expert cosmetic surgeon in Pune, your eyes will look fresh, bright and youthful.
+                            While healthy eyes have the tendency to enhance your entire appearance, sagging upper eyelids or dark circles can make you look dull. Blepharoplasty is an ideal cosmetic surgery for aesthetically correcting droopy or sagging upper eyelids and removing the unwanted skin on the lower eyelids. When performed by our expert cosmetic surgeon in <?= $city ?>, your eyes will look fresh, bright and youthful.
                         </p>
                     </div>
                     <p class="identity">WHY CHOOSE DR FOR <?= $surgery_str ?> IN <?= $city ?>? </p>
