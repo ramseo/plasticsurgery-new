@@ -3,7 +3,6 @@
 @section('title') {{$$module_name_singular->meta_title}} @endsection
 
 @section('site-meta-tags')
-<meta name="keyword" content="{{ $$module_name_singular->meta_keywords ? $$module_name_singular->meta_keywords : setting('meta_keyword') }}">
 <meta name="description" content="{{ $$module_name_singular->meta_description ? $$module_name_singular->meta_description : setting('meta_keyword') }}">
 @endsection
 

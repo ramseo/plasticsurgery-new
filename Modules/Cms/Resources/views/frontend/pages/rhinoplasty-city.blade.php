@@ -10,7 +10,7 @@
 
 @section('content')
 
-<div class="header-space"></div>
+<div class="header-space"></div> 
 <div class="cit">
     <div class="container">
         <p>{{$$module_name_singular->name}}</p>
