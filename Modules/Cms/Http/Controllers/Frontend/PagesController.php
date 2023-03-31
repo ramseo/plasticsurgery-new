@@ -124,7 +124,7 @@ class PagesController extends Controller
             $city = "";
             $surgery_str = "";
         }
-        // template functions
+        // template functions 
 
         return view(
             "cms::frontend.$module_name.$template_view",
