@@ -3,14 +3,13 @@
 @section('title') {{$$module_name_singular->meta_title}} @endsection
 
 @section('site-meta-tags')
-<meta name="keyword" content="{{ $$module_name_singular->meta_keywords ? $$module_name_singular->meta_keywords : setting('meta_keyword') }}">
 <meta name="description" content="{{ $$module_name_singular->meta_description ? $$module_name_singular->meta_description : setting('meta_keyword') }}">
 @endsection
 
 
 @section('content')
 
-<div class="header-space"></div> 
+<div class="header-space"></div>
 <div class="cit">
     <div class="container">
         <p>{{$$module_name_singular->name}}</p>
@@ -49,6 +48,16 @@
                 </div>
             <?php } elseif ($surgery_str == "blepharoplasty") { ?>
                 <div class="col">
+                    <div class="top-content">
+                        <p>
+                            <strong>
+                                Is your appearance affected by the droopy eyelids?
+                            </strong>
+                        </p>
+                        <p>
+                            While healthy eyes have the tendency to enhance your entire appearance, sagging upper eyelids or dark circles can make you look dull. Blepharoplasty is an ideal cosmetic surgery for aesthetically correcting droopy or sagging upper eyelids and removing the unwanted skin on the lower eyelids. When performed by our expert cosmetic surgeon in Pune, your eyes will look fresh, bright and youthful.
+                        </p>
+                    </div>
                     <p class="identity">WHY CHOOSE DR FOR <?= $surgery_str ?> IN <?= $city ?>? </p>
                     <ul>
                         <li>The trusted and most experienced cosmetic surgeon in <?= $city ?> to perform <?= $surgery_str ?>.</li>
