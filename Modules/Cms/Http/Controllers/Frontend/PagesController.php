@@ -96,26 +96,25 @@ class PagesController extends Controller
             }
 
             $surgery_str = implode(" ", $surgery_explodeArr);
-            $surgery_str = ucwords($surgery_str);
+            $uc_surgery_str = ucwords($surgery_str);
+            $uc_city = ucwords($city);
 
             $$module_name_singular = (object) array(
-                'meta_title' => str_replace("-", " ", $surgery_str . " " . "Clinic in" . " " . ucwords($city)),
-                'meta_description' => "The best Board certified surgeon for $surgery_str. Get rid of unwanted eyelid skin from eyelid surgery clinic in $city at a reasonable cost",
-                'meta_keywords' => str_replace("-", " ", $slug),
-                'name' => ucwords("Best $surgery_str Surgeon in $city"),
+                'meta_title' => $uc_surgery_str . " " . "Clinic in" . " " . $uc_city,
+                'meta_description' => "The best Board certified surgeon for $uc_surgery_str. Get rid of unwanted eyelid skin from eyelid surgery clinic in $uc_city at a reasonable cost",
+                'meta_keywords' => "",
+                'name' => ucwords("Best $uc_surgery_str Surgeon in $uc_city"),
             );
         } elseif (in_array($slug, $citiesArr)) {
             $city = ucwords($slug);
-            $$module_name_singular = (object) array(
-                'meta_title' => ucwords(str_replace("-", " ", $slug)),
-                'meta_description' => "Top Cosmetic Surgery Clinic in $city. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
-                'meta_keywords' => str_replace("-", " ", $slug),
-                'name' => str_replace("-", " ", $slug),
-            );
-
             $template_view = "city-temp";
-            $city = $slug;
             $surgery_str = "";
+            $$module_name_singular = (object) array(
+                'meta_title' => ucwords(str_replace("-", " ", $city)),
+                'meta_description' => "Top Cosmetic Surgery Clinic in $city. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
+                'meta_keywords' => "",
+                'name' => ucwords(str_replace("-", " ", $city)),
+            );
         } else {
             $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
             event(new PageViewed($$module_name_singular));
