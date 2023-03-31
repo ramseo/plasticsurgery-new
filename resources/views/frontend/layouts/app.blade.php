@@ -13,10 +13,10 @@
     <!-- BROWSER ICONS -->
     <meta name="robots" content="index, follow" />
     <title>@yield('title') | {{ config('app.name') }}</title>
+
     @yield('site-meta-tags')
     @include('frontend.includes.meta')
 
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="refresh" content="{{ config('session.lifetime') * 600 }}">
 
