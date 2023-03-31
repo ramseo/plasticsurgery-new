@@ -19,9 +19,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="refresh" content="{{ config('session.lifetime') * 600 }}">
-    <!-- Rating code -->
+
     <?php
     if (isset($vendor_details)) {
+        //   Rating code
+
         $vendor_profile_img = asset('img/default-vendor.jpg');
         if ($vendor_details->image) {
             if (file_exists(public_path() . '/storage/vendor/profile/' . $vendor_details->image)) {
@@ -51,8 +53,8 @@
             $attr = ["@type" => "Review", "reviewRating" => ["@type" => "Rating", "ratingValue" => 0], "author" => ["@type" => "Person", "name" => "super admin"]];
             $review_json_encode = json_encode($attr);
         }
-
     ?>
+
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org/",
@@ -76,10 +78,9 @@
 
             }
         </script>
-
+        <!-- Rating code -->
     <?php } ?>
 
-    <!-- Rating code -->
     @stack('x')
 
     <link rel="stylesheet" href="{{ mix('css/wed.css') }}">
