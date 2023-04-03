@@ -78,33 +78,41 @@ class PagesController extends Controller
 
         if ($checkForCityView == true) {
 
-            $template_view = "rhinoplasty-city";
-            $explodeArr = explode('-', $slug);
+            if (in_array($slug, $popular_surgeries_arr)) {
+                $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
+                event(new PageViewed($$module_name_singular));
 
-            $duplicateArr = array_intersect($explodeArr, $citiesArr);
-
-            if ($duplicateArr) {
-                $city = reset($duplicateArr);
-            } else {
+                $template_view = "popular-surgeries";
                 $city = "";
+                $surgery_str = "";
+            } else {
+                $template_view = "rhinoplasty-city";
+                $explodeArr = explode('-', $slug);
+                $duplicateArr = array_intersect($explodeArr, $citiesArr);
+
+                if ($duplicateArr) {
+                    $city = reset($duplicateArr);
+                } else {
+                    $city = "";
+                }
+
+                $surgery_explodeArr = explode('-', $slug);
+                $key = array_search($city, $surgery_explodeArr, true);
+                if ($key !== false) {
+                    unset($surgery_explodeArr[$key]);
+                }
+
+                $surgery_str = implode(" ", $surgery_explodeArr);
+                $uc_surgery_str = ucwords($surgery_str);
+                $uc_city = ucwords($city);
+
+                $$module_name_singular = (object) array(
+                    'meta_title' => $uc_surgery_str . " " . "Clinic in" . " " . $uc_city,
+                    'meta_description' => "The best Board certified surgeon for $uc_surgery_str. Get rid of unwanted eyelid skin from eyelid surgery clinic in $uc_city at a reasonable cost",
+                    'meta_keywords' => "",
+                    'name' => ucwords("Best $uc_surgery_str Surgeon in $uc_city"),
+                );
             }
-
-            $surgery_explodeArr = explode('-', $slug);
-            $key = array_search($city, $surgery_explodeArr, true);
-            if ($key !== false) {
-                unset($surgery_explodeArr[$key]);
-            }
-
-            $surgery_str = implode(" ", $surgery_explodeArr);
-            $uc_surgery_str = ucwords($surgery_str);
-            $uc_city = ucwords($city);
-
-            $$module_name_singular = (object) array(
-                'meta_title' => $uc_surgery_str . " " . "Clinic in" . " " . $uc_city,
-                'meta_description' => "The best Board certified surgeon for $uc_surgery_str. Get rid of unwanted eyelid skin from eyelid surgery clinic in $uc_city at a reasonable cost",
-                'meta_keywords' => "",
-                'name' => ucwords("Best $uc_surgery_str Surgeon in $uc_city"),
-            );
         } elseif (in_array($slug, $citiesArr)) {
             $city = $slug;
             $uc_city = ucwords($slug);
