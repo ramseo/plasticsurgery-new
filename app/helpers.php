@@ -1012,32 +1012,12 @@ if (!function_exists('date_today')) {
 
     function citiesArr()
     {
-        return array(
-            "chandigarh",
-            "hyderabad",
-            "pune",
-            "delhi",
-            "bangalore",
-            "bhubaneswar",
-            "lucknow",
-            "surat",
-            "trivandrum",
-            "ludhiana",
-            "kolkata",
-            "ahmedabad",
-            "chennai",
-            "nagpur",
-            "bhopal",
-            "patna",
-            "jaipur",
-            "raipur",
-            "indore",
-            "mumbai",
-            "gurgaon",
-            "noida",
-            "aurangabad",
-            "meerut",
-        );
+        $all_cities = DB::table('cities')->select('slug')->get()->toArray();
+        if ($all_cities) {
+            return array_column($all_cities, 'slug');
+        } else {
+            return [];
+        }
     }
 
     function citiesSurgeriesArr()

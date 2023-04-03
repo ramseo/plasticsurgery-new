@@ -2,17 +2,26 @@
     <div class="container">
         <p class="title text-center">Find a Surgeon by City</p>
         <div class="row">
-            <div class="col-lg-3 col-md-4">
-                <div class="cities">
-                    <a href="<?= url('hyderabad') ?>">
-                        <h3>
-                            <i class="fa fa-map-marker blink" aria-hidden="true"></i>&nbsp;
-                            Hyderabad
-                        </h3>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4">
+            <?php
+            $citiesArr = citiesArr();
+            if ($citiesArr) {
+                foreach ($citiesArr as $city) {
+            ?>
+                    <div class="col-lg-3 col-md-4">
+                        <div class="cities">
+                            <a href="<?= strtolower($city) ?>">
+                                <h3>
+                                    <i class="fa fa-map-marker blink" aria-hidden="true"></i>&nbsp;
+                                    <?= $city ?>
+                                </h3>
+                            </a>
+                        </div>
+                    </div>
+            <?php
+                }
+            }
+            ?>
+            <!-- <div class="col-lg-3 col-md-4">
                 <div class="cities">
                     <a href="<?= url('pune') ?>">
                         <h3>
@@ -111,7 +120,7 @@
                         </h3>
                     </a>
                 </div>
-            </div>
+            </div> -->
             <div class="col-lg-3 col-md-4">
                 <div class="cities">
                     <a href="<?= url('join-as-plastic-surgeon') ?>">
