@@ -520,7 +520,7 @@
 <div class="spacer">
     <div class="container-fluid">
         <div class="container">
-            <p class="small-heading m-auto">
+            <!-- <p class="small-heading m-auto">
                 Get the right procedure
             </p>
             <br>
@@ -538,7 +538,7 @@
             <br>
             <p class="small-heading m-auto">
                 It will be our pleasure to serve you with our specialisation.
-            </p>
+            </p> -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="item-middle">
