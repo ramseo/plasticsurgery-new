@@ -2,43 +2,60 @@
    <footer>
       <div class="container">
          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-12">
-               <h2>About</h2>
-               <ul>
-                  <li><a href="<?= url('about') ?>">About Us</a></li>
-                  <li><a href="<?= url('procedures') ?>">Cosmetic Procedures</a></li>
-                  <li><a href="<?= url('surgeons') ?>">Our Cosmetic Surgeons</a></li>
-                  <li><a href="<?= url('before-after-results') ?>">Before & After Results</a></li>
-                  <li><a href="<?= url('book-an-appointment') ?>">Book an Appointment</a></li>
-                  <li><a href="<?= url('contact') ?>">Contact</a></li>
-               </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-               <h2>Useful Links</h2>
-               <ul>
-                  <li><a href="<?= url('surgeons') ?>">Find a Cosmetic Surgeon</a></li>
-                  <li><a href="<?= url('clinics') ?>">Find a Clinic Near You</a></li>
-                  <li><a href="<?= url('join-as-plastic-surgeon') ?>">Join as a Cosmetic Surgeon</a></li>
-                  <li><a href="<?= url('contact') ?>">Ask a Question</a></li>
-                  <li><a href="#">Become a Contributor</a></li>
-                  <li><a href="<?= url('blog') ?>">Blog</a></li>
-               </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-               <h2>Top Procedures</h2>
-               <ul>
-                  <li><a href="<?= url('liposuction') ?>">Liposuction</a></li>
-                  <li><a href="<?= url('breast-augmentation') ?>">Breast Augmentation</a></li>
-                  <li><a href="<?= url('blepharoplasty') ?>">Blepharoplasty</a></li>
-                  <li><a href="<?= url('tummy-tuck') ?>">Abdominoplasty</a></li>
-                  <li><a href="<?= url('rhinoplasty') ?>">Rhinoplasty</a></li>
-                  <li><a href="<?= url('gynecomastia') ?>">Gynecomastia</a></li>
-                  <li><a href="<?= url('hair-transplant') ?>">Hair Transplant</a></li>
-                  <li><a href="<?= url('mommy-makeover') ?>">Mommy Makeover</a></li>
-                  <li><a href="<?= url('body-contouring') ?>">Body Contouring</a></li>
-                  <li><a href="<?= url('procedures') ?>">Explore All Procedures </a></li>
-               </ul>
-            </div>
+            <?php
+            $about_menu = dynamic_menu('menutype', 'url', 'about');
+            if ($about_menu) {
+            ?>
+               <div class="col-lg-3 col-md-6 col-sm-12">
+                  <h2>About</h2>
+                  <ul>
+                     <?php foreach ($about_menu as $about_item) { ?>
+                        <li>
+                           <a href="<?= url("/") . "/" . $about_item->url ?>">
+                              <?= $about_item->title ?>
+                           </a>
+                        </li>
+                     <?php } ?>
+                  </ul>
+               </div>
+            <?php
+            }
+
+            $useful_links = dynamic_menu('menutype', 'url', 'useful-links');
+            if ($useful_links) {
+            ?>
+               <div class="col-lg-3 col-md-6 col-sm-12">
+                  <h2>Useful Links</h2>
+                  <ul>
+                     <?php foreach ($useful_links as $useful_links_item) { ?>
+                        <li>
+                           <a href="<?= url("/") . "/" . $useful_links_item->url ?>">
+                              <?= $useful_links_item->title ?>
+                           </a>
+                        </li>
+                     <?php } ?>
+                  </ul>
+               </div>
+            <?php
+            }
+
+            $top_procedures = dynamic_menu('menutype', 'url', 'top-procedures');
+            if ($top_procedures) {
+            ?>
+               <div class="col-lg-3 col-md-6 col-sm-12">
+                  <h2>Top Procedures</h2>
+                  <ul>
+                     <?php foreach ($top_procedures as $top_procedures_item) { ?>
+                        <li>
+                           <a href="<?= url("/") . "/" . $top_procedures_item->url ?>">
+                              <?= $top_procedures_item->title ?>
+                           </a>
+                        </li>
+                     <?php } ?>
+                  </ul>
+               </div>
+            <?php } ?>
+
             <div class="col-lg-3 col-md-6 col-sm-12">
                <h2>Contact</h2>
                <ul>
