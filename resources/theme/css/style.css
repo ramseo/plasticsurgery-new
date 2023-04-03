@@ -2880,3 +2880,10 @@ img {
     display: flex;
     justify-content: center;
 }
+
+.doc-view-btn a,
+.doc-view-btn a:hover {
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+}

@@ -1167,25 +1167,6 @@
 <div class="spacer">
     <div class="container-fluid">
         <div class="container">
-            <!-- <p class="small-heading m-auto">
-                Get the right procedure
-            </p>
-            <br>
-            <h2 class="apt text-center">
-                <span style="color:#082092">
-                    <strong>Book an Appointment</strong>
-                </span>
-                with your
-                <span style="color:green">
-                    <strong class="animate animated">
-                        Top Cosmetic Surgeon
-                    </strong>
-                </span>
-            </h2>
-            <br>
-            <p class="small-heading m-auto">
-                It will be our pleasure to serve you with our specialisation.
-            </p> -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="item-middle">
