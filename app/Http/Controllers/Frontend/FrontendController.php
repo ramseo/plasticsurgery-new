@@ -85,4 +85,39 @@ class FrontendController extends Controller
 
         return view("frontend.doctor-profile", compact('body_class', 'module_name_singular', "$module_name_singular", 'doctor_details', 'city'));
     }
+
+    public function clinics()
+    {
+        $body_class = '';
+        $module_name_singular = Str::singular("pages");
+        $$module_name_singular = (object) array(
+            'meta_title' => "Top Cosmetic Surgery Clinics in India | Best Plastic Surgeons",
+            'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Cosmetic Surgeon across India.",
+            'meta_keywords' => "",
+            'name' => "Clinics",
+        );
+
+        return view('frontend.clinics', compact('body_class', 'module_name_singular', "$module_name_singular"));
+    }
+
+    public function surgeons()
+    {
+        $body_class = '';
+        $module_name_singular = Str::singular("pages");
+        $$module_name_singular = (object) array(
+            'meta_title' => "Top Cosmetic Surgery Clinics in India | Best Plastic Surgeons",
+            'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Cosmetic Surgeon across India.",
+            'meta_keywords' => "",
+            'name' => "Find A Surgeon",
+        );
+
+        $doctors = [];
+        $allCitiesIds = DB::table('cities')->select('id')->get()->toArray();
+        if ($allCitiesIds) {
+            $array = array_column($allCitiesIds, 'id');
+            $doctors = DB::table('users')->select('*')->whereIn('city', $array)->get()->toArray();
+        }
+
+        return view('frontend.surgeons', compact('body_class', 'module_name_singular', "$module_name_singular", 'doctors'));
+    }
 }

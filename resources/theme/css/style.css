@@ -1051,7 +1051,7 @@ ul.nav.nav-tabs {
 }
 
 .card-body .card-title {
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 600;
     color: #333;
     text-align: center;
@@ -2886,4 +2886,15 @@ img {
     color: #fff;
     text-transform: capitalize;
     text-decoration: none;
+}
+
+.surgeons-flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.doctors-list-cls {
+    padding: 10px !important;
 }

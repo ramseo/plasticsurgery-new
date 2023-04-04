@@ -1098,4 +1098,5 @@ if (!function_exists('date_today')) {
 
         return Null;
     }
+    
 }
