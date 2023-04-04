@@ -75,7 +75,7 @@
                                         <?= $city ?>
                                     </div>
                                     <div class="btn btn-default doc-view-btn">
-                                        <a href="<?= url("doctor-profile/$item->id") ?>">
+                                        <a href="<?= url("doctor/$item->username") ?>">
                                             view more
                                         </a>
                                     </div>

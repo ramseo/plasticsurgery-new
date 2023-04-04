@@ -135,11 +135,6 @@ class UserController extends Controller
      */
     public function profileUpdate(Request $request)
     {
-
-        //        if ($id != auth()->user()->id) {
-        //            return redirect()->route('frontend.users.profile', $id);
-        //        }
-
         $id = Auth::user()->id;
 
         $this->validate($request, [
@@ -154,6 +149,11 @@ class UserController extends Controller
             $file_image = fileUpload($request, 'avatar', 'user/profile/');
             $data = array_merge($data, ['avatar' => $file_image]);
         }
+
+        // add fields to update
+        $data['name'] = $request->first_name . " " . $request->last_name;
+        $data['username'] = strtolower($request->first_name . "-" . $request->last_name);
+        // add fields to update
 
         $user->update($data);
 

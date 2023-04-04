@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Flash;
+
 class RegisteredUserController extends Controller
 {
     /**
@@ -34,14 +35,15 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'first_name' => 'required|string|max:191',
-            'last_name'  => 'string|max:191',
-            'email'      => 'required|string|email|max:191|unique:users',
-            'password'   => 'required|string|confirmed|min:8',
-            'agree' => 'required',
-            'g-recaptcha-response' => 'required|recaptchav3:register,0.5',
-        ],
+        $request->validate(
+            [
+                'first_name' => 'required|string|max:191',
+                'last_name'  => 'string|max:191',
+                'email'      => 'required|string|email|max:191|unique:users',
+                'password'   => 'required|string|confirmed|min:8',
+                'agree' => 'required',
+                'g-recaptcha-response' => 'required|recaptchav3:register,0.5',
+            ],
             [
                 'agree.required' => 'Please read and agree the terms and privacy policy',
                 'g-recaptcha-response.recaptchav3' => 'Recaptchav3 response is no longer valid: either is too old or has been used previously.'
@@ -51,14 +53,14 @@ class RegisteredUserController extends Controller
         $user = User::create([
             'first_name' => $request->first_name,
             'last_name'  => $request->last_name,
-            'name'       => $request->first_name.' '.$request->last_name,
+            'name'       => $request->first_name . ' ' . $request->last_name,
             'email'      => $request->email,
             'password'   => Hash::make($request->password),
         ]);
 
         // username
-//        $username = config('app.initial_username') + $user->id;
-        $user->username = $request->first_name . ' ' . $request->last_name;
+        // $username = config('app.initial_username') + $user->id;
+        $user->username = strtolower($request->first_name . "-" . $request->last_name);
 
         $user->save();
         $user->assignRole('user');
@@ -66,14 +68,14 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-//        event(new Registered($user));
+        //        event(new Registered($user));
         event(new UserRegistered($user));
         Flash::success("<i class='fas fa-check'></i> Registered: Please verify you email id")->important();
-//        return redirect(RouteServiceProvider::HOME);
+        //        return redirect(RouteServiceProvider::HOME);
         return redirect(route('frontend.users.profileEdit', $user->id));
     }
 
-//    public function vendorSignup(){
-//        return view('auth.vendor-signup');
-//    }
+    //    public function vendorSignup(){
+    //        return view('auth.vendor-signup');
+    //    }
 }

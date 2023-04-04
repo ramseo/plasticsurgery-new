@@ -67,10 +67,10 @@ class FrontendController extends Controller
         return view('frontend.terms', compact('body_class'));
     }
 
-    public function doctor_profile($id)
+    public function doctor_profile($slug)
     {
         // get doctor & city
-        $doctor_details = DB::table('users')->select('*')->where('id', $id)->get()->first();
+        $doctor_details = DB::table('users')->select('*')->where('username', $slug)->get()->first();
         $city = getCityById($doctor_details->city);
         // get doctor & city
 
