@@ -120,4 +120,18 @@ class FrontendController extends Controller
 
         return view('frontend.surgeons', compact('body_class', 'module_name_singular', "$module_name_singular", 'doctors'));
     }
+
+    public function procedures()
+    {
+        $body_class = '';
+        $module_name_singular = Str::singular("pages");
+        $$module_name_singular = (object) array(
+            'meta_title' => "Top Cosmetic Surgery Clinics in India | Best Plastic Surgeons",
+            'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Cosmetic Surgeon across India.",
+            'meta_keywords' => "",
+            'name' => "Find A Surgeon",
+        );
+
+        return view('frontend.procedures', compact('body_class', 'module_name_singular', "$module_name_singular"));
+    }
 }
