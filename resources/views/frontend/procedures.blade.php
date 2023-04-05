@@ -201,7 +201,7 @@
                                 <div class="kpborder"></div>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <p class="proc"><a href="<?= url('/') ?>/facial-implant">Facial Implants</a></p>
+                                        <p class="proc"><a href="<?= url('/') ?>/facial-implants">Facial Implants</a></p>
                                         <small>Facial Balancing and Enhancing</small>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
@@ -402,7 +402,7 @@
                                         <p class="proc"><a href="<?= url('/') ?>/facelift">Facelift Surgery</a></p>
                                         <small>Rhytidectomy</small>
 
-                                        <p class="proc"><a href="<?= url('/') ?>/facial-implant">Facial Implants</a></p>
+                                        <p class="proc"><a href="<?= url('/') ?>/facial-implants">Facial Implants</a></p>
                                         <small>Facial Balancing and Enhancing</small>
                                     </div>
 

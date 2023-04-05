@@ -72,13 +72,14 @@ class PagesController extends Controller
 
         // template functions
         $citiesArr = citiesArr();
-        $citiesSurgeriesArr = citiesSurgeriesArr();
+        $citiesSurgeriesArr = citiesSurgeriesArr('popular-surgeries');
         $checkForCityView = contains_str($slug, $citiesSurgeriesArr);
         $popular_surgeries_arr = popular_surgeries_arr("popular-surgeries");
 
         if ($checkForCityView == true) {
 
             if (in_array($slug, $popular_surgeries_arr)) {
+
                 $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
                 event(new PageViewed($$module_name_singular));
 
