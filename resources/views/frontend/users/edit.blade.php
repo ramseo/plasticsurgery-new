@@ -4,6 +4,23 @@
 
 @section('content')
 
+<style>
+    .edit-pics {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .edit-pics img {
+        object-fit: cover;
+        /* object-position: -45px; */
+    }
+
+    .profile-form-section {
+        margin-top: 28px;
+    }
+</style>
+
 <!-- <section id="breadcrumb-section">
     <div class="container-fluid">
         <div class="row">
@@ -167,20 +184,41 @@
 
                         <div class="row">
                             <div class="col-sm-6">
-                                <div class="form-group">
+                                <div class="form-group tags-group">
+
+                                    <!-- Multiple Tags -->
                                     <?php
-                                    $field_name1 = 'city';
-                                    $field_lable1 = label_case($field_name1);
-                                    $field_placeholder1 = "-- Select an option --";
-                                    $required1 = "";
+                                    $field_name = 'city[]';
+                                    $field_lable = label_case($field_name);
+                                    $field_relation = "city";
+                                    $required = "";
 
-                                    $city_options = [];
-                                    $getAllCities = getAllCities();
-
+                                    if (!$user) {
                                     ?>
+                                        {{ html()->label($field_lable, "city") }}
+                                        {{ html()->select($field_name, ($module_name_singular) ?optional($module_name_singular->$field_relation)->pluck('name', 'id'):'')->class('form-control select2-cities')->attributes(['multiple']) }}
+                                    <?php
+                                    } else {
+                                        $getSelectedTagVal = getSelectedCityVal(json_decode($user->city));
+                                    ?>
+                                        <label for="city">Cities</label>
+                                        <select name="city[]" class="form-control select2-cities" multiple>
+                                            <?php
+                                            if ($getSelectedTagVal) {
+                                                foreach ($getSelectedTagVal as $item) {
+                                            ?>
+                                                    <option value="<?= $item['id'] ?>" selected>
+                                                        <?= $item['name'] ?>
+                                                    </option>
+                                            <?php
+                                                }
+                                            }
+                                            ?>
+                                        </select>
+                                    <?php } ?>
 
-                                    {{ html()->label($field_lable1, $field_name) }} {!! fielf_required($required1) !!}
-                                    {{ html()->select($field_name1, $getAllCities)->placeholder($field_placeholder1)->class('form-control')->attributes(["$required1"]) }}
+                                    <!-- Multiple Tags -->
+
                                 </div>
                             </div>
                         </div>
@@ -198,19 +236,38 @@
 </section>
 
 @endsection
-<style>
-    .edit-pics {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
-    .edit-pics img {
-        object-fit: cover;
-        /* object-position: -45px; */
-    }
+<!-- Select2 Library -->
+<x-library.select2 />
+<x-library.datetime-picker />
 
-    .profile-form-section {
-        margin-top: 28px;
-    }
-</style>
+@push ('after-scripts')
+<script>
+    $(document).ready(function() {
+
+        $('.select2-cities').select2({
+            theme: "bootstrap",
+            multiple: true,
+            placeholder: '@lang("Select an option")',
+            minimumInputLength: 0,
+            allowClear: true,
+            ajax: {
+                url: '{{route("frontend.users.get_user_cities")}}',
+                dataType: 'json',
+                data: function(params) {
+                    return {
+                        q: $.trim(params.term),
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data
+                    };
+                },
+                cache: true
+            }
+        });
+
+    });
+</script>
+@endpush

@@ -92,7 +92,9 @@ mix.scripts(
         "resources/theme/js/owl.carousel.min.js",
         "resources/theme/js/jquery.rateit.min.js",
         "resources/theme/js/jquery-asRange.min.js",
-        "resources/theme/js/custom.js"
+        "resources/theme/js/custom.js",
+        "resources/theme/js/light.js",
+        "resources/theme/js/lead.js",
     ],
     "public/js/wed.js"
 );

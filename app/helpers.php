@@ -831,6 +831,20 @@ if (!function_exists('date_today')) {
         return $array;
     }
 
+    function getSelectedCityVal($cities)
+    {
+        if (!$cities) {
+            return;
+        }
+
+        $data = DB::table('cities');
+        $data->select('id', 'name', 'slug');
+        $data->whereIn('id', $cities);
+        $rr = $data->get()->toArray();
+        $array = json_decode(json_encode($rr), true);
+        return $array;
+    }
+
     function getPostsByTag($tagId)
     {
         $data = DB::table('posts')

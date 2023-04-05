@@ -63,6 +63,9 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         Route::get('profile', ['as' => "users.profile", 'uses' => "UserController@profile"]);
         Route::get('profile/edit', ['as' => "users.profileEdit", 'uses' => "UserController@profileEdit"]);
         Route::post('profile/edit', ['as' => "users.profileUpdate", 'uses' => "UserController@profileUpdate"]);
+        // get user cities
+        Route::get('users/cities', ['as' => "users.get_user_cities", 'uses' => "UserController@get_user_cities"]);
+        // get user cities
         Route::get("users/emailConfirmationResend/{id}", ['as' => "users.emailConfirmationResend", 'uses' => "UserController@emailConfirmationResend"]);
         Route::get('profile/changePassword', ['as' => "users.changePassword", 'uses' => "UserController@changePassword"]);
         Route::patch('profile/changePassword', ['as' => "users.changePasswordUpdate", 'uses' => "UserController@changePasswordUpdate"]);

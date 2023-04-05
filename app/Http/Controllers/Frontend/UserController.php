@@ -120,6 +120,7 @@ class UserController extends Controller
         if (Auth::check() == false) {
             return redirect(base_url());
         }
+
         $user = Auth::user();
         Log::info(label_case('Edit | ' . $user->name . '(ID:' . $user->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return view("frontend.users.edit")->with('user', $user);
@@ -153,6 +154,13 @@ class UserController extends Controller
         // add fields to update
         $data['name'] = $request->first_name . " " . $request->last_name;
         $data['username'] = strtolower($request->first_name . "-" . $request->last_name);
+
+        if ($data['city']) {
+            $jsonEncodeTags = json_encode($data['city']);
+            $data['city'] = $jsonEncodeTags;
+        } else {
+            $data['city'] = Null;
+        }
         // add fields to update
 
         $user->update($data);
@@ -574,5 +582,30 @@ class UserController extends Controller
         // dd($vendors);
 
         return view("frontend.users.vendor",  compact('user_quotation', 'type', 'more_vendors', 'vendors'));
+    }
+
+
+    public function get_user_cities(Request $request)
+    {
+        $module_name = $this->module_name;
+
+        $term = trim($request->q);
+
+        if (empty($term)) {
+            return response()->json([]);
+        }
+
+        $query_data = DB::table('cities')->where('name', 'LIKE', "%$term%")->orWhere('slug', 'LIKE', "%$term%")->limit(7)->get();
+
+        $$module_name = [];
+
+        foreach ($query_data as $row) {
+            $$module_name[] = [
+                'id'   => $row->id,
+                'text' => $row->name . ' (Slug: ' . $row->slug . ')',
+            ];
+        }
+
+        return response()->json($$module_name);
     }
 }

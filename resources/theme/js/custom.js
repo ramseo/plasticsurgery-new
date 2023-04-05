@@ -122,10 +122,12 @@ function button_scroll() {
     $("#button-scroll").show();
 
     const goblogFreeBtnTop = document.getElementById("button-scroll");
-    goblogFreeBtnTop.addEventListener('click', () => window.scrollTo({
-        top: 0.1,
-        behavior: 'smooth',
-    }));
+    if (goblogFreeBtnTop) {
+        goblogFreeBtnTop.addEventListener('click', () => window.scrollTo({
+            top: 0.1,
+            behavior: 'smooth',
+        }));
+    }
 }
 
 $(document).on('click', '#filter-validation', function (event) {
