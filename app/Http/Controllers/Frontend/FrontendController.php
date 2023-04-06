@@ -69,21 +69,23 @@ class FrontendController extends Controller
 
     public function doctor_profile($slug)
     {
+        // dd('fff');
         // get doctor & city
         $doctor_details = DB::table('users')->select('*')->where('username', $slug)->get()->first();
-        $city = getCityById($doctor_details->city);
+
+        $citiesStr = getCitiesById($doctor_details->city);
         // get doctor & city
 
         $body_class = '';
         $module_name_singular = Str::singular("pages");
         $$module_name_singular = (object) array(
-            'meta_title' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " – Top Plastic Surgeon in $city->name",
-            'meta_description' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " is one of the best plastic / cosmetic surgeons in $city->name. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
+            'meta_title' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " – Top Plastic Surgeon in $citiesStr",
+            'meta_description' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " is one of the best plastic / cosmetic surgeons in $citiesStr. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
             'meta_keywords' => "",
-            'name' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " – Top Plastic Surgeon in $city->name",
+            'name' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " – Top Plastic Surgeon in $citiesStr",
         );
 
-        return view("frontend.doctor-profile", compact('body_class', 'module_name_singular', "$module_name_singular", 'doctor_details', 'city'));
+        return view("frontend.doctor-profile", compact('body_class', 'module_name_singular', "$module_name_singular", 'doctor_details', 'citiesStr'));
     }
 
     public function clinics()

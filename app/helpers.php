@@ -962,6 +962,19 @@ if (!function_exists('date_today')) {
         return DB::table('cities')->select('name', 'slug', 'id')->where('id', $cityId)->get()->first();
     }
 
+    function getCitiesById($jsonData)
+    {
+        $implode = "";
+        $array = json_decode($jsonData, true);
+        $data = DB::table('cities')->select('name')->whereIn('id', $array)->get()->toArray();
+        if ($data) {
+            $array_column = array_column($data, 'name');
+            $implode = implode(",", $array_column);
+        }
+
+        return $implode;
+    }
+
     function generate_multiple_pages($data)
     {
         // dd($data);
