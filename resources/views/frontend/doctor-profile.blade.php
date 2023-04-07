@@ -76,7 +76,9 @@
                             3rd Floor Road No 12,
                             Banjara Hills, Hyderabad-500 034,
                         </p>
-                        <p><?= $citiesStr ?>, India.</p>
+                        <p class="doc-details-cities">
+                            <?= $citiesStr ?> India.
+                        </p>
                         <p>
                             <strong>Email:</strong>
                             <a href="mailto:<?= $doctor_details->email ?>">
