@@ -67,13 +67,18 @@ class FrontendController extends Controller
         return view('frontend.terms', compact('body_class'));
     }
 
-    public function doctor_profile($slug) 
+    public function doctor_profile($slug)
     {
         // get doctor & city
         $doctor_details = DB::table('users')->select('*')->where('username', $slug)->get()->first();
-
         $citiesStr = getCitiesById($doctor_details->city);
         // get doctor & city
+
+        // Add missing data
+        $doctor_userprofiles = DB::table('userprofiles')->select('*')->where('user_id', $doctor_details->id)->get()->first();
+        $doctor_details->address = $doctor_userprofiles->address;
+        $doctor_details->year_experience = $doctor_userprofiles->bio;
+        // Add missing data
 
         $body_class = '';
         $module_name_singular = Str::singular("pages");

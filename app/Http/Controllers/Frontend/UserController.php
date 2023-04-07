@@ -165,6 +165,20 @@ class UserController extends Controller
 
         $user->update($data);
 
+        // update userprofiles table
+        $userprofiles = [];
+        $userprofiles['date_of_birth'] = $data['date_of_birth'];
+        $userprofiles['name'] = $data['name'];
+        $userprofiles['first_name'] = $data['first_name'];
+        $userprofiles['last_name'] = $data['last_name'];
+        $userprofiles['username'] = $data['username'];
+        $userprofiles['address'] = $data['address'];
+        $userprofiles['mobile'] = $data['mobile'];
+        $userprofiles['gender'] = $data['gender'];
+        $userprofiles['bio'] = $data['experience_years'];
+        DB::table('userprofiles')->where('user_id', $id)->update($userprofiles);
+        // update userprofiles table
+
         Flash::success("<i class='fas fa-check'></i> Vendor Updated Successfully")->important();
         Log::info(label_case('Update | ' . $user->name . '(ID:' . $user->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         //        return redirect("admin/vendor/edit/" . $user->id);

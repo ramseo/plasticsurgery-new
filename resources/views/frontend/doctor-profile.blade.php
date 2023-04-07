@@ -65,16 +65,18 @@
                         </div>
                     </div>
                     <div class="col-lg-10">
-                        <p><strong><i>Plastic Surgeon, M.S., M.Ch.</i></strong></p>
-                        <p><strong>Years of Experience:</strong> 19 years</p>
                         <p>
-                            <strong>Address:</strong>
-                            Ambrosia Clinic, MLA Colony,
-                            Indian Overseas Bank Building,
+                            <strong>
+                                <i>Plastic Surgeon, M.S., M.Ch.</i>
+                            </strong>
                         </p>
                         <p>
-                            3rd Floor Road No 12,
-                            Banjara Hills, Hyderabad-500 034,
+                            <strong>Years of Experience:</strong>
+                            <?= $doctor_details->year_experience ?> years
+                        </p>
+                        <p>
+                            <strong>Address:</strong>
+                            <?= $doctor_details->address ?>
                         </p>
                         <p class="doc-details-cities">
                             <?= $citiesStr ?> India.

@@ -185,9 +185,10 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group tags-group">
-
-                                    <!-- Multiple Tags -->
+                                    <!-- Multiple Cities -->
                                     <?php
+                                    $get_userprofiles = get_userprofiles($user->id);
+
                                     $field_name = 'city[]';
                                     $field_lable = label_case($field_name);
                                     $field_relation = "city";
@@ -216,9 +217,35 @@
                                             ?>
                                         </select>
                                     <?php } ?>
+                                    <!-- Multiple Cities -->
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <?php
+                                    $field_name = 'experience_years';
+                                    $field_lable = label_case($field_name);
+                                    $field_placeholder = $field_lable;
+                                    $required = "required";
+                                    ?>
+                                    {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
+                                    {!! Form::text($field_name, $get_userprofiles->bio, ['class' => 'form-control','placeholder' => 'Experience Years', $required => $required]) !!}
+                                    <!-- {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }} -->
+                                </div>
+                            </div>
+                        </div>
 
-                                    <!-- Multiple Tags -->
-
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <?php
+                                    $field_name = 'address';
+                                    $field_lable = label_case($field_name);
+                                    $field_placeholder = $field_lable;
+                                    $required = "required";
+                                    ?>
+                                    {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
+                                    {!! Form::textarea($field_name, $get_userprofiles->address, ['class' => 'form-control', 'rows' => 5, 'cols' => 10,'placeholder' => 'Address', $required => $required]) !!}
                                 </div>
                             </div>
                         </div>
