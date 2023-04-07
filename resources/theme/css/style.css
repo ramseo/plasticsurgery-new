@@ -2835,6 +2835,28 @@ img {
     border-bottom-left-radius: 10px;
 }
 
+/* vvv */
+.doc-star-rating-profile {
+    background: #679;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.doc-star-rating-profile .space-list {
+    justify-content: center;
+    margin: 0;
+}
+
+.doc-star-rating-profile ul li ul {
+    padding: 5px 0 5px 0;
+}
+
+.doc-star-rating-profile ul li ul li i {
+    font-size: 18px;
+}
+
+/* ddd */
+
 .doc-star-rating ul li ul li {
     margin-right: 0 !important;
 }
@@ -2897,4 +2919,23 @@ img {
 
 .doctors-list-cls {
     padding: 10px !important;
+}
+
+.profile-write-review a,
+.profile-write-review a:hover {
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cities-font-size {
+    font-size: 13px;
+}
+
+.cities_cls a,
+.cities_cls a:hover {
+    color: #fff;
+    text-decoration: none;
 }

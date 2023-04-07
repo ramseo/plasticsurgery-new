@@ -67,9 +67,8 @@ class FrontendController extends Controller
         return view('frontend.terms', compact('body_class'));
     }
 
-    public function doctor_profile($slug)
+    public function doctor_profile($slug) 
     {
-        // dd('fff');
         // get doctor & city
         $doctor_details = DB::table('users')->select('*')->where('username', $slug)->get()->first();
 
@@ -113,12 +112,7 @@ class FrontendController extends Controller
             'name' => "Find A Surgeon",
         );
 
-        $doctors = [];
-        $allCitiesIds = DB::table('cities')->select('id')->get()->toArray();
-        if ($allCitiesIds) {
-            $array = array_column($allCitiesIds, 'id');
-            $doctors = DB::table('users')->select('*')->whereIn('city', $array)->get()->toArray();
-        }
+        $doctors = DB::table('users')->select('*')->whereNotNull('city')->get()->toArray();
 
         return view('frontend.surgeons', compact('body_class', 'module_name_singular', "$module_name_singular", 'doctors'));
     }

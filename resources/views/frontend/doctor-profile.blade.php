@@ -12,7 +12,7 @@
 <div class="header-space"></div>
 <div class="cit">
     <div class="container">
-        <p>
+        <p class="cities_cls">
             <?= $$module_name_singular->name ?>
         </p>
     </div>
@@ -22,7 +22,17 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <p class="identity">DR. <?= $doctor_details->first_name . " " . $doctor_details->last_name ?></p>
+                <p class="identity">
+                    <span>
+                        DR. <?= $doctor_details->first_name . " " . $doctor_details->last_name ?>
+                    </span>
+                    <span class="pull-right profile-write-review">
+                        <a href="#" data-toggle="modal" data-target="#reviewModal">
+                            Write a Review
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                        </a>
+                    </span>
+                </p>
                 <div class="row">
                     <div class="col-lg-2">
                         <?php if (file_exists(public_path() . '/storage/user/profile/' . $doctor_details->avatar)) { ?>
@@ -30,6 +40,29 @@
                         <?php } else { ?>
                             <img src="<?= asset($doctor_details->avatar) ?>" style="width:100%">
                         <?php } ?>
+                        <div class="doc-star-rating-profile">
+                            <ul class="list-inline space-list">
+                                <li class="list-inline-item">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item yellow-star">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="list-inline-item yellow-star">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="list-inline-item yellow-star">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="list-inline-item yellow-star">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li class="list-inline-item yellow-star">
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-lg-10">
                         <p><strong><i>Plastic Surgeon, M.S., M.Ch.</i></strong></p>
@@ -124,7 +157,60 @@
         </div>
     </div>
 </div>
-<!-- codepp -->
+
+<!-- doctor review popup -->
+<div class="modal fade" id="reviewModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="reachus-overlay">
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        Dr. <?= $doctor_details->first_name . " " . $doctor_details->last_name ?>
+                    </h4>
+                    <button id="eliminate-val-error" type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="review-form-main-col">
+                        <div class="alert alert-danger reviewAlert" style="display: none;"></div>
+
+                        <form id="reviewForm">
+                            <div class="form-group stars-cls">
+                                <div class="review-rating" data-rateit-mode="font" data-rateit-resetable="false"></div>
+                                <input type="hidden" id="review-rating-hidden" value="0">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <?php
+                                if (auth()->user() != Null) {
+                                    $loggedInUserName = auth()->user()->first_name . " " . auth()->user()->last_name;
+                                ?>
+                                    <input id="reviewTitle" value="<?= $loggedInUserName ?>" name="name" type="text" class="form-control" readonly>
+                                <?php
+                                } else {
+                                ?>
+                                    <input id="reviewTitle" name="name" type="text" class="form-control">
+                                <?php } ?>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Your Review</label>
+                                <textarea id="reviewDescription" name="" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group save-btn-cls">
+                                @auth
+                                <input id="reviewUserId" type="hidden" value="{{Auth::user()->id}}">
+                                @endauth
+                                <input id="reviewVendorId" type="hidden" value="{{$doctor_details->id}}">
+                                <input type="submit" class="btn btn-primary" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- doctor review popup -->
 
 @endsection
 

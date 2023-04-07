@@ -99,30 +99,20 @@
             </div>
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 citi-locat">
                <ul class="footer-list">
-                  <li><a href="<?= url('chandigarh') ?>">Chandigarh</a>|</li>
-                  <li><a href="<?= url('hyderabad') ?>">Hyderabad</a>|</li>
-                  <li><a href="<?= url('pune') ?>">Pune</a>|</li>
-                  <li><a href="<?= url('thiruvananthapuram') ?>">Thiruvananthapuram</a>|</li>
-                  <li><a href="<?= url('lucknow') ?>">Lucknow</a>|</li>
-                  <li><a href="<?= url('bangalore') ?>">Bangalore</a>|</li>
-                  <li><a href="<?= url('delhi') ?>">Delhi</a>|</li>
-                  <li><a href="<?= url('bhubaneswar') ?>">Bhubaneswar</a>|</li>
-                  <li><a href="<?= url('surat') ?>">Surat</a>|</li>
-                  <li><a href="<?= url('ludhiana') ?>">Ludhiana</a>|</li>
-                  <li><a href="<?= url('kolkata') ?>">Kolkata</a>|</li>
-                  <li><a href="<?= url('raipur') ?>">Raipur</a>|</li>
-                  <li><a href="<?= url('patna') ?>">Patna</a>|</li>
-                  <li><a href="<?= url('nagpur') ?>">Nagpur</a>|</li>
-                  <li><a href="<?= url('mumbai') ?>">Mumbai</a>|</li>
-                  <li><a href="<?= url('jaipur') ?>">Jaipur</a>|</li>
-                  <li><a href="<?= url('indore') ?>">Indore</a>|</li>
-                  <li><a href="<?= url('chennai') ?>">Chennai</a>|</li>
-                  <li><a href="<?= url('bhopal') ?>">Bhopal</a>|</li>
-                  <li><a href="<?= url('ahmedabad') ?>">Ahmedabad</a>|</li>
-                  <li><a href="<?= url('gurgaon') ?>">Gurgaon</a>|</li>
-                  <li><a href="<?= url('meerut') ?>">Meerut</a>|</li>
-                  <li><a href="<?= url('aurangabad') ?>">Aurangabad</a>|</li>
-                  <li><a href="<?= url('noida') ?>">Noida</a></li>
+                  <?php
+                  $citiesArr = citiesArr();
+                  if ($citiesArr) {
+                     foreach ($citiesArr as $city) {
+                  ?>
+                        <li>
+                           <a href="<?= url(strtolower($city)) ?>">
+                              <?= ucwords($city) ?>
+                           </a>|
+                        </li>
+                  <?php
+                     }
+                  }
+                  ?>
                </ul>
             </div>
          </div>

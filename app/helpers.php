@@ -964,15 +964,24 @@ if (!function_exists('date_today')) {
 
     function getCitiesById($jsonData)
     {
-        $implode = "";
+        $html = "";
         $array = json_decode($jsonData, true);
         $data = DB::table('cities')->select('name')->whereIn('id', $array)->get()->toArray();
+
         if ($data) {
-            $array_column = array_column($data, 'name');
-            $implode = implode(",", $array_column);
+            $numItems = count($data);
+            $i = 0;
+            foreach ($data as $item) {
+                if (++$i === $numItems) {
+                    $delimiter = "";
+                } else {
+                    $delimiter = ",";
+                }
+                $html .= "<a target='_blank' href='" . url('/') . "/" . strtolower($item->name) . "'>" . $item->name . "</a>" . $delimiter;
+            }
         }
 
-        return $implode;
+        return $html;
     }
 
     function generate_multiple_pages($data)

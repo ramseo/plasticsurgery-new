@@ -24,7 +24,8 @@
             <?php
             if ($doctors) {
                 foreach ($doctors as $doc_item) {
-                    $city = getCityById($doc_item->city);
+                    $city = getCitiesById($doc_item->city);
+                    // dd($city);
             ?>
                     <div class="col-lg-3 col-md-6">
                         <div class="card">
@@ -45,9 +46,9 @@
                                     <li>Cosmetic / Plastic Surgeon</li>
                                     <li>MCh</li>
                                     <li>
-                                        <a target="_blank" href="<?= url($city->slug) ?>">
+                                        <a href="javascript:void(0)">
                                             <i class="fa fa-map-marker blink"></i>
-                                            <b><?= $city->name ?></b>
+                                            <b class="cities-font-size" ><?= $city ?></b>
                                         </a>
                                     </li>
                                 </ul>
