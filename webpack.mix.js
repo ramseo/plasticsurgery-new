@@ -65,10 +65,10 @@ mix.styles(
     [
         // "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
         // "public/vendor/impact-design/front/css/front.css",
-        // "resources/theme/css/justifiedGallery.min.css",
+        "resources/theme/css/justifiedGallery.min.css",
         // "resources/theme/css/owl.carousel.min.css",
         // "resources/theme/css/owl.theme.default.min.css",
-        // "resources/theme/css/rateit.css",
+        "resources/theme/css/rateit.css",
         "resources/theme/css/pooja.css",
         "resources/theme/css/style.css",
         "resources/theme/css/responsive.css"
@@ -77,7 +77,7 @@ mix.styles(
 );
 
 // frontend js
-mix.scripts(
+mix.scripts( 
     [
         "node_modules/jquery/dist/jquery.min.js",
         "node_modules/popper.js/dist/umd/popper.min.js",
@@ -93,7 +93,7 @@ mix.scripts(
         "resources/theme/js/jquery.rateit.min.js",
         "resources/theme/js/jquery-asRange.min.js",
         "resources/theme/js/custom.js",
-        "resources/theme/js/light.js",
+        // "resources/theme/js/light.js",
         "resources/theme/js/lead.js",
     ],
     "public/js/wed.js"
