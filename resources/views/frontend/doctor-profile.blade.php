@@ -151,6 +151,91 @@
     </div>
 </div>
 
+<?php if ($reviews) { ?>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="identity">
+                        Latest Reviews (<?= count($reviews) ?>)
+                    </p>
+                    <div class="detail-review-body">
+                        <?php
+                        foreach ($reviews as $rev) {
+                        ?>
+                            <div class="col-xs-12 single-review">
+                                <div class="review-header">
+                                    <p class="name review-title">
+                                        <?= $rev->title ?>
+                                    </p>
+                                    <div class="rev-flex-cls">
+                                        <ul class="list-inline rating-list">
+                                            <li class="list-inline-item">
+                                                <ul class="list-inline">
+                                                    <?php
+                                                    $totalRating = 5;
+                                                    $starRating = $rev->rating;
+
+                                                    for ($i = 1; $i <= $totalRating; $i++) {
+                                                        if ($starRating < $i) {
+                                                            if (is_float($starRating) && (round($starRating) == $i)) {
+                                                                echo "";
+                                                            } else {
+                                                                echo "<li class='list-inline-item yellow-star'>
+                                                               <i class='fa fa-star-o' aria-hidden='true'></i>
+                                                             </li>";
+                                                            }
+                                                        } else {
+                                                            echo "<li class='list-inline-item yellow-star'>
+                                                            <i class='fa fa-star'></i>
+                                                         </li>";
+                                                        }
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li class="list-inline-item review-listing review-created-at">
+                                                <?= date('d', strtotime($rev->created_at)) . " , " . date("F", strtotime($rev->created_at)) . " , " . date('Y', strtotime($rev->created_at)) ?>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="review-body">
+                                    <p class="comment more-content-cls">
+                                        <?= $rev->description ?>
+                                    </p>
+                                </div>
+
+                                <?php
+                                if (auth()->user()) {
+                                    $userRole = auth()->user()->getRoleNames()->first();
+                                    $getLoggedInVendor = getLoggedInVendor(auth()->user()->id);
+                                    if ($userRole == "vendor") {
+                                        if ($getLoggedInVendor->business_name == $vendor_details->business_name) {
+                                ?>
+                                            <div class="reply-review">
+                                                <a href="javascript:void(0)" class="show_reply_popup" review_id="<?= $review->id ?>">
+                                                    Reply
+                                                    <i class="fa fa-reply" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                <?php
+                                        }
+                                    }
+                                }
+                                ?>
+                            </div>
+                        <?php } ?>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+
 <div class="spacer">
     <div class="container-fluid">
         <div class="container">

@@ -2958,3 +2958,70 @@ img {
 .save-btn-cls .submit-review {
     width: 100%;
 }
+
+.alert.alert-danger.reviewAlert ul {
+    margin: 0;
+}
+
+.rev-flex-cls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rev-flex-cls ul {
+    margin: 0;
+}
+
+.review-title {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.review-body p {
+    font-size: 15px;
+}
+
+.review-created-at {
+    font-size: 15px;
+}
+
+.vendor-detail-cols {
+    font-size: 14px;
+}
+
+.detail-review-body .single-review {
+    border-radius: 8px;
+    box-shadow: 0 1px 4px 0 #dadada;
+    padding: 15px;
+}
+
+.single-review {
+    font-size: 14px;
+    margin: 15px 0px;
+    margin: 25px 0px;
+}
+
+.space-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.single-review p {
+    margin: 0;
+}
+
+.detail-review-body .single-review:hover {
+    box-shadow: 0 1px 12px 0 #cdcdcd;
+}
+
+.rating-list li ul li i {
+    font-size: 15px;
+}
+
+.morecontent span {
+    display: none;
+}

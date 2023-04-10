@@ -73,7 +73,7 @@ $('.more-content-cls').each(function () {
     var content = $(this).html();
 
     if (content.length > showChar) {
-
+          console.log('fff');
         var c = content.substr(0, showChar);
         var h = content.substr(showChar - 1, content.length - showChar);
 

@@ -100,7 +100,7 @@ class ReviewController extends Controller
 
         $module_action = 'List';
 
-        $module_name = $module_model::select('id', 'title', 'rating', 'description', 'vendor_id', 'is_active');
+        $module_name = $module_model::select('id', 'title', 'rating', 'description', 'email', 'phone', 'is_active');
 
         $data = $module_name;
 
@@ -126,7 +126,8 @@ class ReviewController extends Controller
             })
             ->editColumn('description', '{{$description}}')
             ->editColumn('rating', '{{$rating}}')
-            ->editColumn('vendor_id', '{{getVendorById($vendor_id)}}')
+            ->editColumn('email', '{{$email}}')
+            ->editColumn('phone', '{{$phone}}')
             // ->editColumn('updated_at', function ($data) {
             //     $module_name = $this->module_name;
             //     $diff = Carbon::now()->diffInHours($data->updated_at);
@@ -324,7 +325,7 @@ class ReviewController extends Controller
 
     public function reply_destroy($id, $review_id)
     {
-    
+
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_name_singular = Str::singular($module_name);
