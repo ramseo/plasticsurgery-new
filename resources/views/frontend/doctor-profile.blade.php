@@ -40,29 +40,41 @@
                         <?php } else { ?>
                             <img src="<?= asset($doctor_details->avatar) ?>" style="width:100%">
                         <?php } ?>
-                        <div class="doc-star-rating-profile">
-                            <ul class="list-inline space-list">
-                                <li class="list-inline-item">
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item yellow-star">
-                                            <i class="fa fa-star"></i>
-                                        </li>
-                                        <li class="list-inline-item yellow-star">
-                                            <i class="fa fa-star"></i>
-                                        </li>
-                                        <li class="list-inline-item yellow-star">
-                                            <i class="fa fa-star"></i>
-                                        </li>
-                                        <li class="list-inline-item yellow-star">
-                                            <i class="fa fa-star"></i>
-                                        </li>
-                                        <li class="list-inline-item yellow-star">
-                                            <i class="fa fa-star"></i>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                        <!-- codeff -->
+                        <?php
+                        $reviews = getDataArray('vendor_reviews', 'user_id', $doctor_details->id);
+                        $average = averageReview($reviews);
+                        ?>
+                        <!-- codeff -->
+                        <?php if ($average > 0) { ?>
+                            <div class="doc-star-rating-profile">
+                                <ul class="list-inline space-list">
+                                    <li class="list-inline-item">
+                                        <ul class="list-inline">
+                                            <?php
+                                            for ($i = 1; $i <= $average; $i++) {
+                                            ?>
+                                                <li class="list-inline-item yellow-star">
+                                                    <i class="fa fa-star"></i>
+                                                </li>
+                                            <?php } ?>
+                                            <!-- <li class="list-inline-item yellow-star">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item yellow-star">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item yellow-star">
+                                                <i class="fa fa-star"></i>
+                                            </li>
+                                            <li class="list-inline-item yellow-star">
+                                                <i class="fa fa-star"></i>
+                                            </li> -->
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        <?php } ?>
                     </div>
                     <div class="col-lg-10">
                         <p>
@@ -181,7 +193,6 @@
                 <div class="modal-body">
                     <div class="review-form-main-col">
                         <div class="alert alert-danger reviewAlert" style="display: none;"></div>
-
                         <form id="reviewForm">
                             <div class="form-group stars-cls">
                                 <div class="review-rating" data-rateit-mode="font" data-rateit-resetable="false"></div>
@@ -190,16 +201,7 @@
 
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <?php
-                                if (auth()->user() != Null) {
-                                    $loggedInUserName = auth()->user()->first_name . " " . auth()->user()->last_name;
-                                ?>
-                                    <input id="reviewTitle" value="<?= $loggedInUserName ?>" name="name" type="text" class="form-control" readonly>
-                                <?php
-                                } else {
-                                ?>
-                                    <input id="reviewTitle" name="name" type="text" class="form-control">
-                                <?php } ?>
+                                <input id="reviewTitle" name="name" type="text" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="">Your Review</label>
@@ -209,8 +211,8 @@
                                 @auth
                                 <input id="reviewUserId" type="hidden" value="{{Auth::user()->id}}">
                                 @endauth
-                                <input id="reviewVendorId" type="hidden" value="{{$doctor_details->id}}">
-                                <input type="submit" class="btn btn-primary" value="Submit">
+                                <input id="reviewDoctorId" type="hidden" value="{{$doctor_details->id}}">
+                                <input type="submit" class="btn btn-primary submit-review" value="Submit Review">
                             </div>
                         </form>
                     </div>
@@ -305,9 +307,7 @@
                 data: {
                     '_token': "<?php echo csrf_token() ?>",
                     'user_id': $('#reviewUserId').val(),
-                    'vendor_id': $('#reviewVendorId').val(),
-                    'type_id': $('#reviewVendorTypeId').val(),
-                    'city_id': $('#reviewVendorCityId').val(),
+                    'doctor_id': $('#reviewDoctorId').val(),
                     'name': $('#reviewTitle').val(),
                     'rating': $('#review-rating-hidden').val(),
                     'description': $('#reviewDescription').val()

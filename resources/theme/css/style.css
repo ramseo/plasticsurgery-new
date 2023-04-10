@@ -2953,3 +2953,7 @@ img {
 .doc-title {
     font-weight: 600;
 }
+
+.save-btn-cls .submit-review {
+    width: 100%;
+}
