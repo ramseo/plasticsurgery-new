@@ -2858,7 +2858,8 @@ img {
 /* ddd */
 
 .doc-star-rating ul li ul li {
-    margin-right: 0 !important;
+    margin-right: 2px !important;
+    margin-left: 2px;
 }
 
 .doc-star-rating .space-list {

@@ -24,7 +24,7 @@
             <?php
             if ($doctors) {
                 foreach ($doctors as $doc_item) {
-                    $city = getCitiesById($doc_item->city);
+                    $city = getCitiesById($doc_item->city, "html");
                     // dd($city);
             ?>
                     <div class="col-lg-3 col-md-6">
@@ -48,7 +48,7 @@
                                     <li>
                                         <a href="javascript:void(0)">
                                             <i class="fa fa-map-marker blink"></i>
-                                            <b class="cities-font-size" ><?= $city ?></b>
+                                            <b class="cities-font-size"><?= $city ?></b>
                                         </a>
                                     </li>
                                 </ul>

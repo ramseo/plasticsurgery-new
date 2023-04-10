@@ -211,10 +211,13 @@ class VendorController extends Controller
 
     public function postReview(Request $request)
     {
+    
         $validator = Validator::make($request->all(), [
             'rating' => 'required|not_in:0',
             'description' => 'required',
             'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
         ]);
 
         if ($validator->passes()) {
@@ -225,6 +228,8 @@ class VendorController extends Controller
             $vendor->rating = $data['rating'];
             $vendor->description = $data['description'];
             $vendor->title = $data['name'];
+            $vendor->phone = $data['phone'];
+            $vendor->email = $data['email'];
             $vendor->created_at = date("Y-m-d", time());
             $vendor->save();
             return response()->json(['success' => true, 'message' => 'Review posted successfully!']);

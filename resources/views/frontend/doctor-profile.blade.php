@@ -40,41 +40,40 @@
                         <?php } else { ?>
                             <img src="<?= asset($doctor_details->avatar) ?>" style="width:100%">
                         <?php } ?>
-                        <!-- codeff -->
+
                         <?php
                         $reviews = getDataArray('vendor_reviews', 'user_id', $doctor_details->id);
                         $average = averageReview($reviews);
                         ?>
-                        <!-- codeff -->
-                        <?php if ($average > 0) { ?>
-                            <div class="doc-star-rating-profile">
-                                <ul class="list-inline space-list">
-                                    <li class="list-inline-item">
-                                        <ul class="list-inline">
-                                            <?php
-                                            for ($i = 1; $i <= $average; $i++) {
-                                            ?>
-                                                <li class="list-inline-item yellow-star">
-                                                    <i class="fa fa-star"></i>
-                                                </li>
-                                            <?php } ?>
-                                            <!-- <li class="list-inline-item yellow-star">
-                                                <i class="fa fa-star"></i>
-                                            </li>
-                                            <li class="list-inline-item yellow-star">
-                                                <i class="fa fa-star"></i>
-                                            </li>
-                                            <li class="list-inline-item yellow-star">
-                                                <i class="fa fa-star"></i>
-                                            </li>
-                                            <li class="list-inline-item yellow-star">
-                                                <i class="fa fa-star"></i>
-                                            </li> -->
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        <?php } ?>
+
+                        <div class="doc-star-rating-profile">
+                            <ul class="list-inline space-list">
+                                <li class="list-inline-item">
+                                    <ul class="list-inline">
+                                        <?php
+                                        $totalRating = 5;
+                                        $starRating = $average;
+
+                                        for ($i = 1; $i <= $totalRating; $i++) {
+                                            if ($starRating < $i) {
+                                                if (is_float($starRating) && (round($starRating) == $i)) {
+                                                    echo "";
+                                                } else {
+                                                    echo "<li class='list-inline-item yellow-star'>
+                                                               <i class='fa fa-star-o' aria-hidden='true'></i>
+                                                             </li>";
+                                                }
+                                            } else {
+                                                echo "<li class='list-inline-item yellow-star'>
+                                                            <i class='fa fa-star'></i>
+                                                         </li>";
+                                            }
+                                        }
+                                        ?>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-lg-10">
                         <p>
@@ -198,14 +197,21 @@
                                 <div class="review-rating" data-rateit-mode="font" data-rateit-resetable="false"></div>
                                 <input type="hidden" id="review-rating-hidden" value="0">
                             </div>
-
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input id="reviewTitle" name="name" type="text" class="form-control">
+                                <input id="reviewTitle" name="name" type="text" class="form-control" placeholder="Enter Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input id="reviewPhone" name="phone" type="phone" class="form-control" placeholder="Enter Phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="reviewEmail" name="email" type="email" class="form-control" placeholder="Enter Email">
                             </div>
                             <div class="form-group">
                                 <label for="">Your Review</label>
-                                <textarea id="reviewDescription" name="" class="form-control"></textarea>
+                                <textarea id="reviewDescription" class="form-control" placeholder="Enter Review" cols="10" rows="5"></textarea>
                             </div>
                             <div class="form-group save-btn-cls">
                                 @auth
@@ -229,69 +235,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('.callButton').click(function() {
-            if ('<?php echo Auth::check(); ?>' == '') {
-                location.href = "{{ route('login') }}";
-            } else {
-                $('body').block({
-                    message: "Processing..."
-                });
-                $.ajax({
-                    type: 'POST',
-                    url: "{{route('frontend.call')}}",
-                    data: {
-                        '_token': "<?php echo csrf_token(); ?>",
-                        'user_id': "<?php echo Auth::check() == 1 ? Auth::user()->id : ''; ?>",
-                        'vendor_id': "<?php echo '$vendor_details->id'; ?>"
-                    },
-                    success: function(res) {
-                        if (res.success) {
-                            $(".callPopup").addClass("active");
-                            $("#call-slide").addClass("active");
-                            // $('.reviewAlert').html('').hide();
-                            // $('#reviewForm').trigger('reset');
-                            // toastr.success(res.message, 'Review posted Successfully!');
-                        } else {
-                            // $('.reviewAlert').html(res.message).show();
-                        }
-                        $('body').unblock();
-                    }
-                });
-            }
-
-        });
-
-
-        $('.cpp-after-call').click(function() {
-            let review = $(this).attr('review');
-            $('.cppSlide').removeClass('active');
-            $.ajax({
-                type: 'POST',
-                url: "{{route('frontend.call-review')}}",
-                data: {
-                    '_token': "<?php echo csrf_token(); ?>",
-                    'user_id': "<?php echo Auth::check() == 1 ? Auth::user()->id : ''; ?>",
-                    'vendor_id': "<?php echo '$vendor_details->id;' ?>",
-                    'review': review
-                },
-                success: function(res) {
-                    if (res.success) {
-                        $("#call-thank-you-slide").addClass("active");
-                    } else {
-                        // $('.reviewAlert').html(res.message).show();
-                    }
-                }
-            });
-
-        });
-
-        $('.cppClose').click(function() {
-            $('.callPopup').removeClass('active');
-        });
-
-    });
-
-    $(document).ready(function() {
         var options = {
             minMargin: 10,
             maxMargin: 35,
@@ -309,6 +252,8 @@
                     'user_id': $('#reviewUserId').val(),
                     'doctor_id': $('#reviewDoctorId').val(),
                     'name': $('#reviewTitle').val(),
+                    'phone': $('#reviewPhone').val(),
+                    'email': $('#reviewEmail').val(),
                     'rating': $('#review-rating-hidden').val(),
                     'description': $('#reviewDescription').val()
                 },
@@ -330,7 +275,6 @@
             });
         });
 
-        // reply modal
         $('#replyForm').submit(function(e) {
             e.preventDefault();
             $.ajax({
@@ -366,14 +310,7 @@
                 }
             });
         });
-        // reply modal
 
-        $('#see-full-list').click(function(e) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: $(".pricing-col").offset().top - 100
-            }, 1500);
-        });
     });
 </script>
 

@@ -29,9 +29,9 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('/', 'FrontendController@index')->name('index');
     Route::get('home', 'FrontendController@index')->name('home');
     Route::get('listing', 'FrontendController@listing')->name('listing');
-    Route::get('detail', 'FrontendController@detail')->name('detail');
+    Route::get('detail', 'FrontendController@detail')->name('detail'); 
     // new routes 
-    Route::get('doctor/{slug}', 'FrontendController@doctor_profile')->name('doctor');
+    Route::get('surgeon/{slug}', 'FrontendController@surgeon_profile')->name('surgeon');
     Route::get('clinics', 'FrontendController@clinics')->name('clinics');
     Route::get('surgeons', 'FrontendController@surgeons')->name('surgeons');
     Route::get('procedures', 'FrontendController@procedures')->name('procedures');

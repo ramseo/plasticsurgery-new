@@ -67,11 +67,12 @@ class FrontendController extends Controller
         return view('frontend.terms', compact('body_class'));
     }
 
-    public function doctor_profile($slug)
+    public function surgeon_profile($slug)
     {
         // get doctor & city
         $doctor_details = DB::table('users')->select('*')->where('username', $slug)->get()->first();
-        $citiesStr = getCitiesById($doctor_details->city);
+        $citiesStr = getCitiesById($doctor_details->city, "html");
+        $citiesStrMeta = getCitiesById($doctor_details->city, "meta");
         // get doctor & city
 
         // Add missing data
@@ -83,10 +84,10 @@ class FrontendController extends Controller
         $body_class = '';
         $module_name_singular = Str::singular("pages");
         $$module_name_singular = (object) array(
-            'meta_title' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " – Top Plastic Surgeon in $citiesStr",
-            'meta_description' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " is one of the best plastic / cosmetic surgeons in $citiesStr. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
+            'meta_title' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " – Top Plastic Surgeon in $citiesStrMeta",
+            'meta_description' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " is one of the best plastic / cosmetic surgeons in $citiesStrMeta. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
             'meta_keywords' => "",
-            'name' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " – Top Plastic Surgeon in $citiesStr",
+            'name' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " – Top Plastic Surgeon in $citiesStrMeta",
         );
 
         return view("frontend.doctor-profile", compact('body_class', 'module_name_singular', "$module_name_singular", 'doctor_details', 'citiesStr'));

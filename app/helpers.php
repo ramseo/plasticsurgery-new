@@ -962,23 +962,30 @@ if (!function_exists('date_today')) {
         return DB::table('cities')->select('name', 'slug', 'id')->where('id', $cityId)->get()->first();
     }
 
-    function getCitiesById($jsonData)
+    function getCitiesById($jsonData, $dataType)
     {
         $html = "";
-        $array = json_decode($jsonData, true);
-        $data = DB::table('cities')->select('name')->whereIn('id', $array)->get()->toArray();
+        if ($dataType == "html") {
+            $array = json_decode($jsonData, true);
+            $data = DB::table('cities')->select('name')->whereIn('id', $array)->get()->toArray();
 
-        if ($data) {
-            $numItems = count($data);
-            $i = 0;
-            foreach ($data as $item) {
-                if (++$i === $numItems) {
-                    $delimiter = "";
-                } else {
-                    $delimiter = ",";
+            if ($data) {
+                $numItems = count($data);
+                $i = 0;
+                foreach ($data as $item) {
+                    if (++$i === $numItems) {
+                        $delimiter = "";
+                    } else {
+                        $delimiter = ",";
+                    }
+                    $html .= "<a target='_blank' href='" . url('/') . "/" . strtolower($item->name) . "'>" . $item->name . "</a>" . $delimiter;
                 }
-                $html .= "<a target='_blank' href='" . url('/') . "/" . strtolower($item->name) . "'>" . $item->name . "</a>" . $delimiter;
             }
+        } else {
+            $array = json_decode($jsonData, true);
+            $data = DB::table('cities')->select('name')->whereIn('id', $array)->get()->toArray();
+            $array_column = array_column($data, "name");
+            $html = implode(",", $array_column);
         }
 
         return $html;
