@@ -275,14 +275,18 @@ class VendorController extends Controller
                     $html .= '<div class="rev-flex-cls">';
                     $html .= '<div class="img-col">';
 
-                    $user_profile_img = asset('img/default-vendor.jpg');
+                    $user_profile_img = asset('img/default-avatar.jpg');
 
-                    if ($data['avatar']) {
-                        if (file_exists(public_path() . '/storage/user/profile/' . $data['avatar'])) {
-                            $user_profile_img = asset('storage/user/profile/' . $data['avatar']);
+                    if ($item->name == "Super Admin") {
+                        $user_profile_img = asset('img/default-avatar.jpg');
+                    } else {
+                        if ($data['avatar']) {
+                            if (file_exists(public_path() . '/storage/user/profile/' . $data['avatar'])) {
+                                $user_profile_img = asset('storage/user/profile/' . $data['avatar']);
+                            }
                         }
                     }
-                    
+
                     $html .= '<img src="' . $user_profile_img . '" class="img-fluid" alt="alt img">';
                     $html .= '</div>';
 
