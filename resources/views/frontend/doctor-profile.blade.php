@@ -42,7 +42,7 @@
                         <?php } ?>
 
                         <?php
-                        $reviews = getDataArray('vendor_reviews', 'user_id', $doctor_details->id);
+                        $reviews = getReviewArray('vendor_reviews', 'user_id', $doctor_details->id);
                         $average = averageReview($reviews);
                         ?>
 
@@ -210,23 +210,73 @@
 
                                 <?php
                                 if (auth()->user()) {
-                                    $userRole = auth()->user()->getRoleNames()->first();
-                                    $getLoggedInVendor = getLoggedInVendor(auth()->user()->id);
-                                    if ($userRole == "vendor") {
-                                        if ($getLoggedInVendor->business_name == $vendor_details->business_name) {
+                                    if (auth()->user()->username == $doctor_details->username || auth()->user()->username == "super_admin") {
                                 ?>
-                                            <div class="reply-review">
-                                                <a href="javascript:void(0)" class="show_reply_popup" review_id="<?= $review->id ?>">
-                                                    Reply
-                                                    <i class="fa fa-reply" aria-hidden="true"></i>
-                                                </a>
-                                            </div>
+                                        <div class="reply-review">
+                                            <a href="javascript:void(0)" class="show_reply_popup" review_id="<?= $rev->id ?>">
+                                                Reply
+                                                <i class="fa fa-reply" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
                                 <?php
-                                        }
                                     }
                                 }
                                 ?>
+
+                                <!-- admin reply -->
+                                <div id="AjaxUpdateReply-<?= $rev->id ?>">
+                                    <?php
+                                    $getReviewReply = getReviewReply($rev->id);
+                                    foreach ($getReviewReply as $reply) {
+                                    ?>
+                                        <div class="admin-reply">
+                                            <div class="col-xs-12 reply-review-cls">
+                                                <div class="review-header">
+                                                    <ul class="list-inline space-list">
+                                                        <li>
+                                                            <div class="rev-flex-cls">
+                                                                <div class="img-col">
+                                                                    <?php
+                                                                    $doc_profile_img = asset('img/default-vendor.jpg');
+                                                                    if ($doctor_details->avatar) {
+                                                                        if (file_exists(public_path() . '/storage/user/profile/' . $doctor_details->avatar)) {
+                                                                            $doc_profile_img = asset('storage/user/profile/' . $doctor_details->avatar);
+                                                                        }
+                                                                    }
+                                                                    ?>
+                                                                    <img src="<?= $doc_profile_img ?>" class="img-fluid" alt="alt img">
+                                                                </div>
+                                                                <div class="text-col">
+                                                                    <p class="name review-title">
+                                                                        <?= $reply->name ?>
+                                                                    </p>
+                                                                    <ul class="list-inline rating-list">
+                                                                        <li class="list-inline-item">
+                                                                            <ul class="list-inline">
+                                                                                <li class="list-inline-item review-listing">
+                                                                                    <?= date('d', strtotime($reply->created_at)) . " , " . date("F", strtotime($reply->created_at)) . " , " . date('Y', strtotime($reply->created_at)) ?>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="review-body">
+                                                    <p class="comment more-content-cls">
+                                                        <?= $reply->description ?>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                                <!-- admin reply -->
                             </div>
+
                         <?php } ?>
                     </div>
 
@@ -284,19 +334,21 @@
                             </div>
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input id="reviewTitle" name="name" type="text" class="form-control" placeholder="Enter Name">
+                                <input id="reviewTitle" name="name" type="text" class="form-control" placeholder="Enter Name *">
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone</label>
-                                <input id="reviewPhone" name="phone" type="phone" class="form-control" placeholder="Enter Phone">
+                                <input id="reviewPhone" name="phone" type="phone" class="form-control" placeholder="Enter Phone *">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input id="reviewEmail" name="email" type="email" class="form-control" placeholder="Enter Email">
+                                <input id="reviewEmail" name="email" type="email" class="form-control" placeholder="Enter Email *">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group mar-bottom-5">
                                 <label for="">Your Review</label>
-                                <textarea id="reviewDescription" class="form-control" placeholder="Enter Review" cols="10" rows="5"></textarea>
+                                <textarea id="reviewDescription" class="form-control" placeholder="Enter Review *" cols="10" rows="5"></textarea>
+                                <small>Your email address and phone number will not be published.</small><br>
+                                <small>Required fields are marked *</small>
                             </div>
                             <div class="form-group save-btn-cls">
                                 @auth
@@ -313,6 +365,51 @@
     </div>
 </div>
 <!-- doctor review popup -->
+
+<!-- Reply popup -->
+<div class="modal fade" id="replyModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="reachus-overlay">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-header justify-content-center">
+                    <h4 class="modal-title">
+                        <div class="doc-title">
+                            Dr. <?= $doctor_details->first_name . " " . $doctor_details->last_name ?>, MD
+                        </div>
+                        <p class="text-center margin-null">Plastic Surgery</p>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <div class="review-form-main-col">
+                        <div class="alert alert-danger replyAlert" style="display: none;"></div>
+                        <form id="replyForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <?php if (auth()->user()->username == $doctor_details->username) { ?>
+                                    <input id="replyTitle" value="<?= $doctor_details->first_name . " " . $doctor_details->last_name ?>" name="name" type="text" class="form-control" readonly>
+                                <?php } else { ?>
+                                    <input id="replyTitle" value="Super Admin" name="name" type="text" class="form-control" readonly>
+                                <?php } ?>
+                            </div>
+                            <div class="form-group">
+                                <label>Your Reply</label>
+                                <textarea id="replyDescription" class="form-control" cols="10" rows="5"></textarea>
+                            </div>
+                            <div class="form-group save-btn-cls">
+                                <input name="update_review_id" id="update_review_id" type="hidden">
+                                <input type="submit" class="btn btn-primary" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Reply popup -->
 
 @endsection
 
@@ -368,15 +465,15 @@
                 data: {
                     '_token': "<?php echo csrf_token() ?>",
                     'review_id': $('#update_review_id').val(),
+                    'doctor_id': '<?= $doctor_details->id ?>',
+                    'avatar': '<?= (auth()->user()->username == "super_admin") ? "" : $doctor_details->avatar ?>',
                     'name': $('#replyTitle').val(),
                     'your_reply': $('#replyDescription').val(),
-                    'vendor_image': "<?= '$vendor_details->image' ?>",
                 },
                 success: function(res) {
+                    console.log(res.review_id);
 
                     if (res.success) {
-                        console.log(res.review_id);
-
                         $('.replyAlert').html('').hide();
                         $('#replyForm').trigger('reset');
                         toastr.success(res.message, 'Reply posted Successfully!');
@@ -397,6 +494,13 @@
         });
 
     });
+
+    $(document).on("click", '.show_reply_popup', function() {
+        var review_id = $(this).attr("review_id");
+        $("#update_review_id").val(review_id);
+
+        $("#replyModal").modal("show");
+    })
 </script>
 
 <script>

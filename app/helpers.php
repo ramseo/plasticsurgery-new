@@ -922,13 +922,6 @@ if (!function_exists('date_today')) {
         return $replies;
     }
 
-
-    function getLoggedInVendor($id)
-    {
-        return DB::table('vendors')->select('business_name', 'slug', 'image')->where("user_id", $id)->get()->first();
-    }
-
-
     function getUserAvatar($user_id)
     {
         $data = DB::table('users')->select('avatar')->where("id", $user_id)->get()->first();

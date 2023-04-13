@@ -211,7 +211,7 @@ class VendorController extends Controller
 
     public function postReview(Request $request)
     {
-    
+
         $validator = Validator::make($request->all(), [
             'rating' => 'required|not_in:0',
             'description' => 'required',
@@ -274,13 +274,16 @@ class VendorController extends Controller
                     $html .= '<li>';
                     $html .= '<div class="rev-flex-cls">';
                     $html .= '<div class="img-col">';
-                    $vendor_profile_img = asset('img/default-vendor.jpg');
-                    if ($data['vendor_image']) {
-                        if (file_exists(public_path() . '/storage/vendor/profile/' . $data['vendor_image'])) {
-                            $vendor_profile_img = asset('storage/vendor/profile/' . $data['vendor_image']);
+
+                    $user_profile_img = asset('img/default-vendor.jpg');
+
+                    if ($data['avatar']) {
+                        if (file_exists(public_path() . '/storage/user/profile/' . $data['avatar'])) {
+                            $user_profile_img = asset('storage/user/profile/' . $data['avatar']);
                         }
                     }
-                    $html .= '<img src="' . $vendor_profile_img . '" class="img-fluid" alt="alt img">';
+                    
+                    $html .= '<img src="' . $user_profile_img . '" class="img-fluid" alt="alt img">';
                     $html .= '</div>';
 
                     $html .= '<div class="text-col">';

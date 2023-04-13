@@ -3025,3 +3025,35 @@ img {
 .morecontent span {
     display: none;
 }
+
+.mar-bottom-5 {
+    margin-bottom: 5px !important;
+}
+
+.reply-review {
+    display: flex;
+    justify-content: right;
+    font-weight: 600;
+}
+
+.reply-review-cls {
+    padding: 10px 0 10px 40px;
+}
+
+.morelink,
+.morelink:hover {
+    text-decoration: none;
+}
+
+.show_reply_popup,
+.show_reply_popup:hover {
+    text-decoration: none;
+}
+
+.review-header .img-col {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}

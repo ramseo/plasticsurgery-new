@@ -1,11 +1,4 @@
 <style>
-    /* .switch-flex-cls {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-    } */
-
     .switch {
         position: relative;
         display: inline-block;
