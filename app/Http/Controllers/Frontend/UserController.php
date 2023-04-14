@@ -116,10 +116,10 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function profileEdit()
-    {
+    { 
         if (Auth::check() == false) {
             return redirect(base_url());
-        }
+        } 
 
         $user = Auth::user();
         Log::info(label_case('Edit | ' . $user->name . '(ID:' . $user->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
@@ -135,7 +135,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function profileUpdate(Request $request)
-    {
+    { 
         $id = Auth::user()->id;
 
         $this->validate($request, [

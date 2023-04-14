@@ -3057,3 +3057,11 @@ img {
     overflow: hidden;
     margin-right: 10px;
 }
+
+.dz-button {
+    color: #000 !important;
+}
+
+.dropzone {
+    min-height: auto !important;
+}
