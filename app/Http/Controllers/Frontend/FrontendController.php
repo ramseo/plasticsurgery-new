@@ -81,6 +81,11 @@ class FrontendController extends Controller
         $doctor_details->year_experience = $doctor_userprofiles->bio;
         // Add missing data
 
+        // results before/after
+        $all_result_category = DB::table('albums')->select('*')->get();
+        $all_result_category_imgs = DB::table('images')->select('*')->get();
+        // results before/after
+
         $body_class = '';
         $module_name_singular = Str::singular("pages");
         $$module_name_singular = (object) array(
@@ -90,7 +95,7 @@ class FrontendController extends Controller
             'name' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " – Top Plastic Surgeon in $citiesStrMeta",
         );
 
-        return view("frontend.doctor-profile", compact('body_class', 'module_name_singular', "$module_name_singular", 'doctor_details', 'citiesStr'));
+        return view("frontend.doctor-profile", compact('body_class', 'module_name_singular', "$module_name_singular", 'doctor_details', 'citiesStr', 'all_result_category', 'all_result_category_imgs'));
     }
 
     public function clinics()

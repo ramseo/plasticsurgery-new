@@ -293,6 +293,72 @@
     </div>
 <?php } ?>
 
+<!-- before after results -->
+<div class="container-fluid mtab pt-4 pb-4" style="background-color:#f8f8f8">
+    <div class="container">
+        <p class="identity text-center">
+            Dr. <?= $doctor_details->first_name . " " . $doctor_details->last_name . " " . ":" . " " . "before and after results" ?>
+        </p>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item active">
+                <a class="nav-link active ancr" data-toggle="tab" href="#all" aria-expanded="true">
+                    All
+                </a>
+            </li>
+            <?php
+            if ($all_result_category) {
+                foreach ($all_result_category as $cat) {
+                    $explode = explode(' ', $cat->name);
+                    $href = strtolower(implode('-', $explode));
+            ?>
+                    <li class="nav-item">
+                        <a class="nav-link ancr" data-toggle="tab" href="<?= "#" . $href ?>" aria-expanded="false">
+                            <?= $cat->name ?>
+                        </a>
+                    </li>
+            <?php
+                }
+            }
+            ?>
+
+        </ul>
+
+        <div class="tab-content">
+            <div id="all" class="container tab-pane active in">
+                <div class="row">
+                    <?php
+                    if ($all_result_category_imgs) {
+                        foreach ($all_result_category_imgs as $img) {
+                    ?>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <img src="<?= asset('storage/album') . '/' . $img->album_id . '/' . $img->name ?>" style="width:100%" alt="result image">
+                            </div>
+                    <?php
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
+
+            <div id="menu1" class="container tab-pane fade">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <img src="img/breast.jpg" style="width:100%">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <img src="img/breast.jpg" style="width:100%">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <img src="img/breast.jpg" style="width:100%">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- before after results -->
+
 <div class="spacer">
     <div class="container-fluid">
         <div class="container">
