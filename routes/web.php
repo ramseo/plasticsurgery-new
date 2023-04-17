@@ -29,7 +29,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('/', 'FrontendController@index')->name('index');
     Route::get('home', 'FrontendController@index')->name('home');
     Route::get('listing', 'FrontendController@listing')->name('listing');
-    Route::get('detail', 'FrontendController@detail')->name('detail'); 
+    Route::get('detail', 'FrontendController@detail')->name('detail');
     // new routes 
     Route::get('surgeon/{slug}', 'FrontendController@surgeon_profile')->name('surgeon');
     Route::get('clinics', 'FrontendController@clinics')->name('clinics');
@@ -57,7 +57,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::group(['middleware' => ['auth', 'verified']], function () {
         /*
         *
-        *  Users Routes
+        *  Users Routes  
         *
         */
         Route::get('profile', ['as' => "users.profile", 'uses' => "UserController@profile"]);
@@ -66,6 +66,17 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         // get user cities
         Route::get('users/cities', ['as' => "users.get_user_cities", 'uses' => "UserController@get_user_cities"]);
         // get user cities
+
+        // get results routes
+        Route::get('profile/results', 'UserController@profileResults')->name('results.index');
+        Route::get('profile/results-create/', 'UserController@results_create')->name('results.create');
+        Route::post('profile/results-store/', 'UserController@results_store')->name('results.store');
+        Route::get('profile/results-edit/{id}', 'UserController@results_edit')->name('results.edit');
+        Route::PATCH('profile/results-update/{id}', 'UserController@results_update')->name('results.update');
+        Route::get('profile/results-delete/{id}', 'UserController@results_delete')->name('results.delete');
+        // Route::resource("album", "AlbumController");
+        // get results routes
+
         Route::get("users/emailConfirmationResend/{id}", ['as' => "users.emailConfirmationResend", 'uses' => "UserController@emailConfirmationResend"]);
         Route::get('profile/changePassword', ['as' => "users.changePassword", 'uses' => "UserController@changePassword"]);
         Route::patch('profile/changePassword', ['as' => "users.changePasswordUpdate", 'uses' => "UserController@changePasswordUpdate"]);

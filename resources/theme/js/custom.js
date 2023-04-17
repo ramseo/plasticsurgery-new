@@ -73,7 +73,7 @@ $('.more-content-cls').each(function () {
     var content = $(this).html();
 
     if (content.length > showChar) {
-          console.log('fff');
+        console.log('fff');
         var c = content.substr(0, showChar);
         var h = content.substr(showChar - 1, content.length - showChar);
 
@@ -156,3 +156,13 @@ $(document).on("click", '.show_reply_popup', function () {
 
     $("#replyModal").modal("show");
 })
+
+
+$(document).on('click', '.del-link', function (e) {
+    var answer = confirm('Are you sure?');
+    if (answer) {
+        // Proceed
+    } else {
+        e.preventDefault();
+    }
+});

@@ -3065,3 +3065,9 @@ img {
 .dropzone {
     min-height: auto !important;
 }
+
+.album-flex-cls {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

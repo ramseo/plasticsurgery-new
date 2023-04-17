@@ -13,6 +13,7 @@ use App\Models\Userprofile;
 use App\Models\UserProvider;
 use App\Models\UserQuotation;
 use App\Models\Quotation;
+use App\Models\Album;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -26,6 +27,7 @@ use Log;
 use Flash;
 use Auth;
 use DB;
+use Yajra\DataTables\DataTables;
 
 class UserController extends Controller
 {
@@ -108,6 +110,102 @@ class UserController extends Controller
         return view("frontend.users.profile", compact('user', 'userprofile'));
     }
 
+    // results section aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+    public function profileResults(Request $request)
+    {
+        if (Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user = Auth::user();
+        $user = User::findOrFail($user->id);
+
+        $userprofile = Userprofile::where('user_id', $user->id)->first();
+
+        if ($request->ajax()) {
+            $albums = DB::table('albums')->where('vendor_id', $user->id)->select(['id', 'name', 'description'])->orderBy('id', 'desc');
+            return Datatables::of($albums)
+                ->addIndexColumn()
+                ->editColumn('description', function ($album) {
+                    return '<strong>' . Str::words($album->description, '25') . '</strong>';
+                })
+                ->addColumn('action', function ($album) {
+                    $btn = "";
+                    $btn .= '<div class="album-flex-cls">';
+                    $btn .= '<a href="' . route("frontend.results.edit", $album->id) . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fa fa-wrench"></i></a>';
+                    $btn .= '<a href="' . route("vendor.image.index", $album->id) . '" class="btn btn-sm btn-success mt-1" data-toggle="tooltip" title="Album Gallery"><i class="fa fa-file-image-o"></i></a>';
+                    $btn .= '<a href="' . route("frontend.results.delete", $album->id) . '" class="btn btn-sm btn-danger mt-1 del-link" data-toggle="tooltip" title="Album Delete"><i class="fa fa-trash"></i></a>';
+                    $btn .= '</div>';
+                    return $btn;
+                })
+                ->rawColumns(['action', 'description'])
+                ->make(true);
+        }
+        return view("frontend.users.results", compact('user', 'userprofile'));
+    }
+
+    public function results_create()
+    {
+        if (Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user = Auth::user();
+        $user = User::findOrFail($user->id);
+
+        Log::info(label_case('Album Create | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return view("frontend.users.result-create")->with('user', $user);
+    }
+
+    public function results_store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string',
+        ]);
+
+        $album = Album::create($request->all());
+        Flash::success("<i class='fas fa-check'></i> New Album Added")->important();
+        Log::info(label_case('Category Store | ' . $album->name . '(ID:' . $album->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return redirect("profile/results");
+    }
+
+    public function results_edit($id)
+    {
+        if (Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user = Auth::user();
+        $user = User::findOrFail($user->id);
+
+        $album = Album::findOrFail($id);
+
+        Log::info(label_case('Service Edit | ' . $album->name . '(ID:' . $album->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return view('frontend.users.result-edit', compact('album'))->with('user', $user);
+    }
+
+    public function results_update($id, Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string',
+        ]);
+
+        $album = Album::findOrFail($id);
+        $album->update($request->all());
+        Flash::success("<i class='fas fa-check'></i> Album Updated Successfully")->important();
+        Log::info(label_case('Service Update | ' . $album->name . '(ID:' . $album->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return redirect("profile/results");
+    }
+
+    public function results_delete($id)
+    {
+        rrmdir(storage_path('app/public/album/' . $id));
+        Album::where(['id' => $id])->delete();
+        // Image::where(['album_id' => $id])->delete();
+        Flash::success("<i class='fas fa-check'></i> Album Deleted")->important();
+        return redirect("profile/results");
+    }
+
+    // results section aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
     /**
      * Show the form for Profile Paeg Editing the specified resource.
      *
@@ -116,10 +214,11 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function profileEdit()
-    { 
+    {
+
         if (Auth::check() == false) {
             return redirect(base_url());
-        } 
+        }
 
         $user = Auth::user();
         Log::info(label_case('Edit | ' . $user->name . '(ID:' . $user->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
@@ -135,7 +234,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function profileUpdate(Request $request)
-    { 
+    {
         $id = Auth::user()->id;
 
         $this->validate($request, [

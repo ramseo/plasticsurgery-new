@@ -59,9 +59,20 @@
         </style> -->
 
     <ul class="list-unstyled avatar-ul">
-        <li><a href="{{ route('frontend.users.profileEdit') }}" class="{{ Request::segment(2) == 'edit' ? 'active' : '' }}"><i class="fa fa-user"></i> My Profile</a></li>
-        <li data-toggle="collapse" data-target="#service" class="{{ Request::segment(1) == 'vendors' ? 'collapsed' : '' }} ">
-            <!-- <a class="{{ Request::segment(1) == 'vendors' ? 'active' : '' }}" href="{{ route('frontend.vendors.slug')}}"><i class="fa fa-globe fa-lg"></i> My Vendors <span class="arrow"></span></a> -->
+        <li>
+            <a href="{{ route('frontend.users.profileEdit') }}" class="{{ Request::segment(2) == 'edit' ? 'active' : '' }}">
+                <i class="fa fa-user"></i>
+                My Profile
+            </a>
+        </li>
+        <li>
+            <a href="{{ route('frontend.results.index') }}" class="{{ Request::segment(2) == 'results' ? 'active' : '' }}">
+                <i class="fa fa-image"></i>
+                Result Category
+            </a>
+        </li>
+        <!-- <li data-toggle="collapse" data-target="#service" class="{{ Request::segment(1) == 'vendors' ? 'collapsed' : '' }} ">
+            <a class="{{ Request::segment(1) == 'vendors' ? 'active' : '' }}" href="{{ route('frontend.vendors.slug')}}"><i class="fa fa-globe fa-lg"></i> My Vendors <span class="arrow"></span></a>
             <ul id="mainFeatures" class="sub-menu collapse {{ Request::segment(1) == 'vendors' ? 'show' : '' }}  ">
                 @foreach($types as $type)
                 <li>
@@ -76,7 +87,7 @@
                 </li>
                 @endforeach
             </ul>
-        </li>
+        </li> -->
         <?php
         $user = Auth::user();
         $getUserProvider = getUserProvider($user->id);
