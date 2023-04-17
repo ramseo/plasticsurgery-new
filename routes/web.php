@@ -74,7 +74,11 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         Route::get('profile/results-edit/{id}', 'UserController@results_edit')->name('results.edit');
         Route::PATCH('profile/results-update/{id}', 'UserController@results_update')->name('results.update');
         Route::get('profile/results-delete/{id}', 'UserController@results_delete')->name('results.delete');
-        // Route::resource("album", "AlbumController");
+
+        Route::get('profile/results/image/{album}', 'UserController@results_image')->name('results.image.index');
+        Route::post('profile/results/image/store/{album_id}', 'UserController@results_image_store')->name('results.image.store');
+        Route::post('profile/results/image/remove', 'UserController@results_image_remove')->name('results.image.remove');
+        Route::get('profile/results/image/delete/{id}', 'UserController@results_image_delete')->name('results.image.delete');
         // get results routes
 
         Route::get("users/emailConfirmationResend/{id}", ['as' => "users.emailConfirmationResend", 'uses' => "UserController@emailConfirmationResend"]);

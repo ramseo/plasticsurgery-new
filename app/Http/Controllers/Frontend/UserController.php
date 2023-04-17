@@ -13,7 +13,10 @@ use App\Models\Userprofile;
 use App\Models\UserProvider;
 use App\Models\UserQuotation;
 use App\Models\Quotation;
+
 use App\Models\Album;
+use App\Models\Image;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -27,6 +30,7 @@ use Log;
 use Flash;
 use Auth;
 use DB;
+use Storage;
 use Yajra\DataTables\DataTables;
 
 class UserController extends Controller
@@ -110,7 +114,7 @@ class UserController extends Controller
         return view("frontend.users.profile", compact('user', 'userprofile'));
     }
 
-    // results section aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    // results section start aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
     public function profileResults(Request $request)
     {
@@ -133,7 +137,7 @@ class UserController extends Controller
                     $btn = "";
                     $btn .= '<div class="album-flex-cls">';
                     $btn .= '<a href="' . route("frontend.results.edit", $album->id) . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fa fa-wrench"></i></a>';
-                    $btn .= '<a href="' . route("vendor.image.index", $album->id) . '" class="btn btn-sm btn-success mt-1" data-toggle="tooltip" title="Album Gallery"><i class="fa fa-file-image-o"></i></a>';
+                    $btn .= '<a href="' . route("frontend.results.image.index", $album->id) . '" class="btn btn-sm btn-success mt-1" data-toggle="tooltip" title="Album Gallery"><i class="fa fa-file-image-o"></i></a>';
                     $btn .= '<a href="' . route("frontend.results.delete", $album->id) . '" class="btn btn-sm btn-danger mt-1 del-link" data-toggle="tooltip" title="Album Delete"><i class="fa fa-trash"></i></a>';
                     $btn .= '</div>';
                     return $btn;
@@ -199,12 +203,59 @@ class UserController extends Controller
     {
         rrmdir(storage_path('app/public/album/' . $id));
         Album::where(['id' => $id])->delete();
-        // Image::where(['album_id' => $id])->delete();
+        Image::where(['album_id' => $id])->delete();
         Flash::success("<i class='fas fa-check'></i> Album Deleted")->important();
         return redirect("profile/results");
     }
 
-    // results section aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    public function results_image($albumId, Request $request)
+    {
+        if (Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user = Auth::user();
+        $user = User::findOrFail($user->id);
+
+        $album = Album::findOrFail($albumId);
+        $images = Image::where('album_id', $albumId)->get();
+
+        return view('frontend.users.result-images', compact('images', 'album', 'user'));
+    }
+
+    public function results_image_store(Request $request, $id)
+    {
+        $album_id = $id;
+        $fileName = fileUpload($request, 'file', "album/$album_id/", true);
+        $input['album_id'] = $album_id;
+        $input['name'] = $fileName;
+        $image = Image::create($input);
+        Log::info(label_case('Image Store | ' . $image->name . '(ID:' . $image->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return response()->json(['success' => $image->id]);
+    }
+
+
+    public function results_image_remove(Request $request)
+    {
+        $name = $request->get('name');
+        $image = Image::where(['name' => $name])->first();
+        Storage::delete('album/$album_id/' . $image->name);
+        Image::where(['id' => $image->id])->delete();
+        return $name;
+    }
+
+    public function results_image_delete($id)
+    {
+        $image = Image::findorfail($id);
+        Storage::delete('album/$album_id/' . $image->name);
+        Image::where(['id' => $image->id])->delete();
+
+        Flash::success("<i class='fas fa-check'></i> Image Deleted")->important();
+
+        return redirect("profile/results/image/$image->album_id");
+    }
+
+
+    // results section finish aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
     /**
      * Show the form for Profile Paeg Editing the specified resource.
