@@ -166,3 +166,11 @@ $(document).on('click', '.del-link', function (e) {
         e.preventDefault();
     }
 });
+
+
+function eliminate_active_cls(id) {
+    console.log(id);
+    $(id).removeClass("active");
+    $($(id).parent()).removeClass("active");
+    $('.all_content').removeClass("active in");
+}

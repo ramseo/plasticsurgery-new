@@ -82,7 +82,7 @@ class FrontendController extends Controller
         // Add missing data
 
         // results before/after
-        $all_result_category = DB::table('albums')->select('*')->get();
+        $all_result_category = DB::table('albums')->where('vendor_id', $doctor_details->id)->where('status', 1)->select('*')->get();
         $all_result_category_imgs = DB::table('images')->select('*')->get();
         // results before/after
 
@@ -140,5 +140,44 @@ class FrontendController extends Controller
         );
 
         return view('frontend.procedures', compact('body_class', 'module_name_singular', "$module_name_singular"));
+    }
+
+    public function before_after_results()
+    {
+        $body_class = '';
+        $module_name_singular = Str::singular("pages");
+        $$module_name_singular = (object) array(
+            'meta_title' => "Top Cosmetic Surgery Clinics in India | Best Plastic Surgeons",
+            'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Cosmetic Surgeon across India.",
+            'meta_keywords' => "",
+            'name' => "Results",
+        );
+
+        $all_result_category = DB::table('albums')->where('status', 1)->select('*')->get();
+
+        return view('frontend.before-after-results', compact('body_class', 'module_name_singular', "$module_name_singular", 'all_result_category'));
+    }
+
+    public function before_after_result_details($slug)
+    {
+        $explode = explode("-", $slug);
+        $name = ucwords(implode(" ", $explode));
+
+        $body_class = '';
+        $module_name_singular = Str::singular("pages");
+        $$module_name_singular = (object) array(
+            'meta_title' => "Top Cosmetic Surgery Clinics in India | Best Plastic Surgeons",
+            'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Cosmetic Surgeon across India.",
+            'meta_keywords' => "",
+            'name' => $name . " " . "Results",
+        );
+
+        $result_category = DB::table('albums')->where('name', $name)->select('*')->get()->first();
+        $result_images = NULL;
+        if ($result_category) {
+            $result_images = DB::table('images')->select('*')->where('album_id', $result_category->id)->get();
+        }
+
+        return view('frontend.before-after-result-details', compact('body_class', 'module_name_singular', "$module_name_singular", 'slug', 'name', 'result_images'));
     }
 }

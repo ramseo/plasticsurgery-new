@@ -1127,4 +1127,21 @@ if (!function_exists('date_today')) {
     {
         return DB::table('images')->where('album_id', $user_id)->get();
     }
+
+
+    function get_tab_images($cat)
+    {
+        return DB::table('images')->where('album_id', $cat->id)->get();
+    }
+
+    function get_doctor($album_id)
+    {
+        $data = DB::table('albums')->where('id', $album_id)->get()->first();
+        $doctor = NULL;
+        if ($data) {
+            $doctor = DB::table('users')->where('id', $data->vendor_id)->get()->first();
+        }
+
+        return $doctor;
+    }
 }
