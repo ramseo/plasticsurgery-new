@@ -38,6 +38,9 @@
                 <div class="dropzone-div">
                     <div class="dropzone" id="file-dropzone"></div>
                 </div>
+                <small>
+                    Server max upload size is : <?= ini_get("upload_max_filesize") ?>
+                </small>
                 <div class="container">
                     <div class="row">
                         <div class="gallery1 row">
