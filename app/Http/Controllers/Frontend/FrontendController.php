@@ -83,7 +83,14 @@ class FrontendController extends Controller
 
         // results before/after
         $all_result_category = DB::table('albums')->where('vendor_id', $doctor_details->id)->where('status', 1)->select('*')->get();
-        $all_result_category_imgs = DB::table('images')->select('*')->get();
+
+        $album_ids = [];
+        if ($all_result_category) {
+            $array = json_decode(json_encode($all_result_category), true);
+            $album_ids = array_column($array, 'id');
+        }
+        
+        $all_result_category_imgs = DB::table('images')->whereIn('album_id', $album_ids)->select('*')->get();
         // results before/after
 
         $body_class = '';

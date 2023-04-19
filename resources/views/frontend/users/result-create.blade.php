@@ -71,6 +71,9 @@
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input form-control" name="image">
                                 <label class="custom-file-label">Choose file</label>
+                                <small>
+                                    Server max upload size is : <?= ini_get("upload_max_filesize") ?>
+                                </small>
                             </div>
                         </div>
                     </div>
