@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="btn-toolbar float-right vendor-img-bk-btn" role="toolbar" aria-label="Toolbar with button groups">
-                    <a href="{{ route('vendor.album.index') }}" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}">
+                    <a href="<?= route('frontend.results.index') ?>" class="btn btn-warning" data-toggle="tooltip" title="{{__('labels.backend.cancel')}}">
                         <i class="fa fa-reply"></i>
                         Cancel
                     </a>

@@ -166,7 +166,14 @@ class UserController extends Controller
             'name' => 'required|string',
         ]);
 
-        $album = Album::create($request->all());
+        $data = $request->all();
+        if ($request->file('image')) {
+            $file_image = fileUpload($request, 'image', 'album/image');
+            $data = array_merge($data, ['image' => $file_image]);
+        }
+
+        $album = Album::create($data);
+
         Flash::success("<i class='fas fa-check'></i> New Album Added")->important();
         Log::info(label_case('Category Store | ' . $album->name . '(ID:' . $album->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect("profile/results");
@@ -193,7 +200,14 @@ class UserController extends Controller
         ]);
 
         $album = Album::findOrFail($id);
-        $album->update($request->all());
+
+        $data = $request->all();
+        if ($request->file('image')) {
+            $file_image = fileUpload($request, 'image', 'album/image/');
+            $data = array_merge($data, ['image' => $file_image]);
+        }
+
+        $album->update($data);
         Flash::success("<i class='fas fa-check'></i> Album Updated Successfully")->important();
         Log::info(label_case('Service Update | ' . $album->name . '(ID:' . $album->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return redirect("profile/results");

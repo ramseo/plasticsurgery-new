@@ -151,7 +151,7 @@
     </div>
 </div>
 
-<?php if ($reviews) { ?>
+<?php if ($reviews->isNotEmpty()) { ?>
     <div class="container-fluid">
         <div class="container">
             <div class="row">

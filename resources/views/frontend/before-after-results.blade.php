@@ -25,10 +25,17 @@
             foreach ($all_result_category as $cat_tab) {
                 $explode = explode(" ", $cat_tab->name);
                 $href = strtolower(implode('-', $explode));
+
+                $result_cat_img = asset("img/Buccal-Fat-Removal-Cheek-Reduction-1-1024x683.jpg");
+                if ($cat_tab->image) {
+                    if (file_exists(public_path() . '/storage/album/image/' . $cat_tab->image)) {
+                        $result_cat_img = asset('storage/album/image/' . $cat_tab->image);
+                    }
+                }
             ?>
                 <div class="col-lg-4 col-md-6">
-                    <a href="<?= url("before-after-results/$href") ?>">
-                        <img src="img/Buccal-Fat-Removal-Cheek-Reduction-1-1024x683.jpg">
+                    <a target="_blank" href="<?= url("before-after-results/$href") ?>">
+                        <img src="<?= $result_cat_img ?>" class="img-responsive">
                         <h4><?= $cat_tab->name ?></h4>
                     </a>
                 </div>

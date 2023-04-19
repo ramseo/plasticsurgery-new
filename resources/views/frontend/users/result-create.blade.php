@@ -68,6 +68,16 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input form-control" name="image">
+                                <label class="custom-file-label">Choose file</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group">
                             {{ Form::label('description', 'Description') }}
                             {{ Form::textarea('description', null, array('class' => 'form-control')) }}
                         </div>

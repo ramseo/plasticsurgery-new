@@ -65,7 +65,25 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 ">
+                    <div class="col-12">
+                        <?php
+                        Form::label('image', 'Image');
+                        if ($album->image) {
+                            if (file_exists(public_path() . '/storage/album/image/' . $album->image)) {
+                        ?>
+                                <img id="imgPreview" src="<?= asset('storage/album/image/' . $album->image) ?>" alt="img" class="img-fluid">
+                        <?php
+                            }
+                        }
+                        ?>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input form-control" name="image">
+                            <label class="custom-file-label">Choose file</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
                         <div class="form-group">
                             {{ Form::label('description', 'Description') }}
                             {{ Form::textarea('description', $album->description, array('class' => 'form-control')) }}
