@@ -89,7 +89,7 @@ class FrontendController extends Controller
             $array = json_decode(json_encode($all_result_category), true);
             $album_ids = array_column($array, 'id');
         }
-        
+
         $all_result_category_imgs = DB::table('images')->whereIn('album_id', $album_ids)->select('*')->get();
         // results before/after
 
@@ -154,13 +154,13 @@ class FrontendController extends Controller
         $body_class = '';
         $module_name_singular = Str::singular("pages");
         $$module_name_singular = (object) array(
-            'meta_title' => "Top Cosmetic Surgery Clinics in India | Best Plastic Surgeons",
-            'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Cosmetic Surgeon across India.",
+            'meta_title' => "Cosmetic Surgery Before and After Photos | Videos Results",
+            'meta_description' => "Have you ever seen the before and after results of the cosmetic surgeries performed ? Check out our patients results photo gallery here to get an idea",
             'meta_keywords' => "",
-            'name' => "Results",
+            'name' => "Before & After",
         );
 
-        $all_result_category = DB::table('albums')->where('status', 1)->select('*')->get();
+        $all_result_category = DB::table('albums')->select('*')->where('status', 1)->groupBy("name")->get();
 
         return view('frontend.before-after-results', compact('body_class', 'module_name_singular', "$module_name_singular", 'all_result_category'));
     }
@@ -173,16 +173,22 @@ class FrontendController extends Controller
         $body_class = '';
         $module_name_singular = Str::singular("pages");
         $$module_name_singular = (object) array(
-            'meta_title' => "Top Cosmetic Surgery Clinics in India | Best Plastic Surgeons",
-            'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Cosmetic Surgeon across India.",
+            'meta_title' => "$name Before / After Photos | $name Results",
+            'meta_description' => "Have a quick look on $name Before and After Result Photos Gallery of our patients, performed by our Board-Certified Cosmetic Surgeons.",
             'meta_keywords' => "",
             'name' => $name . " " . "Results",
         );
 
-        $result_category = DB::table('albums')->where('name', $name)->select('*')->get()->first();
+        $result_category = DB::table('albums')->where('name', $name)->select('*')->get();
+
+        $album_ids = json_decode(json_encode($result_category), true);
+        if ($album_ids) {
+            $album_ids = array_column($album_ids, 'id');
+        }
+
         $result_images = NULL;
-        if ($result_category) {
-            $result_images = DB::table('images')->select('*')->where('album_id', $result_category->id)->get();
+        if ($album_ids) {
+            $result_images = DB::table('images')->select('*')->whereIn('album_id', $album_ids)->get();
         }
 
         return view('frontend.before-after-result-details', compact('body_class', 'module_name_singular', "$module_name_singular", 'slug', 'name', 'result_images'));

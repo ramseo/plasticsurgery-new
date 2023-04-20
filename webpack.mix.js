@@ -77,7 +77,7 @@ mix.styles(
 );
 
 // frontend js
-mix.scripts( 
+mix.scripts(
     [
         "node_modules/jquery/dist/jquery.min.js",
         "node_modules/popper.js/dist/umd/popper.min.js",
@@ -97,6 +97,13 @@ mix.scripts(
         "resources/theme/js/lead.js",
     ],
     "public/js/wed.js"
+);
+
+mix.scripts(
+    [
+        "resources/theme/js/light.js",
+    ],
+    "public/js/light.js"
 );
 
 
