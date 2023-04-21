@@ -91,6 +91,9 @@ class FrontendController extends Controller
         }
 
         $all_result_category_imgs = DB::table('images')->whereIn('album_id', $album_ids)->select('*')->get();
+        if ($all_result_category_imgs->isEmpty()) {
+            $all_result_category = collect([]);
+        }
         // results before/after
 
         $body_class = '';
