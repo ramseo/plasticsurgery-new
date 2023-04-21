@@ -202,10 +202,20 @@ class UserController extends Controller
         $album = Album::findOrFail($id);
 
         $data = $request->all();
-        if ($request->file('image')) {
-            $file_image = fileUpload($request, 'image', 'album/image/');
-            $data = array_merge($data, ['image' => $file_image]);
-        }
+        // compress code
+        $x = 0;
+        $file = $request->file('image');
+        $file_name = time() . "_" . $file->getClientOriginalName();
+        $img = \Image::make($file);
+        $img->save(public_path("storage/album/image/$file_name"), $x);
+
+        $data = array_merge($data, ['image' => $file_name]);
+        // compress code
+        
+        // if ($request->file('image')) {
+        //     $file_image = fileUpload($request, 'image', 'album/image/');
+        //     $data = array_merge($data, ['image' => $file_image]);
+        // }
 
         $album->update($data);
         Flash::success("<i class='fas fa-check'></i> Album Updated Successfully")->important();
