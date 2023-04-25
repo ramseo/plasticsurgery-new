@@ -15,26 +15,25 @@
                         <!-- <div class="search-header">
                             <p class="text">Blog</p>
                         </div> -->
-  <div class="row row-xs-center">
-				<div class="col-md-6">
-							<div class="page-title-bar-heading">
-			<h1 class="bloggg">
-				Blog Grid 1			</h1>
-		</div>
-						</div>
+                       <div class="row row-xs-center">
+				               <div class="col-md-6">
+							      <div class="page-title-bar-heading">
+			                      <h1 class="bloggg"> Blog Grid 1 </h1>
+		                          </div>
+						       </div>
 
-									<div class="col-md-6">
-							<div id="page-breadcrumb" class="page-breadcrumb">
-		<div class="page-breadcrumb-inner">
-			<ul class="insight_core_breadcrumb">
-	<li class="level-1 top"><a href="https://healsoul.thememove.com/">Home</a></li>
-	<li class="level-2 sub tail current"><span>Blog Grid 1</span></li>
-</ul>
-		</div>
-	</div>
-					</div>
+				                <div class="col-md-6">
+							     <div id="page-breadcrumb" class="page-breadcrumb">
+		                            <div class="page-breadcrumb-inner">
+                                      <ul class="insight_core_breadcrumb">
+                                      <li class="level-1 top"><a href="https://healsoul.thememove.com/">Home</a></li>
+                                      <li class="level-2 sub tail current"><span>Blog Grid 1</span></li> 
+                                      </ul>
+                                  </div>
+		                         </div>
+                                 </div>
 					
-			</div>
+			            </div>
 
                         
                     </div>
@@ -45,14 +44,14 @@
 </section>
 
 <section id="breadcrumb-sec">
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Blog</li>
             </ol>
         </nav>
-    </div>
+    </div> -->
 </section>
 
 <?php
@@ -115,7 +114,9 @@ if ($getPostCat) {
             $details_url = route("frontend.$module_name.show",[$item->slug]);
             @endphp
             <div class="col-12 col-md-4 mb-4">
+            <div class="post-item-wrap">
                 <div class="common-card">
+                <div class="card" data-label="<?= date('d', strtotime($item->published_at)) . " " . substr(date('F', strtotime($item->published_at)),0,3) . " " . date('Y', strtotime($item->published_at)) ?>">
                     <div class="img-col">
                         <a href="{{$details_url}}">
                             <img src="{{$item->featured_image}}" class="img-fluid" alt="<?= $item->alt ?>">
@@ -136,16 +137,28 @@ if ($getPostCat) {
                         <div class="dot">
                             •
                         </div>
-                        <?php if ($item->published_at) { ?>
-                            <div class="date">
-                                <?= date('d', strtotime($item->published_at)) . " " . date('F', strtotime($item->published_at)) . " " . date('Y', strtotime($item->published_at)); ?>
-                            </div>
-                        <?php } ?>
+                        <?php // if ($item->published_at) { ?>
+                            <!-- <div class="date">
+                                <?//= date('d', strtotime($item->published_at)) . " " . date('F', strtotime($item->published_at)) . " " . date('Y', strtotime($item->published_at)); ?>
+                            </div> -->
+                        <?php // ?>
                     </div>
+                 </div>
                 </div>
+               </div>
             </div>
             @endforeach
         </div>
+
+        <div class="inner" style="text-align:center">
+						<ul class="page-pagination"><li>
+                            <span aria-current="page" class="page-numbers current">1</span>
+                   
+                        <li><a class="page-numbers" href="https://http://cosmetic.ls//blog-grid-1/page/2/">2</a></li>
+                        <li><a class="next page-numbers" href="">Next<i class="fas fa-chevron-right"></i></a></li>
+                       </ul>					
+                    </div>
+
 
         <div class="d-flex justify-content-center w-100 mt-3">
             {{$post_data->links()}}
