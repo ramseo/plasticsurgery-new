@@ -831,6 +831,20 @@ if (!function_exists('date_today')) {
         return $array;
     }
 
+    function getSelectedCityVal($cities)
+    {
+        if (!$cities) {
+            return;
+        }
+
+        $data = DB::table('cities');
+        $data->select('id', 'name', 'slug');
+        $data->whereIn('id', $cities);
+        $rr = $data->get()->toArray();
+        $array = json_decode(json_encode($rr), true);
+        return $array;
+    }
+
     function getPostsByTag($tagId)
     {
         $data = DB::table('posts')
@@ -908,13 +922,6 @@ if (!function_exists('date_today')) {
         return $replies;
     }
 
-
-    function getLoggedInVendor($id)
-    {
-        return DB::table('vendors')->select('business_name', 'slug', 'image')->where("user_id", $id)->get()->first();
-    }
-
-
     function getUserAvatar($user_id)
     {
         $data = DB::table('users')->select('avatar')->where("id", $user_id)->get()->first();
@@ -946,6 +953,35 @@ if (!function_exists('date_today')) {
     function getCityById($cityId)
     {
         return DB::table('cities')->select('name', 'slug', 'id')->where('id', $cityId)->get()->first();
+    }
+
+    function getCitiesById($jsonData, $dataType)
+    {
+        $html = "";
+        if ($dataType == "html") {
+            $array = json_decode($jsonData, true);
+            $data = DB::table('cities')->select('name')->whereIn('id', $array)->get()->toArray();
+
+            if ($data) {
+                $numItems = count($data);
+                $i = 0;
+                foreach ($data as $item) {
+                    if (++$i === $numItems) {
+                        $delimiter = "";
+                    } else {
+                        $delimiter = ",";
+                    }
+                    $html .= "<a target='_blank' href='" . url('/') . "/" . strtolower($item->name) . "'>" . $item->name . "</a>" . $delimiter;
+                }
+            }
+        } else {
+            $array = json_decode($jsonData, true);
+            $data = DB::table('cities')->select('name')->whereIn('id', $array)->get()->toArray();
+            $array_column = array_column($data, "name");
+            $html = implode(",", $array_column);
+        }
+
+        return $html;
     }
 
     function generate_multiple_pages($data)
@@ -1012,73 +1048,36 @@ if (!function_exists('date_today')) {
 
     function citiesArr()
     {
-        return array(
-            "chandigarh",
-            "hyderabad",
-            "pune",
-            "delhi",
-            "bangalore",
-            "bhubaneswar",
-            "lucknow",
-            "surat",
-            "trivandrum",
-            "ludhiana",
-            "kolkata",
-            "ahmedabad",
-            "chennai",
-            "nagpur",
-            "bhopal",
-            "patna",
-            "jaipur",
-            "raipur",
-            "indore",
-            "mumbai",
-            "gurgaon",
-            "noida",
-            "aurangabad",
-            "meerut",
-        );
+        $all_cities = DB::table('cities')->select('slug')->get()->toArray();
+        if ($all_cities) {
+            return array_column($all_cities, 'slug');
+        } else {
+            return [];
+        }
     }
 
-    function citiesSurgeriesArr()
+    function citiesSurgeriesArr($menu_alias)
     {
-        return array(
-            "rhinoplasty",
-            "blepharoplasty",
-            "facelift",
-            "brow-lift",
-            "neck-lift",
-            "chin-surgery",
-            "cheek-augmentation",
-            "lip-augmentation",
-            "buccal-fat-removal",
-            "ear-surgery",
-            "breast-augmentation",
-            "breast-lift",
-            "breast-reduction",
-            "breast-implant-removal",
-            "breast-implant-revision",
-            "gynecomastia",
-            "liposuction",
-            "tummy-tuck",
-            "buttock-enhancement",
-            "body-lift",
-            "arm-lift",
-            "thigh-lif",
-            "body-contouring",
-            "mommy-makeover",
-            "hair-transplant",
-            "men-and-plastic-surgery",
-        );
+        $array = [];
+        $menu_id = DB::table('menutype')->where('url', $menu_alias)->select('menu_id')->get()->first();
+        if ($menu_id) {
+            $menu_items = DB::table('menuitem')->where('menu_id', $menu_id->menu_id)->select('*')->get()->toArray();
+            if ($menu_items) {
+                $array = array_column($menu_items, 'url');
+            }
+        }
+
+        return $array;
     }
 
 
     function getAssignedDoctors($city)
     {
         $cityId = DB::table('cities')->select('id')->where('name', $city)->get()->first();
+        $jsonId = "$cityId->id";
 
         if ($cityId) {
-            $doctors = DB::table('users')->select('*')->where('city', $cityId->id)->get();
+            $doctors = DB::table('users')->select('*')->whereJsonContains('city', $jsonId)->get();
             return $doctors;
         } else {
             return Null;
@@ -1117,5 +1116,32 @@ if (!function_exists('date_today')) {
         }
 
         return Null;
+    }
+
+    function get_userprofiles($user_id)
+    {
+        return DB::table('userprofiles')->where('user_id', $user_id)->select('address', 'bio')->get()->first();
+    }
+
+    function getResultImgs($user_id)
+    {
+        return DB::table('images')->where('album_id', $user_id)->get();
+    }
+
+
+    function get_tab_images($cat)
+    {
+        return DB::table('images')->where('album_id', $cat->id)->get();
+    }
+
+    function get_doctor($album_id)
+    {
+        $data = DB::table('albums')->where('id', $album_id)->get()->first();
+        $doctor = NULL;
+        if ($data) {
+            $doctor = DB::table('users')->where('id', $data->vendor_id)->get()->first();
+        }
+
+        return $doctor;
     }
 }

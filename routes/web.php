@@ -30,6 +30,15 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('home', 'FrontendController@index')->name('home');
     Route::get('listing', 'FrontendController@listing')->name('listing');
     Route::get('detail', 'FrontendController@detail')->name('detail');
+    // new routes 
+    Route::get('surgeon/{slug}', 'FrontendController@surgeon_profile')->name('surgeon');
+    Route::get('clinics', 'FrontendController@clinics')->name('clinics');
+    Route::get('surgeons', 'FrontendController@surgeons')->name('surgeons');
+    Route::get('procedures', 'FrontendController@procedures')->name('procedures');
+    Route::get('before-after-results', 'FrontendController@before_after_results')->name('before-after-results');
+    Route::get('before-after-results/{slug}', 'FrontendController@before_after_result_details')->name('before-after-result-details');
+    // new routes
+
     // Route::get('privacy', 'FrontendController@privacy')->name('privacy');
     // Route::get('terms', 'FrontendController@terms')->name('terms');
     Route::post('newsletter', 'NewsletterController@store')->name('newsletter');
@@ -50,12 +59,30 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::group(['middleware' => ['auth', 'verified']], function () {
         /*
         *
-        *  Users Routes
+        *  Users Routes  
         *
         */
         Route::get('profile', ['as' => "users.profile", 'uses' => "UserController@profile"]);
         Route::get('profile/edit', ['as' => "users.profileEdit", 'uses' => "UserController@profileEdit"]);
         Route::post('profile/edit', ['as' => "users.profileUpdate", 'uses' => "UserController@profileUpdate"]);
+        // get user cities
+        Route::get('users/cities', ['as' => "users.get_user_cities", 'uses' => "UserController@get_user_cities"]);
+        // get user cities
+
+        // get results routes
+        Route::get('profile/results', 'UserController@profileResults')->name('results.index');
+        Route::get('profile/results-create/', 'UserController@results_create')->name('results.create');
+        Route::post('profile/results-store/', 'UserController@results_store')->name('results.store');
+        Route::get('profile/results-edit/{id}', 'UserController@results_edit')->name('results.edit');
+        Route::PATCH('profile/results-update/{id}', 'UserController@results_update')->name('results.update');
+        Route::get('profile/results-delete/{id}', 'UserController@results_delete')->name('results.delete');
+
+        Route::get('profile/results/image/{album}', 'UserController@results_image')->name('results.image.index');
+        Route::post('profile/results/image/store/{album_id}', 'UserController@results_image_store')->name('results.image.store');
+        Route::post('profile/results/image/remove', 'UserController@results_image_remove')->name('results.image.remove');
+        Route::get('profile/results/image/delete/{id}', 'UserController@results_image_delete')->name('results.image.delete');
+        // get results routes
+
         Route::get("users/emailConfirmationResend/{id}", ['as' => "users.emailConfirmationResend", 'uses' => "UserController@emailConfirmationResend"]);
         Route::get('profile/changePassword', ['as' => "users.changePassword", 'uses' => "UserController@changePassword"]);
         Route::patch('profile/changePassword', ['as' => "users.changePasswordUpdate", 'uses' => "UserController@changePasswordUpdate"]);

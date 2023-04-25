@@ -4,36 +4,21 @@
 
 @section('content')
 
-<!-- <section id="breadcrumb-section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">My Profile</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-    </div>
-</section> -->
-{{--<section id="user-profile-section">--}}
-{{-- <div class="container-fluid">--}}
-{{-- <div class="col-xs-12 col-sm-12 user-profile-main-col">--}}
+<style>
+    .edit-pics {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-{{-- <div class="row text-right">--}}
-{{-- @if ($user->email_verified_at == null)--}}
-{{-- <p class="lead">--}}
-{{-- <a class="btn btn-primary" href="{{route('frontend.users.emailConfirmationResend', $user->id)}}">Confirm Email</a>--}}
-{{-- </p>--}}
-{{-- @endif--}}
-{{-- @include('frontend.includes.messages')--}}
-{{-- </div>--}}
+    .edit-pics img {
+        object-fit: cover;
+    }
 
-{{-- </div>--}}
-{{-- </div>--}}
-{{--</section>--}}
+    .profile-form-section {
+        margin-top: 28px;
+    }
+</style>
 
 <div class="header-space"></div>
 <div class="cit">
@@ -49,6 +34,7 @@
                 @include('frontend.users.menu')
             </div>
             <div class="col-xs-12 col-sm-9">
+
                 <div class="card bg-white border-light shadow-soft flex-md-row no-gutters p-4">
                     <div class="card-body d-flex flex-column justify-content-between col-auto">
                         <?php
@@ -167,20 +153,68 @@
 
                         <div class="row">
                             <div class="col-sm-6">
+                                <div class="form-group tags-group">
+                                    <!-- Multiple Cities -->
+                                    <?php
+                                    $get_userprofiles = get_userprofiles($user->id);
+
+                                    $field_name = 'city[]';
+                                    $field_lable = label_case($field_name);
+                                    $field_relation = "city";
+                                    $required = "";
+
+                                    if (!$user) {
+                                    ?>
+                                        {{ html()->label($field_lable, "city") }}
+                                        {{ html()->select($field_name, ($module_name_singular) ?optional($module_name_singular->$field_relation)->pluck('name', 'id'):'')->class('form-control select2-cities')->attributes(['multiple']) }}
+                                    <?php
+                                    } else {
+                                        $getSelectedTagVal = getSelectedCityVal(json_decode($user->city));
+                                    ?>
+                                        <label for="city">Cities</label>
+                                        <select name="city[]" class="form-control select2-cities" multiple>
+                                            <?php
+                                            if ($getSelectedTagVal) {
+                                                foreach ($getSelectedTagVal as $item) {
+                                            ?>
+                                                    <option value="<?= $item['id'] ?>" selected>
+                                                        <?= $item['name'] ?>
+                                                    </option>
+                                            <?php
+                                                }
+                                            }
+                                            ?>
+                                        </select>
+                                    <?php } ?>
+                                    <!-- Multiple Cities -->
+                                </div>
+                            </div>
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <?php
-                                    $field_name1 = 'city';
-                                    $field_lable1 = label_case($field_name1);
-                                    $field_placeholder1 = "-- Select an option --";
-                                    $required1 = "";
-
-                                    $city_options = [];
-                                    $getAllCities = getAllCities();
-
+                                    $field_name = 'experience_years';
+                                    $field_lable = label_case($field_name);
+                                    $field_placeholder = $field_lable;
+                                    $required = "required";
                                     ?>
+                                    {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
+                                    {!! Form::text($field_name, $get_userprofiles->bio, ['class' => 'form-control','placeholder' => 'Experience Years', $required => $required]) !!}
+                                    <!-- {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }} -->
+                                </div>
+                            </div>
+                        </div>
 
-                                    {{ html()->label($field_lable1, $field_name) }} {!! fielf_required($required1) !!}
-                                    {{ html()->select($field_name1, $getAllCities)->placeholder($field_placeholder1)->class('form-control')->attributes(["$required1"]) }}
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <?php
+                                    $field_name = 'address';
+                                    $field_lable = label_case($field_name);
+                                    $field_placeholder = $field_lable;
+                                    $required = "required";
+                                    ?>
+                                    {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
+                                    {!! Form::textarea($field_name, $get_userprofiles->address, ['class' => 'form-control', 'rows' => 5, 'cols' => 10,'placeholder' => 'Address', $required => $required]) !!}
                                 </div>
                             </div>
                         </div>
@@ -192,25 +226,45 @@
                         {{ html()->closeModelForm() }}
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 </section>
 
 @endsection
-<style>
-    .edit-pics {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
-    .edit-pics img {
-        object-fit: cover;
-        /* object-position: -45px; */
-    }
+<!-- Select2 Library -->
+<x-library.select2 />
+<x-library.datetime-picker />
 
-    .profile-form-section {
-        margin-top: 28px;
-    }
-</style>
+@push ('after-scripts')
+<script>
+    $(document).ready(function() {
+
+        $('.select2-cities').select2({
+            theme: "bootstrap",
+            multiple: true,
+            placeholder: '@lang("Select an option")',
+            minimumInputLength: 0,
+            allowClear: true,
+            ajax: {
+                url: '{{route("frontend.users.get_user_cities")}}',
+                dataType: 'json',
+                data: function(params) {
+                    return {
+                        q: $.trim(params.term),
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data
+                    };
+                },
+                cache: true
+            }
+        });
+    });
+</script>
+
+@endpush

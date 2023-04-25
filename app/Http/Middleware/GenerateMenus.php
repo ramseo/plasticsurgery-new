@@ -60,18 +60,18 @@ class GenerateMenus
                 ]);
 
             // export
-            $menu->add('<i class="c-sidebar-nav-icon fas fa-file-export"></i>Vendor Export', [
-                'route' => 'backend.importExportView',
-                'class' => 'c-sidebar-nav-item',
-            ])
-                ->data([
-                    'order' => 101,
-                    'activematches' => 'admin/importExportView*',
-                    'permission' => [],
-                ])
-                ->link->attr([
-                    'class' => 'c-sidebar-nav-link',
-                ]);
+            // $menu->add('<i class="c-sidebar-nav-icon fas fa-file-export"></i>Vendor Export', [
+            //     'route' => 'backend.importExportView',
+            //     'class' => 'c-sidebar-nav-item',
+            // ])
+            //     ->data([
+            //         'order' => 101,
+            //         'activematches' => 'admin/importExportView*',
+            //         'permission' => [],
+            //     ])
+            //     ->link->attr([
+            //         'class' => 'c-sidebar-nav-link',
+            //     ]);
             // export
 
             // reviews
@@ -89,77 +89,77 @@ class GenerateMenus
                 ]);
             // reviews
 
-            $menu->add('<i class="c-sidebar-nav-icon fas fa-user"></i> Travel', [
-                'route' => 'backend.travel.index',
-                'class' => 'c-sidebar-nav-item',
-            ])
-                ->data([
-                    'order' => 101,
-                    'activematches' => 'admin/travel*',
-                    'permission' => [],
-                ])
-                ->link->attr([
-                    'class' => 'c-sidebar-nav-link',
-                ]);
+            // $menu->add('<i class="c-sidebar-nav-icon fas fa-user"></i> Travel', [
+            //     'route' => 'backend.travel.index',
+            //     'class' => 'c-sidebar-nav-item',
+            // ])
+            //     ->data([
+            //         'order' => 101,
+            //         'activematches' => 'admin/travel*',
+            //         'permission' => [],
+            //     ])
+            //     ->link->attr([
+            //         'class' => 'c-sidebar-nav-link',
+            //     ]);
 
-            $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-applications-settings"></i> Vendor ', [
-                'class' => 'c-sidebar-nav-dropdown',
-            ])
-                ->data([
-                    'order' => 100,
-                    'activematches' => [
-                        'admin/vendor*',
-                        'admin/type*',
-                    ],
-                    'permission' => [],
-                ]);
-            $accessControl->link->attr([
-                'class' => 'c-sidebar-nav-dropdown-toggle',
-                'href' => '#',
-            ]);
+            // $accessControl = $menu->add('<i class="c-sidebar-nav-icon cil-applications-settings"></i> Vendor ', [
+            //     'class' => 'c-sidebar-nav-dropdown',
+            // ])
+            //     ->data([
+            //         'order' => 100,
+            //         'activematches' => [
+            //             'admin/vendor*',
+            //             'admin/type*',
+            //         ],
+            //         'permission' => [],
+            //     ]);
+            // $accessControl->link->attr([
+            //     'class' => 'c-sidebar-nav-dropdown-toggle',
+            //     'href' => '#',
+            // ]);
 
 
             // Submenu: vendor
-            $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Vendor List', [
-                'route' => 'backend.vendor.index',
-                'class' => 'nav-item',
-            ])
-                ->data([
-                    'order' => 101,
-                    'activematches' => 'admin/vendor*',
-                    'permission' => ['view_roles'],
-                ])
-                ->link->attr([
-                    'class' => 'c-sidebar-nav-link',
-                ]);
+            // $accessControl->add('<i class="c-sidebar-nav-icon cil-people"></i> Vendor List', [
+            //     'route' => 'backend.vendor.index',
+            //     'class' => 'nav-item',
+            // ])
+            //     ->data([
+            //         'order' => 101,
+            //         'activematches' => 'admin/vendor*',
+            //         'permission' => ['view_roles'],
+            //     ])
+            //     ->link->attr([
+            //         'class' => 'c-sidebar-nav-link',
+            //     ]);
 
-            // Submenu: category
-            $accessControl->add('<i class="c-sidebar-nav-icon cil-list"></i> Vendor Type', [
-                'route' => 'backend.type.index',
-                'class' => 'nav-item',
-            ])
-                ->data([
-                    'order' => 102,
-                    'activematches' => 'admin/type*',
-                    'permission' => [],
-                ])
-                ->link->attr([
-                    'class' => 'c-sidebar-nav-link',
-                ]);
+            // // Submenu: category
+            // $accessControl->add('<i class="c-sidebar-nav-icon cil-list"></i> Vendor Type', [
+            //     'route' => 'backend.type.index',
+            //     'class' => 'nav-item',
+            // ])
+            //     ->data([
+            //         'order' => 102,
+            //         'activematches' => 'admin/type*',
+            //         'permission' => [],
+            //     ])
+            //     ->link->attr([
+            //         'class' => 'c-sidebar-nav-link',
+            //     ]);
 
-            // Submenu: Users
-            $accessControl->add('<i class="c-sidebar-nav-icon cil-note-add"></i> Contents', [
-                'route' => 'backend.content.index',
-                'class' => 'nav-item',
-            ])
-                ->data([
-                    'order' => 103,
-                    'activematches' => 'admin/content*',
-                    'permission' => [],
-                ])
-                ->link->attr([
-                    'class' => 'c-sidebar-nav-link',
-                ]);
+            // // Submenu: Users
+            // $accessControl->add('<i class="c-sidebar-nav-icon cil-note-add"></i> Contents', [
+            //     'route' => 'backend.content.index',
+            //     'class' => 'nav-item',
+            // ])
+            //     ->data([
+            //         'order' => 103,
+            //         'activematches' => 'admin/content*',
+            //         'permission' => [],
+            //     ])
+            //     ->link->attr([
+            //         'class' => 'c-sidebar-nav-link',
+            //     ]);
 
 
             $menu->add('<i class="c-sidebar-nav-icon fas fa-city"></i> Cities', [
@@ -175,32 +175,32 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
-            $menu->add('<i class="c-sidebar-nav-icon fas fa-envelope"></i> Newsletter', [
-                'route' => 'backend.newsletter.index',
-                'class' => 'c-sidebar-nav-item',
-            ])
-                ->data([
-                    'order' => 99,
-                    'activematches' => 'admin/newsletter*',
-                    'permission' => [],
-                ])
-                ->link->attr([
-                    'class' => 'c-sidebar-nav-link',
-                ]);
+            // $menu->add('<i class="c-sidebar-nav-icon fas fa-envelope"></i> Newsletter', [
+            //     'route' => 'backend.newsletter.index',
+            //     'class' => 'c-sidebar-nav-item',
+            // ])
+            //     ->data([
+            //         'order' => 99,
+            //         'activematches' => 'admin/newsletter*',
+            //         'permission' => [],
+            //     ])
+            //     ->link->attr([
+            //         'class' => 'c-sidebar-nav-link',
+            //     ]);
 
 
-                $menu->add('<i class="c-sidebar-nav-icon fas fa-mobile"></i>Phone Inquiry', [
-                    'route' => 'backend.inquiry.index',
-                    'class' => 'c-sidebar-nav-item',
-                ])
-                    ->data([
-                        'order' => 100,
-                        'activematches' => 'admin/inquiry*',
-                        'permission' => [],
-                    ])
-                    ->link->attr([
-                        'class' => 'c-sidebar-nav-link',
-                    ]);
+                // $menu->add('<i class="c-sidebar-nav-icon fas fa-mobile"></i>Phone Inquiry', [
+                //     'route' => 'backend.inquiry.index',
+                //     'class' => 'c-sidebar-nav-item',
+                // ])
+                //     ->data([
+                //         'order' => 100,
+                //         'activematches' => 'admin/inquiry*',
+                //         'permission' => [],
+                //     ])
+                //     ->link->attr([
+                //         'class' => 'c-sidebar-nav-link',
+                //     ]);
 
             // Notifications
 

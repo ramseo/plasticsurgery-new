@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddCityToUsersTable extends Migration
+class AddEmailToVendorReviewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddCityToUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->integer('city')->nullable();
+        Schema::table('vendor_reviews', function (Blueprint $table) {
+            $table->string('email')->nullable();
         });
     }
 
@@ -25,8 +25,8 @@ class AddCityToUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('city');
+        Schema::table('vendor_reviews', function (Blueprint $table) {
+            $table->dropColumn('email');
         });
     }
 }

@@ -3,26 +3,27 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('img/favicon.png')}}">
-    <link rel="icon" type="image/png" href="{{asset('img/favicon.png')}}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>@yield('title') | {{ config('app.name') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    @include('frontend.includes.meta')
+    <!-- BROWSER ICONS -->
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('img/cosmetic-lg.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('img/cosmetic-lg.png')}}">
+    <link rel="icon" type="image/ico" href="{{asset('img/cosmetic-lg.png')}}" />
+    <link rel="shortcut icon" href="{{asset('img/cosmetic-lg.png')}}">
+    <!-- BROWSER ICONS -->
+    <meta name="robots" content="index, follow" />
+    <title>@yield('title') | {{ config('app.name') }}</title>
 
     @yield('site-meta-tags')
+    @include('frontend.includes.meta')
 
-    <!-- Shortcut Icon -->
-    <link rel="shortcut icon" href="{{asset('favicon.png')}}">
-    <link rel="icon" type="image/ico" href="{{asset('favicon.png')}}" />
-
-    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="refresh" content="{{ config('session.lifetime') * 600 }}">
-    <!-- Rating code -->
+
     <?php
     if (isset($vendor_details)) {
+        //   Rating code
+
         $vendor_profile_img = asset('img/default-vendor.jpg');
         if ($vendor_details->image) {
             if (file_exists(public_path() . '/storage/vendor/profile/' . $vendor_details->image)) {
@@ -52,8 +53,8 @@
             $attr = ["@type" => "Review", "reviewRating" => ["@type" => "Rating", "ratingValue" => 0], "author" => ["@type" => "Person", "name" => "super admin"]];
             $review_json_encode = json_encode($attr);
         }
-
     ?>
+
         <script type="application/ld+json">
             {
                 "@context": "https://schema.org/",
@@ -77,10 +78,9 @@
 
             }
         </script>
-
+        <!-- Rating code -->
     <?php } ?>
 
-    <!-- Rating code -->
     @stack('x')
 
     <link rel="stylesheet" href="{{ mix('css/wed.css') }}">
@@ -98,6 +98,7 @@
     <!-- scrollcode -->
     <x-google-analytics />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.0/min/dropzone.min.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 

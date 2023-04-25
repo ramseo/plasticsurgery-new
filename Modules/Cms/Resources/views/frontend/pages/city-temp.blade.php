@@ -3,7 +3,6 @@
 @section('title') {{$$module_name_singular->meta_title}} @endsection
 
 @section('site-meta-tags')
-<meta name="keyword" content="{{ $$module_name_singular->meta_keywords ? $$module_name_singular->meta_keywords : setting('meta_keyword') }}">
 <meta name="description" content="{{ $$module_name_singular->meta_description ? $$module_name_singular->meta_description : setting('meta_keyword') }}">
 @endsection
 
@@ -29,6 +28,8 @@
                     $getAssignedDoctors = getAssignedDoctors($city);
                     if ($getAssignedDoctors) {
                         foreach ($getAssignedDoctors as $item) {
+                            $reviews = getDataArray('vendor_reviews', 'user_id', $item->id);
+                            $average = averageReview($reviews);
                     ?>
                             <div class="col-lg-3 doc-flex-cls">
                                 <div class="col-lg-5 padd-null">
@@ -43,21 +44,26 @@
                                         <ul class="list-inline space-list">
                                             <li class="list-inline-item">
                                                 <ul class="list-inline">
-                                                    <li class="list-inline-item yellow-star">
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item yellow-star">
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item yellow-star">
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item yellow-star">
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
-                                                    <li class="list-inline-item yellow-star">
-                                                        <i class="fa fa-star"></i>
-                                                    </li>
+                                                    <?php
+                                                    $totalRating = 5;
+                                                    $starRating = $average;
+
+                                                    for ($i = 1; $i <= $totalRating; $i++) {
+                                                        if ($starRating < $i) {
+                                                            if (is_float($starRating) && (round($starRating) == $i)) {
+                                                                echo "";
+                                                            } else {
+                                                                echo "<li class='list-inline-item yellow-star'>
+                                                                       <i class='fa fa-star-o' aria-hidden='true'></i>
+                                                                     </li>";
+                                                            }
+                                                        } else {
+                                                            echo "<li class='list-inline-item yellow-star'>
+                                                                   <i class='fa fa-star'></i>
+                                                                 </li>";
+                                                        }
+                                                    }
+                                                    ?>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -76,7 +82,9 @@
                                         <?= $city ?>
                                     </div>
                                     <div class="btn btn-default doc-view-btn">
-                                        view more
+                                        <a href="<?= url("surgeon/$item->username") ?>">
+                                            view more
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -521,25 +529,6 @@
 <div class="spacer">
     <div class="container-fluid">
         <div class="container">
-            <p class="small-heading m-auto">
-                Get the right procedure
-            </p>
-            <br>
-            <h2 class="apt text-center">
-                <span style="color:#082092">
-                    <strong>Book an Appointment</strong>
-                </span>
-                with your
-                <span style="color:green">
-                    <strong class="animate animated">
-                        Top Cosmetic Surgeon
-                    </strong>
-                </span>
-            </h2>
-            <br>
-            <p class="small-heading m-auto">
-                It will be our pleasure to serve you with our specialisation.
-            </p>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="item-middle">

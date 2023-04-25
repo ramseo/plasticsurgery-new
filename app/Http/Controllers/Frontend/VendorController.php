@@ -216,22 +216,20 @@ class VendorController extends Controller
             'rating' => 'required|not_in:0',
             'description' => 'required',
             'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
         ]);
 
         if ($validator->passes()) {
             $data = $request->all();
             $vendor = new VendorReview();
-            if (isset($data['user_id'])) {
-                $vendor->user_id = $data['user_id'];
-            } else {
-                $vendor->user_id = 0;
-            }
-            $vendor->vendor_id = $data['vendor_id'];
-            $vendor->type_id = $data['type_id'];
-            $vendor->city_id = $data['city_id'];
+
+            $vendor->user_id = $data['doctor_id'];
             $vendor->rating = $data['rating'];
             $vendor->description = $data['description'];
             $vendor->title = $data['name'];
+            $vendor->phone = $data['phone'];
+            $vendor->email = $data['email'];
             $vendor->created_at = date("Y-m-d", time());
             $vendor->save();
             return response()->json(['success' => true, 'message' => 'Review posted successfully!']);
@@ -276,13 +274,20 @@ class VendorController extends Controller
                     $html .= '<li>';
                     $html .= '<div class="rev-flex-cls">';
                     $html .= '<div class="img-col">';
-                    $vendor_profile_img = asset('img/default-vendor.jpg');
-                    if ($data['vendor_image']) {
-                        if (file_exists(public_path() . '/storage/vendor/profile/' . $data['vendor_image'])) {
-                            $vendor_profile_img = asset('storage/vendor/profile/' . $data['vendor_image']);
+
+                    $user_profile_img = asset('img/default-avatar.jpg');
+
+                    if ($item->name == "Super Admin") {
+                        $user_profile_img = asset('img/default-avatar.jpg');
+                    } else {
+                        if ($data['avatar']) {
+                            if (file_exists(public_path() . '/storage/user/profile/' . $data['avatar'])) {
+                                $user_profile_img = asset('storage/user/profile/' . $data['avatar']);
+                            }
                         }
                     }
-                    $html .= '<img src="' . $vendor_profile_img . '" class="img-fluid" alt="alt img">';
+
+                    $html .= '<img src="' . $user_profile_img . '" class="img-fluid" alt="alt img">';
                     $html .= '</div>';
 
                     $html .= '<div class="text-col">';

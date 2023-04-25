@@ -73,7 +73,7 @@ $('.more-content-cls').each(function () {
     var content = $(this).html();
 
     if (content.length > showChar) {
-
+        console.log('fff');
         var c = content.substr(0, showChar);
         var h = content.substr(showChar - 1, content.length - showChar);
 
@@ -122,10 +122,12 @@ function button_scroll() {
     $("#button-scroll").show();
 
     const goblogFreeBtnTop = document.getElementById("button-scroll");
-    goblogFreeBtnTop.addEventListener('click', () => window.scrollTo({
-        top: 0.1,
-        behavior: 'smooth',
-    }));
+    if (goblogFreeBtnTop) {
+        goblogFreeBtnTop.addEventListener('click', () => window.scrollTo({
+            top: 0.1,
+            behavior: 'smooth',
+        }));
+    }
 }
 
 $(document).on('click', '#filter-validation', function (event) {
@@ -154,3 +156,21 @@ $(document).on("click", '.show_reply_popup', function () {
 
     $("#replyModal").modal("show");
 })
+
+
+$(document).on('click', '.del-link', function (e) {
+    var answer = confirm('Are you sure?');
+    if (answer) {
+        // Proceed
+    } else {
+        e.preventDefault();
+    }
+});
+
+
+function eliminate_active_cls(id) {
+    console.log(id);
+    $(id).removeClass("active");
+    $($(id).parent()).removeClass("active");
+    $('.all_content').removeClass("active in");
+}

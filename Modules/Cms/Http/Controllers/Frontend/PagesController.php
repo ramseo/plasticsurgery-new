@@ -61,27 +61,6 @@ class PagesController extends Controller
 
     public function show($slug)
     {
-        // if ($checkForCityView == true) {
-        //     $templaate_view = "city-temp"; 
-
-        //     $explodeArr = explode('-', $slug);
-
-        //     $duplicateArr = array_intersect($explodeArr, $citiesArr);
-        //     if ($duplicateArr) {
-        //         $city = reset($duplicateArr);
-        //     } else {
-        //         $city = "";
-        //     }
-
-        // } elseif (in_array($slug, $popular_surgeries_arr)) {
-        //     $templaate_view = "popular-surgeries";
-        //     $city = "";
-        // } else {
-        //     $templaate_view = "show";
-        //     $city = "";
-        // }
-
-
         $module_title = $this->module_title;
         $module_name = $this->module_name;
         $module_path = $this->module_path;
@@ -93,49 +72,59 @@ class PagesController extends Controller
 
         // template functions
         $citiesArr = citiesArr();
-        $citiesSurgeriesArr = citiesSurgeriesArr();
+        $citiesSurgeriesArr = citiesSurgeriesArr('popular-surgeries');
         $checkForCityView = contains_str($slug, $citiesSurgeriesArr);
         $popular_surgeries_arr = popular_surgeries_arr("popular-surgeries");
 
         if ($checkForCityView == true) {
 
-            $template_view = "rhinoplasty-city";
-            $explodeArr = explode('-', $slug);
+            if (in_array($slug, $popular_surgeries_arr)) {
 
-            $duplicateArr = array_intersect($explodeArr, $citiesArr);
+                $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
+                event(new PageViewed($$module_name_singular));
 
-            if ($duplicateArr) {
-                $city = reset($duplicateArr);
-            } else {
+                $template_view = "popular-surgeries";
                 $city = "";
+                $surgery_str = "";
+            } else {
+                $template_view = "rhinoplasty-city";
+                $explodeArr = explode('-', $slug);
+                $duplicateArr = array_intersect($explodeArr, $citiesArr);
+
+                if ($duplicateArr) {
+                    $city = reset($duplicateArr);
+                } else {
+                    $city = "";
+                }
+
+                $surgery_explodeArr = explode('-', $slug);
+                $key = array_search($city, $surgery_explodeArr, true);
+                if ($key !== false) {
+                    unset($surgery_explodeArr[$key]);
+                }
+
+                $surgery_str = implode(" ", $surgery_explodeArr);
+                $uc_surgery_str = ucwords($surgery_str);
+                $uc_city = ucwords($city);
+
+                $$module_name_singular = (object) array(
+                    'meta_title' => $uc_surgery_str . " " . "Clinic in" . " " . $uc_city,
+                    'meta_description' => "The best Board certified surgeon for $uc_surgery_str. Get rid of unwanted eyelid skin from eyelid surgery clinic in $uc_city at a reasonable cost",
+                    'meta_keywords' => "",
+                    'name' => ucwords("Best $uc_surgery_str Surgeon in $uc_city"),
+                );
             }
-
-            $surgery_explodeArr = explode('-', $slug);
-            $key = array_search($city, $surgery_explodeArr, true);
-            if ($key !== false) {
-                unset($surgery_explodeArr[$key]);
-            }
-
-            $surgery_str = implode(" ", $surgery_explodeArr);
-
-
-            $$module_name_singular = (object) array(
-                'meta_title' => $slug,
-                'meta_description' => $slug,
-                'meta_keywords' => $slug,
-                'name' => ucwords("Best $surgery_str Surgeon in $city"),
-            );
         } elseif (in_array($slug, $citiesArr)) {
-            $$module_name_singular = (object) array(
-                'meta_title' => $slug,
-                'meta_description' => $slug,
-                'meta_keywords' => $slug,
-                'name' => $slug,
-            );
-
-            $template_view = "city-temp";
             $city = $slug;
+            $uc_city = ucwords($slug);
+            $template_view = "city-temp";
             $surgery_str = "";
+            $$module_name_singular = (object) array(
+                'meta_title' => ucwords(str_replace("-", " ", $uc_city)),
+                'meta_description' => "Top Cosmetic Surgery Clinic in $uc_city. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
+                'meta_keywords' => "",
+                'name' => "Best Cosmetic Surgeon in $uc_city",
+            );
         } else {
             $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
             event(new PageViewed($$module_name_singular));
@@ -144,7 +133,7 @@ class PagesController extends Controller
             $city = "";
             $surgery_str = "";
         }
-        // template functions
+        // template functions 
 
         return view(
             "cms::frontend.$module_name.$template_view",

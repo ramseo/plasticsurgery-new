@@ -13,6 +13,10 @@ use App\Models\Userprofile;
 use App\Models\UserProvider;
 use App\Models\UserQuotation;
 use App\Models\Quotation;
+
+use App\Models\Album;
+use App\Models\Image;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -26,6 +30,8 @@ use Log;
 use Flash;
 use Auth;
 use DB;
+use Storage;
+use Yajra\DataTables\DataTables;
 
 class UserController extends Controller
 {
@@ -108,6 +114,173 @@ class UserController extends Controller
         return view("frontend.users.profile", compact('user', 'userprofile'));
     }
 
+    // results section start aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+    public function profileResults(Request $request)
+    {
+        if (Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user = Auth::user();
+        $user = User::findOrFail($user->id);
+
+        $userprofile = Userprofile::where('user_id', $user->id)->first();
+
+        if ($request->ajax()) {
+            $albums = DB::table('albums')->where('vendor_id', $user->id)->select(['id', 'name', 'description'])->orderBy('id', 'desc');
+            return Datatables::of($albums)
+                ->addIndexColumn()
+                ->editColumn('description', function ($album) {
+                    return '<strong>' . Str::words($album->description, '25') . '</strong>';
+                })
+                ->addColumn('action', function ($album) {
+                    $btn = "";
+                    $btn .= '<div class="album-flex-cls">';
+                    $btn .= '<a href="' . route("frontend.results.edit", $album->id) . '" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip" title="Edit Service"><i class="fa fa-wrench"></i></a>';
+                    $btn .= '<a href="' . route("frontend.results.image.index", $album->id) . '" class="btn btn-sm btn-success mt-1" data-toggle="tooltip" title="Album Gallery"><i class="fa fa-file-image-o"></i></a>';
+                    $btn .= '<a href="' . route("frontend.results.delete", $album->id) . '" class="btn btn-sm btn-danger mt-1 del-link" data-toggle="tooltip" title="Album Delete"><i class="fa fa-trash"></i></a>';
+                    $btn .= '</div>';
+                    return $btn;
+                })
+                ->rawColumns(['action', 'description'])
+                ->make(true);
+        }
+        return view("frontend.users.results", compact('user', 'userprofile'));
+    }
+
+    public function results_create()
+    {
+        if (Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user = Auth::user();
+        $user = User::findOrFail($user->id);
+
+        Log::info(label_case('Album Create | User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return view("frontend.users.result-create")->with('user', $user);
+    }
+
+    public function results_store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string',
+        ]);
+
+        $data = $request->all();
+        if ($request->file('image')) {
+            $file_image = fileUpload($request, 'image', 'album/image');
+            $data = array_merge($data, ['image' => $file_image]);
+        }
+
+        $album = Album::create($data);
+
+        Flash::success("<i class='fas fa-check'></i> New Album Added")->important();
+        Log::info(label_case('Category Store | ' . $album->name . '(ID:' . $album->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return redirect("profile/results");
+    }
+
+    public function results_edit($id)
+    {
+        if (Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user = Auth::user();
+        $user = User::findOrFail($user->id);
+
+        $album = Album::findOrFail($id);
+
+        Log::info(label_case('Service Edit | ' . $album->name . '(ID:' . $album->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return view('frontend.users.result-edit', compact('album'))->with('user', $user);
+    }
+
+    public function results_update($id, Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string',
+        ]);
+
+        $album = Album::findOrFail($id);
+
+        $data = $request->all();
+        // compress code
+        $x = 0;
+        $file = $request->file('image');
+        $file_name = time() . "_" . $file->getClientOriginalName();
+        $img = \Image::make($file);
+        $img->save(public_path("storage/album/image/$file_name"), $x);
+
+        $data = array_merge($data, ['image' => $file_name]);
+        // compress code
+        
+        // if ($request->file('image')) {
+        //     $file_image = fileUpload($request, 'image', 'album/image/');
+        //     $data = array_merge($data, ['image' => $file_image]);
+        // }
+
+        $album->update($data);
+        Flash::success("<i class='fas fa-check'></i> Album Updated Successfully")->important();
+        Log::info(label_case('Service Update | ' . $album->name . '(ID:' . $album->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return redirect("profile/results");
+    }
+
+    public function results_delete($id)
+    {
+        rrmdir(storage_path('app/public/album/' . $id));
+        Album::where(['id' => $id])->delete();
+        Image::where(['album_id' => $id])->delete();
+        Flash::success("<i class='fas fa-check'></i> Album Deleted")->important();
+        return redirect("profile/results");
+    }
+
+    public function results_image($albumId, Request $request)
+    {
+        if (Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user = Auth::user();
+        $user = User::findOrFail($user->id);
+
+        $album = Album::findOrFail($albumId);
+        $images = Image::where('album_id', $albumId)->get();
+
+        return view('frontend.users.result-images', compact('images', 'album', 'user'));
+    }
+
+    public function results_image_store(Request $request, $id)
+    {
+        $album_id = $id;
+        $fileName = fileUpload($request, 'file', "album/$album_id/", true);
+        $input['album_id'] = $album_id;
+        $input['name'] = $fileName;
+        $image = Image::create($input);
+        Log::info(label_case('Image Store | ' . $image->name . '(ID:' . $image->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return response()->json(['success' => $image->id]);
+    }
+
+
+    public function results_image_remove(Request $request)
+    {
+        $name = $request->get('name');
+        $image = Image::where(['name' => $name])->first();
+        Storage::delete('album/$album_id/' . $image->name);
+        Image::where(['id' => $image->id])->delete();
+        return $name;
+    }
+
+    public function results_image_delete($id)
+    {
+        $image = Image::findorfail($id);
+        Storage::delete('album/$album_id/' . $image->name);
+        Image::where(['id' => $image->id])->delete();
+
+        Flash::success("<i class='fas fa-check'></i> Image Deleted")->important();
+
+        return redirect("profile/results/image/$image->album_id");
+    }
+
+
+    // results section finish aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
     /**
      * Show the form for Profile Paeg Editing the specified resource.
      *
@@ -117,9 +290,11 @@ class UserController extends Controller
      */
     public function profileEdit()
     {
+
         if (Auth::check() == false) {
             return redirect(base_url());
         }
+
         $user = Auth::user();
         Log::info(label_case('Edit | ' . $user->name . '(ID:' . $user->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
         return view("frontend.users.edit")->with('user', $user);
@@ -135,11 +310,6 @@ class UserController extends Controller
      */
     public function profileUpdate(Request $request)
     {
-
-        //        if ($id != auth()->user()->id) {
-        //            return redirect()->route('frontend.users.profile', $id);
-        //        }
-
         $id = Auth::user()->id;
 
         $this->validate($request, [
@@ -155,7 +325,33 @@ class UserController extends Controller
             $data = array_merge($data, ['avatar' => $file_image]);
         }
 
+        // add fields to update
+        $data['name'] = $request->first_name . " " . $request->last_name;
+        $data['username'] = strtolower($request->first_name . "-" . $request->last_name);
+
+        if ($data['city']) {
+            $jsonEncodeTags = json_encode($data['city']);
+            $data['city'] = $jsonEncodeTags;
+        } else {
+            $data['city'] = Null;
+        }
+        // add fields to update
+
         $user->update($data);
+
+        // update userprofiles table
+        $userprofiles = [];
+        $userprofiles['date_of_birth'] = $data['date_of_birth'];
+        $userprofiles['name'] = $data['name'];
+        $userprofiles['first_name'] = $data['first_name'];
+        $userprofiles['last_name'] = $data['last_name'];
+        $userprofiles['username'] = $data['username'];
+        $userprofiles['address'] = $data['address'];
+        $userprofiles['mobile'] = $data['mobile'];
+        $userprofiles['gender'] = $data['gender'];
+        $userprofiles['bio'] = $data['experience_years'];
+        DB::table('userprofiles')->where('user_id', $id)->update($userprofiles);
+        // update userprofiles table
 
         Flash::success("<i class='fas fa-check'></i> Vendor Updated Successfully")->important();
         Log::info(label_case('Update | ' . $user->name . '(ID:' . $user->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
@@ -574,5 +770,30 @@ class UserController extends Controller
         // dd($vendors);
 
         return view("frontend.users.vendor",  compact('user_quotation', 'type', 'more_vendors', 'vendors'));
+    }
+
+
+    public function get_user_cities(Request $request)
+    {
+        $module_name = $this->module_name;
+
+        $term = trim($request->q);
+
+        if (empty($term)) {
+            return response()->json([]);
+        }
+
+        $query_data = DB::table('cities')->where('name', 'LIKE', "%$term%")->orWhere('slug', 'LIKE', "%$term%")->limit(7)->get();
+
+        $$module_name = [];
+
+        foreach ($query_data as $row) {
+            $$module_name[] = [
+                'id'   => $row->id,
+                'text' => $row->name,
+            ];
+        }
+
+        return response()->json($$module_name);
     }
 }

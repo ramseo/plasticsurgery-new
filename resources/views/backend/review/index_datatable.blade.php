@@ -1,11 +1,4 @@
 <style>
-    /* .switch-flex-cls {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: center;
-    } */
-
     .switch {
         position: relative;
         display: inline-block;
@@ -114,9 +107,12 @@
                                 Rating
                             </th>
                             <th>
-                                Vendor
+                                Email
                             </th>
-                            <th width="20%" class="text-center">
+                            <th>
+                                Phone
+                            </th>
+                            <th width="25%" class="text-center">
                                 Action
                             </th>
                         </tr>
@@ -177,8 +173,12 @@
                 name: 'rating'
             },
             {
-                data: 'vendor_id',
-                name: 'vendor_id'
+                data: 'email',
+                name: 'email'
+            },
+            {
+                data: 'phone',
+                name: 'phone'
             },
             {
                 data: 'action',
