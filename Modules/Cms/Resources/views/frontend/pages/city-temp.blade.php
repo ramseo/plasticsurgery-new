@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title') {{$$module_name_singular->meta_title}} @endsection
+@section('title') <?= $$module_name_singular->meta_title ?> @endsection
 
 @section('site-meta-tags')
 <meta name="description" content="{{ $$module_name_singular->meta_description ? $$module_name_singular->meta_description : setting('meta_keyword') }}">
@@ -96,26 +96,12 @@
                 <div class="row">
                     <div class="col">
                         <p>
-                            <!-- ddd -->
                             Our Board-Certified Plastic Surgeons in <?= $city ?> hold dexterity in performing complex cosmetic surgeries with ease.
                             Our experts have a commendable record of operating countless surgeries with success.
                             Among their expertise, include Liposuction, Rhinoplasty, Blepharoplasty, Gynecomastia, Breast Augmentation, Tummy Tuck, and more.
                             Our surgeons are immensely qualified and possess adept expertise in performing surgery with great precision.
                             They make sure to give personal attention to each individual, listen carefully to the problems of the patients, and try to grasp their expectations from the surgery.
                             This helps them appreciably in suggesting and performing the most suitable procedure in a safe and hygienic environment, well-equipped with advanced surgery tools.
-                            <!-- ddd -->
-                            <!-- At present, he serves the cosmetic and plastic surgery patients in his clinic in <?= $city ?>,
-                            which he started in 2009 after returning from UK.
-                            He dons the role of Managing Director and Chief Aesthetic Plastic Surgeon,
-                            respectively in the clinic.
-                            Alongside, They are also serving an Honorary Consultant Aesthetic Plastic Surgeon at Oyster and Pearl Hospitals,
-                            and Ruby Hall Clinic, both in <? //= $city 
-                                                            ?>.
-                            Among his major specialties include ethnic Rhinoplasty,
-                            Facial rejuvenation, scar less Gynaecomastia (Male Breasts),
-                            Breast Augmentation, Breast reduction and asymmetry correction,
-                            Mummy Makeover (including Breast Lift),
-                            and body Contouring using High Definition VASER and Microaire liposuction among others. -->
                         </p>
                     </div>
                 </div>
@@ -133,9 +119,6 @@
                     The cost for Cosmetic Surgery treatments in <?= $city ?> varies appreciably depending on the clinic
                     and the doctor you approach for the treatment.
                     Having a face-to-face consultation with the surgeon would be advisable in this regard.
-                    <!-- The cosmetic surgery charges depend on the type of surgery you are about to undergo. Much will rely on the clinic and the surgeon through which you have agreed to go under the knife. You may have to pay somewhere between 50,000 INR to 150000 as per the surgery you opt for.
-                    Contacting the clinic will help you know
-                    about the involved costs in detail. -->
                 </p>
                 <p>
                     Besides, our doctors in <?= $city ?> can also perform many more surgeries like Facelift,
@@ -162,16 +145,6 @@
                     Feel free to visit them in person to know your candidature
                     for the procedure you wish to undergo.
                 </p>
-                <!-- <p>In Dr. Ashish Davalbhakta’s clinic in <? //= $city 
-                                                                ?>, you can get the treatment at affordable cost under the supervision of Dr. Ashish Davalbhakta himself. You can know about the respective treatment in detail by seeking an appointment with him via call. If you cannot make it to the
-                    clinic in person, there is also the option of e-consultation.</p>
-                <p>The <? //= $city 
-                        ?> based clinic offers varied treatments under Cosmetic Surgery, Cosmetology and Wellness domains. It has even received “The Best Cosmetic Surgery Clinic in <? //= $city 
-                                                                                                                                                                                        ?>” by TOI in 2017, 2018 and 2019, for its excellent efforts in the healthcare field. Much credit for this recognition goes to the robust techniques, safety standards and the high
-                    satisfaction levels that the clinic ensures during the treatment.</p>
-                <p>As a part of aesthetic plastic surgery services, the clinic provides body and facial reshaping, fat grafting,
-                    chin or cheek augmentation, breast augmentation, nose reshaping, vaginal
-                    rejuvenation or genital surgery for men and women, and so on.</p> -->
 
                 <p class="identity">
                     FAQs on Cosmetic Surgery in <?= $city ?>
@@ -264,7 +237,6 @@
     </div>
 </div>
 
-<!-- codepp -->
 <div class="container-fluid mtab pt-4 pb-4" style="background-color:#f8f8f8">
     <div class="container">
         <p class="identity m-auto text-center" style="width:fit-content">
@@ -673,7 +645,6 @@
         </div>
     </div>
 </div>
-<!-- codepp -->
 
 @endsection
 

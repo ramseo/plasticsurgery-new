@@ -109,7 +109,7 @@ class PagesController extends Controller
 
                 $$module_name_singular = (object) array(
                     'meta_title' => $uc_surgery_str . " " . "Clinic in" . " " . $uc_city,
-                    'meta_description' => "The best Board certified surgeon for $uc_surgery_str. Get rid of unwanted eyelid skin from eyelid surgery clinic in $uc_city at a reasonable cost",
+                    'meta_description' => "The best Board certified surgeon for $uc_surgery_str in $uc_city. Visit the cost-effective Cosmetic surgery clinic for $uc_surgery_str today",
                     'meta_keywords' => "",
                     'name' => ucwords("The Most Skilled Cosmetic Surgeon for $uc_surgery_str in $uc_city"),
                 );
@@ -120,8 +120,8 @@ class PagesController extends Controller
             $template_view = "city-temp";
             $surgery_str = "";
             $$module_name_singular = (object) array(
-                'meta_title' => ucwords(str_replace("-", " ", $uc_city)),
-                'meta_description' => "Top Cosmetic Surgery Clinic in $uc_city. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
+                'meta_title' => "Best Plastic Surgeon Clinic in" . " " . ucwords(str_replace("-", " ", $uc_city)) . " " . "| Cosmetic Surgery Cost",
+                'meta_description' => "Top Cosmetic Surgery Clinics in $uc_city. Book your appointment with Board Certified Plastic Surgeons to get the right opinion for your treatment.",
                 'meta_keywords' => "",
                 'name' => "Find the best Cosmetic Surgeon in $uc_city",
             );
