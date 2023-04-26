@@ -123,7 +123,7 @@ class PagesController extends Controller
                 'meta_title' => ucwords(str_replace("-", " ", $uc_city)),
                 'meta_description' => "Top Cosmetic Surgery Clinic in $uc_city. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
                 'meta_keywords' => "",
-                'name' => "Best Cosmetic Surgeon in $uc_city",
+                'name' => "Find the best Cosmetic Surgeon in $uc_city",
             );
         } else {
             $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
