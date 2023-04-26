@@ -111,7 +111,7 @@ class PagesController extends Controller
                     'meta_title' => $uc_surgery_str . " " . "Clinic in" . " " . $uc_city,
                     'meta_description' => "The best Board certified surgeon for $uc_surgery_str. Get rid of unwanted eyelid skin from eyelid surgery clinic in $uc_city at a reasonable cost",
                     'meta_keywords' => "",
-                    'name' => ucwords("Best $uc_surgery_str Surgeon in $uc_city"),
+                    'name' => ucwords("The Most Skilled Cosmetic Surgeon for $uc_surgery_str in $uc_city"),
                 );
             }
         } elseif (in_array($slug, $citiesArr)) {
