@@ -7,8 +7,8 @@
 
 <section id="page-banner">
     <div class="container-fluid">
-        <div class="row">
-            <div class="banner-container">
+        <div class="row" style="margin-left:0;margin-right:0;">
+            <div class="banner-container"> 
                 <div class="vendor-img">
                     <img src="<?= asset('img/blog.jpg') ?>" style="width:100%" alt="blog banner" class="img-fluid filter-cls margin-img-0">
                     <div class="banner-search-col">
@@ -26,8 +26,8 @@
 							     <div id="page-breadcrumb" class="page-breadcrumb">
 		                            <div class="page-breadcrumb-inner">
                                       <ul class="insight_core_breadcrumb">
-                                      <li class="level-1 top"><a href="https://healsoul.thememove.com/">Home</a></li>
-                                      <li class="level-2 sub tail current"><span>Blog Grid 1</span></li> 
+                                      <li class="level-1 top"><a href="http://cosmetic.ls/blog">Home</a></li>
+                                      <li class="level-2 sub tail current"><span>> Blog Grid 1</span></li> 
                                       </ul>
                                   </div>
 		                         </div>
@@ -43,16 +43,18 @@
     </div>
 </section>
 
-<section id="breadcrumb-sec">
-    <!-- <div class="container-fluid">
+<!-- <section id="breadcrumb-sec">
+    <div class="container-fluid">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Blog</li>
             </ol>
         </nav>
-    </div> -->
-</section>
+    </div>
+</section> -->
+
+<div style="clear:both"></div>
 
 <?php
 $catIds = [];
@@ -105,15 +107,16 @@ if ($getPostCat) {
     </section>
 <?php } ?>
 
+<div style="clear:both"></div>
 @if(count($post_data))
 <section class="listing-section blog-index-cls">
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding-top:70px;">
         <div class="row">
             @foreach ($post_data as $item)
             @php
             $details_url = route("frontend.$module_name.show",[$item->slug]);
             @endphp
-            <div class="col-12 col-md-4 mb-4">
+            <div class="col-md-4">
             <div class="post-item-wrap">
                 <div class="common-card">
                 <div class="card" data-label="<?= date('d', strtotime($item->published_at)) . " " . substr(date('F', strtotime($item->published_at)),0,3) . " " . date('Y', strtotime($item->published_at)) ?>">
@@ -130,19 +133,14 @@ if ($getPostCat) {
                             {{Str::words($item->intro, '15')}}
                         </p>
                     </div>
-                    <div class="post-author-date">
+                    <!-- <div class="post-author-date">
                         <div class="author">
-                            <?= $item->author ?>
+                            </?= $item->author ?>
                         </div>
                         <div class="dot">
                             •
                         </div>
-                        <?php // if ($item->published_at) { ?>
-                            <!-- <div class="date">
-                                <?//= date('d', strtotime($item->published_at)) . " " . date('F', strtotime($item->published_at)) . " " . date('Y', strtotime($item->published_at)); ?>
-                            </div> -->
-                        <?php // ?>
-                    </div>
+                    </div> -->
                  </div>
                 </div>
                </div>
@@ -151,14 +149,12 @@ if ($getPostCat) {
         </div>
 
         <div class="inner" style="text-align:center">
-						<ul class="page-pagination"><li>
-                            <span aria-current="page" class="page-numbers current">1</span>
-                   
-                        <li><a class="page-numbers" href="https://http://cosmetic.ls//blog-grid-1/page/2/">2</a></li>
-                        <li><a class="next page-numbers" href="">Next<i class="fas fa-chevron-right"></i></a></li>
+						<ul class="page-pagination">
+                        <li> <span aria-current="page" class="page-numbers current">1</span></li>
+                        <li><a class="page-numbers" href="http://cosmetic.ls/blog/deciding-right-procedure-of-body-contouring">2</a></li>
+                        <li><a class="next page-numbers"href="http://cosmetic.ls/blog/don’t-be-shy!-ask-these-questions-to-your-breast-augmentation-surgeon">NEXT<i class="fa fa-chevron-right"></i></a></li>
                        </ul>					
-                    </div>
-
+    
 
         <div class="d-flex justify-content-center w-100 mt-3">
             {{$post_data->links()}}
