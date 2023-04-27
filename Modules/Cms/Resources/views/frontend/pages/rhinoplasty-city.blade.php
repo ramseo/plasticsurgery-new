@@ -23,28 +23,169 @@
                 <div class="col">
                     <div class="top-content">
                         <p>
-                            <strong>Wish to accentuate your appearance with a reshaped nose?</strong>
+                            <strong>
+                                Are you planning to reshape your nose to accentuate your features?
+                            </strong>
                         </p>
                         <p>
-                            Well, Rhinoplasty, commonly known as a ‘nose job’, will give you the desired results. Rhinoplasty is performed as an outpatient procedure and has a minimal recovery time. Performed through the able hands of the most experienced cosmetic surgeon in the city, the surgery will help you get back on your feet in no time with your sculpted nose..
+                            Well, <?= $surgery_str ?>, or ‘nose job’, will give you the desired results.
+                            Performed as an outpatient procedure, it has a minimal recovery time.
+                            With the efforts of our experienced cosmetic surgeons in <?= $city ?>,
+                            you can get regain your sculpted nose with a striking resemblance
+                            to your natural appearance.
                         </p>
                     </div>
-                    <p class="identity">WHY CHOOSE DR FOR <?= $surgery_str ?> IN <?= $city ?>? </p>
+                    <p class="identity">
+                        Why Choose Our <?= $surgery_str ?> Surgeons in <?= $city ?>?
+                    </p>
                     <ul>
-                        <li>One of the most experienced, popular and talented cosmetic surgeons for <?= $surgery_str ?> in India.</li>
-                        <li>High success rates for <?= $surgery_str ?> surgeries and impressive patient experience.</li>
-                        <li>Certified by the reputed national and international boards for cosmetic surgeons.</li>
-                        <li>Expertise in performing different types of <?= $surgery_str ?> treatments like revision <?= $surgery_str ?>, reduction <?= $surgery_str ?>, augmentation <?= $surgery_str ?>, filler <?= $surgery_str ?>, reconstruction <?= $surgery_str ?> and post-traumatic <?= $surgery_str ?> based on the patient’s conditions and expectations.</li>
+                        <li>
+                            We enable you to find the most experienced,
+                            and skilled cosmetic surgeons for <?= $surgery_str ?> in <?= $city ?>.
+                        </li>
+                        <li>
+                            Exponential success rates for <?= $surgery_str ?> surgeries with a satisfying
+                            patient experience.
+                        </li>
+                        <li>
+                            Renowned cosmetic surgeons certified by the reputed national
+                            and international boards for plastic surgeons.
+                        </li>
+                        <li>
+                            Expertise in performing varied types of <?= $surgery_str ?> treatments in <?= $city ?>,
+                            including revision <?= $surgery_str ?>, reduction <?= $surgery_str ?>, augmentation <?= $surgery_str ?>,
+                            filler <?= $surgery_str ?>, reconstruction <?= $surgery_str ?>, and post-traumatic <?= $surgery_str ?>
+                            depending on the specific condition and expectation of the patient.
+                        </li>
                     </ul>
-                    <p class="identity">COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?>
+                    <p class="identity">
+                        COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?>
                     </p>
                     <p>
-                        The cost of <?= $surgery_str ?> surgery depends on a lot of factors like the complexity of the operation and any additional requirements like nasal implants. In general, the cost of <?= $surgery_str ?> in <?= $city ?> starts from Rs. 50,000. This cost does not include the medicine fee, consultation fee and any other post-surgery needs. You can get a right estimate of the cost when you visit the surgeon at the clinic in <?= $city ?>.
+                        The cost of <?= $surgery_str ?> surgery depends on various factors including the complexity
+                        of the operation, any additional requirements like nasal implants, etc.
+                        It would be good to visit our cosmetic surgeon to discuss all the requisite details.
                     </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>
-                        Enhance your overall facial appearance with <?= $surgery_str ?> from the best cosmetic surgery clinic in the city now! Experience the most attentive patient care in our state-of-the-art facilities supported by our accomplished cosmetic surgeon and experienced medical staff.
+                        Enhance your overall facial appearance with <?= $surgery_str ?>
+                        from one of our best cosmetic surgery surgeons in <?= $city ?>!
+                        Experience the most attentive patient care in state-of-the-art
+                        facilities and experienced medical staff
+                        supervised by our accomplished cosmetic surgeons.
                     </p>
+
+                    <p class="identity">
+                        FAQs on <?= $surgery_str ?> Surgery in <?= $city ?>
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        1. Are you a good candidate for <?= $surgery_str ?>?
+                    </p>
+                    <p>
+                        If you satisfy below points, you are a good candidate for <?= $surgery_str ?>
+                        surgery in <?= $city ?>
+                    </p>
+                    <ul>
+                        <li>Your facial growth has attained its completion</li>
+                        <li>You are a healthy person</li>
+                        <li>
+                            You have informed your surgeon about the allergies and medical conditions
+                            that you are undergoing
+                        </li>
+                        <li>You are not allergic to anesthesia or other medicines related to nose surgery</li>
+                        <li>
+                            You are a non-smoker and a non-alcoholic (If not, be the one at least
+                            for the duration recommended by your surgeon)
+                        </li>
+                        <li>You have realistic goals with respect to the nose surgery</li>
+                    </ul>
+
+                    <p class="cosmetic-faq-list">
+                        2. What is the cost of <?= $surgery_str ?>?
+                    </p>
+                    <p>
+                        On average, the cost of <?= $surgery_str ?> in <?= $city ?> may vary between
+                        50,000 INR to 2,50,000 depending on various factors.
+                        The cost may fluctuate further subject to the treatment necessities.
+                    </p>
+
+                    <p class="cosmetic-faq-list">
+                        3. What are the risks related to <?= $surgery_str ?>?
+                    </p>
+                    <p>
+                        Whether you opt for <?= $surgery_str ?> in <?= $city ?> or elsewhere,
+                        there may arise certain risks after the surgery, such as:
+                    </p>
+                    <ul>
+                        <li>Bleeding, infection, adverse reaction to anesthesia</li>
+                        <li>Visible scars</li>
+                        <li>The chance of an un-even nose appearance as the outcome</li>
+                        <li>Problem with breathing through the nose</li>
+                        <li>Persistent swelling, skin discoloration, or pain</li>
+                        <li>Urgent need for a revision nose surgery</li>
+                        <li>Possibility of a hole in the septum</li>
+                    </ul>
+
+                    <p class="cosmetic-faq-list">
+                        4. When can you go for <?= $surgery_str ?>?
+                    </p>
+                    <p>
+                        The best to go for <?= $surgery_str ?> in <?= $city ?> is when your facial structure
+                        is fully developed. Hence, the surgery is not advisable for children,
+                        as they are still in their growing phase. Usually,
+                        females between the age of 15-16 and beyond can go for <?= $surgery_str ?>, Likewise,
+                        males of 17-18 years of age and beyond can opt for it.
+                    </p>
+
+                    <p class="cosmetic-faq-list">
+                        5. What are the things to do before <?= $surgery_str ?> surgery
+                    </p>
+                    <ul>
+                        <li>Give your body complete rest to enable prompt healing after the surgery</li>
+                        <li>Clean your face at least twice a day to get rid of dead skin</li>
+                        <li>Keep yourself hydrated</li>
+                        <li>Have some to take you back home after the surgery</li>
+                        <li>
+                            Prepare your things in advance so that you don’t face
+                            hassles after returning from the surgery
+                        </li>
+                        <li>Avoid drinking and smoking</li>
+                        <li>
+                            Avoid using over-the-counter medicated creams that include salicylic acid, Retin-A,
+                            benzoyl peroxide, etc.
+                        </li>
+                        <li>Minimize exposure to the sun</li>
+                        <li>
+                            Consult your surgeon to know about the medications to avoid and abide by all
+                            the instructions
+                        </li>
+                    </ul>
+
+                    <p class="cosmetic-faq-list">
+                        6. What to expect on the day of <?= $surgery_str ?> surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            If you are opting for nose surgery, it clearly indicates your uneasiness with your
+                            existing nose shape. Hence, you would expect to have a better
+                            appearance of your nose with the <?= $surgery_str ?> surgery.
+                        </li>
+                        <li>
+                            However, make sure that you have realistic expectations with the surgery, and be prepared
+                            to face the outcome. Anticipating miracles would only hurt your sentiments.
+                        </li>
+                        <li>
+                            On the day of the surgery, you could expect the surgeon to take around 2-3 hours
+                            to complete the procedure.
+                        </li>
+                        <li>
+                            After the surgery, you may expect mild discomfort, which will vanish with time.
+                        </li>
+                        <li>
+                            The surgeon would recommend you several post-operation instructions and medication
+                            for quick healing. So, make sure to follow them strictly.
+                        </li>
+                    </ul>
                 </div>
             <?php } elseif ($surgery_str == "blepharoplasty") { ?>
                 <div class="col">

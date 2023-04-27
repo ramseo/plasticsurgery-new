@@ -3159,3 +3159,8 @@ img {
 #imgPreview {
     max-width: 350px;
 }
+
+.cosmetic-faq-list {
+    font-weight: 600;
+    font-size: 18px;
+}
