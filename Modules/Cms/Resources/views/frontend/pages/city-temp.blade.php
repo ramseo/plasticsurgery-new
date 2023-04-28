@@ -37,7 +37,7 @@
                                         <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
                                             <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" style="width:100%" />
                                         <?php } else { ?>
-                                            <img src="<?= asset($item->avatar) ?>" style="width:100%" />
+                                            <img src="<?= asset("img/default-avatar.jpg") ?>" alt="doctor img" style="width:100%" />
                                         <?php } ?>
                                     </div>
                                     <div class="doc-star-rating">
