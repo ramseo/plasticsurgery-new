@@ -199,7 +199,7 @@
                             While healthy eyes can transform your entire look, sagging upper eyelids or dark circles
                             can make you appear dull. Blepharoplasty is a suitable cosmetic surgery for correcting
                             droopy or sagging upper eyelids and removing unwanted skin on the lower eyelids.
-                            When performed aesthetically by our expert cosmetic surgeons in Hyderabad, your eyes
+                            When performed aesthetically by our expert cosmetic surgeons in <?= $city ?>, your eyes
                             will look as fresh, bright, and young as ever.
                         </p>
                     </div>
@@ -208,7 +208,7 @@
                     </p>
                     <ul>
                         <li>
-                            Trusted and most experienced cosmetic surgeons in Hyderabad to perform eyelid surgery
+                            Trusted and most experienced cosmetic surgeons in <?= $city ?> to perform eyelid surgery
                         </li>
                         <li>
                             Leverage laser treatments and other latest techniques to get rid of the wrinkles
@@ -231,7 +231,7 @@
                         The cost of Blepharoplasty surgery depends on the complexity of the surgery.
                         If your eyelids are obstructing the vision, you may get medical insurance cover
                         for the same. Else, it will come under aesthetic purposes and hence will not qualify
-                        for the insurance claim. It is better to consult our cosmetic surgeon in Hyderabad
+                        for the insurance claim. It is better to consult our cosmetic surgeon in <?= $city ?>
                         if you want to know the treatment cost. Depending on your expectations and any other
                         additional treatments needed, you can get a better estimate.
                     </p>
@@ -242,7 +242,7 @@
                         The liveliness of your eyes has a great impact on your appearance. Due to the age factor,
                         you can end up with sagging eyelids and dark circles. Blepharoplasty is the right
                         cosmetic treatment to turn you into a better-looking self. Schedule a consultation
-                        session with Hyderabad’s renowned cosmetic surgeons now.
+                        session with <?= $city ?>’s renowned cosmetic surgeons now.
                     </p>
 
                     <p class="identity">
@@ -253,7 +253,7 @@
                         1. Are you a good candidate for Blepharoplasty?
                     </p>
                     <p>
-                        An ideal candidate for eyelid surgery in Hyderabad should adhere
+                        An ideal candidate for eyelid surgery in <?= $city ?> should adhere
                         to several essential criteria, as mentioned here:
                     </p>
                     <ul>
@@ -282,7 +282,7 @@
                         2. What is the cost of Blepharoplasty?
                     </p>
                     <p>
-                        On average, the cost of Eyelid Surgery or Blepharoplasty in Hyderabad varies
+                        On average, the cost of Eyelid Surgery or Blepharoplasty in <?= $city ?> varies
                         between 80,000 INR and 2,00,000 INR. The cost may fluctuate both ways depending
                         on the doctor your approach, the clinic you choose for the surgery,
                         and several other factors.
@@ -325,7 +325,7 @@
                         4. When can you go for Blepharoplasty?
                     </p>
                     <p>
-                        When you start noticing droopy or baggy upper eyelids, Blepharoplasty surgery in Hyderabad
+                        When you start noticing droopy or baggy upper eyelids, Blepharoplasty surgery in <?= $city ?>
                         could help to remedy the situation. In addition, when you observe problems in peripheral
                         vision due to the generation of excess skin in the upper eyelids or lower eyelids,
                         you can always opt for Blepharoplasty. The ideal age to get eyelid surgery is 30 plus,
@@ -401,7 +401,7 @@
                         </p>
                         <p>
                             Turn back the time and get your youthful looks back with facelift surgery
-                            from one of our top cosmetic surgeons in Hyderabad!
+                            from one of our top cosmetic surgeons in <?= $city ?>!
                         </p>
                     </div>
                     <p class="identity">
@@ -409,7 +409,7 @@
                     </p>
                     <ul>
                         <li>
-                            Most skilled surgeons in Hyderabad for facelift surgery
+                            Most skilled surgeons in <?= $city ?> for facelift surgery
                         </li>
                         <li>
                             Highly proficient at performing different facelift procedures like standard facelift,
@@ -440,7 +440,7 @@
                     <p>
                         When nothing else works to restore your youthful look, a facelift is the best
                         treatment. In just one procedure by one of our experienced surgeons
-                        in Hyderabad, you can notice a visible difference in your
+                        in <?= $city ?>, you can notice a visible difference in your
                         facial appearance.
                     </p>
 
@@ -478,7 +478,7 @@
                         2. What is the cost of Facelift Surgery?
                     </p>
                     <p>
-                        Approaching a certified and experienced cosmetic surgeon in Hyderabad
+                        Approaching a certified and experienced cosmetic surgeon in <?= $city ?>
                         can cost you anywhere around 1,00,000 INR – 2,00,000 INR for
                         facelift surgery.
                         You can also choose to customize your surgery by including Chin Surgery,
@@ -532,7 +532,7 @@
                     <p>
                         People mostly opt for Facelifts to improve their facial structure that has been
                         worn out with age. Hence, individuals from 40 to 60 years
-                        of age are more likely to undergo this surgery in Hyderabad
+                        of age are more likely to undergo this surgery in <?= $city ?>
                         to get rid of fine lines, wrinkles, deep lines,
                         and sagging skin in the face and neck area.
                     </p>
@@ -541,7 +541,7 @@
                     </p>
                     <ul>
                         <li>
-                            Get medical evaluation and tests from a lab in Hyderabad to make
+                            Get medical evaluation and tests from a lab in <?= $city ?> to make
                             sure that your body is fit enough to undergo the surgery
                         </li>
                         <li>
@@ -575,7 +575,7 @@
                     </p>
                     <ul>
                         <li>
-                            On the day of the surgery in Hyderabad, you should be at the clinic
+                            On the day of the surgery in <?= $city ?>, you should be at the clinic
                             with a positive attitude
                         </li>
                         <li>
@@ -588,7 +588,7 @@
                             adjust the dose accordingly.
                         </li>
                         <li>
-                            Usually, a facelift surgery in Hyderabad might take around 3-6 hours
+                            Usually, a facelift surgery in <?= $city ?> might take around 3-6 hours
                             depending on the severity of your case. However,
                             opting for additional cosmetic procedures will
                             take more time.
@@ -623,7 +623,7 @@
                             You can minimise the appearance of wrinkles on the eyelids,
                             which will automatically result in a rejuvenated appearance.
                             Since it is an intricate surgery, it is vital to consult one of our best
-                            cosmetic surgeons in Hyderabad.
+                            cosmetic surgeons in <?= $city ?>.
                         </p>
                     </div>
                     <p class="identity">
@@ -631,7 +631,7 @@
                     </p>
                     <ul>
                         <li>
-                            The best cosmetic surgeons in Hyderabad with specialisation in facial
+                            The best cosmetic surgeons in <?= $city ?> with specialisation in facial
                             cosmetic procedures
                         </li>
                         <li>
@@ -643,7 +643,7 @@
                             like facelifts,fillers, or Botox.
                         </li>
                         <li>
-                            Experienced cosmetic surgeons in Hyderabad, certified by the top national
+                            Experienced cosmetic surgeons in <?= $city ?>, certified by the top national
                             associations of cosmetic surgeons.
                         </li>
                     </ul>
@@ -656,7 +656,7 @@
                         you should also consider the price of medicines and other
                         necessities for a smooth recovery. To get an estimate
                         for Brow Lift surgery, you can always consult
-                        our cosmetic surgeon in Hyderabad.
+                        our cosmetic surgeon in <?= $city ?>.
                     </p>
                     <p>
                         To get an estimate for <?= $surgery_str ?> surgery, you can always consult our cosmetic surgeon in <?= $city ?>.
@@ -669,12 +669,12 @@
                         hence letting your eyes look bright,
                         big, and beautiful.
                         The customised Brow Lift surgery performed by one of our
-                        best plastic surgeons in Hyderabad would
+                        best plastic surgeons in <?= $city ?> would
                         be suitable in this regard.
                     </p>
 
                     <p class="identity">
-                        FAQs on Brow Lift Surgery in Hyderabad
+                        FAQs on Brow Lift Surgery in <?= $city ?>
                     </p>
                     <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Brow Lift surgery?
@@ -682,7 +682,7 @@
                     <p>
                         The points below will help to find out if you are a
                         suitable candidate for Brow Lift
-                        surgery in Hyderabad:
+                        surgery in <?= $city ?>:
                     </p>
                     <ul>
                         <li>
@@ -712,7 +712,7 @@
                         2. What is the cost of Brow Lift surgery?
                     </p>
                     <p>
-                        The average cost of Brow Lift surgery in Hyderabad ranges between
+                        The average cost of Brow Lift surgery in <?= $city ?> ranges between
                         60,000 INR to 1,30,000 INR. There is however a big variation,
                         which results due to the selection of hospital,
                         the expertise of the surgeon, fees of the anesthesiologist,
@@ -783,7 +783,7 @@
                     </p>
                     <ul>
                         <li>
-                            Quit smoking at least 2 weeks before the surgery in Hyderabad
+                            Quit smoking at least 2 weeks before the surgery in <?= $city ?>
                         </li>
                         <li>
                             Quit drinking alcohol at least 2 weeks before the Brow Lift
@@ -869,7 +869,7 @@
                             A neck lift aims at tightening the skin of the neck by removing the excess fat
                             under the chin and creating well-contoured necklines.
                             We recommend visiting any of our top cosmetic
-                            surgeons in Hyderabad
+                            surgeons in <?= $city ?>
                             for neck lift procedures.
                         </p>
                     </div>
@@ -878,7 +878,7 @@
                     </p>
                     <ul>
                         <li>
-                            The best cosmetic surgeons in Hyderabad to perform neck lift
+                            The best cosmetic surgeons in <?= $city ?> to perform neck lift
                         </li>
                         <li>
                             Testimonials by numerous patients who are more than satisfied with the results
@@ -887,7 +887,7 @@
                             Ability to help in restoring youthful appearance even as the ageing skin sets in.
                         </li>
                         <li>
-                            Renowned cosmetic surgeons for facial aesthetics in Hyderabad,
+                            Renowned cosmetic surgeons for facial aesthetics in <?= $city ?>,
                             certified by several national and international
                             boards for cosmetic surgeries
                         </li>
@@ -897,7 +897,7 @@
                         COST OF <?= $surgery_str ?> IN <?= $city ?>
                     </p>
                     <p>
-                        Many cosmetic surgeons in Hyderabad have varying prices for neck lift
+                        Many cosmetic surgeons in <?= $city ?> have varying prices for neck lift
                         surgeries. This difference in cost depends on the
                         treatment facilities, the surgeon’s skills, and other
                         additional recovery treatment prices.
@@ -911,17 +911,17 @@
                     <p>
                         Is sagging skin on your neck disturbing your appearance? If yes,
                         you can go for a neck lift procedure by our certified surgeons
-                        in Hyderabad to make way for transformed results!
+                        in <?= $city ?> to make way for transformed results!
                     </p>
 
                     <p class="identity">
-                        FAQs on Neck Lift Surgery in Hyderabad
+                        FAQs on Neck Lift Surgery in <?= $city ?>
                     </p>
                     <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Neck Lift?
                     </p>
                     <p>
-                        To be a good candidate for Neck Lift in Hyderabad,
+                        To be a good candidate for Neck Lift in <?= $city ?>,
                         you should fulfil the below-mentioned
                         conditions:
                     </p>
@@ -959,7 +959,7 @@
                         2. What is the cost of a Neck Lift?
                     </p>
                     <p>
-                        The average cost of Neck Lift surgery in Hyderabad
+                        The average cost of Neck Lift surgery in <?= $city ?>
                         lies between 70,000 INR to 1,00,000 INR.
                         Factors like skin and fat excision,
                         muscle plication, the need for liposuction,
@@ -1006,7 +1006,7 @@
                     <p>
                         If you have lost considerable weight, lost neck skin, have excess fat,
                         or have developed horizontal skin bands called neck bands,
-                        this is the right time to opt for Neck Lift in Hyderabad.
+                        this is the right time to opt for Neck Lift in <?= $city ?>.
                         Patients mostly between the age of 35 and 65 prefer
                         opting for a neck lift.
                         You should however be physically and mentally fit at the time
@@ -1064,7 +1064,7 @@
                     </p>
                     <ul>
                         <li>
-                            On the day of the Neck Lift surgery in Hyderabad, you will be given general
+                            On the day of the Neck Lift surgery in <?= $city ?>, you will be given general
                             anesthesia to avoid pain during the procedure
                         </li>
                         <li>
@@ -1083,7 +1083,7 @@
                         </li>
                         <li>
                             Usually, it will take around 2 weeks for pain, swelling, and bruising to resolve
-                            and to make neck contours visible after the surgery in Hyderabad
+                            and to make neck contours visible after the surgery in <?= $city ?>
                         </li>
                         <li>
                             Around 4-6 weeks will be sufficient for complete recovery after
@@ -1107,16 +1107,16 @@
                             The cosmetic surgeon can move the chin backward
                             or forward and change its size by moving
                             it up and above. Our expert cosmetic
-                            surgeons in Hyderabad help to achieve a beautiful chin structure
+                            surgeons in <?= $city ?> help to achieve a beautiful chin structure
                             that remains symmetrical with your face.
                         </p>
                     </div>
                     <p class="identity">
-                        Why Choose Our Surgeons for Chin Surgery in Hyderabad?
+                        Why Choose Our Surgeons for Chin Surgery in <?= $city ?>?
                     </p>
                     <ul>
                         <li>
-                            Our renowned cosmetic surgeons in Hyderabad hold adept expertise in performing
+                            Our renowned cosmetic surgeons in <?= $city ?> hold adept expertise in performing
                             numerous chin augmentation and reduction surgeries with success
                         </li>
                         <li>
@@ -1126,7 +1126,7 @@
                             Specialized in working with chin implants to achieve the desired looks.
                         </li>
                         <li>
-                            Skilled cosmetic surgeons from Hyderabad who leave barely visible scars
+                            Skilled cosmetic surgeons from <?= $city ?> who leave barely visible scars
                             that fade quickly over time.
                         </li>
                         <li>
@@ -1142,17 +1142,17 @@
                         cosmetic surgeon will usually recommend using chin implants.
                         If you want to reduce the chin size, Genioplasty is the best choice.
                         So, the overall cost of chin surgery depends on the customized
-                        surgery, the cosmetic surgeon in Hyderabad,
+                        surgery, the cosmetic surgeon in <?= $city ?>,
                         and the additional medicines.
                     </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>
                         Are you worried that your chin does not complement the rest of your face?
-                        If yes, get the help of any of our cosmetic surgeons in Hyderabad
+                        If yes, get the help of any of our cosmetic surgeons in <?= $city ?>
                         to fix the issue and change the appearance of your face.
                     </p>
                     <p class="identity">
-                        FAQs on Chin Surgery in Hyderabad
+                        FAQs on Chin Surgery in <?= $city ?>
                     </p>
                     <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Chin Surgery?
@@ -1175,7 +1175,7 @@
                             Physically healthy and maintains a stable weight
                         </li>
                         <li>
-                            Realistic expectations with the chin surgery in Hyderabad
+                            Realistic expectations with the chin surgery in <?= $city ?>
                         </li>
                         <li>
                             Non-smoker and non-alcoholic
@@ -1185,7 +1185,7 @@
                         2. What is the cost of Chin Surgery?
                     </p>
                     <p>
-                        The cost of a chin surgery in Hyderabad depends upon several factors
+                        The cost of a chin surgery in <?= $city ?> depends upon several factors
                         like the procedure performed, the fees of the surgeon,
                         the hospital, and more.
                         The average cost ranges between 70,000 INR - 150,000 INR.
@@ -1232,7 +1232,7 @@
                     <p>
                         Chin surgery is an optional procedure that you undergo if you think your chin is too long,
                         broad, or projects too far from your nose.
-                        The surgery in Hyderabad can enhance the balance of your chin with other facial features.
+                        The surgery in <?= $city ?> can enhance the balance of your chin with other facial features.
                         Chin surgery is popular among men and women of almost all age groups worldwide.
                         There is however no specific age limitation for the procedure.
                         Even 15 or 16-year-old young boys and girls could opt for it
@@ -1277,7 +1277,7 @@
                             Be ready for the surgery day with the positive attitude
                         </li>
                         <li>
-                            Usually, the surgeons in Hyderabad perform chin surgery as an
+                            Usually, the surgeons in <?= $city ?> perform chin surgery as an
                             outpatient treatment
                         </li>
                         <li>
@@ -1337,7 +1337,7 @@
                             any accident or untoward incident.
                         </p>
                         <p>
-                            Choose the most respected cosmetic surgeon in Hyderabad to enhance your cheeks naturally
+                            Choose the most respected cosmetic surgeon in <?= $city ?> to enhance your cheeks naturally
                             and improve your overall appearance.
                         </p>
                     </div>
@@ -1345,7 +1345,7 @@
                         WHY CHOOSE <?= $surgery_str ?> IN <?= $city ?>? </p>
                     <ul>
                         <li>
-                            One of the most experienced facial cosmetic surgeons in Hyderabad.
+                            One of the most experienced facial cosmetic surgeons in <?= $city ?>.
                         </li>
                         <li>
                             Expertise in various forms of cheek augmentation procedures like
@@ -1356,7 +1356,7 @@
                             implants that compliments their facial features.
                         </li>
                         <li>
-                            One of the top board-certified cosmetic surgeons in Hyderabad and the member
+                            One of the top board-certified cosmetic surgeons in <?= $city ?> and the member
                             of numerous cosmetic surgery associations in India.
                         </li>
                     </ul>
@@ -1370,7 +1370,7 @@
                         play a major role.
                     </p>
                     <p>
-                        Our cosmetic surgeon is one of the best in Hyderabad for cheek augmentation.
+                        Our cosmetic surgeon is one of the best in <?= $city ?> for cheek augmentation.
                         Schedule a consultation session and get the advice on the next
                         action plan to increase the size and shape of your cheeks.
                     </p>
@@ -1378,7 +1378,7 @@
                     <p class="identity">OUR SERVICES</p>
                     <p>
                         Attaining those dreamy, bouncy cheeks is possible now! Go for cheek augmentation
-                        surgery by our expert cosmetic surgeon in Hyderabad and observe
+                        surgery by our expert cosmetic surgeon in <?= $city ?> and observe
                         the difference it makes to your life!
                     </p>
                 </div>
@@ -1397,18 +1397,18 @@
                             If you are unhappy with the appearance of your lips or
                             they have become deformed due to an accident,
                             lip augmentation surgery is the best choice.
-                            Our cosmetic surgeons in Hyderabad have helped many to get dreamy
+                            Our cosmetic surgeons in <?= $city ?> have helped many to get dreamy
                             lips that look in perfect symmetry with the face.
                             You could also visit any of our experienced cosmetic surgeons,
                             and choose to enhance your lips.
                         </p>
                     </div>
                     <p class="identity">
-                        Why Choose Our Cosmetic Surgeons for Lip Augmentation in Hyderabad?
+                        Why Choose Our Cosmetic Surgeons for Lip Augmentation in <?= $city ?>?
                     </p>
                     <ul>
                         <li>
-                            Extremely skilled surgeons in Hyderabad for lip augmentation treatment
+                            Extremely skilled surgeons in <?= $city ?> for lip augmentation treatment
                         </li>
                         <li>
                             Expertise in different types of lip augmentation procedures including
@@ -1434,27 +1434,27 @@
                         dermal fillers or lip implants. Usually,
                         lip implants are permanent and cost more than dermal
                         fillers. You can visit our cosmetic surgeon
-                        in Hyderabad to get the cost details
+                        in <?= $city ?> to get the cost details
                         and treatment plans.
                     </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>
                         Let your lips capture everyone’s attention! Make them look naturally fuller,
                         beautiful, and well contoured with Lip Augmentation! Visit our reputed
-                        cosmetic surgeons in Hyderabad to get your desired results now.
+                        cosmetic surgeons in <?= $city ?> to get your desired results now.
                         Choose the best treatment from dermal fillers, fat fillers,
                         and lip implants.
                     </p>
 
                     <p class="identity">
-                        FAQs on Lip Augmentation Surgery in Hyderabad
+                        FAQs on Lip Augmentation Surgery in <?= $city ?>
                     </p>
                     <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Lip Augmentation Surgery?
                     </p>
                     <p>
                         Anyone satisfying several important criteria as given below can
-                        be a good candidate for Lip Augmentation in Hyderabad:
+                        be a good candidate for Lip Augmentation in <?= $city ?>:
                     </p>
                     <ul>
                         <li>
@@ -1486,7 +1486,7 @@
                         2. What is the cost of Lip Augmentation Surgery?
                     </p>
                     <p>
-                        On average, any lip augmentation procedure in Hyderabad will cost
+                        On average, any lip augmentation procedure in <?= $city ?> will cost
                         around 40,000 INR - 1,00,000 INR, but it can vary depending
                         on the cosmetic surgeon and the treatment
                         along with other factors.
@@ -1496,7 +1496,7 @@
                     </p>
                     <p>
                         Here is a quick look at the possible risks and complications of undergoing
-                        a Lip Augmentation surgery in a clinic in Hyderabad.
+                        a Lip Augmentation surgery in a clinic in <?= $city ?>.
                     </p>
                     <ul>
                         <li>
@@ -1549,7 +1549,7 @@
                         </li>
                         <li>
                             Avoid tobacco, alcohol, and caffeine around 24 hours before
-                            and after the surgery in Hyderabad
+                            and after the surgery in <?= $city ?>
                         </li>
                         <li>
                             Keep your face completely clean and free of makeup
@@ -1583,7 +1583,7 @@
                             treatments depending on the condition of your lips
                         </li>
                         <li>
-                            Lip augmentation surgery from a Hyderabad clinic will last for around 30 minutes.
+                            Lip augmentation surgery from a <?= $city ?> clinic will last for around 30 minutes.
                             During this surgery, the surgeon will administer anesthesia
                             to numb your lips.
                         </li>
@@ -1621,18 +1621,18 @@
                             transforming them into thinner and better-contoured features.
                             Buccal Fat Removal is an extensive surgery that requires
                             attention to detail and specialized techniques.
-                            It is only possible by an expert cosmetic surgeon in Hyderabad who knows
+                            It is only possible by an expert cosmetic surgeon in <?= $city ?> who knows
                             the best treatment plan to deliver your expected results.
                             You can hence trust our surgeons to perform
                             this procedure with excellence.
                         </p>
                     </div>
                     <p class="identity">
-                        Why Choose Our Surgeons for Buccal Fat Removal in Hyderabad?
+                        Why Choose Our Surgeons for Buccal Fat Removal in <?= $city ?>?
                     </p>
                     <ul>
                         <li>
-                            Extremely talented cosmetic surgeons in Hyderabad to perform
+                            Extremely talented cosmetic surgeons in <?= $city ?> to perform
                             Buccal Fat Removal with positive results
                         </li>
                         <li>
@@ -1656,7 +1656,7 @@
                     </p>
                     <p>
                         You can get a better estimate of the cost if you visit the cosmetic surgeon
-                        at the clinic in Hyderabad. After examining your condition,
+                        at the clinic in <?= $city ?>. After examining your condition,
                         the surgeon will decide the course of treatment
                         as well as the surgery costs.
                     </p>
@@ -1666,18 +1666,18 @@
                     <p>
                         You do not need to bother anymore if you have fat cheeks! Now, you can reduce
                         your cheeks and have a thin facial contour with Buccal Fat Removal
-                        performed by any of our best cosmetic surgeons in Hyderabad.
+                        performed by any of our best cosmetic surgeons in <?= $city ?>.
                     </p>
 
                     <p class="identity">
-                        FAQs on Buccal Fat Removal Surgery in Hyderabad
+                        FAQs on Buccal Fat Removal Surgery in <?= $city ?>
                     </p>
                     <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Buccal Fat Removal?
                     </p>
                     <p>
                         An ideal candidate for Buccal Fat Removal surgery
-                        in Hyderabad should satisfy
+                        in <?= $city ?> should satisfy
                         the following conditions:
                     </p>
                     <ul>
@@ -1713,7 +1713,7 @@
                         2. What is the cost of Buccal Fat Removal?
                     </p>
                     <p>
-                        The starting cost for Buccal Fat Removal in Hyderabad is around 65,000 INR,
+                        The starting cost for Buccal Fat Removal in <?= $city ?> is around 65,000 INR,
                         which can increase depending on the location, cosmetic surgeon,
                         and the additional recovery costs. Among the other factors
                         responsible for deciding the cost may include the
@@ -1725,7 +1725,7 @@
                         3. What are the risks related to Buccal Fat Removal?
                     </p>
                     <p>
-                        Wishing to undergo Buccal Fat Removal in Hyderabad? Here are some
+                        Wishing to undergo Buccal Fat Removal in <?= $city ?>? Here are some
                         of the associated risks:
                     </p>
                     <ul>
@@ -1766,7 +1766,7 @@
                     <p>
                         The growth of fat pads continues till one enters the twenties. Hence, surgeons
                         recommend patients of 20 years age or above to undergo Buccal Fat Removal
-                        surgery in Hyderabad. Most people choose this surgery because they feel
+                        surgery in <?= $city ?>. Most people choose this surgery because they feel
                         their fat pads are making them appear childlike.
                     </p>
                     <p class="cosmetic-faq-list">
@@ -1817,7 +1817,7 @@
                             within 2-3 days
                         </li>
                         <li>
-                            Compared to other surgical procedures in Hyderabad, Buccal Fat Removal will
+                            Compared to other surgical procedures in <?= $city ?>, Buccal Fat Removal will
                             take less time. You could expect it to complete within 30 minutes.
                         </li>
                         <li>
@@ -1827,7 +1827,7 @@
                             In the end, you will observe a less chubby appearance of your cheeks
                         </li>
                         <li>
-                            If the intended results remain unachieved with the first surgery in Hyderabad,
+                            If the intended results remain unachieved with the first surgery in <?= $city ?>,
                             the surgeon might recommend another procedure
                         </li>
                     </ul>
@@ -1841,24 +1841,24 @@
                             This surgery addresses structural defects like an abnormally large ear,
                             disoriented ears due to accidents, ears that are unsymmetrical with
                             each other or with facial features, or protruding ears.
-                            You need a highly skilled cosmetic surgeon from Hyderabad to
+                            You need a highly skilled cosmetic surgeon from <?= $city ?> to
                             treat the defects and reshape the ear to look as natural as possible.
                             This is where you can trust our surgeons.
                         </p>
                     </div>
                     <p class="identity">
-                        Why Choose Our Cosmetic Surgeons for Ear Surgery in Hyderabad?
+                        Why Choose Our Cosmetic Surgeons for Ear Surgery in <?= $city ?>?
                     </p>
                     <ul>
                         <li>
-                            Most accomplished cosmetic surgeons in Hyderabad for Otoplasty.
+                            Most accomplished cosmetic surgeons in <?= $city ?> for Otoplasty.
                         </li>
                         <li>
                             Ability to analyze and surgically correct the defect with as
                             minimal possible incisions.
                         </li>
                         <li>
-                            Experts in reconstructive cosmetic surgery in Hyderabad
+                            Experts in reconstructive cosmetic surgery in <?= $city ?>
                         </li>
                         <li>
                             Members of numerous prestigious national and international boards
@@ -1872,7 +1872,7 @@
                     <p>
                         Therefore, the cost of ear surgery varies widely based on the cosmetic surgeon
                         and the intensiveness of the surgery. You can schedule a consultation with
-                        the cosmetic surgeon in Hyderabad to know about the course of treatment
+                        the cosmetic surgeon in <?= $city ?> to know about the course of treatment
                         and a fair estimate for the same.
                     </p>
                     <p class="identity">OUR SERVICES</p>
@@ -1883,19 +1883,19 @@
                         The expert should also be able to achieve symmetry with both ears and ensure
                         compatibility with the face. Hence, if you are having trouble with
                         the unnatural appearance of your ears, our experienced cosmetic
-                        surgeons in Hyderabad can help you out.
+                        surgeons in <?= $city ?> can help you out.
                         They can reconstruct your ear shape and position,
                         thus making your ears look
                         as natural as possible.
                     </p>
                     <p class="identity">
-                        FAQs on Ear Surgery in Hyderabad
+                        FAQs on Ear Surgery in <?= $city ?>
                     </p>
                     <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Ear Surgery?
                     </p>
                     <p>
-                        To be a good candidate for Otoplasty in Hyderabad, you should satisfy
+                        To be a good candidate for Otoplasty in <?= $city ?>, you should satisfy
                         the below points:
                     </p>
                     <ul>
@@ -1936,7 +1936,7 @@
                         2. What is the cost of Ear Surgery?
                     </p>
                     <p>
-                        The average cost of ear surgery in Hyderabad may range from 40,000 INR to 60,000 INR.
+                        The average cost of ear surgery in <?= $city ?> may range from 40,000 INR to 60,000 INR.
                         Much will depend on the hospital, the choice of Surgeon,
                         the type of anesthesia used, and so on. Consulting
                         our cosmetic surgeon will help you to know
@@ -1984,14 +1984,14 @@
                         Once your ears attain their full size, you can undergo ear surgery.
                         Usually, the ears grow completely after the age of 5. However,
                         doctors recommend waiting till the age of 7 years to go for
-                        the surgery in Hyderabad. From 7 to adulthood, any age
+                        the surgery in <?= $city ?>. From 7 to adulthood, any age
                         is fine to undergo the procedure.
                     </p>
                     <p class="cosmetic-faq-list">
                         5. What are the things to do before the Ear Surgery?
                     </p>
                     <p>
-                        Before you proceed with Otoplasty in a clinic in Hyderabad,
+                        Before you proceed with Otoplasty in a clinic in <?= $city ?>,
                         here are some important steps to consider:
                     </p>
                     <ul>
@@ -2025,7 +2025,7 @@
                     </p>
                     <ul>
                         <li>
-                            On the day of Otoplasty surgery in Hyderabad,
+                            On the day of Otoplasty surgery in <?= $city ?>,
                             come to the hospital with a calm
                             and prepared mind
                         </li>
@@ -2055,55 +2055,432 @@
                 <div class="col">
                     <div class="top-content">
                         <p>
-                            If you feel the size of your breasts to be smaller than usual, you can go for <?= $surgery_str ?> surgery. The qualified cosmetic surgeon from <?= $city ?> will help you to realize your required size of breasts. You can achieve fuller, bigger and rounder breasts through <?= $surgery_str ?> procedure.
+                            Do you feel your breasts are smaller than usual? If yes, you can go for
+                            breast augmentation surgery. Our qualified cosmetic surgeons
+                            from <?= $city ?> will help you to realize your required breast size.
+                            You can achieve fuller, bigger, and rounder breasts through
+                            breast augmentation.
                         </p>
                     </div>
                     <p class="identity">
-                        WHY CHOOSE DR FOR <?= $surgery_str ?> IN <?= $city ?>? </p>
+                        Why Choose Our Surgeons for Breast Augmentation in <?= $city ?>?
+                    </p>
                     <ul>
-                        <li>The trusted cosmetic surgeon in <?= $city ?> is most qualified to perform <?= $surgery_str ?> surgery.</li>
-                        <li>Holds many years of experience in performing <?= $surgery_str ?> procedures using the methods of fat transfer or breast implants.</li>
-                        <li>Has worked with both saline-filled breast implants and silicone gel-filled implants.</li>
-                        <li>Highly skilled at choosing the right size of the implant and positioning it at the perfect location that gives the impression of naturally fuller breasts.</li>
-                        <li>Has the ability to perform touch-ups to maintain the size and look of the breasts.</li>
-                        <li>A certified cosmetic surgeon in <?= $city ?> by many prestigious national and international associations for cosmetic surgeons.</li>
+                        <li>
+                            Most qualified and trusted cosmetic surgeons in <?= $city ?> to perform
+                            breast augmentation surgery.
+                        </li>
+                        <li>
+                            Highly experienced in performing breast augmentation procedures
+                            through fat transfer or breast implant technique.
+                        </li>
+                        <li>
+                            Can work with both saline-filled breast implants and silicone
+                            gel-filled implants.
+                        </li>
+                        <li>
+                            Skilled at choosing the right size of the implant and positioning
+                            it at the perfect location that gives the impression
+                            of naturally fuller breasts.
+                        </li>
+                        <li>
+                            Possess the ability to perform touch-ups to maintain the size and
+                            look of the breasts.
+                        </li>
+                        <li>
+                            Certified by several prestigious national and international associations
+                            for cosmetic surgeons.
+                        </li>
                     </ul>
                     <p class="identity">
                         COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?>
                     </p>
                     <p>
-                        When it comes to <?= $surgery_str ?>, the type of material you prefer to use – fat or implant – will influence the cost of the surgery. Usually, the cost of the procedure is around 1,00,000 INR and the cost of the implants is between 50,000 INR to 1,00,000 INR. Apart from these costs, the medication, consultations, mammograms and check-ups will also factor into the total cost. Visit the cosmetic surgeon in <?= $city ?> for a good estimate.
+                        When it comes to breast augmentation, the type of material you prefer to
+                        use - fat or implant - will influence the cost of the surgery.
+                        It would be wise to visit the cosmetic surgeon in <?= $city ?>
+                        for a good estimate.
                     </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>
-                        Choose from the different options for augmentation like fat transfers, silicone implants or saline implants. Let the best cosmetic surgeon in <?= $city ?> increase your breast size and still make it look natural.
+                        You can choose from among different options for augmentation like fat transfers,
+                        silicone implants or saline implants. Let one of our best cosmetic surgeons
+                        in <?= $city ?> increase your breast size and still make it look natural.
                     </p>
+                    <p class="identity">
+                        FAQs on Breast Augmentation Surgery in <?= $city ?>
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        1. Are you a good candidate for Breast Augmentation?
+                    </p>
+                    <p>
+                        To be a good candidate for Breast Augmentation,
+                        you should satisfy the
+                        below-mentioned pointers:
+                    </p>
+                    <ul>
+                        <li>
+                            You are not an expecting mother or breastfeeding your child
+                        </li>
+                        <li>
+                            You want to get rid of your sagging, asymmetrical, or flattened breasts
+                        </li>
+                        <li>
+                            Your breasts lag in maintaining an adequate cleavage
+                        </li>
+                        <li>
+                            You do not drink or smoke
+                        </li>
+                        <li>
+                            You have realistic goals related to the surgery in <?= $city ?>
+                        </li>
+                        <li>
+                            You must be free from any severe health disorder
+                        </li>
+                        <li>
+                            Should disclose all the medications to the surgeon
+                        </li>
+                        <li>
+                            You are well aware of the probable risks of undergoing
+                            breast augmentation in <?= $city ?> or elsewhere
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        2. What is the cost of Breast Augmentation?
+                    </p>
+                    <p>
+                        Usually, the cost of a Breast Augmentation procedure in <?= $city ?> is around
+                        1,00,000 INR and the cost of the implants may go up to 1,50,000 INR,
+                        or even more. Apart from these costs, the medication,
+                        consultations, mammograms, and check-ups will also factor into the total
+                        cost. Make sure to consult your surgeon for the exact
+                        cost of the surgery.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        3. What are the risks related to Breast Augmentation?
+                    </p>
+                    <ul>
+                        <li>
+                            Administering anesthesia could harm the body
+                        </li>
+                        <li>
+                            Changed sensations in the breast or nipple
+                        </li>
+                        <li>
+                            Change in the position of implants
+                        </li>
+                        <li>
+                            Chances of rupture or leakage in the implants
+                        </li>
+                        <li>
+                            Accumulation of fluid
+                        </li>
+                        <li>
+                            Tight scar tissues may form close to the implant
+                        </li>
+                        <li>
+                            Bad scars, infection, continuous breast pain
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        4. When can you go for Breast Augmentation?
+                    </p>
+                    <p>
+                        Surgeons usually advise women to wait at least till they become 18 years old,
+                        as by that time, their breasts are more likely to develop completely.
+                        Ideally, the age for breast augmentation surgery in <?= $city ?> or
+                        for that reason, anywhere else, should be between 20s and 30s.
+                        Women in this age group are likely to be most healthy, well
+                        aware of their bodies, and grown enough to prepare
+                        themselves mentally for the implants
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        5. What are the things to do before Breast Augmentation Surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            You should bear a cool and calm mind, duly prepared for the surgery in <?= $city ?>.
+                        </li>
+                        <li>
+                            Keep your body properly hydrated with water
+                        </li>
+                        <li>
+                            Eat a healthy diet
+                        </li>
+                        <li>
+                            Avoid eating or drinking anything after midnight to tolerate the
+                            effect of anesthesia
+                        </li>
+                        <li>
+                            Use an antimicrobial soap to wash your body before the surgery
+                        </li>
+                        <li>
+                            Do not wear any jewellery or piercing when going for the surgery
+                        </li>
+                        <li>
+                            Remove polish from your nails to enable the staff to measure
+                            oxygen saturation in your blood without hassles
+                        </li>
+                        <li>
+                            Remove dentures, contact lenses, etc. to reduce risks
+                        </li>
+                        <li>
+                            Make sure to have someone to take you back home after your Breast Augmentation
+                            Surgery in <?= $city ?>
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        6. What to expect on the day of Breast Augmentation surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            You should bear a cool and calm mind, duly prepared for the
+                            surgery in <?= $city ?>.
+                        </li>
+                        <li>
+                            Reach the hospital on time
+                        </li>
+                        <li>
+                            The anesthetist will ask you questions about your behavior to
+                            anesthesia so that he could provide
+                            the right treatment accordingly
+                        </li>
+                        <li>
+                            In the operation theater, depending on your response to the anesthetist,
+                            the latter will give an IV to deliver the medicine anesthetic
+                        </li>
+                        <li>
+                            Depending on the procedure and the specific condition of the patient,
+                            the Breast augmentation surgery may take around one to two hours
+                            or maybe more to complete.
+                        </li>
+                        <li>
+                            You may feel like stretching or pulling in the breast area after the surgery
+                        </li>
+                        <li>
+                            You will feel tired easily and be less energetic in the starting days
+                        </li>
+                        <li>
+                            Pain may persist for around a week or two after the surgery in <?= $city ?>
+                        </li>
+                        <li>
+                            As the days pass, you will experience a positive feeling about your breasts
+                        </li>
+                    </ul>
                 </div>
             <?php } elseif ($surgery_str == "breast lift") { ?>
                 <div class="col">
                     <div class="top-content">
                         <p>
-                            If you are feeling insecure about how your breasts droop, then a simple <?= $surgery_str ?> will improve your complete physical look. Mastopexy, also known as <?= $surgery_str ?>, is a cosmetic surgery where the surgeon raises the location of nipples and removes sagging tissues to create an impression of tightened and fuller breasts. Our cosmetic surgeon is one of the best in <?= $city ?> to create amazing results with <?= $surgery_str ?> surgery.
+                            If you are feeling insecure about your continuously sagging breasts,
+                            a simple breast lift will be good enough to improve your complete
+                            physical look. Mastopexy, also known as breast lift,
+                            is a cosmetic surgery where the surgeon raises
+                            the location of nipples and removes sagging
+                            tissues to create an impression of tightened and fuller breasts.
+                            Our cosmetic surgeons in <?= $city ?> can deliver amazing
+                            results with breast lift surgery.
                         </p>
                     </div>
                     <p class="identity">
-                        WHY CHOOSE DR FOR <?= $surgery_str ?> IN <?= $city ?>?
+                        Why Choose Our Cosmetic Surgeons for Breast Lift in <?= $city ?>?
                     </p>
                     <ul>
-                        <li>Proven expertise to help patients fix the issue of sagging breasts.</li>
-                        <li>The top cosmetic surgeon in <?= $city ?> with full practical knowledge of breast-related surgeries.</li>
-                        <li>Ability to customize the <?= $surgery_str ?> surgery based on just what the patient wants.</li>
-                        <li>A reputed cosmetic surgeon from <?= $city ?> with memberships from several national and international boards of cosmetic surgeries.</li>
+                        <li>
+                            Proven expertise to help patients fix the issue of sagging breasts
+                        </li>
+                        <li>
+                            Top cosmetic surgeon in <?= $city ?> with in-depth practical
+                            knowledge of breast-related surgeries
+                        </li>
+                        <li>
+                            Ability to customize the breast lift surgery based on just what the
+                            patient wants.
+                        </li>
+                        <li>
+                            Reputed cosmetic surgeons in <?= $city ?> with memberships from several
+                            national and international boards of cosmetic surgeries
+                        </li>
                     </ul>
                     <p class="identity">
                         COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?></p>
                     <p>
-                        While the main reason for the Mastopexy is to ‘lift’ the breasts, many also opt to get reshaped or rounder breasts. So, if you are looking for such accompanying results, then the total cost of the <?= $surgery_str ?> surgery will differ. It is important to find the right cosmetic surgeon from <?= $city ?> who can advise you on a safer course of treatment.
+                        While the main reason for the Mastopexy is to ‘lift’ the breasts,
+                        many also opt for reshaped or rounder breasts. So, if you are
+                        looking for such accompanying results, the total cost of
+                        the breast lift surgery will differ accordingly.
+                        Our experienced cosmetic surgeons can advise
+                        you better on a safer course of treatment.
                     </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>
-                        Due to aging, pregnancy or weight gain, breasts tend to sag which spoils the overall appearance even when you wear the best clothes. A <?= $surgery_str ?> surgery will help you by lifting and reshaping your breasts. Visit our cosmetic surgeon in <?= $city ?> to know more about <?= $surgery_str ?> surgery.
+                        Due to aging, pregnancy, or weight gain, breasts tend to sag which spoils
+                        the overall appearance even when you wear the best clothes.
+                        A Breast Lift surgery will help you by lifting and
+                        reshaping your breasts. Our cosmetic surgeons
+                        in <?= $city ?> can help you know more about
+                        Breast Lift surgery.
                     </p>
+                    <p class="identity">
+                        FAQs on Breast Lift Surgery in <?= $city ?>
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        1. Are you a good candidate for Breast Lift surgery?
+                    </p>
+                    <p>
+                        You can be a potential candidate for Breast Lift surgery in <?= $city ?> if:
+                    </p>
+                    <ul>
+                        <li>
+                            Your breasts are sagging significantly due to pregnancy, breastfeeding,
+                            aging, or a change in weight
+                        </li>
+                        <li>
+                            You have good overall health and maintain a stable weight
+                        </li>
+                        <li>
+                            Your areolas and nipples are pointing downwards
+                        </li>
+                        <li>
+                            Your breasts have become flat, pendulous, and elongated in shape
+                        </li>
+                        <li>
+                            You have enlarged areolas and stretched skin
+                        </li>
+                        <li>
+                            You don’t smoke or drink since both these habits can affect
+                            the healing results adversely
+                        </li>
+                        <li>
+                            You want to restore lost breast volume
+                        </li>
+                        <li>
+                            You have realistic expectations about the surgery results
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        2. What is the cost of a Breast Lift surgery?
+                    </p>
+                    <p>
+                        The average cost of Breast Lift surgery in <?= $city ?> will range between
+                        1,50,000 INR to 2,0,000 INR. Opting for additional procedures such
+                        as Breast Implants will increase the expenditure accordingly.
+                        Consultation with any of our expert cosmetic surgeons in
+                        <?= $city ?> will help you know the exact cost.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        3. What are the risks related to Breast Lifts?
+                    </p>
+                    <p>
+                        Breast lift risks include:
+                    </p>
+                    <ul>
+                        <li>
+                            Allergic reaction to anesthesia
+                        </li>
+                        <li>
+                            Hematoma - a pool of clotted blood formed in the treated area
+                        </li>
+                        <li>
+                            Bleeding and infection
+                        </li>
+                        <li>
+                            Irregularities in the breast symmetry, shape, and contour
+                        </li>
+                        <li>
+                            Reduced sensation in the breast or nipple on a temporary basis
+                        </li>
+                        <li>
+                            Deep vein thrombosis complications
+                        </li>
+                        <li>
+                            Deep vein thrombosis, cardiac and pulmonary complications
+                        </li>
+                        <li>
+                            Cardiac and pulmonary risks
+                        </li>
+                        <li>
+                            Fat necrosis or dead fatty tissue, found deep inside the skin
+                        </li>
+                        <li>
+                            Badly treated incisions leading to delayed healing
+                        </li>
+                        <li>
+                            Revision breast lift surgery
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        4. When can you go for Breast Lift?
+                    </p>
+                    <p>
+                        There is no ideal age to go for a Breast Lift.
+                        The only condition is that the breasts of a woman should be completely developed,
+                        immaterial of whether she is in her teenage, 20s, or older.
+                        In general, women consider this treatment mostly between the age of 18 - 25 years
+                        due to several reasons, like genetics, weight changes,
+                        issues related to pregnancy, and more.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        5. What are the things to do before Breast Lift Surgery?
+                    </p>
+                    <p>
+                        When going for a Breast Lift from an experienced surgeon in <?= $city ?> keep
+                        in mind to do the below things:
+                    </p>
+                    <ul>
+                        <li>
+                            Go for medical evaluation or lab testing as instructed by your surgeon
+                        </li>
+                        <li>
+                            Consult the surgeon about your medications so that he could make
+                            proper adjustments
+                        </li>
+                        <li>
+                            A baseline mammogram would be advisable before the surgery and after the surgery.
+                            It will help to find out if your breast tissue has undergone any changes
+                        </li>
+                        <li>
+                            Stop the intake of supplements, anti-inflammatory drugs, aspirin, and any other
+                            medicine that can lead to increased bleeding
+                        </li>
+                        <li>
+                            Stop consuming alcohol and tobacco products at least 2-3 weeks before the surgery
+                        </li>
+                        <li>
+                            Consult your surgeon about your doubts, expected results, and recovery period
+                        </li>
+                        <li>
+                            Have realistic expectations with the surgery
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        6. What to expect on the day of Breast Lift surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            The procedure can last for around 1-2 hours depending on the severity
+                            of the procedure.
+                        </li>
+                        <li>
+                            The surgeon will leave you with a thin tube close to your incisions
+                            to avoid swelling and drain fluid. It will be removed
+                            a few days after the surgery
+                        </li>
+                        <li>
+                            You can expect to go home the same after undergoing Mastopexy.
+                        </li>
+                        <li>
+                            You may experience a slight discomfort around the incisions during
+                            or after the surgery
+                        </li>
+                        <li>
+                            You could also expect tight skin, bruising, or swelling temporarily
+                        </li>
+                        <li>
+                            After the completion of Breast Lift surgery in <?= $city ?> completes,
+                            you could expect reshaped and repositioned breast tissues
+                        </li>
+                    </ul>
                 </div>
             <?php } elseif ($surgery_str == "breast reduction") {  ?>
                 <div class="col">
