@@ -2811,10 +2811,12 @@ img {
 }
 
 
-.doc-name {
+.doc-name,
+.doc-name a:hover {
     color: #1877F2;
     font-weight: 600;
     font-size: 15px;
+    text-decoration: none;
 }
 
 .doc-designation {

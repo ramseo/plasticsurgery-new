@@ -16,6 +16,106 @@
     </div>
 </div>
 
+<!-- Doctors Listing -->
+<?php
+$getAssignedDoctors = getAssignedDoctors($city);
+if ($getAssignedDoctors->isNotEmpty()) {
+?>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="identity">
+                        top cosmetic surgeons in <?= $city ?>
+                    </p>
+                    <div class="row">
+                        <?php
+                        foreach ($getAssignedDoctors as $item) {
+                            $reviews = getDataArray('vendor_reviews', 'user_id', $item->id);
+                            $average = averageReview($reviews);
+                        ?>
+                            <div class="col-lg-3 doc-flex-cls">
+                                <div class="col-lg-5 padd-null">
+                                    <div class="doc-img-div">
+                                        <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
+                                            <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
+                                                <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" style="width:100%" />
+                                            <?php } else { ?>
+                                                <img src="<?= asset("img/default-avatar.jpg") ?>" alt="doctor img" style="width:100%" />
+                                            <?php } ?>
+                                        </a>
+                                    </div>
+                                    <div class="doc-star-rating">
+                                        <ul class="list-inline space-list">
+                                            <li class="list-inline-item">
+                                                <ul class="list-inline">
+                                                    <?php
+                                                    $totalRating = 5;
+                                                    $starRating = $average;
+
+                                                    for ($i = 1; $i <= $totalRating; $i++) {
+                                                        if ($starRating < $i) {
+                                                            if (is_float($starRating) && (round($starRating) == $i)) {
+                                                                echo "";
+                                                            } else {
+                                                                echo "<li class='list-inline-item yellow-star'>
+                                                                       <i class='fa fa-star-o' aria-hidden='true'></i>
+                                                                     </li>";
+                                                            }
+                                                        } else {
+                                                            echo "<li class='list-inline-item yellow-star'>
+                                                                   <i class='fa fa-star'></i>
+                                                                 </li>";
+                                                        }
+                                                    }
+                                                    ?>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 doc-details-sec">
+                                    <div class="doc-name">
+                                        <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
+                                            Dr. <?= Str::words($item->first_name . " " . $item->last_name, '2')  ?>
+                                        </a>
+                                    </div>
+                                    <div class="doc-tagline">
+                                        Plastic/Cosmetic
+                                        Surgeon
+                                    </div>
+                                    <div class="doc-city">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        <?= $city ?>
+                                    </div>
+                                    <div class="btn btn-default doc-view-btn">
+                                        <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
+                                            view more
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>
+                                Our Board-Certified Plastic Surgeons in <?= $city ?> hold dexterity in performing complex cosmetic surgeries with ease.
+                                Our experts have a commendable record of operating countless surgeries with success.
+                                Among their expertise, include Liposuction, Rhinoplasty, Blepharoplasty, Gynecomastia, Breast Augmentation, Tummy Tuck, and more.
+                                Our surgeons are immensely qualified and possess adept expertise in performing surgery with great precision.
+                                They make sure to give personal attention to each individual, listen carefully to the problems of the patients, and try to grasp their expectations from the surgery.
+                                This helps them appreciably in suggesting and performing the most suitable procedure in a safe and hygienic environment, well-equipped with advanced surgery tools.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+<!-- Doctors Listing -->
+
 <div class="container-fluid">
     <div class="container">
         <div class="row">

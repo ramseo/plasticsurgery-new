@@ -1080,7 +1080,7 @@ if (!function_exists('date_today')) {
             $doctors = DB::table('users')->select('*')->whereJsonContains('city', $jsonId)->get();
             return $doctors;
         } else {
-            return Null;
+            return collect([]);
         }
     }
 
