@@ -34,11 +34,13 @@
                             <div class="col-lg-3 doc-flex-cls">
                                 <div class="col-lg-5 padd-null">
                                     <div class="doc-img-div">
-                                        <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
-                                            <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" style="width:100%" />
-                                        <?php } else { ?>
-                                            <img src="<?= asset($item->avatar) ?>" style="width:100%" />
-                                        <?php } ?>
+                                        <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
+                                            <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
+                                                <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" style="width:100%" />
+                                            <?php } else { ?>
+                                                <img src="<?= asset("img/default-avatar.jpg") ?>" alt="doctor img" style="width:100%" />
+                                            <?php } ?>
+                                        </a>
                                     </div>
                                     <div class="doc-star-rating">
                                         <ul class="list-inline space-list">
@@ -71,7 +73,9 @@
                                 </div>
                                 <div class="col-lg-7 doc-details-sec">
                                     <div class="doc-name">
-                                        Dr. <?= Str::words($item->first_name . " " . $item->last_name, '2')  ?>
+                                        <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
+                                            Dr. <?= Str::words($item->first_name . " " . $item->last_name, '2')  ?>
+                                        </a>
                                     </div>
                                     <div class="doc-tagline">
                                         Plastic/Cosmetic
@@ -82,7 +86,7 @@
                                         <?= $city ?>
                                     </div>
                                     <div class="btn btn-default doc-view-btn">
-                                        <a href="<?= url("surgeon/$item->username") ?>">
+                                        <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
                                             view more
                                         </a>
                                     </div>
