@@ -2586,165 +2586,886 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="col">
                     <div class="top-content">
                         <p>
-                            Having large breasts can be a disadvantage not just to your appearance but also to other health issues. If you are suffering from extreme back pain or any physical troubles due to large breasts, our expert cosmetic surgeon in <?= $city ?> can help you to resolve it. Reduce the size of your breasts and feel at ease.
+                            Having large breasts can be a disadvantage not just to your appearance but also to
+                            other health issues. If you are suffering from extreme back pain or any physical
+                            troubles due to large breasts, our expert cosmetic surgeons in <?= $city ?> can help
+                            you to resolve it. So, if you wish to reduce the size of your breasts and feel at
+                            ease, let us know.
                         </p>
                     </div>
                     <p class="identity">
-                        WHY CHOOSE DR FOR <?= $surgery_str ?> IN <?= $city ?>? </p>
+                        Why Choose Our Surgeons for Breast Reduction in <?= $city ?>?
+                    </p>
                     <ul>
-                        <li>Highly adept at performing <?= $surgery_str ?> procedures to help patients relieve from physical constraints.</li>
-                        <li>The best cosmetic surgeon in <?= $city ?>, perfectly skilled at performing <?= $surgery_str ?> surgeries that leave minimal scarring.</li>
-                        <li>An expert cosmetic surgeon, certified by many national and international boards for cosmetic surgeons.</li>
-                        <li>Specialization in different types of <?= $surgery_str ?> surgeries like liposuction, vertical <?= $surgery_str ?> and inverted-T <?= $surgery_str ?>.</li>
-                        <li>Expert in reshaping the breasts and repositioning the nipples to achieve natural-looking breasts.</li>
+                        <li>
+                            Highly adept at performing breast reduction procedures to help patients
+                            relieve from physical constraints.
+                        </li>
+                        <li>
+                            The best cosmetic surgeons in <?= $city ?>, perfectly skilled at performing breast reduction
+                            surgeries with minimal scarring.
+                        </li>
+                        <li>
+                            Expert cosmetic surgeons certified by many national and international boards for
+                            cosmetic surgeons.
+                        </li>
+                        <li>
+                            Specialization in different types of breast reduction surgeries like Breast Reduction,
+                            Vertical Breast Reduction, and inverted-T Breast Reduction
+                        </li>
+                        <li>
+                            Expert in reshaping the breasts and repositioning the nipples to achieve
+                            natural-looking breasts
+                        </li>
                     </ul>
                     <p class="identity">
                         COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?>
                     </p>
                     <p>
-                        <?= $surgery_str ?> surgery involves a dedicated procedure and extensive care during the recovery phase. So, apart from the main cost of surgery, you will also have to take care of your breasts after the completion of the procedure. The typical cost of a <?= $surgery_str ?> procedure is between 1,00,000 INR to 2,00,000 INR depending on the scale of the surgery. Our cosmetic surgeon in <?= $city ?> will be able to guide you better in this regard.
+                        Breast reduction surgery involves a dedicated procedure and extensive care during the
+                        recovery phase. So, apart from the main cost of surgery,
+                        you will also have to take care of other expenditures related to the procedure.
+                        Our cosmetic surgeon in <?= $city ?> will be able
+                        to guide you better in this regard.
                     </p>
-                    <p class="identity">OUR SERVICES</p>
+                    <p class="identity">
+                        OUR SERVICES
+                    </p>
                     <p>
-                        Do not let those big breasts be a hindrance to your movements, leading to physical pain. Consult with our best cosmetic surgeon in <?= $city ?> and customize your <?= $surgery_str ?> procedure for a happy and comfortable tomorrow.
+                        Do not let those big breasts hinder your movements, leading to physical pain. Consult with
+                        our best cosmetic surgeons in <?= $city ?> and customize your breast reduction procedure
+                        for a happy and comfortable tomorrow.
                     </p>
+
+                    <p class="identity">
+                        FAQs on Breast Reduction Surgery in <?= $city ?>
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        1. Are you a good candidate for Breast Reduction?
+                    </p>
+                    <p>
+                        You can be a good candidate for Breast Reduction surgery in <?= $city ?> if you satisfy
+                        the following pointers:
+                    </p>
+                    <ul>
+                        <li>
+                            You have excessively large breasts, which have started creating back,
+                            neck, or shoulder pain
+                        </li>
+                        <li>
+                            You are facing several skin conditions, rashes, and cuts in the shoulder due
+                            to large breasts
+                        </li>
+                        <li>
+                            Your large breasts are compelling you to have bad posture and are limiting your
+                            physical activities
+                        </li>
+                        <li>
+                            You have realistic expectations with the surgery
+                        </li>
+                        <li>
+                            You don’t smoke or drink alcohol
+                        </li>
+                        <li>
+                            You have a healthy body, which could bear the side effects of breast reduction
+                            surgery with ease.
+                        </li>
+                    </ul>
+
+                    <p class="cosmetic-faq-list">
+                        2. What is the cost of Breast Reduction?
+                    </p>
+                    <p>
+                        The typical cost of a breast reduction procedure is between 1,00,000 INR to 2,00,000 INR
+                        depending on the scale of the surgery.
+                        Anyone who has recently undergone the surgery can help you get a better idea of the
+                        cost involved. Besides, consulting with your surgeon in <?= $city ?> is always
+                        advisable to know about the cost of Breast Reduction surgery.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        3. What are the risks related to Breast Reduction?
+                    </p>
+                    <ul>
+                        <li>
+                            Surgical risks like infection or bleeding
+                        </li>
+                        <li>
+                            Fluid accumulation along the treated area
+                        </li>
+                        <li>
+                            Swelling, bruising, or skin discoloration in the treated location
+                        </li>
+                        <li>
+                            Breathing problems due to anesthesia
+                        </li>
+                        <li>
+                            Allergic reaction to tape adhesive, suture materials, lotions, etc.
+                        </li>
+                        <li>
+                            Loss of sensation in nipples and breasts for a brief or long time.
+                        </li>
+                        <li>
+                            Uneven or asymmetrical breasts
+                        </li>
+                        <li>
+                            Loss of nipple partially or permanently
+                        </li>
+                        <li>
+                            Damaged nerve cells
+                        </li>
+                        <li>
+                            Need for a revisional surgery
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        4. When can you go for Breast Reduction?
+                    </p>
+                    <p>
+                        If you are more than 18 years old and have your breasts developed completely,
+                        this is the right time for Breast Reduction. Teenagers facing severe
+                        back problems may also opt for this surgery in <?= $city ?>.
+                        Older women undergo this treatment to get rid of their
+                        chronic neck pain, poor posture,
+                        and other side effects of large breasts.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        5. What are the things to do before Breast Reduction Surgery?
+                    </p>
+                    <p>
+                        Among the many things to make up to your to-do list include:
+                    </p>
+                    <ul>
+                        <li>
+                            Undergoing Mammogram
+                        </li>
+                        <li>
+                            Avoid smoking and drinking for at least 6 weeks before the surgery
+                        </li>
+                        <li>
+                            Avoid taking over-the-counter drugs, anti-inflammatory drugs, herbal supplements,
+                            and other medicines to curb bleeding during the treatment
+                        </li>
+                        <li>
+                            Have someone prepared to get you back home from the hospital after the surgery
+                        </li>
+                        <li>
+                            Make sure to take a break of a few weeks from work in advance for speedy
+                            recovery after the surgery
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        6. What to expect on the day of Breast Reduction surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            You should have realistic expectations with the surgery instead of
+                            expecting miracles
+                        </li>
+                        <li>
+                            On the day of surgery in <?= $city ?>, the plastic surgeon will start performing the by
+                            creating incisions on your large breasts
+                        </li>
+                        <li>
+                            Before the surgery begins, you will get the required medicines to make you feel
+                            at ease during the procedure
+                        </li>
+                        <li>
+                            The surgeon will remove the concerned skin, excess fat, and glandular tissue to
+                            reposition the nipple and reduce the areola
+                        </li>
+                        <li>
+                            The results of the surgery will be visible immediately after the treatment
+                        </li>
+                        <li>
+                            The incisions lines and post-operative swelling will subside with time
+                        </li>
+                        <li>
+                            You will find a new you after the surgery in <?= $city ?>
+                        </li>
+                    </ul>
+
                 </div>
             <?php } elseif ($surgery_str == "breast implant removal") { ?>
                 <div class="col">
                     <div class="top-content">
                         <p>
-                            Surgeries for <?= $surgery_str ?> in <?= $city ?> are suitable for patients who want to remove the implants due to several reasons. It can be because the patient is not happy with the results or wishes to go back to her previous appearance. The change in the position of the implant due to weight fluctuations could also be one of the reasons in this regard. In some rare cases, the implant may rupture or leak, leaving no option but to remove it. One should approach only an expert and experienced cosmetic surgeon to undergo this surgery.
+                            Surgeries for Breast implant removal in <?= $city ?> are suitable for patients who want to
+                            remove the implants due to several reasons.
+                            It can be because the patient is not happy with the results or wishes to go back to
+                            her previous appearance. The change in the position of the implant due to weight
+                            fluctuations could also be one of the reasons in this regard. In some rare cases,
+                            the implant may rupture or leak, leaving no option but to remove it.
+                            One should approach only an expert and experienced cosmetic surgeon to undergo
+                            this surgery.
                         </p>
                     </div>
                     <p class="identity">
-                        WHY CHOOSE DR FOR <?= $surgery_str ?> SURGERY IN <?= $city ?>? </p>
+                        Why Choose Our Surgeons for <?= $surgery_str ?> surgery in <?= $city ?>?
+                    </p>
                     <ul>
-                        <li>The best cosmetic surgeon in <?= $city ?> for all breast-related procedures.</li>
-                        <li>Experienced in the placement and removal of breast implants.</li>
-                        <li>A commendable history of offering the best results for patients in breast surgeries in <?= $city ?>.</li>
-                        <li>Skilled at removing the scar tissue that forms around the implants and helps in achieving fuller, rounder breasts even after the removal of the implants.</li>
-                        <li>A board-certified cosmetic surgeon and a member of several national and international organizations related to cosmetic surgeries.</li>
+                        <li>
+                            The best cosmetic surgeon in <?= $city ?> for all breast-related procedures.
+                        </li>
+                        <li>
+                            Experienced in the placement and removal of breast implants.
+                        </li>
+                        <li>
+                            A commendable history of offering the best results for patients in breast
+                            surgeries in <?= $city ?>.
+                        </li>
+                        <li>
+                            Skilled at removing the scar tissue that forms around the implants and helps in
+                            achieving fuller, rounder breasts even
+                            after the removal of the implants.
+                        </li>
+                        <li>
+                            A board-certified cosmetic surgeon and a member of several national and international
+                            organizations related to cosmetic surgeries.
+                        </li>
                     </ul>
-                    <p class="identity">COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?></p>
-                    <p>In a <?= $surgery_str ?> surgery, the cost of the surgery differs based on the cosmetic surgeon you choose and the complexity of the treatment. Generally, a <?= $surgery_str ?> surgery is from 50,000 INR to 1,00,000 INR.</p>
-                    <p>If you are feeling discomfort in your breasts after placing the implants, it is vital to visit a reliable cosmetic surgeon in <?= $city ?> without any delay for complete checkup. The surgeon will analyze and recommend the solution.</p>
+                    <p class="identity">
+                        COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?>
+                    </p>
+                    <p>
+                        In a breast implant removal surgery, the cost of the surgery differs based on the
+                        cosmetic surgeon you choose and the complexity of the treatment.
+                        Generally, a breast implant removal surgery
+                        is from 50,000 INR to 1,00,000 INR.
+                    </p>
+                    <p>
+                        If you are feeling discomfort in your breasts after placing the implants, it is vital
+                        to visit a reliable cosmetic surgeon in <?= $city ?> without any delay for
+                        complete checkup. The surgeon will
+                        analyze and recommend the solution.
+                    </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>
-                        Are you having second thoughts about your breast implants? There is a way out! Choose our skilled cosmetic surgeon in <?= $city ?> to remove or fix your breast implants in the way you want!
+                        Are you having second thoughts about your breast implants?
+                        There is a way out! Choose our skilled cosmetic
+                        surgeon in <?= $city ?> to remove or fix your breast implants in the
+                        way you want!
                     </p>
                 </div>
             <?php } elseif ($surgery_str == "breast implant revision") { ?>
                 <div class="col">
                     <div class="top-content">
                         <p>
-                            Breast implants enhance the appearance and size of the breasts and complement the entire figure. Unfortunately, breast implants are not permanent. You need to go for <?= $surgery_str ?> surgery after a span of 10 or more years when your breasts start to sag again.
+                            Breast implants enhance the appearance and size of the breasts and complement
+                            the entire figure. Unfortunately, breast implants are not permanent.
+                            You need to go for breast revision surgery after a span of 10 or more
+                            years when your breasts start to sag again.
                         </p>
                         <p>
-                            In <?= $surgery_str ?> surgery, the cosmetic surgeon will focus on changing the implants and reshaping the breasts to retain a youthful appearance. The highly skilled cosmetic surgeons in <?= $city ?> can help you better in achieving natural-looking, rounder and fuller breasts.
+                            In breast revision surgery, the cosmetic surgeon will focus on changing the
+                            implants and reshaping the breasts to retain a youthful appearance.
+                            The highly skilled cosmetic surgeons in <?= $city ?> can help you better
+                            in achieving natural-looking, rounder and fuller breasts.
                         </p>
                     </div>
                     <p class="identity">
-                        WHY CHOOSE DR FOR <?= $surgery_str ?> SURGERY IN <?= $city ?>
+                        Why Choose Our Surgeons for <?= $surgery_str ?> surgery in <?= $city ?>?
                     </p>
                     <ul>
-                        <li>One of the top cosmetic surgeons in <?= $city ?> and duly experienced in breast implant surgery.</li>
-                        <li>Experienced in performing numerous breast augmentation with implants, breast implant removal and <?= $surgery_str ?> surgeries.</li>
-                        <li>Skilled at thoroughly examining the condition and offering detailed guidance in choosing the new breast implants.</li>
-                        <li>Certified by the best national and international boards of plastic and cosmetic surgeries.</li>
+                        <li>
+                            One of the top cosmetic surgeons in <?= $city ?> and duly experienced in
+                            breast implant surgery.
+                        </li>
+                        <li>
+                            Experienced in performing numerous breast augmentation with implants, breast implant
+                            removal and breast revision surgeries.
+                        </li>
+                        <li>
+                            Skilled at thoroughly examining the condition and offering detailed guidance in choosing
+                            the new breast implants.
+                        </li>
+                        <li>
+                            Certified by the best national and international boards of plastic and
+                            cosmetic surgeries.
+                        </li>
                     </ul>
                     <p class="identity">COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?></p>
                     <p>
-                        A <?= $surgery_str ?> surgery involves swapping the old implants for the new implants. There can be minor complications like scar tissue removal as well as cleaning up any damages or leaks. As it’s an extensive procedure, the cost of the <?= $surgery_str ?> surgery starts from 1,00,000 INR. This cost can vary depending on the type and size of the breast implants you choose, the condition of the current implants and the cosmetic surgeon. The total price is not inclusive of the medicines and other items like bandages needed for recovery.
+                        A breast revision surgery involves swapping the old implants for the new implants.
+                        There can be minor complications like scar tissue removal as well as cleaning
+                        up any damages or leaks. As it’s an extensive procedure, the cost of the breast
+                        revision surgery starts from 1,00,000 INR. This cost can vary depending on
+                        the type and size of the breast implants you choose, the condition
+                        of the current implants and the cosmetic surgeon.
+                        The total price is not inclusive of the medicines and other items like
+                        bandages needed for recovery.
                     </p>
                     <p>
-                        To get a good estimate for your <?= $surgery_str ?> surgery, feel free to visit our expert cosmetic surgeon at the <?= $city ?> clinic.
+                        To get a good estimate for your breast revision surgery, feel free to visit
+                        our expert cosmetic surgeon at the <?= $city ?> clinic.
                     </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>
-                        Is it time to replace your old breast implants? Well, get brand-new, high-quality implants that make your breasts look fuller and youthful through our expert surgeon in <?= $city ?>.
+                        Is it time to replace your old breast implants? Well, get brand-new, high-quality
+                        implants that make your breasts look fuller and youthful through our expert
+                        surgeon in <?= $city ?>.
                     </p>
                 </div>
             <?php } elseif ($surgery_str == "gynecomastia") { ?>
                 <div class="col">
                     <div class="top-content">
                         <p>
-                            Due to the changes in the hormonal secretion in males, the breasts of males may become bigger. <?= $surgery_str ?> is the male breast reduction treatment in which the surgeon removes the fatty tissues from the breast area to give a contoured chest. If you are suffering from similar issues, schedule a consultation session with our cosmetic surgeon’s clinic in <?= $city ?> for proper diagnosis and appropriate treatment.
+                            Due to the changes in hormonal secretion in males, the breasts of males may
+                            become bigger. Gynecomastia is a male breast reduction treatment in which
+                            the surgeon removes the fatty tissues from the breast area to give a
+                            contoured chest. If you are suffering from similar issues, feel free
+                            to consult any of our experienced cosmetic surgeons in <?= $city ?> for
+                            proper diagnosis and appropriate treatment.
                         </p>
                     </div>
                     <p class="identity">
-                        WHY CHOOSE DR FOR <?= $surgery_str ?> IN <?= $city ?>? </p>
+                        Why Choose Our Cosmetic Surgeons for Gynecomastia in <?= $city ?>?
+                    </p>
                     <ul>
-                        <li>One of the leading cosmetic surgeons in <?= $city ?> having many years of experience with <?= $surgery_str ?> treatments.</li>
-                        <li>Owns expertise in performing the two main types of <?= $surgery_str ?> surgeries: Liposuction and tissue excision.</li>
-                        <li>Offers customized treatment plans to treat <?= $surgery_str ?> based on the age, weight and medical conditions of the patient.</li>
-                        <li>One of <?= $city ?> highly accomplished surgeons with proven results in reducing the breast size and contouring the chest of men and boys.</li>
+                        <li>
+                            Leading cosmetic surgeons in <?= $city ?>, having adept experience in treating Gynecomastia
+                        </li>
+                        <li>
+                            Own expertise in performing the two main types of Gynecomastia surgeries:
+                            Gynecomastia and tissue excision
+                        </li>
+                        <li>
+                            Offer customized treatment plans to treat the male breast problem based on the age,
+                            weight, and medical conditions of the patient
+                        </li>
+                        <li>
+                            Highly accomplished surgeons in <?= $city ?> with proven results in reducing breast size and
+                            contouring the chest of men and boys
+                        </li>
                     </ul>
                     <p class="identity">
                         COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?>
                     </p>
                     <p>
-                        With several treatment options available for <?= $surgery_str ?>, some need medicines, while the others require surgery. Our cosmetic surgeon will take you through the whole process and help you achieve a flat chest, as you desire. Depending on these treatment options, the cost of the <?= $surgery_str ?> will vary. It is best to have an open talk with our surgeon from <?= $city ?> about your expectations and get an idea of the involved cost.
+                        Several treatment options are available for Gynecomastia. While some of them need
+                        medicines, others require surgery. Our cosmetic surgeons will take you through
+                        the whole process and help you achieve a flat chest, as you desire.
+                        Depending on these treatment options, the cost of Gynecomastia surgery will vary.
+                        It is best to have an open talk with our surgeon from <?= $city ?> about your
+                        expectations and get an idea of the involved cost.
                     </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>
-                        Big breasts can affect self-esteem for men. If you too have a similar problem, it is wise to undergo <?= $surgery_str ?> from our expert cosmetic surgeon in <?= $city ?>! It is a safe and the best way to have a flat chest and regain your confidence.
+                        Big breasts can affect self-esteem for men. If you too have a similar problem,
+                        it is wise to undergo Gynecomastia from any of our expert cosmetic surgeons
+                        in <?= $city ?>! It is a safe and the best way to have a flat chest and regain
+                        your confidence.
                     </p>
+                    <p class="identity">
+                        FAQs on Gynecomastia Surgery in <?= $city ?>
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        1. Are you a good candidate for Gynecomastia surgery?
+                    </p>
+                    <p>
+                        Check out the below-mentioned pointers to know if you are an ideal candidate
+                        for Gynecomastia surgery in <?= $city ?>:
+                    </p>
+                    <ul>
+                        <li>
+                            You have Primary Gynecomastia - You have gained male boobs at an early
+                            age due to hormonal imbalance
+                        </li>
+                        <li>
+                            You have secondary Gynecomastia – you have got male breasts due to weight
+                            gain irrespective of your age group
+                        </li>
+                        <li>
+                            You are physically fit and healthy
+                        </li>
+                        <li>
+                            You are in your teens or twenties, due to higher skin elasticity
+                            in the younger age
+                        </li>
+                        <li>
+                            You are a non-smoker and a non-alcoholic
+                        </li>
+                        <li>
+                            You have realistic expectations from the surgery
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        2. What is the cost of Gynecomastia surgery?
+                    </p>
+                    <p>
+                        The average cost of male breast surgery in <?= $city ?> ranges between
+                        30,000 INR to 2,00,000 INR. The type of technique that the surgeon
+                        uses will be a big factor in deciding the overall
+                        cost of the treatment.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        3. What are the risks related to Gynecomastia surgery?
+                    </p>
+                    <p>
+                        Some of the common complications of Gynecomastia surgery include:
+                    </p>
+                    <ul>
+                        <li>
+                            Chances of hematoma – An instance of blood collection that occurs
+                            between the muscles and the skin, mainly because
+                            of bleeding after the surgery
+                        </li>
+                        <li>
+                            Seroma, or risk of infection due to fluid collection
+                        </li>
+                        <li>
+                            Possibility of scarring at the planned or unplanned site
+                        </li>
+                        <li>
+                            Temporarily decrease in the nipple sensation
+                        </li>
+                        <li>
+                            Cardiopulmonary and Venous Thrombosis issues
+                        </li>
+                        <li>
+                            Discomfort due to an allergic reaction to anesthesia
+                        </li>
+                        <li>
+                            Intense pain during the recovery period
+                        </li>
+                        <li>
+                            Rare risk of damage to deeper structures
+                        </li>
+                    </ul>
+
+                    <p class="cosmetic-faq-list">
+                        4. When can you go for Gynecomastia surgery?
+                    </p>
+                    <p>
+                        Most surgeons in <?= $city ?> recommend Gynecomastia patients be at least 18 years
+                        old to get ready for the surgery. At this stage,
+                        the body is likely to develop to its full capacity.
+                        Usually, older men are more prone to opt
+                        for this surgery.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        5. What are the things to do before Gynecomastia surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            Restrict taking blood thinners such as aspirin, anti-inflammatory drugs as well
+                            as supplements to reduce the risk of excessive blood loss
+                        </li>
+                        <li>
+                            After speaking with the doctor, adjust taking medications accordingly
+                        </li>
+                        <li>
+                            Undergo all the required diagnostic tests to ensure your good health
+                            during the surgery
+                        </li>
+                        <li>
+                            Stop smoking or drinking alcohol at least two weeks before the procedure
+                        </li>
+                        <li>
+                            Adjust the medications as per the suggestion of your surgeon
+                        </li>
+                        <li>
+                            Avoid taking supplements or medications that consist of blood thinners
+                        </li>
+                        <li>
+                            Keep a time gap of at least 8 hours between your last meal and the surgery
+                        </li>
+                        <li>
+                            Likewise, avoid drinking water or anything else at least 6 hours before
+                            the procedure
+                        </li>
+                        <li>
+                            Arrange for a person to help you get back home after the surgery in <?= $city ?>
+                        </li>
+                    </ul>
+
+                    <p class="cosmetic-faq-list">
+                        6. What to expect on the day of Gynecomastia surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            On the day of the Gynecomastia surgery, make sure to enter the clinic with
+                            a positive frame of mind.
+                        </li>
+                        <li>
+                            Expect around 1- 2 hours for the procedure to complete depending on the extent
+                            of tissues required to remove
+                        </li>
+                        <li>
+                            In several cases, a patient could also undergo liposuction in the chest
+                            to deliver the best results
+                        </li>
+                        <li>
+                            To perform the surgery, the surgeon will create small incisions in the
+                            treatment area
+                        </li>
+                        <li>
+                            After the treatment in <?= $city ?>, you may feel sore in the first few days
+                        </li>
+                        <li>
+                            You should have realistic expectations with the surgery
+                        </li>
+                    </ul>
+
                 </div>
             <?php } elseif ($surgery_str == "liposuction") { ?>
                 <div class="col">
                     <div class="top-content">
                         <p>
                             <strong>
-                                Do you wish to have a slim physical appearance? Of course you do!
+                                Do you wish to have a slim physical appearance? Of course, you do!
                             </strong>
                         </p>
                         <p>
-                            When diets and exercises fail us to achieve that perfect body we want, <?= $surgery_str ?> is the best cosmetic procedure to go for, a renowned cosmetic surgeon from <?= $city ?> is one of the best choices for <?= $surgery_str ?> treatments. Having worked with numerous patients, she holds the experience required to transform the <?= $surgery_str ?> candidates back to their lean and beautiful self.
+                            When diets and exercises fail us to achieve that perfect body we want,
+                            liposuction would be a suitable cosmetic procedure to opt for.
+                            Our renowned cosmetic surgeons from <?= $city ?> are the best
+                            to perform liposuction treatments. With years of experience
+                            to back their credibility, you can count on our experts
+                            to make you appear beautiful through
+                            successful liposuction treatment.
                         </p>
                     </div>
-                    <p class="identity">WHY CHOOSE DR FOR <?= $surgery_str ?> IN <?= $city ?>?</p>
+                    <p class="identity">
+                        Why Choose Our Cosmetic Surgeons for Liposuction in <?= $city ?>?
+                    </p>
                     <ul>
-                        <li>One of the trusted and experienced cosmetic surgeons in <?= $city ?>, well versed with various types of <?= $surgery_str ?> surgeries.</li>
-                        <li>Experienced to customize the <?= $surgery_str ?> treatment and remove fat from particular places in the patient’s body to achieve a better-looking figure.</li>
-                        <li>Expertise in numerous <?= $surgery_str ?> procedures like tumescent <?= $surgery_str ?>, ultrasound-assisted <?= $surgery_str ?>, suction-assisted <?= $surgery_str ?> and power-assisted <?= $surgery_str ?>.</li>
-                        <li>Reputed cosmetic surgeon in the whole of <?= $city ?> and a member of several prestigious national and international associations for plastic and cosmetic surgeons.</li>
+                        <li>
+                            Highly trusted and experienced cosmetic surgeons in <?= $city ?>, well-versed in performing various
+                            types of liposuction surgeries.
+                        </li>
+                        <li>
+                            Hold adept expertise in customizing the liposuction treatment and removing fat from particular
+                            places in the patient’s body to achieve a better-looking figure.
+                        </li>
+                        <li>
+                            Expertise in numerous liposuction procedures like tumescent liposuction, ultrasound-assisted liposuction,
+                            suction-assisted liposuction, and power-assisted liposuction.
+                        </li>
+                        <li>
+                            Own memberships of several prestigious national and international associations for plastic
+                            and cosmetic surgeons.
+                        </li>
+                        <li>
+                            Highly reputed and respected cosmetic surgeons in <?= $city ?> who work for maximum
+                            patient satisfaction.
+                        </li>
                     </ul>
-                    <p class="identity">COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?></p>
-                    <p>The cost of <?= $surgery_str ?> mainly depends on:</p>
+                    <p class="identity">
+                        COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?>
+                    </p>
+                    <p>
+                        The cost of liposuction mainly depends on various important
+                        factors:
+                    </p>
                     <ul>
-                        <li>The surgeon you choose</li>
-                        <li>The amount of fat removal</li>
-                        <li>The location of fat removal</li>
-                        <li>Additional costs like medicines, anesthesia, etc.</li>
+                        <li>
+                            The choice of surgeon
+                        </li>
+                        <li>
+                            The extent of fat you want to get eliminated
+                        </li>
+                        <li>
+                            The location of fat removal
+                        </li>
+                        <li>
+                            Additional costs such as medicines, anesthesia, surgery tools,
+                            equipment, etc.
+                        </li>
                     </ul>
-                    <p>By considering all these factors, the cost of <?= $surgery_str ?> surgery can be anywhere between 50,000 INR to 1,25,000 INR.</p>
-                    <p>Do you have a particular location where you need to perform the surgery? If yes, then it would be wise to visit the cosmetic surgeon in <?= $city ?> and get a fair estimate.</p>
-                    <p class="identity">OUR SERVICES</p>
-                    <p>Get your <?= $surgery_str ?> procedure customized by the most reliable cosmetic surgeon in <?= $city ?> and achieve that dream figure.</p>
+                    <p>
+                        By considering all these factors, the cost of liposuction surgery can go up to six figures.
+                        Hence, putting forth honest efforts to find the best cosmetic is inevitable before
+                        spending a sumptuous amount on the surgery.
+                    </p>
+                    <p>
+                        Do you have a particular location where you need to perform the surgery? If yes,
+                        then it would be wise to visit any of our expert cosmetic surgeons
+                        in <?= $city ?> and get a fair estimate.
+                    </p>
+                    <p class="identity">
+                        OUR SERVICES
+                    </p>
+                    <p>
+                        Get your liposuction procedure customized by one of our most reliable cosmetic surgeons
+                        in <?= $city ?> and achieve that dream figure. We will be
+                        happy to serve your cause.
+                    </p>
+                    <p class="identity">
+                        FAQs on Liposuction Surgery in <?= $city ?>:
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        1. Are you a good candidate for Liposuction?
+                    </p>
+                    <p>
+                        An ideal candidate for liposuction should satisfy the
+                        following conditions:
+                    </p>
+                    <ul>
+                        <li>
+                            A person with near ideal body weight, but owns selected areas of localized fat
+                            deposits such as hips, arms, neck, chin, arms, etc., which cease to vanish
+                            via diet or exercise.
+                        </li>
+                        <li>
+                            Other important traits include realistic expectations, good skin elasticity,
+                            a healthy body, and a non-smoker.
+                        </li>
+                        <li>
+                            The person should be willing to adhere to post-operative instructions given
+                            by the surgeon for prompt healing.
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        2. What is the cost of Liposuction?
+                    </p>
+                    <p>
+                        The total cost of the liposuction procedure in <?= $city ?> will depend on various factors
+                        such as the number of areas being treated, the amount of fat being removed, the
+                        complexity of the procedure, the type of facility, etc. The overall cost can vary
+                        somewhere between Rs 50,000 and Rs 3,00,000 or more per treatment area. Feel free
+                        to connect with our cosmetic surgeon to know the exact cost.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        3. What are the risks related to Liposuction?
+                    </p>
+                    <p>
+                        Like with any major plastic surgery in <?= $city ?>, liposuction also accompanies several risks,
+                        such as bleeding, adverse reaction to anesthesia, loss of sensation,
+                        fluid accumulation, blood clits, etc. Skin irregularities like bumps,
+                        wavy contours, and dimpling are also among
+                        the possible risks of Liposuction.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        4. When can you go for Liposuction?
+                    </p>
+                    <p>
+                        You should go for Liposuction in <?= $city ?> only after you prepared your mind well
+                        for the procedure. Almost any age would be fine for the treatment,
+                        but patients with optimum age of 30-35 years would be ideal.
+                        The skin elasticity of people in this age group is better, which leads to better
+                        results.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        5. What are some important things to do before Liposuction Surgery?
+                    </p>
+                    <p>
+                        It is good to prepare for the Liposuction surgery, as per the suggestions
+                        from your surgeon in <?= $city ?>. Here are some important
+                        points to consider:
+                    </p>
+                    <ul>
+                        <li>
+                            Avoid smoking at least four weeks before the surgery
+                        </li>
+                        <li>
+                            Consult your surgeon about the medicines you are already consuming and stop
+                            them for a certain period as instructed
+                        </li>
+                        <li>
+                            Keep yourself hydrated and maintain a healthy diet
+                        </li>
+                        <li>
+                            Make sure to have someone to drive you back home after the surgery
+                            and assist you in a quick recovery
+                        </li>
+                        <li>
+                            On the day of the surgery, eat, drink, and wear as
+                            suggested by your surgeon
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        6. What should you expect on the day of liposuction surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            On the day of surgery, you could expect the surgeon to administer local or general
+                            anesthesia as per the case may be.
+                        </li>
+                        <li>
+                            The surgery time will also vary depending on the number of locations
+                            that need treatment.
+                        </li>
+                        <li>
+                            Be ready for the incisions in specific locations for fat elimination. After the procedure,
+                            you should have realistic expectations.
+                        </li>
+                        <li>
+                            Much will depend on the extent of post-operative care you adopt.
+                        </li>
+                    </ul>
                 </div>
             <?php } elseif ($surgery_str == "tummy tuck") {  ?>
                 <div class="col">
                     <div class="top-content">
                         <p>
-                            <?= $surgery_str ?> or Abdominoplasty is the best solution to get rid of the extra flab that totally messes up our appearance. Even when the diets fail, do not lose heart. <?= $surgery_str ?> procedure by our trusted cosmetic surgeon is all you need to flaunt a flat looking tummy. Our cosmetic surgeon is one of the best <?= $surgery_str ?> experts in <?= $city ?> to reduce your tummy size.
+                            A Tummy tuck or Abdominoplasty is the best solution to get rid of the extra flab that messes up your appearance. Even when diets fail, do not lose heart.
+                            All you need is the Tummy tuck procedure by our trusted cosmetic surgeons and you will end up flaunting a flat tummy. Our cosmetic surgeons are among the best tummy tuck experts in <?= $city ?> to reduce your tummy size.
                         </p>
                     </div>
-                    <p class="identity">WHY CHOOSE DR FOR <?= $surgery_str ?> IN <?= $city ?>? </p>
+                    <p class="identity">
+                        Why Choose Our Cosmetic Surgeons for Tummy Tuck in <?= $city ?>?
+                    </p>
                     <ul>
-                        <li>The best cosmetic surgeon in <?= $city ?></li>
-                        <li>Owns more than a decade of experience in performing <?= $surgery_str ?> surgeries.</li>
-                        <li>Experienced in customized <?= $surgery_str ?> procedures as per the patient’s expectations.</li>
-                        <li>Accomplished in producing believable results through different types of <?= $surgery_str ?> surgeries like mini <?= $surgery_str ?>, full <?= $surgery_str ?> and extended <?= $surgery_str ?>.</li>
-                        <li>Ability to minimize the scars of the surgery and hide it deftly near the abdomen.</li>
-                        <li>Renowned cosmetic surgeon from <?= $city ?>, certified by many national and international cosmetic surgery associations.</li>
+                        <li>
+                            With us, you will find the best cosmetic surgeons in <?= $city ?>
+                        </li>
+                        <li>
+                            Our doctors have more than a decade of experience in performing tummy tuck procedures
+                        </li>
+                        <li>
+                            Can perform customized tummy tuck procedures as per the patient’s need
+                        </li>
+                        <li>
+                            Efficient in delivering believable results through different tummy tuck surgeries like Mini Tummy Tuck, Full Tummy Tuck, and Extended Tummy Tuck
+                        </li>
+                        <li>
+                            Ability to minimize the surgery scars and hide them near the abdomen
+                        </li>
+                        <li>
+                            Renowned cosmetic surgeons from <?= $city ?>, certified by many national and international cosmetic surgery associations
+                        </li>
                     </ul>
-                    <p class="identity">COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?>
+                    <p class="identity">
+                        COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?>
                     </p>
                     <p>
-                        The cost differs according to the different types of <?= $surgery_str ?> methods and the location of surgery. To give you an idea, the average cost of a <?= $surgery_str ?> procedure starts from 1,00,000 INR and can go up to 2,00,000 INR or even more. Apart from the main surgery cost, you should also consider the cost of medicines that you take during the recovery period. In addition, scans and other methods of monitoring the operated location would further add up to your bill. Visit our cosmetic surgeon in <?= $city ?> to get a better estimate.
+                        The cost differs according to the different types of tummy tuck methods and the location of surgery. Apart from the main surgery cost, you should also consider the cost of medicines taken during the recovery period. Scans and other methods of monitoring the operated location would further add up to your bill. Make sure to visit our cosmetic surgeon in <?= $city ?> to get a better estimate.
                     </p>
                     <p class="identity">OUR SERVICES</p>
-                    <p>Get rid of extra fat in your stomach that spoils your appearance. Choose your preferred <?= $surgery_str ?> surgery type and rock in any costume you desire with the help of the best cosmetic surgeon in <?= $city ?>.</p>
+                    <p>
+                        Get rid of extra fat in your stomach that spoils your appearance. Choose your preferred tummy tuck surgery type and rock in any costume you desire with the help of our best cosmetic surgeons in <?= $city ?>.
+                    </p>
+                    <p class="identity">
+                        FAQs on Tummy Tuck Surgery in <?= $city ?>
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        1. Are you a good candidate for Tummy Tuck?
+                    </p>
+                    <p>
+                        Abiding by these points will make you an ideal candidate for the Tummy
+                        Tuck Surgery in <?= $city ?>:
+                    </p>
+                    <ul>
+                        <li>
+                            You have good health but want to get rid of excess fat across your waist and abdomen
+                        </li>
+                        <li>
+                            You have lost considerable weight, resulting in hanging skin and excess fat
+                        </li>
+                        <li>
+                            Pregnancy has completely changed your body and you want to get it back in shape
+                        </li>
+                        <li>
+                            You are not able to get away with excess fat despite exercising and having a balanced diet
+                        </li>
+                        <li>
+                            You are a non-smoker and non-alcoholic person
+                        </li>
+                        <li>
+                            Your body weight is within 20% of the ideal body weight
+                        </li>
+                        <li>
+                            Your abdomen muscles have become loose
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        2. What is the cost of Tummy Tuck?
+                    </p>
+                    <p>
+                        To give you an idea, the average cost of a tummy tuck procedure starts from 1,00,000 INR and can go up to 2,00,000 INR. The cost may vary depending on the surgeon you choose, the hospital, or the clinic where you decide to undergo the treatment, and several other factors. For better insight, a candid consultation with one of our Tummy Tuck surgeons in <?= $city ?> would be a recommended move.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        3. What are the risks related to Tummy Tuck?
+                    </p>
+                    <p>
+                        Like with any other surgery, Tummy Tuck also accompanies several risks.
+                    </p>
+                    <ul>
+                        <li>
+                            Accumulation of fluid under the skin or seroma
+                        </li>
+                        <li>
+                            Poor healing of the areas along the line of incision
+                        </li>
+                        <li>
+                            Visible scars, which are hard to hide
+                        </li>
+                        <li>
+                            Repositioning of abdominal tissues during the surgery can lead to numbness or reduced sensations
+                        </li>
+                        <li>
+                            Chance of an unavoidable revisional surgery
+                        </li>
+                        <li>
+                            Prolonged swelling or skin discoloration
+                        </li>
+                        <li>
+                            Unbearable pain which ceases to subside
+                        </li>
+                    </ul>
+
+                    <p class="cosmetic-faq-list">
+                        4. When can you go for Tummy Tuck?
+                    </p>
+                    <p>
+                        Ideally, if you do not wish to get pregnant any time soon, have a healthy body, and can maintain your results well, this is the right to go for Tummy Tuck. Women in <?= $city ?> and other parts of the world often prefer undergoing Tummy Tuck in their 30s or 40s.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        5. What are the things to do before the Tummy Tuck Surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            Your body weight should remain stable for at least 12 months before the Tummy Tuck surgery
+                        </li>
+                        <li>
+                            If you are overweight, the surgeon will recommend you lose weight to be fit for the procedure
+                        </li>
+                        <li>
+                            Prior to the surgery day, you should have a balanced diet including considerable proteins
+                        </li>
+                        <li>
+                            Keep your body hydrated with water
+                        </li>
+                        <li>
+                            Avoid using any medication without the permission of the doctor as it may lead to bleeding
+                        </li>
+                        <li>
+                            Clear all your doubts with the surgeon before going under the knife
+                        </li>
+                        <li>
+                            Have realistic expectations with the surgery in <?= $city ?>
+                        </li>
+                        <li>
+                            Be prepared for the probable risks and side effects of the treatment
+                        </li>
+                        <li>
+                            Ask someone to take you home once the surgery completes
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        6. What to expect on the day of Tummy Tuck surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            On the surgery day in <?= $city ?>, the anesthetic will discuss if you have any allergic reaction to anesthesia and will administer the dose accordingly
+                        </li>
+                        <li>
+                            The entire procedure will continue for around two to three hours or more, depending on the severity of the treatment
+                        </li>
+                        <li>
+                            The surgeon will take out your belly button by creating a small incision and suture it back into its place after the procedure
+                        </li>
+                        <li>
+                            You might also get some antibiotics to avoid infection or painkillers to mitigate the possible pain during the surgery
+                        </li>
+                        <li>
+                            From the first to the third day after the procedure, you will experience pressure, mild pain, and bloating
+                        </li>
+                        <li>
+                            Your belly will become swollen and sore in the first week. To hide the swelling, you may need to put on a compression garment
+                        </li>
+                    </ul>
+
                 </div>
             <?php } elseif ($surgery_str == "buttock enhancement") { ?>
                 <div class="col">
@@ -2755,61 +3476,363 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             </strong>
                         </p>
                         <p>
-                            <?= $surgery_str ?> is the best option to increase the size of your buttocks and complement your physical appearance. When performed by a trusted and experienced cosmetic surgeon from <?= $city ?>, you can make your buttocks look well rounded, projected and lifted. You can even eliminate the issue of sagging breasts and make them look naturally bigger.
+                            Buttock enhancement is the best option to increase the size of your buttocks and complement your physical appearance. When performed by a trusted and experienced cosmetic surgeon from <?= $city ?>, you can make your buttocks look rounded, projected, and lifted. You can even eliminate the issue of sagging breasts and make them look naturally bigger.
                         </p>
                     </div>
-                    <p class="identity">WHY CHOOSE DR FOR <?= $surgery_str ?> IN <?= $city ?>? </p>
+                    <p class="identity">
+                        Why Choose Our Surgeons for Buttock Enhancement in <?= $city ?>?
+                    </p>
                     <ul>
-                        <li>Highly skilled cosmetic surgeon in <?= $city ?> to perform <?= $surgery_str ?> surgeries with minimal and almost invisible scarring.</li>
-                        <li>Expertise in performing Brazilian butt lift and enhancement using buttock implants.</li>
-                        <li>Experienced in helping the patients choose the right type and size of <?= $surgery_str ?> surgery.</li>
-                        <li>Adept at accomplishing symmetrical enhancements of the buttock sizes without making it look artificial.</li>
-                        <li>Certified by several national and international boards of cosmetic surgeons.</li>
+                        <li>
+                            Highly skilled cosmetic surgeons in <?= $city ?> to perform buttock enhancement surgeries with minimal and almost invisible scarring
+                        </li>
+                        <li>
+                            Expertise in performing Brazilian Butt Lift and enhancement using buttock implants
+                        </li>
+                        <li>
+                            Experienced in helping patients choose the right type and size of buttock enhancement surgery
+                        </li>
+                        <li>
+                            Adept at accomplishing symmetrical enhancements of the buttock sizes without making it look artificial
+                        </li>
+                        <li>
+                            Certified by several national and international boards of cosmetic surgeons
+                        </li>
                     </ul>
                     <p class="identity">
                         COST OF <?= $surgery_str ?> SURGERY IN <?= $city ?>
                     </p>
                     <p>
-                        Several types of <?= $surgery_str ?> surgery include Brazilian butt lift, fat grafting and buttock implants. So depending on your preferred treatment, the cost of surgery will also differ. Apart from the cost of the surgery, you should also consider the cost of medicines, compressions, dressings, etc. To know the whole cost of <?= $surgery_str ?>, you can visit this cosmetic surgeon, the best in <?= $city ?>.
+                        Several types of buttock enhancement surgery include Brazilian Butt Lifts, Fat Grafting, and Buttock Implants. So depending on your preferred treatment, the cost of surgery will also differ. Apart from the cost of the surgery, you should also consider the expenses incurred in medicines, compressions, dressings, etc. To know the whole cost of buttock enhancement, you can visit any of our best cosmetic surgeons in <?= $city ?>.
                     </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>
-                        Big buttocks have a glamorous appeal and you can achieve them through the <?= $surgery_str ?> surgery. With a skilled cosmetic surgeon from <?= $city ?> helping you every step of the day, you can safely enhance your buttocks.
+                        Big buttocks have a glamorous appeal and you can achieve them through buttock enhancement surgery. With one of our skilled cosmetic surgeons from <?= $city ?> helping you every step of the day, you can safely undergo Buttock Enhancement surgery.
                     </p>
+                    <p class="identity">
+                        FAQs on Buttock Enhancement Surgery in <?= $city ?>
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        1. Are you a good candidate for Buttock Enhancement?
+                    </p>
+                    <p>
+                        Here are the conditions for you to be an ideal Buttock Enhancement candidate
+                    </p>
+                    <ul>
+                        <li>
+                            Your butt misses the desired size, shape, fullness, and appeal
+                        </li>
+                        <li>
+                            You have a good overall health
+                        </li>
+                        <li>
+                            You can tolerate the effect of anesthesia
+                        </li>
+                        <li>
+                            Despite regular exercising and taking a balanced diet, your butts cease to increase in size
+                        </li>
+                        <li>
+                            You should have a particular donor site having sufficient stubborn fat cells that could be transferred to your butts
+                        </li>
+                        <li>
+                            You have realistic expectations with the Buttock Enhancement Surgery
+                        </li>
+                        <li>
+                            You don’t smoke or drink alcohol. If you do, quit the habits at least two weeks before the surgery, as it may affect your surgery results adversely
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        2. What is the cost of Buttock Enhancement?
+                    </p>
+                    <p>
+                        The average cost of a Brazilian Butt Lift or a Buttock Enhancement surgery in <?= $city ?> lies between 200000 INR to 400000 INR. Indeed, it is a big amount, but considering the expenses in other countries, the cost of this surgery in India is still much more reasonable.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        3. What are the risks related to Buttock Enhancement?
+                    </p>
+                    <p>
+                        Irrespective of the type of Buttock Enhancement, you cannot rule out the possibility of several mild to severe risks:
+                    </p>
+                    <ul>
+                        <li>
+                            Blood clotting or hematoma
+                        </li>
+                        <li>
+                            Fluid accumulation or seroma
+                        </li>
+                        <li>
+                            Dead fat tissue
+                        </li>
+                        <li>
+                            Loss of sensation on a temporary or permanent basis
+                        </li>
+                        <li>
+                            Permanent scars and stretch marks
+                        </li>
+                        <li>
+                            Infection and bleeding
+                        </li>
+                        <li>
+                            Blood of fat clots that can affect your lungs or heart
+                        </li>
+                        <li>
+                            Nerve damage
+                        </li>
+                        <li>
+                            asymmetrical butts
+                        </li>
+                        <li>
+                            Chances of revision surgery
+                        </li>
+                        <li>
+                            Implant rupture or migration
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        4. When can you go for Buttock Enhancement?
+                    </p>
+                    <p>
+                        If you think your natural butts are too flat or squarish, you may opt for this surgery in <?= $city ?>. In addition, if you have lost significant weight or if you believe that adding a few extra curves could balance the rest of your body, Buttock Enhancement is the right option. As per experts, 25 is the ideal age to perform this surgery, as it will give ample time for the human brain to develop completely.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        5. What are the things to do before the Buttock Enhancement Surgery?
+                    </p>
+                    <p>
+                        Here are some important points to help you ready for the Buttock Enhancement Surgery in <?= $city ?>:
+                    </p>
+                    <ul>
+                        <li>
+                            Get the blood tests suggested by your surgeon to know if your body is all set for the surgery
+                        </li>
+                        <li>
+                            Refrain from smoking or consuming alcohol for around 2-3 weeks before and after the surgery
+                        </li>
+                        <li>
+                            Take the prescribed medicines as instructed and inform your surgeon about any existing medications to adjust accordingly
+                        </li>
+                        <li>
+                            Putting on loose clothing is advisable
+                        </li>
+                        <li>
+                            Prepare yourself mentally and if you have any confusion, discuss it with your surgeon for prompt resolution
+                        </li>
+                        <li>
+                            Have realistic expectations with the surgery
+                        </li>
+                        <li>
+                            Have someone to accompany you back home after the surgery
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        6. What to expect on the day of Buttock Enhancement surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            Come to the hospital or clinic in <?= $city ?> for the surgery with a cool mind
+                        </li>
+                        <li>
+                            The hospital staff will perform necessary tests to examine your health and make you ready for the surgery
+                        </li>
+                        <li>
+                            You will be given anesthesia to make the target area numb
+                        </li>
+                        <li>
+                            If you have allergic behavior to anesthesia, you should inform your surgeon about it
+                        </li>
+                        <li>
+                            You could expect the surgery to take around two hours or more to complete
+                        </li>
+                        <li>
+                            The surgeon would prescribe taking antibiotics, pain medicines, stool softener, etc. after the surgery in <?= $city ?>
+                        </li>
+                        <li>
+                            The doctor would also suggest you take rest, put less or no stress on the treated area, avoid taking a shower for around 2 days from the surgery, wear compression garments, and so on.
+                        </li>
+                        <li>
+                            You could expect a better appearance of your rear after the healing period
+                        </li>
+                    </ul>
+
                 </div>
             <?php } elseif ($surgery_str == "body lift") { ?>
                 <div class="col">
                     <div class="top-content">
                         <p>
                             <strong>
-                                Do you have stubborn body fat that does not budge even with heavy exercising?
+                                Do you have stubborn body fat that does not budge even with heavy exercise?
                             </strong>
                         </p>
                         <p>
-                            Well, a body lift procedure can help to get rid of excess fat and sagging skin. There are times when some fat deposits do not disintegrate even when you diet and exercise hard. A body lift surgery removes or minimizes these fat deposits and tightens your skin for a well-toned looking body. The need is to go for the best cosmetic surgeon in <?= $city ?> to get the best treatment.
+                            A Body Lift can help you to get rid of excess fat and sagging skin. There are times when some fat deposits do not disintegrate even when you diet and exercise hard. A Body Lift surgery removes or minimizes these fat deposits and tightens your skin for a well-toned body appearance. All you need is to look out for one of our best cosmetic surgeons in <?= $city ?> to get the best treatment.
                         </p>
                     </div>
-                    <p class="identity">WHY CHOOSE DR FOR BODY LIFT IN <?= $city ?>? </p>
+                    <p class="identity">
+                        Why Choose Our Surgeons for Body Lift in <?= $city ?>?
+                    </p>
                     <ul>
-                        <li>One of the best cosmetic surgeons in <?= $city ?> with specialization in body lift.</li>
-                        <li>Expertise in understanding the patient’s requirements and helps them to achieve their body goals.</li>
-                        <li>Works on a customized treatment plan to remove the excess fat and skin.</li>
-                        <li>Skilled at whole body lift, lower body lift and mid-body lift.</li>
-                        <li>Certified by several national and international boards of plastic and cosmetic surgeons.</li>
+                        <li>
+                            The best cosmetic surgeons in <?= $city ?> with specialization in Body Lift
+                        </li>
+                        <li>
+                            Expertise in understanding the patient’s requirements and helping them to achieve their body goals
+                        </li>
+                        <li>
+                            Works on a customized treatment plan to remove the excess fat and skin
+                        </li>
+                        <li>
+                            Skilled at whole Body Lift, lower Body Lift, and mid-Body Lift
+                        </li>
+                        <li>
+                            Certified by several national and international boards of plastic and cosmetic surgeons
+                        </li>
                     </ul>
                     <p class="identity">
                         COST OF BODY LIFT IN <?= $city ?>
                     </p>
                     <p>
-                        The body lift procedures start from a few thousand and can go up to 1,00,000 INR or more. Since the procedure depends totally on your expectations, the areas of body lift procedures will have a significant influence over the total price. If you are opting for body lift only in the lower body, then it will cost you less than total body lift.
-                    </p>
-                    <p>
-                        You can visit our experienced cosmetic surgeon in <?= $city ?> to seek recommendations on the best body lift procedure for you.
+                        Since the procedure depends totally on your expectations, the areas of a Body Lift will have a significant influence on the total cost. If you are opting for a Body Lift only in the lower body, it will cost you less than the total Body Lift. You can visit our experienced cosmetic surgeons in <?= $city ?> to seek recommendations on the best Body Lift procedure for you.
                     </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>
-                        When exercising and dieting stops working, body lift could help you get a toned and better-looking body! You can get rid of the flab to tighten the skin and get a toned body at our best surgeon’s clinic in <?= $city ?>. No wonder, you can start wearing those body-fitting clothes and flaunt your gorgeous figure once you get the right treatment.
+                        When exercising and dieting stop working, a Body Lift could help you get a toned and better-looking body! You can get rid of the flab to tighten the skin and get a toned body at our best surgeon’s clinic in <?= $city ?>. No wonder, you can start wearing those body-fitting clothes and flaunt your gorgeous figure once you get the right treatment.
                     </p>
+                    <p class="identity">
+                        FAQs on Body Lift Surgery in <?= $city ?>
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        1. Are you a good candidate for Body Lift?
+                    </p>
+                    <p>
+                        An ideal candidate for Body Lift in <?= $city ?> should satisfy the following criteria:
+                    </p>
+                    <ul>
+                        <li>
+                            Looseness of soft tissue in single or several locations across the body
+                        </li>
+                        <li>
+                            Weight loss in excess, mostly due to bariatric surgery
+                        </li>
+                        <li>
+                            Healthy body, free of any medical ailments that could impair healing
+                        </li>
+                        <li>
+                            A non-smoker and non-alcoholic person
+                        </li>
+                        <li>
+                            Do not have any plans for pregnancy anytime soon
+                        </li>
+                        <li>
+                            Living a healthy lifestyle and having a balanced meal
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        2. What is the cost of a Body Lift?
+                    </p>
+                    <p>
+                        The average cost of a Body Lift procedure in <?= $city ?> varies from 2,00,000 INR to 3,00,000 INR. It could fluctuate depending on various factors like your weight, height, the extent of weight loss, need for liposuction, overall health condition, and so on.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        3. What are the risks related to Body Lift?
+                    </p>
+                    <ul>
+                        <li>
+                            Excessive scarring
+                        </li>
+                        <li>
+                            Chances of Bleeding, eventually leading to hematoma
+                        </li>
+                        <li>
+                            Risk of infection, fever, and red skin (cellulitis) in large portions
+                        </li>
+                        <li>
+                            Bad healing of the wound
+                        </li>
+                        <li>
+                            Would dehiscence or breakdown
+                        </li>
+                        <li>
+                            Extrusion of sutures from the skin, causing irritation; needs removal
+                        </li>
+                        <li>
+                            Loss of sensation in the treated area
+                        </li>
+                        <li>
+                            Asymmetrical fullness, bulges, and other contour irregularities
+                        </li>
+                        <li>
+                            Swelling and discolouration of the skin
+                        </li>
+                        <li>
+                            Allergic reaction to anesthesia or surgery materials like tape, gloves, suture materials, etc.
+                        </li>
+                        <li>
+                            Possibility of revisional surgery
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        4. When can you go for Body Lift?
+                    </p>
+                    <p>
+                        You can experience the best results from a Body Lift surgery in <?= $city ?> only after you have gained the target weight, which remains intact for at least 6 months. Weight fluctuation can impact the surgery negatively. To opt for a Body Lift, the patient should have completed at least the age of 18.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        5. What are the things to do before the Body Lift Surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            Quit smoking and drinking alcohol at least 2 weeks before the surgery
+                        </li>
+                        <li>
+                            Undergo medical tests and keep your medical records handy for the surgeon to check
+                        </li>
+                        <li>
+                            Make sure to lose 30% to 50% of your maximum weight before the surgery
+                        </li>
+                        <li>
+                            requirements
+                        </li>
+                        <li>
+                            Bring medications and compression garments with you
+                        </li>
+                        <li>
+                            Arrange for someone to take you back home and help you with daily chores up to a few days after the surgery
+                        </li>
+                        <li>
+                            Avoid taking herbal supplements, aspirin, and various anti-inflammatory drugs as they can pose bleeding risks
+                        </li>
+                        <li>
+                            keep yourself hydrated before and after the procedure in <?= $city ?>
+                        </li>
+                        <li>
+                            Do not eat anything at least 8 hours before the surgery
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        6. What to expect on the day of Body Lift surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            On the day of surgery, visit the clinic with a calm mind
+                        </li>
+                        <li>
+                            The anesthesia expert will inquire if you have an allergic behaviour to anesthesia and will adjust the dose accordingly
+                        </li>
+                        <li>
+                            Depending on whether you are undergoing upper or lower Body Lift, the doctor will perform the necessary job
+                        </li>
+                        <li>
+                            Usually, the surgery takes around 4-8 hours to complete under the influence of general anesthesia
+                        </li>
+                        <li>
+                            Surgeons could also perform other surgeries like tummy tuck, arm lift, or arm lift in conjunction with the Body Lift procedure in <?= $city ?>
+                        </li>
+                        <li>
+                            You can get back to work in 2-3 weeks after the surgery and can do daily chores within 4-6 weeks
+                        </li>
+                        <li>
+                            You could expect the surgeon to provide several instructions for a quick and satisfying recovery.
+                        </li>
+                    </ul>
                 </div>
             <?php } elseif ($surgery_str == "arm lift") { ?>
                 <div class="col">
@@ -2820,54 +3843,346 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             </strong>
                         </p>
                         <p>
-                            Arm lift surgery or Brachioplasty is the procedure to treat drooping upper arms resulting due to ageing or massive weight loss. It requires the surgeon to remove the excess sagging skin of the upper arm resulting in well-toned and tightened arms.
+                            Arm Lift Surgery or Brachioplasty is the procedure to treat drooping upper arms resulting due to ageing or massive weight loss. It requires the surgeon to remove the excess sagging skin of the upper arm resulting in well-toned and tightened arms.
                         </p>
                         <p>
-                            A reputed cosmetic surgeon in <?= $city ?> can advise the right treatment plan and the best-suited procedure for you.
+                            Our reputed cosmetic surgeons in <?= $city ?> advise the right treatment plan and the best-suited procedure for you.
                         </p>
                     </div>
-                    <p class="identity">WHY CHOOSE DR FOR ARM LIFT SURGERY IN <?= $city ?>? </p>
+                    <p class="identity">
+                        Why Choose Our Surgeons for Arm Lift Surgery in <?= $city ?>?
+                    </p>
                     <ul>
-                        <li>The best cosmetic surgeon in <?= $city ?> holds the experience of treating several patients with extremely sagging upper arms.</li>
-                        <li>Highly skilled at various arm lift surgeries like liposuction, limited arm lift, standard arm lift and extended arm lift.</li>
-                        <li>Highly talented at customizing the treatment and toning the upper arms that are symmetrical with the body.</li>
-                        <li>Minimal scarring that becomes almost invisible over time.</li>
-                        <li>A renowned cosmetic surgeon from <?= $city ?>, duly certified by several national boards of cosmetic surgeries.</li>
+                        <li>
+                            The best cosmetic surgeons in <?= $city ?> to treat patients with extremely sagging upper arms
+                        </li>
+                        <li>
+                            Highly skilled at various arm lift surgeries like Liposuction, Limited Arm Lift, Standard Arm Lift, and Extended Arm Lift.
+                        </li>
+                        <li>
+                            Adept at customizing the treatment and toning the upper arms that are symmetrical with the body
+                        </li>
+                        <li>
+                            Leave only minimal scarring that becomes almost invisible over time.
+                        </li>
+                        <li>
+                            Renowned cosmetic surgeons from <?= $city ?>, duly certified by several national boards of cosmetic surgeries
+                        </li>
                     </ul>
                     <p class="identity">
                         COST OF ARM LIFT SURGERY IN <?= $city ?>
                     </p>
-                    <p>Arm lift surgeries cost about 1,00,000 INR. This cost is not inclusive of the consultation, medicine costs and other external support needed for recovery. The price, however, depends on the cosmetic surgeon you choose and the specific area where you want to tone it. The cost of extended arm lift surgery is higher than the other surgeries since the surgeon not just removes the excess skin on the upper arms but also on the sides of the body.</p>
-                    <p>It is best to visit our reliable cosmetic surgeon in <?= $city ?> and get the advice on the best course of action.</p>
+                    <p>
+                        The Arm Lift Surgery cost depends largely on the cosmetic surgeon you choose and the specific area where you want to tone it. Usually, the cost of extended Arm Lift Surgery is higher than other surgeries since the surgeon not just removes the excess skin on the upper arms but also on the sides of the body. It is best to visit our reliable cosmetic surgeon in <?= $city ?> and seek advice on the best course of action.
+                    </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>
-                        Are you feeling uncomfortable due to the excess skin on your upper arms? Are you finding it hard to tone down your excess skin through exercise? If yes then, you can always opt for arm lift surgery by our experienced surgeon in <?= $city ?>.
+                        Are you feeling uncomfortable due to the excess skin on your upper arms? Are you finding it hard to tone down your excess skin through exercise? If yes then, you can always opt for Arm Lift Surgery by any of our experienced surgeons in <?= $city ?>.
                     </p>
+                    <p class="identity">
+                        FAQs on Arm Lift Surgery in <?= $city ?>
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        1. Are you a good candidate for Arm Lift Surgery?
+                    </p>
+                    <p>
+                        Abiding by the following points will make you a suitable candidate for Arm Lift Surgery in <?= $city ?>:
+                    </p>
+                    <ul>
+                        <li>
+                            You are an adult having considerable laxity in the upper arm skin
+                        </li>
+                        <li>
+                            You have lost weight significantly, which has caused loose hanging skin
+                        </li>
+                        <li>
+                            You are an adult with a stable weight irrespective of your age
+                        </li>
+                        <li>
+                            You are not overweight
+                        </li>
+                        <li>
+                            You are a healthy person with no medical problem that could affect healing or enhance surgery risks
+                        </li>
+                        <li>
+                            You don’t smoke or drink alcohol
+                        </li>
+                        <li>
+                            You can maintain a healthy lifestyle with a proper diet
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        2. What is the cost of Arm Lift Surgery?
+                    </p>
+                    <p>
+                        The average cost of Arm Lift surgery in <?= $city ?> may be in the range of 1,00,000 INR to 1,50,000 INR. Much will depend on the facilities the patient has opted for. This cost for consultation, medicine costs, and other external support needed for recovery will be additional.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        3. What are the risks related to Arm Lift Surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            Asymmetry in the appearance of arms
+                        </li>
+                        <li>
+                            Excessive or unusual scarring
+                        </li>
+                        <li>
+                            Persistent bleeding
+                        </li>
+                        <li>
+                            Damage to the blood vessel, nerves, or muscles
+                        </li>
+                        <li>
+                            Infection in the surgical site
+                        </li>
+                        <li>
+                            Arm stiffness
+                        </li>
+                        <li>
+                            Seroma or accumulation of fluids in the arm, which can be drained with the help of a needle
+                        </li>
+                        <li>
+                            Breakdown of the wound, which will require 2-3 additional weeks to heal
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        4. When can you go for Arm Lift Surgery?
+                    </p>
+                    <p>
+                        If you are experiencing age-related changes in your arms or loose skin due to excessive weight loss, Arm Lift surgery in <?= $city ?> could be a suitable choice to deal with your arm laxity condition. Winter is the best time to undergo this surgery. All you need is to be an adult to opt for the Arm Lift procedure in <?= $city ?>.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        5. What are the things to do before the Arm Lift surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            Consult your surgeon about the concerns related to Arm Lift
+                        </li>
+                        <li>
+                            Stop eating and drinking at least 8 hours before the procedure
+                        </li>
+                        <li>
+                            Arrange for loose and comfortable clothing at home in advance
+                        </li>
+                        <li>
+                            Go for a medical exam to ensure your health is perfect before the surgery
+                        </li>
+                        <li>
+                            Stop smoking several weeks earlier to avoid slow wound healing due to smoking-related health hassles
+                        </li>
+                        <li>
+                            Adjust your existing medications after consultation with the doctor
+                        </li>
+                        <li>
+                            Avoid the consumption of aspirin, anti-inflammatory drugs, or health supplements as they can result in excessive bleeding
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        6. What to expect on the day of Arm Lift surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            Cooperate with the staff at the clinic in executing the necessary formalities
+                        </li>
+                        <li>
+                            The anesthesia expert may ask you about your behaviour toward anesthesia and administer the dose accordingly
+                        </li>
+                        <li>
+                            The surgeon in <?= $city ?> may take around 3-4 hours to complete Brachioplasty. Due to the effect of anesthesia, you may not realize the lapse in time.
+                        </li>
+                        <li>
+                            You will get incisions on the back or inside your arm depending on the choice of surgeon. Next, the excision of excess fat will take place via Liposuction
+                        </li>
+                        <li>
+                            You may get back to work after the surgery in <?= $city ?> within just a week if you have a sedentary job, but if it demands too much physical exertion, the surgeon would recommend resting for around two weeks after the surgery
+                        </li>
+                        <li>
+                            You should have realistic goals in your mind regarding the surgery.
+                        </li>
+                    </ul>
+
                 </div>
             <?php } elseif ($surgery_str == "thigh lift") { ?>
                 <div class="col">
                     <div class="top-content">
                         <p>
-                            If dieting and exercising is not working out anymore to reduce your thigh size, then thigh lift is the next option for you to go. Thigh lift surgery reshapes the thigh by removing the extra tissues that would otherwise make you look flabby. This surgery will also contour your body in proportion to the rest of your body figure.
+                            If dieting and exercising are not helping anymore in reducing your thigh size, a Thigh Lift can be a suitable alternative. The surgery reshapes the thigh by removing the extra tissues that would otherwise make you look flabby. It will also contour your body in proportion to the rest of your body figure.
                         </p>
                         <p>
-                            Some prefer to go for a combination of liposuction and thigh lift to complement the body structure. For any more doubts about this surgery, please connect with our recommended cosmetic surgeon in <?= $city ?>.
+                            Some prefer to go for a combination of Liposuction and Thigh Lift to complement the body structure. For any more doubts about this surgery, you can visit any of our recommended cosmetic surgeons in <?= $city ?>.
                         </p>
                     </div>
                     <p class="identity">
-                        WHY CHOOSE DR FOR THIGH LIFT IN <?= $city ?>? </p>
+                        Why Choose Our Surgeons for Thigh Lift in <?= $city ?>?
+                    </p>
                     <ul>
-                        <li>The best cosmetic surgeon in <?= $city ?> with credible experience in thigh lift as well as other body contouring procedures.</li>
-                        <li>Overwhelming testimonials from the satisfied patients about the positive results of the surgeries.</li>
-                        <li>Founder and main cosmetic surgeon at a fully equipped clinic for plastic, cosmetic and reconstructive surgeries.</li>
-                        <li><?= $city ?> top cosmetic surgeon certified by the national associations for plastic and cosmetic surgeries.</li>
+                        <li>
+                            Best cosmetic surgeons in <?= $city ?> with credible experience in Thigh Lift as well as other body contouring procedures
+                        </li>
+                        <li>
+                            Overwhelming testimonials from satisfied patients about the positive surgery results
+                        </li>
+                        <li>
+                            Operate patients in fully-equipped clinics for plastic, cosmetic, and reconstructive surgeries.
+                        </li>
+                        <li>
+                            Top cosmetic surgeons in <?= $city ?> certified by the national associations for plastic and cosmetic surgeries
+                        </li>
                     </ul>
                     <p class="identity">
                         COST OF THIGH LIFT IN <?= $city ?>
                     </p>
-                    <p>Several factors can influence the cost of thigh lift surgery. These may include the price of the surgical facilities, the cost of the surgeon, anesthesia and the medicines. It is best to consult with our cosmetic surgeon in <?= $city ?> about the cost considerations. This consultation will also give you a better insight into the results you can expect as well as about the recovery period.</p>
+                    <p>
+                        It would be wise to consult with any of our cosmetic surgeons in <?= $city ?> about the cost of this treatment. This will also give you a better insight into the results you can expect as well as about the recovery period.
+                    </p>
                     <p class="identity">OUR SERVICES</p>
-                    <p>Do not let those flabby thighs get the best of you! Go for a thigh lift, recover your lost shape and look fab! Opt for our most-respected cosmetic surgeon in <?= $city ?> to perform the thigh lift surgery.</p>
+                    <p>
+                        Do not let those flabby thighs get the best of you! Go for a Thigh Lift, recover your lost shape, and look fab! Opt for one of our most-respected cosmetic surgeons in <?= $city ?> to perform the Thigh Lift surgery.
+                    </p>
+                    <p class="identity">
+                        FAQs on Thigh Lift Surgery in <?= $city ?>
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        1. Are you a good candidate for Thigh Lift?
+                    </p>
+                    <p>
+                        People in <?= $city ?> wishing to be a Thigh Lift candidate need to satisfy the following conditions:
+                    </p>
+                    <ul>
+                        <li>
+                            Have a relatively stable weight
+                        </li>
+                        <li>
+                            Extra soft tissue along the inner thigh or the outer thigh
+                        </li>
+                        <li>
+                            Good health overall
+                        </li>
+                        <li>
+                            No medical condition that could impair healing or increase risks
+                        </li>
+                        <li>
+                            Healthy diet
+                        </li>
+                        <li>
+                            Routine of regular exercise
+                        </li>
+                        <li>
+                            Non-smoker and non-alcoholic
+                        </li>
+                        <li>
+                            Wish to improve the appearance of thighs
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        2. What is the cost of a Thigh Lift?
+                    </p>
+                    <p>
+                        The cost of a Thigh Lift surgery in <?= $city ?> may vary between 70,000 INR-1,50,000 INR. Several factors can have an impact on the cost of Thigh Lift surgery. These may include the price of the surgical facilities, the complexity faced during the surgery, the experience of the surgeon, the cost of anesthesia and medicines, and so on.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        3. What are the risks related to Thigh Lifts?
+                    </p>
+                    <ul>
+                        <li>
+                            Allergic reaction to anesthesia
+                        </li>
+                        <li>
+                            Infection and bleeding in the incision site
+                        </li>
+                        <li>
+                            Chances of scarring
+                        </li>
+                        <li>
+                            Pain in rare instances after the effect of anesthesia subsides
+                        </li>
+                        <li>
+                            Formation of blood clots in the legs, leading to Deep Vein Thrombosis or DVT
+                        </li>
+                        <li>
+                            Formation of seroma or blood accumulation in a dead space after the surgery
+                        </li>
+                        <li>
+                            Dead fatty tissue beneath the skin or fat necrosis
+                        </li>
+                        <li>
+                            Bruising and swelling in the incision site
+                        </li>
+                        <li>
+                            Need for a correction surgery
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        4. When can you go for a Thigh Lift?
+                    </p>
+                    <p>
+                        If you want to get smoother skin and well-proportioned contours on your thighs, a Thigh Lift is the best option. Anyone who is more than 18 years old and has a disease-free body can go for Thigh Lift in <?= $city ?>.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        5. What are the things to do before the Thigh Lift Surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            Get your medical evaluation and complete body check-up before the surgery
+                        </li>
+                        <li>
+                            Avoid consuming anti-inflammatory drugs, health supplements, or Aspirin to avoid an increase in bleeding
+                        </li>
+                        <li>
+                            Show the medication lists to the surgeon you are currently taking to avert confusion
+                        </li>
+                        <li>
+                            Take off contact lenses, nail polish, makeup, and deodorant
+                        </li>
+                        <li>
+                            Avoid
+                        </li>
+                        <li>
+                            Keep yourself hydrated with water at least 2 weeks before the surgery in <?= $city ?>
+                        </li>
+                        <li>
+                            Avoid eating or drinking around 8 hours before the surgery.
+                        </li>
+                        <li>
+                            Quit smoking or alcohol consumption to avoid any complications during or after the surgery
+                        </li>
+                        <li>
+                            Arrange for someone to help you in the hospital, drive you home and assist in your daily chores after the surgery.
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        6. What to expect on the day of Thigh Lift surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            Visit the clinic or hospital with a cool and composed mind
+                        </li>
+                        <li>
+                            Discuss your concerns with the <?= $city ?> surgeon in a candid direct consultation
+                        </li>
+                        <li>
+                            The anesthesiologist would ask about your reaction to anesthesia and will administer the dose accordingly
+                        </li>
+                        <li>
+                            You could expect the surgeon to make an incision and remove the fat and excess skin from the incision site
+                        </li>
+                        <li>
+                            As a result of the successful surgery, you could expect tight skin, enhanced leg contour, and better skin elasticity
+                        </li>
+                        <li>
+                            The entire procedure will complete in around 2-3 hours
+                        </li>
+                        <li>
+                            Depending on your response to the Thigh Lift, you may have to stay in the hospital for a few days, or as recommended by your surgeon in <?= $city ?>
+                        </li>
+                        <li>
+                            You can expect around 4-6 weeks from the day of the Thigh Lift surgery to heal completely
+                        </li>
+                        <li>
+                            The surgeon could advise you to restrict your daily activities for around 2 weeks and avoid strenuous activities for at least 2 weeks
+                        </li>
+                    </ul>
                 </div>
             <?php } elseif ($surgery_str == "body contouring") { ?>
                 <div class="col">
@@ -2880,12 +4195,21 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </p>
                     </div>
                     <p class="identity">
-                        WHY CHOOSE DR FOR BODY CONTOURING IN <?= $city ?>? </p>
+                        Why Choose Our Surgeons for <?= $surgery_str ?> in <?= $city ?>?
+                    </p>
                     <ul>
-                        <li>The most skilled cosmetic surgeon in <?= $city ?> for body contouring.</li>
-                        <li>Highly experienced in individual procedures that make up the body contouring like tummy tuck, breast lift, arm lift, buttock lift, thigh lift and lower body lift.</li>
-                        <li>Performs highly specific and customized body-contouring surgery targeted at removing the excess skin that results in well-contoured appearance.</li>
-                        <li><?= $city ?> experienced cosmetic surgeon, certified by several national and international boards of cosmetic surgeries.</li>
+                        <li>
+                            The most skilled cosmetic surgeon in <?= $city ?> for body contouring.
+                        </li>
+                        <li>
+                            Highly experienced in individual procedures that make up the body contouring like tummy tuck, breast lift, arm lift, buttock lift, thigh lift and lower body lift.
+                        </li>
+                        <li>
+                            Performs highly specific and customized body-contouring surgery targeted at removing the excess skin that results in well-contoured appearance.
+                        </li>
+                        <li>
+                            <?= $city ?>’s experienced cosmetic surgeon, certified by several national and international boards of cosmetic surgeries.
+                        </li>
                     </ul>
                     <p class="identity">
                         COST OF BODY CONTOURING SURGERY IN <?= $city ?>
@@ -2898,30 +4222,41 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>
-                        Transform your appearance in a single body contouring surgery. Get rid of that excess flab of skin from all over your body to get a well-toned and youthful skin with <?= $city ?> best surgeon by your side.
+                        Transform your appearance in a single body contouring surgery. Get rid of that excess flab of skin from all over your body to get a well-toned and youthful skin with <?= $city ?>’s best surgeon by your side.
                     </p>
                 </div>
             <?php } elseif ($surgery_str == "mommy makeover") { ?>
                 <div class="col">
                     <div class="top-content">
-                        <p>
+                        <!-- <p>
                             <strong>
-                                THE EXPERT COSMETIC SURGEON FOR MOMMY MAKEOVER SURGERY IN <?= $city ?>
+                                THE EXPERT COSMETIC SURGEON FOR MOMMY MAKEOVER SURGERY IN <? //= $city 
+                                                                                            ?>
                             </strong>
-                        </p>
+                        </p> -->
                         <p>
                             Mommy makeover surgery aims specifically at helping women get back their slim body after childbirth. A woman’s body goes through significant changes during and after pregnancy. For many, it can be difficult and almost impossible to get back to the previous shape they were in. This is where mommy makeover surgery is beneficial. Our cosmetic surgeon from <?= $city ?> will inspect the entire body and make changes to breasts, buttocks, thighs, tummy and other locations where the size has increased.
                         </p>
                     </div>
                     <p class="identity">
-                        WHY CHOOSE DR FOR MOMMY MAKEOVER SURGERY IN <?= $city ?>?
+                        WHY CHOOSE MOMMY MAKEOVER SURGERY IN <?= $city ?>?
                     </p>
                     <ul>
-                        <li>One of the best cosmetic surgeons in <?= $city ?> who offers astonishing results with a wholesome mommy makeover surgery.</li>
-                        <li>Customized surgery plans aimed at reducing the fat at specific areas of the mother’s body.</li>
-                        <li>Skilled at transforming the patients’ back to their old, thinner self.</li>
-                        <li>A reliable cosmetic surgeon with a clinic in <?= $city ?> offering personalized treatment and medicines by considering the recent childbirth.</li>
-                        <li>An esteemed cosmetic surgeon and a member of several national and international boards for cosmetic surgery.</li>
+                        <li>
+                            One of the best cosmetic surgeons in <?= $city ?> who offers astonishing results with a wholesome mommy makeover surgery.
+                        </li>
+                        <li>
+                            Customized surgery plans aimed at reducing the fat at specific areas of the mother’s body.
+                        </li>
+                        <li>
+                            Skilled at transforming the patients’ back to their old, thinner self.
+                        </li>
+                        <li>
+                            A reliable cosmetic surgeon with a clinic in <?= $city ?> offering personalized treatment and medicines by considering the recent childbirth.
+                        </li>
+                        <li>
+                            An esteemed cosmetic surgeon and a member of several national and international boards for cosmetic surgery.
+                        </li>
                     </ul>
                     <p class="identity">
                         COST OF MOMMY MAKEOVER SURGERY IN <?= $city ?>
