@@ -400,6 +400,7 @@ if ($getMorePosts) {
                         }
                     }
                 ?>
+                 
                     <div class="col-sm-3">
                         <div class="maim-more-post">
                             <a href="<?= route("frontend.posts.show", [$item->slug]) ?>">

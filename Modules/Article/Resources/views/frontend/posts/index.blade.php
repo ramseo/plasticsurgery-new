@@ -23,7 +23,7 @@
 						       </div>
 
 				                <div class="col-md-6">
-							     <div id="page-breadcrumb" class="page-breadcrumb">
+							     <div id="page-breadcrumb" class="page-breadcrumb"> 
 		                            <div class="page-breadcrumb-inner">
                                       <ul class="insight_core_breadcrumb">
                                       <li class="level-1 top"><a href="http://cosmetic.ls/blog">Home</a></li>
@@ -181,7 +181,8 @@ if ($getPostCat) {
             autoplay: $('.posts-categories .owl-item').length > 6 ? true : false,
             autoplayTimeout: 3000,
             autoplayHoverPause: true,
-            responsive: {
+            responsive:  
+            {
                 0: {
                     items: 2,
                     loop: $('.posts-categories .owl-item').length > 2 ? true : false,
