@@ -4228,12 +4228,6 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <?php } elseif ($surgery_str == "mommy makeover") { ?>
                 <div class="col">
                     <div class="top-content">
-                        <!-- <p>
-                            <strong>
-                                THE EXPERT COSMETIC SURGEON FOR MOMMY MAKEOVER SURGERY IN <? //= $city 
-                                                                                            ?>
-                            </strong>
-                        </p> -->
                         <p>
                             Mommy makeover surgery aims specifically at helping women get back their slim body after childbirth. A woman’s body goes through significant changes during and after pregnancy. For many, it can be difficult and almost impossible to get back to the previous shape they were in. This is where mommy makeover surgery is beneficial. Our cosmetic surgeon from <?= $city ?> will inspect the entire body and make changes to breasts, buttocks, thighs, tummy and other locations where the size has increased.
                         </p>
@@ -4278,58 +4272,342 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             </strong>
                         </p>
                         <p>
-                            Not anymore! Get the best cosmetic surgeon in <?= $city ?> known for the skilled hair transplant treatment to help you regain your confidence. Through hair transplantation surgery, the surgeon will extract hair grafts or follicles from your scalp, treat them and place it in the thinning areas. It is best for patients suffering from acute hair fall, balding hall, thinned out hair, alopecia or any other similar condition.
+                            Not anymore! Get the best cosmetic surgeon in <?= $city ?> known for the skilled hair transplant treatment to help you regain your confidence. Through hair transplantation surgery, the surgeon will extract hair grafts or follicles from your scalp, treat them and place it in the thinning areas. It is best for patients suffering from acute hair fall, balding hall, thinned-out hair, alopecia, or any other similar condition.
                         </p>
                     </div>
                     <p class="identity">
-                        WHY CHOOSE DR FOR HAIR TRANSPLANT IN <?= $city ?>?
+                        Why Choose Our Cosmetic Surgeons for Hair Transplant in <?= $city ?>?
                     </p>
                     <ul>
-                        <li>One of the top cosmetic surgeons for hair transplantation in <?= $city ?> with a high success rate.</li>
-                        <li>Adept at the most-acclaimed hair transplant treatment – Follicular Unit Extraction (FUE)</li>
-                        <li>Ability to tailor the areas of transplantation based on the patient’s expectations to achieve fuller-looking scalp.</li>
-                        <li>Board-recognized cosmetic surgeon and member of several hair transplant associations.</li>
+                        <li>
+                            Top cosmetic surgeons for hair transplantation in <?= $city ?> with a high success rate
+                        </li>
+                        <li>
+                            Adept at performing the widely acclaimed hair transplant treatments - Follicular Unit Extraction (FUE) and Follicular Unit Transplantation (FUT) with dexterity
+                        </li>
+                        <li>
+                            Ability to tailor the areas of transplantation based on the patient’s expectations to achieve a fuller-looking scalp.
+                        </li>
+                        <li>
+                            Board-recognized cosmetic surgeon and member of several hair transplant associations.
+                        </li>
                     </ul>
                     <p class="identity">
                         COST OF HAIR TRANSPLANT TREATMENT IN <?= $city ?>
                     </p>
                     <p>
-                        From among two types of common hair transplant surgeries, FUT and FUE, many cosmetic surgeons recommend FUE. The cost of FUE treatment starts from 70,000 INR and can go up to several lakhs. The main cost-deciding factor in hair transplantation is the number of the grafts needed as well as the cost of the cosmetic surgeon. Usually, the cost per graft is 40 INR to 100 INR. To know the exact rates, kindly visit our cosmetic surgeon at the clinic in <?= $city ?>.
+                        You can opt from among two types of common hair transplant surgeries, FUT and FUE, The cost of both treatments varies depending on the number of grafts needed. To know the exact rates, you can visit any of our expert cosmetic surgeons in <?= $city ?>.
                     </p>
                     <p class="identity">OUR SERVICES</p>
                     <p>
-                        We all love to have a full head of hair. This is now possible with the customized hair transplant surgery by an expert cosmetic surgeon in <?= $city ?>. Enjoy thicker and fuller hair that makes you look younger!
+                        We all love to have a full head of hair. This is now possible with customized hair transplant surgery by an expert cosmetic surgeon in <?= $city ?>. Enjoy thicker and fuller hair that makes you look younger!
                     </p>
+                    <p class="identity">
+                        FAQs on Hair Transplant Surgery in <?= $city ?>
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        1. Are you a good candidate for Hair Transplant surgery?
+                    </p>
+                    <p>
+                        If you abide by the following criteria, you will be an ideal candidate for hair transplant surgery in <?= $city ?>:
+                    </p>
+                    <ul>
+                        <li>
+                            You have been losing your hair out of male pattern baldness for around 5 years or more
+                        </li>
+                        <li>
+                            You have advanced to Class 3 or beyond on the Norwood Scale.
+                        </li>
+                        <li>
+                            Your hair at the back and sides of your scalp have a healthy growth, good enough to serve as the donor zone
+                        </li>
+                        <li>
+                            You have Scarring alopecia – a hair loss type resulting due to the damage of hair follicles
+                        </li>
+                        <li>
+                            You have suffered hair loss due to scalp injuries, scarring, or some cosmetic surgery procedures
+                        </li>
+                        <li>
+                            You have good health overall and a healthy scalp
+                        </li>
+                        <li>
+                            You have reasonable expectations with the surgery
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        2. What is the cost of a Hair Transplant?
+                    </p>
+                    <p>
+                        The average cost of Hair Transplant Surgery in <?= $city ?> depends largely on the number of grafts. For example, the cost of the procedure per 2000 grafts lies in the range of 55,000 INR to 80,000 INR. For a Hair Transplant involving 5000 grafts, the average cost is 1,00,000 INR – 1,40,000 INR and beyond.
+                    </p>
+                    <p>
+                        Usually, the cost per graft is 40 INR to 100 INR. The cost also depends on various other factors like baldness level, number of sessions, the technique used (FUT or FUE), availability of graft donor area, the surgeon, and the clinical set up among others.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        3. What are the risks related to Hair Transplant?
+                    </p>
+                    <p>
+                        Usually, Hair Transplant surgery in <?= $city ?> is a safe procedure to help your hair restoration goals. It may however accompany several risks at times, such as:
+                    </p>
+                    <ul>
+                        <li>
+                            Pain after the surgery
+                        </li>
+                        <li>
+                            Unexpected outcomes
+                        </li>
+                        <li>
+                            Possibility of bleeding, infection, itching, or scarring
+                        </li>
+                        <li>
+                            Chances of wound dehiscence or skin necrosis
+                        </li>
+                        <li>
+                            Scalp swelling
+                        </li>
+                        <li>
+                            Lack of sensation in the treated scalp areas
+                        </li>
+                        <li>
+                            Need for a revision surgery
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        4. When can you go for Hair Transplant?
+                    </p>
+                    <p>
+                        There is no fixed age to undergo hair transplant surgery, but surgeons mostly recommend the patients be at least 21 years old to opt for it. Moreover, if you have just started noticing hair fall and you have not gone completely bald yet, this is the right time to go for the Hair transplant from a clinic in <?= $city ?> or elsewhere. At this specific stage, the surgeon can use your existing hair for transplantation in the early restoration phases.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        5. What are the things to do before Hair Transplant Surgery?
+                    </p>
+                    <p>
+                        Before going for hair transplant surgery in <?= $city ?>, you need to clear all the doubts in your mind regarding the procedure. Consultation with your surgeon will be ideal to help you in this regard. Here are some other things to do before undergoing the surgery
+                    </p>
+                    <ul>
+                        <li>
+                            Be ready with the reports of the routine blood tests like CBC, HCV, ECG, etc. instructed by the surgeon.
+                        </li>
+                        <li>
+                            If you are a smoker or an alcoholic, stop consuming them at least 2 weeks before the treatment
+                        </li>
+                        <li>
+                            Inform the doctor about any medication that you are taking currently, to stop or adjust it accordingly
+                        </li>
+                        <li>
+                            Avoid taking spicy food the night prior to the surgery.
+                        </li>
+                        <li>
+                            Wash your hair for at least two days with shampoo before going for hair transplantation
+                        </li>
+                        <li>
+                            Let your doctor know if you have allergic behaviour to any particular medicine or anesthesia.
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        6. What to expect on the day of Hair Transplant surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            On the day of the hair transplantation surgery in <?= $city ?>, come with a prepared and stress-free mind.
+                        </li>
+                        <li>
+                            Cooperate with the clinic staff in completing all the pre-operative formalities
+                        </li>
+                        <li>
+                            The surgeon can choose to keep you awake during the entire procedure and administer anesthesia to numb your scalp
+                        </li>
+                        <li>
+                            Be patient enough to bear the lengthy process of hair transplantation, as it can take around four to eight hours for a single session to complete
+                        </li>
+                        <li>
+                            In case of a large volume of hair transplantation, you may have to revisit the clinic and devote a few more hours the next day to undergo the remaining treatment.
+                        </li>
+                        <li>
+                            Overall, you should have realistic expectations with the hair transplant surgery in <?= $city ?>.
+                        </li>
+                    </ul>
                 </div>
             <?php } elseif ($surgery_str == "men and plastic surgery") { ?>
                 <div class="col">
                     <div class="top-content">
                         <p>
-                            Women are not the only ones who wish to look their best. Nowadays, men too want to beautify themselves, look slim and have flawless skin, and there is nothing wrong in that! Several cosmetic surgeries for men exist to treat different concerns like flabby stomach, sagging or blemished skin, facial wrinkles or any other issues.
-                        </p>
-                        <p>
-                            Our cosmetic surgeon from <?= $city ?> is one of the best to perform men’s cosmetic surgeries.
+                            Women are not the only ones who wish to look their best. Nowadays, men too want to beautify themselves, look slim, have flawless skin, and there is nothing wrong with that! Several cosmetic surgeries for men exist to treat different concerns like flabby stomach, sagging or blemished skin, facial wrinkles, or any other issues. Our cosmetic surgeons from <?= $city ?> are one of the best to perform men’s cosmetic surgeries.
                         </p>
                     </div>
                     <p class="identity">
-                        WHY CHOOSE DR FOR MEN’S PLASTIC SURGERY IN <?= $city ?>?
+                        Why Choose Our Surgeons for Men’s Plastic Surgery in <?= $city ?>?
                     </p>
                     <ul>
-                        <li>One of the top choices in <?= $city ?> for performing cosmetic surgeries for men.</li>
-                        <li>Runs a fully equipped clinic with the infrastructure needed to perform extensive surgeries for men.</li>
-                        <li>Experienced at performing gynecomastia, liposuction, ear surgery, facelift, chin augmentation, tummy tuck and many more.</li>
-                        <li><?= $city ?> best cosmetic surgeon certified by several national and international boards of cosmetic surgeons.</li>
+                        <li>
+                            Top choices in <?= $city ?> for performing cosmetic surgeries for men
+                        </li>
+                        <li>
+                            Run a fully equipped clinic with the infrastructure needed to perform extensive surgeries for men
+                        </li>
+                        <li>
+                            Experienced at performing gynecomastia, Men’s Plastic Surgery, ear surgery, facelift, chin augmentation, tummy tuck, and many more procedures
+                        </li>
+                        <li>
+                            Best cosmetic surgeons in <?= $city ?> certified by several national and international boards of cosmetic surgeons
+                        </li>
                     </ul>
                     <p class="identity">
-                        COST OF MEN’S PLASTIC SURGERY IN <?= $city ?></p>
-                    <p>
-                        When it comes to the choices for plastic surgery in men, the options are multifarious. From facial non-invasive and minimally invasive treatments to extensive full-body procedures, you can go for any of them. So, the cost for the plastic surgery for men also varies depending on the treatment. The rates start from as low as a couple of thousands for dermal fillers, acne treatment and laser skin treatment to more than 3,00,000 INR for extensive body contouring and reshaping surgeries.
+                        COST OF MEN’S PLASTIC SURGERY IN <?= $city ?>
                     </p>
                     <p>
-                        If you have any specific concern, feel free to visit our acclaimed cosmetic surgeon in <?= $city ?> for proper guidance.
+                        When it comes to the choices for plastic surgery in men, the options are multiple. From facial non-invasive and minimally invasive treatments to extensive full-body procedures, you can go for any of them. Therefore, the cost of plastic surgery for men also varies depending on the treatment. If you have any specific concerns, feel free to visit any of our acclaimed cosmetic surgeons in <?= $city ?> for proper guidance.
                     </p>
                     <p class="identity">OUR SERVICES</p>
-                    <p>Regain your confidence with your choice of cosmetic surgery. Consult with <?= $city ?> most esteemed cosmetic surgeon and be your youthful self.</p>
+                    <p>
+                        Regain your confidence with your choice of cosmetic surgery. Consult with <?= $city ?>’s most esteemed cosmetic surgeon and be your youthful self.
+                    </p>
+                    <p class="identity">
+                        FAQs on Men’s Plastic Surgery in <?= $city ?>
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        1. Are you a good candidate for Men’s Plastic Surgery?
+                    </p>
+                    <p>
+                        If you are a male and looking to undergo plastic surgery in <?= $city ?> to enhance your physical appearance, fulfilling the following points will make you a suitable candidate:
+                    </p>
+                    <ul>
+                        <li>
+                            You are an adult with good overall health
+                        </li>
+                        <li>
+                            You are free from severe health conditions like high blood pressure, heart problems, diabetes, etc.
+                        </li>
+                        <li>
+                            You are a non-smoker and non-alcoholic
+                        </li>
+                        <li>
+                            You have developed too much sagging skin
+                        </li>
+                        <li>
+                            Your current body weight is close to your ideal weight
+                        </li>
+                        <li>
+                            You want to get away with excess fat accumulated in your tummy, thighs, eyelid, arms, etc.
+                        </li>
+                        <li>
+                            You have set realistic expectations for the surgery
+                        </li>
+                        <li>
+                            You want to opt for surgery to correct the asymmetric body features
+                        </li>
+                        <li>
+                            You want to restore your body features after an accident
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        2. What is the cost of Men’s Plastic Surgery?
+                    </p>
+                    <p>
+                        The rates start from as low as a couple of thousands for dermal fillers, acne treatment, and laser skin treatment to more than 3,00,000 INR for extensive body contouring and reshaping surgeries. Consult one of our surgeons to know the amount for the specific Men’s Plastic Surgery you wish to undergo in <?= $city ?>.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        3. What are the risks related to Men’s Plastic Surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            Allergic reaction to anesthesia
+                        </li>
+                        <li>
+                            Loose or sagging skin
+                        </li>
+                        <li>
+                            Change or decrease in the sensation in the treated area
+                        </li>
+                        <li>
+                            Intense pain after the starting few days of the surgery
+                        </li>
+                        <li>
+                            Bleeding and swelling that persists for a week
+                        </li>
+                        <li>
+                            Infection due to surgery such as bruising, redness, itching, fever, warmth, etc.
+                        </li>
+                        <li>
+                            Seroma or pooling of fluid in the body
+                        </li>
+                        <li>
+                            Hematoma or pooling of blood, which tends the skin to feel rubbery, spongy, and lumpy
+                        </li>
+                        <li>
+                            Possibility of revisional surgery
+                        </li>
+                        <li>
+                            Poor healing due to careless stitching
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        4. When can you go for Men’s Plastic Surgery?
+                    </p>
+                    <p>
+                        When you feel like enhancing your appearance, distorted due to an injury or age, opting for Men’s Plastic Surgery in <?= $city ?> would be advisable. There is no fixed age to undergo plastic surgery, as even teenagers could undergo it after the consent of their parents. Still, to be on the side, you should be at least 18 years of age.
+                    </p>
+                    <p class="cosmetic-faq-list">
+                        5. What are the things to do before Men’s Plastic Surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            Prepare yourself well for the surgery by following the pre-surgery instructions given by the surgeon
+                        </li>
+                        <li>
+                            Maintain a healthy, balanced, and nutritious diet before going for the surgery
+                        </li>
+                        <li>
+                            Drink around 6-8 glasses of water per day to hydrate and cleanse your body
+                        </li>
+                        <li>
+                            Stop smoking at least 2 weeks before the surgery
+                        </li>
+                        <li>
+                            Stop consuming alcohol at least 2 weeks prior to the procedure
+                        </li>
+                        <li>
+                            Have someone accompany you to the clinic, take you back after the surgery, and assist you in daily activities for around 1 week after the surgery
+                        </li>
+                        <li>
+                            Arrange for loose clothes to wear after the surgery for quicker healing
+                        </li>
+                        <li>
+                            Clear all the doubts regarding plastic surgery in <?= $city ?> with your surgeon
+                        </li>
+                    </ul>
+                    <p class="cosmetic-faq-list">
+                        6. What to expect on the day of Men’s Plastic Surgery?
+                    </p>
+                    <ul>
+                        <li>
+                            You should arrive at the hospital or clinic in <?= $city ?> for Men’s Plastic Surgery with a calm and composed mind
+                        </li>
+                        <li>
+                            Feel relaxed and at ease
+                        </li>
+                        <li>
+                            Discuss your reaction to anesthesia with the anesthesiologist so that he could adjust the dose accordingly
+                        </li>
+                        <li>
+                            The surgeon will use the latest and advanced equipment to create incisions in the concerned site on your body
+                        </li>
+                        <li>
+                            After making the incision and doing the surgery, the surgeon will stitch the incision with sutures
+                        </li>
+                        <li>
+                            The entire procedure may take a few hours to complete depending on the surgery you opt for
+                        </li>
+                        <li>
+                            The surgeon will provide aftercare instructions that you would need to abide strictly from prompt healing
+                        </li>
+                        <li>
+                            You can return to your work in around 2-3 weeks.
+                        </li>
+                        <li>
+                            You should have realistic expectations with the surgery so that you do not face problems with unfavourable results.
+                        </li>
+                    </ul>
                 </div>
             <?php } ?>
         </div>
