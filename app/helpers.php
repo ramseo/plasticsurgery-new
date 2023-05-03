@@ -1074,9 +1074,8 @@ if (!function_exists('date_today')) {
     function getAssignedDoctors($city)
     {
         $cityId = DB::table('cities')->select('id')->where('name', $city)->get()->first();
-        $jsonId = "$cityId->id";
-
         if ($cityId) {
+            $jsonId = "$cityId->id";
             $doctors = DB::table('users')->select('*')->whereJsonContains('city', $jsonId)->get();
             return $doctors;
         } else {
