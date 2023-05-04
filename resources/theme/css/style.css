@@ -2134,7 +2134,7 @@ footer img {
     }
 
     .container-fluid ul {
-        padding: 0;
+        padding-left: 15px;
     }
 
     .small-footer {
@@ -2152,6 +2152,26 @@ footer img {
 
     .card ul {
         margin-left: 0;
+    }
+
+    .doc-img-div,
+    .doc-star-rating,
+    .star-rating-count {
+        display: flex;
+        justify-content: center;
+        width: auto !important;
+    }
+
+    .doc-details-sec {
+        text-align: center;
+    }
+
+    .top-head-padd-null {
+        padding: 0px 15px 0px 15px !important;
+    }
+
+    .doc-star-rating ul {
+        padding: 0px;
     }
 
 }
@@ -3153,6 +3173,7 @@ img {
 .star-rating-count {
     text-align: center;
     color: #187aab;
+    width: 100px;
 }
 
 .doctor-box-shadow {
@@ -3171,4 +3192,8 @@ img {
 
 .doc-flex-cls .col-lg-4 {
     padding: 10px 10px 20px 10px;
+}
+
+.top-head-padd-null {
+    padding: 0px;
 }

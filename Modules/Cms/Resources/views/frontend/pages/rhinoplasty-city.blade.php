@@ -11,7 +11,7 @@
 
 <div class="header-space"></div>
 <div class="cit">
-    <div class="container padd-null">
+    <div class="container top-head-padd-null">
         <p>{{$$module_name_singular->name}}</p>
     </div>
 </div>
