@@ -11,7 +11,7 @@
 
 <div class="header-space"></div>
 <div class="cit">
-    <div class="container">
+    <div class="container padd-null">
         <p>{{$$module_name_singular->name}}</p>
     </div>
 </div>
@@ -24,20 +24,20 @@ if ($getAssignedDoctors->isNotEmpty()) {
     <div class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <p class="identity">
-                        top cosmetic surgeons in <?= $city ?>
-                    </p>
-                    <div class="row">
-                        <?php
-                        $getAssignedDoctors = getAssignedDoctors($city);
-                        if ($getAssignedDoctors) {
-                            foreach ($getAssignedDoctors as $item) {
-                                $reviews = getDataArray('vendor_reviews', 'user_id', $item->id);
-                                $average = averageReview($reviews);
-                        ?>
-                                <div class="col-lg-4 doc-flex-cls">
-                                    <div class="col-lg-3 padd-null">
+                <p class="identity width-100">
+                    top cosmetic surgeons in <?= $city ?>
+                </p>
+                <div class="col-lg-12 doc-flex-cls padd-null">
+                    <?php
+                    $getAssignedDoctors = getAssignedDoctors($city);
+                    if ($getAssignedDoctors) {
+                        foreach ($getAssignedDoctors as $item) {
+                            $reviews = getDataArray('vendor_reviews', 'user_id', $item->id);
+                            $average = averageReview($reviews);
+                    ?>
+                            <div class="col-lg-4">
+                                <div class="col-12 doc-flex-cls doctor-box-shadow">
+                                    <div class="col-lg-4 padd-null">
                                         <div class="doc-img-div">
                                             <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
                                                 <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
@@ -79,7 +79,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                             (<?= count($reviews) ?>)
                                         </div>
                                     </div>
-                                    <div class="col-lg-9 doc-details-sec">
+                                    <div class="col-lg-8 doc-details-sec padd-null">
                                         <div class="doc-name">
                                             <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
                                                 Dr. <?= Str::words($item->first_name . " " . $item->last_name, '2') . ", MD"  ?>
@@ -102,22 +102,22 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                         </div>
                                     </div>
                                 </div>
-                        <?php
-                            }
+                            </div>
+                    <?php
                         }
-                        ?>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p>
-                                Our Board-Certified Plastic Surgeons in <?= $city ?> hold dexterity in performing complex cosmetic surgeries with ease.
-                                Our experts have a commendable record of operating countless surgeries with success.
-                                Among their expertise, include Liposuction, Rhinoplasty, Blepharoplasty, Gynecomastia, Breast Augmentation, Tummy Tuck, and more.
-                                Our surgeons are immensely qualified and possess adept expertise in performing surgery with great precision.
-                                They make sure to give personal attention to each individual, listen carefully to the problems of the patients, and try to grasp their expectations from the surgery.
-                                This helps them appreciably in suggesting and performing the most suitable procedure in a safe and hygienic environment, well-equipped with advanced surgery tools.
-                            </p>
-                        </div>
+                    }
+                    ?>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            Our Board-Certified Plastic Surgeons in <?= $city ?> hold dexterity in performing complex cosmetic surgeries with ease.
+                            Our experts have a commendable record of operating countless surgeries with success.
+                            Among their expertise, include Liposuction, Rhinoplasty, Blepharoplasty, Gynecomastia, Breast Augmentation, Tummy Tuck, and more.
+                            Our surgeons are immensely qualified and possess adept expertise in performing surgery with great precision.
+                            They make sure to give personal attention to each individual, listen carefully to the problems of the patients, and try to grasp their expectations from the surgery.
+                            This helps them appreciably in suggesting and performing the most suitable procedure in a safe and hygienic environment, well-equipped with advanced surgery tools.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
     <div class="container">
         <div class="row">
             <?php if ($surgery_str == "rhinoplasty") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             <strong>
@@ -298,7 +298,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </ul>
                 </div>
             <?php } elseif ($surgery_str == "blepharoplasty") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             <strong>
@@ -501,7 +501,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
 
                 </div>
             <?php } elseif ($surgery_str == "facelift") {  ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             Has your face started showing wrinkles and fine lines too early? If yes,
@@ -724,7 +724,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
 
                 </div>
             <?php } elseif ($surgery_str == "brow lift") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             Your forehead and eyelids are among the first places to show the signs
@@ -966,7 +966,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
 
                 </div>
             <?php } elseif ($surgery_str == "neck lift") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             While you often give importance to your face, you forget to notice
@@ -1209,7 +1209,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
 
                 </div>
             <?php } elseif ($surgery_str == "chin surgery") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             Also called Genioplasty or Mentoplasty, Chin surgery is the process
@@ -1432,7 +1432,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
 
                 </div>
             <?php } elseif ($surgery_str == "cheek augmentation") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             <strong>
@@ -1493,7 +1493,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </p>
                 </div>
             <?php } elseif ($surgery_str == "lip augmentation") {  ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             <strong>
@@ -1723,7 +1723,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </ul>
                 </div>
             <?php } elseif ($surgery_str == "buccal fat removal") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             If you want to change the appearance of your chubby cheeks, Buccal Fat Removal
@@ -1944,7 +1944,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
 
                 </div>
             <?php } elseif ($surgery_str == "ear surgery") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             Ear surgery or Otoplasty is a cosmetic procedure to reshape the ear.
@@ -2162,7 +2162,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </ul>
                 </div>
             <?php } elseif ($surgery_str == "breast augmentation") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             Do you feel your breasts are smaller than usual? If yes, you can go for
@@ -2379,7 +2379,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </ul>
                 </div>
             <?php } elseif ($surgery_str == "breast lift") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             If you are feeling insecure about your continuously sagging breasts,
@@ -2593,7 +2593,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </ul>
                 </div>
             <?php } elseif ($surgery_str == "breast reduction") {  ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             Having large breasts can be a disadvantage not just to your appearance but also to
@@ -2796,7 +2796,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
 
                 </div>
             <?php } elseif ($surgery_str == "breast implant removal") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             Surgeries for Breast implant removal in <?= $city ?> are suitable for patients who want to
@@ -2857,7 +2857,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </p>
                 </div>
             <?php } elseif ($surgery_str == "breast implant revision") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             Breast implants enhance the appearance and size of the breasts and complement
@@ -2916,7 +2916,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </p>
                 </div>
             <?php } elseif ($surgery_str == "gynecomastia") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             Due to the changes in hormonal secretion in males, the breasts of males may
@@ -3118,7 +3118,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
 
                 </div>
             <?php } elseif ($surgery_str == "liposuction") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             <strong>
@@ -3305,7 +3305,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </ul>
                 </div>
             <?php } elseif ($surgery_str == "tummy tuck") {  ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             A Tummy tuck or Abdominoplasty is the best solution to get rid of the extra flab that messes up your appearance. Even when diets fail, do not lose heart.
@@ -3478,7 +3478,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
 
                 </div>
             <?php } elseif ($surgery_str == "buttock enhancement") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             <strong>
@@ -3665,7 +3665,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
 
                 </div>
             <?php } elseif ($surgery_str == "body lift") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             <strong>
@@ -3845,7 +3845,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </ul>
                 </div>
             <?php } elseif ($surgery_str == "arm lift") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             <strong>
@@ -4014,7 +4014,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
 
                 </div>
             <?php } elseif ($surgery_str == "thigh lift") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             If dieting and exercising are not helping anymore in reducing your thigh size, a Thigh Lift can be a suitable alternative. The surgery reshapes the thigh by removing the extra tissues that would otherwise make you look flabby. It will also contour your body in proportion to the rest of your body figure.
@@ -4195,7 +4195,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </ul>
                 </div>
             <?php } elseif ($surgery_str == "body contouring") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             Sometimes, you may still have excess skin after extensive weight loss. This happens when your skin loses its elasticity. Body contouring procedure helps to remove these excess skin and fat. You will have a well-toned and lean looking figure after undergoing the whole body contouring surgery.
@@ -4236,7 +4236,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </p>
                 </div>
             <?php } elseif ($surgery_str == "mommy makeover") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             Mommy makeover surgery aims specifically at helping women get back their slim body after childbirth. A woman’s body goes through significant changes during and after pregnancy. For many, it can be difficult and almost impossible to get back to the previous shape they were in. This is where mommy makeover surgery is beneficial. Our cosmetic surgeon from <?= $city ?> will inspect the entire body and make changes to breasts, buttocks, thighs, tummy and other locations where the size has increased.
@@ -4274,7 +4274,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </p>
                 </div>
             <?php } elseif ($surgery_str == "hair transplant") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             <strong>
@@ -4439,7 +4439,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </ul>
                 </div>
             <?php } elseif ($surgery_str == "men and plastic surgery") { ?>
-                <div class="col">
+                <div class="col padd-null">
                     <div class="top-content">
                         <p>
                             Women are not the only ones who wish to look their best. Nowadays, men too want to beautify themselves, look slim, have flawless skin, and there is nothing wrong with that! Several cosmetic surgeries for men exist to treat different concerns like flabby stomach, sagging or blemished skin, facial wrinkles, or any other issues. Our cosmetic surgeons from <?= $city ?> are one of the best to perform men’s cosmetic surgeries.

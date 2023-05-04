@@ -11,7 +11,7 @@
 
 <div class="header-space"></div>
 <div class="cit">
-    <div class="container">
+    <div class="container padd-null">
         <p>{{$$module_name_singular->name}}</p>
     </div>
 </div>
@@ -19,20 +19,20 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <p class="identity">
-                    top cosmetic surgeons in <?= $city ?>
-                </p>
-                <div class="row">
-                    <?php
-                    $getAssignedDoctors = getAssignedDoctors($city);
-                    if ($getAssignedDoctors) {
-                        foreach ($getAssignedDoctors as $item) {
-                            $reviews = getDataArray('vendor_reviews', 'user_id', $item->id);
-                            $average = averageReview($reviews);
-                    ?>
-                            <div class="col-lg-4 doc-flex-cls">
-                                <div class="col-lg-3 padd-null">
+            <p class="identity width-100">
+                top cosmetic surgeons in <?= $city ?>
+            </p>
+            <div class="col-lg-12 doc-flex-cls padd-null">
+                <?php
+                $getAssignedDoctors = getAssignedDoctors($city);
+                if ($getAssignedDoctors) {
+                    foreach ($getAssignedDoctors as $item) {
+                        $reviews = getDataArray('vendor_reviews', 'user_id', $item->id);
+                        $average = averageReview($reviews);
+                ?>
+                        <div class="col-lg-4">
+                            <div class="col-12 doc-flex-cls doctor-box-shadow">
+                                <div class="col-lg-4 padd-null">
                                     <div class="doc-img-div">
                                         <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
                                             <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
@@ -74,7 +74,7 @@
                                         (<?= count($reviews) ?>)
                                     </div>
                                 </div>
-                                <div class="col-lg-9 doc-details-sec">
+                                <div class="col-lg-8 doc-details-sec padd-null">
                                     <div class="doc-name">
                                         <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
                                             Dr. <?= Str::words($item->first_name . " " . $item->last_name, '2') . ", MD"  ?>
@@ -97,22 +97,22 @@
                                     </div>
                                 </div>
                             </div>
-                    <?php
-                        }
+                        </div>
+                <?php
                     }
-                    ?>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <p>
-                            Our Board-Certified Plastic Surgeons in <?= $city ?> hold dexterity in performing complex cosmetic surgeries with ease.
-                            Our experts have a commendable record of operating countless surgeries with success.
-                            Among their expertise, include Liposuction, Rhinoplasty, Blepharoplasty, Gynecomastia, Breast Augmentation, Tummy Tuck, and more.
-                            Our surgeons are immensely qualified and possess adept expertise in performing surgery with great precision.
-                            They make sure to give personal attention to each individual, listen carefully to the problems of the patients, and try to grasp their expectations from the surgery.
-                            This helps them appreciably in suggesting and performing the most suitable procedure in a safe and hygienic environment, well-equipped with advanced surgery tools.
-                        </p>
-                    </div>
+                }
+                ?>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p>
+                        Our Board-Certified Plastic Surgeons in <?= $city ?> hold dexterity in performing complex cosmetic surgeries with ease.
+                        Our experts have a commendable record of operating countless surgeries with success.
+                        Among their expertise, include Liposuction, Rhinoplasty, Blepharoplasty, Gynecomastia, Breast Augmentation, Tummy Tuck, and more.
+                        Our surgeons are immensely qualified and possess adept expertise in performing surgery with great precision.
+                        They make sure to give personal attention to each individual, listen carefully to the problems of the patients, and try to grasp their expectations from the surgery.
+                        This helps them appreciably in suggesting and performing the most suitable procedure in a safe and hygienic environment, well-equipped with advanced surgery tools.
+                    </p>
                 </div>
             </div>
         </div>
@@ -122,7 +122,7 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col padd-null">
                 <p class="identity">COSMETIC SURGERY COST IN <?= $city ?></p>
                 <p>
                     The cost for Cosmetic Surgery treatments in <?= $city ?> varies appreciably depending on the clinic
