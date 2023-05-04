@@ -32,6 +32,9 @@ function getDataArray($table, $column = null, $value = null)
             $data->where(array($column => $value));
         endif;
     }
+    if ($table == "vendor_reviews") {
+        $data->where(array('is_active' => 1));
+    }
     return $data->get();
 }
 

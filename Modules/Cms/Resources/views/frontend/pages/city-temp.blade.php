@@ -31,14 +31,14 @@
                             $reviews = getDataArray('vendor_reviews', 'user_id', $item->id);
                             $average = averageReview($reviews);
                     ?>
-                            <div class="col-lg-3 doc-flex-cls">
-                                <div class="col-lg-5 padd-null">
+                            <div class="col-lg-4 doc-flex-cls">
+                                <div class="col-lg-3 padd-null">
                                     <div class="doc-img-div">
                                         <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
                                             <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
-                                                <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" style="width:100%" />
+                                                <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" alt="doctor img" />
                                             <?php } else { ?>
-                                                <img src="<?= asset("img/default-avatar.jpg") ?>" alt="doctor img" style="width:100%" />
+                                                <img src="<?= asset("img/default-avatar.jpg") ?>" alt="doctor img" />
                                             <?php } ?>
                                         </a>
                                     </div>
@@ -70,24 +70,29 @@
                                             </li>
                                         </ul>
                                     </div>
+                                    <div class="star-rating-count">
+                                        (<?= count($reviews) ?>)
+                                    </div>
                                 </div>
-                                <div class="col-lg-7 doc-details-sec">
+                                <div class="col-lg-9 doc-details-sec">
                                     <div class="doc-name">
                                         <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
-                                            Dr. <?= Str::words($item->first_name . " " . $item->last_name, '2')  ?>
+                                            Dr. <?= Str::words($item->first_name . " " . $item->last_name, '2') . ", MD"  ?>
                                         </a>
                                     </div>
                                     <div class="doc-tagline">
                                         Plastic/Cosmetic
+                                    </div>
+                                    <div class="doc-tagline">
                                         Surgeon
                                     </div>
                                     <div class="doc-city">
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <?= $city ?>
+                                        <?= getCitiesById($item->city, 'html') ?>
                                     </div>
-                                    <div class="btn btn-default doc-view-btn">
+                                    <div class="doc-view-btn">
                                         <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
-                                            view more
+                                            view full profile
                                         </a>
                                     </div>
                                 </div>

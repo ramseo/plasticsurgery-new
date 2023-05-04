@@ -30,72 +30,82 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </p>
                     <div class="row">
                         <?php
-                        foreach ($getAssignedDoctors as $item) {
-                            $reviews = getDataArray('vendor_reviews', 'user_id', $item->id);
-                            $average = averageReview($reviews);
+                        $getAssignedDoctors = getAssignedDoctors($city);
+                        if ($getAssignedDoctors) {
+                            foreach ($getAssignedDoctors as $item) {
+                                $reviews = getDataArray('vendor_reviews', 'user_id', $item->id);
+                                $average = averageReview($reviews);
                         ?>
-                            <div class="col-lg-3 doc-flex-cls">
-                                <div class="col-lg-5 padd-null">
-                                    <div class="doc-img-div">
-                                        <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
-                                            <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
-                                                <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" style="width:100%" />
-                                            <?php } else { ?>
-                                                <img src="<?= asset("img/default-avatar.jpg") ?>" alt="doctor img" style="width:100%" />
-                                            <?php } ?>
-                                        </a>
-                                    </div>
-                                    <div class="doc-star-rating">
-                                        <ul class="list-inline space-list">
-                                            <li class="list-inline-item">
-                                                <ul class="list-inline">
-                                                    <?php
-                                                    $totalRating = 5;
-                                                    $starRating = $average;
+                                <div class="col-lg-4 doc-flex-cls">
+                                    <div class="col-lg-3 padd-null">
+                                        <div class="doc-img-div">
+                                            <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
+                                                <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
+                                                    <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" alt="doctor img" />
+                                                <?php } else { ?>
+                                                    <img src="<?= asset("img/default-avatar.jpg") ?>" alt="doctor img" />
+                                                <?php } ?>
+                                            </a>
+                                        </div>
+                                        <div class="doc-star-rating">
+                                            <ul class="list-inline space-list">
+                                                <li class="list-inline-item">
+                                                    <ul class="list-inline">
+                                                        <?php
+                                                        $totalRating = 5;
+                                                        $starRating = $average;
 
-                                                    for ($i = 1; $i <= $totalRating; $i++) {
-                                                        if ($starRating < $i) {
-                                                            if (is_float($starRating) && (round($starRating) == $i)) {
-                                                                echo "";
-                                                            } else {
-                                                                echo "<li class='list-inline-item yellow-star'>
+                                                        for ($i = 1; $i <= $totalRating; $i++) {
+                                                            if ($starRating < $i) {
+                                                                if (is_float($starRating) && (round($starRating) == $i)) {
+                                                                    echo "";
+                                                                } else {
+                                                                    echo "<li class='list-inline-item yellow-star'>
                                                                        <i class='fa fa-star-o' aria-hidden='true'></i>
                                                                      </li>";
-                                                            }
-                                                        } else {
-                                                            echo "<li class='list-inline-item yellow-star'>
+                                                                }
+                                                            } else {
+                                                                echo "<li class='list-inline-item yellow-star'>
                                                                    <i class='fa fa-star'></i>
                                                                  </li>";
+                                                            }
                                                         }
-                                                    }
-                                                    ?>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                                        ?>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="star-rating-count">
+                                            (<?= count($reviews) ?>)
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9 doc-details-sec">
+                                        <div class="doc-name">
+                                            <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
+                                                Dr. <?= Str::words($item->first_name . " " . $item->last_name, '2') . ", MD"  ?>
+                                            </a>
+                                        </div>
+                                        <div class="doc-tagline">
+                                            Plastic/Cosmetic
+                                        </div>
+                                        <div class="doc-tagline">
+                                            Surgeon
+                                        </div>
+                                        <div class="doc-city">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <?= getCitiesById($item->city, 'html') ?>
+                                        </div>
+                                        <div class="doc-view-btn">
+                                            <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
+                                                view full profile
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-7 doc-details-sec">
-                                    <div class="doc-name">
-                                        <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
-                                            Dr. <?= Str::words($item->first_name . " " . $item->last_name, '2')  ?>
-                                        </a>
-                                    </div>
-                                    <div class="doc-tagline">
-                                        Plastic/Cosmetic
-                                        Surgeon
-                                    </div>
-                                    <div class="doc-city">
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <?= $city ?>
-                                    </div>
-                                    <div class="btn btn-default doc-view-btn">
-                                        <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
-                                            view more
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } ?>
+                        <?php
+                            }
+                        }
+                        ?>
                     </div>
                     <div class="row">
                         <div class="col">
