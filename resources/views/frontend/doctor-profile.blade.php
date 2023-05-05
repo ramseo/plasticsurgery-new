@@ -21,24 +21,18 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 mob-padd-null">
                 <p class="identity">
                     <span>
                         DR. <?= $doctor_details->first_name . " " . $doctor_details->last_name ?>
-                    </span>
-                    <span class="pull-right profile-write-review">
-                        <a href="#" data-toggle="modal" data-target="#reviewModal">
-                            Write a Review
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                        </a>
                     </span>
                 </p>
                 <div class="row">
                     <div class="col-lg-2">
                         <?php if (file_exists(public_path() . '/storage/user/profile/' . $doctor_details->avatar)) { ?>
-                            <img src="<?= asset('/storage/user/profile/' . $doctor_details->avatar) ?>" style="width:100%">
+                            <img src="<?= asset('/storage/user/profile/' . $doctor_details->avatar) ?>" alt="doctor img" class="doc-img-cls">
                         <?php } else { ?>
-                            <img src="<?= asset("img/default-avatar.jpg") ?>" alt="doctor img" style="width:100%">
+                            <img src="<?= asset("img/default-avatar.jpg") ?>" alt="doctor img" class="doc-img-cls">
                         <?php } ?>
 
                         <?php
@@ -46,7 +40,7 @@
                         $average = averageReview($reviews);
                         ?>
 
-                        <div class="doc-star-rating-profile">
+                        <div class="doc-star-rating-profile doc-img-cls">
                             <ul class="list-inline space-list">
                                 <li class="list-inline-item">
                                     <ul class="list-inline">
@@ -75,7 +69,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-10">
+                    <div class="col-lg-10 mob-text-center-cls">
                         <p>
                             <strong>
                                 <i>Plastic Surgeon, M.S., M.Ch.</i>
@@ -121,7 +115,7 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col mob-padd-null">
                 <p class="identity">
                     ABOUT DR. <?= $doctor_details->first_name . " " . $doctor_details->last_name ?>
                 </p>
@@ -155,10 +149,19 @@
     <div class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col mob-padd-null">
                     <p class="identity">
                         Latest Reviews (<?= count($reviews) ?>)
                     </p>
+
+                    <div class="pull-right profile-write-review">
+                        <a href="#" data-toggle="modal" data-target="#reviewModal">
+                            Write a Review
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+
                     <div class="detail-review-body">
                         <?php
                         foreach ($reviews as $rev) {
