@@ -2227,6 +2227,10 @@ footer img {
         padding: 0;
     }
 
+    .admin-reply .reply-review-cls ul {
+        padding-left: 0;
+    }
+
 }
 
 
