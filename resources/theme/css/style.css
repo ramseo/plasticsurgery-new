@@ -2239,6 +2239,11 @@ footer img {
         padding: 12px;
     }
 
+    .cities h3 {
+        height: auto;
+        padding: 12px 26px;
+    }
+
 }
 
 
