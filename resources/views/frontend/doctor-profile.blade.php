@@ -298,77 +298,79 @@
 
 <?php if ($all_result_category->isNotEmpty()) { ?>
     <!-- before after results -->
-    <div class="container-fluid mtab pt-4 pb-4" style="background-color:#f8f8f8">
-        <div class="container">
-            <p class="identity text-center">
-                Dr. <?= $doctor_details->first_name . " " . $doctor_details->last_name . " " . ":" . " " . "before and after results" ?>
-            </p>
-            <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item active">
-                    <a id="all_tab" class="nav-link active ancr" data-toggle="tab" href="#all" aria-expanded="true">
-                        All
-                    </a>
-                </li>
-                <?php
-                foreach ($all_result_category as $cat_tab) {
-                    $explode = explode(" ", $cat_tab->name);
-                    $href = strtolower(implode('-', $explode));
-                    $get_tab_images = get_tab_images($cat_tab);
+    <section class="before-after-cls" >
+        <div class="container-fluid mtab pt-4 pb-4" style="background-color:#f8f8f8">
+            <div class="container">
+                <p class="identity text-center">
+                    Dr. <?= $doctor_details->first_name . " " . $doctor_details->last_name . " " . ":" . " " . "before and after results" ?>
+                </p>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item active">
+                        <a id="all_tab" class="nav-link active ancr" data-toggle="tab" href="#all" aria-expanded="true">
+                            All
+                        </a>
+                    </li>
+                    <?php
+                    foreach ($all_result_category as $cat_tab) {
+                        $explode = explode(" ", $cat_tab->name);
+                        $href = strtolower(implode('-', $explode));
+                        $get_tab_images = get_tab_images($cat_tab);
 
-                    if ($get_tab_images->isNotEmpty()) {
-                ?>
-                        <li class="nav-item">
-                            <a onclick="eliminate_active_cls('#all_tab')" class="nav-link ancr" data-toggle="tab" href="<?= "#" . $href ?>" aria-expanded="false">
-                                <?= $cat_tab->name ?>
-                            </a>
-                        </li>
-                <?php
-                    }
-                }
-                ?>
-            </ul>
-
-            <div class="tab-content">
-                <div id="all" class="all_content container tab-pane active in">
-                    <div class="row">
-                        <?php
-                        if ($all_result_category_imgs) {
-                            foreach ($all_result_category_imgs as $img) {
-                        ?>
-                                <div class="col-lg-4 col-md-4 col-sm-4">
-                                    <img src="<?= asset('storage/album') . '/' . $img->album_id . '/' . $img->name ?>" style="width:100%" alt="result image">
-                                </div>
-                        <?php
-                            }
+                        if ($get_tab_images->isNotEmpty()) {
+                    ?>
+                            <li class="nav-item">
+                                <a onclick="eliminate_active_cls('#all_tab')" class="nav-link ancr" data-toggle="tab" href="<?= "#" . $href ?>" aria-expanded="false">
+                                    <?= $cat_tab->name ?>
+                                </a>
+                            </li>
+                    <?php
                         }
-                        ?>
-                    </div>
-                </div>
-
-                <?php
-                foreach ($all_result_category as $cat) {
-                    $explode = explode(" ", $cat->name);
-                    $target_id = strtolower(implode('-', $explode));
-                    $get_tab_images = get_tab_images($cat);
-                    if ($get_tab_images) {
-                ?>
-                        <div id="<?= $target_id ?>" class="container tab-pane fade">
-                            <div class="row">
-                                <?php foreach ($get_tab_images as $tab_img) { ?>
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <img src="<?= asset('storage/album') . '/' . $tab_img->album_id . '/' . $tab_img->name ?>" style="width:100%">
-                                    </div>
-                                <?php } ?>
-                            </div>
-                        </div>
-                <?php
                     }
-                }
-                ?>
+                    ?>
+                </ul>
 
+                <div class="tab-content">
+                    <div id="all" class="all_content container tab-pane active in">
+                        <div class="row">
+                            <?php
+                            if ($all_result_category_imgs) {
+                                foreach ($all_result_category_imgs as $img) {
+                            ?>
+                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                        <img src="<?= asset('storage/album') . '/' . $img->album_id . '/' . $img->name ?>" style="width:100%" alt="result image">
+                                    </div>
+                            <?php
+                                }
+                            }
+                            ?>
+                        </div>
+                    </div>
+
+                    <?php
+                    foreach ($all_result_category as $cat) {
+                        $explode = explode(" ", $cat->name);
+                        $target_id = strtolower(implode('-', $explode));
+                        $get_tab_images = get_tab_images($cat);
+                        if ($get_tab_images) {
+                    ?>
+                            <div id="<?= $target_id ?>" class="container tab-pane fade">
+                                <div class="row">
+                                    <?php foreach ($get_tab_images as $tab_img) { ?>
+                                        <div class="col-lg-4 col-md-4 col-sm-4">
+                                            <img src="<?= asset('storage/album') . '/' . $tab_img->album_id . '/' . $tab_img->name ?>" style="width:100%">
+                                        </div>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                    <?php
+                        }
+                    }
+                    ?>
+
+                </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- before after results -->
 <?php } ?>
 
