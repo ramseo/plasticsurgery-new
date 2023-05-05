@@ -2235,6 +2235,10 @@ footer img {
         display: block;
     }
 
+    .before h4 {
+        padding: 12px;
+    }
+
 }
 
 
