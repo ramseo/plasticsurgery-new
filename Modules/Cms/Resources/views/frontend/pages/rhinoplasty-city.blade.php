@@ -5180,7 +5180,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </div>
                     </div>
                     <!-- ACCODION -->
-                    <p class="cosmetic-faq-list">
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Breast Reduction?
                     </p>
                     <p>
@@ -5322,7 +5322,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <li>
                             You will find a new you after the surgery in <?= $city ?>
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div>
             <?php } elseif ($surgery_str == "breast implant removal") { ?>
