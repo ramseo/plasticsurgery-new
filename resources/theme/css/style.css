@@ -3235,11 +3235,6 @@ img {
     max-width: 350px;
 }
 
-.cosmetic-faq-list {
-    font-weight: 600;
-    font-size: 18px;
-}
-
 .star-rating-count {
     text-align: center;
     color: #187aab;
@@ -3271,3 +3266,45 @@ img {
 .doc-img-cls {
     width: 100%;
 }
+
+
+/* accodian css */
+.accordion-container {
+    margin: 0 0 10px;
+}
+
+.accordion-toggle {
+    position: relative;
+    display: block;
+    padding: 5px 10px 5px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #999;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion-toggle.open,
+.accordion-toggle:hover {
+    background: #999;
+    color: #fff;
+    text-decoration: none;
+}
+
+.accordion-toggle span.toggle-icon {
+    position: absolute;
+    top: 9px;
+    right: 20px;
+    font-size: 1.5em;
+}
+
+.accordion-content {
+    display: none;
+    padding: 20px 0px 20px 0px;
+    overflow: auto;
+}
+
+/* accodian css */

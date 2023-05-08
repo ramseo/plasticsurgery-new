@@ -174,3 +174,30 @@ function eliminate_active_cls(id) {
     $($(id).parent()).removeClass("active");
     $('.all_content').removeClass("active in");
 }
+
+
+$('.accordion-toggle').on('click', function (event) {
+    event.preventDefault();
+    // create accordion variables
+    var accordion = $(this);
+    var accordionContent = accordion.next('.accordion-content');
+
+    // toggle accordion link open class
+    accordion.toggleClass("open");
+    // toggle accordion content
+    accordionContent.slideToggle(250);
+});
+
+
+function accordion_elm(elm) {
+    var cls = $(elm).attr("class");
+    var icon = $(elm).children().children();
+
+    if (cls == "accordion-toggle") {
+        $(icon).removeClass("fa fa-chevron-down");
+        $(icon).addClass("fa fa-chevron-up");
+    } else {
+        $(icon).removeClass("fa fa-chevron-up");
+        $(icon).addClass("fa fa-chevron-down");
+    }
+}
