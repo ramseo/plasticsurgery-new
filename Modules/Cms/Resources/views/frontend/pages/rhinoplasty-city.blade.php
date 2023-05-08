@@ -188,7 +188,167 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on <?= $surgery_str ?> Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for <?= $surgery_str ?>?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                If you satisfy below points, you are a good candidate for <?= $surgery_str ?>
+                                surgery in <?= $city ?>
+                            </p>
+                            <ul>
+                                <li>Your facial growth has attained its completion</li>
+                                <li>You are a healthy person</li>
+                                <li>
+                                    You have informed your surgeon about the allergies and medical conditions
+                                    that you are undergoing
+                                </li>
+                                <li>You are not allergic to anesthesia or other medicines related to nose surgery</li>
+                                <li>
+                                    You are a non-smoker and a non-alcoholic (If not, be the one at least
+                                    for the duration recommended by your surgeon)
+                                </li>
+                                <li>You have realistic goals with respect to the nose surgery</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of <?= $surgery_str ?>?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                On average, the cost of <?= $surgery_str ?> in <?= $city ?> may vary between
+                                50,000 INR to 2,50,000 depending on various factors.
+                                The cost may fluctuate further subject to the treatment necessities.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to <?= $surgery_str ?>?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Whether you opt for <?= $surgery_str ?> in <?= $city ?> or elsewhere,
+                                there may arise certain risks after the surgery, such as:
+                            </p>
+                            <ul>
+                                <li>Bleeding, infection, adverse reaction to anesthesia</li>
+                                <li>Visible scars</li>
+                                <li>The chance of an un-even nose appearance as the outcome</li>
+                                <li>Problem with breathing through the nose</li>
+                                <li>Persistent swelling, skin discoloration, or pain</li>
+                                <li>Urgent need for a revision nose surgery</li>
+                                <li>Possibility of a hole in the septum</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for <?= $surgery_str ?>?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The best to go for <?= $surgery_str ?> in <?= $city ?> is when your facial structure
+                                is fully developed. Hence, the surgery is not advisable for children,
+                                as they are still in their growing phase. Usually,
+                                females between the age of 15-16 and beyond can go for <?= $surgery_str ?>, Likewise,
+                                males of 17-18 years of age and beyond can opt for it.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before <?= $surgery_str ?> surgery
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>Give your body complete rest to enable prompt healing after the surgery</li>
+                                <li>Clean your face at least twice a day to get rid of dead skin</li>
+                                <li>Keep yourself hydrated</li>
+                                <li>Have some to take you back home after the surgery</li>
+                                <li>
+                                    Prepare your things in advance so that you don’t face
+                                    hassles after returning from the surgery
+                                </li>
+                                <li>Avoid drinking and smoking</li>
+                                <li>
+                                    Avoid using over-the-counter medicated creams that include salicylic acid, Retin-A,
+                                    benzoyl peroxide, etc.
+                                </li>
+                                <li>Minimize exposure to the sun</li>
+                                <li>
+                                    Consult your surgeon to know about the medications to avoid and abide by all
+                                    the instructions
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of <?= $surgery_str ?> surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    If you are opting for nose surgery, it clearly indicates your uneasiness with your
+                                    existing nose shape. Hence, you would expect to have a better
+                                    appearance of your nose with the <?= $surgery_str ?> surgery.
+                                </li>
+                                <li>
+                                    However, make sure that you have realistic expectations with the surgery, and be prepared
+                                    to face the outcome. Anticipating miracles would only hurt your sentiments.
+                                </li>
+                                <li>
+                                    On the day of the surgery, you could expect the surgeon to take around 2-3 hours
+                                    to complete the procedure.
+                                </li>
+                                <li>
+                                    After the surgery, you may expect mild discomfort, which will vanish with time.
+                                </li>
+                                <li>
+                                    The surgeon would recommend you several post-operation instructions and medication
+                                    for quick healing. So, make sure to follow them strictly.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for <?= $surgery_str ?>?
                     </p>
                     <p>
@@ -295,7 +455,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             The surgeon would recommend you several post-operation instructions and medication
                             for quick healing. So, make sure to follow them strictly.
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             <?php } elseif ($surgery_str == "blepharoplasty") { ?>
                 <div class="col padd-null">
@@ -359,7 +519,200 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         FAQs on Blepharoplasty Surgery in <?= $city ?>
                     </p>
 
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Blepharoplasty?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                An ideal candidate for eyelid surgery in <?= $city ?> should adhere
+                                to several essential criteria, as mentioned here:
+                            </p>
+                            <ul>
+                                <li>
+                                    Suffering from droopy eyelids, exposing an increased portion of eye white
+                                </li>
+                                <li>
+                                    Sagging upper eyelids resulting due to fatty tissue building up beneath
+                                    the skin
+                                </li>
+                                <li>
+                                    Suffering from peripheral vision problems that need immediate intervention
+                                </li>
+                                <li>
+                                    Want to get rid of dark circles and under-eye bags
+                                </li>
+                                <li>
+                                    Have a good physical health
+                                </li>
+                                <li>
+                                    Does not have any pre-existing medical condition
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Blepharoplasty?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                On average, the cost of Eyelid Surgery or Blepharoplasty in <?= $city ?> varies
+                                between 80,000 INR and 2,00,000 INR. The cost may fluctuate both ways depending
+                                on the doctor your approach, the clinic you choose for the surgery,
+                                and several other factors.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Blepharoplasty?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Allergic reaction to anesthesia
+                                </li>
+                                <li>
+                                    Surgical risks, which may include bleeding and infection
+                                </li>
+                                <li>
+                                    Numbness in the treated area
+                                </li>
+                                <li>
+                                    Blurred or impaired sight temporarily
+                                </li>
+                                <li>
+                                    Possibility of ectropion, which refers to slack and outward-rolling of the lower eyelid
+                                </li>
+                                <li>
+                                    Watery eyes or dry eyes
+                                </li>
+                                <li>
+                                    Lump in the lower eyelid, which could irritate the surface of the eye
+                                </li>
+                                <li>
+                                    Loss of vision in rare cases
+                                </li>
+                                <li>
+                                    Revision surgery due to faulty surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Blepharoplasty?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                When you start noticing droopy or baggy upper eyelids, Blepharoplasty surgery in <?= $city ?>
+                                could help to remedy the situation. In addition, when you observe problems in peripheral
+                                vision due to the generation of excess skin in the upper eyelids or lower eyelids,
+                                you can always opt for Blepharoplasty. The ideal age to get eyelid surgery is 30 plus,
+                                as most people get droopy eyelids in their 30s itself.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before the Blepharoplasty Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    It is good to visit a lab to test and find the existing medical condition
+                                    of your eyes.
+                                </li>
+                                <li>
+                                    Consult with your surgeon about your ongoing medications, so that the expert could suggest necessary adjustments
+                                </li>
+                                <li>
+                                    Stop drinking and smoking at least 4-6 months before the surgery
+                                </li>
+                                <li>
+                                    Avoid the consumption of anti-inflammatory drugs or herbal supplements as it could lead to bruising or bleeding
+                                </li>
+                                <li>
+                                    Make sure you are aware of all the risks and side effects of the surgery
+                                </li>
+                                <li>
+                                    Be prepared for the surgery so that you could go under the knife with a calm
+                                    mind
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Blepharoplasty surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    On the day of Blepharoplasty surgery, arrive at the clinic with a positive
+                                    frame of mind
+                                </li>
+                                <li>
+                                    One of the staff members will administer anesthesia to help you ensure a
+                                    painless surgery
+                                </li>
+                                <li>
+                                    You could expect the staff to take several tests before the surgery to check your
+                                    current health, such as your sugar level, oxygen level, BP, and more
+                                </li>
+                                <li>
+                                    You could expect the surgery to continue for 1-2 hours.
+                                    Much will depend if the surgeon is repositioning the fat on the upper eyelids,
+                                    lower eyelids, or both. It may take additional time for a cheek lift.
+                                </li>
+                                <li>
+                                    After the surgery, the doctor will stitch the treated area, which will remain
+                                    for around a week.
+                                </li>
+                                <li>
+                                    For upper eyelid surgery, the expected recovery time is 7-10 days. Likewise,
+                                    for lower eyelid surgery, it may take 10-14 days for complete recovery.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Blepharoplasty?
                     </p>
                     <p>
@@ -497,7 +850,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             For upper eyelid surgery, the expected recovery time is 7-10 days. Likewise,
                             for lower eyelid surgery, it may take 10-14 days for complete recovery.
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div>
             <?php } elseif ($surgery_str == "facelift") {  ?>
@@ -557,7 +910,225 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Facelift Surgery Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Facelift Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Satisfying the below-mentioned conditions will make
+                                    you a suitable candidate for Facelift Surgery.
+                                </li>
+                                <li>
+                                    You should have a good overall skin condition with sufficient
+                                    elasticity and flexibility with the ability to bounce
+                                    back on pinching
+                                </li>
+                                <li>
+                                    Your lifestyle does not include smoking or extreme exposure to the sun
+                                </li>
+                                <li>
+                                    Your face has a strong underlying bone structure
+                                </li>
+                                <li>
+                                    You have a clear understanding of the healing process
+                                </li>
+                                <li>
+                                    You have fair expectations with the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Facelift Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Approaching a certified and experienced cosmetic surgeon in <?= $city ?>
+                                can cost you anywhere around 1,00,000 INR – 2,00,000 INR for
+                                facelift surgery.
+                                You can also choose to customize your surgery by including Chin Surgery,
+                                Lip Augmentation, etc. at additional costs.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Facelift Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Facelift surgery can lead to several complications
+                            </p>
+                            <ul>
+                                <li>
+                                    Hematoma, the collection of blood under the skin can happen within
+                                    24 hours of the surgery, thus leading to pressure and swelling
+                                </li>
+                                <li>
+                                    Permanent Facelift scars that can be hidden by hairline or natural
+                                    contours of ear and face
+                                </li>
+                                <li>
+                                    Possibility of infection
+                                </li>
+                                <li>
+                                    Damaged blood vessels resulting in bleeding
+                                </li>
+                                <li>
+                                    Slow healing of wounds
+                                </li>
+                                <li>
+                                    Injury to nerves in rare instances, leading to uneven facial
+                                    expression or appearance
+                                </li>
+                                <li>
+                                    Hampered blood supply to blood tissues,
+                                    resulting in hair and skin loss
+                                </li>
+                                <li>
+                                    Weight changes may change the condition of the skin and face
+                                </li>
+                                <li>
+                                    Possibility of revision surgeries in case the procedure did not go well
+                                    in rare instances
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Facelift Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                People mostly opt for Facelifts to improve their facial structure that has been
+                                worn out with age. Hence, individuals from 40 to 60 years
+                                of age are more likely to undergo this surgery in <?= $city ?>
+                                to get rid of fine lines, wrinkles, deep lines,
+                                and sagging skin in the face and neck area.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before the Facelift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Get medical evaluation and tests from a lab in <?= $city ?> to make
+                                    sure that your body is fit enough to undergo the surgery
+                                </li>
+                                <li>
+                                    Have the required budget to pay for the treatment
+                                </li>
+                                <li>
+                                    Inform your surgeon about your existing medications for proper adjustments
+                                    to ensure a safe facelift procedure
+                                </li>
+                                <li>
+                                    Stop smoking as the contained nicotine can restrict blood flow,
+                                    thus causing complications during the surgery and even later on
+                                </li>
+                                <li>
+                                    Start drinking plenty of water many days before the surgery,
+                                    as it will facilitate quick recovery
+                                </li>
+                                <li>
+                                    Be prepared with loose clothes or those with buttons, zip, etc.
+                                    to avoid taking off and wearing your shirts
+                                    repeatedly over your head
+                                </li>
+                                <li>
+                                    You will need someone to drive you home, take care of yourself
+                                    and do the cleaning after the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Facelift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    On the day of the surgery in <?= $city ?>, you should be at the clinic
+                                    with a positive attitude
+                                </li>
+                                <li>
+                                    Your surgeon will clear all your apprehensions and doubts
+                                    if you have any, in a candid interaction
+                                </li>
+                                <li>
+                                    In the surgery room, the anesthesia expert will inquire if you have
+                                    allergic behavior to anesthesia and will
+                                    adjust the dose accordingly.
+                                </li>
+                                <li>
+                                    Usually, a facelift surgery in <?= $city ?> might take around 3-6 hours
+                                    depending on the severity of your case. However,
+                                    opting for additional cosmetic procedures will
+                                    take more time.
+                                </li>
+                                <li>
+                                    During the surgery, you could expect the surgeon to do skin elevation
+                                    followed by tightening of muscles and tissues of the face
+                                    with the help of advanced tools and techniques.
+                                </li>
+                                <li>
+                                    You should have realistic expectations with the surgery so that the results
+                                    could not leave you upset.
+                                </li>
+                                <li>
+                                    After the surgery, you may feel pain in the treated areas, which will subside
+                                    in a day or two
+                                </li>
+                                <li>
+                                    You may also experience bruising and swelling on the face,
+                                    which will vanish in 1-2 weeks
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Facelift Surgery?
                     </p>
                     <ul>
@@ -720,7 +1291,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             You may also experience bruising and swelling on the face,
                             which will vanish in 1-2 weeks
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div>
             <?php } elseif ($surgery_str == "brow lift") { ?>
