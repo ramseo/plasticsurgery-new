@@ -1357,7 +1357,239 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Brow Lift Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Brow Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The points below will help to find out if you are a
+                                suitable candidate for Brow Lift
+                                surgery in <?= $city ?>:
+                            </p>
+                            <ul>
+                                <li>
+                                    Your eyebrows have started sagging because of excessive skin
+                                </li>
+                                <li>
+                                    Heavily sagging brows leading to the vision problem
+                                </li>
+                                <li>
+                                    Formation of vertical frown lines between the brows
+                                </li>
+                                <li>
+                                    Fine lines and horizontal wrinkles on the forehead
+                                </li>
+                                <li>
+                                    You have good health overall, free from any severe
+                                    chronic disease
+                                </li>
+                                <li>
+                                    You do not consume tobacco or alcohol
+                                </li>
+                                <li>
+                                    You have set measurable goals with the Brow Lift surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Brow Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The average cost of Brow Lift surgery in <?= $city ?> ranges between
+                                60,000 INR to 1,30,000 INR. There is however a big variation,
+                                which results due to the selection of hospital,
+                                the expertise of the surgeon, fees of the anesthesiologist,
+                                the use of advanced techniques, the extent of Brow Lift,
+                                the addition of other surgeries, and so on.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Brow Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Like almost any other surgery, Brow Lift also accompanies
+                                several risks and complications:
+                            </p>
+                            <ul>
+                                <li>
+                                    Severe pain, bruising, and swelling
+                                </li>
+                                <li>
+                                    Accumulation of flood or seroma, which necessitates
+                                    the drainage of fluid
+                                </li>
+                                <li>
+                                    Allergic behaviour to sutures, antiseptic medicines,
+                                    dressings, etc.
+                                </li>
+                                <li>
+                                    Allergic reaction to anaesthesia
+                                </li>
+                                <li>
+                                    Possibility of infection
+                                </li>
+                                <li>
+                                    Skin scarring with visible marks formed due to sutures
+                                </li>
+                                <li>
+                                    Loss of sensation in the facial skin and the scalp area
+                                </li>
+                                <li>
+                                    Itching in the face or scalp
+                                </li>
+                                <li>
+                                    Skin contour irregularities leading to depressions and
+                                    skin wrinkling
+                                </li>
+                                <li>
+                                    Harm to deeper structures like the eyes, nerves, skull bone,
+                                    muscles, and blood vessels
+                                </li>
+                                <li>
+                                    Asymmetrical face
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Brow Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                People between the ages of 40-65 mostly opt for Brow Lift surgery.
+                                During this age bracket, the brow line starts to droop,
+                                fine lines appear across the forehead and wrinkle
+                                formation becomes a norm. However,
+                                young patients in their 20s or 30s having a genetic problem
+                                of “worry lines” may also opt for this surgery
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before the Brow Lift Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Quit smoking at least 2 weeks before the surgery in <?= $city ?>
+                                </li>
+                                <li>
+                                    Quit drinking alcohol at least 2 weeks before the Brow Lift
+                                </li>
+                                <li>
+                                    Visit the doctor to review your medical history
+                                    and suggest the adjustment of
+                                    existing medications (if any) accordingly
+                                </li>
+                                <li>
+                                    Clear your confusion regarding the surgery with your
+                                    cosmetic surgeon
+                                </li>
+                                <li>
+                                    Have a clear reason for undergoing the surgery and be aware
+                                    of the related pros and cons
+                                </li>
+                                <li>
+                                    Get medical tests such as Complete Blood Count (CBC), Clotting Time (CT),
+                                    and Bleeding Time (BT) a few days before the surgery
+                                    to ensure your good health for the surgery
+                                </li>
+                                <li>
+                                    Avoid consumption of anti-inflammatory drugs or other drugs that
+                                    could increase bleeding and bruising
+                                </li>
+                                <li>
+                                    Arrange for someone to be with you during the surgery
+                                    and help you take home after the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Brow Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    On the day of Brow Lift surgery, be in the hospital on time
+                                </li>
+                                <li>
+                                    The anesthesiologist will inquire about your reaction to
+                                    anesthesia and will administer the dose accordingly
+                                </li>
+                                <li>
+                                    In the surgery room, the surgeon will make the incisions
+                                    necessary to remove the excess fat, tighten the
+                                    sagging skin and make the
+                                    forehead wrinkle-free
+                                </li>
+                                <li>
+                                    You could expect the Brow Lift procedure to complete in around 1-2 hours
+                                    depending on the complications arising due to the surgery.
+                                </li>
+                                <li>
+                                    The surgeon will suggest you several prescriptions and recovery
+                                    instructions to follow
+                                </li>
+                                <li>
+                                    Your forehead will heal completely within 6 months
+                                </li>
+                                <li>
+                                    The surgeon will recommend you visit the clinic at regular intervals
+                                    for follow-ups after the surgery
+                                </li>
+                                <li>
+                                    Make sure to have realistic expectations with the surgery as the final
+                                    outcome may vary significantly than you might have thought
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Brow Lift surgery?
                     </p>
                     <p>
@@ -1533,7 +1765,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             Make sure to have realistic expectations with the surgery as the final
                             outcome may vary significantly than you might have thought
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div>
             <?php } elseif ($surgery_str == "neck lift") { ?>
@@ -1598,7 +1830,239 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Neck Lift Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Neck Lift?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                To be a good candidate for Neck Lift in <?= $city ?>,
+                                you should fulfil the below-mentioned
+                                conditions:
+                            </p>
+                            <ul>
+                                <li>
+                                    You should have a healthy body without any severe medical
+                                    ailment that could affect recovery
+                                </li>
+                                <li>
+                                    You should not consume nicotine or alcohol
+                                </li>
+                                <li>
+                                    You have a short neck or weak chin resulting in a double
+                                    chin that you want to get away with
+                                </li>
+                                <li>
+                                    Your jawline starts sagging and your chin loses volume,
+                                    leading to the condition of jowls.
+                                </li>
+                                <li>
+                                    Your neck is sagging a lot with the weakening of the
+                                    underlying neck muscles,
+                                    giving way to the Turkey neck
+                                </li>
+                                <li>
+                                    You have developed platysmal bands, which give your neck a
+                                    thick and rubber-band kind of appearance hanging
+                                    from the chin to Adam’s apple area.
+                                </li>
+                                <li>
+                                    Your neck has developed creases and wrinkles
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of a Neck Lift?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The average cost of Neck Lift surgery in <?= $city ?>
+                                lies between 70,000 INR to 1,00,000 INR.
+                                Factors like skin and fat excision,
+                                muscle plication, the need for liposuction,
+                                and the surgeon’s expertise are the prominent
+                                ones to decide the cost.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Neck Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Excessive Bleeding leading to the condition Hematoma
+                                </li>
+                                <li>
+                                    Nerve injury, skin loss, breakdown of wounds
+                                </li>
+                                <li>
+                                    Formation of seroma or abnormal accumulation of fluid
+                                    at the surgical incision site
+                                </li>
+                                <li>
+                                    Adverse reaction to anesthesia
+                                </li>
+                                <li>
+                                    Rare chances of scarring and bruising
+                                </li>
+                                <li>
+                                    Loss or reduction of sensation in the treated area
+                                </li>
+                                <li>
+                                    Asymmetric results
+                                </li>
+                                <li>
+                                    Need for revisional surgery
+                                </li>
+                                <li>
+                                    Stiffness of the neck
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Neck Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                If you have lost considerable weight, lost neck skin, have excess fat,
+                                or have developed horizontal skin bands called neck bands,
+                                this is the right time to opt for Neck Lift in <?= $city ?>.
+                                Patients mostly between the age of 35 and 65 prefer
+                                opting for a neck lift.
+                                You should however be physically and mentally fit at the time
+                                of surgery.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before the Neck Lift Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Before you opt for a Neck lift surgery, it would be good
+                                to include the following essential
+                                things in your checklist:
+                            </p>
+                            <ul>
+                                <li>
+                                    Have good mental and physical health
+                                </li>
+                                <li>
+                                    Get your blood tests to ensure your good health
+                                </li>
+                                <li>
+                                    If you are pregnant, it is better to avoid the surgery
+                                    for the time being
+                                </li>
+                                <li>
+                                    Have someone drive you to the clinic and back home
+                                </li>
+                                <li>
+                                    Have someone to help you execute your daily cores
+                                    after the surgery
+                                </li>
+                                <li>
+                                    Arrange for loose clothes to make you comfortable during
+                                    and after the surgery
+                                </li>
+                                <li>
+                                    Make your surgeon aware of the medications you are taking
+                                    at present
+                                </li>
+                                <li>
+                                    Avoid taking Aspirin, health supplements, and anti-inflammatory drugs
+                                    to avoid extreme bleeding during surgery
+                                </li>
+                                <li>
+                                    Keep yourself hydrated
+                                </li>
+                                <li>
+                                    Avoid eating anything at least up to eight hours before the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Neck Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    On the day of the Neck Lift surgery in <?= $city ?>, you will be given general
+                                    anesthesia to avoid pain during the procedure
+                                </li>
+                                <li>
+                                    Your surgeon will make incisions to operate on the deep structural tissues
+                                    of the lower face and neck.
+                                </li>
+                                <li>
+                                    You could also expect the surgeon to remove the excess skin
+                                </li>
+                                <li>
+                                    The entire surgery will continue for 1-3 hours and will work
+                                    best for patients having loose skin on the neck
+                                </li>
+                                <li>
+                                    You should have realistic expectations with the surgery results
+                                </li>
+                                <li>
+                                    Usually, it will take around 2 weeks for pain, swelling, and bruising to resolve
+                                    and to make neck contours visible after the surgery in <?= $city ?>
+                                </li>
+                                <li>
+                                    Around 4-6 weeks will be sufficient for complete recovery after
+                                    which you could go back to work.
+                                    In rare cases, this duration
+                                    may extend further
+                                </li>
+                                <li>
+                                    In around 3 months, you can expect the swelling on the neck
+                                    to vanish completely
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Neck Lift?
                     </p>
                     <p>
@@ -1776,7 +2240,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             In around 3 months, you can expect the swelling on the neck
                             to vanish completely
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div>
             <?php } elseif ($surgery_str == "chin surgery") { ?>
@@ -1835,7 +2299,228 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Chin Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Chin Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                An ideal candidate for Chin Surgery should fulfil
+                                the below-mentioned requirements:
+                            </p>
+                            <ul>
+                                <li>
+                                    Unappealing looks on the chin
+                                </li>
+                                <li>
+                                    Too short chin or with a low projection
+                                </li>
+                                <li>
+                                    Insecurity about weak jawline
+                                </li>
+                                <li>
+                                    Physically healthy and maintains a stable weight
+                                </li>
+                                <li>
+                                    Realistic expectations with the chin surgery in <?= $city ?>
+                                </li>
+                                <li>
+                                    Non-smoker and non-alcoholic
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Chin Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The cost of a chin surgery in <?= $city ?> depends upon several factors
+                                like the procedure performed, the fees of the surgeon,
+                                the hospital, and more.
+                                The average cost ranges between 70,000 INR - 150,000 INR.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Chin Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Allergic behaviour to anesthesia
+                                </li>
+                                <li>
+                                    Swelling in the chin region
+                                </li>
+                                <li>
+                                    Asymmetrical appearance of the chin
+                                </li>
+                                <li>
+                                    Bruising on the sides of the chin that can appear from minimal
+                                    to “black and blue”
+                                </li>
+                                <li>
+                                    Numbness in the lower lip and chin
+                                </li>
+                                <li>
+                                    Unappealing facial proportions after the surgery
+                                </li>
+                                <li>
+                                    Displacement of chin implant
+                                </li>
+                                <li>
+                                    Need to change the silicon chin implant of a different size
+                                </li>
+                                <li>
+                                    Scar tissues surrounding the chin implant
+                                </li>
+                                <li>
+                                    Skin discoloration
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Chin Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Chin surgery is an optional procedure that you undergo if you think your chin is too long,
+                                broad, or projects too far from your nose.
+                                The surgery in <?= $city ?> can enhance the balance of your chin with other facial features.
+                                Chin surgery is popular among men and women of almost all age groups worldwide.
+                                There is however no specific age limitation for the procedure.
+                                Even 15 or 16-year-old young boys and girls could opt for it
+                                if they have a fully developed chin.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before the Chin Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Visit your cosmetic surgeon to discuss all your apprehensions and doubts
+                                    about the chin surgery
+                                </li>
+                                <li>
+                                    Get all the lab tests and medical evaluations to enable the surgeon to find out
+                                    of your existing condition is good enough for the surgery
+                                </li>
+                                <li>
+                                    Abide by the do’s and don’ts instructed by the surgeon
+                                </li>
+                                <li>
+                                    Quit smoking and alcohol to combat the entry of toxins and carcinogens
+                                    into the bloodstream
+                                </li>
+                                <li>
+                                    Inform your surgeon about any of your existing medications, as he will suggest
+                                    making proper adjustments accordingly
+                                </li>
+                                <li>
+                                    Get some easy to wear garments in advance
+                                </li>
+                                <li>
+                                    Ask someone to accompany you to the clinic and get you back home after
+                                    the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Chin surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Be ready for the surgery day with the positive attitude
+                                </li>
+                                <li>
+                                    Usually, the surgeons in <?= $city ?> perform chin surgery as an
+                                    outpatient treatment
+                                </li>
+                                <li>
+                                    One of the staff members will administer general or IV anesthesia
+                                    to make the chin area numb
+                                </li>
+                                <li>
+                                    The surgeon will make incisions with the latest technique inside your mouth
+                                    or under your chin
+                                </li>
+                                <li>
+                                    The incisions will be closed with the help of tapes, sutures, or skin
+                                    adhesives
+                                </li>
+                                <li>
+                                    The surgeon will apply facial drains to build fluid in your neck and
+                                    to minimize blood.
+                                </li>
+                                <li>
+                                    The doctor will remove these facial drains after a couple of days
+                                </li>
+                                <li>
+                                    It will take around an hour for the procedure to complete
+                                </li>
+                                <li>
+                                    You can go home just after around two hours from the surgery completion
+                                </li>
+                                <li>
+                                    You could expect swelling and slight discomfort
+                                </li>
+                                <li>
+                                    The chin and neck skin may appear tight because of bruising and
+                                    swelling
+                                </li>
+                                <li>
+                                    The surgery can help to inflict some positive changes on your face
+                                </li>
+                                <li>
+                                    Still, you should have realistic expectations with the procedure
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Chin Surgery?
                     </p>
                     <p>
@@ -1999,7 +2684,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <li>
                             Still, you should have realistic expectations with the procedure
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div>
             <?php } elseif ($surgery_str == "cheek augmentation") { ?>
@@ -2130,7 +2815,225 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Lip Augmentation Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Lip Augmentation Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Anyone satisfying several important criteria as given below can
+                                be a good candidate for Lip Augmentation in <?= $city ?>:
+                            </p>
+                            <ul>
+                                <li>
+                                    Thin lips
+                                </li>
+                                <li>
+                                    Lips without proper volume, shape, or volume
+                                </li>
+                                <li>
+                                    Asymmetrical or uneven lips
+                                </li>
+                                <li>
+                                    Sufficient lip tissue to hide the implant
+                                </li>
+                                <li>
+                                    Good overall health
+                                </li>
+                                <li>
+                                    Free from medical illness or any severe health condition
+                                </li>
+                                <li>
+                                    Ample fat in the donor site
+                                </li>
+                                <li>
+                                    Realistic expectations with the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Lip Augmentation Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                On average, any lip augmentation procedure in <?= $city ?> will cost
+                                around 40,000 INR - 1,00,000 INR, but it can vary depending
+                                on the cosmetic surgeon and the treatment
+                                along with other factors.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Lip Augmentation Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Here is a quick look at the possible risks and complications of undergoing
+                                a Lip Augmentation surgery in a clinic in <?= $city ?>.
+                            </p>
+                            <ul>
+                                <li>
+                                    Allergic behaviour to anesthesia or other medicines given during
+                                    the surgery Redness, itching, or tenderness at
+                                    the incision site
+                                </li>
+                                <li>
+                                    Infection or bleeding in the treated area
+                                </li>
+                                <li>
+                                    Prolonged bruising or swelling
+                                </li>
+                                <li>
+                                    Fever blisters or cold sores around the lips
+                                </li>
+                                <li>
+                                    Lip asymmetry
+                                </li>
+                                <li>
+                                    Irregularities and lumps in the treated site
+                                </li>
+                                <li>
+                                    Possibility of scarring, ulceration, or lip stiffening
+                                </li>
+                                <li>
+                                    Loss of tissue due to injection into the blood vessel
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Lip Augmentation Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                When you notice thin lips or a decrease in the volume of your lips
+                                due to growing age, this is the right time to opt for
+                                Lip Augmentation surgery. Ideally, any adult of
+                                18 years or more with a healthy body
+                                can undergo this surgery.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before the Lip Augmentation Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Visit a lab to undergo the tests recommended by your surgeon
+                                </li>
+                                <li>
+                                    Avoid consuming blood-thinning medicines, as they can cause
+                                    significant bruising after the injection.
+                                </li>
+                                <li>
+                                    Avoid tobacco, alcohol, and caffeine around 24 hours before
+                                    and after the surgery in <?= $city ?>
+                                </li>
+                                <li>
+                                    Keep your face completely clean and free of makeup
+                                </li>
+                                <li>
+                                    Make sure to hydrate your body with water before going for the lip injection
+                                    to ensure a safe recovery
+                                </li>
+                                <li>
+                                    Have someone accompany you to the clinic and take you back home
+                                </li>
+                                <li>
+                                    Arrange for your clothing at home after the surgery in advance
+                                    to avoid later hassles
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Lip Augmentation surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    You could expect the surgeon to use various surgical and non-surgical methods
+                                    for lip augmentation.
+                                </li>
+                                <li>
+                                    Injecting fillers with hyaluronic acid into your lips is a common method.
+                                </li>
+                                <li>
+                                    Several doctors also perform a lip lift or a lip implant to augment
+                                    your lips permanently. So you could expect any of these
+                                    treatments depending on the condition of your lips
+                                </li>
+                                <li>
+                                    Lip augmentation surgery from a <?= $city ?> clinic will last for around 30 minutes.
+                                    During this surgery, the surgeon will administer anesthesia
+                                    to numb your lips.
+                                </li>
+                                <li>
+                                    For lip implants, you could expect him to create a small incision in both
+                                    corners of your mouth before inserting a clamp via one
+                                    side and threading it to the other incised corner.
+                                    After pulling the implants through the tunnels,
+                                    he will stitch the incisions
+                                    to close them permanently
+                                </li>
+                                <li>
+                                    It is good to have realistic expectations with the surgery.
+                                </li>
+                                <li>
+                                    You could expect pain in the injection site and corners of your lips
+                                </li>
+                                <li>
+                                    The possible swelling could vanish in around 24 to 48 hours.
+                                    On rare occasions, it may take around a week.
+                                </li>
+                                <li>
+                                    Complete healing may take around two weeks. So if you want augmented
+                                    lips to flaunt at a wedding or any other special occasion,
+                                    schedule the surgery two weeks in advance.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Lip Augmentation Surgery?
                     </p>
                     <p>
@@ -2291,7 +3194,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             lips to flaunt at a wedding or any other special occasion,
                             schedule the surgery two weeks in advance.
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             <?php } elseif ($surgery_str == "buccal fat removal") { ?>
                 <div class="col padd-null">
@@ -2353,7 +3256,222 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Buccal Fat Removal Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Buccal Fat Removal?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                An ideal candidate for Buccal Fat Removal surgery
+                                in <?= $city ?> should satisfy
+                                the following conditions:
+                            </p>
+                            <ul>
+                                <li>
+                                    Your cheek area has excess fat
+                                </li>
+                                <li>
+                                    Your Buccal Fat pads are larger than usual
+                                </li>
+                                <li>
+                                    You have a round-shaped and fuller face
+                                </li>
+                                <li>
+                                    You want to have a slimmer and more defined facial appearance
+                                </li>
+                                <li>
+                                    You are healthy and have a stable weight
+                                </li>
+                                <li>
+                                    You are more than 50 years of age
+                                </li>
+                                <li>
+                                    You are a non-alcoholic and a non-smoker
+                                </li>
+                                <li>
+                                    The doctor has diagnosed you with the rare Parry-Romberg syndrome,
+                                    or the condition of progressive hemifacial atrophy.
+                                    It tends one portion of the facial
+                                    skin to shrink
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Buccal Fat Removal?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The starting cost for Buccal Fat Removal in <?= $city ?> is around 65,000 INR,
+                                which can increase depending on the location, cosmetic surgeon,
+                                and the additional recovery costs. Among the other factors
+                                responsible for deciding the cost may include the
+                                anesthesia used, the experience of the cosmetic
+                                surgeon, and prescription medication
+                                for aftercare.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Buccal Fat Removal?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Wishing to undergo Buccal Fat Removal in <?= $city ?>? Here are some
+                                of the associated risks:
+                            </p>
+                            <ul>
+                                <li>
+                                    Possibility of infection at the site of incision
+                                </li>
+                                <li>
+                                    Injury to the salivary duct or facial ducts
+                                </li>
+                                <li>
+                                    Reduced sensation in the treated area
+                                </li>
+                                <li>
+                                    Asymmetry in the cheeks on both the sides
+                                </li>
+                                <li>
+                                    Adverse reaction of anesthesia
+                                </li>
+                                <li>
+                                    Hematoma or clotted blood formed in the treated site
+                                </li>
+                                <li>
+                                    Bleeding in the selected area
+                                </li>
+                                <li>
+                                    Pulmonary and cardiac complications
+                                </li>
+                                <li>
+                                    Continuous pain
+                                </li>
+                                <li>
+                                    Chances of revision surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Buccal Fat Removal?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The growth of fat pads continues till one enters the twenties. Hence, surgeons
+                                recommend patients of 20 years age or above to undergo Buccal Fat Removal
+                                surgery in <?= $city ?>. Most people choose this surgery because they feel
+                                their fat pads are making them appear childlike.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before the Buccal Fat Removal Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Visit your surgeon for a candid consultation about the surgery
+                            </p>
+                            <ul>
+                                <li>
+                                    Have realistic expectations with the surgery
+                                </li>
+                                <li>
+                                    Discuss your goals with the surgeon
+                                </li>
+                                <li>
+                                    Share your medical history and the existing medications with the
+                                    doctor so that he could adjust them accordingly
+                                </li>
+                                <li>
+                                    Undergo your medical evaluation and the lab tests suggested by the
+                                    surgeon
+                                </li>
+                                <li>
+                                    Avoid taking anti-inflammatory drugs, supplements, aspirin, naturopathic
+                                    medicines, etc., before the surgery to keep a check on bleeding at the
+                                    time of surgery
+                                </li>
+                                <li>
+                                    Stop drinking and consuming alcohol at least two weeks prior
+                                    to the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Buccal Fat Removal surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    On the surgery day, be prepared with a positive frame of mind
+                                </li>
+                                <li>
+                                    The surgeon or a staff member would administer anesthesia
+                                    to make the concerned location numb
+                                </li>
+                                <li>
+                                    You could expect the surgeon to create minor incisions inside both cheeks
+                                    and leave them open to drain. These incisions will close by themselves
+                                    within 2-3 days
+                                </li>
+                                <li>
+                                    Compared to other surgical procedures in <?= $city ?>, Buccal Fat Removal will
+                                    take less time. You could expect it to complete within 30 minutes.
+                                </li>
+                                <li>
+                                    The final outcome may get hampered by swelling on your face after the procedure
+                                </li>
+                                <li>
+                                    In the end, you will observe a less chubby appearance of your cheeks
+                                </li>
+                                <li>
+                                    If the intended results remain unachieved with the first surgery in <?= $city ?>,
+                                    the surgeon might recommend another procedure
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Buccal Fat Removal?
                     </p>
                     <p>
@@ -2511,7 +3629,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             If the intended results remain unachieved with the first surgery in <?= $city ?>,
                             the surgeon might recommend another procedure
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div>
             <?php } elseif ($surgery_str == "ear surgery") { ?>
@@ -2572,7 +3690,222 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Ear Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Ear Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                To be a good candidate for Otoplasty in <?= $city ?>, you should satisfy
+                                the below points:
+                            </p>
+                            <ul>
+                                <li>
+                                    You are facing hearing loss problems
+                                </li>
+                                <li>
+                                    You are suffering from any of the various congenital defects like cagot ear,
+                                    scroll ear, Stahl’s ear deformity, Wildermuth’s ear,
+                                    cleft earlobe, etc.
+                                </li>
+                                <li>
+                                    You need to correct a failed Otoplasty done earlier
+                                </li>
+                                <li>
+                                    Your ears stick out too much
+                                </li>
+                                <li>
+                                    Your ears are asymmetrical
+                                </li>
+                                <li>
+                                    You have a healthy body, free from any chronic or
+                                    life-threatening medical condition
+                                    that can obstruct healing
+                                </li>
+                                <li>
+                                    You are not expecting or breastfeeding
+                                </li>
+                                <li>
+                                    You are a non-smoker and a non-alcoholic
+                                </li>
+                                <li>
+                                    You want to have an improved appearance that has been distorted by
+                                    your uneven ears
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Ear Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The average cost of ear surgery in <?= $city ?> may range from 40,000 INR to 60,000 INR.
+                                Much will depend on the hospital, the choice of Surgeon,
+                                the type of anesthesia used, and so on. Consulting
+                                our cosmetic surgeon will help you to know
+                                the exact cost of the surgery.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Ear Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Some common risks of undergoing Otoplasty include:
+                            </p>
+                            <ul>
+                                <li>
+                                    Pain, bleeding, or infection
+                                </li>
+                                <li>
+                                    Adverse reaction to anesthesia
+                                </li>
+                                <li>
+                                    Asymmetry in the positioning of the ear
+                                </li>
+                                <li>
+                                    Permanent scarring
+                                </li>
+                                <li>
+                                    Allergic reaction to surgical materials
+                                </li>
+                                <li>
+                                    Reduction in skin sensation
+                                </li>
+                                <li>
+                                    Unnatural contours that will make the ear appear pinned back
+                                </li>
+                                <li>
+                                    Blocked or stuffy ear
+                                </li>
+                                <li>
+                                    Draining of bloody fluid from the incision or the ear canal
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Ear Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Once your ears attain their full size, you can undergo ear surgery.
+                                Usually, the ears grow completely after the age of 5. However,
+                                doctors recommend waiting till the age of 7 years to go for
+                                the surgery in <?= $city ?>. From 7 to adulthood, any age
+                                is fine to undergo the procedure.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before the Ear Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Before you proceed with Otoplasty in a clinic in <?= $city ?>,
+                                here are some important steps to consider:
+                            </p>
+                            <ul>
+                                <li>
+                                    go for lab tests or medical examination as instructed by your
+                                    surgeon
+                                </li>
+                                <li>
+                                    Inform your surgeon about your current medications
+                                </li>
+                                <li>
+                                    Stop tobacco and alcohol consumption around 2 weeks in advance
+                                </li>
+                                <li>
+                                    Have someone bring you back home after the surgery
+                                </li>
+                                <li>
+                                    Have a positive outlook toward the ear surgery
+                                </li>
+                                <li>
+                                    Avoid the intake of any herbal supplement, anti-inflammatory medicine,
+                                    or any other drugs that could increase bleeding
+                                </li>
+                                <li>
+                                    Be sure to discuss any concerns you have about the surgery with
+                                    your ear surgeon
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Ear surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    On the day of Otoplasty surgery in <?= $city ?>,
+                                    come to the hospital with a calm
+                                    and prepared mind
+                                </li>
+                                <li>
+                                    One of the staff members will administer anesthesia to the selected area
+                                </li>
+                                <li>
+                                    The entire procedure may take around 2-3 hours to complete
+                                </li>
+                                <li>
+                                    The treatment will involve removing, replacing, or repairing any of the three
+                                    little middle ear bones (termed Ossiculoplasty)
+                                </li>
+                                <li>
+                                    After the treatment, you may have a dizzy feeling for a few days.
+                                </li>
+                                <li>
+                                    You may also expect ear pain for around a week after the surgery
+                                </li>
+                                <li>
+                                    Have realistic expectations with the surgery as it will help in
+                                    quick healing
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Ear Surgery?
                     </p>
                     <p>
@@ -2730,7 +4063,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             Have realistic expectations with the surgery as it will help in
                             quick healing
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             <?php } elseif ($surgery_str == "breast augmentation") { ?>
                 <div class="col padd-null">
@@ -2791,7 +4124,220 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Breast Augmentation Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Breast Augmentation?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                To be a good candidate for Breast Augmentation,
+                                you should satisfy the
+                                below-mentioned pointers:
+                            </p>
+                            <ul>
+                                <li>
+                                    You are not an expecting mother or breastfeeding your child
+                                </li>
+                                <li>
+                                    You want to get rid of your sagging, asymmetrical, or flattened breasts
+                                </li>
+                                <li>
+                                    Your breasts lag in maintaining an adequate cleavage
+                                </li>
+                                <li>
+                                    You do not drink or smoke
+                                </li>
+                                <li>
+                                    You have realistic goals related to the surgery in <?= $city ?>
+                                </li>
+                                <li>
+                                    You must be free from any severe health disorder
+                                </li>
+                                <li>
+                                    Should disclose all the medications to the surgeon
+                                </li>
+                                <li>
+                                    You are well aware of the probable risks of undergoing
+                                    breast augmentation in <?= $city ?> or elsewhere
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Breast Augmentation?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Usually, the cost of a Breast Augmentation procedure in <?= $city ?> is around
+                                1,00,000 INR and the cost of the implants may go up to 1,50,000 INR,
+                                or even more. Apart from these costs, the medication,
+                                consultations, mammograms, and check-ups will also factor into the total
+                                cost. Make sure to consult your surgeon for the exact
+                                cost of the surgery.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Breast Augmentation?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Administering anesthesia could harm the body
+                                </li>
+                                <li>
+                                    Changed sensations in the breast or nipple
+                                </li>
+                                <li>
+                                    Change in the position of implants
+                                </li>
+                                <li>
+                                    Chances of rupture or leakage in the implants
+                                </li>
+                                <li>
+                                    Accumulation of fluid
+                                </li>
+                                <li>
+                                    Tight scar tissues may form close to the implant
+                                </li>
+                                <li>
+                                    Bad scars, infection, continuous breast pain
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Breast Augmentation?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Surgeons usually advise women to wait at least till they become 18 years old,
+                                as by that time, their breasts are more likely to develop completely.
+                                Ideally, the age for breast augmentation surgery in <?= $city ?> or
+                                for that reason, anywhere else, should be between 20s and 30s.
+                                Women in this age group are likely to be most healthy, well
+                                aware of their bodies, and grown enough to prepare
+                                themselves mentally for the implants
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before Breast Augmentation Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    You should bear a cool and calm mind, duly prepared for the surgery in <?= $city ?>.
+                                </li>
+                                <li>
+                                    Keep your body properly hydrated with water
+                                </li>
+                                <li>
+                                    Eat a healthy diet
+                                </li>
+                                <li>
+                                    Avoid eating or drinking anything after midnight to tolerate the
+                                    effect of anesthesia
+                                </li>
+                                <li>
+                                    Use an antimicrobial soap to wash your body before the surgery
+                                </li>
+                                <li>
+                                    Do not wear any jewellery or piercing when going for the surgery
+                                </li>
+                                <li>
+                                    Remove polish from your nails to enable the staff to measure
+                                    oxygen saturation in your blood without hassles
+                                </li>
+                                <li>
+                                    Remove dentures, contact lenses, etc. to reduce risks
+                                </li>
+                                <li>
+                                    Make sure to have someone to take you back home after your Breast Augmentation
+                                    Surgery in <?= $city ?>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Breast Augmentation surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    You should bear a cool and calm mind, duly prepared for the
+                                    surgery in <?= $city ?>.
+                                </li>
+                                <li>
+                                    Reach the hospital on time
+                                </li>
+                                <li>
+                                    The anesthetist will ask you questions about your behavior to
+                                    anesthesia so that he could provide
+                                    the right treatment accordingly
+                                </li>
+                                <li>
+                                    In the operation theater, depending on your response to the anesthetist,
+                                    the latter will give an IV to deliver the medicine anesthetic
+                                </li>
+                                <li>
+                                    Depending on the procedure and the specific condition of the patient,
+                                    the Breast augmentation surgery may take around one to two hours
+                                    or maybe more to complete.
+                                </li>
+                                <li>
+                                    You may feel like stretching or pulling in the breast area after the surgery
+                                </li>
+                                <li>
+                                    You will feel tired easily and be less energetic in the starting days
+                                </li>
+                                <li>
+                                    Pain may persist for around a week or two after the surgery in <?= $city ?>
+                                </li>
+                                <li>
+                                    As the days pass, you will experience a positive feeling about your breasts
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Breast Augmentation?
                     </p>
                     <p>
@@ -2947,7 +4493,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <li>
                             As the days pass, you will experience a positive feeling about your breasts
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             <?php } elseif ($surgery_str == "breast lift") { ?>
                 <div class="col padd-null">
@@ -3005,7 +4551,222 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Breast Lift Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Breast Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                You can be a potential candidate for Breast Lift surgery in <?= $city ?> if:
+                            </p>
+                            <ul>
+                                <li>
+                                    Your breasts are sagging significantly due to pregnancy, breastfeeding,
+                                    aging, or a change in weight
+                                </li>
+                                <li>
+                                    You have good overall health and maintain a stable weight
+                                </li>
+                                <li>
+                                    Your areolas and nipples are pointing downwards
+                                </li>
+                                <li>
+                                    Your breasts have become flat, pendulous, and elongated in shape
+                                </li>
+                                <li>
+                                    You have enlarged areolas and stretched skin
+                                </li>
+                                <li>
+                                    You don’t smoke or drink since both these habits can affect
+                                    the healing results adversely
+                                </li>
+                                <li>
+                                    You want to restore lost breast volume
+                                </li>
+                                <li>
+                                    You have realistic expectations about the surgery results
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of a Breast Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The average cost of Breast Lift surgery in <?= $city ?> will range between
+                                1,50,000 INR to 2,0,000 INR. Opting for additional procedures such
+                                as Breast Implants will increase the expenditure accordingly.
+                                Consultation with any of our expert cosmetic surgeons in
+                                <?= $city ?> will help you know the exact cost.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Breast Lifts?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Breast lift risks include:
+                            </p>
+                            <ul>
+                                <li>
+                                    Allergic reaction to anesthesia
+                                </li>
+                                <li>
+                                    Hematoma - a pool of clotted blood formed in the treated area
+                                </li>
+                                <li>
+                                    Bleeding and infection
+                                </li>
+                                <li>
+                                    Irregularities in the breast symmetry, shape, and contour
+                                </li>
+                                <li>
+                                    Reduced sensation in the breast or nipple on a temporary basis
+                                </li>
+                                <li>
+                                    Deep vein thrombosis complications
+                                </li>
+                                <li>
+                                    Deep vein thrombosis, cardiac and pulmonary complications
+                                </li>
+                                <li>
+                                    Cardiac and pulmonary risks
+                                </li>
+                                <li>
+                                    Fat necrosis or dead fatty tissue, found deep inside the skin
+                                </li>
+                                <li>
+                                    Badly treated incisions leading to delayed healing
+                                </li>
+                                <li>
+                                    Revision breast lift surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Breast Lift?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                There is no ideal age to go for a Breast Lift.
+                                The only condition is that the breasts of a woman should be completely developed,
+                                immaterial of whether she is in her teenage, 20s, or older.
+                                In general, women consider this treatment mostly between the age of 18 - 25 years
+                                due to several reasons, like genetics, weight changes,
+                                issues related to pregnancy, and more.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before Breast Lift Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                When going for a Breast Lift from an experienced surgeon in <?= $city ?> keep
+                                in mind to do the below things:
+                            </p>
+                            <ul>
+                                <li>
+                                    Go for medical evaluation or lab testing as instructed by your surgeon
+                                </li>
+                                <li>
+                                    Consult the surgeon about your medications so that he could make
+                                    proper adjustments
+                                </li>
+                                <li>
+                                    A baseline mammogram would be advisable before the surgery and after the surgery.
+                                    It will help to find out if your breast tissue has undergone any changes
+                                </li>
+                                <li>
+                                    Stop the intake of supplements, anti-inflammatory drugs, aspirin, and any other
+                                    medicine that can lead to increased bleeding
+                                </li>
+                                <li>
+                                    Stop consuming alcohol and tobacco products at least 2-3 weeks before the surgery
+                                </li>
+                                <li>
+                                    Consult your surgeon about your doubts, expected results, and recovery period
+                                </li>
+                                <li>
+                                    Have realistic expectations with the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Breast Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    The procedure can last for around 1-2 hours depending on the severity
+                                    of the procedure.
+                                </li>
+                                <li>
+                                    The surgeon will leave you with a thin tube close to your incisions
+                                    to avoid swelling and drain fluid. It will be removed
+                                    a few days after the surgery
+                                </li>
+                                <li>
+                                    You can expect to go home the same after undergoing Mastopexy.
+                                </li>
+                                <li>
+                                    You may experience a slight discomfort around the incisions during
+                                    or after the surgery
+                                </li>
+                                <li>
+                                    You could also expect tight skin, bruising, or swelling temporarily
+                                </li>
+                                <li>
+                                    After the completion of Breast Lift surgery in <?= $city ?> completes,
+                                    you could expect reshaped and repositioned breast tissues
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Breast Lift surgery?
                     </p>
                     <p>
@@ -3161,7 +4922,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             After the completion of Breast Lift surgery in <?= $city ?> completes,
                             you could expect reshaped and repositioned breast tissues
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             <?php } elseif ($surgery_str == "breast reduction") {  ?>
                 <div class="col padd-null">
@@ -3221,6 +4982,204 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Breast Reduction Surgery in <?= $city ?>
                     </p>
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Breast Reduction?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                You can be a good candidate for Breast Reduction surgery in <?= $city ?> if you satisfy
+                                the following pointers:
+                            </p>
+                            <ul>
+                                <li>
+                                    You have excessively large breasts, which have started creating back,
+                                    neck, or shoulder pain
+                                </li>
+                                <li>
+                                    You are facing several skin conditions, rashes, and cuts in the shoulder due
+                                    to large breasts
+                                </li>
+                                <li>
+                                    Your large breasts are compelling you to have bad posture and are limiting your
+                                    physical activities
+                                </li>
+                                <li>
+                                    You have realistic expectations with the surgery
+                                </li>
+                                <li>
+                                    You don’t smoke or drink alcohol
+                                </li>
+                                <li>
+                                    You have a healthy body, which could bear the side effects of breast reduction
+                                    surgery with ease.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Breast Reduction?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The typical cost of a breast reduction procedure is between 1,00,000 INR to 2,00,000 INR
+                                depending on the scale of the surgery.
+                                Anyone who has recently undergone the surgery can help you get a better idea of the
+                                cost involved. Besides, consulting with your surgeon in <?= $city ?> is always
+                                advisable to know about the cost of Breast Reduction surgery.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Breast Reduction?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Surgical risks like infection or bleeding
+                                </li>
+                                <li>
+                                    Fluid accumulation along the treated area
+                                </li>
+                                <li>
+                                    Swelling, bruising, or skin discoloration in the treated location
+                                </li>
+                                <li>
+                                    Breathing problems due to anesthesia
+                                </li>
+                                <li>
+                                    Allergic reaction to tape adhesive, suture materials, lotions, etc.
+                                </li>
+                                <li>
+                                    Loss of sensation in nipples and breasts for a brief or long time.
+                                </li>
+                                <li>
+                                    Uneven or asymmetrical breasts
+                                </li>
+                                <li>
+                                    Loss of nipple partially or permanently
+                                </li>
+                                <li>
+                                    Damaged nerve cells
+                                </li>
+                                <li>
+                                    Need for a revisional surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Breast Reduction?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                If you are more than 18 years old and have your breasts developed completely,
+                                this is the right time for Breast Reduction. Teenagers facing severe
+                                back problems may also opt for this surgery in <?= $city ?>.
+                                Older women undergo this treatment to get rid of their
+                                chronic neck pain, poor posture,
+                                and other side effects of large breasts.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before Breast Reduction Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Among the many things to make up to your to-do list include:
+                            </p>
+                            <ul>
+                                <li>
+                                    Undergoing Mammogram
+                                </li>
+                                <li>
+                                    Avoid smoking and drinking for at least 6 weeks before the surgery
+                                </li>
+                                <li>
+                                    Avoid taking over-the-counter drugs, anti-inflammatory drugs, herbal supplements,
+                                    and other medicines to curb bleeding during the treatment
+                                </li>
+                                <li>
+                                    Have someone prepared to get you back home from the hospital after the surgery
+                                </li>
+                                <li>
+                                    Make sure to take a break of a few weeks from work in advance for speedy
+                                    recovery after the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Breast Reduction surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    You should have realistic expectations with the surgery instead of
+                                    expecting miracles
+                                </li>
+                                <li>
+                                    On the day of surgery in <?= $city ?>, the plastic surgeon will start performing the by
+                                    creating incisions on your large breasts
+                                </li>
+                                <li>
+                                    Before the surgery begins, you will get the required medicines to make you feel
+                                    at ease during the procedure
+                                </li>
+                                <li>
+                                    The surgeon will remove the concerned skin, excess fat, and glandular tissue to
+                                    reposition the nipple and reduce the areola
+                                </li>
+                                <li>
+                                    The results of the surgery will be visible immediately after the treatment
+                                </li>
+                                <li>
+                                    The incisions lines and post-operative swelling will subside with time
+                                </li>
+                                <li>
+                                    You will find a new you after the surgery in <?= $city ?>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
                     <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Breast Reduction?
                     </p>
