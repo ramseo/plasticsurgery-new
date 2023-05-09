@@ -5498,7 +5498,208 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Gynecomastia Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Gynecomastia surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Check out the below-mentioned pointers to know if you are an ideal candidate
+                                for Gynecomastia surgery in <?= $city ?>:
+                            </p>
+                            <ul>
+                                <li>
+                                    You have Primary Gynecomastia - You have gained male boobs at an early
+                                    age due to hormonal imbalance
+                                </li>
+                                <li>
+                                    You have secondary Gynecomastia – you have got male breasts due to weight
+                                    gain irrespective of your age group
+                                </li>
+                                <li>
+                                    You are physically fit and healthy
+                                </li>
+                                <li>
+                                    You are in your teens or twenties, due to higher skin elasticity
+                                    in the younger age
+                                </li>
+                                <li>
+                                    You are a non-smoker and a non-alcoholic
+                                </li>
+                                <li>
+                                    You have realistic expectations from the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Gynecomastia surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The average cost of male breast surgery in <?= $city ?> ranges between
+                                30,000 INR to 2,00,000 INR. The type of technique that the surgeon
+                                uses will be a big factor in deciding the overall
+                                cost of the treatment.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Gynecomastia surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Some of the common complications of Gynecomastia surgery include:
+                            </p>
+                            <ul>
+                                <li>
+                                    Chances of hematoma – An instance of blood collection that occurs
+                                    between the muscles and the skin, mainly because
+                                    of bleeding after the surgery
+                                </li>
+                                <li>
+                                    Seroma, or risk of infection due to fluid collection
+                                </li>
+                                <li>
+                                    Possibility of scarring at the planned or unplanned site
+                                </li>
+                                <li>
+                                    Temporarily decrease in the nipple sensation
+                                </li>
+                                <li>
+                                    Cardiopulmonary and Venous Thrombosis issues
+                                </li>
+                                <li>
+                                    Discomfort due to an allergic reaction to anesthesia
+                                </li>
+                                <li>
+                                    Intense pain during the recovery period
+                                </li>
+                                <li>
+                                    Rare risk of damage to deeper structures
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Gynecomastia surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Most surgeons in <?= $city ?> recommend Gynecomastia patients be at least 18 years
+                                old to get ready for the surgery. At this stage,
+                                the body is likely to develop to its full capacity.
+                                Usually, older men are more prone to opt
+                                for this surgery.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before Gynecomastia surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Restrict taking blood thinners such as aspirin, anti-inflammatory drugs as well
+                                    as supplements to reduce the risk of excessive blood loss
+                                </li>
+                                <li>
+                                    After speaking with the doctor, adjust taking medications accordingly
+                                </li>
+                                <li>
+                                    Undergo all the required diagnostic tests to ensure your good health
+                                    during the surgery
+                                </li>
+                                <li>
+                                    Stop smoking or drinking alcohol at least two weeks before the procedure
+                                </li>
+                                <li>
+                                    Adjust the medications as per the suggestion of your surgeon
+                                </li>
+                                <li>
+                                    Avoid taking supplements or medications that consist of blood thinners
+                                </li>
+                                <li>
+                                    Keep a time gap of at least 8 hours between your last meal and the surgery
+                                </li>
+                                <li>
+                                    Likewise, avoid drinking water or anything else at least 6 hours before
+                                    the procedure
+                                </li>
+                                <li>
+                                    Arrange for a person to help you get back home after the surgery in <?= $city ?>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Gynecomastia surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    On the day of the Gynecomastia surgery, make sure to enter the clinic with
+                                    a positive frame of mind.
+                                </li>
+                                <li>
+                                    Expect around 1- 2 hours for the procedure to complete depending on the extent
+                                    of tissues required to remove
+                                </li>
+                                <li>
+                                    In several cases, a patient could also undergo liposuction in the chest
+                                    to deliver the best results
+                                </li>
+                                <li>
+                                    To perform the surgery, the surgeon will create small incisions in the
+                                    treatment area
+                                </li>
+                                <li>
+                                    After the treatment in <?= $city ?>, you may feel sore in the first few days
+                                </li>
+                                <li>
+                                    You should have realistic expectations with the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Gynecomastia surgery?
                     </p>
                     <p>
@@ -5644,7 +5845,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <li>
                             You should have realistic expectations with the surgery
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div>
             <?php } elseif ($surgery_str == "liposuction") { ?>
@@ -5733,7 +5934,163 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Liposuction Surgery in <?= $city ?>:
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Liposuction?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                An ideal candidate for liposuction should satisfy the
+                                following conditions:
+                            </p>
+                            <ul>
+                                <li>
+                                    A person with near ideal body weight, but owns selected areas of localized fat
+                                    deposits such as hips, arms, neck, chin, arms, etc., which cease to vanish
+                                    via diet or exercise.
+                                </li>
+                                <li>
+                                    Other important traits include realistic expectations, good skin elasticity,
+                                    a healthy body, and a non-smoker.
+                                </li>
+                                <li>
+                                    The person should be willing to adhere to post-operative instructions given
+                                    by the surgeon for prompt healing.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Liposuction?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The total cost of the liposuction procedure in <?= $city ?> will depend on various factors
+                                such as the number of areas being treated, the amount of fat being removed, the
+                                complexity of the procedure, the type of facility, etc. The overall cost can vary
+                                somewhere between Rs 50,000 and Rs 3,00,000 or more per treatment area. Feel free
+                                to connect with our cosmetic surgeon to know the exact cost.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Liposuction?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Like with any major plastic surgery in <?= $city ?>, liposuction also accompanies several risks,
+                                such as bleeding, adverse reaction to anesthesia, loss of sensation,
+                                fluid accumulation, blood clits, etc. Skin irregularities like bumps,
+                                wavy contours, and dimpling are also among
+                                the possible risks of Liposuction.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Liposuction?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                You should go for Liposuction in <?= $city ?> only after you prepared your mind well
+                                for the procedure. Almost any age would be fine for the treatment,
+                                but patients with optimum age of 30-35 years would be ideal.
+                                The skin elasticity of people in this age group is better, which leads to better
+                                results.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are some important things to do before Liposuction Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                It is good to prepare for the Liposuction surgery, as per the suggestions
+                                from your surgeon in <?= $city ?>. Here are some important
+                                points to consider:
+                            </p>
+                            <ul>
+                                <li>
+                                    Avoid smoking at least four weeks before the surgery
+                                </li>
+                                <li>
+                                    Consult your surgeon about the medicines you are already consuming and stop
+                                    them for a certain period as instructed
+                                </li>
+                                <li>
+                                    Keep yourself hydrated and maintain a healthy diet
+                                </li>
+                                <li>
+                                    Make sure to have someone to drive you back home after the surgery
+                                    and assist you in a quick recovery
+                                </li>
+                                <li>
+                                    On the day of the surgery, eat, drink, and wear as
+                                    suggested by your surgeon
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What should you expect on the day of liposuction surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    On the day of surgery, you could expect the surgeon to administer local or general
+                                    anesthesia as per the case may be.
+                                </li>
+                                <li>
+                                    The surgery time will also vary depending on the number of locations
+                                    that need treatment.
+                                </li>
+                                <li>
+                                    Be ready for the incisions in specific locations for fat elimination. After the procedure,
+                                    you should have realistic expectations.
+                                </li>
+                                <li>
+                                    Much will depend on the extent of post-operative care you adopt.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Liposuction?
                     </p>
                     <p>
@@ -5832,7 +6189,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <li>
                             Much will depend on the extent of post-operative care you adopt.
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             <?php } elseif ($surgery_str == "tummy tuck") {  ?>
                 <div class="col padd-null">
@@ -5878,7 +6235,189 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Tummy Tuck Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Tummy Tuck?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Abiding by these points will make you an ideal candidate for the Tummy
+                                Tuck Surgery in <?= $city ?>:
+                            </p>
+                            <ul>
+                                <li>
+                                    You have good health but want to get rid of excess fat across your waist and abdomen
+                                </li>
+                                <li>
+                                    You have lost considerable weight, resulting in hanging skin and excess fat
+                                </li>
+                                <li>
+                                    Pregnancy has completely changed your body and you want to get it back in shape
+                                </li>
+                                <li>
+                                    You are not able to get away with excess fat despite exercising and having a balanced diet
+                                </li>
+                                <li>
+                                    You are a non-smoker and non-alcoholic person
+                                </li>
+                                <li>
+                                    Your body weight is within 20% of the ideal body weight
+                                </li>
+                                <li>
+                                    Your abdomen muscles have become loose
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Tummy Tuck?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                To give you an idea, the average cost of a tummy tuck procedure starts from 1,00,000 INR and can go up to 2,00,000 INR. The cost may vary depending on the surgeon you choose, the hospital, or the clinic where you decide to undergo the treatment, and several other factors. For better insight, a candid consultation with one of our Tummy Tuck surgeons in <?= $city ?> would be a recommended move.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Tummy Tuck?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Like with any other surgery, Tummy Tuck also accompanies several risks.
+                            </p>
+                            <ul>
+                                <li>
+                                    Accumulation of fluid under the skin or seroma
+                                </li>
+                                <li>
+                                    Poor healing of the areas along the line of incision
+                                </li>
+                                <li>
+                                    Visible scars, which are hard to hide
+                                </li>
+                                <li>
+                                    Repositioning of abdominal tissues during the surgery can lead to numbness or reduced sensations
+                                </li>
+                                <li>
+                                    Chance of an unavoidable revisional surgery
+                                </li>
+                                <li>
+                                    Prolonged swelling or skin discoloration
+                                </li>
+                                <li>
+                                    Unbearable pain which ceases to subside
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Tummy Tuck?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Ideally, if you do not wish to get pregnant any time soon, have a healthy body, and can maintain your results well, this is the right to go for Tummy Tuck. Women in <?= $city ?> and other parts of the world often prefer undergoing Tummy Tuck in their 30s or 40s.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before the Tummy Tuck Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Your body weight should remain stable for at least 12 months before the Tummy Tuck surgery
+                                </li>
+                                <li>
+                                    If you are overweight, the surgeon will recommend you lose weight to be fit for the procedure
+                                </li>
+                                <li>
+                                    Prior to the surgery day, you should have a balanced diet including considerable proteins
+                                </li>
+                                <li>
+                                    Keep your body hydrated with water
+                                </li>
+                                <li>
+                                    Avoid using any medication without the permission of the doctor as it may lead to bleeding
+                                </li>
+                                <li>
+                                    Clear all your doubts with the surgeon before going under the knife
+                                </li>
+                                <li>
+                                    Have realistic expectations with the surgery in <?= $city ?>
+                                </li>
+                                <li>
+                                    Be prepared for the probable risks and side effects of the treatment
+                                </li>
+                                <li>
+                                    Ask someone to take you home once the surgery completes
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Tummy Tuck surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    On the surgery day in <?= $city ?>, the anesthetic will discuss if you have any allergic reaction to anesthesia and will administer the dose accordingly
+                                </li>
+                                <li>
+                                    The entire procedure will continue for around two to three hours or more, depending on the severity of the treatment
+                                </li>
+                                <li>
+                                    The surgeon will take out your belly button by creating a small incision and suture it back into its place after the procedure
+                                </li>
+                                <li>
+                                    You might also get some antibiotics to avoid infection or painkillers to mitigate the possible pain during the surgery
+                                </li>
+                                <li>
+                                    From the first to the third day after the procedure, you will experience pressure, mild pain, and bloating
+                                </li>
+                                <li>
+                                    Your belly will become swollen and sore in the first week. To hide the swelling, you may need to put on a compression garment
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Tummy Tuck?
                     </p>
                     <p>
@@ -6004,7 +6543,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <li>
                             Your belly will become swollen and sore in the first week. To hide the swelling, you may need to put on a compression garment
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div>
             <?php } elseif ($surgery_str == "buttock enhancement") { ?>
@@ -6052,7 +6591,203 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Buttock Enhancement Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Buttock Enhancement?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Here are the conditions for you to be an ideal Buttock Enhancement candidate
+                            </p>
+                            <ul>
+                                <li>
+                                    Your butt misses the desired size, shape, fullness, and appeal
+                                </li>
+                                <li>
+                                    You have a good overall health
+                                </li>
+                                <li>
+                                    You can tolerate the effect of anesthesia
+                                </li>
+                                <li>
+                                    Despite regular exercising and taking a balanced diet, your butts cease to increase in size
+                                </li>
+                                <li>
+                                    You should have a particular donor site having sufficient stubborn fat cells that could be transferred to your butts
+                                </li>
+                                <li>
+                                    You have realistic expectations with the Buttock Enhancement Surgery
+                                </li>
+                                <li>
+                                    You don’t smoke or drink alcohol. If you do, quit the habits at least two weeks before the surgery, as it may affect your surgery results adversely
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Buttock Enhancement?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The average cost of a Brazilian Butt Lift or a Buttock Enhancement surgery in <?= $city ?> lies between 200000 INR to 400000 INR. Indeed, it is a big amount, but considering the expenses in other countries, the cost of this surgery in India is still much more reasonable.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Buttock Enhancement?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Irrespective of the type of Buttock Enhancement, you cannot rule out the possibility of several mild to severe risks:
+                            </p>
+                            <ul>
+                                <li>
+                                    Blood clotting or hematoma
+                                </li>
+                                <li>
+                                    Fluid accumulation or seroma
+                                </li>
+                                <li>
+                                    Dead fat tissue
+                                </li>
+                                <li>
+                                    Loss of sensation on a temporary or permanent basis
+                                </li>
+                                <li>
+                                    Permanent scars and stretch marks
+                                </li>
+                                <li>
+                                    Infection and bleeding
+                                </li>
+                                <li>
+                                    Blood of fat clots that can affect your lungs or heart
+                                </li>
+                                <li>
+                                    Nerve damage
+                                </li>
+                                <li>
+                                    asymmetrical butts
+                                </li>
+                                <li>
+                                    Chances of revision surgery
+                                </li>
+                                <li>
+                                    Implant rupture or migration
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Buttock Enhancement?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                If you think your natural butts are too flat or squarish, you may opt for this surgery in <?= $city ?>. In addition, if you have lost significant weight or if you believe that adding a few extra curves could balance the rest of your body, Buttock Enhancement is the right option. As per experts, 25 is the ideal age to perform this surgery, as it will give ample time for the human brain to develop completely.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before the Buttock Enhancement Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Here are some important points to help you ready for the Buttock Enhancement Surgery in <?= $city ?>:
+                            </p>
+                            <ul>
+                                <li>
+                                    Get the blood tests suggested by your surgeon to know if your body is all set for the surgery
+                                </li>
+                                <li>
+                                    Refrain from smoking or consuming alcohol for around 2-3 weeks before and after the surgery
+                                </li>
+                                <li>
+                                    Take the prescribed medicines as instructed and inform your surgeon about any existing medications to adjust accordingly
+                                </li>
+                                <li>
+                                    Putting on loose clothing is advisable
+                                </li>
+                                <li>
+                                    Prepare yourself mentally and if you have any confusion, discuss it with your surgeon for prompt resolution
+                                </li>
+                                <li>
+                                    Have realistic expectations with the surgery
+                                </li>
+                                <li>
+                                    Have someone to accompany you back home after the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Buttock Enhancement surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Come to the hospital or clinic in <?= $city ?> for the surgery with a cool mind
+                                </li>
+                                <li>
+                                    The hospital staff will perform necessary tests to examine your health and make you ready for the surgery
+                                </li>
+                                <li>
+                                    You will be given anesthesia to make the target area numb
+                                </li>
+                                <li>
+                                    If you have allergic behavior to anesthesia, you should inform your surgeon about it
+                                </li>
+                                <li>
+                                    You could expect the surgery to take around two hours or more to complete
+                                </li>
+                                <li>
+                                    The surgeon would prescribe taking antibiotics, pain medicines, stool softener, etc. after the surgery in <?= $city ?>
+                                </li>
+                                <li>
+                                    The doctor would also suggest you take rest, put less or no stress on the treated area, avoid taking a shower for around 2 days from the surgery, wear compression garments, and so on.
+                                </li>
+                                <li>
+                                    You could expect a better appearance of your rear after the healing period
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Buttock Enhancement?
                     </p>
                     <p>
@@ -6191,7 +6926,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <li>
                             You could expect a better appearance of your rear after the healing period
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div>
             <?php } elseif ($surgery_str == "body lift") { ?>
