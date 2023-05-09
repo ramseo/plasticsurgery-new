@@ -8479,7 +8479,206 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Men’s Plastic Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Men’s Plastic Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                If you are a male and looking to undergo plastic surgery in <?= $city ?> to enhance your physical appearance, fulfilling the following points will make you a suitable candidate:
+                            </p>
+                            <ul>
+                                <li>
+                                    You are an adult with good overall health
+                                </li>
+                                <li>
+                                    You are free from severe health conditions like high blood pressure, heart problems, diabetes, etc.
+                                </li>
+                                <li>
+                                    You are a non-smoker and non-alcoholic
+                                </li>
+                                <li>
+                                    You have developed too much sagging skin
+                                </li>
+                                <li>
+                                    Your current body weight is close to your ideal weight
+                                </li>
+                                <li>
+                                    You want to get away with excess fat accumulated in your tummy, thighs, eyelid, arms, etc.
+                                </li>
+                                <li>
+                                    You have set realistic expectations for the surgery
+                                </li>
+                                <li>
+                                    You want to opt for surgery to correct the asymmetric body features
+                                </li>
+                                <li>
+                                    You want to restore your body features after an accident
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Men’s Plastic Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The rates start from as low as a couple of thousands for dermal fillers, acne treatment, and laser skin treatment to more than 3,00,000 INR for extensive body contouring and reshaping surgeries. Consult one of our surgeons to know the amount for the specific Men’s Plastic Surgery you wish to undergo in <?= $city ?>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Men’s Plastic Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Allergic reaction to anesthesia
+                                </li>
+                                <li>
+                                    Loose or sagging skin
+                                </li>
+                                <li>
+                                    Change or decrease in the sensation in the treated area
+                                </li>
+                                <li>
+                                    Intense pain after the starting few days of the surgery
+                                </li>
+                                <li>
+                                    Bleeding and swelling that persists for a week
+                                </li>
+                                <li>
+                                    Infection due to surgery such as bruising, redness, itching, fever, warmth, etc.
+                                </li>
+                                <li>
+                                    Seroma or pooling of fluid in the body
+                                </li>
+                                <li>
+                                    Hematoma or pooling of blood, which tends the skin to feel rubbery, spongy, and lumpy
+                                </li>
+                                <li>
+                                    Possibility of revisional surgery
+                                </li>
+                                <li>
+                                    Poor healing due to careless stitching
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Men’s Plastic Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                When you feel like enhancing your appearance, distorted due to an injury or age, opting for Men’s Plastic Surgery in <?= $city ?> would be advisable. There is no fixed age to undergo plastic surgery, as even teenagers could undergo it after the consent of their parents. Still, to be on the side, you should be at least 18 years of age.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before Men’s Plastic Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Prepare yourself well for the surgery by following the pre-surgery instructions given by the surgeon
+                                </li>
+                                <li>
+                                    Maintain a healthy, balanced, and nutritious diet before going for the surgery
+                                </li>
+                                <li>
+                                    Drink around 6-8 glasses of water per day to hydrate and cleanse your body
+                                </li>
+                                <li>
+                                    Stop smoking at least 2 weeks before the surgery
+                                </li>
+                                <li>
+                                    Stop consuming alcohol at least 2 weeks prior to the procedure
+                                </li>
+                                <li>
+                                    Have someone accompany you to the clinic, take you back after the surgery, and assist you in daily activities for around 1 week after the surgery
+                                </li>
+                                <li>
+                                    Arrange for loose clothes to wear after the surgery for quicker healing
+                                </li>
+                                <li>
+                                    Clear all the doubts regarding plastic surgery in <?= $city ?> with your surgeon
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Men’s Plastic Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    You should arrive at the hospital or clinic in <?= $city ?> for Men’s Plastic Surgery with a calm and composed mind
+                                </li>
+                                <li>
+                                    Feel relaxed and at ease
+                                </li>
+                                <li>
+                                    Discuss your reaction to anesthesia with the anesthesiologist so that he could adjust the dose accordingly
+                                </li>
+                                <li>
+                                    The surgeon will use the latest and advanced equipment to create incisions in the concerned site on your body
+                                </li>
+                                <li>
+                                    After making the incision and doing the surgery, the surgeon will stitch the incision with sutures
+                                </li>
+                                <li>
+                                    The entire procedure may take a few hours to complete depending on the surgery you opt for
+                                </li>
+                                <li>
+                                    The surgeon will provide aftercare instructions that you would need to abide strictly from prompt healing
+                                </li>
+                                <li>
+                                    You can return to your work in around 2-3 weeks.
+                                </li>
+                                <li>
+                                    You should have realistic expectations with the surgery so that you do not face problems with unfavourable results.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Men’s Plastic Surgery?
                     </p>
                     <p>
@@ -8621,7 +8820,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <li>
                             You should have realistic expectations with the surgery so that you do not face problems with unfavourable results.
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             <?php } ?>
         </div>

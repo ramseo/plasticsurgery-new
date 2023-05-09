@@ -3276,7 +3276,7 @@ img {
 .accordion-toggle {
     position: relative;
     display: block;
-    padding: 5px 10px 5px 10px;
+    padding: 6px 10px 6px 10px;
     font-size: 18px;
     font-weight: 600;
     background: #999;
@@ -3305,6 +3305,10 @@ img {
     display: none;
     padding: 20px 0px 20px 0px;
     overflow: auto;
+}
+
+.accordion-content p {
+    font-size: 16px;
 }
 
 /* accodian css */
