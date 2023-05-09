@@ -6974,7 +6974,197 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Body Lift Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Body Lift?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                An ideal candidate for Body Lift in <?= $city ?> should satisfy the following criteria:
+                            </p>
+                            <ul>
+                                <li>
+                                    Looseness of soft tissue in single or several locations across the body
+                                </li>
+                                <li>
+                                    Weight loss in excess, mostly due to bariatric surgery
+                                </li>
+                                <li>
+                                    Healthy body, free of any medical ailments that could impair healing
+                                </li>
+                                <li>
+                                    A non-smoker and non-alcoholic person
+                                </li>
+                                <li>
+                                    Do not have any plans for pregnancy anytime soon
+                                </li>
+                                <li>
+                                    Living a healthy lifestyle and having a balanced meal
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of a Body Lift?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The average cost of a Body Lift procedure in <?= $city ?> varies from 2,00,000 INR to 3,00,000 INR. It could fluctuate depending on various factors like your weight, height, the extent of weight loss, need for liposuction, overall health condition, and so on.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Body Lift?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Excessive scarring
+                                </li>
+                                <li>
+                                    Chances of Bleeding, eventually leading to hematoma
+                                </li>
+                                <li>
+                                    Risk of infection, fever, and red skin (cellulitis) in large portions
+                                </li>
+                                <li>
+                                    Bad healing of the wound
+                                </li>
+                                <li>
+                                    Would dehiscence or breakdown
+                                </li>
+                                <li>
+                                    Extrusion of sutures from the skin, causing irritation; needs removal
+                                </li>
+                                <li>
+                                    Loss of sensation in the treated area
+                                </li>
+                                <li>
+                                    Asymmetrical fullness, bulges, and other contour irregularities
+                                </li>
+                                <li>
+                                    Swelling and discolouration of the skin
+                                </li>
+                                <li>
+                                    Allergic reaction to anesthesia or surgery materials like tape, gloves, suture materials, etc.
+                                </li>
+                                <li>
+                                    Possibility of revisional surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Body Lift?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                You can experience the best results from a Body Lift surgery in <?= $city ?> only after you have gained the target weight, which remains intact for at least 6 months. Weight fluctuation can impact the surgery negatively. To opt for a Body Lift, the patient should have completed at least the age of 18.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before the Body Lift Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Quit smoking and drinking alcohol at least 2 weeks before the surgery
+                                </li>
+                                <li>
+                                    Undergo medical tests and keep your medical records handy for the surgeon to check
+                                </li>
+                                <li>
+                                    Make sure to lose 30% to 50% of your maximum weight before the surgery
+                                </li>
+                                <li>
+                                    requirements
+                                </li>
+                                <li>
+                                    Bring medications and compression garments with you
+                                </li>
+                                <li>
+                                    Arrange for someone to take you back home and help you with daily chores up to a few days after the surgery
+                                </li>
+                                <li>
+                                    Avoid taking herbal supplements, aspirin, and various anti-inflammatory drugs as they can pose bleeding risks
+                                </li>
+                                <li>
+                                    keep yourself hydrated before and after the procedure in <?= $city ?>
+                                </li>
+                                <li>
+                                    Do not eat anything at least 8 hours before the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Body Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    On the day of surgery, visit the clinic with a calm mind
+                                </li>
+                                <li>
+                                    The anesthesia expert will inquire if you have an allergic behaviour to anesthesia and will adjust the dose accordingly
+                                </li>
+                                <li>
+                                    Depending on whether you are undergoing upper or lower Body Lift, the doctor will perform the necessary job
+                                </li>
+                                <li>
+                                    Usually, the surgery takes around 4-8 hours to complete under the influence of general anesthesia
+                                </li>
+                                <li>
+                                    Surgeons could also perform other surgeries like tummy tuck, arm lift, or arm lift in conjunction with the Body Lift procedure in <?= $city ?>
+                                </li>
+                                <li>
+                                    You can get back to work in 2-3 weeks after the surgery and can do daily chores within 4-6 weeks
+                                </li>
+                                <li>
+                                    You could expect the surgeon to provide several instructions for a quick and satisfying recovery.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Body Lift?
                     </p>
                     <p>
@@ -7107,7 +7297,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <li>
                             You could expect the surgeon to provide several instructions for a quick and satisfying recovery.
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             <?php } elseif ($surgery_str == "arm lift") { ?>
                 <div class="col padd-null">
@@ -7157,7 +7347,182 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Arm Lift Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Arm Lift Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Abiding by the following points will make you a suitable candidate for Arm Lift Surgery in <?= $city ?>:
+                            </p>
+                            <ul>
+                                <li>
+                                    You are an adult having considerable laxity in the upper arm skin
+                                </li>
+                                <li>
+                                    You have lost weight significantly, which has caused loose hanging skin
+                                </li>
+                                <li>
+                                    You are an adult with a stable weight irrespective of your age
+                                </li>
+                                <li>
+                                    You are not overweight
+                                </li>
+                                <li>
+                                    You are a healthy person with no medical problem that could affect healing or enhance surgery risks
+                                </li>
+                                <li>
+                                    You don’t smoke or drink alcohol
+                                </li>
+                                <li>
+                                    You can maintain a healthy lifestyle with a proper diet
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of Arm Lift Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The average cost of Arm Lift surgery in <?= $city ?> may be in the range of 1,00,000 INR to 1,50,000 INR. Much will depend on the facilities the patient has opted for. This cost for consultation, medicine costs, and other external support needed for recovery will be additional.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Arm Lift Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Asymmetry in the appearance of arms
+                                </li>
+                                <li>
+                                    Excessive or unusual scarring
+                                </li>
+                                <li>
+                                    Persistent bleeding
+                                </li>
+                                <li>
+                                    Damage to the blood vessel, nerves, or muscles
+                                </li>
+                                <li>
+                                    Infection in the surgical site
+                                </li>
+                                <li>
+                                    Arm stiffness
+                                </li>
+                                <li>
+                                    Seroma or accumulation of fluids in the arm, which can be drained with the help of a needle
+                                </li>
+                                <li>
+                                    Breakdown of the wound, which will require 2-3 additional weeks to heal
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Arm Lift Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                If you are experiencing age-related changes in your arms or loose skin due to excessive weight loss, Arm Lift surgery in <?= $city ?> could be a suitable choice to deal with your arm laxity condition. Winter is the best time to undergo this surgery. All you need is to be an adult to opt for the Arm Lift procedure in <?= $city ?>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before the Arm Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Consult your surgeon about the concerns related to Arm Lift
+                                </li>
+                                <li>
+                                    Stop eating and drinking at least 8 hours before the procedure
+                                </li>
+                                <li>
+                                    Arrange for loose and comfortable clothing at home in advance
+                                </li>
+                                <li>
+                                    Go for a medical exam to ensure your health is perfect before the surgery
+                                </li>
+                                <li>
+                                    Stop smoking several weeks earlier to avoid slow wound healing due to smoking-related health hassles
+                                </li>
+                                <li>
+                                    Adjust your existing medications after consultation with the doctor
+                                </li>
+                                <li>
+                                    Avoid the consumption of aspirin, anti-inflammatory drugs, or health supplements as they can result in excessive bleeding
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Arm Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Cooperate with the staff at the clinic in executing the necessary formalities
+                                </li>
+                                <li>
+                                    The anesthesia expert may ask you about your behaviour toward anesthesia and administer the dose accordingly
+                                </li>
+                                <li>
+                                    The surgeon in <?= $city ?> may take around 3-4 hours to complete Brachioplasty. Due to the effect of anesthesia, you may not realize the lapse in time.
+                                </li>
+                                <li>
+                                    You will get incisions on the back or inside your arm depending on the choice of surgeon. Next, the excision of excess fat will take place via Liposuction
+                                </li>
+                                <li>
+                                    You may get back to work after the surgery in <?= $city ?> within just a week if you have a sedentary job, but if it demands too much physical exertion, the surgeon would recommend resting for around two weeks after the surgery
+                                </li>
+                                <li>
+                                    You should have realistic goals in your mind regarding the surgery.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Arm Lift Surgery?
                     </p>
                     <p>
@@ -7275,7 +7640,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <li>
                             You should have realistic goals in your mind regarding the surgery.
                         </li>
-                    </ul>
+                    </ul> -->
 
                 </div>
             <?php } elseif ($surgery_str == "thigh lift") { ?>
@@ -7318,7 +7683,203 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Thigh Lift Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Thigh Lift?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                People in <?= $city ?> wishing to be a Thigh Lift candidate need to satisfy the following conditions:
+                            </p>
+                            <ul>
+                                <li>
+                                    Have a relatively stable weight
+                                </li>
+                                <li>
+                                    Extra soft tissue along the inner thigh or the outer thigh
+                                </li>
+                                <li>
+                                    Good health overall
+                                </li>
+                                <li>
+                                    No medical condition that could impair healing or increase risks
+                                </li>
+                                <li>
+                                    Healthy diet
+                                </li>
+                                <li>
+                                    Routine of regular exercise
+                                </li>
+                                <li>
+                                    Non-smoker and non-alcoholic
+                                </li>
+                                <li>
+                                    Wish to improve the appearance of thighs
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of a Thigh Lift?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The cost of a Thigh Lift surgery in <?= $city ?> may vary between 70,000 INR-1,50,000 INR. Several factors can have an impact on the cost of Thigh Lift surgery. These may include the price of the surgical facilities, the complexity faced during the surgery, the experience of the surgeon, the cost of anesthesia and medicines, and so on.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Thigh Lifts?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Allergic reaction to anesthesia
+                                </li>
+                                <li>
+                                    Infection and bleeding in the incision site
+                                </li>
+                                <li>
+                                    Chances of scarring
+                                </li>
+                                <li>
+                                    Pain in rare instances after the effect of anesthesia subsides
+                                </li>
+                                <li>
+                                    Formation of blood clots in the legs, leading to Deep Vein Thrombosis or DVT
+                                </li>
+                                <li>
+                                    Formation of seroma or blood accumulation in a dead space after the surgery
+                                </li>
+                                <li>
+                                    Dead fatty tissue beneath the skin or fat necrosis
+                                </li>
+                                <li>
+                                    Bruising and swelling in the incision site
+                                </li>
+                                <li>
+                                    Need for a correction surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for a Thigh Lift?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                If you want to get smoother skin and well-proportioned contours on your thighs, a Thigh Lift is the best option. Anyone who is more than 18 years old and has a disease-free body can go for Thigh Lift in <?= $city ?>.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before the Thigh Lift Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Get your medical evaluation and complete body check-up before the surgery
+                                </li>
+                                <li>
+                                    Avoid consuming anti-inflammatory drugs, health supplements, or Aspirin to avoid an increase in bleeding
+                                </li>
+                                <li>
+                                    Show the medication lists to the surgeon you are currently taking to avert confusion
+                                </li>
+                                <li>
+                                    Take off contact lenses, nail polish, makeup, and deodorant
+                                </li>
+                                <li>
+                                    Avoid
+                                </li>
+                                <li>
+                                    Keep yourself hydrated with water at least 2 weeks before the surgery in <?= $city ?>
+                                </li>
+                                <li>
+                                    Avoid eating or drinking around 8 hours before the surgery.
+                                </li>
+                                <li>
+                                    Quit smoking or alcohol consumption to avoid any complications during or after the surgery
+                                </li>
+                                <li>
+                                    Arrange for someone to help you in the hospital, drive you home and assist in your daily chores after the surgery.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Thigh Lift surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    Visit the clinic or hospital with a cool and composed mind
+                                </li>
+                                <li>
+                                    Discuss your concerns with the <?= $city ?> surgeon in a candid direct consultation
+                                </li>
+                                <li>
+                                    The anesthesiologist would ask about your reaction to anesthesia and will administer the dose accordingly
+                                </li>
+                                <li>
+                                    You could expect the surgeon to make an incision and remove the fat and excess skin from the incision site
+                                </li>
+                                <li>
+                                    As a result of the successful surgery, you could expect tight skin, enhanced leg contour, and better skin elasticity
+                                </li>
+                                <li>
+                                    The entire procedure will complete in around 2-3 hours
+                                </li>
+                                <li>
+                                    Depending on your response to the Thigh Lift, you may have to stay in the hospital for a few days, or as recommended by your surgeon in <?= $city ?>
+                                </li>
+                                <li>
+                                    You can expect around 4-6 weeks from the day of the Thigh Lift surgery to heal completely
+                                </li>
+                                <li>
+                                    The surgeon could advise you to restrict your daily activities for around 2 weeks and avoid strenuous activities for at least 2 weeks
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Thigh Lift?
                     </p>
                     <p>
@@ -7457,7 +8018,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <li>
                             The surgeon could advise you to restrict your daily activities for around 2 weeks and avoid strenuous activities for at least 2 weeks
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             <?php } elseif ($surgery_str == "body contouring") { ?>
                 <div class="col padd-null">
@@ -7580,7 +8141,185 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p class="identity">
                         FAQs on Hair Transplant Surgery in <?= $city ?>
                     </p>
-                    <p class="cosmetic-faq-list">
+                    <!-- ACCODION -->
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                1. Are you a good candidate for Hair Transplant surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                If you abide by the following criteria, you will be an ideal candidate for hair transplant surgery in <?= $city ?>:
+                            </p>
+                            <ul>
+                                <li>
+                                    You have been losing your hair out of male pattern baldness for around 5 years or more
+                                </li>
+                                <li>
+                                    You have advanced to Class 3 or beyond on the Norwood Scale.
+                                </li>
+                                <li>
+                                    Your hair at the back and sides of your scalp have a healthy growth, good enough to serve as the donor zone
+                                </li>
+                                <li>
+                                    You have Scarring alopecia – a hair loss type resulting due to the damage of hair follicles
+                                </li>
+                                <li>
+                                    You have suffered hair loss due to scalp injuries, scarring, or some cosmetic surgery procedures
+                                </li>
+                                <li>
+                                    You have good health overall and a healthy scalp
+                                </li>
+                                <li>
+                                    You have reasonable expectations with the surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                2. What is the cost of a Hair Transplant?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                The average cost of Hair Transplant Surgery in <?= $city ?> depends largely on the number of grafts. For example, the cost of the procedure per 2000 grafts lies in the range of 55,000 INR to 80,000 INR. For a Hair Transplant involving 5000 grafts, the average cost is 1,00,000 INR – 1,40,000 INR and beyond.
+                            </p>
+                            <p>
+                                Usually, the cost per graft is 40 INR to 100 INR. The cost also depends on various other factors like baldness level, number of sessions, the technique used (FUT or FUE), availability of graft donor area, the surgeon, and the clinical set up among others.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                3. What are the risks related to Hair Transplant?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Usually, Hair Transplant surgery in <?= $city ?> is a safe procedure to help your hair restoration goals. It may however accompany several risks at times, such as:
+                            </p>
+                            <ul>
+                                <li>
+                                    Pain after the surgery
+                                </li>
+                                <li>
+                                    Unexpected outcomes
+                                </li>
+                                <li>
+                                    Possibility of bleeding, infection, itching, or scarring
+                                </li>
+                                <li>
+                                    Chances of wound dehiscence or skin necrosis
+                                </li>
+                                <li>
+                                    Scalp swelling
+                                </li>
+                                <li>
+                                    Lack of sensation in the treated scalp areas
+                                </li>
+                                <li>
+                                    Need for a revision surgery
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                4. When can you go for Hair Transplant?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                There is no fixed age to undergo hair transplant surgery, but surgeons mostly recommend the patients be at least 21 years old to opt for it. Moreover, if you have just started noticing hair fall and you have not gone completely bald yet, this is the right time to go for the Hair transplant from a clinic in <?= $city ?> or elsewhere. At this specific stage, the surgeon can use your existing hair for transplantation in the early restoration phases.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                5. What are the things to do before Hair Transplant Surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <p>
+                                Before going for hair transplant surgery in <?= $city ?>, you need to clear all the doubts in your mind regarding the procedure. Consultation with your surgeon will be ideal to help you in this regard. Here are some other things to do before undergoing the surgery
+                            </p>
+                            <ul>
+                                <li>
+                                    Be ready with the reports of the routine blood tests like CBC, HCV, ECG, etc. instructed by the surgeon.
+                                </li>
+                                <li>
+                                    If you are a smoker or an alcoholic, stop consuming them at least 2 weeks before the treatment
+                                </li>
+                                <li>
+                                    Inform the doctor about any medication that you are taking currently, to stop or adjust it accordingly
+                                </li>
+                                <li>
+                                    Avoid taking spicy food the night prior to the surgery.
+                                </li>
+                                <li>
+                                    Wash your hair for at least two days with shampoo before going for hair transplantation
+                                </li>
+                                <li>
+                                    Let your doctor know if you have allergic behaviour to any particular medicine or anesthesia.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="accordion-container">
+                        <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                            <span>
+                                6. What to expect on the day of Hair Transplant surgery?
+                            </span>
+                            <span class="accordion-icon">
+                                <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                        <div class="accordion-content">
+                            <ul>
+                                <li>
+                                    On the day of the hair transplantation surgery in <?= $city ?>, come with a prepared and stress-free mind.
+                                </li>
+                                <li>
+                                    Cooperate with the clinic staff in completing all the pre-operative formalities
+                                </li>
+                                <li>
+                                    The surgeon can choose to keep you awake during the entire procedure and administer anesthesia to numb your scalp
+                                </li>
+                                <li>
+                                    Be patient enough to bear the lengthy process of hair transplantation, as it can take around four to eight hours for a single session to complete
+                                </li>
+                                <li>
+                                    In case of a large volume of hair transplantation, you may have to revisit the clinic and devote a few more hours the next day to undergo the remaining treatment.
+                                </li>
+                                <li>
+                                    Overall, you should have realistic expectations with the hair transplant surgery in <?= $city ?>.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- ACCODION -->
+                    <!-- <p class="cosmetic-faq-list">
                         1. Are you a good candidate for Hair Transplant surgery?
                     </p>
                     <p>
@@ -7701,7 +8440,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <li>
                             Overall, you should have realistic expectations with the hair transplant surgery in <?= $city ?>.
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
             <?php } elseif ($surgery_str == "men and plastic surgery") { ?>
                 <div class="col padd-null">
