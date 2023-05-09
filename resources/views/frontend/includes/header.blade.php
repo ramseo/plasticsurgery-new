@@ -87,6 +87,11 @@ $city = getData('cities');
                                                 <?= $c_item['title'] ?>
                                             </a>
                                         <?php } ?>
+                                        <?php if ($item->title == "Clinics") { ?>
+                                            <a class="dropdown-item" href="<?= url("/") . "/clinics" ?>">
+                                                View All Clinics
+                                            </a>
+                                        <?php } ?>
                                     </div>
                                 <?php } ?>
                             </li>
