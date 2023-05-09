@@ -69,7 +69,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-10 mob-text-center-cls">
+                    <div class="col-lg-10 mob-text-center-cls padd-bottom-25">
                         <p>
                             <strong>
                                 <i>Plastic Surgeon, M.S., M.Ch.</i>
@@ -86,12 +86,14 @@
                         <p class="doc-details-cities">
                             <?= $citiesStr ?> India.
                         </p>
-                        <p>
+                        <!-- <p>
                             <strong>Email:</strong>
-                            <a href="mailto:<?= $doctor_details->email ?>">
-                                <?= $doctor_details->email ?>
+                            <a href="mailto:<? //= $doctor_details->email 
+                                            ?>">
+                                <? //= $doctor_details->email 
+                                ?>
                             </a>
-                        </p>
+                        </p> -->
                     </div>
                 </div>
                 <p class="identity">
@@ -298,7 +300,7 @@
 
 <?php if ($all_result_category->isNotEmpty()) { ?>
     <!-- before after results -->
-    <section class="before-after-cls" >
+    <section class="before-after-cls">
         <div class="container-fluid mtab pt-4 pb-4" style="background-color:#f8f8f8">
             <div class="container">
                 <p class="identity text-center">
