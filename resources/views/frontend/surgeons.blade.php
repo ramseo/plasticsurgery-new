@@ -25,11 +25,10 @@
             if ($doctors) {
                 foreach ($doctors as $doc_item) {
                     $city = getCitiesById($doc_item->city, "html");
-                    // dd($city);
             ?>
                     <div class="col-lg-3 col-md-6">
                         <div class="card">
-                            <a target="_blank" href="<?= url("surgeon/$doc_item->username") ?>">
+                            <a target="_blank" href="<?= url("surgeon/dr-$doc_item->username") ?>">
                                 <?php if (file_exists(public_path() . '/storage/user/profile/' . $doc_item->avatar)) { ?>
                                     <img src="<?= asset('/storage/user/profile/' . $doc_item->avatar) ?>" class="card-img-top" alt="doctor alt" style="width:100%" />
                                 <?php } else { ?>
@@ -37,7 +36,7 @@
                                 <?php } ?>
                             </a>
                             <div class="card-body doctors-list-cls">
-                                <a target="_blank" href="<?= url("surgeon/$doc_item->username") ?>">
+                                <a target="_blank" href="<?= url("surgeon/dr-$doc_item->username") ?>">
                                     <h4 class="card-title">
                                         Dr. <?= $doc_item->first_name . " " . $doc_item->last_name ?>
                                     </h4>
@@ -52,7 +51,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                                <a target="_blank" href="<?= url("surgeon/$doc_item->username") ?>" class="surgeons-flex">
+                                <a target="_blank" href="<?= url("surgeon/dr-$doc_item->username") ?>" class="surgeons-flex">
                                     <button class="btn btn-primary">Consult Now</button>
                                     <button class="btn btn-primary">Know More</button>
                                 </a>

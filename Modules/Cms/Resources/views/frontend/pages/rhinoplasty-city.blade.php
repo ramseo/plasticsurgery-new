@@ -39,7 +39,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 <div class="col-12 doc-flex-cls doctor-box-shadow">
                                     <div class="col-lg-4 padd-null">
                                         <div class="doc-img-div">
-                                            <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
+                                            <a target="_blank" href="<?= url("surgeon/dr-$item->username") ?>">
                                                 <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
                                                     <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" alt="doctor img" />
                                                 <?php } else { ?>
@@ -81,7 +81,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                     </div>
                                     <div class="col-lg-8 doc-details-sec padd-null">
                                         <div class="doc-name">
-                                            <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
+                                            <a target="_blank" href="<?= url("surgeon/dr-$item->username") ?>">
                                                 Dr. <?= Str::words($item->first_name . " " . $item->last_name, '2') . ", MD"  ?>
                                             </a>
                                         </div>
@@ -96,7 +96,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                             <?= getCitiesById($item->city, 'html') ?>
                                         </div>
                                         <div class="doc-view-btn">
-                                            <a target="_blank" href="<?= url("surgeon/$item->username") ?>">
+                                            <a target="_blank" href="<?= url("surgeon/dr-$item->username") ?>">
                                                 view full profile
                                             </a>
                                         </div>
