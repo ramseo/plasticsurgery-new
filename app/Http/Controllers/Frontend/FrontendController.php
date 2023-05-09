@@ -71,6 +71,10 @@ class FrontendController extends Controller
     {
         // get doctor & city
         $doctor_details = DB::table('users')->select('*')->where('username', $slug)->get()->first();
+        if (!$doctor_details) {
+            return abort(404);
+        }
+
         $citiesStr = getCitiesById($doctor_details->city, "html");
         $citiesStrMeta = getCitiesById($doctor_details->city, "meta");
         // get doctor & city
