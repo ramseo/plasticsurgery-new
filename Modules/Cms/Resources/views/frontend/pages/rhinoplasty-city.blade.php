@@ -93,7 +93,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                         </div>
                                         <div class="doc-city">
                                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                            <?= getCitiesById($item->city, 'html') ?>
+                                            <?= getCitiesById($item->city, 'pipe') ?>
                                         </div>
                                         <div class="doc-view-btn">
                                             <a target="_blank" href="<?= url("surgeon/dr-$item->username") ?>">

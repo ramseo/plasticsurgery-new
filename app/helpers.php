@@ -961,12 +961,14 @@ if (!function_exists('date_today')) {
     function getCitiesById($jsonData, $dataType)
     {
         $html = "";
-        if ($dataType == "html") {
-            $array = json_decode($jsonData, true);
-            $data = DB::table('cities')->select('name')->whereIn('id', $array)->get()->toArray();
+        $array = json_decode($jsonData, true);
 
-            if ($data) {
-                $numItems = count($data);
+        $data = DB::table('cities')->select('name')->whereIn('id', $array)->get()->toArray();
+        if ($data) {
+            $numItems = count($data);
+
+            if ($dataType == "html") {
+
                 $i = 0;
                 foreach ($data as $item) {
                     if (++$i === $numItems) {
@@ -976,12 +978,20 @@ if (!function_exists('date_today')) {
                     }
                     $html .= "<a target='_blank' href='" . url('/') . "/" . strtolower($item->name) . "'>" . $item->name . "</a>" . $delimiter;
                 }
+            } elseif ($dataType == "pipe") {
+                $i = 0;
+                foreach ($data as $item) {
+                    if (++$i === $numItems) {
+                        $delimiter = "";
+                    } else {
+                        $delimiter = " | ";
+                    }
+                    $html .= "<a target='_blank' href='" . url('/') . "/" . strtolower($item->name) . "'>" . $item->name . "</a>" . $delimiter;
+                }
+            } else {
+                $array_column = array_column($data, "name");
+                $html = implode(",", $array_column);
             }
-        } else {
-            $array = json_decode($jsonData, true);
-            $data = DB::table('cities')->select('name')->whereIn('id', $array)->get()->toArray();
-            $array_column = array_column($data, "name");
-            $html = implode(",", $array_column);
         }
 
         return $html;
