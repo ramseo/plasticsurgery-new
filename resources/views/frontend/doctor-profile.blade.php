@@ -28,7 +28,7 @@
                     </span>
                 </p>
                 <div class="row">
-                    <div class="col-lg-2">
+                    <div class="col-lg-2 doc-mar-cls">
                         <?php if (file_exists(public_path() . '/storage/user/profile/' . $doctor_details->avatar)) { ?>
                             <img src="<?= asset('/storage/user/profile/' . $doctor_details->avatar) ?>" alt="doctor img" class="doc-img-cls">
                         <?php } else { ?>
@@ -69,7 +69,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-10 mob-text-center-cls padd-bottom-25">
+                    <div class="col-lg-10 mob-text-center-cls">
                         <p>
                             <strong>
                                 <i>Plastic Surgeon, M.S., M.Ch.</i>
