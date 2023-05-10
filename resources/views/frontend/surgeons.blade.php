@@ -24,7 +24,7 @@
             <?php
             if ($doctors) {
                 foreach ($doctors as $doc_item) {
-                    $city = getCitiesById($doc_item->city, "html");
+                    $city = getCitiesById($doc_item->city, "pipe");
             ?>
                     <div class="col-lg-3 col-md-6">
                         <div class="card">
