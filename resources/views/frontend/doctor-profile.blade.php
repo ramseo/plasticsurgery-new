@@ -86,14 +86,6 @@
                         <p class="doc-details-cities">
                             <?= $citiesStr ?> India.
                         </p>
-                        <!-- <p>
-                            <strong>Email:</strong>
-                            <a href="mailto:<? //= $doctor_details->email 
-                                            ?>">
-                                <? //= $doctor_details->email 
-                                ?>
-                            </a>
-                        </p> -->
                     </div>
                 </div>
                 <p class="identity">
@@ -147,23 +139,24 @@
     </div>
 </div>
 
-<?php if ($reviews->isNotEmpty()) { ?>
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col mob-padd-null">
-                    <p class="identity">
-                        Latest Reviews (<?= count($reviews) ?>)
-                    </p>
 
-                    <div class="pull-right profile-write-review">
-                        <a href="#" data-toggle="modal" data-target="#reviewModal">
-                            Write a Review
-                            <i class="fa fa-pencil" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="clearfix"></div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col mob-padd-null">
+                <p class="identity">
+                    Latest Reviews (<?= count($reviews) ?>)
+                </p>
 
+                <div class="pull-right profile-write-review">
+                    <a href="#" data-toggle="modal" data-target="#reviewModal">
+                        Write a Review
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+
+                <?php if ($reviews->isNotEmpty()) { ?>
                     <div class="detail-review-body">
                         <?php
                         foreach ($reviews as $rev) {
@@ -288,15 +281,13 @@
                                 </div>
                                 <!-- admin reply -->
                             </div>
-
                         <?php } ?>
                     </div>
-
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>
-<?php } ?>
+</div>
 
 <?php if ($all_result_category->isNotEmpty()) { ?>
     <!-- before after results -->
