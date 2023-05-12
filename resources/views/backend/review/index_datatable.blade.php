@@ -112,7 +112,7 @@
                             <th>
                                 Phone
                             </th>
-                            <th width="25%" class="text-center">
+                            <th width="30%" class="text-center">
                                 Action
                             </th>
                         </tr>
