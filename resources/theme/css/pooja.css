@@ -155,7 +155,8 @@
 
 .card img {
     padding: 15px;
-    min-height: 292px;
+    height: 292px;
+    /* min-height: 292px; */
 }
 
 .common-card .text-col {
