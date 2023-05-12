@@ -145,7 +145,7 @@
         <div class="row">
             <div class="col mob-padd-null">
                 <p class="identity">
-                    Latest Reviews (<?= count($reviews) ?>)
+                    Latest Reviews (<?= ($reviews->isNotEmpty()) ? count($reviews) : 0 ?>)
                 </p>
 
                 <div class="pull-right profile-write-review">
