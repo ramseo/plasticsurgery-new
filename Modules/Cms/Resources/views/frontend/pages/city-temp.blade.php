@@ -413,8 +413,8 @@
         <div class="tab-content">
             <div id="home" class="container tab-pane active in">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="img/face.jpg" style="width:100%">
+                    <div class="col-lg-6 col-md-6 col-sm-6 padd-null">
+                        <img src="<?= asset('img/face.jpg') ?>" style="width:100%">
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="row">
