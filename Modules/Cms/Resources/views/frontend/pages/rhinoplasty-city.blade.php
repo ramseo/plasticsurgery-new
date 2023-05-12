@@ -82,7 +82,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                     <div class="col-lg-8 doc-details-sec padd-null">
                                         <div class="doc-name">
                                             <a target="_blank" href="<?= url("surgeon/dr-$item->username") ?>">
-                                                Dr. <?= Str::words($item->first_name . " " . $item->last_name, '2') . ", MD"  ?>
+                                                Dr. <?= $item->first_name . " " . $item->last_name . ", MD" ?>
                                             </a>
                                         </div>
                                         <div class="doc-tagline">
