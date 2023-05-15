@@ -1391,9 +1391,9 @@ footer img {
 
 .cit p {
     color: #fff;
-    font-size: 38px;
-    padding-top: 11px;
-    padding-bottom: 11px;
+    font-size: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .cit {
@@ -1688,12 +1688,6 @@ footer img {
         margin: 3px;
     }
 
-
-    .cit p {
-        font-size: 36px;
-        padding-top: 23px;
-    }
-
     .card {
         margin-bottom: 10px;
     }
@@ -1898,15 +1892,6 @@ footer img {
         padding: 0.25rem 1.25rem !important;
     }
 
-    /*.card ul {*/
-    /*    list-style: none;*/
-    /*    margin-left: -30px;*/
-    /*}*/
-
-    .card-body .card-title {
-        padding-right: 24px;
-    }
-
 }
 
 @media only screen and (max-width:414px) {
@@ -1914,11 +1899,6 @@ footer img {
 
     .card-body {
         margin-left: 55px;
-    }
-
-
-    .card img {
-        margin-bottom: 14px;
     }
 
     .wrape h4 {
@@ -2242,6 +2222,10 @@ footer img {
     .cities h3 {
         height: auto;
         padding: 12px 26px;
+    }
+
+    .ico h6 {
+        font-size: 18px;
     }
 
 }
@@ -3319,4 +3303,8 @@ img {
 
 .new-doctor .col-lg-3.col-md-6 {
     margin: 30px 0 0 0;
+}
+
+.footer-list span {
+    color: #fff;
 }

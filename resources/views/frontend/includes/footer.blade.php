@@ -101,15 +101,24 @@
                <ul class="footer-list">
                   <?php
                   $citiesArr = citiesArr();
+                  $i = 0;
+                  $len = count($citiesArr);
+
                   if ($citiesArr) {
                      foreach ($citiesArr as $city) {
+                        $slash = "<span>|</span>";
+                        if ($i == ($len - 1)) {
+                           $slash = "";
+                        }
                   ?>
                         <li>
                            <a href="<?= url(strtolower($city)) ?>">
                               <?= ucwords($city) ?>
-                           </a>|
+                           </a>
                         </li>
+                        <?= $slash ?>
                   <?php
+                        $i++;
                      }
                   }
                   ?>
@@ -126,8 +135,10 @@
          Copyright © <?= date('Y') ?> - CosmeticSurgery.in - All rights reserved
       </div>
       <div class="floatt-right">
-         <a href="<?= url('disclaimer') ?>">Disclaimer |</a>
-         <a href="<?= url('privacy') ?>">Privacy Policy |</a>
+         <a href="<?= url('disclaimer') ?>">Disclaimer</a>
+         <span>|</span>
+         <a href="<?= url('privacy') ?>">Privacy Policy</a>
+         <span>|</span>
          <a href="<?= url('terms') ?>">Terms</a>
       </div>
    </div>
