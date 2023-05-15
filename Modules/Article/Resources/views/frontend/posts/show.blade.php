@@ -8,6 +8,18 @@
 @endsection
 
 @section('content')
+<section id="page-banner">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="banner-container">
+                <div class="vendor-img">
+                    <img src="<?= asset('img/blog.jpg') ?>" alt="image alt" class="img-fluid filter-cls margin-img-0">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="breadcrumb-section">
     <div class="container-fluid">
         <div class="row">
@@ -23,6 +35,8 @@
         </div>
     </div>
 </section>
+
+
 <article>
     <div class="container-fluid">
         <div class="row">
@@ -400,7 +414,7 @@ if ($getMorePosts) {
                         }
                     }
                 ?>
-                 
+
                     <div class="col-sm-3">
                         <div class="maim-more-post">
                             <a href="<?= route("frontend.posts.show", [$item->slug]) ?>">
