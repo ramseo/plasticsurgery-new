@@ -3330,10 +3330,56 @@ img {
     padding: 30px 0 0 0;
 }
 
+.author {
+    padding: 0 0 10px 0;
+}
+
 .author span {
     font-weight: 600;
 }
 
 .post-item-wrap .text-col .text.margin-null {
     font-weight: 400 !important;
+}
+
+.blog-intro p {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 0 15px 0;
+    margin: 0;
+}
+
+.desc-top p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.post-social-icon li {
+    display: inline-block;
+    margin: 0;
+    font-size: 20px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background: #1877F2;
+    position: relative;
+}
+
+.post-social-icon li i {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.post-social-icon li:first-child {
+    background-color: transparent;
+}
+
+.post-social-icon li:first-child i {
+    color: #000;
 }

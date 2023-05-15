@@ -60,8 +60,6 @@
                                 <p class="text margin-null">
                                     {{Str::words($item->intro, '15')}}
                                 </p>
-                            </div>
-                            <div class="post-author-date">
                                 <div class="author">
                                     <span>
                                         Author:

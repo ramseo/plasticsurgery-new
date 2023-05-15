@@ -51,11 +51,11 @@
                 </div>
             </div>
             <div class="col-xs-6 col-sm-6 blog-detail-main-col">
-                <h1 class="display-3">
+                <h1 class="blog-detail-title">
                     {{$$module_name_singular->name}}
                 </h1>
                 <div class="blog-meta">
-                    <span class="">
+                    <span>
                         <i class="fa fa-user"></i>
                         <?= $$module_name_singular->author ?>
                     </span>
@@ -65,42 +65,10 @@
                         {{$$module_name_singular->published_at_formatted}}
                     </span>
                 </div>
-                <!-- <div class="blog-flex-cat"> 
-                    <span class="font-weight-bold">
-                        Category:
-                    </span>
-                    <a target="_blank" href="<? //= route('frontend.categories.show', [$$module_name_singular->category->slug]) 
-                                                ?>" class="badge badge-sm badge-warning text-uppercase px-3"><? //= $$module_name_singular->category_name 
-                                                                                                                ?></a>
-                </div> -->
-                <!-- Multiple Tags -->
-                <?php
-                // if ($$module_name_singular->tag_ids) {
-                //     $arr = json_decode($$module_name_singular->tag_ids);
-                //     $getPostTags = getSelectedTagVal($arr);
-                ?>
-                <!-- <div class="blog-flex-cat">
-                        <span class="font-weight-bold">
-                            Tags:
-                        </span>
-                        <?php
-                        // foreach ($getPostTags as $tag) {
-                        //     $tagSlug = $tag['slug'];
-                        ?>
-                            <a target="_blank" href="<? //= route('frontend.tags.show', [$tagSlug]) 
-                                                        ?>" class="badge badge-sm badge-warning text-uppercase px-3">
-                                <? //= $tag['name'] 
-                                ?>
-                            </a>
-                        <?php
-                        //   }
-                        ?>
-                    </div> -->
-                <?php // } 
-                ?>
-                <!-- Multiple Tags -->
                 <div class="blog-intro">
-                    {{$$module_name_singular->intro}}
+                    <p>
+                        {{$$module_name_singular->intro}}
+                    </p>
                 </div>
                 <!-- social icons -->
                 <ul class="post-social-icon">
@@ -109,22 +77,22 @@
                     </li>
                     <li>
                         <a href="https://www.facebook.com/sharer.php?u=<?= url()->current() ?>&t=<?= $$module_name_singular->name ?>" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
+                            <i class="fa fa-facebook-f"></i>
                         </a>
                     </li>
                     <li>
                         <a href="https://twitter.com/share?text=<?= $$module_name_singular->name ?>&url=<?= url()->current() ?>&hashtags=wed.in" target="_blank">
-                            <i class="fab fa-twitter"></i>
+                            <i class="fa fa-twitter"></i>
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?= url()->current() ?>&title=Post" target="_blank">
-                            <i class="fab fa-linkedin"></i>
+                            <i class="fa fa-linkedin"></i>
                         </a>
                     </li>
                     <li>
                         <a href="http://pinterest.com/pin/create/button/?url=<?= url()->current() ?>&description=Post" target="_blank">
-                            <i class="fab fa-pinterest"></i>
+                            <i class="fa fa-pinterest"></i>
                         </a>
                     </li>
                 </ul>

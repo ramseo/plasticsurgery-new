@@ -4,26 +4,9 @@
     padding-top: 130px;
 }
 
-.post-author-date {
-    display: flex;
-}
-
-.display-3 {
-    font-size: 3.0rem !important;
-}
-
 .post-social-icon {
     padding-top: 50px;
     padding-left: 0px;
-}
-
-.post-social-icon li {
-    display: inline-block;
-    padding: 0px 10px 5px 10px;
-    margin: 0;
-    font-size: 20px;
-    border-radius: 50px;
-    background: #2abfb7;
 }
 
 .bloggg {
@@ -53,10 +36,6 @@
     position: absolute;
     right: 92px;
     bottom: 150px;
-}
-
-.author {
-    padding-left: 18px;
 }
 
 .post-item-wrap::before {
