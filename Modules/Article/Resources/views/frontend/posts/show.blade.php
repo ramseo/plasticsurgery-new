@@ -368,9 +368,10 @@ if ($getMorePosts) {
 ?>
     <section id="more-blogs">
         <div class="container-fluid">
-            <h5 class="mb-4">
+            <p class="identity">
                 Recent Posts
-            </h5>
+            </p>
+
             <div class="row">
                 <?php
                 foreach ($getMorePosts as $item) {
