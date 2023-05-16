@@ -218,10 +218,10 @@
                 </div>
                 @endauth
                 @guest
-                <div class="col-12 col-sm-6 align-self-center padding-null">
+                <div class="col-12 col-sm-6 align-self-center padd-null">
                     <p>
                         <a href="{{route('login')}}?redirectTo={{url()->current()}}" class="btn btn-primary btn-block">
-                            <i class="fas fa-user-shield"></i>
+                            <i class="fa fa-user-shield"></i>
                             Login & Write comment
                         </a>
                     </p>
