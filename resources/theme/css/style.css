@@ -3403,3 +3403,7 @@ img {
     color: initial;
     text-decoration: none;
 }
+
+.card {
+    border-radius: 10px !important;
+}
