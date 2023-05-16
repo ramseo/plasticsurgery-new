@@ -1070,6 +1070,11 @@
         padding: 20px 0 20px 0;
     }
 
+    .post-social-icon {
+        padding-top: 15px;
+        text-align: center;
+    }
+
 }
 
 @media(min-width: 768px) and (max-width: 1199px) {
