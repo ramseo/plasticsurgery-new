@@ -109,59 +109,8 @@
         </div>
     </div>
 </div>
+
 <div class="row">
-    <!-- <div class="col-4">
-        <div class="form-group">
-            <?php
-            // $field_name = 'category_id';
-            // $field_lable = __("article::$module_name.$field_name");
-            // $field_relation = "category";
-            // $field_placeholder = __("Select an option");
-            // $required = "required";
-
-            ?>
-            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-            {{ html()->select($field_name, ($module_name_singular) ? optional($module_name_singular->$field_relation)->pluck('name', 'id'):'')->placeholder($field_placeholder)->class('form-control select2-category')->attributes(["$required"]) }}
-        </div>
-    </div> -->
-
-    <!-- Multiple Tags -->
-    <!-- <div class="col-4">
-        <div class="form-group tags-group">
-            <?php
-            // $field_name = 'tag_ids[]';
-            // $field_lable = __("article::$module_name.tag_ids");
-            // $field_relation = "tag_ids";
-            // $required = "";
-
-            // if (!$module_name_singular) {
-            ?>
-                {{ html()->label($field_lable, "tag_ids") }}
-                {{ html()->select($field_name, ($module_name_singular) ?optional($module_name_singular->$field_relation)->pluck('name', 'id'):'')->class('form-control select2-tags')->attributes(['multiple']) }}
-            <?php
-            // } else {
-            //     $getSelectedTagVal = getSelectedTagVal(json_decode($module_name_singular->tag_ids));
-            ?>
-                <label for="tag_ids">Tags</label>
-                <select name="tag_ids[]" class="form-control select2-tags" multiple>
-                    <?php
-                    // if ($getSelectedTagVal) {
-                    //     foreach ($getSelectedTagVal as $item) {
-                    ?>
-                            <option value="<? //= $item['id'] 
-                                            ?>" selected><? //= $item['name'] 
-                                                            ?></option>
-                    <?php
-                    //     }
-                    // }
-                    ?>
-                </select>
-            <?php // } 
-            ?>
-        </div>
-    </div> -->
-    <!-- Multiple Tags -->
-
     <div class="col-4">
         <div class="form-group">
             <?php
