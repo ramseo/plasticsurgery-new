@@ -393,7 +393,7 @@ if ($getMorePosts) {
                             </a>
                             <div class="item-name">
                                 <a href="<?= route("frontend.posts.show", [$item->slug]) ?>">
-                                    <?= $item->name ?>
+                                    <?= Str::words($item->name, 5) ?>
                                 </a>
                             </div>
                         </div>
