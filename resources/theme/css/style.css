@@ -3383,8 +3383,9 @@ img {
     color: #000;
 }
 
-.maim-more-post .item-name {
-    padding: 15px 10px 15px 10px;
+.maim-more-post {
+    box-shadow: 0 1px 4px 2px #dadada;
+    padding: 15px;
 }
 
 .maim-more-post .item-name a,
