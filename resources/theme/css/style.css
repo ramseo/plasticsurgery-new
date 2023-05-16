@@ -3409,7 +3409,21 @@ img {
     justify-content: space-between;
 }
 
-
 #commentForm {
     margin: 25px 0 0px 0;
+}
+
+.posts-next-prev a,
+.posts-next-prev a:hover {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.posts-next-prev a .post-prev {
+    padding-left: 5px;
+}
+
+.posts-next-prev a .post-next {
+    padding-right: 5px;
 }
