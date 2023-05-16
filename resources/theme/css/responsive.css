@@ -212,7 +212,7 @@
     }
 
     .common-card .text-col {
-        padding: 12px 0px;
+        padding: 12px 15px;
     }
 
     .common-card .title {
@@ -860,7 +860,6 @@
     }
 
     .vendor-img {
-        margin-top: 50px;
         height: auto;
         overflow: revert;
     }
@@ -1066,6 +1065,10 @@
 
     .d-flex.justify-content-center.w-100.mt-3 .pagination {
         justify-content: center;
+    }
+
+    .post-item-wrap {
+        padding: 20px 0 20px 0;
     }
 
 }
