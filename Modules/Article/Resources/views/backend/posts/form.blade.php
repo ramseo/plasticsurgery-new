@@ -163,21 +163,21 @@
     <!-- Multiple Tags -->
 
     <!-- Vendor type assignment -->
-    <div class="col-4">
+    <!-- <div class="col-4">
         <div class="form-group">
             <?php
-            $field_name = 'vendor_type';
-            $field_lable = __("article::$module_name.$field_name");
-            $field_placeholder = __("Select an option");
-            $required = "";
+            // $field_name = 'vendor_type';
+            // $field_lable = __("article::$module_name.$field_name");
+            // $field_placeholder = __("Select an option");
+            // $required = "";
 
-            $select_options_types = custom_array_coloum(getDataArray('types'), 'id', 'name');
+            // $select_options_types = custom_array_coloum(getDataArray('types'), 'id', 'name');
 
             ?>
             {{ html()->label($field_lable, $field_name) }}
             {{ html()->select($field_name, $select_options_types)->placeholder($field_placeholder)->class('form-control select2')->attributes(["$required"]) }}
         </div>
-    </div>
+    </div> -->
     <!-- vendor type assignment -->
 
     <div class="col-4">
@@ -197,22 +197,22 @@
             {{ html()->select($field_name, $select_options)->placeholder($field_placeholder)->class('form-control select2')->attributes(["$required"]) }}
         </div>
     </div>
-    <div class="col-4">
+    <!-- <div class="col-4">
         <div class="form-group">
             <?php
-            $field_name = 'is_featured';
-            $field_lable = __("article::$module_name.$field_name");
-            $field_placeholder = __("Select an option");
-            $required = "required";
-            $select_options = [
-                '1' => 'Yes',
-                '0' => 'No',
-            ];
+            // $field_name = 'is_featured';
+            // $field_lable = __("article::$module_name.$field_name");
+            // $field_placeholder = __("Select an option");
+            // $required = "required";
+            // $select_options = [
+            //     '1' => 'Yes',
+            //     '0' => 'No',
+            // ];
             ?>
             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
             {{ html()->select($field_name, $select_options)->placeholder($field_placeholder)->class('form-control select2')->attributes(["$required"]) }}
         </div>
-    </div>
+    </div> -->
 </div>
 
 <div class="row">
@@ -276,18 +276,19 @@
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
     </div>
-    <div class="col-2">
+    <!-- <div class="col-2">
         <div class="form-group">
             <?php
-            $field_name = 'order';
-            $field_lable = __("article::$module_name.$field_name");
-            $field_placeholder = $field_lable;
-            $required = "";
+            // $field_name = 'order';
+            // $field_lable = __("article::$module_name.$field_name");
+            // $field_placeholder = $field_lable;
+            // $required = "";
             ?>
             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
-    </div>
+    </div> -->
+
 </div>
 <div class="row">
     <div class="col-12 col-sm-6">
@@ -302,35 +303,33 @@
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
     </div>
-    <div class="col-12 col-sm-6">
+    <!-- <div class="col-12 col-sm-6">
         <div class="form-group">
             <?php
-            $field_name = 'meta_og_image';
-            $field_lable = __("article::$module_name.$field_name");
-            $field_placeholder = $field_lable;
-            $required = "";
+            // $field_name = 'meta_og_image';
+            // $field_lable = __("article::$module_name.$field_name");
+            // $field_placeholder = $field_lable;
+            // $required = "";
             ?>
             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
-    </div>
+    </div> -->
 </div>
-<div class="row">
+<!-- <div class="row">
     <div class="col-12">
         <div class="form-group">
             <?php
-            $field_name = 'meta_og_url';
-            $field_lable = __("article::$module_name.$field_name");
-            $field_placeholder = $field_lable;
-            $required = "";
+            // $field_name = 'meta_og_url';
+            // $field_lable = __("article::$module_name.$field_name");
+            // $field_placeholder = $field_lable;
+            // $required = "";
             ?>
             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
     </div>
-</div>
-<div></div>
-
+</div> -->
 
 <!-- Select2 Library -->
 <x-library.select2 />
