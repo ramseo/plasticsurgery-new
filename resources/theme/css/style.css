@@ -1074,6 +1074,7 @@ ul.nav.nav-tabs {
 
 .card img {
     object-fit: cover;
+    padding: 15px;
 }
 
 .card-body ul {
@@ -1116,8 +1117,6 @@ ul.nav.nav-tabs {
     padding: 30px;
     margin-bottom: 25px;
     border-radius: 3px;
-    /* margin-top: 51px; */
-    /* width: 600px; */
 }
 
 .tab-pane ul {
