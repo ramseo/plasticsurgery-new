@@ -3386,6 +3386,11 @@ img {
 .maim-more-post {
     box-shadow: 0 1px 4px 2px #dadada;
     padding: 15px;
+    margin: 15px 0px 15px 0px;
+}
+
+.maim-more-post .item-name {
+    padding: 15px 0 0 0;
 }
 
 .maim-more-post .item-name a,
