@@ -3407,3 +3407,8 @@ img {
 .card {
     border-radius: 10px !important;
 }
+
+.posts-next-prev {
+    display: flex;
+    justify-content: space-between;
+}
