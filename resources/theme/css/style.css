@@ -3383,3 +3383,9 @@ img {
 .post-social-icon li:first-child i {
     color: #000;
 }
+
+.maim-more-post .item-name a,
+.maim-more-post .item-name a:hover {
+    color: initial;
+    text-decoration: none;
+}

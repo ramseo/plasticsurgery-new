@@ -389,10 +389,12 @@ if ($getMorePosts) {
                                 <div class="item-img">
                                     <img class="img-fluid" src="<?= $img ?>" alt="<?= $item->name ?>">
                                 </div>
-                                <div class="item-name">
-                                    <?= $item->name ?>
-                                </div>
                             </a>
+                            <div class="item-name">
+                                <a href="<?= route("frontend.posts.show", [$item->slug]) ?>">
+                                    <?= $item->name ?>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 <?php } ?>
