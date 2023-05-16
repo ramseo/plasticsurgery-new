@@ -3383,6 +3383,10 @@ img {
     color: #000;
 }
 
+.maim-more-post .item-name {
+    padding: 15px 10px 15px 10px;
+}
+
 .maim-more-post .item-name a,
 .maim-more-post .item-name a:hover {
     color: initial;
