@@ -3387,6 +3387,7 @@ img {
     box-shadow: 0 1px 4px 2px #dadada;
     padding: 15px;
     margin: 15px 0px 15px 0px;
+    border-radius: 10px;
 }
 
 .maim-more-post .item-name {
