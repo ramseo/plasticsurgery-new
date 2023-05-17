@@ -85,7 +85,7 @@
          </div>
       </div>
       <!-- <a id="button-scroll" style="visibility: visible; opacity: 1;display:none">
-         <i class="fas fa-chevron-circle-up" aria-hidden="true"></i>
+         <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
       </a> -->
    </footer>
 </div>
@@ -95,7 +95,7 @@
       <div class="container">
          <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-               <p style="color:#fff">Clinic Locations :</p>
+               <p class="color-white">Clinic Locations :</p>
             </div>
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 citi-locat">
                <ul class="footer-list">
@@ -145,8 +145,204 @@
    <div class="split"></div>
 </div>
 
+<!-- LEAD FORM CODE -->
+<div class="sidebar-form">
+   <div class="call-action">
+      <span>Enquiry Form</span>
+      <span>
+         <i id="chevron-icon" class="fa fa-chevron-up"></i>
+      </span>
+   </div>
+   <form style="box-shadow:none; background:none; padding:0;" id="google-sheet" method="post" name="google-sheet">
+      <div class="form-group margin-bottom-5">
+
+         <div class="position-relative">
+            <i class="fa fa-user icon" aria-hidden="true"></i>
+         </div>
+         <input type="text" name="name" class="form-controler name-cls" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Patient's Name*">
+         <div class="name-err"></div>
+      </div>
+
+
+      <div class="form-group margin-bottom-5">
+         <div class="position-relative">
+            <i class="fa fa-phone icon" aria-hidden="true"></i>
+         </div>
+         <input type="number" name="phone" class="form-controler phone-cls" id="exampleInputPhone" placeholder="Phone Number*">
+         <div class="phone-err"></div>
+      </div>
+
+      <div class="form-group margin-bottom-5">
+         <div class="position-relative">
+            <i class="fa fa-envelope icon" aria-hidden="true"></i>
+         </div>
+         <input type="text" name="email" class="form-controler email-cls" id="exampleInputEmail" placeholder="Email Address*">
+         <div class="email-err"></div>
+      </div>
+
+      <div class="form-group margin-bottom-5">
+
+         <div class="position-relative">
+            <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+         </div>
+         <select id="city" name="location" class="form-controler1">
+            <option value="">City Location*</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Amritsar">Amritsar</option>
+            <option value="Aurangabad">Aurangabad</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Bhopal">Bhopal</option>
+            <option value="Bhubaneswar">Bhubaneswar</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Coimbatore">Coimbatore</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Gurgaon">Gurgaon</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Indore">Indore</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Meerut">Meerut</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Noida">Noida</option>
+            <option value="Patna">Patna</option>
+            <option value="Pune">Pune</option>
+            <option value="Raipur">Raipur</option>
+            <option value="Ludhiana">Ludhiana</option>
+            <option value="Surat">Surat</option>
+            <option value="Trivandrum">Trivandrum</option>
+            <option value="Other Cities">Other Cities</option>
+            <option value="Other Countries">Other Countries</option>
+         </select>
+         <div class="city-err"></div>
+      </div>
+
+      <div class="form-group margin-bottom-5">
+         <div class="position-relative">
+            <i class="fa fa-id-badge icon" aria-hidden="true"></i>
+         </div>
+         <input type="text" name="age" class="form-controler age-cls" id="exampleInputAge" placeholder="Age in Years*">
+         <div class="age-err"></div>
+      </div>
+
+      <div class="form-group d-flex margin-bottom-5">
+         <div class="position-relative">
+            <i class="fa fa-venus-mars icon" aria-hidden="true"></i>
+         </div>
+         <span class="gender-contact">Gender*</span>
+         <div class="px-3">
+            <input type="radio" value="male" id="male" name="gender" checked />
+            <label for="male" class="radio radioo_icon ">Male</label>
+         </div>
+         <div>
+            <input type="radio" value="female" id="female" name="gender" />
+            <label for="female" class="radio radioo_icon ">Female</label>
+         </div>
+      </div>
+
+
+      <div class="form-group margin-bottom-5">
+
+         <div class="position-relative">
+            <i class="fa fa-user-md icon" aria-hidden="true"></i>
+         </div>
+         <select id="appointment_for" name="appointment_for" class="form-controler1">
+            <option value="">Select Treatment*</option>
+            <option value="Rhinoplasty">Rhinoplasty</option>
+            <option value="Blepharoplasty">Blepharoplasty</option>
+            <option value="Gynecomastia">Gynecomastia</option>
+            <option value="Liposuction">Liposuction</option>
+            <option value="Tummy Tuck">Tummy Tuck</option>
+            <option value="Liposuction">Breast Surgery</option>
+            <option value="Buccal Fat Removal">Buccal Fat Removal</option>
+            <option value="Hair Transplant">Hair Transplant</option>
+            <option value="Buttock Augmentation">Buttock Augmentation</option>
+            <option value="Ear Surgery">Ear Surgery</option>
+            <option value="Chin Surgery">Chin Surgery</option>
+            <option value="Lip Surgery">Lip Surgery</option>
+            <option value="Facelift">Facelift</option>
+            <option value="Arm Lift">Arm Lift</option>
+            <option value="Body Lift">Body Lift</option>
+            <option value="Brow Lift">Brow Lift</option>
+            <option value="Neck Lift">Neck Lift</option>
+            <option value="Thigh Lift">Thigh Lift </option>
+         </select>
+         <div class="appointment-err"></div>
+      </div>
+
+      <div class="form-group margin-bottom-5">
+
+         <div class="position-relative">
+            <i class="fa fa-comment icon" aria-hidden="true"></i>
+         </div>
+
+         <textarea maxlength="3000" name="message" class="form-controler message-cls" id="exampleFormControlTextarea1" rows="1" placeholder="Message*"></textarea>
+         <div class="msg-err"></div>
+
+      </div>
+      <div class="form-group margin-bottom-5">
+         <div class="g-recaptcha" data-theme="light" data-sitekey="<?= env('DATA_SITEKEY_V2') ?>"></div>
+         <div class="captcha-err"></div>
+      </div>
+
+      <?php
+      function browser_url()
+      {
+         return sprintf(
+            "%s://%s%s",
+            isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+            $_SERVER['SERVER_NAME'],
+            $_SERVER['REQUEST_URI']
+         );
+      }
+
+      date_default_timezone_set('Asia/Kolkata');
+      $current_time = date('H:i:s A');
+      ?>
+
+      <input type="hidden" name="city_url" value="<?= browser_url() ?>">
+      <input type="hidden" name="url" value="<?= browser_url() ?>">
+      <input type="hidden" name="time" value="<?= $current_time ?>">
+      <button type="submit" name="submit" class="submit-button-contact">
+         Submit
+      </button>
+   </form>
+</div>
+<!-- LEAD FORM CODE -->
+
+
+<!--Model Popup starts-->
+<div class="container">
+   <div class="row">
+      <div class="modal fade" id="popup" role="dialog">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <div class="thank-you-pop">
+                     <img src="<?= asset('img/Green-Round-Tick.png') ?>" alt="img">
+                     <div class="thank-you-head">
+                        Thank You!
+                     </div>
+                     <p>
+                        We have received your enquiry, we'll get back to you within 24-48 hours.
+                        (Mon-Sat 10am-6pm IST)
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!--Model Popup ends-->
+
 @push('after-scripts')
 <script>
+   var lead_form_path = "<?= route('frontend.pages.lead_form') ?>";
+   var csrf_token = "<?= csrf_token() ?>";
+
    $(document).ready(function() {
       $('.sidebar-form .call-action').click(function() {
          $(this).parents(".sidebar-form").toggleClass("show");

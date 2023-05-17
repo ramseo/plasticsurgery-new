@@ -3,8 +3,11 @@
 namespace Modules\Cms\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+// use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Str;
 use Modules\Cms\Events\PageViewed;
+use DB;
 
 class PagesController extends Controller
 {
@@ -49,6 +52,34 @@ class PagesController extends Controller
             "cms::frontend.$module_path.index",
             compact('module_title', 'module_name', "$module_name", 'module_icon', 'module_action', 'module_name_singular')
         );
+    }
+
+    public function lead_form(Request $request)
+    {
+        parse_str($request->form_data, $post);
+
+        $data = [];
+        $data['name'] = $post['name'];
+        $data['phone'] = $post['phone'];
+        $data['email'] = $post['email'];
+        $data['location'] = $post['location'];
+        $data['age'] = $post['age'];
+        $data['gender'] = $post['gender'];
+        $data['appointment_for'] = $post['appointment_for'];
+        $data['message'] = $post['message'];
+        $data['url'] = $post['url'];
+        $data['time'] = $post['time'];
+
+        $status = DB::table("leads")->insert($data);
+
+        $response = [];
+        if ($status) {
+            $response['status'] = true;
+        } else {
+            $response['status'] = false;
+        }
+
+        echo json_encode($response);
     }
 
     /**

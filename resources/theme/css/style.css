@@ -3427,3 +3427,58 @@ img {
 .posts-next-prev a .post-next {
     padding-right: 5px;
 }
+
+.color-white {
+    color: #fff;
+}
+
+/* lEAD FORM CSS */
+
+.sidebar-form {
+    position: fixed;
+    top: 50%;
+    right: -350px;
+    width: 350px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    border-radius: 8px 0 0 8px;
+    background-color: #fff;
+    padding: 10px;
+    transform: translateY(-50%);
+    transition: right .4s linear;
+    z-index: 9999;
+}
+
+.sidebar-form.show {
+    right: 0;
+}
+
+.sidebar-form .call-action {
+    position: absolute;
+    background-color: #FF0000;
+    letter-spacing: 1px;
+    color: var(--white);
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    left: -95px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    font-size: 15px;
+    font-weight: 600;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.conatiner-fluid.lngp {
+    padding-bottom: 80px;
+}
+
+#chatbutton {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* LEAD FORM CSS */
