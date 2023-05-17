@@ -181,38 +181,19 @@
       </div>
 
       <div class="form-group margin-bottom-5">
-
          <div class="position-relative">
             <i class="fa fa-map-marker icon" aria-hidden="true"></i>
          </div>
          <select id="city" name="location" class="form-controler1">
             <option value="">City Location*</option>
-            <option value="Ahmedabad">Ahmedabad</option>
-            <option value="Amritsar">Amritsar</option>
-            <option value="Aurangabad">Aurangabad</option>
-            <option value="Bangalore">Bangalore</option>
-            <option value="Bhopal">Bhopal</option>
-            <option value="Bhubaneswar">Bhubaneswar</option>
-            <option value="Chandigarh">Chandigarh</option>
-            <option value="Chennai">Chennai</option>
-            <option value="Coimbatore">Coimbatore</option>
-            <option value="Delhi">Delhi</option>
-            <option value="Gurgaon">Gurgaon</option>
-            <option value="Hyderabad">Hyderabad</option>
-            <option value="Indore">Indore</option>
-            <option value="Jaipur">Jaipur</option>
-            <option value="Kolkata">Kolkata</option>
-            <option value="Lucknow">Lucknow</option>
-            <option value="Meerut">Meerut</option>
-            <option value="Mumbai">Mumbai</option>
-            <option value="Nagpur">Nagpur</option>
-            <option value="Noida">Noida</option>
-            <option value="Patna">Patna</option>
-            <option value="Pune">Pune</option>
-            <option value="Raipur">Raipur</option>
-            <option value="Ludhiana">Ludhiana</option>
-            <option value="Surat">Surat</option>
-            <option value="Trivandrum">Trivandrum</option>
+            <?php
+            $citiesArr = citiesArr();
+            foreach ($citiesArr as $item) {
+            ?>
+               <option value="<?= ucwords($item) ?>">
+                  <?= ucwords($item) ?>
+               </option>
+            <?php } ?>
             <option value="Other Cities">Other Cities</option>
             <option value="Other Countries">Other Countries</option>
          </select>
