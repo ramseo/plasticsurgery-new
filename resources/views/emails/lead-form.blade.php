@@ -43,39 +43,39 @@
             </td>
         </tr>
         <tr>
-            <th>Name: </th>
+            <th style="text-align:left">Name: </th>
             <td><?= $data->name ?></td>
         </tr>
         <tr>
-            <th>Phone: </th>
+            <th style="text-align:left">Phone: </th>
             <td><?= $data->phone ?></td>
         </tr>
         <tr>
-            <th>Email: </th>
+            <th style="text-align:left">Email: </th>
             <td><?= $data->email ?></td>
         </tr>
         <tr>
-            <th>Age: </th>
+            <th style="text-align:left">Age: </th>
             <td><?= $data->age ?></td>
         </tr>
         <tr>
-            <th>Location: </th>
+            <th style="text-align:left">Location: </th>
             <td><?= $data->location ?></td>
         </tr>
         <tr>
-            <th>Gender: </th>
+            <th style="text-align:left">Gender: </th>
             <td><?= $data->gender ?></td>
         </tr>
         <tr>
-            <th>Appointment For: </th>
+            <th style="text-align:left">Appointment For: </th>
             <td><?= $data->appointment_for ?></td>
         </tr>
         <tr>
-            <th>Message: </th>
+            <th style="text-align:left">Message: </th>
             <td><?= $data->message ?></td>
         </tr>
         <tr>
-            <th>retrievedUrl: </th>
+            <th style="text-align:left">retrievedUrl: </th>
             <td><?= $data->url ?></td>
         </tr>
 
