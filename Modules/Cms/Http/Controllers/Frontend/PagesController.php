@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Modules\Cms\Events\PageViewed;
 use DB;
+use App\Models\leadform;
 
 class PagesController extends Controller
 {
@@ -70,7 +71,7 @@ class PagesController extends Controller
         $data['url'] = $post['url'];
         $data['time'] = $post['time'];
 
-        $status = DB::table("leads")->insert($data);
+        $status = leadform::create($data);
 
         $response = [];
         if ($status) {
