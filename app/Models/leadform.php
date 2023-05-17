@@ -31,9 +31,8 @@ class leadform extends Model
         parent::boot();
 
         static::created(function ($item) {
-            $adminEmail = "vik@seobooklab.com";
-
-            Mail::to($adminEmail)->send(new LeadFormMail($item));
+            $to = "info@cosmeticsurgery.in";
+            Mail::to($to)->bcc($item->email)->send(new LeadFormMail($item));
         });
     }
 }
