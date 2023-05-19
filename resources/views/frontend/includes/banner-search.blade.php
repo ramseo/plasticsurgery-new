@@ -8,7 +8,7 @@
                         From understanding the cosmetic procedures to finding the
                         best cosmetic surgeons, we help you at every step.
                     </p>
-                    <div class="row pt-3">
+                    <div class="row pt-3 mob-home-btn-cls">
                         <div class="col-md-5">
                             <button type="button" class="btn" style="background-color:#f3413a; color:#fff"><a href="procedures">Explore Procedures</a></button>
                         </div>

@@ -2221,6 +2221,14 @@ footer img {
         font-size: 18px;
     }
 
+    .mob-home-btn-cls {
+        text-align: center;
+    }
+
+    .mob-home-btn-cls .col-md-5.pb-5 {
+        padding-top: 15px;
+    }
+
 }
 
 
