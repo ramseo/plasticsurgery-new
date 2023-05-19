@@ -223,7 +223,6 @@
          </div>
       </div>
 
-
       <div class="form-group margin-bottom-5">
 
          <div class="position-relative">
@@ -231,24 +230,14 @@
          </div>
          <select id="appointment_for" name="appointment_for" class="form-controler1">
             <option value="">Select Treatment*</option>
-            <option value="Rhinoplasty">Rhinoplasty</option>
-            <option value="Blepharoplasty">Blepharoplasty</option>
-            <option value="Gynecomastia">Gynecomastia</option>
-            <option value="Liposuction">Liposuction</option>
-            <option value="Tummy Tuck">Tummy Tuck</option>
-            <option value="Liposuction">Breast Surgery</option>
-            <option value="Buccal Fat Removal">Buccal Fat Removal</option>
-            <option value="Hair Transplant">Hair Transplant</option>
-            <option value="Buttock Augmentation">Buttock Augmentation</option>
-            <option value="Ear Surgery">Ear Surgery</option>
-            <option value="Chin Surgery">Chin Surgery</option>
-            <option value="Lip Surgery">Lip Surgery</option>
-            <option value="Facelift">Facelift</option>
-            <option value="Arm Lift">Arm Lift</option>
-            <option value="Body Lift">Body Lift</option>
-            <option value="Brow Lift">Brow Lift</option>
-            <option value="Neck Lift">Neck Lift</option>
-            <option value="Thigh Lift">Thigh Lift </option>
+            <?php
+            $popular_surgeries = popular_cities_surgeries("all", $skip = false, $take = false);
+            foreach ($popular_surgeries as $item) {
+            ?>
+               <option value="<?= $item->title ?>">
+                  <?= $item->title ?>
+               </option>
+            <?php } ?>
          </select>
          <div class="appointment-err"></div>
       </div>

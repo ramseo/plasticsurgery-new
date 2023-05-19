@@ -1101,17 +1101,18 @@ if (!function_exists('date_today')) {
         if ($uri == "popular-surgeries") {
             $menu_id = DB::table('menutype')->where('url', $uri)->select('menu_id')->get()->first();
             if ($menu_id) {
-                $menu_items = DB::table('menuitem')->where('menu_id', $menu_id->menu_id)->select('*')->skip($skip)->take($take)->get();
-                return $menu_items;
+                return DB::table('menuitem')->where('menu_id', $menu_id->menu_id)->select('*')->skip($skip)->take($take)->get();
             } else {
-                return NULL;
+                return collect([]);
             }
+        } else if ($uri == "cities") {
+            return DB::table($uri)->select('*')->skip($skip)->take($take)->get();
         } else {
-            $cities = DB::table($uri)->select('*')->skip($skip)->take($take)->get();
-            if ($cities) {
-                return $cities;
+            $menu_id = DB::table('menutype')->where('url', "popular-surgeries")->select('menu_id')->get()->first();
+            if ($menu_id) {
+                return DB::table('menuitem')->where('menu_id', $menu_id->menu_id)->select('*')->get();
             } else {
-                return NULL;
+                return collect([]);
             }
         }
     }
