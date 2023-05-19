@@ -6,8 +6,14 @@ $city = getData('cities');
 <header id="header">
     <div class="xg">
         <div class="bar">
-            <a href="mailto:info@cosmeticsurgery.in"><i class="fa fa-envelope-o" aria-hidden="true"></i> Mail us</a>
-            <a href="book-an-appointment"><i class="fa fa-calendar" aria-hidden="true"></i> Appointment</a>
+            <a href="mailto:info@cosmeticsurgery.in">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                Mail us
+            </a>
+            <a href="javascript:void(0)">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                Appointment
+            </a>
         </div>
     </div>
     <nav class="navbar navbar-expand-lg desk kc" style="background-color:#1877F2;">
