@@ -1,4 +1,7 @@
 <?php
+
+use App\Models\Setting;
+
 $categories = getDataArray('types');
 $city = getData('cities');
 ?>
@@ -43,17 +46,19 @@ $city = getData('cities');
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="mailto:info@cosmeticsurgery.in"><i class="fa fa-envelope" aria-hidden="true"></i>
-                        info@cosmeticsurgery.in |
+                    <a class="nav-link text-white" href="mailto:<?= Setting('email') ?>">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <?= Setting('email') ?>
                     </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <button type="button" class="btn mt-1 kl btn-sm" style="background-color:#2abfb7">
-                        <a href="<?= url('book-an-appointment') ?>" style="color:#fff">
+                        <a href="<? //= url('book-an-appointment') 
+                                    ?>" style="color:#fff">
                             Book an Appointment
                         </a>
                     </button>
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>
