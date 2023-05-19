@@ -1408,11 +1408,9 @@ footer img {
     padding: 0px 3px;
 }
 
-
-
 .nv {
     background-color: #f8f8f8;
-    height: 78px;
+    /* height: 78px; */
     width: 100%;
     position: fixed !important;
     z-index: 999;
@@ -1692,7 +1690,7 @@ footer img {
     }
 
     .nv {
-        margin-top: 72px;
+        margin-top: 47px;
     }
 
     .pop img {
