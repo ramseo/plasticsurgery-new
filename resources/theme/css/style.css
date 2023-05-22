@@ -3488,3 +3488,18 @@ img {
 }
 
 /* LEAD FORM CSS */
+
+
+.tab-pane ul li a,
+.tab-pane ul li a:hover {
+    text-decoration: none;
+}
+
+#desktop-header-menu li a.active {
+    color: #1877F2 !important;
+    font-weight: 600;
+}
+
+#desktop-header-menu .dropdown-menu .dropdown-item.active {
+    background-color: transparent;
+}

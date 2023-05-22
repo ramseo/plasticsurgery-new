@@ -312,6 +312,7 @@
 <script>
    var lead_form_path = "<?= route('frontend.pages.lead_form') ?>";
    var csrf_token = "<?= csrf_token() ?>";
+   var base_url = "<?= url('/') . '/' ?>";
 
    $(document).ready(function() {
       $('.sidebar-form .call-action').click(function() {

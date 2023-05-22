@@ -15,6 +15,10 @@ class FrontendController extends Controller
      */
     public function index()
     {
+        $uri_string = \Request::getRequestUri();
+        if ($uri_string == "/home") {
+            return \Redirect::to(url('/'), 301);
+        }
 
         $body_class = '';
 

@@ -66,7 +66,7 @@ $city = getData('cities');
                 </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto" id="desktop-header-menu">
                     <?php
                     $header_menu = dynamic_menu('menutype', 'url', 'header');
                     if ($header_menu) {
@@ -74,7 +74,7 @@ $city = getData('cities');
                             $child_item = dynamicMenuChildItem($item->id);
                     ?>
                             <li class="nav-item <?= ($child_item) ? "dropdown" : "" ?>">
-                                <a class="nav-link <?= ($child_item) ? "dropdown-toggle" : "" ?> " href="<?= ($child_item) ? "#" : url("/") . "/" . $item->url ?>" <?= ($child_item) ? 'role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : '' ?>>
+                                <a class="nav-link <?= ($item->title == "Home") ? "home-item-active-cls" : "" ?>  <?= ($child_item) ? "dropdown-toggle" : "" ?> " href="<?= ($child_item) ? "#" : url("/") . "/" . $item->url ?>" <?= ($child_item) ? 'role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"' : '' ?>>
                                     <?= $item->title ?>
                                 </a>
                                 <?php if ($child_item) { ?>
