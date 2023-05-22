@@ -3503,3 +3503,7 @@ img {
 #desktop-header-menu .dropdown-menu .dropdown-item.active {
     background-color: transparent;
 }
+
+.new-doctor a img {
+    height: 250px;
+}
