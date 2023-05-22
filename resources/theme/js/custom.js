@@ -213,6 +213,16 @@ $(function () {
         if (window.location.href != base_url) {
             if (urlRegExp.test(this.href.replace(/\/$/, ''))) {
                 $(this).addClass('active');
+
+                var parent_cls = $(this).parent().attr("class");
+                if (parent_cls == "dropdown-menu") {
+                    var main_parent = $(this).parent().parent();
+                    var target_item = $(main_parent).children('a');
+                    $(target_item).css(
+                        { 'color': '#1877F2', 'font-weight': '600' }
+                    );
+                }
+
             }
         } else {
             $('.home-item-active-cls').addClass("active");
