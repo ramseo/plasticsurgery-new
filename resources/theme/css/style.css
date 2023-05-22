@@ -1677,7 +1677,7 @@ footer img {
 @media screen and (max-width:800px) {
     #navbarSupportedContent {
         background-color: #eee;
-        margin-top: -19px;
+        margin-top: 0;
     }
 
     .list-doctor {
@@ -1737,7 +1737,10 @@ footer img {
     }
 
     .nv ul li {
-        margin-left: 13px;
+        margin-left: 15px;
+        margin-right: 15px;
+        border-bottom: 1px solid darkgray;
+        padding: 5px 0 5px 0;
     }
 
     .desk {
@@ -3510,4 +3513,8 @@ img {
 
 .new-doctor a img {
     height: 250px;
+}
+
+.dropdown-item {
+    padding: 5px 15px 5px 15px;
 }

@@ -136,5 +136,6 @@ $city = getData('cities');
                 </ul>
             </div>
         </div>
+        
     </nav>
 </header>
