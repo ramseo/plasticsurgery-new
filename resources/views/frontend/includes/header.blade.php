@@ -52,7 +52,7 @@ $city = getData('cities');
                         <?= Setting('email') ?>
                     </a>
                 </li>
-            </ul> 
+            </ul>
         </div>
     </nav>
     <nav class="navbar navbar-expand-lg nv">
@@ -87,6 +87,10 @@ $city = getData('cities');
                                         <?php if ($item->title == "Clinics") { ?>
                                             <a class="dropdown-item" href="<?= url("/") . "/clinics" ?>">
                                                 View All Clinics
+                                            </a>
+                                        <?php } elseif ($item->title == "Face" || $item->title == "Breast" || $item->title == "Body") { ?>
+                                            <a class="dropdown-item" href="<?= url("/") . "/procedures" ?>">
+                                                View All Procedures
                                             </a>
                                         <?php } ?>
                                     </div>
