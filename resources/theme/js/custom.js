@@ -229,3 +229,12 @@ $(function () {
         }
     });
 });
+
+
+$(document).on('click', '#fa-bars', function () {
+    if (!$('#navbarSupportedContent').hasClass("show")) {
+        $('#fa-bars').attr("class", "fa fa-times");
+    } else {
+        $('#fa-bars').attr("class", "fa fa-bars");
+    }
+});

@@ -2237,6 +2237,13 @@ footer img {
 
     .dropdown-menu {
         font-size: 13px !important;
+        border: none !important;
+        background-color: transparent !important;
+    }
+
+    .navbar-toggler:focus,
+    .navbar-toggler:hover {
+        outline: none;
     }
 
 }

@@ -52,7 +52,7 @@ $city = getData('cities');
                         <?= Setting('email') ?>
                     </a>
                 </li>
-            </ul>
+            </ul> 
         </div>
     </nav>
     <nav class="navbar navbar-expand-lg nv">
@@ -60,9 +60,9 @@ $city = getData('cities');
             <a class="navbar-brand" href="<?= url('/') ?>">
                 <img src="<?= asset('img/logo-cosmeticsurgery.png') ?>" alt="logo">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler padd-null" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <i id="fa-bars" class="fa fa-bars" aria-hidden="true"></i>
                 </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
