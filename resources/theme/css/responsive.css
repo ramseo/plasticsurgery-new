@@ -519,9 +519,13 @@
         padding: 0px 0;
     }
 
-    #header li>a {
+    #header li>a,
+    #header li>a:hover,
+    #header li>a:focus {
         padding: 0;
         font-size: 13px;
+        outline: none;
+        font-weight: 600;
     }
 
     .user-menu li img {

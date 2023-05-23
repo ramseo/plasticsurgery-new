@@ -2041,9 +2041,12 @@ footer img {
         font-size: 22px;
     }
 
-    .bar a {
+    .bar a,
+    .bar a:hover {
         padding: 10px 5px;
         font-size: 14px;
+        text-decoration: none;
+        color: #fff;
     }
 
     .nv {
