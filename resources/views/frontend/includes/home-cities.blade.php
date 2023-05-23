@@ -44,7 +44,7 @@
                         <option value="<?= url('breast-surgery') ?>">Breast Surgery</option>
                         <option value="<?= url('buccal-fat-removal') ?>">Buccal Fat Removal</option>
                         <option value="<?= url('lip-augmentation') ?>">Lip Augmentation</option>
-                        <option value="<?= url('ear-surgery') ?>">Ear Surgery</option>
+                        <option value="<?= url('ear-surgery-surgeons') ?>">Ear Surgery</option>
                         <option value="<?= url('body-lift') ?>">Body Lift</option>
                         <option value="<?= url('mommy-makeover') ?>">Mommy Makeover</option>
                         <option value="<?= url('hymenoplasty') ?>">Hymenoplasty</option>
@@ -62,7 +62,7 @@
                         <option value="<?= url('rhinoplasty') ?>">Rhinoplasty</option>
                         <option value="<?= url('blepharoplasty') ?>">Blepharoplasty</option>
                         <option value="<?= url('tummy-tuck') ?>">Tummy Tuck</option>
-                        <option value="<?= url('breast-surgery') ?>">Breast Surgery</option>
+                        <option value="<?= url('breast-surgery-surgeons') ?>">Breast Surgery</option>
                         <option value="<?= url('buccal-fat-removal') ?>">Buccal Fat Removal</option>
                         <option value="<?= url('lip-augmentation') ?>">Lip Augmentation</option>
                         <option value="<?= url('ear-surgery') ?>">Ear Surgery</option>
