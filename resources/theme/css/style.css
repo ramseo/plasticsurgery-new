@@ -2246,6 +2246,10 @@ footer img {
         outline: none;
     }
 
+    .cs-bg-color {
+        display: none;
+    }
+
 }
 
 
