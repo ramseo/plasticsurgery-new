@@ -2250,6 +2250,22 @@ footer img {
         display: none;
     }
 
+    .accordion-toggle {
+        font-size: 15px !important;
+    }
+
+    .accordion-content p {
+        font-size: 14px !important;
+    }
+
+    .accordion-content ul {
+        font-size: 14px;
+    }
+
+    .col p {
+        font-size: 15px;
+    }
+
 }
 
 
