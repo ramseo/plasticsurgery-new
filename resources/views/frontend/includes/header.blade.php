@@ -10,10 +10,6 @@ $city = getData('cities');
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
                 Mail us
             </a>
-            <!-- <a href="javascript:void(0)">
-                <i class="fa fa-calendar" aria-hidden="true"></i>
-                Appointment
-            </a> -->
         </div>
     </div>
     <nav class="navbar navbar-expand-lg desk kc" style="background-color:#1877F2;">
@@ -131,11 +127,11 @@ $city = getData('cities');
                         @csrf
                     </form>
                     @else
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">
                             Login
                         </a>
-                    </li>
+                    </li> -->
                     @endauth
                 </ul>
             </div>
