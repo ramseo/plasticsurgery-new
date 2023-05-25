@@ -65,7 +65,7 @@ $city = getData('cities');
                 <ul class="navbar-nav ml-auto" id="desktop-header-menu">
                     <?php
                     $header_menu = dynamic_menu('menutype', 'url', 'header');
-                    if ($header_menu) {
+                    if ($header_menu) { 
                         foreach ($header_menu as $item) {
                             $child_item = dynamicMenuChildItem($item->id);
                     ?>
@@ -98,31 +98,31 @@ $city = getData('cities');
                     ?>
                     @auth
                     @if(auth()->user()->getRoleNames()->first() == 'super admin')
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('backend.dashboard') }}">
                             Dashboard
                         </a>
-                    </li>
+                    </li> -->
                     @endif
                     @if(auth()->user()->getRoleNames()->first() == 'vendor')
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('vendor.dashboard') }}">
                             Dashboard
                         </a>
-                    </li>
+                    </li> -->
                     @endif
                     @if(auth()->user()->getRoleNames()->first() == 'user')
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('frontend.users.profileEdit') }}">
                             My Profile
                         </a>
-                    </li>
+                    </li> -->
                     @endif
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('account-logout-form').submit();">
                             Logout
                         </a>
-                    </li>
+                    </li> -->
                     <form id="account-logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
