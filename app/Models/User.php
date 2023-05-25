@@ -21,6 +21,7 @@ class   User extends Authenticatable implements HasMedia, MustVerifyEmail
     use SoftDeletes;
     use HasHashedMediaTrait;
     use UserPresenter;
+    protected $table = 'users';
 
     protected $guarded = [
         'id',

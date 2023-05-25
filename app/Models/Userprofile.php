@@ -9,6 +9,7 @@ class Userprofile extends BaseModel
         'last_login',
         'email_verified_at',
     ];
+    protected $table = 'userprofiles';
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne

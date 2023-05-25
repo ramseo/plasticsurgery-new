@@ -4,9 +4,16 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+// user models
 use App\Models\User;
+use App\Models\Userprofile;
+use App\Models\UserProvider;
+use App\Models\UserQuotation;
+// user models
+
 use Log;
 use Flash;
+use DB;
 use Yajra\DataTables\DataTables;
 
 class CustomerController extends Controller
@@ -20,9 +27,10 @@ class CustomerController extends Controller
     {
         if ($request->ajax()) {
             $vendors = User::select(['id', 'name', 'username', 'email', 'email_verified_at', 'updated_at', 'status'])->whereHas(
-                'roles', function($q){
-                $q->where('name', 'user');
-            }
+                'roles',
+                function ($q) {
+                    $q->where('name', 'user');
+                }
             )->get();
             return Datatables::of($vendors)
                 ->addIndexColumn()
@@ -43,13 +51,13 @@ class CustomerController extends Controller
      *
      * @return Response
      */
-//    public function store(Request $request)
-//    {
-//        $vendor = User::create($request->all());
-//        Flash::success("<i class='fas fa-check'></i> Profile Added")->important();
-//        Log::info(label_case('Vendor Store | ' . $vendor->business_name . '(ID:' . $vendor->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
-//        return redirect("admin/vendor");
-//    }
+    //    public function store(Request $request)
+    //    {
+    //        $vendor = User::create($request->all());
+    //        Flash::success("<i class='fas fa-check'></i> Profile Added")->important();
+    //        Log::info(label_case('Vendor Store | ' . $vendor->business_name . '(ID:' . $vendor->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+    //        return redirect("admin/vendor");
+    //    }
 
     public function edit($id)
     {
@@ -76,4 +84,22 @@ class CustomerController extends Controller
         return redirect("admin/customer/edit/" . $vendor->id);
     }
 
+
+    public function destroy($id)
+    {
+        $module_action = 'destroy';
+
+        $user = User::findOrFail($id);
+
+        DB::table("users")->where('id', $id)->delete();
+        DB::table("userprofiles")->where('user_id', $id)->delete();
+        DB::table("user_quotation")->where('user_id', $id)->delete();
+        DB::table("user_providers")->where('user_id', $id)->delete();
+
+        Flash::success('<i class="fa fa-trash"></i> ' . label_case($user->name) . ' Deleted Successfully!')->important();
+
+        Log::info(label_case('User' . ' ' . $module_action) . " | '" . $user->name . ', ID:' . $user->id . " ' by User:" . auth()->user()->name . '(ID:' . auth()->user()->id . ')');
+
+        return redirect("admin/customer");
+    }
 }
