@@ -34,7 +34,7 @@
                 @include('frontend.users.menu')
             </div>
             <div class="col-xs-12 col-sm-9">
-                @include('backend.includes.errors')
+                @include('frontend.includes.errors')
                 <div class="card bg-white border-light shadow-soft flex-md-row no-gutters p-4">
                     <div class="card-body d-flex flex-column justify-content-between col-auto">
                         <?php
