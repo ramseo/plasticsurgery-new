@@ -4,10 +4,10 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("backend.$module_name.index")}}' icon='{{ $module_icon }}' >
+    <x-backend-breadcrumb-item route='{{route("backend.$module_name.index")}}' icon='{{ $module_icon }}'>
         {{ $module_title }}
     </x-backend-breadcrumb-item>
-    <x-backend-breadcrumb-item route='{{route("backend.$module_name.show", $user->id)}}' icon='{{ $module_icon }}' >
+    <x-backend-breadcrumb-item route='{{route("backend.$module_name.show", $user->id)}}' icon='{{ $module_icon }}'>
         {{ $user->name }}
     </x-backend-breadcrumb-item>
 
@@ -31,7 +31,7 @@
             <!--/.col-->
             <div class="col-4">
                 <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-                    <button onclick="window.history.back();"class="btn btn-warning ml-1" data-toggle="tooltip" title="Return Back"><i class="fas fa-reply"></i></button>
+                    <button onclick="window.history.back();" class="btn btn-warning ml-1" data-toggle="tooltip" title="Return Back"><i class="fas fa-reply"></i></button>
                 </div>
             </div>
             <!--/.col-->
@@ -42,15 +42,22 @@
             <div class="col">
                 {{ html()->modelForm($userprofile, 'PATCH', route('backend.users.profileUpdate', $$module_name_singular->id))->class('form-horizontal')->attributes(['enctype'=>"multipart/form-data"])->open() }}
                 <div class="form-group row">
-                    {{ html()->label(__('labels.backend.users.fields.avatar'))->class('col-md-2 form-control-label')->for('name') }}
-
-                    <div class="col-md-5">
-                        <img src="{{asset($$module_name_singular->avatar)}}" class="user-profile-image img-fluid img-thumbnail" style="max-height:200px; max-width:200px;" />
+                    <div class="col-12 col-md-6">
+                        {{ html()->label(__('labels.backend.users.fields.avatar'))->class('form-control-label')->for('name') }}
+                        <div class="form-group">
+                            <label for="file-multiple-input">Click here to update photo</label>
+                            <input id="file-multiple-input" name="avatar" multiple="" type="file" class="form-control-file">
+                            <small>Please upload a 200*200 size image</small>
+                        </div>
                     </div>
-                    <div class="col-md-5">
-                        <input id="file-multiple-input" name="avatar" multiple="" type="file">
+                    <div class="col-12 col-md-6">
+                        <?php if (file_exists(public_path() . '/storage/user/profile/' . $user->avatar)) { ?>
+                            <img src="<?= asset('/storage/user/profile/' . $user->avatar) ?>" class="user-profile-image img-fluid img-thumbnail" style="max-height:200px; max-width:200px;" />
+                        <?php } else { ?>
+                            <img src="<?= asset($user->avatar) ?>" class="user-profile-image img-fluid img-thumbnail" style="max-height:200px; max-width:200px;" />
+                        <?php } ?>
                     </div>
-                </div><!--form-group-->
+                </div>
 
                 <div class="row">
                     <div class="col-12 col-md-6">
@@ -104,7 +111,6 @@
                 </div>
 
                 <div class="row">
-
                     <div class="col-12 col-sm-6">
                         <div class="form-group">
                             <?php
@@ -129,15 +135,61 @@
                             $field_name = 'date_of_birth';
                             $field_lable = label_case($field_name);
                             $field_placeholder = $field_lable;
+                            $date_value = ($user->date_of_birth != "") ? $user->date_of_birth->toDateString() : "";
                             $required = "";
                             ?>
                             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
                             <div class="input-group date datetime" id="{{$field_name}}" data-target-input="nearest">
-                                {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control datetimepicker-input')->attributes(["$required", 'data-target'=>"#$field_name"]) }}
-                                <div class="input-group-append" data-target="#{{$field_name}}" data-toggle="datetimepicker">
-                                    <div class="input-group-text"><i class="fas fa-calendar-alt"></i></div>
-                                </div>
+                                {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->value($date_value)->attributes(["$required", 'type'=>'date']) }}
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <?php
+                            $field_name = 'experience_years';
+                            $field_lable = label_case($field_name);
+                            $field_placeholder = $field_lable;
+                            $required = "required";
+                            ?>
+                            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
+                            {!! Form::text($field_name, $userprofile->bio, ['class' => 'form-control','placeholder' => 'Experience Years', $required => $required]) !!}
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group tags-group">
+                            <?php
+                            $field_name = 'city[]';
+                            $field_lable = label_case($field_name);
+                            $field_relation = "city";
+                            $required = "";
+
+                            if (!$user) {
+                            ?>
+                                {{ html()->label($field_lable, "city") }}
+                                {{ html()->select($field_name, ($module_name_singular) ?optional($module_name_singular->$field_relation)->pluck('name', 'id'):'')->class('form-control select2-cities')->attributes(['multiple']) }}
+                            <?php
+                            } else {
+                                $getSelectedTagVal = getSelectedCityVal(json_decode($user->city));
+                            ?>
+                                <label for="city">Cities</label>
+                                <select name="city[]" class="form-control select2-cities" multiple>
+                                    <?php
+                                    if ($getSelectedTagVal) {
+                                        foreach ($getSelectedTagVal as $item) {
+                                    ?>
+                                            <option value="<?= $item['id'] ?>" selected>
+                                                <?= $item['name'] ?>
+                                            </option>
+                                    <?php
+                                        }
+                                    }
+                                    ?>
+                                </select>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -149,84 +201,22 @@
                             $field_name = 'address';
                             $field_lable = label_case($field_name);
                             $field_placeholder = $field_lable;
-                            $required = "";
+                            $required = "required";
                             ?>
                             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-                            {{ html()->textarea($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
+                            {!! Form::textarea($field_name, $userprofile->address, ['class' => 'form-control', 'rows' => 5, 'cols' => 10,'placeholder' => 'Address', $required => $required]) !!}
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="form-group">
                             <?php
-                            $field_name = 'bio';
+                            $field_name = 'education';
                             $field_lable = label_case($field_name);
                             $field_placeholder = $field_lable;
                             $required = "";
                             ?>
                             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-                            {{ html()->textarea($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="form-group">
-                            <?php
-                            $field_name = 'url_website';
-                            $field_lable = label_case($field_name);
-                            $field_placeholder = $field_lable;
-                            $required = "";
-                            ?>
-                            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-                            {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <div class="form-group">
-                            <?php
-                            $field_name = 'url_facebook';
-                            $field_lable = label_case($field_name);
-                            $field_placeholder = $field_lable;
-                            $required = "";
-                            ?>
-                            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-                            {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <div class="form-group">
-                            <?php
-                            $field_name = 'url_instagram';
-                            $field_lable = label_case($field_name);
-                            $field_placeholder = $field_lable;
-                            $required = "";
-                            ?>
-                            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-                            {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <div class="form-group">
-                            <?php
-                            $field_name = 'url_twitter';
-                            $field_lable = label_case($field_name);
-                            $field_placeholder = $field_lable;
-                            $required = "";
-                            ?>
-                            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-                            {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <div class="form-group">
-                            <?php
-                            $field_name = 'url_linkedin';
-                            $field_lable = label_case($field_name);
-                            $field_placeholder = $field_lable;
-                            $required = "";
-                            ?>
-                            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-                            {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
+                            {!! Form::text($field_name, $userprofile->degree, ['class' => 'form-control','placeholder' => 'Degree', $required => $required]) !!}
                         </div>
                     </div>
                 </div>
@@ -240,10 +230,9 @@
                 </div>
                 {{ html()->closeModelForm() }}
             </div>
-            <!--/.col-->
         </div>
-        <!--/.row-->
     </div>
+
     <div class="card-footer">
         <div class="row">
             <div class="col">
@@ -274,13 +263,13 @@
 <!-- Select2 Bootstrap 4 Core UI -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 <script type="text/javascript">
-$(document).ready(function() {
-    $('.select2').select2({
-        theme: "bootstrap",
-        placeholder: "-- Select an option --",
-        allowClear: true,
+    $(document).ready(function() {
+        $('.select2').select2({
+            theme: "bootstrap",
+            placeholder: "-- Select an option --",
+            allowClear: true,
+        });
     });
-});
 </script>
 
 <!-- Date Time Picker & Moment Js-->
@@ -288,21 +277,52 @@ $(document).ready(function() {
 <script type="text/javascript" src="{{ asset('vendor/bootstrap-4-datetime-picker/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 
 <script type="text/javascript">
-$(function() {
-    $('.datetime').datetimepicker({
-        format: 'YYYY-MM-DD',
-        icons: {
-            time: 'far fa-clock',
-            date: 'far fa-calendar-alt',
-            up: 'fas fa-arrow-up',
-            down: 'fas fa-arrow-down',
-            previous: 'fas fa-chevron-left',
-            next: 'fas fa-chevron-right',
-            today: 'far fa-calendar-check',
-            clear: 'far fa-trash-alt',
-            close: 'fas fa-times'
-        }
+    $(function() {
+        $('.datetime').datetimepicker({
+            format: 'YYYY-MM-DD',
+            icons: {
+                time: 'far fa-clock',
+                date: 'far fa-calendar-alt',
+                up: 'fas fa-arrow-up',
+                down: 'fas fa-arrow-down',
+                previous: 'fas fa-chevron-left',
+                next: 'fas fa-chevron-right',
+                today: 'far fa-calendar-check',
+                clear: 'far fa-trash-alt',
+                close: 'fas fa-times'
+            }
+        });
     });
-});
+</script>
+@endpush
+
+
+@push ('after-scripts')
+<script>
+    $(document).ready(function() {
+
+        $('.select2-cities').select2({
+            theme: "bootstrap",
+            multiple: true,
+            placeholder: '@lang("Select an option")',
+            minimumInputLength: 0,
+            allowClear: true,
+            ajax: {
+                url: '{{route("frontend.users.get_user_cities")}}',
+                dataType: 'json',
+                data: function(params) {
+                    return {
+                        q: $.trim(params.term),
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data
+                    };
+                },
+                cache: true
+            }
+        });
+    });
 </script>
 @endpush
