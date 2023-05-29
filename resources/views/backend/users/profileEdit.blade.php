@@ -177,7 +177,6 @@
                             ?>
                                 <label for="city">Cities</label>
                                 <span class="text-danger">*</span>
-
                                 <select name="city[]" class="form-control select2-cities" multiple>
                                     <?php
                                     if ($getSelectedTagVal) {

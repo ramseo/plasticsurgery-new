@@ -53,7 +53,21 @@
                     <div class="col-12 col-md-6 padd-null">
                         <div class="form-group">
                             {{ Form::label('name', 'Name') }} {!! fielf_required("required") !!}
-                            {{ Form::text('name', null, array('class' => 'form-control')) }}
+                            <select name="name" id="result-categories" class="form-group res-cat">
+                                <?php
+                                $get_cat_res = dynamic_menu('menutype', 'url', 'result-categories');
+                                if ($get_cat_res) {
+                                    foreach ($get_cat_res as $res) {
+                                ?>
+                                        <option value="<?= $res->title ?>">
+                                            <?= $res->title ?>
+                                        </option>
+
+                                <?php
+                                    }
+                                }
+                                ?>
+                            </select>
                         </div>
                     </div>
                     <div class="col-6 col-md-6">
@@ -138,3 +152,23 @@
 
 @endpush
 <!-- code -->
+
+@push('after-styles')
+<link href="{{ asset('vendor/select2/select2-coreui-bootstrap4.min.css') }}" rel="stylesheet" />
+@endpush
+
+@push ('after-scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+        $('.res-cat').select2({
+            theme: "bootstrap",
+            placeholder: '@lang("Select an option")',
+            minimumInputLength: 0,
+            allowClear: true,
+        });
+    });
+</script>
+@endpush
