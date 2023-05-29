@@ -377,6 +377,7 @@ class UserController extends Controller
             'first_name' => 'required|min:3|max:191',
             'last_name' => 'required|min:3|max:191',
             'email'     => 'email',
+            'city'     => 'required',
         ]);
 
         if (!auth()->user()->can('edit_users')) {

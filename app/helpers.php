@@ -1133,7 +1133,7 @@ if (!function_exists('date_today')) {
 
     function get_userprofiles($user_id)
     {
-        return DB::table('userprofiles')->where('user_id', $user_id)->select('address', 'bio')->get()->first();
+        return DB::table('userprofiles')->where('user_id', $user_id)->select('*')->get()->first();
     }
 
     function getResultImgs($user_id)

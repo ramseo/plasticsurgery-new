@@ -34,7 +34,7 @@
                 @include('frontend.users.menu')
             </div>
             <div class="col-xs-12 col-sm-9">
-
+                @include('backend.includes.errors')
                 <div class="card bg-white border-light shadow-soft flex-md-row no-gutters p-4">
                     <div class="card-body d-flex flex-column justify-content-between col-auto">
                         <?php
@@ -199,13 +199,12 @@
                                     ?>
                                     {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
                                     {!! Form::text($field_name, $get_userprofiles->bio, ['class' => 'form-control','placeholder' => 'Experience Years', $required => $required]) !!}
-                                    <!-- {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }} -->
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-12 col-sm-6">
                                 <div class="form-group">
                                     <?php
                                     $field_name = 'address';
@@ -215,6 +214,18 @@
                                     ?>
                                     {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
                                     {!! Form::textarea($field_name, $get_userprofiles->address, ['class' => 'form-control', 'rows' => 5, 'cols' => 10,'placeholder' => 'Address', $required => $required]) !!}
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="form-group">
+                                    <?php
+                                    $field_name = 'education';
+                                    $field_lable = label_case($field_name);
+                                    $field_placeholder = $field_lable;
+                                    $required = "";
+                                    ?>
+                                    {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
+                                    {!! Form::text($field_name, $get_userprofiles->degree, ['class' => 'form-control','placeholder' => 'Education', $required => $required]) !!}
                                 </div>
                             </div>
                         </div>

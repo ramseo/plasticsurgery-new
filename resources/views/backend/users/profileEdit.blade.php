@@ -165,7 +165,7 @@
                             $field_name = 'city[]';
                             $field_lable = label_case($field_name);
                             $field_relation = "city";
-                            $required = "";
+                            $required = "required";
 
                             if (!$user) {
                             ?>
@@ -176,6 +176,8 @@
                                 $getSelectedTagVal = getSelectedCityVal(json_decode($user->city));
                             ?>
                                 <label for="city">Cities</label>
+                                <span class="text-danger">*</span>
+
                                 <select name="city[]" class="form-control select2-cities" multiple>
                                     <?php
                                     if ($getSelectedTagVal) {
@@ -190,6 +192,7 @@
                                     ?>
                                 </select>
                             <?php } ?>
+
                         </div>
                     </div>
                 </div>
@@ -216,7 +219,7 @@
                             $required = "";
                             ?>
                             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-                            {!! Form::text($field_name, $userprofile->degree, ['class' => 'form-control','placeholder' => 'Degree', $required => $required]) !!}
+                            {!! Form::text($field_name, $userprofile->degree, ['class' => 'form-control','placeholder' => 'Education', $required => $required]) !!}
                         </div>
                     </div>
                 </div>

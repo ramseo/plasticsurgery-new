@@ -125,3 +125,7 @@ a {
     font-size: 15px;
     width: 180px;
 }
+
+small {
+    color: red;
+}
