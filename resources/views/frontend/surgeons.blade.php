@@ -43,7 +43,12 @@
                                 </a>
                                 <ul class="padd-null text-center">
                                     <li>Cosmetic / Plastic Surgeon</li>
-                                    <li>MCh</li>
+                                    <li>
+                                        <?php
+                                        $profile_data = get_userprofiles($doc_item->id);
+                                        echo $profile_data->degree;
+                                        ?>
+                                    </li>
                                     <li>
                                         <a href="javascript:void(0)">
                                             <i class="fa fa-map-marker blink"></i>

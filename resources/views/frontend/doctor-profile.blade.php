@@ -74,7 +74,10 @@
                             <strong>
                                 <i>
                                     Plastic Surgeon,
-                                    <?= $doctor_details->degree ?>
+                                    <?php
+                                    $profile_data = get_userprofiles($doctor_details->id);
+                                    echo $profile_data->degree;
+                                    ?>
                                 </i>
                             </strong>
                         </p>
