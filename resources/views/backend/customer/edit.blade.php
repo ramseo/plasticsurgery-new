@@ -157,7 +157,7 @@
                         </div>
                     </div> -->
 
-                    <div class="col-sm-8">
+                    <div class="col-sm-12">
                         <div class="float-right">
                             {{-- @if ($user->status != 2 && $user->id != 1)--}}
                             {{-- <a href="{{route('backend.users.block', $user)}}" class="btn btn-danger" data-method="PATCH" data-token="{{csrf_token()}}" data-toggle="tooltip" title="{{__('labels.backend.block')}}" data-confirm="Are you sure?"><i class="fas fa-ban"></i></a>--}}
