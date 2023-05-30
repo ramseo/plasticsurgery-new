@@ -3019,6 +3019,10 @@ img {
     padding: 10px !important;
 }
 
+.profile-write-review {
+    padding-bottom: 15px;
+}
+
 .profile-write-review a,
 .profile-write-review a:hover {
     color: #000;
