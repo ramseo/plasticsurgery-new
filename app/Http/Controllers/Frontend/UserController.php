@@ -363,6 +363,7 @@ class UserController extends Controller
         $userprofiles['mobile'] = $data['mobile'];
         $userprofiles['gender'] = $data['gender'];
         $userprofiles['bio'] = $data['experience_years'];
+        $userprofiles['degree'] = $data['education'];
         DB::table('userprofiles')->where('user_id', $id)->update($userprofiles);
         // update userprofiles table
 
