@@ -416,7 +416,7 @@ class UserController extends Controller
         $data_array['date_of_birth'] = $request->date_of_birth;
         $data_array['first_name'] = $request->first_name;
         $data_array['last_name'] = $request->last_name;
-        $data_array['username'] = $request->username;
+        $data_array['username'] = strtolower($request->first_name . "-" . $request->last_name);
         $data_array['address'] = $request->address;
         $data_array['mobile'] = $request->mobile;
         $data_array['gender'] = $request->gender;
