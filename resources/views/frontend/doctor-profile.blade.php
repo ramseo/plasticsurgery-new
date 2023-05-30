@@ -72,7 +72,10 @@
                     <div class="col-lg-10 mob-text-center-cls">
                         <p>
                             <strong>
-                                <i>Plastic Surgeon, M.S., M.Ch.</i>
+                                <i>
+                                    Plastic Surgeon,
+                                    <?= $doctor_details->degree ?>
+                                </i>
                             </strong>
                         </p>
                         <p>

@@ -207,8 +207,8 @@ class UserController extends Controller
         $module_action = 'Details';
 
         $request->validate([
-            'first_name' => 'required|min:3|max:191',
-            'last_name' => 'required|min:3|max:191',
+            'first_name' => 'required|min:1|max:191',
+            'last_name' => 'required|min:1|max:191',
             'email'     => 'email|unique:users',
             'password'  => 'required|confirmed|min:4',
         ]);
@@ -374,8 +374,8 @@ class UserController extends Controller
 
         $this->validate($request, [
             'avatar'    => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'first_name' => 'required|min:3|max:191',
-            'last_name' => 'required|min:3|max:191',
+            'first_name' => 'required|min:1|max:191',
+            'last_name' => 'required|min:1|max:191',
             'email'     => 'email',
             'city'     => 'required',
         ]);
@@ -634,13 +634,13 @@ class UserController extends Controller
         $module_action = 'Update';
 
         $request->validate([
-            'first_name'    => 'required|min:3|max:191',
-            'last_name'     => 'required|min:3|max:191',
-            'url_website'   => 'nullable|min:3|max:191',
-            'url_facebook'  => 'nullable|min:3|max:191',
-            'url_twitter'   => 'nullable|min:3|max:191',
-            'url_instagram' => 'nullable|min:3|max:191',
-            'url_linkedin'  => 'nullable|min:3|max:191',
+            'first_name'    => 'required|min:1|max:191',
+            'last_name'     => 'required|min:1|max:191',
+            'url_website'   => 'nullable|min:1|max:191',
+            'url_facebook'  => 'nullable|min:1|max:191',
+            'url_twitter'   => 'nullable|min:1|max:191',
+            'url_instagram' => 'nullable|min:1|max:191',
+            'url_linkedin'  => 'nullable|min:1|max:191',
         ]);
 
         $$module_name_singular = User::findOrFail($id);
