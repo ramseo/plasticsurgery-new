@@ -66,9 +66,9 @@
                   </li>
                   <br>
                   <li>
-                     <a href="mailto:info@cosmeticsurgery.in">
+                     <a href="mailto:<?= Setting('email') ?>">
                         <i class="icon_mail_alt"></i>
-                        info@cosmeticsurgery.in
+                        <?= Setting('email') ?>
                      </a>
                   </li>
                </ul>

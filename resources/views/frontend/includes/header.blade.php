@@ -6,7 +6,7 @@ $city = getData('cities');
 <header id="header">
     <div class="xg">
         <div class="bar">
-            <a href="mailto:info@cosmeticsurgery.in">
+            <a href="mailto:<?= Setting('email') ?>">
                 <i class="fa fa-envelope-o" aria-hidden="true"></i>
                 Mail us
             </a>
