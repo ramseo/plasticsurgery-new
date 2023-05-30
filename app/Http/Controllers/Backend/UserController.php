@@ -396,6 +396,7 @@ class UserController extends Controller
             $$module_name_singular->avatar = $media->getUrl();
         }
 
+        $$module_name_singular->email = $request->email;
         $$module_name_singular->name = $request->first_name . " " . $request->last_name;
         $$module_name_singular->username = strtolower($request->first_name . "-" . $request->last_name);
 
@@ -417,6 +418,7 @@ class UserController extends Controller
         $data_array['first_name'] = $request->first_name;
         $data_array['last_name'] = $request->last_name;
         $data_array['username'] = strtolower($request->first_name . "-" . $request->last_name);
+        $data_array['email'] = $request->email;
         $data_array['address'] = $request->address;
         $data_array['mobile'] = $request->mobile;
         $data_array['gender'] = $request->gender;
