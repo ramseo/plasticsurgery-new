@@ -151,11 +151,11 @@
                 {{-- </div>--}}
 
                 <div class="row">
-                    <div class="col-sm-4">
+                    <!-- <div class="col-sm-4">
                         <div class="form-group">
                             {{ html()->submit($text = icon('fas fa-save')." Save")->class('btn btn-success') }}
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="col-sm-8">
                         <div class="float-right">
