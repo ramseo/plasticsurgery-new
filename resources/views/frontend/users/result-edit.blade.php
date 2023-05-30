@@ -78,29 +78,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-12">
                         <div class="form-group">
                             <?php
-                            Form::label('image', 'Image');
-                            if ($album->image) {
-                                if (file_exists(public_path() . '/storage/album/image/' . $album->image)) {
+                            // Form::label('image', 'Image');
+                            // if ($album->image) {
+                            //     if (file_exists(public_path() . '/storage/album/image/' . $album->image)) {
                             ?>
-                                    <img id="imgPreview" src="<?= asset('storage/album/image/' . $album->image) ?>" alt="img" class="img-fluid">
+                                    <img id="imgPreview" src="<? //= asset('storage/album/image/' . $album->image) 
+                                                                ?>" alt="img" class="img-fluid">
                             <?php
-                                }
-                            }
+                            //     }
+                            // }
                             ?>
                             <label for="file-multiple-input">
                                 Click here to update photo
                             </label>
                             <input id="file-multiple-input" name="image" type="file" class="form-control-file" accept="image/gif, image/jpeg, image/png">
                             <small>
-                                Server max upload size is : <?= ini_get("upload_max_filesize") ?>
+                                Server max upload size is : <? //= ini_get("upload_max_filesize") 
+                                                            ?>
                             </small>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
                 <!-- <div class="row">
                     <div class="col-12">
                         <div class="form-group">
