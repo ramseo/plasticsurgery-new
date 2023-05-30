@@ -127,11 +127,14 @@ class UserController extends Controller
         $userprofile = Userprofile::where('user_id', $user->id)->first();
 
         if ($request->ajax()) {
-            $albums = DB::table('albums')->where('vendor_id', $user->id)->select(['id', 'name', 'description'])->orderBy('id', 'desc');
+            $albums = DB::table('albums')->where('vendor_id', $user->id)->select(['id', 'name', 'status'])->orderBy('id', 'desc');
             return Datatables::of($albums)
                 ->addIndexColumn()
-                ->editColumn('description', function ($album) {
-                    return '<strong>' . Str::words($album->description, '25') . '</strong>';
+                ->editColumn('name', function ($album) {
+                    return '<strong>' . $album->name . '</strong>';
+                })
+                ->editColumn('status', function ($album) {
+                    return ($album->status == 1) ? "Enabled" : "Disabled";
                 })
                 ->addColumn('action', function ($album) {
                     $btn = "";
@@ -142,7 +145,7 @@ class UserController extends Controller
                     $btn .= '</div>';
                     return $btn;
                 })
-                ->rawColumns(['action', 'description'])
+                ->rawColumns(['action', 'name', 'status'])
                 ->make(true);
         }
         return view("frontend.users.results", compact('user', 'userprofile'));
@@ -169,18 +172,18 @@ class UserController extends Controller
         $data = $request->all();
 
         // compress code
-        $x = 90;
-        $file = $request->file('image');
-        $file_name = time() . "_" . $file->getClientOriginalName();
-        $img = \Image::make($file);
-        $img->save(public_path("storage/album/image/$file_name"), $x);
-        $data = array_merge($data, ['image' => $file_name]);
+        // $x = 90;
+        // $file = $request->file('image');
+        // $file_name = time() . "_" . $file->getClientOriginalName();
+        // $img = \Image::make($file);
+        // $img->save(public_path("storage/album/image/$file_name"), $x);
+        // $data = array_merge($data, ['image' => $file_name]);
         // compress code
 
-        // if ($request->file('image')) {
-        //     $file_image = fileUpload($request, 'image', 'album/image');
-        //     $data = array_merge($data, ['image' => $file_image]);
-        // }
+        if ($request->file('image')) {
+            $file_image = fileUpload($request, 'image', 'album/image');
+            $data = array_merge($data, ['image' => $file_image]);
+        }
 
         $album = Album::create($data);
 
@@ -213,18 +216,18 @@ class UserController extends Controller
 
         $data = $request->all();
         // compress code
-        $x = 90;
-        $file = $request->file('image');
-        $file_name = time() . "_" . $file->getClientOriginalName();
-        $img = \Image::make($file);
-        $img->save(public_path("storage/album/image/$file_name"), $x);
-        $data = array_merge($data, ['image' => $file_name]);
+        // $x = 90;
+        // $file = $request->file('image');
+        // $file_name = time() . "_" . $file->getClientOriginalName();
+        // $img = \Image::make($file);
+        // $img->save(public_path("storage/album/image/$file_name"), $x);
+        // $data = array_merge($data, ['image' => $file_name]);
         // compress code
 
-        // if ($request->file('image')) {
-        //     $file_image = fileUpload($request, 'image', 'album/image/');
-        //     $data = array_merge($data, ['image' => $file_image]);
-        // }
+        if ($request->file('image')) {
+            $file_image = fileUpload($request, 'image', 'album/image/');
+            $data = array_merge($data, ['image' => $file_image]);
+        }
 
         $album->update($data);
         Flash::success("<i class='fas fa-check'></i> Album Updated Successfully")->important();

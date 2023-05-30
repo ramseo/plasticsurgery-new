@@ -82,24 +82,23 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="form-group">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input form-control" name="image">
-                                <label class="custom-file-label">Choose file</label>
-                                <small>
-                                    Server max upload size is : <?= ini_get("upload_max_filesize") ?>
-                                </small>
-                            </div>
+                            <label for="file-multiple-input">Click here to update photo</label>
+                            <input id="file-multiple-input" name="image" type="file" class="form-control-file" accept="image/gif, image/jpeg, image/png">
+                            <small>
+                                Server max upload size is : <?= ini_get("upload_max_filesize") ?>
+                            </small>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+
+                <!-- <div class="row">
                     <div class="col-12">
                         <div class="form-group">
                             {{ Form::label('description', 'Description') }}
                             {{ Form::textarea('description', null, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="row">
                     <div class="col-6">

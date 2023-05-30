@@ -51,7 +51,7 @@
                             <thead>
                                 <th width="5%">#</th>
                                 <th width="20%">Name</th>
-                                <th width="60%">Description</th>
+                                <th width="60%">Status</th>
                                 <th width="15%">Action</th>
                             </thead>
                             <tbody>
@@ -89,8 +89,8 @@
                 name: 'name'
             },
             {
-                data: 'description',
-                name: 'description'
+                data: 'status',
+                name: 'status'
             },
             {
                 data: 'action',

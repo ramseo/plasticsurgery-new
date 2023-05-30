@@ -52,7 +52,21 @@
                     <div class="col-12 col-md-6 padd-null">
                         <div class="form-group">
                             {{ Form::label('name', 'Name') }} {!! fielf_required("required") !!}
-                            {{ Form::text('name', $album->name, array('class' => 'form-control')) }}
+                            <select name="name" id="result-categories" class="form-group res-cat">
+                                <?php
+                                $get_cat_res = dynamic_menu('menutype', 'url', 'result-categories');
+                                if ($get_cat_res) {
+                                    foreach ($get_cat_res as $res) {
+                                ?>
+                                        <option value="<?= $res->title ?>" <?= ($album->name == $res->title) ? "selected" : "" ?>>
+                                            <?= $res->title ?>
+                                        </option>
+
+                                <?php
+                                    }
+                                }
+                                ?>
+                            </select>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
@@ -66,35 +80,35 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <?php
-                        Form::label('image', 'Image');
-                        if ($album->image) {
-                            if (file_exists(public_path() . '/storage/album/image/' . $album->image)) {
-                        ?>
-                                <img id="imgPreview" src="<?= asset('storage/album/image/' . $album->image) ?>" alt="img" class="img-fluid">
-                        <?php
-                            }
-                        }
-                        ?>
                         <div class="form-group">
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input form-control" name="image">
-                                <label class="custom-file-label">Choose file</label>
-                                <small>
-                                    Server max upload size is : <?= ini_get("upload_max_filesize") ?>
-                                </small>
-                            </div>
+                            <?php
+                            Form::label('image', 'Image');
+                            if ($album->image) {
+                                if (file_exists(public_path() . '/storage/album/image/' . $album->image)) {
+                            ?>
+                                    <img id="imgPreview" src="<?= asset('storage/album/image/' . $album->image) ?>" alt="img" class="img-fluid">
+                            <?php
+                                }
+                            }
+                            ?>
+                            <label for="file-multiple-input">
+                                Click here to update photo
+                            </label>
+                            <input id="file-multiple-input" name="image" type="file" class="form-control-file" accept="image/gif, image/jpeg, image/png">
+                            <small>
+                                Server max upload size is : <?= ini_get("upload_max_filesize") ?>
+                            </small>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-12">
                         <div class="form-group">
                             {{ Form::label('description', 'Description') }}
                             {{ Form::textarea('description', $album->description, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="row">
                     <div class="col-4">
@@ -127,32 +141,50 @@
             </div>
         </div>
     </div>
-    </div>
+</section>
 
-    @stop
+@stop
 
-    <!-- code -->
-    @push ('after-scripts')
 
-    <script type="text/javascript" src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
+@push ('after-scripts')
+<script type="text/javascript" src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 
-    <script type="text/javascript">
-        CKEDITOR.replace('description', {
-            filebrowserImageBrowseUrl: '/file-manager/ckeditor',
-            language: '{{App::getLocale()}}',
-            defaultLanguage: 'en'
+<script type="text/javascript">
+    CKEDITOR.replace('description', {
+        filebrowserImageBrowseUrl: '/file-manager/ckeditor',
+        language: '{{App::getLocale()}}',
+        defaultLanguage: 'en'
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+        document.getElementById('button-image').addEventListener('click', (event) => {
+            event.preventDefault();
+
+            window.open('/file-manager/fm-button', 'fm', 'width=800,height=600');
         });
+    });
+</script>
+@endpush
 
-        document.addEventListener("DOMContentLoaded", function() {
 
-            document.getElementById('button-image').addEventListener('click', (event) => {
-                event.preventDefault();
+@push('after-styles')
+<link href="{{ asset('vendor/select2/select2-coreui-bootstrap4.min.css') }}" rel="stylesheet" />
+@endpush
 
-                window.open('/file-manager/fm-button', 'fm', 'width=800,height=600');
-            });
+@push ('after-scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+        $('.res-cat').select2({
+            theme: "bootstrap",
+            placeholder: '@lang("Select an option")',
+            minimumInputLength: 0,
+            allowClear: true,
         });
-    </script>
-
-    @endpush
-    <!-- code -->
+    });
+</script>
+@endpush
