@@ -71,6 +71,12 @@
                 Result Category
             </a>
         </li>
+        <li>
+            <a href="{{ route('frontend.content.index') }}" class="{{ Request::segment(2) == 'content' ? 'active' : '' }}">
+                <i class="fa fa-file-text" aria-hidden="true"></i>
+                Content
+            </a>
+        </li>
         <!-- <li data-toggle="collapse" data-target="#service" class="{{ Request::segment(1) == 'vendors' ? 'collapsed' : '' }} ">
             <a class="{{ Request::segment(1) == 'vendors' ? 'active' : '' }}" href="{{ route('frontend.vendors.slug')}}"><i class="fa fa-globe fa-lg"></i> My Vendors <span class="arrow"></span></a>
             <ul id="mainFeatures" class="sub-menu collapse {{ Request::segment(1) == 'vendors' ? 'show' : '' }}  ">

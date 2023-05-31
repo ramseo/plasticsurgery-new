@@ -83,6 +83,11 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         Route::get('profile/results/image/delete/{id}', 'UserController@results_image_delete')->name('results.image.delete');
         // get results routes
 
+        // get profile content 
+        Route::get('profile/content', 'UserController@profile_content')->name('content.index');
+        Route::PATCH('profile/content-update/{id}', 'UserController@profile_content_update')->name('content.update');
+        // get profile content
+
         Route::get("users/emailConfirmationResend/{id}", ['as' => "users.emailConfirmationResend", 'uses' => "UserController@emailConfirmationResend"]);
         Route::get('profile/changePassword', ['as' => "users.changePassword", 'uses' => "UserController@changePassword"]);
         Route::patch('profile/changePassword', ['as' => "users.changePasswordUpdate", 'uses' => "UserController@changePasswordUpdate"]);

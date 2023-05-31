@@ -114,6 +114,41 @@ class UserController extends Controller
         return view("frontend.users.profile", compact('user', 'userprofile'));
     }
 
+
+    public function profile_content(Request $request)
+    {
+        if (Auth::check() == false) {
+            return redirect(base_url());
+        }
+        $user = Auth::user();
+        $user = User::findOrFail($user->id);
+
+        // dd($user->id);
+
+        $userprofile = Userprofile::where('user_id', $user->id)->first();
+
+
+        return view("frontend.users.content", compact('user', 'userprofile'));
+    }
+
+    public function profile_content_update($id, Request $request)
+    {
+        $request->validate([
+            'description' => 'nullable|string',
+        ]);
+
+        $userprofile = Userprofile::where('user_id', $id)->get()->first();
+
+        $data = [];
+        $data['content'] = $request->content;
+
+        DB::table('userprofiles')->where('user_id', $id)->update($data);
+
+        Flash::success("<i class='fas fa-check'></i> Profile Content Updated Successfully")->important();
+        Log::info(label_case('Profile Content Update | ' . $userprofile->name . '(ID:' . $userprofile->id . ')  by User:' . auth()->user()->name . '(ID:' . auth()->user()->id . ')'));
+        return redirect("profile/content");
+    }
+
     // results section start aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
     public function profileResults(Request $request)
