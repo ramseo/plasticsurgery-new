@@ -118,14 +118,14 @@ $city = getData('cities');
                         </a>
                     </li>
                     @endif
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('account-logout-form').submit();">
                             Logout
                         </a>
                     </li>
                     <form id="account-logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
-                    </form>
+                    </form> -->
                     @else
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">
