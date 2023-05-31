@@ -131,7 +131,7 @@
 </article>
 
 <div class="blog-comments-col">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12">
                 <h5 class="mb-4">
