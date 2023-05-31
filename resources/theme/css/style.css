@@ -3573,3 +3573,8 @@ img {
     height: 275px;
     width: 100%;
 }
+
+.maim-more-post img {
+    width: 100%;
+    height: 200px;
+}
