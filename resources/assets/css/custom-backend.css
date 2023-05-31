@@ -129,3 +129,8 @@ a {
 small {
     color: red;
 }
+
+.sort-menu-cls {
+    width: 50px;
+    height: 35px;
+}

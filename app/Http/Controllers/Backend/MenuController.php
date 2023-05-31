@@ -33,7 +33,7 @@ class MenuController extends Controller
     {
         $menuName = DB::table('menutype')->where('menu_id', $menu_id)->select('title')->first();
         if ($request->ajax()) {
-            $menus = Menu::where('menu_id', $menu_id)->select(['id', 'title', 'url', 'menu_id', 'parent_id']);
+            $menus = Menu::where('menu_id', $menu_id)->orderBy('parent_id', 'asc')->select(['id', 'title', 'url', 'menu_id', 'parent_id']);
             return Datatables::of($menus)
                 ->addIndexColumn()
                 ->editColumn('title', function ($menu) {
@@ -51,10 +51,15 @@ class MenuController extends Controller
                     return $nameContent;
                 })
                 ->addColumn('action', function ($menu) {
+                    $sort_html = "";
+                    if ($menu->parent_id == 0) {
+                        $sort_html = '<input class="sort-menu-cls" type="number" name="sort">';
+                    }
                     $btn = "";
                     $btn .= "<div class='switch-flex-cls posts-cls'>";
                     $btn .= '<a href="' . url("admin/menus/edit/$menu->id") . '" class="btn btn-danger" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"></i></a>';
                     $btn .= '<a href="' . url("admin/menus/destroy/$menu->menu_id/$menu->id") . '" class="btn btn-danger del-review-popup" data-method="DELETE" data-token="' . csrf_token() . '" data-toggle="tooltip" title="Delete" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>';
+                    $btn .= $sort_html;
                     $btn .= "</div>";
                     return $btn;
                 })
