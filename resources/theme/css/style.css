@@ -2266,6 +2266,10 @@ footer img {
         font-size: 15px;
     }
 
+    .post-item-wrap:hover {
+        transform: translateY(0);
+    }
+
 }
 
 
