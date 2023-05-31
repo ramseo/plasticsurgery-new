@@ -8,37 +8,31 @@
 @endsection
 
 @section('content')
-<section id="page-banner">
+
+<!-- <section id="page-banner">
     <div class="container-fluid">
         <div class="row">
             <div class="banner-container">
                 <div class="vendor-img">
-                    <img src="<?= asset('img/blog.jpg') ?>" alt="image alt" class="img-fluid filter-cls margin-img-0">
+                    <img src="<? //= asset('img/blog.jpg') 
+                                ?>" alt="image alt" class="img-fluid filter-cls margin-img-0">
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-<section id="breadcrumb-section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('frontend.posts.index') }}">Blog</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">{{$$module_name_singular->name}}</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+<div class="header-space"></div>
+<div class="cit">
+    <div class="container">
+        <p class="cities_cls">
+            Blog
+        </p>
     </div>
-</section>
-
+</div>
 
 <article>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             @php
             $post_details_url = route('frontend.posts.show',[encode_id($$module_name_singular->id), $$module_name_singular->slug]);

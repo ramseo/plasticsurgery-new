@@ -5,38 +5,31 @@
 @section('content')
 
 
-<section id="page-banner">
+<!-- <section id="page-banner">
     <div class="container-fluid">
         <div class="row">
             <div class="banner-container">
                 <div class="vendor-img">
-                    <img src="<?= asset('img/blog.jpg') ?>" alt="image alt" class="img-fluid filter-cls margin-img-0">
+                    <img src="<? //= asset('img/blog.jpg') 
+                                ?>" alt="image alt" class="img-fluid filter-cls margin-img-0">
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-<section id="breadcrumb-sec">
-    <div class="container-fluid">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="<?= url('/') ?>">
-                        Home
-                    </a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                    Blog
-                </li>
-            </ol>
-        </nav>
+<div class="header-space"></div>
+<div class="cit">
+    <div class="container">
+        <p class="cities_cls">
+            Blog
+        </p>
     </div>
-</section>
+</div>
 
 @if(count($post_data))
 <section class="listing-section blog-index-cls">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             @foreach ($post_data as $item)
             @php
@@ -73,13 +66,7 @@
             </div>
             @endforeach
         </div>
-
-        <div class="inner" style="text-align:center">
-            <!-- <ul class="page-pagination">
-                <li> <span aria-current="page" class="page-numbers current">1</span></li>
-                <li><a class="page-numbers" href="http://cosmetic.ls/blog/deciding-right-procedure-of-body-contouring">2</a></li>
-                <li><a class="next page-numbers" href="http://cosmetic.ls/blog/don’t-be-shy!-ask-these-questions-to-your-breast-augmentation-surgeon">NEXT<i class="fa fa-chevron-right"></i></a></li>
-            </ul> -->
+        <div class="inner text-center">
             <div class="d-flex justify-content-center w-100 mt-3">
                 {{$post_data->links()}}
             </div>
