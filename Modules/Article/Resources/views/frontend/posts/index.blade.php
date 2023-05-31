@@ -47,7 +47,7 @@
                             <div class="text-col">
                                 <a href="{{$details_url}}">
                                     <p class="title">
-                                        <?= Str::words($item->name, 5) ?>
+                                        <?= Str::words($item->name, 4) ?>
                                     </p>
                                 </a>
                                 <p class="text margin-null">
