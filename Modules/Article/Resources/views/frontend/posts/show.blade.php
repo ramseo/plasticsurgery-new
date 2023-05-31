@@ -13,7 +13,7 @@
 <div class="cit">
     <div class="container">
         <p class="cities_cls">
-            <?= "Blog" . " / " . $$module_name_singular->name ?>
+            <?= "<a href='" . url('blog') . "'>Blog</a>" . " / " . $$module_name_singular->name ?>
         </p>
     </div>
 </div>
