@@ -9,24 +9,11 @@
 
 @section('content')
 
-<!-- <section id="page-banner">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="banner-container">
-                <div class="vendor-img">
-                    <img src="<? //= asset('img/blog.jpg') 
-                                ?>" alt="image alt" class="img-fluid filter-cls margin-img-0">
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
 <div class="header-space"></div>
 <div class="cit">
     <div class="container">
         <p class="cities_cls">
-            Blog
+            <?= "Blog" . " / " . $$module_name_singular->name ?>
         </p>
     </div>
 </div>
