@@ -141,7 +141,7 @@ class FrontendController extends Controller
             'name' => "Find A Surgeon",
         );
 
-        $doctors = DB::table('users')->select('*')->whereNotNull('city')->get()->toArray();
+        $doctors = DB::table('users')->select('*')->whereNotNull('city')->orderBy("first_name")->get()->toArray();
 
         return view('frontend.surgeons', compact('body_class', 'module_name_singular', "$module_name_singular", 'doctors'));
     }
