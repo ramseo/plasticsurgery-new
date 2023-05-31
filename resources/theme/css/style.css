@@ -2,6 +2,10 @@ form-control * {
     font-family: 'Signika', sans-serif;
 }
 
+a:hover {
+    text-decoration: none !important;
+}
+
 .trans {
     margin-top: 83px;
 }
