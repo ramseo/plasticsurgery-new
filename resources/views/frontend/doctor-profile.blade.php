@@ -102,7 +102,7 @@
 <div class="container-fluid" id="doc-content">
     <div class="container">
         <div class="row">
-            <div class="col mob-padd-null">
+            <div class="col padd-null">
                 <?= $profile_data->content ?>
 
                 <!-- old content -->
