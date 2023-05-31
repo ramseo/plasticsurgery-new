@@ -2270,6 +2270,10 @@ footer img {
         transform: translateY(0);
     }
 
+    .blog-index-cls {
+        padding: 0px 0 0 0;
+    }
+
 }
 
 
