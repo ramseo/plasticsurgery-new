@@ -171,7 +171,7 @@ class FrontendController extends Controller
             'name' => "Before & After",
         );
 
-        $all_result_category = DB::table('albums')->select('*')->where('status', 1)->groupBy("name")->get();
+        $all_result_category = DB::table('albums')->select('*')->where('status', 1)->groupBy("name")->orderBy('name')->get();
 
         return view('frontend.before-after-results', compact('body_class', 'module_name_singular', "$module_name_singular", 'all_result_category'));
     }
