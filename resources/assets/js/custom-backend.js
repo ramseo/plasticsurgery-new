@@ -42,3 +42,27 @@ $(document).on("click", '#sidebar-show-hide', function () {
         $(elm).attr("class", "fa fa-chevron-left fa-2x");
     }
 });
+
+$(document).on("change", '.sort-menu-cls', function () {
+
+    $.ajax({
+        url: menu_sort_path,
+        type: 'post',
+        data: {
+            sort: this.value,
+            menu_id: $(this).attr("menu-id"),
+            menu_item_id: $(this).attr("menu-item-id"),
+            "_token": csrf_token,
+        },
+        dataType: 'json',
+        success: function (response) {
+            if (response.status) {
+                console.log("sort updated");
+            } else {
+                alert("The sort value " + response.sort + " is already assigned");
+                this.defaultSelected;
+                location.reload();
+            }
+        }
+    });
+})

@@ -33,7 +33,7 @@ class MenuController extends Controller
     {
         $menuName = DB::table('menutype')->where('menu_id', $menu_id)->select('title')->first();
         if ($request->ajax()) {
-            $menus = Menu::where('menu_id', $menu_id)->orderBy('parent_id', 'asc')->select(['id', 'title', 'url', 'menu_id', 'parent_id']);
+            $menus = Menu::where('menu_id', $menu_id)->orderBy('parent_id', 'asc')->select(['id', 'title', 'url', 'menu_id', 'parent_id', 'sort']);
             return Datatables::of($menus)
                 ->addIndexColumn()
                 ->editColumn('title', function ($menu) {
@@ -52,8 +52,54 @@ class MenuController extends Controller
                 })
                 ->addColumn('action', function ($menu) {
                     $sort_html = "";
+                    $one = "";
+                    $two = "";
+                    $three = "";
+                    $four = "";
+                    $five = "";
+                    $six = "";
+                    $seven = "";
+                    $eight = "";
+                    $nine = "";
+                    $ten = "";
+
+                    if ($menu->sort == 1) {
+                        $one = "selected";
+                    } elseif ($menu->sort == 2) {
+                        $two = "selected";
+                    } elseif ($menu->sort == 3) {
+                        $three = "selected";
+                    } elseif ($menu->sort == 4) {
+                        $four = "selected";
+                    } elseif ($menu->sort == 5) {
+                        $five = "selected";
+                    } elseif ($menu->sort == 6) {
+                        $six = "selected";
+                    } elseif ($menu->sort == 7) {
+                        $seven = "selected";
+                    } elseif ($menu->sort == 8) {
+                        $eight = "selected";
+                    } elseif ($menu->sort == 9) {
+                        $nine = "selected";
+                    } elseif ($menu->sort == 10) {
+                        $ten = "selected";
+                    }
+
                     if ($menu->parent_id == 0) {
-                        $sort_html = '<input class="sort-menu-cls" type="number" name="sort">';
+                        $sort_html .= "<select name='sort' class='sort-menu-cls' menu-id='$menu->menu_id' menu-item-id='$menu->id'>";
+                        $sort_html .= "<option value='0'>Choose Sort</option>";
+                        $sort_html .= "<option value='1' $one>1</option>";
+                        $sort_html .= "<option value='2' $two>2</option>";
+                        $sort_html .= "<option value='3' $three>3</option>";
+                        $sort_html .= "<option value='4' $four>4</option>";
+                        $sort_html .= "<option value='5' $five>5</option>";
+                        $sort_html .= "<option value='6' $six>6</option>";
+                        $sort_html .= "<option value='7' $seven>7</option>";
+                        $sort_html .= "<option value='8' $eight>8</option>";
+                        $sort_html .= "<option value='9' $nine>9</option>";
+                        $sort_html .= "<option value='10' $ten>10</option>";
+                        $sort_html .= "</select>";
+                        // $sort_html .= '<input class="sort-menu-cls" type="text" value="' . $menu->sort . '" name="sort" menu-id="' . $menu->menu_id . '" menu-item-id="' . $menu->id . '">';
                     }
                     $btn = "";
                     $btn .= "<div class='switch-flex-cls posts-cls'>";

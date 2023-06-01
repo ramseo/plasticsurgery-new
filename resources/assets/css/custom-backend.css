@@ -131,6 +131,6 @@ small {
 }
 
 .sort-menu-cls {
-    width: 50px;
+    width: auto;
     height: 35px;
 }

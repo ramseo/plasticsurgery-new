@@ -474,4 +474,42 @@ class PagesController extends Controller
 
         return redirect("admin/$module_name");
     }
+
+
+    public function menu_sort(Request $request)
+    {
+        $response = [];
+        $status = 0;
+
+        $if_exists = DB::table("menuitem")
+            ->where('menu_id', $request->menu_id)
+            ->where('parent_id', 0)
+            ->where('sort', $request->sort)
+            ->get()->first();
+
+        if ($if_exists == NULL) {
+            $status = DB::table("menuitem")
+                ->where('menu_id', $request->menu_id)
+                ->where('id', $request->menu_item_id)
+                ->where('parent_id', 0)
+                ->update(array('sort' => $request->sort));
+
+            if ($status) {
+                DB::table("menuitem")
+                    ->where('menu_id', $request->menu_id)
+                    ->where('parent_id', 0)
+                    ->where('sort', 0)
+                    ->update(array('sort' => 1000));
+            }
+        }
+
+        $response['sort'] = $request->sort;
+        if ($status) {
+            $response['status'] = true;
+        } else {
+            $response['status'] = false;
+        }
+
+        echo json_encode($response);
+    }
 }

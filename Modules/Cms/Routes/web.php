@@ -66,6 +66,8 @@ Route::group(['namespace' => '\Modules\Cms\Http\Controllers\Backend', 'as' => 'b
 
     Route::resource("pages", "PagesController");
 
+    Route::post("pages/menu_sort", ['as' => "pages.menu_sort", 'uses' => "PagesController@menu_sort"]);
+
     /*
      *
      *  Categories Routes

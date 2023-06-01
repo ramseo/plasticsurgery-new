@@ -706,7 +706,11 @@ if (!function_exists('date_today')) {
         }
         $item = $data->first();
         if ($item) {
-            return DB::table('menuitem')->where('menu_id', $item->menu_id)->where('parent_id', 0)->select('*')->get();
+            return DB::table('menuitem')->select('*')
+                ->where('menu_id', $item->menu_id)
+                ->where('parent_id', 0)
+                ->orderBy('sort', 'ASC')
+                ->get();
         } else {
             return [];
         }
