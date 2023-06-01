@@ -12,7 +12,7 @@
             <div class="col-8">
                 <h4 class="card-title mb-0">
                     <i class="c-icon cil-people"></i>
-                    <b class="text-capitalize" ><?= $menuName->title ?></b>
+                    <b class="text-capitalize"><?= $menuName->title ?></b>
                     <small class="text-muted">Menu Items</small>
                 </h4>
                 <div class="small text-muted">
@@ -40,10 +40,8 @@
                             <th> # </th>
                             <th> Name </th>
                             <th> Slug </th>
-                            <th class="text-center" > Action </th>
+                            <th style="width: 25%" class="text-center"> Action </th>
                         </thead>
-                        <tbody>
-                        </tbody>
                     </table>
                 </div>
             </div>
