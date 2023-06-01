@@ -214,7 +214,7 @@ $average = averageReview($reviews);
                             </a>
                         </li>
                         <li class="list-inline-item">
-                            <a class="twitter" href="https://twitter.com/share?text=<?= $vendor_details->business_name ?>&url=<?= url()->current() ?>&hashtags=wed.in" target="_blank">
+                            <a class="twitter" href="https://twitter.com/share?text=<?= $vendor_details->business_name ?>&url=<?= url()->current() ?>&hashtags=<?= $_SERVER['SERVER_NAME'] ?>" target="_blank">
                                 <i class="fab fa-twitter-square"></i>
                             </a>
                         </li>

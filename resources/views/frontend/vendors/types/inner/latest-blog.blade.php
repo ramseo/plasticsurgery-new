@@ -8,7 +8,7 @@ $getBlogsByVendor = getBlogsByVendor($type->id);
         <div class="row">
             <div class="col-xs-12 col-sm-12 common-heading text-center with-lines">
                 <p class="shadow-text">Blogs</p>
-                <p class="head">Latest Blogs of {{$type->name}} on Wed.in</p>
+                <p class="head">Latest Blogs of {{$type->name}} on <?= $_SERVER['SERVER_NAME'] ?></p>
             </div>
             <div class="col-xs-12 col-sm-12 row reviews-list-col">
                 @foreach($getBlogsByVendor as $post)

@@ -8,23 +8,23 @@
     <div class="form-header">
         <a class="page-back-link" href="/"><img class="img-fluid" src="{{asset('images/back-arrow.png')}}" alt=""></a>
         <p class="header-title">Sign in</p>
-        <p class="header-text">Welcome Back, Sign in to Wed.in</p>
+        <p class="header-text">Welcome Back, Sign in to <?= $_SERVER['SERVER_NAME'] ?></p>
     </div>
     <div class="form-body">
         @include('flash::message')
         <!-- @include('auth.vendor.social_vendor_login_buttons') -->
         @if ($errors->any())
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <p><i class="fas fa-exclamation-triangle"></i> @lang('Please fix the following errors & try again!')</p>
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <p><i class="fas fa-exclamation-triangle"></i> @lang('Please fix the following errors & try again!')</p>
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         @endif
         <form role="form" method="POST" action="{{ route('vendor.login') }}">
             @csrf
@@ -32,7 +32,7 @@
             <input type="hidden" name="redirectTo" value="{{ request()->redirectTo }}">
             <div class="form-group mat-group">
                 <label for="">Username</label>
-                <input type="text" class="form-control" id="username" name="username" value="{{ old('username') }}" placeholder="{{ __('Username') }}"  required>
+                <input type="text" class="form-control" id="username" name="username" value="{{ old('username') }}" placeholder="{{ __('Username') }}" required>
             </div>
             <div class="form-group mat-group">
                 <label for="">Password</label>

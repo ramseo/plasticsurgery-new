@@ -8,49 +8,89 @@
     <div class="form-header">
         <a class="page-back-link" href="/"><img class="img-fluid" src="{{asset('images/back-arrow.png')}}" alt=""></a>
         <p class="header-title">Sign in</p>
-        <p class="header-text">Welcome Back, Sign in to Wed.in</p>
+        <p class="header-text">Welcome Back, Sign in to <?= $_SERVER['SERVER_NAME'] ?></p>
     </div>
     <div class="form-body">
-          
+
         @include('flash::message')
         @if ($errors->any())
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <p><i class="fas fa-exclamation-triangle"></i> @lang('Please fix the following errors & try again!')</p>
-                <ul>
-                    @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <p><i class="fas fa-exclamation-triangle"></i> @lang('Please fix the following errors & try again!')</p>
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         @endif
 
         @if(env('FACEBOOK_ACTIVE') || env('GITHUB_ACTIVE') || env('GOOGLE_ACTIVE'))
-            <div class="text-center">
-                @if(env('FACEBOOK_ACTIVE'))
-                <a href="{{route('social.login', 'facebook')}}" class="btn btn-block btn-outline-info">
-                    <span class="btn-inner--icon"> <i class="fab fa-facebook"></i> </span>
-                    <span class="btn-inner--text">Log in with Facebook</span>
-                </a>
-                @endif
-                @if(env('GOOGLE_ACTIVE'))
-                <a href="{{route('social.login', 'google')}}" class="btn btn-block btn-outline-primary">
-                    <span class="btn-inner--icon"><i class="fab fa-google"></i> </span>
-                    <span class="btn-inner--text"> Log in with Google</span>
-                </a>
-                @endif
-            </div>
+        <div class="text-center">
+            @if(env('FACEBOOK_ACTIVE'))
+            <a href="{{route('social.login', 'facebook')}}" class="btn btn-block btn-outline-info">
+                <span class="btn-inner--icon"> <i class="fab fa-facebook"></i> </span>
+                <span class="btn-inner--text">Log in with Facebook</span>
+            </a>
+            @endif
+            @if(env('GOOGLE_ACTIVE'))
+            <a href="{{route('social.login', 'google')}}" class="btn btn-block btn-outline-primary">
+                <span class="btn-inner--icon"><i class="fab fa-google"></i> </span>
+                <span class="btn-inner--text"> Log in with Google</span>
+            </a>
+            @endif
+        </div>
 
         <style type="text/css">
-            .or-text-row { display: table-row; }
-            .or-text { display: table; width: 100%; position: relative; margin: 20px 0; }
-            .or-text-step button[disabled] { opacity: 1 !important; filter: alpha(opacity=100) !important; }
-            .or-text-row:before { top: 14px; bottom: 0; position: absolute; content: " "; width: 100%; height: 1px; background-color: #e8e8e8; z-order: 0; }
-            .or-text-line { display: table-cell; text-align: center; position: relative; width: 100%; }
-            .or-text-line p { margin-top:10px; }
-            .btn-circle { width: 30px; height: 30px; text-align: center; padding: 2px 0; font-size: 17px; line-height: 1.428571429; border-radius: 15px;}      
+            .or-text-row {
+                display: table-row;
+            }
+
+            .or-text {
+                display: table;
+                width: 100%;
+                position: relative;
+                margin: 20px 0;
+            }
+
+            .or-text-step button[disabled] {
+                opacity: 1 !important;
+                filter: alpha(opacity=100) !important;
+            }
+
+            .or-text-row:before {
+                top: 14px;
+                bottom: 0;
+                position: absolute;
+                content: " ";
+                width: 100%;
+                height: 1px;
+                background-color: #e8e8e8;
+                z-order: 0;
+            }
+
+            .or-text-line {
+                display: table-cell;
+                text-align: center;
+                position: relative;
+                width: 100%;
+            }
+
+            .or-text-line p {
+                margin-top: 10px;
+            }
+
+            .btn-circle {
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                padding: 2px 0;
+                font-size: 17px;
+                line-height: 1.428571429;
+                border-radius: 15px;
+            }
         </style>
 
         <div class="or-text">
@@ -61,7 +101,7 @@
             </div>
         </div>
 
-          
+
         @endif
 
         <form role="form" method="POST" action="{{ route('login') }}">

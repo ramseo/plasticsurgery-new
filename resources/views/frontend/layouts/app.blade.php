@@ -61,7 +61,7 @@
                 "@context": "https://schema.org/",
                 "@type": "Product",
                 "brand": {
-                    "@type": "Wed.in",
+                    "@type": "{{$_SERVER['SERVER_NAME']}}",
                     "name": "{{$vendor_details->business_name}}"
                 },
                 "description": "{{strip_tags($getContent)}}",

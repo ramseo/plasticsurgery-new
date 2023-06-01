@@ -62,7 +62,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/share?text=<?= $$module_name_singular->name ?>&url=<?= url()->current() ?>&hashtags=wed.in" target="_blank">
+                        <a href="https://twitter.com/share?text=<?= $$module_name_singular->name ?>&url=<?= url()->current() ?>&hashtags=<?= $_SERVER['SERVER_NAME'] ?>" target="_blank">
                             <i class="fa fa-twitter"></i>
                         </a>
                     </li>

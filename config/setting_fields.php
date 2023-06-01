@@ -1,51 +1,51 @@
 <?php
 
 return [
-   'app' => [
-       'title' => 'General',
-       'desc'  => 'All the general settings for application.',
-       'icon'  => 'fas fa-cube',
+    'app' => [
+        'title' => 'General',
+        'desc'  => 'All the general settings for application.',
+        'icon'  => 'fas fa-cube',
 
-       'elements' => [
-        //    [
-        //        'type'  => 'text', // input fields type
-        //        'data'  => 'string', // data type, string, int, boolean
-        //        'name'  => 'app_name', // unique name for field
-        //        'label' => 'App Name', // you know what label it is
-        //        'rules' => 'required|min:2|max:50', // validation rule of laravel
-        //        'class' => '', // any class for input
-        //        'value' => 'wed.in', // default value if you want
-        //    ]
-        //    ,
-        //    [
-        //        'type'  => 'text', // input fields type
-        //        'data'  => 'string', // data type, string, int, boolean
-        //        'name'  => 'footer_text', // unique name for field
-        //        'label' => 'Footer Text', // you know what label it is
-        //        'rules' => 'required|min:2', // validation rule of laravel
-        //        'class' => '', // any class for input
-        //        'value' => '<a href="https://wed.in/">Built with ♥</a>', // default value if you want
-        //    ],
-           [
-               'type'  => 'checkbox', // input fields type
-               'data'  => 'text', // data type, string, int, boolean
-               'name'  => 'show_copyright', // unique name for field
-               'label' => 'Show Copyright', // you know what label it is
-               'rules' => '', // validation rule of laravel
-               'class' => '', // any class for input
-               'value' => '1', // default value if you want
-           ],
-           [
-            'type'  => 'text', // input fields type
-            'data'  => 'string', // data type, string, int, boolean
-            'name'  => 'copyright_text', // unique name for field
-            'label' => 'Copyright Text', // you know what label it is
-            'rules' => '', // validation rule of laravel
-            'class' => '', // any class for input
-            'value' => '', // default value if you want
+        'elements' => [
+            //    [
+            //        'type'  => 'text', // input fields type
+            //        'data'  => 'string', // data type, string, int, boolean
+            //        'name'  => 'app_name', // unique name for field
+            //        'label' => 'App Name', // you know what label it is
+            //        'rules' => 'required|min:2|max:50', // validation rule of laravel
+            //        'class' => '', // any class for input
+            //        'value' => 'wed.in', // default value if you want
+            //    ]
+            //    ,
+            //    [
+            //        'type'  => 'text', // input fields type
+            //        'data'  => 'string', // data type, string, int, boolean
+            //        'name'  => 'footer_text', // unique name for field
+            //        'label' => 'Footer Text', // you know what label it is
+            //        'rules' => 'required|min:2', // validation rule of laravel
+            //        'class' => '', // any class for input
+            //        'value' => '<a href="https://wed.in/">Built with ♥</a>', // default value if you want
+            //    ],
+            [
+                'type'  => 'checkbox', // input fields type
+                'data'  => 'text', // data type, string, int, boolean
+                'name'  => 'show_copyright', // unique name for field
+                'label' => 'Show Copyright', // you know what label it is
+                'rules' => '', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '1', // default value if you want
+            ],
+            [
+                'type'  => 'text', // input fields type
+                'data'  => 'string', // data type, string, int, boolean
+                'name'  => 'copyright_text', // unique name for field
+                'label' => 'Copyright Text', // you know what label it is
+                'rules' => '', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '', // default value if you want
+            ],
         ],
-       ],
-   ],
+    ],
     'email' => [
         'title' => 'Email & Contacts',
         'desc'  => 'Email settings',
@@ -133,15 +133,15 @@ return [
                 'class' => '', // any class for input
                 'value' => '#', // default value if you want
             ],
-           [
-               'type'  => 'text', // input fields type
-               'data'  => 'string', // data type, string, int, boolean
-               'name'  => 'linkedin_url', // unique name for field
-               'label' => 'LinkedIn URL', // you know what label it is
-               'rules' => '', //'required|nullable|max:191', // validation rule of laravel
-               'class' => '', // any class for input
-               'value' => '#', // default value if you want
-           ],
+            [
+                'type'  => 'text', // input fields type
+                'data'  => 'string', // data type, string, int, boolean
+                'name'  => 'linkedin_url', // unique name for field
+                'label' => 'LinkedIn URL', // you know what label it is
+                'rules' => '', //'required|nullable|max:191', // validation rule of laravel
+                'class' => '', // any class for input
+                'value' => '#', // default value if you want
+            ],
             [
                 'type'  => 'text', // input fields type
                 'data'  => 'string', // data type, string, int, boolean
@@ -205,33 +205,33 @@ return [
                 'class' => '', // any class for input
                 'value' => '', //img/default_banner.jpg default value if you want
             ],
-//            [
-//                'type'  => 'text', // input fields type
-//                'data'  => 'text', // data type, string, int, boolean
-//                'name'  => 'meta_fb_app_id', // unique name for field
-//                'label' => 'Meta Facebook App Id', // you know what label it is
-//                'rules' => '', // validation rule of laravel
-//                'class' => '', // any class for input
-//                'value' => '', // default value if you want
-//            ],
-//            [
-//                'type'  => 'text', // input fields type
-//                'data'  => 'text', // data type, string, int, boolean
-//                'name'  => 'meta_twitter_site', // unique name for field
-//                'label' => 'Meta Twitter Site Account', // you know what label it is
-//                'rules' => '', // validation rule of laravel
-//                'class' => '', // any class for input
-//                'value' => '', // default value if you want
-//            ],
-//            [
-//                'type'  => 'text', // input fields type
-//                'data'  => 'text', // data type, string, int, boolean
-//                'name'  => 'meta_twitter_creator', // unique name for field
-//                'label' => 'Meta Twitter Creator Account', // you know what label it is
-//                'rules' => '', // validation rule of laravel
-//                'class' => '', // any class for input
-//                'value' => '', // default value if you want
-//            ],
+            //            [
+            //                'type'  => 'text', // input fields type
+            //                'data'  => 'text', // data type, string, int, boolean
+            //                'name'  => 'meta_fb_app_id', // unique name for field
+            //                'label' => 'Meta Facebook App Id', // you know what label it is
+            //                'rules' => '', // validation rule of laravel
+            //                'class' => '', // any class for input
+            //                'value' => '', // default value if you want
+            //            ],
+            //            [
+            //                'type'  => 'text', // input fields type
+            //                'data'  => 'text', // data type, string, int, boolean
+            //                'name'  => 'meta_twitter_site', // unique name for field
+            //                'label' => 'Meta Twitter Site Account', // you know what label it is
+            //                'rules' => '', // validation rule of laravel
+            //                'class' => '', // any class for input
+            //                'value' => '', // default value if you want
+            //            ],
+            //            [
+            //                'type'  => 'text', // input fields type
+            //                'data'  => 'text', // data type, string, int, boolean
+            //                'name'  => 'meta_twitter_creator', // unique name for field
+            //                'label' => 'Meta Twitter Creator Account', // you know what label it is
+            //                'rules' => '', // validation rule of laravel
+            //                'class' => '', // any class for input
+            //                'value' => '', // default value if you want
+            //            ],
         ],
     ],
     'analytics' => [
@@ -261,7 +261,7 @@ return [
         'icon'  => 'fas fa-chart-line',
 
         'elements' => [
-                        [
+            [
                 'type'  => 'text', // input fields type
                 'data'  => 'text', // data type, string, int, boolean
                 'name'  => 'homepage_title', // unique name for field
@@ -286,7 +286,7 @@ return [
                 'label' => 'About Us', // you know what label it is
                 'rules' => '', // validation rule of laravel
                 'class' => '', // any class for input
-                'value' => ' Wed.in is a platform for all Indian Brides and Grooms where we provide all wedding vendors at one place for easy interaction, making choices easy by choosing among the best. It saves your valuable time as you can see all the top rated vendors and make personal calls or meet them and discuss every detail with them all on a single platform.
+                'value' => ' "' . $_SERVER['SERVER_NAME'] . '" is a platform for all Indian Brides and Grooms where we provide all wedding vendors at one place for easy interaction, making choices easy by choosing among the best. It saves your valuable time as you can see all the top rated vendors and make personal calls or meet them and discuss every detail with them all on a single platform.
                             <br>
                             <br>
                             <br>

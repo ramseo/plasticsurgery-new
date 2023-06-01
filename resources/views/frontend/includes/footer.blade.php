@@ -132,7 +132,7 @@
 <div class="container-fluid" style="background-color:#1a508b; border-top:1px dashed #fff">
    <div class="small-footer">
       <div class="floatt-left">
-         Copyright © <?= date('Y') ?> - CosmeticSurgery.in - All rights reserved
+         <?= "Copyright ©" . " " . date('Y') . " - " . $_SERVER['SERVER_NAME'] . " - " . "All rights reserved" ?>
       </div>
       <div class="floatt-right">
          <a href="<?= url('disclaimer') ?>">Disclaimer</a>

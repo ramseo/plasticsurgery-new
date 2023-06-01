@@ -9,7 +9,7 @@ $latestReviews = getDataArray('vendor_reviews', array('type_id'=> $type->id, 'ci
         <div class="row">
             <div class="col-xs-12 col-sm-12 common-heading text-center with-lines">
                 <p class="shadow-text">Reviews</p>
-                <p class="head">Latest Reviews of {{$type->name}} on Wed.in</p>
+                <p class="head">Latest Reviews of {{$type->name}} on <?= $_SERVER['SERVER_NAME'] ?></p>
             </div>
             <div class="col-xs-12 col-sm-12 row reviews-list-col">
                 @foreach($latestReviews as $review)
