@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{asset('img/cosmetic-lg.png')}}">
     <meta name="keyword" content="{{ setting('meta_keyword') }}">
     <meta name="description" content="{{ setting('meta_description') }}">
+    <base href="<?= url('/') ?>" target="_blank">
 
     <!-- Shortcut Icon -->
     <link rel="shortcut icon" href="{{asset('img/cosmetic-lg.png')}}">
