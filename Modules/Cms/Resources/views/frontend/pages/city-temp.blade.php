@@ -86,7 +86,7 @@
                                     <div class="doc-tagline">
                                         Surgeon
                                     </div>
-                                    <div>
+                                    <div class="doc-tagline">
                                         <?php
                                         $get_userprofiles = get_userprofiles($item->id);
                                         echo $get_userprofiles->degree;
