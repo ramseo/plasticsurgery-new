@@ -1893,10 +1893,6 @@ footer img {
         background-color: transparent !important;
     }
 
-    .card-header {
-        padding: 0.25rem 1.25rem !important;
-    }
-
 }
 
 @media only screen and (max-width:414px) {
@@ -1964,16 +1960,6 @@ footer img {
         border: 5px solid #1877f2;
         border-radius: 6px;
     }
-
-    .card-header {
-        background-color: #1877f2 !important
-    }
-
-    /*.card-body ul li a {
-    color: #333;
-    font-size: 14px;
-}
-*/
 
     .card-header h2 {
         color: #fff;
@@ -2277,6 +2263,11 @@ footer img {
 
     .blog-index-cls {
         padding: 0px 0 0 0 !important;
+    }
+
+    .card-header {
+        background-color: #1877f2 !important;
+        padding: 0.25rem 1.25rem !important;
     }
 
 }
