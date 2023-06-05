@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <p class="identity width-100">
-                top cosmetic surgeons in <?= ucwords($city) ?>
+                top cosmetic surgeons in <?= $city ?>
             </p>
             <div class="col-lg-12 doc-flex-cls padd-null">
                 <?php
@@ -112,7 +112,7 @@
             <div class="row">
                 <div class="col">
                     <p>
-                        Our Board-Certified Plastic Surgeons in <?= ucwords($city) ?> hold dexterity in performing complex cosmetic surgeries with ease.
+                        Our Board-Certified Plastic Surgeons in <?= $city ?> hold dexterity in performing complex cosmetic surgeries with ease.
                         Our experts have a commendable record of operating countless surgeries with success.
                         Among their expertise, include Liposuction, Rhinoplasty, Blepharoplasty, Gynecomastia, Breast Augmentation, Tummy Tuck, and more.
                         Our surgeons are immensely qualified and possess adept expertise in performing surgery with great precision.
@@ -129,14 +129,14 @@
     <div class="container">
         <div class="row">
             <div class="col padd-null">
-                <p class="identity">COSMETIC SURGERY COST IN <?= ucwords($city) ?></p>
+                <p class="identity">COSMETIC SURGERY COST IN <?= $city ?></p>
                 <p>
-                    The cost for Cosmetic Surgery treatments in <?= ucwords($city) ?> varies appreciably depending on the clinic
+                    The cost for Cosmetic Surgery treatments in <?= $city ?> varies appreciably depending on the clinic
                     and the doctor you approach for the treatment.
                     Having a face-to-face consultation with the surgeon would be advisable in this regard.
                 </p>
                 <p>
-                    Besides, our doctors in <?= ucwords($city) ?> can also perform many more surgeries like Facelift,
+                    Besides, our doctors in <?= $city ?> can also perform many more surgeries like Facelift,
                     Breast Reduction, Buccal Fat Removal, Chin Augmentation,
                     Cheek Augmentation, Ear Surgery, Hair Transplant, Lip Augmentation, etc.
                     , at a reasonable cost. The charges of the respective procedures
@@ -156,13 +156,13 @@
 
                 <p class="identity">Our Services</p>
                 <p>
-                    Our surgeons in <?= ucwords($city) ?> offer a range of cosmetic surgery treatments.
+                    Our surgeons in <?= $city ?> offer a range of cosmetic surgery treatments.
                     Feel free to visit them in person to know your candidature
                     for the procedure you wish to undergo.
                 </p>
 
                 <p class="identity">
-                    FAQs on Cosmetic Surgery in <?= ucwords($city) ?>
+                    FAQs on Cosmetic Surgery in <?= $city ?>
                 </p>
 
                 <!-- ACCORDION -->
@@ -177,7 +177,7 @@
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be a suitable candidate for cosmetic surgery in <?= ucwords($city) ?>,
+                            To be a suitable candidate for cosmetic surgery in <?= $city ?>,
                             you need to fulfill several essential criteria:
                         </p>
                         <ul>
@@ -194,7 +194,7 @@
                 <div class="accordion-container">
                     <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
                         <span>
-                            2. What is the cost of cosmetic surgery in <?= ucwords($city) ?>?
+                            2. What is the cost of cosmetic surgery in <?= $city ?>?
                         </span>
                         <span>
                             <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
@@ -202,7 +202,7 @@
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost of Cosmetic Surgery in <?= ucwords($city) ?> may vary between 25,000 INR
+                            The cost of Cosmetic Surgery in <?= $city ?> may vary between 25,000 INR
                             and 2,50,000 INR depending on the type of surgery you want to undergo.
                             Much will also rely on the selection of the clinic,
                             the experience of the surgeon, and the facilities provided during the treatment.
@@ -265,7 +265,7 @@
                         <ul>
                             <li>
                                 You should prepare yourself both emotionally and physically before
-                                opting for Cosmetic Surgery in <?= ucwords($city) ?>.
+                                opting for Cosmetic Surgery in <?= $city ?>.
                             </li>
                             <li>Keep your stomach empty for around 8 hours before the surgery</li>
                             <li>Do not use any deodorant, lotion, or moisturizer</li>
@@ -304,392 +304,9 @@
     </div>
 </div>
 
-<div class="container-fluid mtab pt-4 pb-4" style="background-color:#f8f8f8">
-    <div class="container">
-        <p class="identity m-auto text-center" style="width:fit-content">
-            Find Your Procedure
-        </p>
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item active">
-                <a class="nav-link active ancr" data-toggle="tab" href="#home" aria-expanded="true">
-                    Face Procedures
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link ancr" data-toggle="tab" href="#menu1" aria-expanded="false">
-                    Breast Procedures
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link ancr" data-toggle="tab" href="#menu2" aria-expanded="false">
-                    Body Procedures
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link ancr" data-toggle="tab" href="#menu3" aria-expanded="false">
-                    Male Specific Procedures
-                </a>
-            </li>
-        </ul>
-
-        <div class="tab-content">
-            <div id="home" class="container tab-pane active in">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 padd-null">
-                        <img src="<?= asset('img/face.jpg') ?>" style="width:100%">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="rhinoplasty-<?= $city ?>">Rhinoplasty</a>
-                                    </li>
-                                    <li>
-                                        <a href="blepharoplasty-<?= $city ?>">Blepharoplasty</a>
-                                    </li>
-                                    <li>
-                                        <a href="facelift-<?= $city ?>">Facelift</a>
-                                    </li>
-                                    <li>
-                                        <a href="brow-lift-<?= $city ?>">Brow-Lift</a>
-                                    </li>
-                                    <li>
-                                        <a href="neck-lift-<?= $city ?>">Neck-Lift</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="chin-surgery-<?= $city ?>">Chin Surgery</a>
-                                    </li>
-                                    <li>
-                                        <a href="cheek-augmentation-<?= $city ?>">Cheek-augmentation</a>
-                                    </li>
-                                    <li>
-                                        <a href="lip-augmentation-<?= $city ?>">Lip-augmentation</a>
-                                    </li>
-                                    <li>
-                                        <a href="buccal-fat-removal-<?= $city ?>">Buccal-Fat-Removal</a>
-                                    </li>
-                                    <li>
-                                        <a href="ear-surgery-<?= $city ?>">Ear-Surgery</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div id="menu1" class="container tab-pane fade">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="img/breast.jpg" style="width:100%">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="breast-augmentation-<?= $city ?>">Breast Augmentation</a>
-                                    </li>
-                                    <li>
-                                        <a href="breast-lift-<?= $city ?>">Breast Lift</a>
-                                    </li>
-                                    <li>
-                                        <a href="breast-reduction-<?= $city ?>">Breast Reduction</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="breast-implant-removal-<?= $city ?>">Breast Implant Removal</a>
-                                    </li>
-                                    <li>
-                                        <a href="breast-implant-revision-<?= $city ?>">Breast Implant Revision</a>
-                                    </li>
-                                    <li>
-                                        <a href="gynecomastia-<?= $city ?>">Gynecomastia</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div id="menu2" class="container tab-pane fade">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="img/body.jpg" style="width:100%">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="liposuction-<?= $city ?>">Liposuction</a>
-                                    </li>
-                                    <li>
-                                        <a href="tummy-tuck-<?= $city ?>">Tummy-tuck</a>
-                                    </li>
-                                    <li>
-                                        <a href="buttock-enhancement-<?= $city ?>">Buttock Enhancement</a>
-                                    </li>
-                                    <li>
-                                        <a href="body-lift-<?= $city ?>">Body Lift</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="arm-lift-<?= $city ?>">Arm Lift</a>
-                                    </li>
-                                    <li>
-                                        <a href="thigh-lift-<?= $city ?>">Thigh Lift</a>
-                                    </li>
-                                    <li>
-                                        <a href="body-contouring-<?= $city ?>">Body Contouring</a>
-                                    </li>
-                                    <li>
-                                        <a href="mommy-makeover-<?= $city ?>">Mommy Makeover</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="menu3" class="container tab-pane fade">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="img/male.jpg" style="width:100%">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="hair-transplant-<?= $city ?>">Hair Transplant</a>
-                                    </li>
-                                    <li>
-                                        <a href="gynecomastia-<?= $city ?>">Gynecomastia</a>
-                                    </li>
-                                    <li>
-                                        <a href="men-and-plastic-surgery-<?= $city ?>">Men and Plastic Surgery</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="menu4" class="container tab-pane fade">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="img/body-hair-to-head.jpg" style="width:100%">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="hair-transplant-<?= $city ?>">Hair Transplant</a>
-                                    </li>
-                                    <li>
-                                        <a href="gynecomastia-<?= $city ?>">Gynecomastia</a>
-                                    </li>
-                                    <li>
-                                        <a href="men-and-plastic-surgery-<?= $city ?>">Men and Plastic Surgery</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="menu5" class="container tab-pane fade">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="img/failed-hair-transplant-repair.jpg" style="width:100%">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="hair-transplant-<?= $city ?>">Hanir Transplant</a>
-                                    </li>
-                                    <li>
-                                        <a href="gynecomastia-<?= $city ?>">Gynecomastia</a>
-                                    </li>
-                                    <li>
-                                        <a href="men-and-plastic-surgery-<?= $city ?>">Men and Plastic Surgery</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid aco">
-    <div id="accordion">
-        <div class="card">
-            <div class="card-header" id="headingOne">
-                <h2 class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Face Procedures
-                </h2>
-            </div>
-
-            <div id="collapseOne" class="collapse in show" aria-labelledby="headingOne" data-parent="#accordion" aria-expanded="true" style="">
-                <div class="card-body">
-                    <img src="img/face.jpg" style="width:100%">
-                    <ul>
-                        <li>
-                            <a href="rhinoplasty-<?= $city ?>">Rhinoplasty</a>
-                        </li>
-                        <li>
-                            <a href="blepharoplasty-<?= $city ?>">Blepharoplasty</a>
-                        </li>
-                        <li>
-                            <a href="facelift-<?= $city ?>">Facelift</a>
-                        </li>
-                        <li>
-                            <a href="brow-lift-<?= $city ?>">Brow-Lift</a>
-                        </li>
-                        <li>
-                            <a href="neck-lift-<?= $city ?>">Neck-Lift</a>
-                        </li>
-                        <li>
-                            <a href="chin-surgery-<?= $city ?>">Chin Surgery</a>
-                        </li>
-                        <li>
-                            <a href="cheek-augmentation-<?= $city ?>">Cheek-augmentation</a>
-                        </li>
-                        <li>
-                            <a href="lip-augmentation-<?= $city ?>">Lip-augmentation</a>
-                        </li>
-                        <li>
-                            <a href="buccal-fat-removal-<?= $city ?>">Buccal-Fat-Removal</a>
-                        </li>
-                        <li>
-                            <a href="ear-surgery-<?= $city ?>">Ear-Surgery</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header" id="headingTwo">
-                <h2 class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Breast Procedures
-                </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                <div class="card-body">
-                    <img src="img/breast.jpg" style="width:100%">
-                    <ul>
-                        <li>
-                            <a href="breast-augmentation-<?= $city ?>">Breast Augmentation</a>
-                        </li>
-                        <li>
-                            <a href="breast-lift-<?= $city ?>">Breast Lift</a>
-                        </li>
-                        <li>
-                            <a href="breast-reduction-<?= $city ?>">Breast Reduction</a>
-                        </li>
-                        <li>
-                            <a href="breast-implant-removal-<?= $city ?>">Breast Implant Removal</a>
-                        </li>
-                        <li>
-                            <a href="breast-implant-revision-<?= $city ?>">Breast Implant Revision</a>
-                        </li>
-                        <li>
-                            <a href="gynecomastia-<?= $city ?>">Gynecomastia</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header" id="headingThree">
-                <h2 class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Body Procedures
-                </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                <div class="card-body">
-                    <img src="img/body.jpg" style="width:100%">
-                    <ul>
-                        <li>
-                            <a href="liposuction-<?= $city ?>">Liposuction</a>
-                        </li>
-                        <li>
-                            <a href="tummy-tuck-<?= $city ?>">Tummy-tuck</a>
-                        </li>
-                        <li>
-                            <a href="buttock-enhancement-<?= $city ?>">Buttock Enhancement</a>
-                        </li>
-                        <li>
-                            <a href="body-lift-<?= $city ?>">Body Lift</a>
-                        </li>
-                        <li>
-                            <a href="arm-lift-<?= $city ?>">Arm Lift</a>
-                        </li>
-                        <li>
-                            <a href="thigh-lift-<?= $city ?>">Thigh Lift</a>
-                        </li>
-                        <li>
-                            <a href="body-contouring-<?= $city ?>">Body Contouring</a>
-                        </li>
-                        <li>
-                            <a href="mommy-makeover-<?= $city ?>">Mommy Makeover</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="card-header" id="headingfour">
-                <h2 class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-                    Male-Specific Procedures<br>
-                </h2>
-            </div>
-            <div id="collapsefour" class="collapse" aria-labelledby="headingfour" data-parent="#accordion">
-                <div class="card-body">
-                    <img src="img/male.jpg" style="width:100%">
-                    <ul>
-                        <li>
-                            <a href="hair-transplant-<?= $city ?>">Hair Transplant</a>
-                        </li>
-                        <li>
-                            <a href="gynecomastia-<?= $city ?>">Gynecomastia</a>
-                        </li>
-                        <li>
-                            <a href="men-and-plastic-surgery-<?= $city ?>">Men and Plastic Surgery</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<section id="procedure-listing">
+    @include('cms::frontend.pages.inc-procedure-listing')
+</section>
 
 <div class="spacer">
     <div class="container-fluid">

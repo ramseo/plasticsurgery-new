@@ -123,7 +123,7 @@ class PagesController extends Controller
                 $duplicateArr = array_intersect($explodeArr, $citiesArr);
 
                 if ($duplicateArr) {
-                    $city = reset($duplicateArr);
+                    $city = ucwords(reset($duplicateArr));
                 } else {
                     $city = "";
                 }
@@ -146,7 +146,7 @@ class PagesController extends Controller
                 );
             }
         } elseif (in_array($slug, $citiesArr)) {
-            $city = $slug;
+            $city = ucwords($slug);
             $uc_city = ucwords($slug);
             $template_view = "city-temp";
             $surgery_str = "";
