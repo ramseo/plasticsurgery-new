@@ -123,7 +123,9 @@
             <div class="col-xs-12 col-sm-12">
                 <h5 class="mb-4">
                     @if($$module_name_singular->comments->count())
-                    <span class="text-primary">({{$$module_name_singular->comments->count()}})</span>
+                    <span class="text-primary">
+                        ({{$$module_name_singular->comments->count()}})
+                    </span>
                     @endif
                     @lang('Comments')
                 </h5>
@@ -150,7 +152,7 @@
                                         <div class="form-group">
                                             <?php
                                             $field_name = 'name';
-                                            $field_lable = "Subject";
+                                            $field_lable = "Name";
                                             $field_placeholder = $field_lable;
                                             $required = "required";
                                             ?>
@@ -223,23 +225,23 @@
                                     <li>
                                         <div class="d-flex">
                                             <div class="img-col">
-                                                <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+                                                <img src="<?= asset('img/default-avatar.jpg') ?>" class="img-fluid" alt="user img">
                                             </div>
                                             <div class="text-col">
-                                                <p class="name">{{$comment->user_name}}</p>
+                                                <p class="name">{{$comment->name}}</p>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                             <div class="review-body grey-text">
-                                <p class="m-0">
-                                    {{$comment->name}}
-                                </p>
                                 <p>{!!$comment->comment!!}</p>
-                                <div class="mt-4 mb-3 d-flex justify-content-between">
+                                <div class="mt-3 mb-3 d-flex justify-content-between">
                                     @auth
-                                    <button type="button" id="replyBtn{{encode_id($comment->id)}}" class="btn btn-outline-primary btn-sm float-right m-0" data-toggle="collapse" href="#replyForm{{encode_id($comment->id)}}" role="button" aria-expanded="false" aria-controls="replyForm{{encode_id($comment->id)}}"><i class="fas fa-reply mr-2"></i> Reply</button>
+                                    <button type="button" id="replyBtn{{encode_id($comment->id)}}" class="btn btn-outline-primary btn-sm float-right m-0" data-toggle="collapse" href="#replyForm{{encode_id($comment->id)}}" role="button" aria-expanded="false" aria-controls="replyForm{{encode_id($comment->id)}}">
+                                        <i class="fa fa-reply mr-2"></i>
+                                        Reply
+                                    </button>
                                     @else
                                     <a href="{{route('login')}}?redirectTo={{url()->current()}}" class="btn btn-primary btn-sm float-right m-0"><i class="fas fa-user-shield"></i> Login & Reply</a>
                                     @endauth
@@ -278,8 +280,11 @@
                                         $field_lable = label_case($field_name);
                                         $field_placeholder = $field_lable;
                                         $required = "required";
+
+
+                                        $logged_user = auth()->user()->name;
                                         ?>
-                                        {{ html()->hidden($field_name)->value("Reply of ".$comment->name)->attributes(["$required"]) }}
+                                        {{ html()->hidden($field_name)->value($logged_user)->attributes(["$required"]) }}
 
                                     <div class="row">
                                         <div class="col-9">
@@ -290,14 +295,13 @@
                                                 $field_placeholder = $field_lable;
                                                 $required = "required";
                                                 ?>
-                                                <!-- {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!} -->
                                                 {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
                                             </div>
                                         </div>
 
                                         <div class="col-3">
                                             <div class="form-group">
-                                                {{ html()->button($text = "Submit", $type = 'submit')->class('btn btn-primary m-0') }}
+                                                {{ html()->button($text = "Submit Reply", $type = 'submit', $name = 'submit_reply')->class('btn btn-primary m-0') }}
                                             </div>
                                         </div>
                                     </div>
@@ -312,13 +316,23 @@
                                 @endphp
                                 @if ($comments_of_comment)
                                 @foreach ($comments_of_comment as $comment_reply)
+                                <?php
+
+                                $avatar = getUserAvatar($comment_reply->user_id);
+
+                                $reply_img = asset('img/default-avatar.jpg');
+                                if (file_exists(public_path() . '/storage/user/profile/' . $avatar->avatar)) {
+                                    $reply_img = asset('/storage/user/profile/' . $avatar->avatar);
+                                }
+
+                                ?>
                                 <div class="col-xs-12 single-review">
                                     <div class="review-header">
                                         <ul class="list-inline space-list">
                                             <li>
                                                 <div class="d-flex">
                                                     <div class="img-col">
-                                                        <img src="https://cdn.landesa.org/wp-content/uploads/default-user-image.png" class="img-fluid" alt="">
+                                                        <img src="<?= $reply_img ?>" class="img-fluid" alt="reply img">
                                                     </div>
                                                     <div class="text-col">
                                                         <p class="name">{{$comment_reply->user_name}}</p>

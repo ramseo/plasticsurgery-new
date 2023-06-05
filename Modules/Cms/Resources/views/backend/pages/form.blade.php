@@ -82,7 +82,7 @@
 </div>
 
 <div class="row">
-    <div class="col-5">
+    <div class="col-6">
         <div class="form-group">
             <?php
             $field_name = 'meta_title';
@@ -94,7 +94,7 @@
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
     </div>
-    <div class="col-5">
+    <div class="col-6">
         <div class="form-group">
             <?php
             $field_name = 'meta_keywords';
@@ -109,7 +109,7 @@
 </div>
 
 <div class="row">
-    <div class="col-12 col-sm-6">
+    <div class="col-12 col-sm-12">
         <div class="form-group">
             <?php
             $field_name = 'meta_description';
@@ -121,33 +121,33 @@
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
     </div>
-    <div class="col-12 col-sm-6">
+    <!-- <div class="col-12 col-sm-6">
         <div class="form-group">
             <?php
-            $field_name = 'meta_og_image';
-            $field_lable = __("cms::$module_name.$field_name");
-            $field_placeholder = $field_lable;
-            $required = "";
+            // $field_name = 'meta_og_image';
+            // $field_lable = __("cms::$module_name.$field_name");
+            // $field_placeholder = $field_lable;
+            // $required = "";
             ?>
             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
-    </div>
+    </div> -->
 </div>
-<div class="row">
+<!-- <div class="row">
     <div class="col-12">
         <div class="form-group">
             <?php
-            $field_name = 'meta_og_url';
-            $field_lable = __("cms::$module_name.$field_name");
-            $field_placeholder = $field_lable;
-            $required = "";
+            // $field_name = 'meta_og_url';
+            // $field_lable = __("cms::$module_name.$field_name");
+            // $field_placeholder = $field_lable;
+            // $required = "";
             ?>
             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- Select2 Library -->
 <x-library.select2 />

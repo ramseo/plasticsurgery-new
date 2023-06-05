@@ -99,14 +99,7 @@ $city = getData('cities');
                     @auth
                     @if(auth()->user()->getRoleNames()->first() == 'super admin')
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('backend.dashboard') }}">
-                            Dashboard
-                        </a>
-                    </li>
-                    @endif
-                    @if(auth()->user()->getRoleNames()->first() == 'vendor')
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('vendor.dashboard') }}">
+                        <a target="_blank" class="nav-link" href="{{ route('backend.dashboard') }}">
                             Dashboard
                         </a>
                     </li>

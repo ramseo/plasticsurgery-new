@@ -4,37 +4,20 @@ $published_at_value = '';
 $moderated_at_value = '';
 $parent_name = '';
 
-if (isset($$module_name_singular)){
+if (isset($$module_name_singular)) {
 
-    $user_id_value = ($$module_name_singular->user_name != '')? $$module_name_singular->user_name : '';
+    $user_id_value = ($$module_name_singular->user_name != '') ? $$module_name_singular->user_name : '';
 
-    $published_at_value = ($$module_name_singular->moderated_at != '')? $$module_name_singular->moderated_at->isoFormat('llll') : '';
+    $published_at_value = ($$module_name_singular->moderated_at != '') ? $$module_name_singular->moderated_at->isoFormat('llll') : '';
 
-    $moderated_at_value = ($$module_name_singular->moderated_at != '')? $$module_name_singular->moderated_at->isoFormat('llll') : '';
+    $moderated_at_value = ($$module_name_singular->moderated_at != '') ? $$module_name_singular->moderated_at->isoFormat('llll') : '';
 
-    $parent_name = ($$module_name_singular->parent_id != '')? $$module_name_singular->parent->name : '';
-
+    $parent_name = ($$module_name_singular->parent_id != '') ? $$module_name_singular->parent->name : '';
 }
 ?>
+
 <div class="row">
-
-    <div class="col">
-        <div class="form-group">
-            <?php
-            $field_name = 'user_id';
-            $field_lable = "User";
-            $field_relation = "user";
-            $field_placeholder = "-- Select an option --";
-            $required = "required";
-            $value = $user_id_value;
-            ?>
-            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
-            {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"])->value($value)->disabled() }}
-            {{ html()->hidden($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
-        </div>
-    </div>
-
-    <div class="col">
+    <div class="col-12 col-md-6">
         <div class="form-group">
             <?php
             $field_name = 'parent_id';
@@ -63,30 +46,30 @@ if (isset($$module_name_singular)){
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
     </div>
-    <div class="col-6 col-md-4">
+    <!-- <div class="col-6 col-md-4">
         <div class="form-group">
             <?php
-            $field_name = 'slug';
-            $field_lable = label_case($field_name);
-            $field_placeholder = $field_lable;
-            $required = "";
+            // $field_name = 'slug';
+            // $field_lable = label_case($field_name);
+            // $field_placeholder = $field_lable;
+            // $required = "";
             ?>
             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
-    </div>
-    <div class="col-6 col-md-2">
+    </div> -->
+    <!-- <div class="col-6 col-md-2">
         <div class="form-group">
             <?php
-            $field_name = 'order';
-            $field_lable = label_case($field_name);
-            $field_placeholder = $field_lable;
-            $required = "";
+            // $field_name = 'order';
+            // $field_lable = label_case($field_name);
+            // $field_placeholder = $field_lable;
+            // $required = "";
             ?>
             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
             {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
-    </div>
+    </div> -->
 </div>
 <div class="row">
     <div class="col-12">
@@ -111,9 +94,9 @@ if (isset($$module_name_singular)){
             $field_placeholder = "-- Select an option --";
             $required = "required";
             $select_options = [
-                '0'=>'Pending',
-                '1'=>'Published',
-                '2'=>'Rejected',
+                '0' => 'Pending',
+                '1' => 'Published',
+                '2' => 'Rejected',
             ];
             ?>
             {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
@@ -165,51 +148,51 @@ if (isset($$module_name_singular)){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 
 <script type="text/javascript">
-$(document).ready(function() {
-    $('.select2-users').select2({
-        theme: "bootstrap",
-        placeholder: "-- Select an option --",
-        minimumInputLength: 2,
-        allowClear: true,
-        ajax: {
-            url: '{{route("backend.users.index_list")}}',
-            dataType: 'json',
-            data: function (params) {
-                return {
-                    q: $.trim(params.term)
-                };
-            },
-            processResults: function (data) {
-                return {
-                    results: data
-                };
-            },
-            cache: true
-        }
-    });
+    $(document).ready(function() {
+        $('.select2-users').select2({
+            theme: "bootstrap",
+            placeholder: "-- Select an option --",
+            minimumInputLength: 2,
+            allowClear: true,
+            ajax: {
+                url: '{{route("backend.users.index_list")}}',
+                dataType: 'json',
+                data: function(params) {
+                    return {
+                        q: $.trim(params.term)
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data
+                    };
+                },
+                cache: true
+            }
+        });
 
-    $('.select2-posts').select2({
-        theme: "bootstrap",
-        placeholder: "-- Select an option --",
-        minimumInputLength: 2,
-        allowClear: true,
-        ajax: {
-            url: '{{route("backend.posts.index_list")}}',
-            dataType: 'json',
-            data: function (params) {
-                return {
-                    q: $.trim(params.term)
-                };
-            },
-            processResults: function (data) {
-                return {
-                    results: data
-                };
-            },
-            cache: true
-        }
+        $('.select2-posts').select2({
+            theme: "bootstrap",
+            placeholder: "-- Select an option --",
+            minimumInputLength: 2,
+            allowClear: true,
+            ajax: {
+                url: '{{route("backend.posts.index_list")}}',
+                dataType: 'json',
+                data: function(params) {
+                    return {
+                        q: $.trim(params.term)
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data
+                    };
+                },
+                cache: true
+            }
+        });
     });
-});
 </script>
 
 <!-- Date Time Picker & Moment Js-->
@@ -217,22 +200,50 @@ $(document).ready(function() {
 <script type="text/javascript" src="{{ asset('vendor/bootstrap-4-datetime-picker/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 
 <script type="text/javascript">
-$(function() {
-    $('.datetime').datetimepicker({
-        format: 'YYYY-MM-DD HH:mm:ss',
-        icons: {
-            time: 'far fa-clock',
-            date: 'far fa-calendar-alt',
-            up: 'fas fa-arrow-up',
-            down: 'fas fa-arrow-down',
-            previous: 'fas fa-chevron-left',
-            next: 'fas fa-chevron-right',
-            today: 'far fa-calendar-check',
-            clear: 'far fa-trash-alt',
-            close: 'fas fa-times'
-        }
+    $(function() {
+        $('.datetime').datetimepicker({
+            format: 'YYYY-MM-DD HH:mm:ss',
+            icons: {
+                time: 'far fa-clock',
+                date: 'far fa-calendar-alt',
+                up: 'fas fa-arrow-up',
+                down: 'fas fa-arrow-down',
+                previous: 'fas fa-chevron-left',
+                next: 'fas fa-chevron-right',
+                today: 'far fa-calendar-check',
+                clear: 'far fa-trash-alt',
+                close: 'fas fa-times'
+            }
+        });
     });
-});
 </script>
 
+@endpush
+
+@push ('after-scripts')
+<script type="text/javascript" src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
+
+<script type="text/javascript">
+    CKEDITOR.replace('comment', {
+        filebrowserImageBrowseUrl: '/file-manager/ckeditor',
+        language: '{{App::getLocale()}}',
+        defaultLanguage: 'en',
+        allowedContent: true
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+        document.getElementById('button-image').addEventListener('click', (event) => {
+            event.preventDefault();
+
+            window.open('/file-manager/fm-button', 'fm', 'width=800,height=600');
+        });
+    });
+
+    // set file link
+    function fmSetLink($url) {
+        document.getElementById('featured_image').value = $url;
+    }
+</script>
 @endpush

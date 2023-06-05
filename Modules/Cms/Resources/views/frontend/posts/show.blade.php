@@ -47,7 +47,7 @@
             </div>
 
             @php
-                $post_details_url = route('frontend.posts.show',[encode_id($$module_name_singular->id), $$module_name_singular->slug]);
+            $post_details_url = route('frontend.posts.show',[encode_id($$module_name_singular->id), $$module_name_singular->slug]);
             @endphp
             <div class="blog-detail-content-col">
                 <div class="container">
@@ -197,8 +197,10 @@
                                 </div>
 
                                 @auth
-                                <button type="button" id="replyBtn{{encode_id($comment->id)}}" class="btn btn-outline-primary btn-sm float-right m-0" data-toggle="collapse" href="#replyForm{{encode_id($comment->id)}}" role="button" aria-expanded="false" aria-controls="replyForm{{encode_id($comment->id)}}"><i class="fas fa-reply mr-2"></i> Reply</button>
-
+                                <button type="button" id="replyBtn{{encode_id($comment->id)}}" class="btn btn-outline-primary btn-sm float-right m-0" data-toggle="collapse" href="#replyForm{{encode_id($comment->id)}}" role="button" aria-expanded="false" aria-controls="replyForm{{encode_id($comment->id)}}">
+                                    <i class="fa fa-reply mr-2"></i>
+                                    Reply
+                                </button>
                                 @else
                                 <a href="{{route('login')}}?redirectTo={{url()->current()}}" class="btn btn-primary btn-sm float-right m-0"><i class="fas fa-user-shield"></i> Login & Reply</a>
 
@@ -241,28 +243,28 @@
                                     ?>
                                     {{ html()->hidden($field_name)->value("Reply of ".$comment->name)->attributes(["$required"]) }}
 
-                                    <div class="row">
-                                        <div class="col-9">
-                                            <div class="form-group">
-                                                <?php
-                                                $field_name = 'comment';
-                                                $field_lable = "Reply";
-                                                $field_placeholder = $field_lable;
-                                                $required = "required";
-                                                ?>
-                                                <!-- {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!} -->
-                                                {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
-                                            </div>
-                                        </div>
-
-                                        <div class="col-3">
-                                            <div class="form-group">
-                                                {{ html()->button($text = "<i class='fas fa-save'></i> Submit", $type = 'submit')->class('btn btn-success m-0') }}
-                                            </div>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="form-group">
+                                            <?php
+                                            $field_name = 'comment';
+                                            $field_lable = "Reply";
+                                            $field_placeholder = $field_lable;
+                                            $required = "required";
+                                            ?>
+                                            <!-- {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!} -->
+                                            {{ html()->text($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
                                         </div>
                                     </div>
 
-                                    {{ html()->form()->close() }}
+                                    <div class="col-3">
+                                        <div class="form-group">
+                                            {{ html()->button($text = "<i class='fas fa-save'></i> Submit", $type = 'submit')->class('btn btn-success m-0') }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{ html()->form()->close() }}
                                 </p>
                             </div>
                             @endauth
