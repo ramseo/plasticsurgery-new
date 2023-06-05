@@ -131,7 +131,7 @@ class CommentsController extends Controller
                 return $return_string;
             })
             ->editColumn('parent_id', function ($data) {
-                $return_string = '<strong>' . getCommentById($data->parent_id) . '</strong>';
+                $return_string = '<strong>' . ($data->parent_id) ? getCommentById($data->parent_id) : "" . '</strong>';
 
                 return $return_string;
             })
