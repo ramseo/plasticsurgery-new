@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <p class="identity width-100">
-                top cosmetic surgeons in <?= $city ?>
+                top cosmetic surgeons in <?= ucwords($city) ?>
             </p>
             <div class="col-lg-12 doc-flex-cls padd-null">
                 <?php
@@ -112,7 +112,7 @@
             <div class="row">
                 <div class="col">
                     <p>
-                        Our Board-Certified Plastic Surgeons in <?= $city ?> hold dexterity in performing complex cosmetic surgeries with ease.
+                        Our Board-Certified Plastic Surgeons in <?= ucwords($city) ?> hold dexterity in performing complex cosmetic surgeries with ease.
                         Our experts have a commendable record of operating countless surgeries with success.
                         Among their expertise, include Liposuction, Rhinoplasty, Blepharoplasty, Gynecomastia, Breast Augmentation, Tummy Tuck, and more.
                         Our surgeons are immensely qualified and possess adept expertise in performing surgery with great precision.
@@ -136,7 +136,7 @@
                     Having a face-to-face consultation with the surgeon would be advisable in this regard.
                 </p>
                 <p>
-                    Besides, our doctors in <?= $city ?> can also perform many more surgeries like Facelift,
+                    Besides, our doctors in <?= ucwords($city) ?> can also perform many more surgeries like Facelift,
                     Breast Reduction, Buccal Fat Removal, Chin Augmentation,
                     Cheek Augmentation, Ear Surgery, Hair Transplant, Lip Augmentation, etc.
                     , at a reasonable cost. The charges of the respective procedures
@@ -156,13 +156,13 @@
 
                 <p class="identity">Our Services</p>
                 <p>
-                    Our surgeons in <?= $city ?> offer a range of cosmetic surgery treatments.
+                    Our surgeons in <?= ucwords($city) ?> offer a range of cosmetic surgery treatments.
                     Feel free to visit them in person to know your candidature
                     for the procedure you wish to undergo.
                 </p>
 
                 <p class="identity">
-                    FAQs on Cosmetic Surgery in <?= $city ?>
+                    FAQs on Cosmetic Surgery in <?= ucwords($city) ?>
                 </p>
 
                 <!-- ACCORDION -->
@@ -177,7 +177,7 @@
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be a suitable candidate for cosmetic surgery in <?= $city ?>,
+                            To be a suitable candidate for cosmetic surgery in <?= ucwords($city) ?>,
                             you need to fulfill several essential criteria:
                         </p>
                         <ul>
@@ -194,7 +194,7 @@
                 <div class="accordion-container">
                     <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
                         <span>
-                            2. What is the cost of cosmetic surgery in <?= $city ?>?
+                            2. What is the cost of cosmetic surgery in <?= ucwords($city) ?>?
                         </span>
                         <span>
                             <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
@@ -202,7 +202,7 @@
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost of Cosmetic Surgery in <?= $city ?> may vary between 25,000 INR
+                            The cost of Cosmetic Surgery in <?= ucwords($city) ?> may vary between 25,000 INR
                             and 2,50,000 INR depending on the type of surgery you want to undergo.
                             Much will also rely on the selection of the clinic,
                             the experience of the surgeon, and the facilities provided during the treatment.
@@ -265,7 +265,7 @@
                         <ul>
                             <li>
                                 You should prepare yourself both emotionally and physically before
-                                opting for Cosmetic Surgery in <?= $city ?>.
+                                opting for Cosmetic Surgery in <?= ucwords($city) ?>.
                             </li>
                             <li>Keep your stomach empty for around 8 hours before the surgery</li>
                             <li>Do not use any deodorant, lotion, or moisturizer</li>
