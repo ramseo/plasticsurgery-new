@@ -129,9 +129,9 @@
     <div class="container">
         <div class="row">
             <div class="col padd-null">
-                <p class="identity">COSMETIC SURGERY COST IN <?= $city ?></p>
+                <p class="identity">COSMETIC SURGERY COST IN <?= ucwords($city) ?></p>
                 <p>
-                    The cost for Cosmetic Surgery treatments in <?= $city ?> varies appreciably depending on the clinic
+                    The cost for Cosmetic Surgery treatments in <?= ucwords($city) ?> varies appreciably depending on the clinic
                     and the doctor you approach for the treatment.
                     Having a face-to-face consultation with the surgeon would be advisable in this regard.
                 </p>
@@ -299,90 +299,6 @@
                     </div>
                 </div>
                 <!-- ACCORDION -->
-
-                <!-- <p class="cosmetic-faq-list">
-                    1. Are you a good candidate for Cosmetic Surgery?
-                </p>
-                <p>
-                    To be a suitable candidate for cosmetic surgery in <?= $city ?>,
-                    you need to fulfill several essential criteria:
-                </p>
-                <ul>
-                    <li>Should possess good overall health</li>
-                    <li>Abide by the specific doctor’s instructions</li>
-                    <li>Have developed excess body fat that needs to be eliminated</li>
-                    <li>Want to enhance body appearance after pregnancy</li>
-                    <li>Should be a non-smoker and a non-alcoholic</li>
-                    <li>Free from any severe medical history</li>
-                    <li>Should have realistic expectations with the surgery</li>
-                </ul> -->
-
-                <!-- <p class="cosmetic-faq-list">
-                    2. What is the cost of cosmetic surgery in <?= $city ?>?
-                </p>
-                <p>
-                    The cost of Cosmetic Surgery in <?= $city ?> may vary between 25,000 INR
-                    and 2,50,000 INR depending on the type of surgery you want to undergo.
-                    Much will also rely on the selection of the clinic,
-                    the experience of the surgeon, and the facilities provided during the treatment.
-                </p> -->
-
-                <!-- <p class="cosmetic-faq-list">
-                    3. What are the risks related to Cosmetic Surgery?
-                </p>
-                <ul>
-                    <li>Complications due to anesthesia like blood clots, pneumonia, etc.</li>
-                    <li>Building up of fluid under the skin</li>
-                    <li>Abnormal scarring that hampers natural movement</li>
-                    <li>Infection in the treated area</li>
-                    <li>Possibility of nerve damage</li>
-                    <li>Slow healing of wounds</li>
-                    <li>Excessive bleeding</li>
-                    <li>Possibility of infection, swelling, bruising, etc.</li>
-                </ul> -->
-
-                <!-- <p class="cosmetic-faq-list">
-                    4. When can you go for Cosmetic Surgery?
-                </p>
-                <p>
-                    Cosmetic or plastic surgery procedures would respond best once your body attains
-                    adulthood.
-                    Hence, for males, the ideal starting age for cosmetic surgery is 15-16 years,
-                    and for females, it is 14-15 years. However,
-                    you should go under the knife only when it is necessary.
-                    Merely undergoing cosmetic surgery to change your appearance at an early age
-                    could cause problems later on.
-                </p> -->
-
-                <!-- <p class="cosmetic-faq-list">
-                    5. What are the things to do before cosmetic surgery?
-                </p>
-                <ul>
-                    <li>
-                        You should prepare yourself both emotionally and physically before
-                        opting for Cosmetic Surgery in <?= $city ?>.
-                    </li>
-                    <li>Keep your stomach empty for around 8 hours before the surgery</li>
-                    <li>Do not use any deodorant, lotion, or moisturizer</li>
-                    <li>Stop any medication that you are undergoing, or as suggested by your surgeon</li>
-                </ul>
-
-                <p class="cosmetic-faq-list">
-                    6. What to expect on the day of Cosmetic Surgery?
-                </p>
-                <p>
-                    On the day of Cosmetic Surgery, you could expect the following:
-                </p>
-                <ul>
-                    <li>You will be taken to the private examination room.</li>
-                    <li>Your surgeon will clear all your doubts and apprehensions regarding cosmetic surgery</li>
-                    <li>Before the surgery, the surgeon will mark the areas of treatment on your body</li>
-                    <li>You may get anesthesia if required</li>
-                    <li>The duration of the surgery will vary depending on the severity of the surgery</li>
-                    <li>After the completion of the surgery, the doctor will suggest the requisite medication</li>
-                    <li>Make sure to carry out post-surgery care as instructed</li>
-                    <li>Keep visiting the surgeon at regular intervals for follow-ups.</li>
-                </ul> -->
             </div>
         </div>
     </div>

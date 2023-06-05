@@ -146,7 +146,7 @@ class PagesController extends Controller
                 );
             }
         } elseif (in_array($slug, $citiesArr)) {
-            $city = ucwords($slug);
+            $city = $slug;
             $uc_city = ucwords($slug);
             $template_view = "city-temp";
             $surgery_str = "";
