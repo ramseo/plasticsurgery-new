@@ -56,7 +56,7 @@
                                 Updated At
                             </th>
                             <th>
-                                Parent Comment
+                                Parent Name
                             </th>
                             <th class="text-center">
                                 Action
