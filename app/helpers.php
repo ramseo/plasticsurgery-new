@@ -1161,4 +1161,10 @@ if (!function_exists('date_today')) {
 
         return $doctor;
     }
+
+    function getCommentById($id)
+    {
+        $data = DB::table('comments')->where('parent_id', $id)->get()->first();
+        return $data->name;
+    }
 }

@@ -54,7 +54,7 @@ class CommentsController extends Controller
 
         $$module_name = $module_model::paginate();
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return view(
             "comment::backend.$module_name.index_datatable",
@@ -90,7 +90,7 @@ class CommentsController extends Controller
         foreach ($query_data as $row) {
             $$module_name[] = [
                 'id'   => $row->id,
-                'text' => $row->name.' (Code: '.$row->slug.')',
+                'text' => $row->name . ' (Code: ' . $row->slug . ')',
             ];
         }
 
@@ -107,43 +107,48 @@ class CommentsController extends Controller
 
         $module_action = 'List';
 
-        $$module_name = $module_model::select('id', 'name', 'status', 'updated_at');
+        $$module_name = $module_model::select('id', 'name', 'parent_id', 'status', 'updated_at');
 
         $data = $$module_name;
 
         return Datatables::of($$module_name)
-                        ->addColumn('action', function ($data) {
-                            $module_name = $this->module_name;
+            ->addColumn('action', function ($data) {
+                $module_name = $this->module_name;
 
-                            $btn = "";
-                            $btn .= "<div class='switch-flex-cls posts-cls'>";
-                            $btn .= '<a href="' . url("admin/comments/destroy/$data->id") . '" class="btn btn-danger del-review-popup" data-method="DELETE" data-token="' . csrf_token() . '" data-toggle="tooltip" title="Delete Post" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>';
-                            $btn .= '<a href="' . url("admin/comments/$data->id/edit") . '" class="btn btn-danger"><i class="fa fa-edit" aria-hidden="true"></i></a>';
-                            $btn .= "</div>";
-                            return $btn;
+                $btn = "";
+                $btn .= "<div class='switch-flex-cls posts-cls'>";
+                $btn .= '<a href="' . url("admin/comments/destroy/$data->id") . '" class="btn btn-danger del-review-popup" data-method="DELETE" data-token="' . csrf_token() . '" data-toggle="tooltip" title="Delete Post" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>';
+                $btn .= '<a href="' . url("admin/comments/$data->id/edit") . '" class="btn btn-danger"><i class="fa fa-edit" aria-hidden="true"></i></a>';
+                $btn .= "</div>";
+                return $btn;
 
-                            // return view('backend.includes.action_column', compact('module_name', 'data'));
-                        })
-                        // ->editColumn('name', '<strong>{{$name}}</strong> | {{$status_formatted}}')
-                        ->editColumn('name', function ($data) {
-                            $return_string = '<strong>'.$data->name.'</strong> | '.$data->status_formatted;
+                // return view('backend.includes.action_column', compact('module_name', 'data'));
+            })
+            // ->editColumn('name', '<strong>{{$name}}</strong> | {{$status_formatted}}')
+            ->editColumn('name', function ($data) {
+                $return_string = '<strong>' . $data->name . '</strong> | ' . $data->status_formatted;
 
-                            return $return_string;
-                        })
-                        ->editColumn('updated_at', function ($data) {
-                            $module_name = $this->module_name;
+                return $return_string;
+            })
+            ->editColumn('parent_id', function ($data) {
+                $return_string = '<strong>' . getCommentById($data->parent_id) . '</strong>';
 
-                            $diff = Carbon::now()->diffInHours($data->updated_at);
+                return $return_string;
+            })
+            ->editColumn('updated_at', function ($data) {
+                $module_name = $this->module_name;
 
-                            if ($diff < 25) {
-                                return $data->updated_at->diffForHumans();
-                            } else {
-                                return $data->updated_at->isoFormat('LLLL');
-                            }
-                        })
-                        ->rawColumns(['name', 'action'])
-                        ->orderColumns(['id'], '-:column $1')
-                        ->make(true);
+                $diff = Carbon::now()->diffInHours($data->updated_at);
+
+                if ($diff < 25) {
+                    return $data->updated_at->diffForHumans();
+                } else {
+                    return $data->updated_at->isoFormat('LLLL');
+                }
+            })
+            ->rawColumns(['name', 'parent_id', 'action'])
+            ->orderColumns(['id'], '-:column $1')
+            ->make(true);
     }
 
     /**
@@ -161,7 +166,7 @@ class CommentsController extends Controller
 
         $module_action = 'Create';
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return view(
             "comment::backend.$module_name.create",
@@ -190,9 +195,9 @@ class CommentsController extends Controller
 
         auth()->user()->notify(new NewCommentAdded($$module_name_singular));
 
-        Flash::success("<i class='fas fa-check'></i> New '".Str::singular($module_title)."' Added")->important();
+        Flash::success("<i class='fas fa-check'></i> New '" . Str::singular($module_title) . "' Added")->important();
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $$module_name_singular->name . '(ID:' . $$module_name_singular->id . ") ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return redirect("admin/$module_name");
     }
@@ -217,12 +222,12 @@ class CommentsController extends Controller
         $$module_name_singular = $module_model::findOrFail($id);
 
         $activities = Activity::where('subject_type', '=', $module_model)
-                                ->where('log_name', '=', $module_name)
-                                ->where('subject_id', '=', $id)
-                                ->latest()
-                                ->paginate();
+            ->where('log_name', '=', $module_name)
+            ->where('subject_id', '=', $id)
+            ->latest()
+            ->paginate();
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return view(
             "comment::backend.$module_name.show",
@@ -249,7 +254,7 @@ class CommentsController extends Controller
 
         $$module_name_singular = $module_model::findOrFail($id);
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $$module_name_singular->name . '(ID:' . $$module_name_singular->id . ") ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return view(
             "comment::backend.$module_name.edit",
@@ -279,9 +284,9 @@ class CommentsController extends Controller
 
         $$module_name_singular->update($request->all());
 
-        Flash::success("<i class='fas fa-check'></i> '".Str::singular($module_title)."' Updated Successfully")->important();
+        Flash::success("<i class='fas fa-check'></i> '" . Str::singular($module_title) . "' Updated Successfully")->important();
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.'(ID:'.$$module_name_singular->id.") ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $$module_name_singular->name . '(ID:' . $$module_name_singular->id . ") ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return redirect("admin/$module_name");
     }
@@ -308,9 +313,9 @@ class CommentsController extends Controller
         DB::table($module_name)->where('id', $id)->delete();
         // $$module_name_singular->delete();
 
-        Flash::success('<i class="fa fa-check"></i> '.label_case($module_name_singular).' Deleted Successfully!')->important();
+        Flash::success('<i class="fa fa-check"></i> ' . label_case($module_name_singular) . ' Deleted Successfully!')->important();
 
-        Log::info(label_case($module_title.' '.$module_action)." | '".$$module_name_singular->name.', ID:'.$$module_name_singular->id." ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_title . ' ' . $module_action) . " | '" . $$module_name_singular->name . ', ID:' . $$module_name_singular->id . " ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return redirect("admin/$module_name");
     }
@@ -333,7 +338,7 @@ class CommentsController extends Controller
 
         $$module_name = $module_model::onlyTrashed()->orderBy('deleted_at', 'desc')->paginate();
 
-        Log::info(label_case($module_title.' '.$module_action).' | User:'.Auth::user()->name);
+        Log::info(label_case($module_title . ' ' . $module_action) . ' | User:' . Auth::user()->name);
 
         return view(
             "comment::backend.$module_name.trash",
@@ -362,9 +367,9 @@ class CommentsController extends Controller
         $$module_name_singular = $module_model::withTrashed()->find($id);
         $$module_name_singular->restore();
 
-        Flash::success('<i class="fa fa-check"></i> '.label_case($module_name_singular).' Data Restoreded Successfully!')->important();
+        Flash::success('<i class="fa fa-check"></i> ' . label_case($module_name_singular) . ' Data Restoreded Successfully!')->important();
 
-        Log::info(label_case($module_action)." '$module_name': '".$$module_name_singular->name.', ID:'.$$module_name_singular->id." ' by User:".Auth::user()->name.'(ID:'.Auth::user()->id.')');
+        Log::info(label_case($module_action) . " '$module_name': '" . $$module_name_singular->name . ', ID:' . $$module_name_singular->id . " ' by User:" . Auth::user()->name . '(ID:' . Auth::user()->id . ')');
 
         return redirect("admin/$module_name");
     }

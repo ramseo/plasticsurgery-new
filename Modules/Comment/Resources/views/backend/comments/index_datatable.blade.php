@@ -22,20 +22,20 @@
             </div>
             <div class="col-4">
                 <div class="float-right">
-{{--                    <x-buttons.create route='{{ route("backend.$module_name.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}"/>--}}
+                    {{-- <x-buttons.create route='{{ route("backend.$module_name.create") }}' title="{{__('Create')}} {{ ucwords(Str::singular($module_name)) }}"/>--}}
 
-{{--                    <div class="btn-group" role="group" aria-label="Toolbar button groups">--}}
-{{--                        <div class="btn-group" role="group">--}}
-{{--                            <button id="btnGroupToolbar" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
-{{--                                <i class="fas fa-cog"></i>--}}
-{{--                            </button>--}}
-{{--                            <div class="dropdown-menu" aria-labelledby="btnGroupToolbar">--}}
-{{--                                <a class="dropdown-item" href="{{ route("backend.$module_name.trashed") }}">--}}
-{{--                                    <i class="fas fa-eye-slash"></i> View trash--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+                    {{-- <div class="btn-group" role="group" aria-label="Toolbar button groups">--}}
+                    {{-- <div class="btn-group" role="group">--}}
+                    {{-- <button id="btnGroupToolbar" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+                    {{-- <i class="fas fa-cog"></i>--}}
+                    {{-- </button>--}}
+                    {{-- <div class="dropdown-menu" aria-labelledby="btnGroupToolbar">--}}
+                    {{-- <a class="dropdown-item" href="{{ route("backend.$module_name.trashed") }}">--}}
+                    {{-- <i class="fas fa-eye-slash"></i> View trash--}}
+                    {{-- </a>--}}
+                    {{-- </div>--}}
+                    {{-- </div>--}}
+                    {{-- </div>--}}
                 </div>
             </div>
         </div>
@@ -55,7 +55,10 @@
                             <th>
                                 Updated At
                             </th>
-                            <th class="text-right">
+                            <th>
+                                Parent Comment
+                            </th>
+                            <th class="text-center">
                                 Action
                             </th>
                         </tr>
@@ -93,20 +96,35 @@
 <script type="text/javascript" src="{{ asset('vendor/datatable/datatables.min.js') }}"></script>
 
 <script type="text/javascript">
-
     $('#datatable').DataTable({
         processing: true,
         serverSide: true,
         autoWidth: true,
         responsive: true,
         ajax: '{{ route("backend.$module_name.index_data") }}',
-        columns: [
-            {data: 'id', name: 'id'},
-            {data: 'name', name: 'name'},
-            {data: 'updated_at', name: 'updated_at'},
-            {data: 'action', name: 'action', orderable: false, searchable: false}
+        columns: [{
+                data: 'id',
+                name: 'id'
+            },
+            {
+                data: 'name',
+                name: 'name'
+            },
+            {
+                data: 'name',
+                name: 'name'
+            },
+            {
+                data: 'parent_id',
+                name: 'parent_id'
+            },
+            {
+                data: 'action',
+                name: 'action',
+                orderable: false,
+                searchable: false
+            }
         ]
     });
-
 </script>
 @endpush
