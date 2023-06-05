@@ -86,6 +86,12 @@
                                     <div class="doc-tagline">
                                         Surgeon
                                     </div>
+                                    <div>
+                                        <?php
+                                        $get_userprofiles = get_userprofiles($item->id);
+                                        echo $get_userprofiles->degree;
+                                        ?>
+                                    </div>
                                     <div class="doc-city">
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                                         <?= getCitiesById($item->city, 'pipe') ?>
