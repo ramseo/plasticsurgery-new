@@ -123,7 +123,7 @@ class PagesController extends Controller
                 $duplicateArr = array_intersect($explodeArr, $citiesArr);
 
                 if ($duplicateArr) {
-                    $city = ucwords(reset($duplicateArr));
+                    $city = reset($duplicateArr);
                 } else {
                     $city = "";
                 }
