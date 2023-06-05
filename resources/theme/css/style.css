@@ -3166,7 +3166,7 @@ img {
     text-decoration: none;
 }
 
-.review-header .img-col {
+.review-header .img-col img{
     width: 40px;
     height: 40px;
     border-radius: 50%;
