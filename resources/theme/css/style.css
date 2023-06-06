@@ -3597,3 +3597,16 @@ img {
 .identity.m-auto {
     width: fit-content;
 }
+
+.surgeries-list li.active,
+.cities-list li.active {
+    color: inherit !important;
+}
+
+.surgeries-list li.active a,
+.cities-list li.active a {
+    color: #1877F2;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 15px;
+}

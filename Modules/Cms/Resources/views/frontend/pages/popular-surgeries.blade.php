@@ -35,18 +35,26 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <?php if ($popular_cities1) { ?>
-                            <ul class="padd-null">
+                            <ul class="padd-null cities-list">
                                 <?php foreach ($popular_cities1 as $cities1) { ?>
-                                    <li><a href="<?= $cities1->slug ?>"><?= $cities1->name ?></a></li>
+                                    <li class="<?= (str_replace('/', '', Request::getRequestUri()) == $cities1->slug) ? 'active' : '' ?>">
+                                        <a href="<?= $cities1->slug ?>">
+                                            <?= $cities1->name ?>
+                                        </a>
+                                    </li>
                                 <?php } ?>
                             </ul>
                         <?php } ?>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <?php if ($popular_cities2) { ?>
-                            <ul class="padd-null">
+                            <ul class="padd-null cities-list">
                                 <?php foreach ($popular_cities2 as $cities2) { ?>
-                                    <li><a href="<?= $cities2->slug ?>"><?= $cities2->name ?></a></li>
+                                    <li class="<?= (str_replace('/', '', Request::getRequestUri()) == $cities2->slug) ? 'active' : '' ?>">
+                                        <a href="<?= $cities2->slug ?>">
+                                            <?= $cities2->name ?>
+                                        </a>
+                                    </li>
                                 <?php } ?>
                             </ul>
                         <?php } ?>
@@ -62,18 +70,26 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6">
                         <?php if ($popular_surgeries1) { ?>
-                            <ul class="padd-null">
+                            <ul class="padd-null surgeries-list">
                                 <?php foreach ($popular_surgeries1 as $surgeries1) { ?>
-                                    <li><a href="<?= $surgeries1->url ?>"><?= $surgeries1->title ?></a></li>
+                                    <li class="<?= (str_replace('/', '', Request::getRequestUri()) == $surgeries1->url) ? 'active' : '' ?>">
+                                        <a href="<?= $surgeries1->url ?>">
+                                            <?= $surgeries1->title ?>
+                                        </a>
+                                    </li>
                                 <?php } ?>
                             </ul>
                         <?php } ?>
                     </div>
                     <div class="col-lg-6 col-md-6">
                         <?php if ($popular_surgeries2) { ?>
-                            <ul class="padd-null">
+                            <ul class="padd-null surgeries-list">
                                 <?php foreach ($popular_surgeries2 as $surgeries2) { ?>
-                                    <li><a href="<?= $surgeries2->url ?>"><?= $surgeries2->title ?></a></li>
+                                    <li class="<?= (str_replace('/', '', Request::getRequestUri()) == $surgeries2->url) ? 'active' : '' ?>">
+                                        <a href="<?= $surgeries2->url ?>">
+                                            <?= $surgeries2->title ?>
+                                        </a>
+                                    </li>
                                 <?php } ?>
                             </ul>
                         <?php } ?>
