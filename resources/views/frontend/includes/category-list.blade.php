@@ -1,292 +1,117 @@
-<!-- code -->
-<div class="container-fluid mtab pt-4 pb-4" style="background-color:#f8f8f8">
-    <div class="container">
-        <p class="identity m-auto" style="width:fit-content">
-            Find Your Cosmetic Surgery Procedure 
-        </p>
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item default-active-cls active">
-                <a class="nav-link default-active-cls active ancr" data-toggle="tab" href="#home" aria-expanded="true">
-                    Face Procedures
-                </a>
-            </li>
-            <li class="nav-item remove-default-active-cls">
-                <a class="nav-link ancr" data-toggle="tab" href="#menu1" aria-expanded="false">
-                    Breast Procedures
-                </a>
-            </li>
-            <li class="nav-item remove-default-active-cls">
-                <a class="nav-link ancr" data-toggle="tab" href="#menu2" aria-expanded="false">
-                    Body Procedures
-                </a>
-            </li>
-            <li class="nav-item remove-default-active-cls">
-                <a class="nav-link ancr" data-toggle="tab" href="#menu3" aria-expanded="false">
-                    Male Specific Procedures
-                </a>
-            </li>
-        </ul>
-
-        <p> <!-- Tab panes --></p>
-
-        <div class="tab-content">
-            <div id="home" class="container default-active-cls tab-pane active in">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="<?= asset('img/face.jpg') ?>" style="width:100%">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="rhinoplasty">Rhinoplasty</a>
-                                    </li>
-                                    <li>
-                                        <a href="blepharoplasty">Blepharoplasty</a>
-                                    </li>
-                                    <li>
-                                        <a href="facelift">Facelift</a>
-                                    </li>
-                                    <li>
-                                        <a href="brow-lift">Brow Lift</a>
-                                    </li>
-                                    <li>
-                                        <a href="neck-lift">Neck Lift</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="chin-surgery">Chin Surgery</a>
-                                    </li>
-                                    <li>
-                                        <a href="cheek-augmentation">Cheek Augmentation</a>
-                                    </li>
-                                    <li>
-                                        <a href="lip-augmentation">Lip Augmentation</a>
-                                    </li>
-                                    <li>
-                                        <a href="buccal-fat-removal">Buccal Fat Removal</a>
-                                    </li>
-                                    <li>
-                                        <a href="ear-surgery">Ear Surgery</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+<section class="home-section paddingtop-80 sugensection">
+    <div class="container-fluid remove-exterspace">
+        <div class="row" style="margin:0px;">
+            <div class="col-md-12">
+                <div class="section-heading text-center">
+                    <h1 class="h-bold">Find Your Cosmetic Surgery Procedure ghhg</h1>
+                </div>
+                <div class="divider-short">
+                    <div></div>
                 </div>
             </div>
-
-            <div id="menu1" class="container tab-pane fade">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="<?= asset('img/breast.jpg') ?>" style="width:100%">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="breast-augmentation">Breast Augmentation</a>
-                                    </li>
-                                    <li>
-                                        <a href="breast-lift">Breast Lift</a>
-                                    </li>
-                                    <li>
-                                        <a href="breast-reduction">Breast Reduction</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="breast-implant-removal">Breast Implant Removal</a>
-                                    </li>
-                                    <li>
-                                        <a href="breast-implant-revision">Breast Implant Revision</a>
-                                    </li>
-                                    <li>
-                                        <a href="gynecomastia">Gynecomastia</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+        <div class="row remove-exterspace">
+            <div class="col-md-2 surgenin-padding-remove">
+                <div class="surgen-gal">
+                    <a href="<?= url('liposuction') ?>">
+                        <img src="<?= asset("img/plastic-img/Liposuction-1-1024x683.jpg") ?>" alt="plasticsurgery">
+                        Liposuction
+                    </a>
                 </div>
             </div>
-
-            <div id="menu2" class="container tab-pane fade">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="<?= asset('img/body.jpg') ?>" style="width:100%">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="liposuction">Liposuction</a>
-                                    </li>
-                                    <li>
-                                        <a href="tummy-tuck">Tummy Tuck</a>
-                                    </li>
-                                    <li>
-                                        <a href="buttock-enhancement">Buttock Enhancement</a>
-                                    </li>
-                                    <li>
-                                        <a href="body-lift">Body Lift</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="arm-lift">Arm Lift</a>
-                                    </li>
-                                    <li>
-                                        <a href="thigh-lift">Thigh Lift</a>
-                                    </li>
-                                    <li>
-                                        <a href="body-contouring">Body Contouring</a>
-                                    </li>
-                                    <li>
-                                        <a href="mommy-makeover">Mommy Makeover</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-md-2 surgenin-padding-remove">
+                <div class="surgen-gal margin-top_sur">
+                    <a href="<?= url("breast-augmentation") ?>">
+                        <img src="<?= asset("img/plastic-img/Breast-Augmentation-2-1024x683.jpg") ?>" alt="Augmentation">
+                        Breast Augmentation
+                    </a>
                 </div>
             </div>
-
-            <div id="menu3" class="container tab-pane fade">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="<?= asset('img/male.jpg') ?>" style="width:100%">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="hair-transplant">Hair Transplant</a>
-                                    </li>
-                                    <li>
-                                        <a href="gynecomastia">Gynecomastia</a>
-                                    </li>
-                                    <li>
-                                        <a href="men-and-plastic-surgery">Men and Plastic Surgery</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-md-2 surgenin-padding-remove">
+                <div class="surgen-gal margin-top_sur">
+                    <a href="<?= url("breast-lift") ?>">
+                        <img src="<?= asset("img/plastic-img/Mastopexy-2-1024x645.jpg") ?>" alt="Mastopexy">
+                        Breast Lift
+                    </a>
                 </div>
             </div>
-            <div id="menu4" class="container tab-pane fade">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="<?= asset('img/body-hair-to-head.jpg') ?>" style="width:100%">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="hair-transplant">Hair Transplant</a>
-                                    </li>
-                                    <li>
-                                        <a href="gynecomastia">Gynecomastia</a>
-                                    </li>
-                                    <li>
-                                        <a href="men-and-plastic-surgery">Men and Plastic Surgery</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-md-2 surgenin-padding-remove">
+                <div class="surgen-gal margin-top_sur">
+                    <a href="<?= url("tummy-tuck") ?>">
+                        <img src="<?= asset("img/plastic-img/Tummy-Tuck-1-1024x683.jpg") ?>" alt="Tummy">
+                        Tummy Tuck
+                    </a>
                 </div>
             </div>
-            <div id="menu5" class="container tab-pane fade">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <img src="<?= asset('img/failed-hair-transplant-repair.jpg') ?>" style="width:100%">
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <ul>
-                                    <li>
-                                        <a href="hair-transplant">Hanir Transplant</a>
-                                    </li>
-                                    <li>
-                                        <a href="gynecomastia">Gynecomastia</a>
-                                    </li>
-                                    <li>
-                                        <a href="men-and-plastic-surgery">Men and Plastic Surgery</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-md-2 surgenin-padding-remove">
+                <div class="surgen-gal margin-top_sur">
+                    <a href="<?= url("blepharoplasty") ?>">
+                        <img src="<?= asset("img/plastic-img/Blepharoplasty-4-1024x810.jpg") ?>" alt="plasticsurgery">
+                        Blepharoplasty
+                    </a>
                 </div>
             </div>
+            <div class="col-md-2 surgenin-padding-remove">
+                <div class="surgen-gal margin-top_sur">
+                    <a href="<?= url("rhinoplasty") ?>">
+                        <img src="<?= asset("img/plastic-img/Rhinoplasty-5-1024x683.jpg") ?>" alt="Rhinoplasty">
+                        Rhinoplasty
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2 surgenin-padding-remove">
+                <div class="surgen-gal margin-top_sur">
+                    <a href="<?= url("facelift") ?>">
+                        <img src="<?= asset("img/plastic-img/facelift-surgery-scaled.jpg") ?>" alt="facelift">
+                        Facelift Surgery
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2 surgenin-padding-remove">
+                <div class="surgen-gal margin-top_sur">
+                    <a href="<?= url("buccal-fat-removal") ?>">
+                        <img src="<?= asset("img/plastic-img/Buccal-Fat-Removal-Cheek-Reduction-2-1024x684.jpg") ?>" alt="Cheek">
+                        Buccal Fat Removal
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2 surgenin-padding-remove">
+                <div class="surgen-gal margin-top_sur">
+                    <a href="<?= url("mommy-makeover") ?>">
+                        <img src="<?= asset("img/plastic-img/Mommy-Makeover-2-1024x682.jpg") ?>" alt="mommy makeover">
+                        Mommy Makeover
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2 surgenin-padding-remove">
+                <div class="surgen-gal margin-top_sur">
+                    <a href="<?= url("body-contouring") ?>">
+                        <img src="<?= asset("img/plastic-img/body-contouring.png") ?>" alt="contouring">
+                        Body Contouring
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2 surgenin-padding-remove">
+                <div class="surgen-gal margin-top_sur">
+                    <a href="<?= url("gynecomastia") ?>">
+                        <img src="<?= asset("img/plastic-img/Gynecomastia-1-1024x683.jpg") ?>" alt="Gynecomastia">
+                        Gynecomastia
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-2 surgenin-padding-remove">
+                <div class="surgen-gal margin-top_sur">
+                    <a href="<?= url("hair-transplant") ?>">
+                        <img src="<?= asset("img/plastic-img/hair-transplant-scaled.jpg") ?>" alt="hair transplant">
+                        Hair Transplant
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row text-center surgen-view-all">
+            <a href="<?= url("procedures") ?>" class="btn btn-primary btn_sdse">
+                View all Cosmetic Surgery Procedures
+            </a>
         </div>
     </div>
-</div>
-<!-- code -->
-
-
-@php
-$categories = getDataArray('types');
-$cities = getDataArray('cities');
-@endphp
-@if($categories)
-<!-- <section id="category-section"> 
-    <div class="container-fluid">
-        <div class="col-xs-12 common-heading text-center" data-aos="flip-left">
-            <p class="shadow-text">Categories</p>
-            <p class="head">Wedding Categories</p>
-        </div>
-        <div class="row category-main-row">
-            @php
-            $cat_count = 0;
-            $evenArr = array('2','4','6','8','10','12','14','16');
-            @endphp
-            @foreach($categories as $type)
-            @php
-            $cat_count++;
-
-            if(in_array($cat_count,$evenArr)){
-            $aos_animate = "data-aos='fade-left'";
-            }else{
-            $aos_animate = "data-aos='fade-right'";
-            }
-
-            @endphp
-            <div class="single-category-col col-6" <?= $aos_animate ?>>
-                <a href="{{url('/'.$type->slug)}}" class="">
-                    <div class="inner inner_{{$cat_count}}" style="background-color: {{$type->colour}};">
-                        <style>
-                            .inner_<?= $cat_count ?>.img-col::after {
-                                background-color: <?= $type->colour ?> !important
-                            }
-                        </style>
-                        <div class="img-col">
-
-                            <img src="{{asset('storage/type/image/'.$type->image)}}" alt="" class="img-fluid">
-                            <div class="text-col">
-                                <p class="head">{{$type->name}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section> -->
-@endif
+</section>

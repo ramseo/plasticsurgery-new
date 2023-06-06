@@ -331,7 +331,14 @@ a:hover {
 }
 
 .trans h2 {
-    font-size: 45px;
+    width: 100%;
+    padding: 0px;
+    background: none;
+    font-size: 31px;
+    color: #1f193a;
+    padding: 15px 0;
+    line-height: 42px;
+    font-weight: bold;
 }
 
 .rewq h4 {
@@ -457,6 +464,9 @@ a:hover {
 .banner a {
     color: inherit !important;
     text-decoration: none !important;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 
@@ -3595,4 +3605,13 @@ img {
 .copyright-sec {
     background-color: #c35248;
     border-top: 1px dashed #fff;
+}
+
+.home-banner-sec {
+    background: #eee url("../img/plasitic-banner-img2.png") bottom left no-repeat !important;
+}
+
+.find-a-procedure {
+    background-color: #f3413a !important;
+    color: #fff !important;
 }

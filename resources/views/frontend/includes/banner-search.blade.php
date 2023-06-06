@@ -1,8 +1,8 @@
-<div class="container-fluid">
+<div class="container-fluid home-banner-sec">
     <div class="container banner">
         <div class="row">
             <div class="col-lg-6 col-md-12 pt-5 pb-3">
-                <img src="<?= asset('img/plasitic-banner-img2.png') ?>" style="width: 100%;">
+                <!-- empty line -->
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="trans">
@@ -13,7 +13,7 @@
                     </p>
                     <div class="row pt-3 mob-home-btn-cls">
                         <div class="col-md-5">
-                            <button type="button" class="btn" style="background-color:#f3413a; color:#fff">
+                            <button type="button" class="btn find-a-procedure">
                                 <a href="procedures">
                                     Find a Procedure
                                 </a>
