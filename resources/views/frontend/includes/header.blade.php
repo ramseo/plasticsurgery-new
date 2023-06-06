@@ -132,3 +132,4 @@ $city = getData('cities');
 
     </nav>
 </header>
+<div class="clearfix"></div>

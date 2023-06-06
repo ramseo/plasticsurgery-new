@@ -1,4 +1,4 @@
-<div class="container-fluid" style="background-color:#1a508b">
+<div class="container-fluid footer-bg">
    <footer>
       <div class="container">
          <div class="row">
@@ -60,8 +60,8 @@
                <h2>Contact</h2>
                <ul>
                   <li>
-                     <a href="#">
-                        <img src="<?= asset('img/logo-cosmeticsurgery.png') ?>">
+                     <a href="javascript:void(0)">
+                        <img src="<?= asset('img/plastic-surgery-logo.png') ?>" alt="footer logo">
                      </a>
                   </li>
                   <br>
@@ -73,8 +73,8 @@
                   </li>
                </ul>
                <div class="links">
-                  <h4 style="text-align:center">Follow US</h4>
-                  <ul class="company-social" style="text-align:center; padding:0;">
+                  <h4>Follow US</h4>
+                  <ul class="company-social">
                      <li><a target="_blank" href="https://www.facebook.com/CosmeticSurgery.in"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
                      <li><a target="_blank" href="https://twitter.com/CosmeticSurgIN"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
                      <li><a target="_blank" href="https://www.linkedin.com/company/cosmeticsurgeryindia/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
@@ -84,13 +84,10 @@
             </div>
          </div>
       </div>
-      <!-- <a id="button-scroll" style="visibility: visible; opacity: 1;display:none">
-         <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
-      </a> -->
    </footer>
 </div>
 
-<div class="container-fluid" style="background-color: #1a508b; border-top:1px dashed #fff">
+<div class="container-fluid footer-container">
    <div class="small-footer">
       <div class="container">
          <div class="row">
@@ -129,7 +126,7 @@
    </div>
 </div>
 
-<div class="container-fluid" style="background-color:#1a508b; border-top:1px dashed #fff">
+<div class="container-fluid copyright-sec">
    <div class="small-footer">
       <div class="floatt-left">
          <?= "Copyright ©" . " " . date('Y') . " - " . $_SERVER['SERVER_NAME'] . " - " . "All rights reserved" ?>
