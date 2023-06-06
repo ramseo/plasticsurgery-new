@@ -9,7 +9,7 @@
                     We aim to deliver patient-focused solutions for cosmetic surgical procedures by recommending the top cosmetic surgeons of India based on their expertise and your feasibility. We love connecting you with a reputable cosmetic surgeon who could help you get that fantastic transformation you have always dreamed of.
                 </p>
                 <p><strong>What Makes Us Stand Out from the Other Platforms?</strong></p>
-                <div class="row">
+                <div class="row mob-ul-cls">
                     <div class="col-md-6">
                         <ul>
                             <li>An elite group of cosmetic surgeons</li>
