@@ -2270,6 +2270,10 @@ footer img {
         padding: 0.25rem 1.25rem !important;
     }
 
+    .container-fluid.transplan ul {
+        padding: 0;
+    }
+
 }
 
 
