@@ -115,7 +115,7 @@ a:hover {
 
 .icon {
     position: absolute;
-    color: #1877f2;
+    color: #F88379;
     top: 5px;
     left: 5px;
 }
@@ -335,7 +335,7 @@ a:hover {
 }
 
 .rewq h4 {
-    color: #1877f2;
+    color: #F88379;
 }
 
 .rewq {
@@ -397,12 +397,12 @@ a:hover {
 }
 
 .specification button {
-    background-color: #1877f2;
+    background-color: #F88379;
     border: none;
 }
 
 .specification1 button {
-    background-color: #1877f2;
+    background-color: #F88379;
     border: none;
 }
 
@@ -598,7 +598,7 @@ footer ul {
 }
 
 .pop p {
-    background-color: #1877f2;
+    background-color: #F88379;
     color: #fff;
     text-align: center;
     padding: 7px;
@@ -949,7 +949,7 @@ p {
 }
 
 .identity {
-    background-color: #1877F2;
+    background-color: #F88379;
     color: #fff;
     font-size: 23px;
     padding: 9px 15px 9px 15px;
@@ -1107,7 +1107,7 @@ ul.nav.nav-tabs {
 .ico .fa {
     font-size: 52px;
     margin-bottom: 13px;
-    color: #1877f2;
+    color: #F88379;
 }
 
 .ico:hover {
@@ -1148,7 +1148,7 @@ ul.nav.nav-tabs {
 }
 
 .llisting ul li a {
-    background-color: #1877f2;
+    background-color: #F88379;
     padding: 10px 35px;
     border-radius: 3px;
 }
@@ -1192,7 +1192,7 @@ ul.nav.nav-tabs {
 
 .frm h3 {
     text-align: center;
-    background-color: #1877f2;
+    background-color: #F88379;
     color: #fff;
     padding: 11px;
     font-size: 24px;
@@ -1209,7 +1209,7 @@ ul.nav.nav-tabs {
 
 .frm button {
     width: 100%;
-    background-color: #1877f2;
+    background-color: #F88379;
     border: none;
     padding: 15px;
 }
@@ -1401,7 +1401,7 @@ footer img {
 }
 
 .cit {
-    background-color: #1877F2;
+    background-color: #F88379;
 }
 
 .links ul li {
@@ -1720,7 +1720,7 @@ footer img {
     }
 
     .bar a {
-        background-color: #1877f2;
+        background-color: #F88379;
         margin: 5px;
         padding: 8px 11px;
         font-size: 14px;
@@ -1861,7 +1861,7 @@ footer img {
     }
 
     .bar a {
-        background-color: #1877f2;
+        background-color: #F88379;
         margin: 5px;
         padding: 8px 11px;
         font-size: 14px;
@@ -1957,7 +1957,7 @@ footer img {
     }
 
     #accordion .card-body {
-        border: 5px solid #1877f2;
+        border: 5px solid #F88379;
         border-radius: 6px;
     }
 
@@ -2266,7 +2266,7 @@ footer img {
     }
 
     .card-header {
-        background-color: #1877f2 !important;
+        background-color: #F88379 !important;
         padding: 0.25rem 1.25rem !important;
     }
 
@@ -2508,7 +2508,7 @@ footer img {
 
 .icon-contact {
     position: absolute;
-    color: #1877f2;
+    color: #F88379;
     top: 5px;
     left: 5px;
     font-size: 13px;
@@ -2699,7 +2699,7 @@ footer img {
 }
 
 .cs-bg-color {
-    background: #1877F2;
+    background: #F88379;
 }
 
 .height-100vh {
@@ -2838,7 +2838,7 @@ footer img {
 
 .menu-menu-col a:hover,
 .menu-menu-col a.active {
-    background-color: #1877F2;
+    background-color: #F88379;
     color: white;
     text-decoration: none;
 }
@@ -2962,7 +2962,7 @@ img {
 
 /* vvv */
 .doc-star-rating-profile {
-    background: #1877F2;
+    background: #F88379;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -3204,7 +3204,7 @@ img {
 
 .gallery-action-col,
 .gallery-action-col:hover {
-    background: #1877F2;
+    background: #F88379;
     text-decoration: none;
 }
 
@@ -3369,7 +3369,7 @@ img {
 .breadcrumb {
     margin-top: 1rem;
     margin-bottom: 1rem !important;
-    background-color: #1877F2 !important;
+    background-color: #F88379 !important;
 }
 
 .breadcrumb .breadcrumb-item a,
@@ -3422,7 +3422,7 @@ img {
     border-radius: 50%;
     height: 40px;
     width: 40px;
-    background: #1877F2;
+    background: #F88379;
     position: relative;
 }
 
@@ -3552,7 +3552,7 @@ img {
 }
 
 #desktop-header-menu li a.active {
-    color: #1877F2 !important;
+    color: #F88379 !important;
     font-weight: 600;
 }
 
@@ -3605,7 +3605,7 @@ img {
 
 .surgeries-list li.active a,
 .cities-list li.active a {
-    color: #1877F2;
+    color: #F88379;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 15px;

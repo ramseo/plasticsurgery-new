@@ -31,7 +31,7 @@
                 <img style="width:200px;margin-top:35px;margin-bottom:25px" src="<?= asset('img/logo-cosmeticsurgery.png') ?>">
             </td>
         </tr>
-        <tr style="background:#1877F2">
+        <tr style="background:#F88379">
             <td colspan="2" style="font-size:20px;text-align:center;font-weight:bolder;color:#fff;">
                 Patient appointment details
             </td>

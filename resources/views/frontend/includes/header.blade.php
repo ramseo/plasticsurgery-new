@@ -12,7 +12,7 @@ $city = getData('cities');
             </a>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg desk kc" style="background-color:#1877F2;">
+    <nav class="navbar navbar-expand-lg desk kc" style="background-color:#F88379;">
         <div class="container">
             <ul class="navbar-nav soc">
                 <li class="nav-item">

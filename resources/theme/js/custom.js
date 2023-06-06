@@ -219,7 +219,7 @@ $(function () {
                     var main_parent = $(this).parent().parent();
                     var target_item = $(main_parent).children('a');
                     $(target_item).css(
-                        { 'color': '#1877F2', 'font-weight': '600' }
+                        { 'color': '#F88379', 'font-weight': '600' }
                     );
                 }
 

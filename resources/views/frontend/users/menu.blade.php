@@ -20,7 +20,7 @@
     #mainFeatures a:active {
         filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
         background-color: transparent;
-        color: #1877F2;
+        color: #F88379;
     }
 
     #mainFeatures {
