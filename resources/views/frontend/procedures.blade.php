@@ -23,7 +23,7 @@
     <div class="container">
         <div class="container-fluid mtab pt-4 pb-4">
             <div class="container">
-                <p class="identity m-auto text-center" style="width:fit-content">
+                <p class="identity m-auto text-center">
                     Find Your Procedure
                 </p>
                 <ul class="nav nav-tabs" role="tablist">

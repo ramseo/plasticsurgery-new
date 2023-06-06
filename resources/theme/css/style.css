@@ -961,6 +961,7 @@ p {
 
 ul.nav.nav-tabs {
     padding: 0px 0px !important;
+    margin-top: 15px;
 }
 
 .nav-tabs>li {
@@ -3583,4 +3584,8 @@ img {
 
 .blog-comments-col .d-flex {
     align-items: center;
+}
+
+.identity.m-auto {
+    width: fit-content;
 }

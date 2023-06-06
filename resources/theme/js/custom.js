@@ -238,3 +238,7 @@ $(document).on('click', '#fa-bars', function () {
         $('#fa-bars').attr("class", "fa fa-bars");
     }
 });
+
+$(document).on('click', '.remove-default-active-cls', function () {
+    $('.default-active-cls').removeClass("active active in");
+});

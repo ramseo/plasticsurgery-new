@@ -1,25 +1,25 @@
 <div class="container-fluid mtab pt-4 pb-4" style="background-color:#f8f8f8">
     <div class="container">
-        <p class="identity m-auto text-center" style="width:fit-content">
+        <p class="identity m-auto text-center">
             Find Your Procedure
         </p>
         <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item active">
-                <a class="nav-link active ancr" data-toggle="tab" href="#home" aria-expanded="true">
+            <li class="nav-item default-active-cls active">
+                <a class="nav-link default-active-cls active ancr" data-toggle="tab" href="#home" aria-expanded="true">
                     Face Procedures
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item remove-default-active-cls">
                 <a class="nav-link ancr" data-toggle="tab" href="#menu1" aria-expanded="false">
                     Breast Procedures
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item remove-default-active-cls">
                 <a class="nav-link ancr" data-toggle="tab" href="#menu2" aria-expanded="false">
                     Body Procedures
                 </a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item remove-default-active-cls">
                 <a class="nav-link ancr" data-toggle="tab" href="#menu3" aria-expanded="false">
                     Male Specific Procedures
                 </a>
@@ -27,7 +27,7 @@
         </ul>
 
         <div class="tab-content">
-            <div id="home" class="container tab-pane active in">
+            <div id="home" class="container default-active-cls tab-pane active in">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6 padd-null">
                         <img src="<?= asset('img/face.jpg') ?>" style="width:100%">
