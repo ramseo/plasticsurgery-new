@@ -11,8 +11,11 @@ $types = getDataArray('types');
 <!-- Banner search -->
 @include('frontend.includes.banner-search')
 
-<!-- Category list -->
+<!-- Category list --> 
 @include('frontend.includes.category-list')
+
+<!-- Category list --> 
+@include('frontend.includes.make-us-different')
 
 <!-- Home content list -->
 @include('frontend.includes.home-content')

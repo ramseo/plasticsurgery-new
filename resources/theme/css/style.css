@@ -2,6 +2,15 @@ form-control * {
     font-family: 'Signika', sans-serif;
 }
 
+h1.h-bold,
+h2.h-bold,
+h3.h-bold,
+h4.h-bold,
+h5.h-bold,
+h6.h-bold {
+    font-weight: 700;
+}
+
 a:hover {
     text-decoration: none !important;
 }
@@ -1096,7 +1105,6 @@ ul.nav.nav-tabs {
 }
 
 .img-responsive {
-    height: 233px;
     object-fit: cover;
     cursor: pointer;
 }
@@ -3614,4 +3622,219 @@ img {
 .find-a-procedure {
     background-color: #f3413a !important;
     color: #fff !important;
+}
+
+.remove-exterspace {
+    margin: 0px;
+    padding: 0px;
+}
+
+.surgenin-padding-remove {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    padding-top: 10px;
+}
+
+.surgen-gal {
+    float: left;
+    width: 100%;
+}
+
+.surgen-gal a,
+.surgen-gal a:hover {
+    border: solid 1px #dc555e;
+    float: left;
+    width: 100%;
+    background: #ec606a;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    padding-top: 0px;
+    padding-bottom: 0;
+    -webkit-transition: background 2s;
+    transition: background 2s;
+    color: #fff;
+}
+
+img {
+    object-fit: cover;
+}
+
+.surgen-gal img {
+    border: solid 1px #dc555e;
+    float: left;
+    width: 100%;
+    height: 185px;
+}
+
+.surgen-view-all {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.home-section {
+    padding-top: 15px;
+    display: block;
+    position: relative;
+    z-index: 120;
+    background-color: #fff;
+}
+
+.onlytop_section_spacing {
+    padding-top: 20px;
+}
+
+.whatmakes {
+    padding-left: 90px !important;
+}
+
+.whatmakes2 {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.whatmakes h2 {
+    font-size: 23px;
+    color: #ec606a;
+    padding-bottom: 12px;
+}
+
+.whatmakes p {
+    font-size: 17px;
+    line-height: 24px;
+}
+
+.make-us-img img {
+    display: inline-block;
+}
+
+.why_main_bg {
+    background: #f1f1;
+    position: relative;
+}
+
+.col-md-12.pst_p {
+    position: absolute;
+    top: 149px;
+}
+
+.flat {
+    float: none;
+    margin: 0 auto;
+}
+
+.flat ul {
+    float: left;
+    width: 100%;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.flat ul li {
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 999;
+    margin-top: 10px;
+}
+
+.flat ul li .hexagon {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    position: absolute;
+    border: solid 2px #F88379;
+    border-radius: 40px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 29px;
+    color: #f3413a;
+    float: none;
+    left: 0px;
+}
+
+.flat ul li label {
+    float: left;
+    width: 100%;
+    background: #F88379;
+    padding: 8px;
+    padding-left: 8px;
+    margin-left: 37px;
+    margin-top: 7px;
+    padding-left: 50px;
+    color: #fff;
+    border-radius: 11px;
+}
+
+.rat {
+    display: none;
+}
+
+.bgh {
+    background: #f3f3f4;
+    padding: 100px 0px;
+}
+
+.five-star.box_shape45 {
+    -webkit-box-shadow: 5px 3px 0px 3px #4a0101, -5px -3px 0px 3px #600b0b;
+    box-shadow: 5px 3px 0px 3px #4a0101, -5px -3px 0px 3px #600b0b;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    float: left;
+    text-align: left;
+    min-height: 346px;
+}
+
+.five-star h3 {
+    float: left;
+    width: 100%;
+    color: #00234b;
+    font-weight: bold;
+    font-size: 29px;
+    padding: 10px 0px;
+}
+
+.five-star h4 {
+    float: left;
+    width: 100%;
+    color: #00234b;
+    font-weight: normal;
+    font-size: 25px;
+    text-align: left;
+    padding: 10px 0px;
+}
+
+.five-star ul {
+    float: left;
+    width: 100%;
+    padding: 16px 0 0 20px;
+    margin: 0;
+}
+
+.five-star ul li {
+    float: left;
+    width: 100%;
+    font-size: 20px;
+    line-height: 34px;
+    color: #00234b;
+}
+
+.dfer_btn {
+    background: #f3413a !important;
+    border-radius: 10px !important;
+    margin-top: 15px !important;
+    font-size: 19px !important;
+    padding: 10px 20px !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    line-height: normal !important;
+}
+
+.margin_tpl_sp {
+    margin-top: 79px;
 }

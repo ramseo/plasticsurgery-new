@@ -1,12 +1,11 @@
-<section class="home-section paddingtop-80 sugensection">
+<section class="home-section sugensection">
     <div class="container-fluid remove-exterspace">
-        <div class="row" style="margin:0px;">
+        <div class="row">
             <div class="col-md-12">
                 <div class="section-heading text-center">
-                    <h1 class="h-bold">Find Your Cosmetic Surgery Procedure ghhg</h1>
-                </div>
-                <div class="divider-short">
-                    <div></div>
+                    <h1 class="h-bold">
+                        Find Your Cosmetic Surgery Procedure
+                    </h1>
                 </div>
             </div>
         </div>
@@ -108,7 +107,7 @@
                 </div>
             </div>
         </div>
-        <div class="row text-center surgen-view-all">
+        <div class="text-center surgen-view-all">
             <a href="<?= url("procedures") ?>" class="btn btn-primary btn_sdse">
                 View all Cosmetic Surgery Procedures
             </a>
