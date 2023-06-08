@@ -23,9 +23,8 @@ if ($getAssignedDoctors->isNotEmpty()) {
 ?>
     <div class="container-fluid">
         <div class="container">
-            <!-- <div class="row"> -->
             <p class="identity width-100">
-                top Plastic Surgeons in <?= ucwords($city) ?>
+                top plastic surgeons in <?= ucwords($city) ?>
             </p>
             <div class="col-lg-12 doc-flex-cls padd-null">
                 <?php
@@ -117,16 +116,18 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="row">
                 <div class="col">
                     <p>
-                        Our Board-Certified Plastic Surgeons in <?= ucwords($city) ?> hold dexterity in performing complex cosmetic surgeries with ease.
-                        Our experts have a commendable record of operating countless surgeries with success.
-                        Among their expertise, include Liposuction, Rhinoplasty, Blepharoplasty, Gynecomastia, Breast Augmentation, Tummy Tuck, and more.
-                        Our surgeons are immensely qualified and possess adept expertise in performing surgery with great precision.
-                        They make sure to give personal attention to each individual, listen carefully to the problems of the patients, and try to grasp their expectations from the surgery.
-                        This helps them appreciably in suggesting and performing the most suitable procedure in a safe and hygienic environment, well-equipped with advanced surgery tools.
+                        We help you search for the most popular cosmetic surgeons in <?= ucwords($city) ?>.
+                        Our surgeons specialize in the enhancement procedures of the breast, face,
+                        and body. They hold years of experience in performing several reconstructive
+                        surgeries and have helped patients to restore their appearance after
+                        accidents, burns, and deformities.
+                        Our experts are skilled at carrying out Rhinoplasty, Blepharoplasty,
+                        Gynecomastia, Breast Augmentation, and Tummy Tuck among others.
+                        Owing to their adept expertise, the patients have been approaching them
+                        from India as well as overseas countries.
                     </p>
                 </div>
             </div>
-            <!-- </div> -->
         </div>
     </div>
 <?php } ?>
@@ -137,57 +138,71 @@ if ($getAssignedDoctors->isNotEmpty()) {
         <?php if ($surgery_str == "rhinoplasty") { ?>
             <div class="col padd-null">
                 <div class="top-content">
+                    <strong>
+                        Want to get rid of the disfigured nose? Rhinoplasty is the solution.
+                    </strong>
                     <p>
-                        <strong>
-                            Are you planning to reshape your nose to accentuate your features?
-                        </strong>
-                    </p>
-                    <p>
-                        Well, <?= $surgery_str ?>, or ‘nose job’, will give you the desired results.
-                        Performed as an outpatient procedure, it has a minimal recovery time.
-                        With the efforts of our experienced Plastic Surgeons in <?= ucwords($city) ?>,
-                        you can get regain your sculpted nose with a striking resemblance
-                        to your natural appearance.
+                        A nose job or Rhinoplasty refers to operating the nose to alter its shape or
+                        enhance its functionality. The motive for this surgery could be aesthetic or
+                        to repair the nose damage caused due to a birth defect, a disease,
+                        or a previous surgery. It could also be effective in correcting
+                        breathing defects. Consulting any of our seasoned plastic surgeons
+                        in Hyderabad can help you serve your purpose with success.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our <?= $surgery_str ?> Surgeons in <?= ucwords($city) ?>?
+                    Why Are Our Cosmetic Surgeons in Hyderabad the Best for Rhinoplasty?
                 </p>
                 <ul>
                     <li>
-                        We enable you to find the most experienced,
-                        and skilled Plastic Surgeons for <?= $surgery_str ?> in <?= ucwords($city) ?>.
+                        Deep knowledge of facial aesthetics
                     </li>
                     <li>
-                        Exponential success rates for <?= $surgery_str ?> surgeries with a satisfying
-                        patient experience.
+                        Highly experienced nose surgeons in Hyderabad
                     </li>
                     <li>
-                        Renowned Plastic Surgeons certified by the reputed national
-                        and international boards for plastic surgeons.
+                        Certified from varied national and international plastic surgery associations
                     </li>
                     <li>
-                        Expertise in performing varied types of <?= $surgery_str ?> treatments in <?= ucwords($city) ?>,
-                        including revision <?= $surgery_str ?>, reduction <?= $surgery_str ?>, augmentation <?= $surgery_str ?>,
-                        filler <?= $surgery_str ?>, reconstruction <?= $surgery_str ?>, and post-traumatic <?= $surgery_str ?>
-                        depending on the specific condition and expectation of the patient.
+                        Extremely qualified and experienced cosmetic surgeons
+                    </li>
+                    <li>
+                        Adept at performing high-definition nose surgery in Hyderabad
+                    </li>
+                    <li>
+                        Specializations in Reconstruction Rhinoplasty, Reduction Rhinoplasty,
+                        augmentation Rhinoplasty, and so on
+                    </li>
+                    <li>
+                        Pro-active at educating people about various aspects of cosmetic
+                        surgery treatments, including nose surgery
+                    </li>
+                    <li>
+                        Dexterous in coming up with expected results appreciably
                     </li>
                 </ul>
                 <p class="identity">
-                    COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
+                    COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of <?= $surgery_str ?> surgery depends on various factors including the complexity
-                    of the operation, any additional requirements like nasal implants, etc.
-                    It would be good to visit our Plastic Surgeon to discuss all the requisite details.
+                    The cost of Rhinoplasty surgery in Hyderabad depends primarily on the complexity
+                    of the nose surgery. Moreover, surgeon’s fees, the cost for administering
+                    anesthesia, facilities provided in the operating room, medical tests,
+                    surgery garments, prescriptions, etc. will be in addition to the
+                    Rhinoplasty cost. Your surgeon can guide you better during a
+                    candid consultation.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Enhance your overall facial appearance with <?= $surgery_str ?>
-                    from one of our best cosmetic surgery surgeons in <?= ucwords($city) ?>!
-                    Experience the most attentive patient care in state-of-the-art
-                    facilities and experienced medical staff
-                    supervised by our accomplished Plastic Surgeons.
+                    Approaching any of our plastic surgeons for Rhinoplasty would be the best choice
+                    in Hyderabad to ensure scar-less and painless surgery with faster recovery
+                    time. You can regain your aesthetic appearance at an affordable cost
+                    through the most experienced hands in Hyderabad. Just consult one
+                    of our expert surgeons and open the door to your facial
+                    transformation with a beautiful, new-looking nose.
+                    Cordial services, upscale treatment facilities,
+                    and hassle-free cosmetic surgery of our
+                    expert surgeons await your presence.
                 </p>
 
                 <p class="identity">
@@ -204,23 +219,20 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
-                        <p>
-                            If you satisfy below points, you are a good candidate for <?= $surgery_str ?>
-                            surgery in <?= ucwords($city) ?>
-                        </p>
                         <ul>
-                            <li>Your facial growth has attained its completion</li>
-                            <li>You are a healthy person</li>
+                            <li>You can be an ideal candidate to undergo nose surgery in Hyderabad if</li>
+                            <li>Your face has grown to its full potential</li>
                             <li>
-                                You have informed your surgeon about the allergies and medical conditions
-                                that you are undergoing
+                                You wish to get a natural position and contour of your nasal cartilage, soft tissue, and bone restored
                             </li>
-                            <li>You are not allergic to anesthesia or other medicines related to nose surgery</li>
+                            <li>You are in good health and free of any life-threatening medical condition</li>
                             <li>
-                                You are a non-smoker and a non-alcoholic (If not, be the one at least
-                                for the duration recommended by your surgeon)
+                                Your nose is out of shape due to an accidental injury or because of a congenital disorder
                             </li>
-                            <li>You have realistic goals with respect to the nose surgery</li>
+                            <li>You do not smoke</li>
+                            <li>You do not consume alcohol</li>
+                            <li>You do not have any allergic effects of anesthesia on your body</li>
+                            <li>You have a positive outlook toward the surgery</li>
                         </ul>
                     </div>
                 </div>
@@ -235,9 +247,10 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            On average, the cost of <?= $surgery_str ?> in <?= ucwords($city) ?> may vary between
-                            50,000 INR to 2,50,000 depending on various factors.
-                            The cost may fluctuate further subject to the treatment necessities.
+                            On average, it may range between 50,000 INR to 2,50,000 INR. Nasal
+                            implants would accompany added expenditure. It would be wise to
+                            consult your nose surgeon in Hyderabad to know the exact cost
+                            of Rhinoplasty
                         </p>
                     </div>
                 </div>
@@ -251,18 +264,22 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
-                        <p>
-                            Whether you opt for <?= $surgery_str ?> in <?= ucwords($city) ?> or elsewhere,
-                            there may arise certain risks after the surgery, such as:
-                        </p>
                         <ul>
-                            <li>Bleeding, infection, adverse reaction to anesthesia</li>
-                            <li>Visible scars</li>
-                            <li>The chance of an un-even nose appearance as the outcome</li>
-                            <li>Problem with breathing through the nose</li>
-                            <li>Persistent swelling, skin discoloration, or pain</li>
-                            <li>Urgent need for a revision nose surgery</li>
-                            <li>Possibility of a hole in the septum</li>
+                            <li>Intense pain or numbness in the initial days after the surgery in Hyderabad</li>
+                            <li>Possibility of bruising and infection</li>
+                            <li>Tiny scars that fade away with time</li>
+                            <li>Fluid build-up in the treated area, causing seroma</li>
+                            <li>Reduced sensation in the skin</li>
+                            <li>Skin discolouration</li>
+                            <li>Allergic behaviour to several medications or anesthesia</li>
+                            <li>
+                                Septum in both nasal cavities could face excessive swelling and protrude
+                                after 3-5 days of surgery, leading to septal hematoma- massive
+                                bleeding between mucoperichondrial flaps.
+                            </li>
+                            <li>A hole in the area of nasal septum called Nasal septal perforation</li>
+                            <li>Chance of correction surgery</li>
+                            <li>Unfavourable results</li>
                         </ul>
                     </div>
                 </div>
@@ -277,13 +294,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The best to go for <?= $surgery_str ?> in <?= ucwords($city) ?> is when your facial structure
-                            is fully developed. Hence, the surgery is not advisable for children,
-                            as they are still in their growing phase. Usually,
-                            females between the age of 15-16 and beyond can go for <?= $surgery_str ?>, Likewise,
-                            males of 17-18 years of age and beyond can opt for it.
+                            From young ones to adults, anyone can opt for Rhinoplasty surgery in
+                            Hyderabad. However, the consent of parents is necessary in case
+                            of surgery on teenagers. The minimum age for girls and boys
+                            should be 15 and 17 years respectively for nose surgery.
                         </p>
-
                     </div>
                 </div>
                 <div class="accordion-container">
@@ -297,23 +312,31 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <ul>
-                            <li>Give your body complete rest to enable prompt healing after the surgery</li>
-                            <li>Clean your face at least twice a day to get rid of dead skin</li>
-                            <li>Keep yourself hydrated</li>
-                            <li>Have some to take you back home after the surgery</li>
+                            <li>You should be aware of every pros and cons related to Rhinoplasty surgery</li>
+                            <li>Make sure to satisfy yourself completely about the procedure in direct consultation with your surgeon</li>
+                            <li>Clean your face at least two times a day to break free from dead skin</li>
+                            <li>Arrange for someone to take you back after the procedure</li>
                             <li>
-                                Prepare your things in advance so that you don’t face
-                                hassles after returning from the surgery
+                                Wear loose garments or those with chains or buttons, so that it is easy to
+                                wear or take them off
                             </li>
-                            <li>Avoid drinking and smoking</li>
+                            <li>Have someone to look after you and your kids at home after the surgery</li>
                             <li>
-                                Avoid using over-the-counter medicated creams that include salicylic acid, Retin-A,
-                                benzoyl peroxide, etc.
+                                Stop smoking and drinking as they could lead to bleeding during the surgery
                             </li>
-                            <li>Minimize exposure to the sun</li>
+                            <li>Keep yourself hydrated with water</li>
                             <li>
-                                Consult your surgeon to know about the medications to avoid and abide by all
-                                the instructions
+                                Avoid eating anything for at least 8 hours before the surgery
+                            </li>
+                            <li>Apply for a few weeks off from your work for a complete recovery</li>
+                            <li>
+                                Avoid the use of over-the-counter medicated creams that include salicylic
+                                acid, Retin-A, benzoyl peroxide, etc.
+                            </li>
+                            <li>Avoid exposure to the sun</li>
+                            <li>
+                                Inform your surgeon about any existing medication so that he could adjust
+                                them accordingly
                             </li>
                         </ul>
                     </div>
@@ -330,24 +353,29 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                If you are opting for nose surgery, it clearly indicates your uneasiness with your
-                                existing nose shape. Hence, you would expect to have a better
-                                appearance of your nose with the <?= $surgery_str ?> surgery.
+                                Be at the clinic with a positive frame of mind for the nose surgery in Hyderabad
                             </li>
                             <li>
-                                However, make sure that you have realistic expectations with the surgery, and be prepared
-                                to face the outcome. Anticipating miracles would only hurt your sentiments.
+                                You could expect the medical staff to ask you a few questions or carry out a medical check-up
                             </li>
                             <li>
-                                On the day of the surgery, you could expect the surgeon to take around 2-3 hours
-                                to complete the procedure.
+                                The anesthesiologist could ask if you have any adverse behaviour to anesthesia
+                                so that he could adjust the dose based on your response
                             </li>
                             <li>
-                                After the surgery, you may expect mild discomfort, which will vanish with time.
+                                The nose surgery may take around 2-3 hours to complete depending on the compaction
+                                of the procedure.
                             </li>
                             <li>
-                                The surgeon would recommend you several post-operation instructions and medication
-                                for quick healing. So, make sure to follow them strictly.
+                                You could expect a little bit of discomfort which will fade away with time
+                            </li>
+                            <li>
+                                You could expect the surgeon to provide you with important instructions for
+                                prompt healing. Make sure to follow them religiously
+                            </li>
+                            <li>
+                                At times, the result may not be close to natural, so it is important to have realistic
+                                expectations from the surgery in Hyderabad
                             </li>
                         </ul>
                     </div>
@@ -359,57 +387,63 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            Are droopy eyelids affecting your appearance?
+                            Want to get rid of your sagging eyelids?
                         </strong>
                     </p>
                     <p>
-                        While healthy eyes can transform your entire look, sagging upper eyelids or dark circles
-                        can make you appear dull. Blepharoplasty is a suitable cosmetic surgery for correcting
-                        droopy or sagging upper eyelids and removing unwanted skin on the lower eyelids.
-                        When performed aesthetically by our expert Plastic Surgeons in <?= ucwords($city) ?>, your eyes
-                        will look as fresh, bright, and young as ever.
+                        If yes, then Blepharoplasty or eyelid lift is a befitting solution.
+                        Due to ageing, genetics, or environmental factors, the skin of
+                        your eyelid may lose the usual elasticity, tone, and texture.
+                        The muscles of your eyelid may also undergo severe changes.
+                        Eventually, depending on the current situation of your
+                        eyelids, our plastic surgeons would perform upper or
+                        lower blepharoplasty, or both to improve your
+                        eyelid appearance.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for Blepharoplasty in <?= ucwords($city) ?>?
+                    Why Are Our Plastic Surgeons the Best in Hyderabad for Blepharoplasty?
                 </p>
                 <ul>
                     <li>
-                        Trusted and most experienced Plastic Surgeons in <?= ucwords($city) ?> to perform eyelid surgery
+                        Prominent plastic surgeons in Hyderabad to perform Blepharoplasty
                     </li>
                     <li>
-                        Leverage laser treatments and other latest techniques to get rid of the wrinkles
-                        around the eyes
+                        Helps patients in regaining the eyelid appearance appreciably
                     </li>
                     <li>
-                        Expert Plastic Surgeons with certification from reputed national and international
-                        boards for Plastic Surgeons
+                        Can perform corrective surgery on lower or upper eyelids, or both simultaneously
                     </li>
                     <li>
-                        Adept expertise in making your eyes naturally youthful by considering the facial muscle structure, bone structure,
-                        and the symmetry of the eyebrows
+                        Help to get away with the initial signs of ageing with Blepharoplasty in Hyderabad
+                    </li>
+                    <li>
+                        A reputed member of several national and international plastic surgery associations
                     </li>
                 </ul>
 
                 <p class="identity">
-                    COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
+                    COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of Blepharoplasty surgery depends on the complexity of the surgery.
-                    If your eyelids are obstructing the vision, you may get medical insurance cover
-                    for the same. Else, it will come under aesthetic purposes and hence will not qualify
-                    for the insurance claim. It is better to consult our Plastic Surgeon in <?= ucwords($city) ?>
-                    if you want to know the treatment cost. Depending on your expectations and any other
-                    additional treatments needed, you can get a better estimate.
+                    The Blepharoplasty cost in Hyderabad may depend on whether you are about
+                    to undergo upper eyelid surgery or lower eyelid surgery. Moreover,
+                    if you are up for this treatment to regain your aesthetic look,
+                    your medical insurance may not cover it for cosmetic reasons.
+                    Any of our Plastic surgeons would be the best to provide
+                    all the relevant information on Blepharoplasty cost.
                 </p>
                 <p class="identity">
                     OUR SERVICES
                 </p>
                 <p>
-                    The liveliness of your eyes has a great impact on your appearance. Due to the age factor,
-                    you can end up with sagging eyelids and dark circles. Blepharoplasty is the right
-                    cosmetic treatment to turn you into a better-looking self. Schedule a consultation
-                    session with <?= ucwords($city) ?>’s renowned Plastic Surgeons now.
+                    To restore your youthful and charming eyelids, opting for Blepharoplasty in Hyderabad
+                    would be an ideal decision. It would be wise to consult any of our expert eyelid
+                    lift surgeons to know about all the pros and cons of this treatment and the
+                    longevity of its results. You should also be clear about your
+                    expectations with the surgery. Our surgeons provide industry
+                    best healthcare facilities to enable you to experience the
+                    utmost comfort during the surgery.
                 </p>
 
                 <p class="identity">
@@ -428,28 +462,30 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            An ideal candidate for eyelid surgery in <?= ucwords($city) ?> should adhere
-                            to several essential criteria, as mentioned here:
+                            To be a suitable candidate for Blepharoplasty surgery in Hyderabad,
+                            you should abide by the following criteria:
                         </p>
                         <ul>
                             <li>
-                                Suffering from droopy eyelids, exposing an increased portion of eye white
+                                Droopy eyelids with an enlarged eye white portion
                             </li>
                             <li>
-                                Sagging upper eyelids resulting due to fatty tissue building up beneath
-                                the skin
+                                Sagging upper eyelids formed because of fatty tissues under the skin
                             </li>
                             <li>
-                                Suffering from peripheral vision problems that need immediate intervention
+                                Urge to break free from under-eye bags and dark circles
                             </li>
                             <li>
-                                Want to get rid of dark circles and under-eye bags
+                                Good health overall
                             </li>
                             <li>
-                                Have a good physical health
+                                No severe medical issues
                             </li>
                             <li>
-                                Does not have any pre-existing medical condition
+                                Facing vision hassles due to sagging upper eyelids
+                            </li>
+                            <li>
+                                Wish to enhance the facial appearance
                             </li>
                         </ul>
                     </div>
@@ -465,10 +501,10 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            On average, the cost of Eyelid Surgery or Blepharoplasty in <?= ucwords($city) ?> varies
-                            between 80,000 INR and 2,00,000 INR. The cost may fluctuate both ways depending
-                            on the doctor your approach, the clinic you choose for the surgery,
-                            and several other factors.
+                            The eyelid surgery in Hyderabad would cost you around 80,000 INR
+                            to 2,00,000 INR. The overall expense may however fluctuate
+                            depending on the surgeon, clinic, facilities used,
+                            medications, etc.
                         </p>
                     </div>
                 </div>
@@ -484,31 +520,40 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Allergic reaction to anesthesia
+                                Allergic behaviour to the use of anesthesia
                             </li>
                             <li>
-                                Surgical risks, which may include bleeding and infection
+                                Reduced sensation in the treated area
                             </li>
                             <li>
-                                Numbness in the treated area
+                                Bleeding or swelling
                             </li>
                             <li>
-                                Blurred or impaired sight temporarily
+                                Intense pain on rare occasions
                             </li>
                             <li>
-                                Possibility of ectropion, which refers to slack and outward-rolling of the lower eyelid
+                                Condition of fluid accumulation
                             </li>
                             <li>
-                                Watery eyes or dry eyes
+                                Temporary impaired or blurred vision
                             </li>
                             <li>
-                                Lump in the lower eyelid, which could irritate the surface of the eye
+                                Permanent loss of vision in very sporadic cases
                             </li>
                             <li>
-                                Loss of vision in rare cases
+                                Slack and outward-rolling lower of the lower eyelid, called ectropion
                             </li>
                             <li>
-                                Revision surgery due to faulty surgery
+                                Watery or dry eyes
+                            </li>
+                            <li>
+                                Lower eyelid generates lumps
+                            </li>
+                            <li>
+                                Irritation in the eyes’ surface due to a lump formed in the lower eyelid
+                            </li>
+                            <li>
+                                Possibility of correction surgery
                             </li>
                         </ul>
                     </div>
@@ -524,13 +569,14 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            When you start noticing droopy or baggy upper eyelids, Blepharoplasty surgery in <?= ucwords($city) ?>
-                            could help to remedy the situation. In addition, when you observe problems in peripheral
-                            vision due to the generation of excess skin in the upper eyelids or lower eyelids,
-                            you can always opt for Blepharoplasty. The ideal age to get eyelid surgery is 30 plus,
-                            as most people get droopy eyelids in their 30s itself.
+                            If you start experiencing baggy or droopy upper eyelids, this is the right
+                            time to opt for Blepharoplasty surgery from one of our experienced
+                            surgeons in Hyderabad. The surgery also becomes a necessity when
+                            you develop vision problems due to excess skin forming in your
+                            lower or upper eyelids. As for age, you should be around 30
+                            years old or more, because droopy eyelids start appearing
+                            at this age.
                         </p>
-
                     </div>
                 </div>
                 <div class="accordion-container">
@@ -545,27 +591,43 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                It is good to visit a lab to test and find the existing medical condition
-                                of your eyes.
+                                Get your eyes checked in a lab to ensure your eye health is top-notch
                             </li>
                             <li>
-                                Consult with your surgeon about your ongoing medications, so that the expert could suggest necessary adjustments
+                                Consult with your surgeon in Hyderabad about your current medication
+                                regime to get the best advice for adjustments before surgery
                             </li>
                             <li>
-                                Stop drinking and smoking at least 4-6 months before the surgery
+                                Kick the habit and avoid smoking and drinking 4-6 months prior
+                                to surgery for a better and faster recovery
                             </li>
                             <li>
-                                Avoid the consumption of anti-inflammatory drugs or herbal supplements as it could lead to bruising or bleeding
+                                Stay away from anti-inflammatory drugs and herbal supplements to
+                                avoid unwanted side effects such as bruising or bleeding
                             </li>
                             <li>
-                                Make sure you are aware of all the risks and side effects of the surgery
+                                Be fully informed of all the risks and side effects of surgeru
+                                so that you can make an informed decision
                             </li>
                             <li>
-                                Be prepared for the surgery so that you could go under the knife with a calm
-                                mind
+                                Hydrated yourself completely with water and other liquids
+                            </li>
+                            <li>
+                                Be mentally and physically prepared for surgery to ensure a smooth
+                                and successful procedure
+                            </li>
+                            <li>
+                                Avoid slipover clothing and buy some loose-fitting dresses that could
+                                fasten in the back or front
+                            </li>
+                            <li>
+                                Avoid wearing your valuables during the surgery like jewellery,
+                                leave them at home
+                            </li>
+                            <li>
+                                Avoid any kind of facial or eye make-up
                             </li>
                         </ul>
-
                     </div>
                 </div>
                 <div class="accordion-container">
@@ -580,29 +642,34 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                On the day of Blepharoplasty surgery, arrive at the clinic with a positive
-                                frame of mind
+                                Come to the clinic in Hyderabad with a positive attitude
+                                on the day of your Blepharoplasty surgery
                             </li>
                             <li>
-                                One of the staff members will administer anesthesia to help you ensure a
-                                painless surgery
+                                A member of the staff will administer anesthesia to ensure
+                                you experience no pain during the surgery
                             </li>
                             <li>
-                                You could expect the staff to take several tests before the surgery to check your
-                                current health, such as your sugar level, oxygen level, BP, and more
+                                The staff will perform several health tests, such as
+                                measuring your sugar level, oxygen level, and
+                                blood pressure, before the surgery
                             </li>
                             <li>
-                                You could expect the surgery to continue for 1-2 hours.
-                                Much will depend if the surgeon is repositioning the fat on the upper eyelids,
-                                lower eyelids, or both. It may take additional time for a cheek lift.
+                                The duration of the surgery (1-2 hours) will depend on whether
+                                the surgeon is repositioning the fat on the upper eyelids,
+                                lower eyelids, or both. Additional time may be required
+                                for a cheek lift
                             </li>
                             <li>
-                                After the surgery, the doctor will stitch the treated area, which will remain
-                                for around a week.
+                                The doctor will stitch the treated area after the surgery,
+                                and the stitches will remain for approximately one week
                             </li>
                             <li>
-                                For upper eyelid surgery, the expected recovery time is 7-10 days. Likewise,
-                                for lower eyelid surgery, it may take 10-14 days for complete recovery.
+                                The recovery time for upper eyelid surgery is typically 7-10 days,
+                                while lower eyelid surgery may take 10-14 days for complete recovery
+                            </li>
+                            <li>
+                                You should have realistic expectations with the surgery in Hyderabad
                             </li>
                         </ul>
                     </div>
@@ -620,11 +687,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </p>
                     <p>
                         Turn back the time and get your youthful looks back with facelift surgery
-                        from one of our top Plastic Surgeons in <?= ucwords($city) ?>!
+                        from one of our top cosmetic surgeons in <?= ucwords($city) ?>!
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Plastic Surgeons for Facelift Surgery in <?= ucwords($city) ?>?
+                    Why Choose Our Cosmetic Surgeons for Facelift Surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
@@ -714,7 +781,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Approaching a certified and experienced Plastic Surgeon in <?= ucwords($city) ?>
+                            Approaching a certified and experienced cosmetic surgeon in <?= ucwords($city) ?>
                             can cost you anywhere around 1,00,000 INR – 2,00,000 INR for
                             facelift surgery.
                             You can also choose to customize your surgery by including Chin Surgery,
@@ -915,7 +982,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         2. What is the cost of Facelift Surgery?
                     </p>
                     <p>
-                        Approaching a certified and experienced Plastic Surgeon in <?= ucwords($city) ?>
+                        Approaching a certified and experienced cosmetic surgeon in <?= ucwords($city) ?>
                         can cost you anywhere around 1,00,000 INR – 2,00,000 INR for
                         facelift surgery.
                         You can also choose to customize your surgery by including Chin Surgery,
@@ -1060,7 +1127,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         You can minimise the appearance of wrinkles on the eyelids,
                         which will automatically result in a rejuvenated appearance.
                         Since it is an intricate surgery, it is vital to consult one of our best
-                        Plastic Surgeons in <?= ucwords($city) ?>.
+                        cosmetic surgeons in <?= ucwords($city) ?>.
                     </p>
                 </div>
                 <p class="identity">
@@ -1068,7 +1135,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        The best Plastic Surgeons in <?= ucwords($city) ?> with specialisation in facial
+                        The best cosmetic surgeons in <?= ucwords($city) ?> with specialisation in facial
                         cosmetic procedures
                     </li>
                     <li>
@@ -1080,8 +1147,8 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         like facelifts,fillers, or Botox.
                     </li>
                     <li>
-                        Experienced Plastic Surgeons in <?= ucwords($city) ?>, certified by the top national
-                        associations of Plastic Surgeons.
+                        Experienced cosmetic surgeons in <?= ucwords($city) ?>, certified by the top national
+                        associations of cosmetic surgeons.
                     </li>
                 </ul>
                 <p class="identity">
@@ -1093,10 +1160,10 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     you should also consider the price of medicines and other
                     necessities for a smooth recovery. To get an estimate
                     for Brow Lift surgery, you can always consult
-                    our Plastic Surgeon in <?= ucwords($city) ?>.
+                    our cosmetic surgeon in <?= ucwords($city) ?>.
                 </p>
                 <p>
-                    To get an estimate for <?= $surgery_str ?> surgery, you can always consult our Plastic Surgeon in <?= ucwords($city) ?>.
+                    To get an estimate for <?= $surgery_str ?> surgery, you can always consult our cosmetic surgeon in <?= ucwords($city) ?>.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
@@ -1275,7 +1342,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             </li>
                             <li>
                                 Clear your confusion regarding the surgery with your
-                                Plastic Surgeon
+                                cosmetic surgeon
                             </li>
                             <li>
                                 Have a clear reason for undergoing the surgery and be aware
@@ -1464,7 +1531,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </li>
                         <li>
                             Clear your confusion regarding the surgery with your
-                            Plastic Surgeon
+                            cosmetic surgeon
                         </li>
                         <li>
                             Have a clear reason for undergoing the surgery and be aware
@@ -1547,7 +1614,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        The best Plastic Surgeons in <?= ucwords($city) ?> to perform neck lift
+                        The best cosmetic surgeons in <?= ucwords($city) ?> to perform neck lift
                     </li>
                     <li>
                         Testimonials by numerous patients who are more than satisfied with the results
@@ -1556,7 +1623,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Ability to help in restoring youthful appearance even as the ageing skin sets in.
                     </li>
                     <li>
-                        Renowned Plastic Surgeons for facial aesthetics in <?= ucwords($city) ?>,
+                        Renowned cosmetic surgeons for facial aesthetics in <?= ucwords($city) ?>,
                         certified by several national and international
                         boards for cosmetic surgeries
                     </li>
@@ -1566,12 +1633,12 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Many Plastic Surgeons in <?= ucwords($city) ?> have varying prices for neck lift
+                    Many cosmetic surgeons in <?= ucwords($city) ?> have varying prices for neck lift
                     surgeries. This difference in cost depends on the
                     treatment facilities, the surgeon’s skills, and other
                     additional recovery treatment prices.
                     If you are considering neck lift surgery,
-                    it is best to consult our Plastic Surgeon to
+                    it is best to consult our cosmetic surgeon to
                     get realistic results.
                 </p>
                 <p class="identity">
@@ -2005,7 +2072,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p>
                         Also called Genioplasty or Mentoplasty, Chin surgery is the process
                         to augment or reduce the chin based on your facial features.
-                        The Plastic Surgeon can move the chin backward
+                        The cosmetic surgeon can move the chin backward
                         or forward and change its size by moving
                         it up and above. Our expert cosmetic
                         surgeons in <?= ucwords($city) ?> help to achieve a beautiful chin structure
@@ -2017,7 +2084,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        Our renowned Plastic Surgeons in <?= ucwords($city) ?> hold adept expertise in performing
+                        Our renowned cosmetic surgeons in <?= ucwords($city) ?> hold adept expertise in performing
                         numerous chin augmentation and reduction surgeries with success
                     </li>
                     <li>
@@ -2027,7 +2094,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Specialized in working with chin implants to achieve the desired looks.
                     </li>
                     <li>
-                        Skilled Plastic Surgeons from <?= ucwords($city) ?> who leave barely visible scars
+                        Skilled cosmetic surgeons from <?= ucwords($city) ?> who leave barely visible scars
                         that fade quickly over time.
                     </li>
                     <li>
@@ -2040,16 +2107,16 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <p>
                     For the cost of chin surgeries, the type of recommended treatment will be
                     the deciding factor. If you want to increase the size of the chin, the
-                    Plastic Surgeon will usually recommend using chin implants.
+                    cosmetic surgeon will usually recommend using chin implants.
                     If you want to reduce the chin size, Genioplasty is the best choice.
                     So, the overall cost of chin surgery depends on the customized
-                    surgery, the Plastic Surgeon in <?= ucwords($city) ?>,
+                    surgery, the cosmetic surgeon in <?= ucwords($city) ?>,
                     and the additional medicines.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
                     Are you worried that your chin does not complement the rest of your face?
-                    If yes, get the help of any of our Plastic Surgeons in <?= ucwords($city) ?>
+                    If yes, get the help of any of our cosmetic surgeons in <?= ucwords($city) ?>
                     to fix the issue and change the appearance of your face.
                 </p>
                 <p class="identity">
@@ -2188,7 +2255,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Visit your Plastic Surgeon to discuss all your apprehensions and doubts
+                                Visit your cosmetic surgeon to discuss all your apprehensions and doubts
                                 about the chin surgery
                             </li>
                             <li>
@@ -2365,7 +2432,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </p>
                     <ul>
                         <li>
-                            Visit your Plastic Surgeon to discuss all your apprehensions and doubts
+                            Visit your cosmetic surgeon to discuss all your apprehensions and doubts
                             about the chin surgery
                         </li>
                         <li>
@@ -2459,7 +2526,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         any accident or untoward incident.
                     </p>
                     <p>
-                        Choose the most respected Plastic Surgeon in <?= ucwords($city) ?> to enhance your cheeks naturally
+                        Choose the most respected cosmetic surgeon in <?= ucwords($city) ?> to enhance your cheeks naturally
                         and improve your overall appearance.
                     </p>
                 </div>
@@ -2467,7 +2534,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     WHY CHOOSE <?= $surgery_str ?> IN <?= ucwords($city) ?>? </p>
                 <ul>
                     <li>
-                        One of the most experienced facial Plastic Surgeons in <?= ucwords($city) ?>.
+                        One of the most experienced facial cosmetic surgeons in <?= ucwords($city) ?>.
                     </li>
                     <li>
                         Expertise in various forms of cheek augmentation procedures like
@@ -2478,7 +2545,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         implants that compliments their facial features.
                     </li>
                     <li>
-                        One of the top board-certified Plastic Surgeons in <?= ucwords($city) ?> and the member
+                        One of the top board-certified cosmetic surgeons in <?= ucwords($city) ?> and the member
                         of numerous cosmetic surgery associations in India.
                     </li>
                 </ul>
@@ -2488,11 +2555,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <p>
                     When it comes to the cost of cheek augmentation, several variables determine
                     the final amount. For instance, the type of cheek augmentation procedure,
-                    the recovery medications and the cost of the Plastic Surgeon
+                    the recovery medications and the cost of the cosmetic surgeon
                     play a major role.
                 </p>
                 <p>
-                    Our Plastic Surgeon is one of the best in <?= ucwords($city) ?> for cheek augmentation.
+                    Our cosmetic surgeon is one of the best in <?= ucwords($city) ?> for cheek augmentation.
                     Schedule a consultation session and get the advice on the next
                     action plan to increase the size and shape of your cheeks.
                 </p>
@@ -2500,7 +2567,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <p class="identity">OUR SERVICES</p>
                 <p>
                     Attaining those dreamy, bouncy cheeks is possible now! Go for cheek augmentation
-                    surgery by our expert Plastic Surgeon in <?= ucwords($city) ?> and observe
+                    surgery by our expert cosmetic surgeon in <?= ucwords($city) ?> and observe
                     the difference it makes to your life!
                 </p>
             </div>
@@ -2519,14 +2586,14 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         If you are unhappy with the appearance of your lips or
                         they have become deformed due to an accident,
                         lip augmentation surgery is the best choice.
-                        Our Plastic Surgeons in <?= ucwords($city) ?> have helped many to get dreamy
+                        Our cosmetic surgeons in <?= ucwords($city) ?> have helped many to get dreamy
                         lips that look in perfect symmetry with the face.
-                        You could also visit any of our experienced Plastic Surgeons,
+                        You could also visit any of our experienced cosmetic surgeons,
                         and choose to enhance your lips.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Plastic Surgeons for Lip Augmentation in <?= ucwords($city) ?>?
+                    Why Choose Our Cosmetic Surgeons for Lip Augmentation in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
@@ -2544,7 +2611,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         facial features
                     </li>
                     <li>
-                        Renowned Plastic Surgeons certified by several national boards of
+                        Renowned cosmetic surgeons certified by several national boards of
                         plastic and cosmetic surgeries.
                     </li>
                 </ul>
@@ -2555,7 +2622,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     The lip augmentation treatment cost varies depending on whether you opt for
                     dermal fillers or lip implants. Usually,
                     lip implants are permanent and cost more than dermal
-                    fillers. You can visit our Plastic Surgeon
+                    fillers. You can visit our cosmetic surgeon
                     in <?= ucwords($city) ?> to get the cost details
                     and treatment plans.
                 </p>
@@ -2563,7 +2630,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <p>
                     Let your lips capture everyone’s attention! Make them look naturally fuller,
                     beautiful, and well contoured with Lip Augmentation! Visit our reputed
-                    Plastic Surgeons in <?= ucwords($city) ?> to get your desired results now.
+                    cosmetic surgeons in <?= ucwords($city) ?> to get your desired results now.
                     Choose the best treatment from dermal fillers, fat fillers,
                     and lip implants.
                 </p>
@@ -2627,7 +2694,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <p>
                             On average, any lip augmentation procedure in <?= ucwords($city) ?> will cost
                             around 40,000 INR - 1,00,000 INR, but it can vary depending
-                            on the Plastic Surgeon and the treatment
+                            on the cosmetic surgeon and the treatment
                             along with other factors.
                         </p>
                     </div>
@@ -2828,7 +2895,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p>
                         On average, any lip augmentation procedure in <?= ucwords($city) ?> will cost
                         around 40,000 INR - 1,00,000 INR, but it can vary depending
-                        on the Plastic Surgeon and the treatment
+                        on the cosmetic surgeon and the treatment
                         along with other factors.
                     </p>
                     <p class="cosmetic-faq-list">
@@ -2961,7 +3028,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         transforming them into thinner and better-contoured features.
                         Buccal Fat Removal is an extensive surgery that requires
                         attention to detail and specialized techniques.
-                        It is only possible by an expert Plastic Surgeon in <?= ucwords($city) ?> who knows
+                        It is only possible by an expert cosmetic surgeon in <?= ucwords($city) ?> who knows
                         the best treatment plan to deliver your expected results.
                         You can hence trust our surgeons to perform
                         this procedure with excellence.
@@ -2972,7 +3039,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        Extremely talented Plastic Surgeons in <?= ucwords($city) ?> to perform
+                        Extremely talented cosmetic surgeons in <?= ucwords($city) ?> to perform
                         Buccal Fat Removal with positive results
                     </li>
                     <li>
@@ -2988,14 +3055,14 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         surgery boards
                     </li>
                     <li>
-                        Most acclaimed Plastic Surgeon for facial procedures.
+                        Most acclaimed cosmetic surgeon for facial procedures.
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    You can get a better estimate of the cost if you visit the Plastic Surgeon
+                    You can get a better estimate of the cost if you visit the cosmetic surgeon
                     at the clinic in <?= ucwords($city) ?>. After examining your condition,
                     the surgeon will decide the course of treatment
                     as well as the surgery costs.
@@ -3006,7 +3073,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <p>
                     You do not need to bother anymore if you have fat cheeks! Now, you can reduce
                     your cheeks and have a thin facial contour with Buccal Fat Removal
-                    performed by any of our best Plastic Surgeons in <?= ucwords($city) ?>.
+                    performed by any of our best cosmetic surgeons in <?= ucwords($city) ?>.
                 </p>
 
                 <p class="identity">
@@ -3071,7 +3138,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <p>
                             The starting cost for Buccal Fat Removal in <?= ucwords($city) ?> is around 65,000 INR,
-                            which can increase depending on the location, Plastic Surgeon,
+                            which can increase depending on the location, cosmetic surgeon,
                             and the additional recovery costs. Among the other factors
                             responsible for deciding the cost may include the
                             anesthesia used, the experience of the cosmetic
@@ -3269,7 +3336,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </p>
                     <p>
                         The starting cost for Buccal Fat Removal in <?= ucwords($city) ?> is around 65,000 INR,
-                        which can increase depending on the location, Plastic Surgeon,
+                        which can increase depending on the location, cosmetic surgeon,
                         and the additional recovery costs. Among the other factors
                         responsible for deciding the cost may include the
                         anesthesia used, the experience of the cosmetic
@@ -3396,17 +3463,17 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         This surgery addresses structural defects like an abnormally large ear,
                         disoriented ears due to accidents, ears that are unsymmetrical with
                         each other or with facial features, or protruding ears.
-                        You need a highly skilled Plastic Surgeon from <?= ucwords($city) ?> to
+                        You need a highly skilled cosmetic surgeon from <?= ucwords($city) ?> to
                         treat the defects and reshape the ear to look as natural as possible.
                         This is where you can trust our surgeons.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Plastic Surgeons for Ear Surgery in <?= ucwords($city) ?>?
+                    Why Choose Our Cosmetic Surgeons for Ear Surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Most accomplished Plastic Surgeons in <?= ucwords($city) ?> for Otoplasty.
+                        Most accomplished cosmetic surgeons in <?= ucwords($city) ?> for Otoplasty.
                     </li>
                     <li>
                         Ability to analyze and surgically correct the defect with as
@@ -3417,7 +3484,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </li>
                     <li>
                         Members of numerous prestigious national and international boards
-                        of Plastic Surgeons and reconstructive surgeries
+                        of cosmetic surgeons and reconstructive surgeries
                     </li>
                 </ul>
 
@@ -3425,15 +3492,15 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Therefore, the cost of ear surgery varies widely based on the Plastic Surgeon
+                    Therefore, the cost of ear surgery varies widely based on the cosmetic surgeon
                     and the intensiveness of the surgery. You can schedule a consultation with
-                    the Plastic Surgeon in <?= ucwords($city) ?> to know about the course of treatment
+                    the cosmetic surgeon in <?= ucwords($city) ?> to know about the course of treatment
                     and a fair estimate for the same.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
                     Otoplasty is a detailed surgical procedure where customization holds high importance.
-                    You need an experienced Plastic Surgeon who is capable of tailoring
+                    You need an experienced cosmetic surgeon who is capable of tailoring
                     the surgery to make the ears look natural.
                     The expert should also be able to achieve symmetry with both ears and ensure
                     compatibility with the face. Hence, if you are having trouble with
@@ -3511,7 +3578,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             The average cost of ear surgery in <?= ucwords($city) ?> may range from 40,000 INR to 60,000 INR.
                             Much will depend on the hospital, the choice of Surgeon,
                             the type of anesthesia used, and so on. Consulting
-                            our Plastic Surgeon will help you to know
+                            our cosmetic surgeon will help you to know
                             the exact cost of the surgery.
                         </p>
                     </div>
@@ -3709,7 +3776,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         The average cost of ear surgery in <?= ucwords($city) ?> may range from 40,000 INR to 60,000 INR.
                         Much will depend on the hospital, the choice of Surgeon,
                         the type of anesthesia used, and so on. Consulting
-                        our Plastic Surgeon will help you to know
+                        our cosmetic surgeon will help you to know
                         the exact cost of the surgery.
                     </p>
                     <p class="cosmetic-faq-list">
@@ -3826,7 +3893,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         Do you feel your breasts are smaller than usual? If yes, you can go for
-                        breast augmentation surgery. Our qualified Plastic Surgeons
+                        breast augmentation surgery. Our qualified cosmetic surgeons
                         from <?= ucwords($city) ?> will help you to realize your required breast size.
                         You can achieve fuller, bigger, and rounder breasts through
                         breast augmentation.
@@ -3837,7 +3904,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        Most qualified and trusted Plastic Surgeons in <?= ucwords($city) ?> to perform
+                        Most qualified and trusted cosmetic surgeons in <?= ucwords($city) ?> to perform
                         breast augmentation surgery.
                     </li>
                     <li>
@@ -3859,7 +3926,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </li>
                     <li>
                         Certified by several prestigious national and international associations
-                        for Plastic Surgeons.
+                        for cosmetic surgeons.
                     </li>
                 </ul>
                 <p class="identity">
@@ -3868,13 +3935,13 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <p>
                     When it comes to breast augmentation, the type of material you prefer to
                     use - fat or implant - will influence the cost of the surgery.
-                    It would be wise to visit the Plastic Surgeon in <?= ucwords($city) ?>
+                    It would be wise to visit the cosmetic surgeon in <?= ucwords($city) ?>
                     for a good estimate.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
                     You can choose from among different options for augmentation like fat transfers,
-                    silicone implants or saline implants. Let one of our best Plastic Surgeons
+                    silicone implants or saline implants. Let one of our best cosmetic surgeons
                     in <?= ucwords($city) ?> increase your breast size and still make it look natural.
                 </p>
                 <p class="identity">
@@ -4261,19 +4328,19 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         is a cosmetic surgery where the surgeon raises
                         the location of nipples and removes sagging
                         tissues to create an impression of tightened and fuller breasts.
-                        Our Plastic Surgeons in <?= ucwords($city) ?> can deliver amazing
+                        Our cosmetic surgeons in <?= ucwords($city) ?> can deliver amazing
                         results with breast lift surgery.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Plastic Surgeons for Breast Lift in <?= ucwords($city) ?>?
+                    Why Choose Our Cosmetic Surgeons for Breast Lift in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
                         Proven expertise to help patients fix the issue of sagging breasts
                     </li>
                     <li>
-                        Top Plastic Surgeon in <?= ucwords($city) ?> with in-depth practical
+                        Top cosmetic surgeon in <?= ucwords($city) ?> with in-depth practical
                         knowledge of breast-related surgeries
                     </li>
                     <li>
@@ -4281,7 +4348,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         patient wants.
                     </li>
                     <li>
-                        Reputed Plastic Surgeons in <?= ucwords($city) ?> with memberships from several
+                        Reputed cosmetic surgeons in <?= ucwords($city) ?> with memberships from several
                         national and international boards of cosmetic surgeries
                     </li>
                 </ul>
@@ -4292,7 +4359,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     many also opt for reshaped or rounder breasts. So, if you are
                     looking for such accompanying results, the total cost of
                     the breast lift surgery will differ accordingly.
-                    Our experienced Plastic Surgeons can advise
+                    Our experienced cosmetic surgeons can advise
                     you better on a safer course of treatment.
                 </p>
                 <p class="identity">OUR SERVICES</p>
@@ -4300,7 +4367,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     Due to aging, pregnancy, or weight gain, breasts tend to sag which spoils
                     the overall appearance even when you wear the best clothes.
                     A Breast Lift surgery will help you by lifting and
-                    reshaping your breasts. Our Plastic Surgeons
+                    reshaping your breasts. Our cosmetic surgeons
                     in <?= ucwords($city) ?> can help you know more about
                     Breast Lift surgery.
                 </p>
@@ -4366,7 +4433,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             The average cost of Breast Lift surgery in <?= ucwords($city) ?> will range between
                             1,50,000 INR to 2,0,000 INR. Opting for additional procedures such
                             as Breast Implants will increase the expenditure accordingly.
-                            Consultation with any of our expert Plastic Surgeons in
+                            Consultation with any of our expert cosmetic surgeons in
                             <?= ucwords($city) ?> will help you know the exact cost.
                         </p>
                     </div>
@@ -4563,7 +4630,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         The average cost of Breast Lift surgery in <?= ucwords($city) ?> will range between
                         1,50,000 INR to 2,0,000 INR. Opting for additional procedures such
                         as Breast Implants will increase the expenditure accordingly.
-                        Consultation with any of our expert Plastic Surgeons in
+                        Consultation with any of our expert cosmetic surgeons in
                         <?= ucwords($city) ?> will help you know the exact cost.
                     </p>
                     <p class="cosmetic-faq-list">
@@ -4686,7 +4753,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p>
                         Having large breasts can be a disadvantage not just to your appearance but also to
                         other health issues. If you are suffering from extreme back pain or any physical
-                        troubles due to large breasts, our expert Plastic Surgeons in <?= ucwords($city) ?> can help
+                        troubles due to large breasts, our expert cosmetic surgeons in <?= ucwords($city) ?> can help
                         you to resolve it. So, if you wish to reduce the size of your breasts and feel at
                         ease, let us know.
                     </p>
@@ -4700,12 +4767,12 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         relieve from physical constraints.
                     </li>
                     <li>
-                        The best Plastic Surgeons in <?= ucwords($city) ?>, perfectly skilled at performing breast reduction
+                        The best cosmetic surgeons in <?= ucwords($city) ?>, perfectly skilled at performing breast reduction
                         surgeries with minimal scarring.
                     </li>
                     <li>
-                        Expert Plastic Surgeons certified by many national and international boards for
-                        Plastic Surgeons.
+                        Expert cosmetic surgeons certified by many national and international boards for
+                        cosmetic surgeons.
                     </li>
                     <li>
                         Specialization in different types of breast reduction surgeries like Breast Reduction,
@@ -4723,7 +4790,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     Breast reduction surgery involves a dedicated procedure and extensive care during the
                     recovery phase. So, apart from the main cost of surgery,
                     you will also have to take care of other expenditures related to the procedure.
-                    Our Plastic Surgeon in <?= ucwords($city) ?> will be able
+                    Our cosmetic surgeon in <?= ucwords($city) ?> will be able
                     to guide you better in this regard.
                 </p>
                 <p class="identity">
@@ -4731,7 +4798,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <p>
                     Do not let those big breasts hinder your movements, leading to physical pain. Consult with
-                    our best Plastic Surgeons in <?= ucwords($city) ?> and customize your breast reduction procedure
+                    our best cosmetic surgeons in <?= ucwords($city) ?> and customize your breast reduction procedure
                     for a happy and comfortable tomorrow.
                 </p>
 
@@ -5091,7 +5158,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         her previous appearance. The change in the position of the implant due to weight
                         fluctuations could also be one of the reasons in this regard. In some rare cases,
                         the implant may rupture or leak, leaving no option but to remove it.
-                        One should approach only an expert and experienced Plastic Surgeon to undergo
+                        One should approach only an expert and experienced cosmetic surgeon to undergo
                         this surgery.
                     </p>
                 </div>
@@ -5100,7 +5167,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        The best Plastic Surgeon in <?= ucwords($city) ?> for all breast-related procedures.
+                        The best cosmetic surgeon in <?= ucwords($city) ?> for all breast-related procedures.
                     </li>
                     <li>
                         Experienced in the placement and removal of breast implants.
@@ -5115,7 +5182,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         after the removal of the implants.
                     </li>
                     <li>
-                        A board-certified Plastic Surgeon and a member of several national and international
+                        A board-certified cosmetic surgeon and a member of several national and international
                         organizations related to cosmetic surgeries.
                     </li>
                 </ul>
@@ -5124,13 +5191,13 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <p>
                     In a breast implant removal surgery, the cost of the surgery differs based on the
-                    Plastic Surgeon you choose and the complexity of the treatment.
+                    cosmetic surgeon you choose and the complexity of the treatment.
                     Generally, a breast implant removal surgery
                     is from 50,000 INR to 1,00,000 INR.
                 </p>
                 <p>
                     If you are feeling discomfort in your breasts after placing the implants, it is vital
-                    to visit a reliable Plastic Surgeon in <?= ucwords($city) ?> without any delay for
+                    to visit a reliable cosmetic surgeon in <?= ucwords($city) ?> without any delay for
                     complete checkup. The surgeon will
                     analyze and recommend the solution.
                 </p>
@@ -5152,9 +5219,9 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         years when your breasts start to sag again.
                     </p>
                     <p>
-                        In breast revision surgery, the Plastic Surgeon will focus on changing the
+                        In breast revision surgery, the cosmetic surgeon will focus on changing the
                         implants and reshaping the breasts to retain a youthful appearance.
-                        The highly skilled Plastic Surgeons in <?= ucwords($city) ?> can help you better
+                        The highly skilled cosmetic surgeons in <?= ucwords($city) ?> can help you better
                         in achieving natural-looking, rounder and fuller breasts.
                     </p>
                 </div>
@@ -5163,7 +5230,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        One of the top Plastic Surgeons in <?= ucwords($city) ?> and duly experienced in
+                        One of the top cosmetic surgeons in <?= ucwords($city) ?> and duly experienced in
                         breast implant surgery.
                     </li>
                     <li>
@@ -5186,13 +5253,13 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     up any damages or leaks. As it’s an extensive procedure, the cost of the breast
                     revision surgery starts from 1,00,000 INR. This cost can vary depending on
                     the type and size of the breast implants you choose, the condition
-                    of the current implants and the Plastic Surgeon.
+                    of the current implants and the cosmetic surgeon.
                     The total price is not inclusive of the medicines and other items like
                     bandages needed for recovery.
                 </p>
                 <p>
                     To get a good estimate for your breast revision surgery, feel free to visit
-                    our expert Plastic Surgeon at the <?= ucwords($city) ?> clinic.
+                    our expert cosmetic surgeon at the <?= ucwords($city) ?> clinic.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
@@ -5209,16 +5276,16 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         become bigger. Gynecomastia is a male breast reduction treatment in which
                         the surgeon removes the fatty tissues from the breast area to give a
                         contoured chest. If you are suffering from similar issues, feel free
-                        to consult any of our experienced Plastic Surgeons in <?= ucwords($city) ?> for
+                        to consult any of our experienced cosmetic surgeons in <?= ucwords($city) ?> for
                         proper diagnosis and appropriate treatment.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Plastic Surgeons for Gynecomastia in <?= ucwords($city) ?>?
+                    Why Choose Our Cosmetic Surgeons for Gynecomastia in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Leading Plastic Surgeons in <?= ucwords($city) ?>, having adept experience in treating Gynecomastia
+                        Leading cosmetic surgeons in <?= ucwords($city) ?>, having adept experience in treating Gynecomastia
                     </li>
                     <li>
                         Own expertise in performing the two main types of Gynecomastia surgeries:
@@ -5238,7 +5305,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <p>
                     Several treatment options are available for Gynecomastia. While some of them need
-                    medicines, others require surgery. Our Plastic Surgeons will take you through
+                    medicines, others require surgery. Our cosmetic surgeons will take you through
                     the whole process and help you achieve a flat chest, as you desire.
                     Depending on these treatment options, the cost of Gynecomastia surgery will vary.
                     It is best to have an open talk with our surgeon from <?= ucwords($city) ?> about your
@@ -5247,7 +5314,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <p class="identity">OUR SERVICES</p>
                 <p>
                     Big breasts can affect self-esteem for men. If you too have a similar problem,
-                    it is wise to undergo Gynecomastia from any of our expert Plastic Surgeons
+                    it is wise to undergo Gynecomastia from any of our expert cosmetic surgeons
                     in <?= ucwords($city) ?>! It is a safe and the best way to have a flat chest and regain
                     your confidence.
                 </p>
@@ -5615,7 +5682,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <p>
                         When diets and exercises fail us to achieve that perfect body we want,
                         liposuction would be a suitable cosmetic procedure to opt for.
-                        Our renowned Plastic Surgeons from <?= ucwords($city) ?> are the best
+                        Our renowned cosmetic surgeons from <?= ucwords($city) ?> are the best
                         to perform liposuction treatments. With years of experience
                         to back their credibility, you can count on our experts
                         to make you appear beautiful through
@@ -5623,11 +5690,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Plastic Surgeons for Liposuction in <?= ucwords($city) ?>?
+                    Why Choose Our Cosmetic Surgeons for Liposuction in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Highly trusted and experienced Plastic Surgeons in <?= ucwords($city) ?>, well-versed in performing various
+                        Highly trusted and experienced cosmetic surgeons in <?= ucwords($city) ?>, well-versed in performing various
                         types of liposuction surgeries.
                     </li>
                     <li>
@@ -5640,10 +5707,10 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </li>
                     <li>
                         Own memberships of several prestigious national and international associations for plastic
-                        and Plastic Surgeons.
+                        and cosmetic surgeons.
                     </li>
                     <li>
-                        Highly reputed and respected Plastic Surgeons in <?= ucwords($city) ?> who work for maximum
+                        Highly reputed and respected cosmetic surgeons in <?= ucwords($city) ?> who work for maximum
                         patient satisfaction.
                     </li>
                 </ul>
@@ -5676,14 +5743,14 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <p>
                     Do you have a particular location where you need to perform the surgery? If yes,
-                    then it would be wise to visit any of our expert Plastic Surgeons
+                    then it would be wise to visit any of our expert cosmetic surgeons
                     in <?= ucwords($city) ?> and get a fair estimate.
                 </p>
                 <p class="identity">
                     OUR SERVICES
                 </p>
                 <p>
-                    Get your liposuction procedure customized by one of our most reliable Plastic Surgeons
+                    Get your liposuction procedure customized by one of our most reliable cosmetic surgeons
                     in <?= ucwords($city) ?> and achieve that dream figure. We will be
                     happy to serve your cause.
                 </p>
@@ -5737,7 +5804,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             such as the number of areas being treated, the amount of fat being removed, the
                             complexity of the procedure, the type of facility, etc. The overall cost can vary
                             somewhere between Rs 50,000 and Rs 3,00,000 or more per treatment area. Feel free
-                            to connect with our Plastic Surgeon to know the exact cost.
+                            to connect with our cosmetic surgeon to know the exact cost.
                         </p>
                     </div>
                 </div>
@@ -5876,7 +5943,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         such as the number of areas being treated, the amount of fat being removed, the
                         complexity of the procedure, the type of facility, etc. The overall cost can vary
                         somewhere between Rs 50,000 and Rs 3,00,000 or more per treatment area. Feel free
-                        to connect with our Plastic Surgeon to know the exact cost.
+                        to connect with our cosmetic surgeon to know the exact cost.
                     </p>
                     <p class="cosmetic-faq-list">
                         3. What are the risks related to Liposuction?
@@ -5952,15 +6019,15 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         A Tummy tuck or Abdominoplasty is the best solution to get rid of the extra flab that messes up your appearance. Even when diets fail, do not lose heart.
-                        All you need is the Tummy tuck procedure by our trusted Plastic Surgeons and you will end up flaunting a flat tummy. Our Plastic Surgeons are among the best tummy tuck experts in <?= ucwords($city) ?> to reduce your tummy size.
+                        All you need is the Tummy tuck procedure by our trusted cosmetic surgeons and you will end up flaunting a flat tummy. Our cosmetic surgeons are among the best tummy tuck experts in <?= ucwords($city) ?> to reduce your tummy size.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Plastic Surgeons for Tummy Tuck in <?= ucwords($city) ?>?
+                    Why Choose Our Cosmetic Surgeons for Tummy Tuck in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        With us, you will find the best Plastic Surgeons in <?= ucwords($city) ?>
+                        With us, you will find the best cosmetic surgeons in <?= ucwords($city) ?>
                     </li>
                     <li>
                         Our doctors have more than a decade of experience in performing tummy tuck procedures
@@ -5975,18 +6042,18 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Ability to minimize the surgery scars and hide them near the abdomen
                     </li>
                     <li>
-                        Renowned Plastic Surgeons from <?= ucwords($city) ?>, certified by many national and international cosmetic surgery associations
+                        Renowned cosmetic surgeons from <?= ucwords($city) ?>, certified by many national and international cosmetic surgery associations
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost differs according to the different types of tummy tuck methods and the location of surgery. Apart from the main surgery cost, you should also consider the cost of medicines taken during the recovery period. Scans and other methods of monitoring the operated location would further add up to your bill. Make sure to visit our Plastic Surgeon in <?= ucwords($city) ?> to get a better estimate.
+                    The cost differs according to the different types of tummy tuck methods and the location of surgery. Apart from the main surgery cost, you should also consider the cost of medicines taken during the recovery period. Scans and other methods of monitoring the operated location would further add up to your bill. Make sure to visit our cosmetic surgeon in <?= ucwords($city) ?> to get a better estimate.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Get rid of extra fat in your stomach that spoils your appearance. Choose your preferred tummy tuck surgery type and rock in any costume you desire with the help of our best Plastic Surgeons in <?= ucwords($city) ?>.
+                    Get rid of extra fat in your stomach that spoils your appearance. Choose your preferred tummy tuck surgery type and rock in any costume you desire with the help of our best cosmetic surgeons in <?= ucwords($city) ?>.
                 </p>
                 <p class="identity">
                     FAQs on Tummy Tuck Surgery in <?= ucwords($city) ?>
@@ -6311,7 +6378,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </strong>
                     </p>
                     <p>
-                        Buttock enhancement is the best option to increase the size of your buttocks and complement your physical appearance. When performed by a trusted and experienced Plastic Surgeon from <?= ucwords($city) ?>, you can make your buttocks look rounded, projected, and lifted. You can even eliminate the issue of sagging breasts and make them look naturally bigger.
+                        Buttock enhancement is the best option to increase the size of your buttocks and complement your physical appearance. When performed by a trusted and experienced cosmetic surgeon from <?= ucwords($city) ?>, you can make your buttocks look rounded, projected, and lifted. You can even eliminate the issue of sagging breasts and make them look naturally bigger.
                     </p>
                 </div>
                 <p class="identity">
@@ -6319,7 +6386,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        Highly skilled Plastic Surgeons in <?= ucwords($city) ?> to perform buttock enhancement surgeries with minimal and almost invisible scarring
+                        Highly skilled cosmetic surgeons in <?= ucwords($city) ?> to perform buttock enhancement surgeries with minimal and almost invisible scarring
                     </li>
                     <li>
                         Expertise in performing Brazilian Butt Lift and enhancement using buttock implants
@@ -6331,18 +6398,18 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Adept at accomplishing symmetrical enhancements of the buttock sizes without making it look artificial
                     </li>
                     <li>
-                        Certified by several national and international boards of Plastic Surgeons
+                        Certified by several national and international boards of cosmetic surgeons
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Several types of buttock enhancement surgery include Brazilian Butt Lifts, Fat Grafting, and Buttock Implants. So depending on your preferred treatment, the cost of surgery will also differ. Apart from the cost of the surgery, you should also consider the expenses incurred in medicines, compressions, dressings, etc. To know the whole cost of buttock enhancement, you can visit any of our best Plastic Surgeons in <?= ucwords($city) ?>.
+                    Several types of buttock enhancement surgery include Brazilian Butt Lifts, Fat Grafting, and Buttock Implants. So depending on your preferred treatment, the cost of surgery will also differ. Apart from the cost of the surgery, you should also consider the expenses incurred in medicines, compressions, dressings, etc. To know the whole cost of buttock enhancement, you can visit any of our best cosmetic surgeons in <?= ucwords($city) ?>.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Big buttocks have a glamorous appeal and you can achieve them through buttock enhancement surgery. With one of our skilled Plastic Surgeons from <?= ucwords($city) ?> helping you every step of the day, you can safely undergo Buttock Enhancement surgery.
+                    Big buttocks have a glamorous appeal and you can achieve them through buttock enhancement surgery. With one of our skilled cosmetic surgeons from <?= ucwords($city) ?> helping you every step of the day, you can safely undergo Buttock Enhancement surgery.
                 </p>
                 <p class="identity">
                     FAQs on Buttock Enhancement Surgery in <?= ucwords($city) ?>
@@ -6694,7 +6761,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </strong>
                     </p>
                     <p>
-                        A Body Lift can help you to get rid of excess fat and sagging skin. There are times when some fat deposits do not disintegrate even when you diet and exercise hard. A Body Lift surgery removes or minimizes these fat deposits and tightens your skin for a well-toned body appearance. All you need is to look out for one of our best Plastic Surgeons in <?= ucwords($city) ?> to get the best treatment.
+                        A Body Lift can help you to get rid of excess fat and sagging skin. There are times when some fat deposits do not disintegrate even when you diet and exercise hard. A Body Lift surgery removes or minimizes these fat deposits and tightens your skin for a well-toned body appearance. All you need is to look out for one of our best cosmetic surgeons in <?= ucwords($city) ?> to get the best treatment.
                     </p>
                 </div>
                 <p class="identity">
@@ -6702,7 +6769,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        The best Plastic Surgeons in <?= ucwords($city) ?> with specialization in Body Lift
+                        The best cosmetic surgeons in <?= ucwords($city) ?> with specialization in Body Lift
                     </li>
                     <li>
                         Expertise in understanding the patient’s requirements and helping them to achieve their body goals
@@ -6714,14 +6781,14 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Skilled at whole Body Lift, lower Body Lift, and mid-Body Lift
                     </li>
                     <li>
-                        Certified by several national and international boards of plastic and Plastic Surgeons
+                        Certified by several national and international boards of plastic and cosmetic surgeons
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF BODY LIFT IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Since the procedure depends totally on your expectations, the areas of a Body Lift will have a significant influence on the total cost. If you are opting for a Body Lift only in the lower body, it will cost you less than the total Body Lift. You can visit our experienced Plastic Surgeons in <?= ucwords($city) ?> to seek recommendations on the best Body Lift procedure for you.
+                    Since the procedure depends totally on your expectations, the areas of a Body Lift will have a significant influence on the total cost. If you are opting for a Body Lift only in the lower body, it will cost you less than the total Body Lift. You can visit our experienced cosmetic surgeons in <?= ucwords($city) ?> to seek recommendations on the best Body Lift procedure for you.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
@@ -7067,7 +7134,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Arm Lift Surgery or Brachioplasty is the procedure to treat drooping upper arms resulting due to ageing or massive weight loss. It requires the surgeon to remove the excess sagging skin of the upper arm resulting in well-toned and tightened arms.
                     </p>
                     <p>
-                        Our reputed Plastic Surgeons in <?= ucwords($city) ?> advise the right treatment plan and the best-suited procedure for you.
+                        Our reputed cosmetic surgeons in <?= ucwords($city) ?> advise the right treatment plan and the best-suited procedure for you.
                     </p>
                 </div>
                 <p class="identity">
@@ -7075,7 +7142,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        The best Plastic Surgeons in <?= ucwords($city) ?> to treat patients with extremely sagging upper arms
+                        The best cosmetic surgeons in <?= ucwords($city) ?> to treat patients with extremely sagging upper arms
                     </li>
                     <li>
                         Highly skilled at various arm lift surgeries like Liposuction, Limited Arm Lift, Standard Arm Lift, and Extended Arm Lift.
@@ -7087,14 +7154,14 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Leave only minimal scarring that becomes almost invisible over time.
                     </li>
                     <li>
-                        Renowned Plastic Surgeons from <?= ucwords($city) ?>, duly certified by several national boards of cosmetic surgeries
+                        Renowned cosmetic surgeons from <?= ucwords($city) ?>, duly certified by several national boards of cosmetic surgeries
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF ARM LIFT SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The Arm Lift Surgery cost depends largely on the Plastic Surgeon you choose and the specific area where you want to tone it. Usually, the cost of extended Arm Lift Surgery is higher than other surgeries since the surgeon not just removes the excess skin on the upper arms but also on the sides of the body. It is best to visit our reliable Plastic Surgeon in <?= ucwords($city) ?> and seek advice on the best course of action.
+                    The Arm Lift Surgery cost depends largely on the cosmetic surgeon you choose and the specific area where you want to tone it. Usually, the cost of extended Arm Lift Surgery is higher than other surgeries since the surgeon not just removes the excess skin on the upper arms but also on the sides of the body. It is best to visit our reliable cosmetic surgeon in <?= ucwords($city) ?> and seek advice on the best course of action.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
@@ -7406,7 +7473,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         If dieting and exercising are not helping anymore in reducing your thigh size, a Thigh Lift can be a suitable alternative. The surgery reshapes the thigh by removing the extra tissues that would otherwise make you look flabby. It will also contour your body in proportion to the rest of your body figure.
                     </p>
                     <p>
-                        Some prefer to go for a combination of Liposuction and Thigh Lift to complement the body structure. For any more doubts about this surgery, you can visit any of our recommended Plastic Surgeons in <?= ucwords($city) ?>.
+                        Some prefer to go for a combination of Liposuction and Thigh Lift to complement the body structure. For any more doubts about this surgery, you can visit any of our recommended cosmetic surgeons in <?= ucwords($city) ?>.
                     </p>
                 </div>
                 <p class="identity">
@@ -7414,7 +7481,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        Best Plastic Surgeons in <?= ucwords($city) ?> with credible experience in Thigh Lift as well as other body contouring procedures
+                        Best cosmetic surgeons in <?= ucwords($city) ?> with credible experience in Thigh Lift as well as other body contouring procedures
                     </li>
                     <li>
                         Overwhelming testimonials from satisfied patients about the positive surgery results
@@ -7423,18 +7490,18 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Operate patients in fully-equipped clinics for plastic, cosmetic, and reconstructive surgeries.
                     </li>
                     <li>
-                        Top Plastic Surgeons in <?= ucwords($city) ?> certified by the national associations for plastic and cosmetic surgeries
+                        Top cosmetic surgeons in <?= ucwords($city) ?> certified by the national associations for plastic and cosmetic surgeries
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF THIGH LIFT IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    It would be wise to consult with any of our Plastic Surgeons in <?= ucwords($city) ?> about the cost of this treatment. This will also give you a better insight into the results you can expect as well as about the recovery period.
+                    It would be wise to consult with any of our cosmetic surgeons in <?= ucwords($city) ?> about the cost of this treatment. This will also give you a better insight into the results you can expect as well as about the recovery period.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Do not let those flabby thighs get the best of you! Go for a Thigh Lift, recover your lost shape, and look fab! Opt for one of our most-respected Plastic Surgeons in <?= ucwords($city) ?> to perform the Thigh Lift surgery.
+                    Do not let those flabby thighs get the best of you! Go for a Thigh Lift, recover your lost shape, and look fab! Opt for one of our most-respected cosmetic surgeons in <?= ucwords($city) ?> to perform the Thigh Lift surgery.
                 </p>
                 <p class="identity">
                     FAQs on Thigh Lift Surgery in <?= ucwords($city) ?>
@@ -7783,7 +7850,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Sometimes, you may still have excess skin after extensive weight loss. This happens when your skin loses its elasticity. Body contouring procedure helps to remove these excess skin and fat. You will have a well-toned and lean looking figure after undergoing the whole body contouring surgery.
                     </p>
                     <p>
-                        Since body contouring in an extensive procedure, it is vital to get it done by an experienced Plastic Surgeon in <?= ucwords($city) ?>.
+                        Since body contouring in an extensive procedure, it is vital to get it done by an experienced cosmetic surgeon in <?= ucwords($city) ?>.
                     </p>
                 </div>
                 <p class="identity">
@@ -7791,7 +7858,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        The most skilled Plastic Surgeon in <?= ucwords($city) ?> for body contouring.
+                        The most skilled cosmetic surgeon in <?= ucwords($city) ?> for body contouring.
                     </li>
                     <li>
                         Highly experienced in individual procedures that make up the body contouring like tummy tuck, breast lift, arm lift, buttock lift, thigh lift and lower body lift.
@@ -7800,17 +7867,17 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Performs highly specific and customized body-contouring surgery targeted at removing the excess skin that results in well-contoured appearance.
                     </li>
                     <li>
-                        <?= ucwords($city) ?>’s experienced Plastic Surgeon, certified by several national and international boards of cosmetic surgeries.
+                        <?= ucwords($city) ?>’s experienced cosmetic surgeon, certified by several national and international boards of cosmetic surgeries.
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF BODY CONTOURING SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The body contouring procedure should be highly customized to treat the specific areas of the body that are disrupting the figure. The total cost of the procedure varies from 1,00,000 INR to 3,00,000 INR depending on the different areas of treatment. Visiting an expert Plastic Surgeon would be wise to get the recommendations for the customized body contouring treatment.
+                    The body contouring procedure should be highly customized to treat the specific areas of the body that are disrupting the figure. The total cost of the procedure varies from 1,00,000 INR to 3,00,000 INR depending on the different areas of treatment. Visiting an expert cosmetic surgeon would be wise to get the recommendations for the customized body contouring treatment.
                 </p>
                 <p>
-                    Our Plastic Surgeon is one of the best in this field in <?= ucwords($city) ?>. You can schedule a consultation session to get a good ballpark on the cost of this surgery along with other necessary details.
+                    Our cosmetic surgeon is one of the best in this field in <?= ucwords($city) ?>. You can schedule a consultation session to get a good ballpark on the cost of this surgery along with other necessary details.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
@@ -7821,7 +7888,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Mommy makeover surgery aims specifically at helping women get back their slim body after childbirth. A woman’s body goes through significant changes during and after pregnancy. For many, it can be difficult and almost impossible to get back to the previous shape they were in. This is where mommy makeover surgery is beneficial. Our Plastic Surgeon from <?= ucwords($city) ?> will inspect the entire body and make changes to breasts, buttocks, thighs, tummy and other locations where the size has increased.
+                        Mommy makeover surgery aims specifically at helping women get back their slim body after childbirth. A woman’s body goes through significant changes during and after pregnancy. For many, it can be difficult and almost impossible to get back to the previous shape they were in. This is where mommy makeover surgery is beneficial. Our cosmetic surgeon from <?= ucwords($city) ?> will inspect the entire body and make changes to breasts, buttocks, thighs, tummy and other locations where the size has increased.
                     </p>
                 </div>
                 <p class="identity">
@@ -7829,7 +7896,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        One of the best Plastic Surgeons in <?= ucwords($city) ?> who offers astonishing results with a wholesome mommy makeover surgery.
+                        One of the best cosmetic surgeons in <?= ucwords($city) ?> who offers astonishing results with a wholesome mommy makeover surgery.
                     </li>
                     <li>
                         Customized surgery plans aimed at reducing the fat at specific areas of the mother’s body.
@@ -7838,17 +7905,17 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Skilled at transforming the patients’ back to their old, thinner self.
                     </li>
                     <li>
-                        A reliable Plastic Surgeon with a clinic in <?= ucwords($city) ?> offering personalized treatment and medicines by considering the recent childbirth.
+                        A reliable cosmetic surgeon with a clinic in <?= ucwords($city) ?> offering personalized treatment and medicines by considering the recent childbirth.
                     </li>
                     <li>
-                        An esteemed Plastic Surgeon and a member of several national and international boards for cosmetic surgery.
+                        An esteemed cosmetic surgeon and a member of several national and international boards for cosmetic surgery.
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF MOMMY MAKEOVER SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    In the mommy makeover surgery, the Plastic Surgeon performs several surgeries like liposuction, breast lift, breast reduction, buttock augmentation/reduction, tummy tuck, etc. Therefore, the cost of mommy makeover surgery will vary according to the recommended surgeries. If you are considering mommy makeover surgery, you can consult our Plastic Surgeon in <?= ucwords($city) ?> to get an estimate of the complete treatment plan.
+                    In the mommy makeover surgery, the cosmetic surgeon performs several surgeries like liposuction, breast lift, breast reduction, buttock augmentation/reduction, tummy tuck, etc. Therefore, the cost of mommy makeover surgery will vary according to the recommended surgeries. If you are considering mommy makeover surgery, you can consult our cosmetic surgeon in <?= ucwords($city) ?> to get an estimate of the complete treatment plan.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
@@ -7864,15 +7931,15 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </strong>
                     </p>
                     <p>
-                        Not anymore! Get the best Plastic Surgeon in <?= ucwords($city) ?> known for the skilled hair transplant treatment to help you regain your confidence. Through hair transplantation surgery, the surgeon will extract hair grafts or follicles from your scalp, treat them and place it in the thinning areas. It is best for patients suffering from acute hair fall, balding hall, thinned-out hair, alopecia, or any other similar condition.
+                        Not anymore! Get the best cosmetic surgeon in <?= ucwords($city) ?> known for the skilled hair transplant treatment to help you regain your confidence. Through hair transplantation surgery, the surgeon will extract hair grafts or follicles from your scalp, treat them and place it in the thinning areas. It is best for patients suffering from acute hair fall, balding hall, thinned-out hair, alopecia, or any other similar condition.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Plastic Surgeons for Hair Transplant in <?= ucwords($city) ?>?
+                    Why Choose Our Cosmetic Surgeons for Hair Transplant in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Top Plastic Surgeons for hair transplantation in <?= ucwords($city) ?> with a high success rate
+                        Top cosmetic surgeons for hair transplantation in <?= ucwords($city) ?> with a high success rate
                     </li>
                     <li>
                         Adept at performing the widely acclaimed hair transplant treatments - Follicular Unit Extraction (FUE) and Follicular Unit Transplantation (FUT) with dexterity
@@ -7881,18 +7948,18 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Ability to tailor the areas of transplantation based on the patient’s expectations to achieve a fuller-looking scalp.
                     </li>
                     <li>
-                        Board-recognized Plastic Surgeon and member of several hair transplant associations.
+                        Board-recognized cosmetic surgeon and member of several hair transplant associations.
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF HAIR TRANSPLANT TREATMENT IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    You can opt from among two types of common hair transplant surgeries, FUT and FUE, The cost of both treatments varies depending on the number of grafts needed. To know the exact rates, you can visit any of our expert Plastic Surgeons in <?= ucwords($city) ?>.
+                    You can opt from among two types of common hair transplant surgeries, FUT and FUE, The cost of both treatments varies depending on the number of grafts needed. To know the exact rates, you can visit any of our expert cosmetic surgeons in <?= ucwords($city) ?>.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    We all love to have a full head of hair. This is now possible with customized hair transplant surgery by an expert Plastic Surgeon in <?= ucwords($city) ?>. Enjoy thicker and fuller hair that makes you look younger!
+                    We all love to have a full head of hair. This is now possible with customized hair transplant surgery by an expert cosmetic surgeon in <?= ucwords($city) ?>. Enjoy thicker and fuller hair that makes you look younger!
                 </p>
                 <p class="identity">
                     FAQs on Hair Transplant Surgery in <?= ucwords($city) ?>
@@ -8202,7 +8269,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Women are not the only ones who wish to look their best. Nowadays, men too want to beautify themselves, look slim, have flawless skin, and there is nothing wrong with that! Several cosmetic surgeries for men exist to treat different concerns like flabby stomach, sagging or blemished skin, facial wrinkles, or any other issues. Our Plastic Surgeons from <?= ucwords($city) ?> are one of the best to perform men’s cosmetic surgeries.
+                        Women are not the only ones who wish to look their best. Nowadays, men too want to beautify themselves, look slim, have flawless skin, and there is nothing wrong with that! Several cosmetic surgeries for men exist to treat different concerns like flabby stomach, sagging or blemished skin, facial wrinkles, or any other issues. Our cosmetic surgeons from <?= ucwords($city) ?> are one of the best to perform men’s cosmetic surgeries.
                     </p>
                 </div>
                 <p class="identity">
@@ -8219,18 +8286,18 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Experienced at performing gynecomastia, Men’s Plastic Surgery, ear surgery, facelift, chin augmentation, tummy tuck, and many more procedures
                     </li>
                     <li>
-                        Best Plastic Surgeons in <?= ucwords($city) ?> certified by several national and international boards of Plastic Surgeons
+                        Best cosmetic surgeons in <?= ucwords($city) ?> certified by several national and international boards of cosmetic surgeons
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF MEN’S PLASTIC SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    When it comes to the choices for plastic surgery in men, the options are multiple. From facial non-invasive and minimally invasive treatments to extensive full-body procedures, you can go for any of them. Therefore, the cost of plastic surgery for men also varies depending on the treatment. If you have any specific concerns, feel free to visit any of our acclaimed Plastic Surgeons in <?= ucwords($city) ?> for proper guidance.
+                    When it comes to the choices for plastic surgery in men, the options are multiple. From facial non-invasive and minimally invasive treatments to extensive full-body procedures, you can go for any of them. Therefore, the cost of plastic surgery for men also varies depending on the treatment. If you have any specific concerns, feel free to visit any of our acclaimed cosmetic surgeons in <?= ucwords($city) ?> for proper guidance.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Regain your confidence with your choice of cosmetic surgery. Consult with <?= ucwords($city) ?>’s most esteemed Plastic Surgeon and be your youthful self.
+                    Regain your confidence with your choice of cosmetic surgery. Consult with <?= ucwords($city) ?>’s most esteemed cosmetic surgeon and be your youthful self.
                 </p>
                 <p class="identity">
                     FAQs on Men’s Plastic Surgery in <?= ucwords($city) ?>
