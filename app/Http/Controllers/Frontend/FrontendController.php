@@ -108,7 +108,7 @@ class FrontendController extends Controller
         $module_name_singular = Str::singular("pages");
         $$module_name_singular = (object) array(
             'meta_title' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " – Top Plastic Surgeon in $citiesStrMeta",
-            'meta_description' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " is one of the best plastic / cosmetic surgeons in $citiesStrMeta. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
+            'meta_description' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " is one of the best plastic / Plastic Surgeons in $citiesStrMeta. Book your appointment with Board Certified Plastic Surgeon to get the right opinion for your treatment.",
             'meta_keywords' => "",
             'name' => "Dr. " . $doctor_details->first_name . " " . $doctor_details->last_name . " – Top Plastic Surgeon in $citiesStrMeta",
         );
@@ -122,7 +122,7 @@ class FrontendController extends Controller
         $module_name_singular = Str::singular("pages");
         $$module_name_singular = (object) array(
             'meta_title' => "Top Cosmetic Surgery Clinics in India | Best Plastic Surgeons",
-            'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Cosmetic Surgeon across India.",
+            'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Plastic Surgeon across India.",
             'meta_keywords' => "",
             'name' => "Clinics",
         );
@@ -136,7 +136,7 @@ class FrontendController extends Controller
         $module_name_singular = Str::singular("pages");
         $$module_name_singular = (object) array(
             'meta_title' => "Top Cosmetic Surgery Clinics in India | Best Plastic Surgeons",
-            'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Cosmetic Surgeon across India.",
+            'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Plastic Surgeon across India.",
             'meta_keywords' => "",
             'name' => "Find A Surgeon",
         );
@@ -152,7 +152,7 @@ class FrontendController extends Controller
         $module_name_singular = Str::singular("pages");
         $$module_name_singular = (object) array(
             'meta_title' => "Top Cosmetic Surgery Clinics in India | Best Plastic Surgeons",
-            'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Cosmetic Surgeon across India.",
+            'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Plastic Surgeon across India.",
             'meta_keywords' => "",
             'name' => "Find A Surgeon",
         );
@@ -185,7 +185,7 @@ class FrontendController extends Controller
         $module_name_singular = Str::singular("pages");
         $$module_name_singular = (object) array(
             'meta_title' => "$name Before / After Photos | $name Results",
-            'meta_description' => "Have a quick look on $name Before and After Result Photos Gallery of our patients, performed by our Board-Certified Cosmetic Surgeons.",
+            'meta_description' => "Have a quick look on $name Before and After Result Photos Gallery of our patients, performed by our Board-Certified Plastic Surgeons.",
             'meta_keywords' => "",
             'name' => $name . " " . "Results",
         );

@@ -125,20 +125,20 @@
                                 ?>
                 </p>
                 <p>
-                    Renowned as one of the most reputed cosmetic surgeons in India, Dr. <? //= $doctor_details->first_name . " " . $doctor_details->last_name 
+                    Renowned as one of the most reputed Plastic Surgeons in India, Dr. <? //= $doctor_details->first_name . " " . $doctor_details->last_name 
                                                                                         ?> is a most-sought surgeon for people looking to improve their physical appearance through cosmetic surgeries. She has 19 years of experience in the field of cosmetic surgery, helping people to feel confident with their new and improved appearances.
                 </p>
                 <p>
                     Dr. <? //= $doctor_details->first_name . " " . $doctor_details->last_name 
-                        ?> has worked on several patients looking to better their features including surgeries for victims of road accidents and burns, and people with physical deformities. She is a talented cosmetic surgeon in identifying and understanding the end results that the patient is looking for and takes a comprehensive approach to achieve the same. She is known for her skills in microvascular surgeries and is one of the widely demanded cosmetic surgeons in Hyderabad to perform many other similar reconstructive surgeries.
+                        ?> has worked on several patients looking to better their features including surgeries for victims of road accidents and burns, and people with physical deformities. She is a talented Plastic Surgeon in identifying and understanding the end results that the patient is looking for and takes a comprehensive approach to achieve the same. She is known for her skills in microvascular surgeries and is one of the widely demanded Plastic Surgeons in Hyderabad to perform many other similar reconstructive surgeries.
                 </p>
                 <p>
-                    Her in-depth knowledge of the cosmetic surgical procedures and the detailed analysis of the patient profile has time and again made her one of the most successful cosmetic surgeons.
+                    Her in-depth knowledge of the cosmetic surgical procedures and the detailed analysis of the patient profile has time and again made her one of the most successful Plastic Surgeons.
                 </p>
                 <p class="identity">MEMBERSHIPS:</p>
                 <p>
                     Dr. <? //= $doctor_details->first_name . " " . $doctor_details->last_name 
-                        ?> is a member of numerous national and international associations for plastic and cosmetic surgeons:
+                        ?> is a member of numerous national and international associations for plastic and Plastic Surgeons:
                 </p>
                 <ul>
                     <li>International Society of Aesthetic Plastic Surgeons (ISAPS)</li>

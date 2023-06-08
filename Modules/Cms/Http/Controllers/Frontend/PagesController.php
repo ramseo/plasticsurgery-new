@@ -142,7 +142,7 @@ class PagesController extends Controller
                     'meta_title' => $uc_surgery_str . " " . "Clinic in" . " " . $uc_city,
                     'meta_description' => "The best Board certified surgeon for $uc_surgery_str in $uc_city. Visit the cost-effective Cosmetic surgery clinic for $uc_surgery_str today",
                     'meta_keywords' => "",
-                    'name' => ucwords("The Most Skilled Cosmetic Surgeon for $uc_surgery_str in $uc_city"),
+                    'name' => ucwords("The Most Skilled Plastic Surgeon for $uc_surgery_str in $uc_city"),
                 );
             }
         } elseif (in_array($slug, $citiesArr)) {
@@ -154,7 +154,7 @@ class PagesController extends Controller
                 'meta_title' => "Best Plastic Surgeon Clinic in" . " " . ucwords(str_replace("-", " ", $uc_city)) . " " . "| Cosmetic Surgery Cost",
                 'meta_description' => "Top Cosmetic Surgery Clinics in $uc_city. Book your appointment with Board Certified Plastic Surgeons to get the right opinion for your treatment.",
                 'meta_keywords' => "",
-                'name' => "Find the best Cosmetic Surgeon in $uc_city",
+                'name' => "Find the best Plastic Surgeon in $uc_city",
             );
         } else {
             $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();

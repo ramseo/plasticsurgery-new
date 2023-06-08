@@ -19,7 +19,7 @@
 <div class="container-fluid">
     <div class="container">
         <p class="identity width-100">
-            top cosmetic surgeons in <?= $city ?>
+            top Plastic Surgeons in <?= $city ?>
         </p>
         <div class="col-lg-12 doc-flex-cls padd-null">
             <?php
@@ -111,12 +111,15 @@
         <div class="row">
             <div class="col">
                 <p>
-                    Our Board-Certified Plastic Surgeons in <?= $city ?> hold dexterity in performing complex cosmetic surgeries with ease.
-                    Our experts have a commendable record of operating countless surgeries with success.
-                    Among their expertise, include Liposuction, Rhinoplasty, Blepharoplasty, Gynecomastia, Breast Augmentation, Tummy Tuck, and more.
-                    Our surgeons are immensely qualified and possess adept expertise in performing surgery with great precision.
-                    They make sure to give personal attention to each individual, listen carefully to the problems of the patients, and try to grasp their expectations from the surgery.
-                    This helps them appreciably in suggesting and performing the most suitable procedure in a safe and hygienic environment, well-equipped with advanced surgery tools.
+                    We help you search for the most popular cosmetic surgeons in <?= $city ?>.
+                    Our surgeons specialize in the enhancement procedures of the breast, face,
+                    and body. They hold years of experience in performing several reconstructive
+                    surgeries and have helped patients to restore their appearance after
+                    accidents, burns, and deformities.
+                    Our experts are skilled at carrying out Rhinoplasty, Blepharoplasty,
+                    Gynecomastia, Breast Augmentation, and Tummy Tuck among others.
+                    Owing to their adept expertise, the patients have been approaching them
+                    from India as well as overseas countries.
                 </p>
             </div>
         </div>
@@ -128,36 +131,42 @@
         <div class="col padd-null">
             <p class="identity">COSMETIC SURGERY COST IN <?= $city ?></p>
             <p>
-                The cost for Cosmetic Surgery treatments in <?= $city ?> varies appreciably depending on the clinic
-                and the doctor you approach for the treatment.
-                Having a face-to-face consultation with the surgeon would be advisable in this regard.
+                Cosmetic surgery is a broad field that includes various non-invasive and minimally
+                invasive treatments to highly complex operations. Therefore, the cost of cosmetic
+                surgery in <?= $city ?> varies accordingly. For accurate figures, feel free to
+                interact with any of our plastic surgeons.
             </p>
-            <p>
-                Besides, our doctors in <?= $city ?> can also perform many more surgeries like Facelift,
-                Breast Reduction, Buccal Fat Removal, Chin Augmentation,
-                Cheek Augmentation, Ear Surgery, Hair Transplant, Lip Augmentation, etc.
-                , at a reasonable cost. The charges of the respective procedures
-                however exclude the costs for, scan tests, internal medicines,
-                and other facilities used during the treatment.
-                You could expect our surgeons to leverage a unique and integrated approach to plastic surgery procedures,
-                thus aiming at giving due respect to the natural condition of every human.
-            </p>
-            <p>
-                Our cosmetic surgeons make sure to perform all the surgeries in an excellent environment
-                and with the cordial support of their experienced staff.
-                They prefer suggesting customized surgery plans that could match the lifestyle, age, and
-                body structure of an individual.
-                Throughout their efforts, our doctors anticipate a natural and balanced result
-                that could leave their patients with an enhanced appearance.
-            </p>
-
             <p class="identity">Our Services</p>
             <p>
-                Our surgeons in <?= $city ?> offer a range of cosmetic surgery treatments.
-                Feel free to visit them in person to know your candidature
-                for the procedure you wish to undergo.
+                You can now improve your appearance by undergoing various cosmetic surgeries
+                from our experienced cosmetic surgeons. Depending on your requirement,
+                you can choose to undergo Facelift, Breast Reduction, Buccal Fat Removal,
+                Chin Augmentation, Cheek Augmentation, Ear Surgery, Hair Transplant,
+                and Lip Augmentation among other cosmetic surgeries. Our surgeons will
+                recommend you the closest cosmetic treatment that would deliver
+                the expected results.
             </p>
-
+            <p class="identity">
+                Cosmetic Surgery in <?= $city ?>
+            </p>
+            <ul>
+                <li>
+                    Experienced cosmetic surgeons working from accredited hospitals with the best team of
+                    plastic surgeons, cosmetic surgeons, and dermatologists.
+                </li>
+                <li>
+                    Best clinics in the country in terms of affordable treatments
+                    as well as expert solutions.
+                </li>
+                <li>
+                    The downpour of many foreign nationals coming to our cosmetic surgeons to get
+                    consultation and treatment.
+                </li>
+                <li>
+                    Perform treatment with the laser equipment of the latest model at par with
+                    the high industry standards.
+                </li>
+            </ul>
             <p class="identity">
                 FAQs on Cosmetic Surgery in <?= $city ?>
             </p>
@@ -173,24 +182,47 @@
                 </a>
                 <div class="accordion-content">
                     <p>
-                        To be a suitable candidate for cosmetic surgery in <?= $city ?>,
-                        you need to fulfill several essential criteria:
+                        To be a good candidate for cosmetic surgery in <?= $city ?>,
+                        you should fulfil certain important conditions:
                     </p>
                     <ul>
-                        <li>Should possess good overall health</li>
-                        <li>Abide by the specific doctor’s instructions</li>
-                        <li>Have developed excess body fat that needs to be eliminated</li>
-                        <li>Want to enhance body appearance after pregnancy</li>
-                        <li>Should be a non-smoker and a non-alcoholic</li>
-                        <li>Free from any severe medical history</li>
-                        <li>Should have realistic expectations with the surgery</li>
+                        <li>
+                            Have good overall health
+                        </li>
+                        <li>
+                            Current body weight close to ideal weight
+                        </li>
+                        <li>
+                            Free from severe medical ailments
+                        </li>
+                        <li>
+                            Have developed unwanted fat in one or more parts of the body
+                        </li>
+                        <li>
+                            Wish to overcome wrinkles, sagging breasts, and other ageing effects
+                        </li>
+                        <li>
+                            Have gained excess weight that is creating facing problems in daily cores with
+                        </li>
+                        <li>
+                            Wish to reduce or augment breasts to make them look rounder and in proportion with each other
+                        </li>
+                        <li>
+                            Want to restore the appealing body appearance after pregnancy and breastfeeding
+                        </li>
+                        <li>
+                            Have realistic goals regarding the surgery
+                        </li>
+                        <li>
+                            Non-smoker and non-alcoholic
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="accordion-container">
                 <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
                     <span>
-                        2. What is the cost of cosmetic surgery in <?= $city ?>?
+                        2. What is the cost of cosmetic surgery?
                     </span>
                     <span>
                         <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
@@ -198,10 +230,13 @@
                 </a>
                 <div class="accordion-content">
                     <p>
-                        The cost of Cosmetic Surgery in <?= $city ?> may vary between 25,000 INR
-                        and 2,50,000 INR depending on the type of surgery you want to undergo.
-                        Much will also rely on the selection of the clinic,
-                        the experience of the surgeon, and the facilities provided during the treatment.
+                        The cost of Cosmetic Surgery in <?= $city ?> may vary significantly depending
+                        on various reasons. To give you an idea, the cost of lip reduction surgery
+                        can start from 50,000 INR, while the cost of breast enhancement surgeries
+                        starts from 1,00,000 INR and can increase to 2,00,000 INR depending on
+                        the individual surgeon. On average, the cost of cosmetic surgery in
+                        <?= $city ?> may range between 25,000 INR and 3,00,000 INR depending
+                        on the surgery type you opt for.
                     </p>
                 </div>
             </div>
@@ -216,14 +251,33 @@
                 </a>
                 <div class="accordion-content">
                     <ul>
-                        <li>Complications due to anesthesia like blood clots, pneumonia, etc.</li>
-                        <li>Building up of fluid under the skin</li>
-                        <li>Abnormal scarring that hampers natural movement</li>
-                        <li>Infection in the treated area</li>
-                        <li>Possibility of nerve damage</li>
-                        <li>Slow healing of wounds</li>
-                        <li>Excessive bleeding</li>
-                        <li>Possibility of infection, swelling, bruising, etc.</li>
+                        <li>
+                            Allergic behaviour to anesthesia.
+                        </li>
+                        <li>
+                            Fluid build-up in the treated area, leading to seroma.
+                        </li>
+                        <li>
+                            Accumulation of blood in the surgical incision site.
+                        </li>
+                        <li>
+                            Excessive scarring.
+                        </li>
+                        <li>
+                            Infection, bleeding, swelling, bruising, etc.
+                        </li>
+                        <li>
+                            Blood clots.
+                        </li>
+                        <li>
+                            Poor healing of the wound.
+                        </li>
+                        <li>
+                            Nerve damage, that may cause neuropathy.
+                        </li>
+                        <li>
+                            Unfavourable results, necessitating revisional surgery.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -238,20 +292,23 @@
                 </a>
                 <div class="accordion-content">
                     <p>
-                        Cosmetic or plastic surgery procedures would respond best once your body attains
-                        adulthood.
-                        Hence, for males, the ideal starting age for cosmetic surgery is 15-16 years,
-                        and for females, it is 14-15 years. However,
-                        you should go under the knife only when it is necessary.
-                        Merely undergoing cosmetic surgery to change your appearance at an early age
-                        could cause problems later on.
+                        Any age after 18 is suitable for cosmetic surgery in <?= $city ?>
+                        if you are healthy and have good immunity to withstand the aftereffects
+                        of the surgery. In rare cases, such as accidental injuries or
+                        any anomaly by birth, the surgeons may perform cosmetic surgery
+                        on infants or grown-up kids as well, but only after getting
+                        consent from the parents. Boys and girls between 14-16 years
+                        can also opt for cosmetic surgery. It is however advisable for
+                        them to undergo any cosmetic surgery only out of compulsion and
+                        not just to change appearance, as the surgery may lead to
+                        complications later on in their life.
                     </p>
                 </div>
             </div>
             <div class="accordion-container">
                 <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
                     <span>
-                        5. What are the things to do before cosmetic surgery?
+                        5. What are the things to do before Cosmetic Surgery?
                     </span>
                     <span>
                         <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
@@ -260,12 +317,32 @@
                 <div class="accordion-content">
                     <ul>
                         <li>
-                            You should prepare yourself both emotionally and physically before
-                            opting for Cosmetic Surgery in <?= $city ?>.
+                            Be well prepared for the surgery.
                         </li>
-                        <li>Keep your stomach empty for around 8 hours before the surgery</li>
-                        <li>Do not use any deodorant, lotion, or moisturizer</li>
-                        <li>Stop any medication that you are undergoing, or as suggested by your surgeon</li>
+                        <li>
+                            Discussion your concerns and doubts with the surgeon in <?= $city ?>.
+                        </li>
+                        <li>
+                            Avoid the use of any lotion, moisturizer, or deodorant.
+                        </li>
+                        <li>
+                            Try not to eat anything for at least 8 hours before the surgery.
+                        </li>
+                        <li>
+                            Keep yourself hydrated with water and other fluids.
+                        </li>
+                        <li>
+                            Discuss any medication with your surgeon that you undergoing currently
+                            so that he could adjust their consumption accordingly.
+                        </li>
+                        <li>
+                            Do not smoke or drink for at least 2 weeks before the surgery as they
+                            could hamper the quick recovery.
+                        </li>
+                        <li>
+                            Stop the use of any anti-inflammatory medicine, health supplement, etc.
+                            as they could cause bleeding during the surgery.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -279,18 +356,36 @@
                     </span>
                 </a>
                 <div class="accordion-content">
-                    <p>
-                        On the day of Cosmetic Surgery, you could expect the following:
-                    </p>
                     <ul>
-                        <li>You will be taken to the private examination room.</li>
-                        <li>Your surgeon will clear all your doubts and apprehensions regarding cosmetic surgery</li>
-                        <li>Before the surgery, the surgeon will mark the areas of treatment on your body</li>
-                        <li>You may get anesthesia if required</li>
-                        <li>The duration of the surgery will vary depending on the severity of the surgery</li>
-                        <li>After the completion of the surgery, the doctor will suggest the requisite medication</li>
-                        <li>Make sure to carry out post-surgery care as instructed</li>
-                        <li>Keep visiting the surgeon at regular intervals for follow-ups.</li>
+                        <li>
+                            Arrive at the clinic in <?= $city ?> with a calm and composed mind.
+                        </li>
+                        <li>
+                            Let all the negative vibes fly out of your mind
+                        </li>
+                        <li>
+                            Cooperate with the medical staff in their routine check-ups.
+                        </li>
+                        <li>
+                            The anesthesiologist may ask about your reaction to anesthesia
+                            to adjust the dose accordingly.
+                        </li>
+                        <li>
+                            You could expect the procedure to last for around 1-3 hours or
+                            more depending on the type of surgery you are undergoing.
+                        </li>
+                        <li>
+                            Again, subject to the surgery type, the recovery time may vary from a
+                            few weeks to several months.
+                        </li>
+                        <li>
+                            You could experience the initial results in the starting 2-3 weeks
+                            after the surgery.
+                        </li>
+                        <li>
+                            Make sure to abide by the instructions of the surgeon in <?= $city ?>
+                            for quick healing.
+                        </li>
                     </ul>
                 </div>
             </div>

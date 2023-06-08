@@ -1,4 +1,4 @@
-<div class="container-fluid location" style="background-color: #f8f8f8">
+<div class="container-fluid location">
     <div class="container">
         <p class="title text-center">
             Find a Surgeon by City
@@ -11,9 +11,10 @@
             ?>
                     <div class="col-lg-3 col-md-4">
                         <div class="cities">
-                            <a href="<?= strtolower($city) ?>">
+                            <a href="<?= url(strtolower($city)) ?>">
                                 <h3>
-                                    <i class="fa fa-map-marker blink" aria-hidden="true"></i>&nbsp;
+                                    <i class="fa fa-map-marker blink" aria-hidden="true"></i>
+                                    &nbsp;
                                     <?= $city ?>
                                 </h3>
                             </a>
