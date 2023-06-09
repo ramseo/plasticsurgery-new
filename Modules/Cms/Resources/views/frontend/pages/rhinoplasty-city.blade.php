@@ -3005,54 +3005,37 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        If you are feeling insecure about your continuously sagging breasts,
-                        a simple breast lift will be good enough to improve your complete
-                        physical look. Mastopexy, also known as breast lift,
-                        is a cosmetic surgery where the surgeon raises
-                        the location of nipples and removes sagging
-                        tissues to create an impression of tightened and fuller breasts.
-                        Our cosmetic surgeons in <?= ucwords($city) ?> can deliver amazing
-                        results with breast lift surgery.
+                        Do you want to get rid of excess skin accumulated on your breasts to avoid that sagging appearance? A Breast Lift is a preferred surgery option in Hyderabad to remedy your situation. Our experienced plastic surgeons can help you get an appealing Breast Lift by removing the unwanted skin and reshaping the breast tissue. Also termed Mastopexy, females prefer opting for this surgery after delivery to avoid experiencing droopy breasts.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Cosmetic Surgeons for Breast Lift in <?= ucwords($city) ?>?
+                    Why Are Our Surgeons the Best for a Breast Lift in Hyderabad?
                 </p>
                 <ul>
                     <li>
-                        Proven expertise to help patients fix the issue of sagging breasts
+                        Renowned plastic surgeons in Hyderabad for Breast Lift
                     </li>
                     <li>
-                        Top cosmetic surgeon in <?= ucwords($city) ?> with in-depth practical
-                        knowledge of breast-related surgeries
+                        Experienced in delivering thriving results in the form of firmer and contoured breasts
                     </li>
                     <li>
-                        Ability to customize the breast lift surgery based on just what the
-                        patient wants.
+                        Take care of the right nipple position and reduced areola size during the surgery
                     </li>
                     <li>
-                        Reputed cosmetic surgeons in <?= ucwords($city) ?> with memberships from several
-                        national and international boards of cosmetic surgeries
+                        Instil confidence among women with Breast Lift surgeries
+                    </li>
+                    <li>
+                        Cost-effective Breast Lift surgeons in Hyderabad
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?></p>
                 <p>
-                    While the main reason for the Mastopexy is to ‘lift’ the breasts,
-                    many also opt for reshaped or rounder breasts. So, if you are
-                    looking for such accompanying results, the total cost of
-                    the breast lift surgery will differ accordingly.
-                    Our experienced cosmetic surgeons can advise
-                    you better on a safer course of treatment.
+                    The estimated cost of Breast Lift surgery relies on the type of Breast Lift procedure used, accreditation, surgical facilities utilised, and the surgeon’s experience. The cost of this surgery also includes the charges for administering anesthesia, prescribed medication, medical tests, surgical facility, post-surgery garments, and more. Interacting with any of our Breast Lift surgeons will give you a better idea about the involved cost.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Due to aging, pregnancy, or weight gain, breasts tend to sag which spoils
-                    the overall appearance even when you wear the best clothes.
-                    A Breast Lift surgery will help you by lifting and
-                    reshaping your breasts. Our cosmetic surgeons
-                    in <?= ucwords($city) ?> can help you know more about
-                    Breast Lift surgery.
+                    Our Breast Lift surgeons hold high credibility in performing successful procedures, thereby rebuilding confidence among the patients. Whether you are opting for a primary Breast Lift or a revision Breast Lift, our surgeons will provide you with all the requisite facilities necessary for the procedure. Their advanced medical equipment, facilities, and cordial nursing staff will make you feel comfortable during the surgery. Feel free to contact any of our expert Breast Lift surgeons in Hyderabad to give an effective lift to your sagging breasts.
                 </p>
                 <p class="identity">
                     FAQs on Breast Lift Surgery in <?= ucwords($city) ?>
@@ -3070,34 +3053,32 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            You can be a potential candidate for Breast Lift surgery in <?= ucwords($city) ?> if:
+                            To be an ideal candidate for Breast Lift surgery in Hyderabad, you would need to fulfil the following pointers:
                         </p>
                         <ul>
                             <li>
-                                Your breasts are sagging significantly due to pregnancy, breastfeeding,
-                                aging, or a change in weight
+                                Sagging breasts because of pregnancy, breastfeeding, ageing, or weight change
                             </li>
                             <li>
-                                You have good overall health and maintain a stable weight
+                                Good overall health with a consistent body weight
                             </li>
                             <li>
-                                Your areolas and nipples are pointing downwards
+                                Nipples and areolas pointing downwards
                             </li>
                             <li>
-                                Your breasts have become flat, pendulous, and elongated in shape
+                                Flat, pendulous, and elongated breasts
                             </li>
                             <li>
-                                You have enlarged areolas and stretched skin
+                                Stretched skin with enlarged areolas
                             </li>
                             <li>
-                                You don’t smoke or drink since both these habits can affect
-                                the healing results adversely
+                                Non-smoker and non-alcoholic
                             </li>
                             <li>
-                                You want to restore lost breast volume
+                                Realistic goals regarding the surgery
                             </li>
                             <li>
-                                You have realistic expectations about the surgery results
+                                Sagging breasts are affecting your professional life, especially if you are into acting or modelling
                             </li>
                         </ul>
                     </div>
@@ -3113,11 +3094,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The average cost of Breast Lift surgery in <?= ucwords($city) ?> will range between
-                            1,50,000 INR to 2,0,000 INR. Opting for additional procedures such
-                            as Breast Implants will increase the expenditure accordingly.
-                            Consultation with any of our expert cosmetic surgeons in
-                            <?= ucwords($city) ?> will help you know the exact cost.
+                            The cost of Breast Lift surgery in Hyderabad will fall somewhere between 1,50,000 INR to 2,0,000 INR. Additional procedures like Breast Implants will add up to your expenditure accordingly. Feel free to consult any of our experienced surgeons to get detailed info on the involved cost.
                         </p>
                     </div>
                 </div>
@@ -3132,41 +3109,41 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Breast lift risks include:
+                            There can be several risks associated with Breast Lift surgery in Hyderabad on rare occasions.
                         </p>
                         <ul>
                             <li>
                                 Allergic reaction to anesthesia
                             </li>
                             <li>
-                                Hematoma - a pool of clotted blood formed in the treated area
+                                Possibility of Hematoma that leads to clotting of a pool of blood in the incision area
                             </li>
                             <li>
-                                Bleeding and infection
+                                Chances of infection at the surgical site
                             </li>
                             <li>
-                                Irregularities in the breast symmetry, shape, and contour
+                                Excessive bleeding due to the intake of anti-inflammatory medicines before the surgery
                             </li>
                             <li>
-                                Reduced sensation in the breast or nipple on a temporary basis
+                                Asymmetrical breasts with uneven shape and irregular contour
+                            </li>
+                            <li>
+                                Temporary or permanent change in sensation in the breast or
                             </li>
                             <li>
                                 Deep vein thrombosis complications
                             </li>
                             <li>
-                                Deep vein thrombosis, cardiac and pulmonary complications
+                                Cardiac and pulmonary complications
                             </li>
                             <li>
-                                Cardiac and pulmonary risks
+                                Fat necrosis or dead fatty tissue found deep inside the skin
                             </li>
                             <li>
-                                Fat necrosis or dead fatty tissue, found deep inside the skin
+                                Delayed healing because of poorly treated incisions
                             </li>
                             <li>
-                                Badly treated incisions leading to delayed healing
-                            </li>
-                            <li>
-                                Revision breast lift surgery
+                                Revision Breast Lift surgery
                             </li>
                         </ul>
                     </div>
@@ -3182,12 +3159,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            There is no ideal age to go for a Breast Lift.
-                            The only condition is that the breasts of a woman should be completely developed,
-                            immaterial of whether she is in her teenage, 20s, or older.
-                            In general, women consider this treatment mostly between the age of 18 - 25 years
-                            due to several reasons, like genetics, weight changes,
-                            issues related to pregnancy, and more.
+                            Having completely developed breasts is one of the primary conditions to go for a Breast Lift surgery. You can be a teenager, in your 20s, or maybe older. But if you satisfy this one condition, you can opt for the surgery without hassles. Women often consider this procedure in Hyderabad due to improve their breast size that has become badly shaped due to pregnancy-related issues, weight changes, or genetic reasons,
                         </p>
                     </div>
                 </div>
@@ -3202,33 +3174,29 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            When going for a Breast Lift from an experienced surgeon in <?= ucwords($city) ?> keep
-                            in mind to do the below things:
+                            The points below can prove helpful to consider before going for the Breast Lift surgery in Hyderabad:
                         </p>
                         <ul>
                             <li>
-                                Go for medical evaluation or lab testing as instructed by your surgeon
+                                Follow the instructions of your surgeon to undergo medical evaluation or lab testing.
                             </li>
                             <li>
-                                Consult the surgeon about your medications so that he could make
-                                proper adjustments
+                                Inform your surgeon about any medications you are taking to help him make proper adjustments accordingly
                             </li>
                             <li>
-                                A baseline mammogram would be advisable before the surgery and after the surgery.
-                                It will help to find out if your breast tissue has undergone any changes
+                                A baseline mammogram before and after the surgery can help to detect any changes in breast tissue
                             </li>
                             <li>
-                                Stop the intake of supplements, anti-inflammatory drugs, aspirin, and any other
-                                medicine that can lead to increased bleeding
+                                Refrain from taking supplements, anti-inflammatory drugs, aspirin, or any other medication that could increase bleeding
                             </li>
                             <li>
-                                Stop consuming alcohol and tobacco products at least 2-3 weeks before the surgery
+                                Avoid consuming alcohol or tobacco products for at least 2-3 weeks prior to the surgery
                             </li>
                             <li>
-                                Consult your surgeon about your doubts, expected results, and recovery period
+                                Discuss any concerns you may have about the procedure, expected outcomes, and recovery period with your surgeon.
                             </li>
                             <li>
-                                Have realistic expectations with the surgery
+                                Make sure to maintain realistic expectations regarding the surgery results
                             </li>
                         </ul>
                     </div>
@@ -3245,190 +3213,30 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                The procedure can last for around 1-2 hours depending on the severity
-                                of the procedure.
+                                You should have a positive attitude with a relaxed mind on the day of surgery in Hyderabad
                             </li>
                             <li>
-                                The surgeon will leave you with a thin tube close to your incisions
-                                to avoid swelling and drain fluid. It will be removed
-                                a few days after the surgery
+                                Depending on the associated complications, the surgeon may around 1 to 2 hours to complete the surgery
                             </li>
                             <li>
-                                You can expect to go home the same after undergoing Mastopexy.
+                                To prevent swelling and fluid build-up, the surgeon may leave a small tube near the incision site. This tube will be removed a few days after the surgery.
                             </li>
                             <li>
-                                You may experience a slight discomfort around the incisions during
-                                or after the surgery
+                                You may go home on the same day of your Mastopexy procedure if there is no severe problem
                             </li>
                             <li>
-                                You could also expect tight skin, bruising, or swelling temporarily
+                                You may experience some discomfort around the incision area during or after the surgery.
                             </li>
                             <li>
-                                After the completion of Breast Lift surgery in <?= ucwords($city) ?> completes,
-                                you could expect reshaped and repositioned breast tissues
+                                Temporary symptoms such as tightness, bruising, or swelling are likely to occur.
+                            </li>
+                            <li>
+                                You can expect your breast tissues to be reshaped and repositioned after the completion of the Breast Lift surgery in Hyderabad,
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Breast Lift surgery?
-                    </p>
-                    <p>
-                        You can be a potential candidate for Breast Lift surgery in <?= ucwords($city) ?> if:
-                    </p>
-                    <ul>
-                        <li>
-                            Your breasts are sagging significantly due to pregnancy, breastfeeding,
-                            aging, or a change in weight
-                        </li>
-                        <li>
-                            You have good overall health and maintain a stable weight
-                        </li>
-                        <li>
-                            Your areolas and nipples are pointing downwards
-                        </li>
-                        <li>
-                            Your breasts have become flat, pendulous, and elongated in shape
-                        </li>
-                        <li>
-                            You have enlarged areolas and stretched skin
-                        </li>
-                        <li>
-                            You don’t smoke or drink since both these habits can affect
-                            the healing results adversely
-                        </li>
-                        <li>
-                            You want to restore lost breast volume
-                        </li>
-                        <li>
-                            You have realistic expectations about the surgery results
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of a Breast Lift surgery?
-                    </p>
-                    <p>
-                        The average cost of Breast Lift surgery in <?= ucwords($city) ?> will range between
-                        1,50,000 INR to 2,0,000 INR. Opting for additional procedures such
-                        as Breast Implants will increase the expenditure accordingly.
-                        Consultation with any of our expert cosmetic surgeons in
-                        <?= ucwords($city) ?> will help you know the exact cost.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Breast Lifts?
-                    </p>
-                    <p>
-                        Breast lift risks include:
-                    </p>
-                    <ul>
-                        <li>
-                            Allergic reaction to anesthesia
-                        </li>
-                        <li>
-                            Hematoma - a pool of clotted blood formed in the treated area
-                        </li>
-                        <li>
-                            Bleeding and infection
-                        </li>
-                        <li>
-                            Irregularities in the breast symmetry, shape, and contour
-                        </li>
-                        <li>
-                            Reduced sensation in the breast or nipple on a temporary basis
-                        </li>
-                        <li>
-                            Deep vein thrombosis complications
-                        </li>
-                        <li>
-                            Deep vein thrombosis, cardiac and pulmonary complications
-                        </li>
-                        <li>
-                            Cardiac and pulmonary risks
-                        </li>
-                        <li>
-                            Fat necrosis or dead fatty tissue, found deep inside the skin
-                        </li>
-                        <li>
-                            Badly treated incisions leading to delayed healing
-                        </li>
-                        <li>
-                            Revision breast lift surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Breast Lift?
-                    </p>
-                    <p>
-                        There is no ideal age to go for a Breast Lift.
-                        The only condition is that the breasts of a woman should be completely developed,
-                        immaterial of whether she is in her teenage, 20s, or older.
-                        In general, women consider this treatment mostly between the age of 18 - 25 years
-                        due to several reasons, like genetics, weight changes,
-                        issues related to pregnancy, and more.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before Breast Lift Surgery?
-                    </p>
-                    <p>
-                        When going for a Breast Lift from an experienced surgeon in <?= ucwords($city) ?> keep
-                        in mind to do the below things:
-                    </p>
-                    <ul>
-                        <li>
-                            Go for medical evaluation or lab testing as instructed by your surgeon
-                        </li>
-                        <li>
-                            Consult the surgeon about your medications so that he could make
-                            proper adjustments
-                        </li>
-                        <li>
-                            A baseline mammogram would be advisable before the surgery and after the surgery.
-                            It will help to find out if your breast tissue has undergone any changes
-                        </li>
-                        <li>
-                            Stop the intake of supplements, anti-inflammatory drugs, aspirin, and any other
-                            medicine that can lead to increased bleeding
-                        </li>
-                        <li>
-                            Stop consuming alcohol and tobacco products at least 2-3 weeks before the surgery
-                        </li>
-                        <li>
-                            Consult your surgeon about your doubts, expected results, and recovery period
-                        </li>
-                        <li>
-                            Have realistic expectations with the surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Breast Lift surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            The procedure can last for around 1-2 hours depending on the severity
-                            of the procedure.
-                        </li>
-                        <li>
-                            The surgeon will leave you with a thin tube close to your incisions
-                            to avoid swelling and drain fluid. It will be removed
-                            a few days after the surgery
-                        </li>
-                        <li>
-                            You can expect to go home the same after undergoing Mastopexy.
-                        </li>
-                        <li>
-                            You may experience a slight discomfort around the incisions during
-                            or after the surgery
-                        </li>
-                        <li>
-                            You could also expect tight skin, bruising, or swelling temporarily
-                        </li>
-                        <li>
-                            After the completion of Breast Lift surgery in <?= ucwords($city) ?> completes,
-                            you could expect reshaped and repositioned breast tissues
-                        </li>
-                    </ul> -->
+               
             </div>
         <?php } elseif ($surgery_str == "breast reduction") {  ?>
             <div class="col padd-null">
