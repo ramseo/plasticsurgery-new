@@ -2723,64 +2723,54 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </ul>
                     </div>
                 </div>
-             
+
             </div>
         <?php } elseif ($surgery_str == "breast augmentation") { ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Do you feel your breasts are smaller than usual? If yes, you can go for
-                        breast augmentation surgery. Our qualified cosmetic surgeons
-                        from <?= ucwords($city) ?> will help you to realize your required breast size.
-                        You can achieve fuller, bigger, and rounder breasts through
-                        breast augmentation.
+                        <strong>
+                            Renowned Surgeons for Breast Augmentation in Hyderabad
+                        </strong>
+                    </p>
+                    <p>
+                        Augmentation mammoplasty or Breast Augmentation aims at enhancing the shape, size, roundness, or completeness of the female breasts. The surgery requires our surgeons in Hyderabad to use saline, silicone implants beneath the breast tissue. A composite breast implant is also one of the widely used options for Breast Augmentation. With our consummate surgeons working for your cause, you can ensure to regain the appearance of your breasts as per your expectation.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for Breast Augmentation in <?= ucwords($city) ?>?
+                    Why Approach Our Surgeons for Breast Augmentation in Hyderabad?
                 </p>
                 <ul>
                     <li>
-                        Most qualified and trusted cosmetic surgeons in <?= ucwords($city) ?> to perform
-                        breast augmentation surgery.
+                        Top plastic surgeons in Hyderabad for Breast Enhancement
                     </li>
                     <li>
-                        Highly experienced in performing breast augmentation procedures
-                        through fat transfer or breast implant technique.
+                        Dexterous in fixing all types of Breast Augmentation implants
                     </li>
                     <li>
-                        Can work with both saline-filled breast implants and silicone
-                        gel-filled implants.
+                        Years of experience in performing successful Breast Augmentation surgeries
                     </li>
                     <li>
-                        Skilled at choosing the right size of the implant and positioning
-                        it at the perfect location that gives the impression
-                        of naturally fuller breasts.
+                        Interact with the patients directly to know about their reason for the surgery
                     </li>
                     <li>
-                        Possess the ability to perform touch-ups to maintain the size and
-                        look of the breasts.
-                    </li>
-                    <li>
-                        Certified by several prestigious national and international associations
-                        for cosmetic surgeons.
+                        Member of several Plastic Surgery associations in India and abroad
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    When it comes to breast augmentation, the type of material you prefer to
-                    use - fat or implant - will influence the cost of the surgery.
-                    It would be wise to visit the cosmetic surgeon in <?= ucwords($city) ?>
-                    for a good estimate.
+                    The cost of a breast enhancement procedure depends largely on the type of implant used, the level of medical facilities provided, the fees of the surgeon, anesthesia, and other charges. You can connect directly with our Breast Augmentation surgeon in Hyderabad to know about the cost of the surgery in detail.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    You can choose from among different options for augmentation like fat transfers,
-                    silicone implants or saline implants. Let one of our best cosmetic surgeons
-                    in <?= ucwords($city) ?> increase your breast size and still make it look natural.
+                    Our expert surgeons perform Breast Augmentation surgery in Hyderabad with due satisfaction and success. Advanced facilities and services at their respective setups, help them further in carrying out the procedure without hassles. Keeping pace with the latest trends in the healthcare domain, our surgeons care to ensure upscale and advanced services.
                 </p>
+                <p>
+                    All our experts leverage sophisticated technical equipment for the surgery and their nursing staff tries its best to attend to all your concerns during the surgery. Fix your appointment with our Breast Augmentation surgeon in Hyderabad today and get the best possible treatment in our clinic.
+                </p>
+
                 <p class="identity">
                     FAQs on Breast Augmentation Surgery in <?= ucwords($city) ?>
                 </p>
@@ -2796,35 +2786,35 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be a good candidate for Breast Augmentation,
-                            you should satisfy the
-                            below-mentioned pointers:
+                            You need to abide by the below-mentioned conditions to be a suitable candidate for Breast Augmentation surgery in Hyderabad:
                         </p>
                         <ul>
                             <li>
-                                You are not an expecting mother or breastfeeding your child
+                                No plans for childbearing anytime soon
                             </li>
                             <li>
-                                You want to get rid of your sagging, asymmetrical, or flattened breasts
+                                No pregnancy goals or breastfeeding activities
                             </li>
                             <li>
-                                Your breasts lag in maintaining an adequate cleavage
+                                Wish to restore the appearance of breasts as they used to be before pregnancy
                             </li>
                             <li>
-                                You do not drink or smoke
+                                Want to break free from asymmetrical, flattened, or sagging breasts
                             </li>
                             <li>
-                                You have realistic goals related to the surgery in <?= ucwords($city) ?>
+                                Unable to maintain proper cleavage
                             </li>
                             <li>
-                                You must be free from any severe health disorder
+                                Good overall health
                             </li>
                             <li>
-                                Should disclose all the medications to the surgeon
+                                No severe medical condition
                             </li>
                             <li>
-                                You are well aware of the probable risks of undergoing
-                                breast augmentation in <?= ucwords($city) ?> or elsewhere
+                                Non-alcoholic and a non-smoker
+                            </li>
+                            <li>
+                                Realistic goals with the surgery
                             </li>
                         </ul>
                     </div>
@@ -2840,12 +2830,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Usually, the cost of a Breast Augmentation procedure in <?= ucwords($city) ?> is around
-                            1,00,000 INR and the cost of the implants may go up to 1,50,000 INR,
-                            or even more. Apart from these costs, the medication,
-                            consultations, mammograms, and check-ups will also factor into the total
-                            cost. Make sure to consult your surgeon for the exact
-                            cost of the surgery.
+                            The cost of Breast Augmentation surgery in Hyderabad may range between 1,00,000 INR and 1,50,000 INR or even more. Much will rely on the breast implant technique used. Consulting any of our surgeons will help you to know the actual cost of the procedure
                         </p>
                     </div>
                 </div>
@@ -2861,25 +2846,43 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Administering anesthesia could harm the body
+                                Reduced sensation in nipples and breasts
                             </li>
                             <li>
-                                Changed sensations in the breast or nipple
+                                changed in the implant position
                             </li>
                             <li>
-                                Change in the position of implants
+                                Adverse reaction to anesthesia
                             </li>
                             <li>
-                                Chances of rupture or leakage in the implants
+                                rupture or leakage in the breast implants
                             </li>
                             <li>
-                                Accumulation of fluid
+                                Fluid build-up, leading to seroma
                             </li>
                             <li>
-                                Tight scar tissues may form close to the implant
+                                Chances of Hematoma or blood accumulation in the treated a
                             </li>
                             <li>
-                                Bad scars, infection, continuous breast pain
+                                Risk of blood leakage from blood vessels after Breast Augmentation, which may cause hematoma
+                            </li>
+                            <li>
+                                Asymmetrical breasts after the surgery
+                            </li>
+                            <li>
+                                Persistent pain in the surgical site
+                            </li>
+                            <li>
+                                Possibility of revisional surgery
+                            </li>
+                            <li>
+                                Formation of scars near the implant
+                            </li>
+                            <li>
+                                intense pain in the treated area
+                            </li>
+                            <li>
+                                Chances of infection, swelling, bruising, etc.
                             </li>
                         </ul>
                     </div>
@@ -2895,13 +2898,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Surgeons usually advise women to wait at least till they become 18 years old,
-                            as by that time, their breasts are more likely to develop completely.
-                            Ideally, the age for breast augmentation surgery in <?= ucwords($city) ?> or
-                            for that reason, anywhere else, should be between 20s and 30s.
-                            Women in this age group are likely to be most healthy, well
-                            aware of their bodies, and grown enough to prepare
-                            themselves mentally for the implants
+                            Any time after a woman’s breasts get fully developed is a good time to go for Breast Augmentation surgery in Hyderabad. To be precise, you should be at least 18 years old to undergo the procedure. A majority of women opt for this surgery in Hyderabad when they are between their 20s and 30 as they are likely to be healthier, well-developed, more aware, and duly prepared for the surgery in this age group.
                         </p>
                     </div>
                 </div>
@@ -2917,7 +2914,19 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                You should bear a cool and calm mind, duly prepared for the surgery in <?= ucwords($city) ?>.
+                                Consult your surgeon to clear your doubt about the surgery, if any
+                            </li>
+                            <li>
+                                Drink ample water to keep your body hydrated
+                            </li>
+                            <li>
+                                Avoid eating something after midnight prior to the surgery in Hyderabad
+                            </li>
+                            <li>
+                                Take a balanced and healthy diet
+                            </li>
+                            <li>
+                                Avoid smoking and drinking alcohol for at least 2 weeks before the surgery
                             </li>
                             <li>
                                 Keep your body properly hydrated with water
@@ -2926,25 +2935,28 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Eat a healthy diet
                             </li>
                             <li>
-                                Avoid eating or drinking anything after midnight to tolerate the
-                                effect of anesthesia
+                                Avoid eating or drinking anything after midnight to tolerate the effect of anaesthesia
                             </li>
                             <li>
-                                Use an antimicrobial soap to wash your body before the surgery
+                                Wash your body properly with an antimicrobial soap
                             </li>
                             <li>
-                                Do not wear any jewellery or piercing when going for the surgery
+                                Avoid putting on any jewellery or piercing during the surgery
                             </li>
                             <li>
-                                Remove polish from your nails to enable the staff to measure
-                                oxygen saturation in your blood without hassles
+                                Make your nails free from polish so that the staff could easily measure your oxygen level
                             </li>
                             <li>
-                                Remove dentures, contact lenses, etc. to reduce risks
+                                If you are wearing contact lenses, dentures, etc., make sure to put them off
                             </li>
                             <li>
-                                Make sure to have someone to take you back home after your Breast Augmentation
-                                Surgery in <?= ucwords($city) ?>
+                                Arrange for someone to take you back after the surgery
+                            </li>
+                            <li>
+                                Have someone to help you at home with your daily chores after the surgery
+                            </li>
+                            <li>
+                                Have some compression bras in advance at home to wear after the surgery during the initial recovery phase.
                             </li>
                         </ul>
                     </div>
@@ -2961,199 +2973,33 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                You should bear a cool and calm mind, duly prepared for the
-                                surgery in <?= ucwords($city) ?>.
+                                You should bear a cool and calm mind on the surgery day in Hyderabad
                             </li>
                             <li>
-                                Reach the hospital on time
+                                The anesthesiologist will administer anesthesia based on your past reactions to it
                             </li>
                             <li>
-                                The anesthetist will ask you questions about your behavior to
-                                anesthesia so that he could provide
-                                the right treatment accordingly
+                                The surgeon will create an incision to place the breast implants
                             </li>
                             <li>
-                                In the operation theater, depending on your response to the anesthetist,
-                                the latter will give an IV to deliver the medicine anesthetic
+                                You could expect the procedure to take around 1-2 hours or more depending on the severity of the surgery
                             </li>
                             <li>
-                                Depending on the procedure and the specific condition of the patient,
-                                the Breast augmentation surgery may take around one to two hours
-                                or maybe more to complete.
+                                You could expect a feeling of stretching or pulling in the treated area
                             </li>
                             <li>
-                                You may feel like stretching or pulling in the breast area after the surgery
+                                In the starting days after the surgery, you may feel tiredness and reduced energy
                             </li>
                             <li>
-                                You will feel tired easily and be less energetic in the starting days
+                                You may also experience persistent pain, which will vanish in a week or two
                             </li>
                             <li>
-                                Pain may persist for around a week or two after the surgery in <?= ucwords($city) ?>
-                            </li>
-                            <li>
-                                As the days pass, you will experience a positive feeling about your breasts
+                                You should have realistic expectations with the surgery
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Breast Augmentation?
-                    </p>
-                    <p>
-                        To be a good candidate for Breast Augmentation,
-                        you should satisfy the
-                        below-mentioned pointers:
-                    </p>
-                    <ul>
-                        <li>
-                            You are not an expecting mother or breastfeeding your child
-                        </li>
-                        <li>
-                            You want to get rid of your sagging, asymmetrical, or flattened breasts
-                        </li>
-                        <li>
-                            Your breasts lag in maintaining an adequate cleavage
-                        </li>
-                        <li>
-                            You do not drink or smoke
-                        </li>
-                        <li>
-                            You have realistic goals related to the surgery in <?= ucwords($city) ?>
-                        </li>
-                        <li>
-                            You must be free from any severe health disorder
-                        </li>
-                        <li>
-                            Should disclose all the medications to the surgeon
-                        </li>
-                        <li>
-                            You are well aware of the probable risks of undergoing
-                            breast augmentation in <?= ucwords($city) ?> or elsewhere
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of Breast Augmentation?
-                    </p>
-                    <p>
-                        Usually, the cost of a Breast Augmentation procedure in <?= ucwords($city) ?> is around
-                        1,00,000 INR and the cost of the implants may go up to 1,50,000 INR,
-                        or even more. Apart from these costs, the medication,
-                        consultations, mammograms, and check-ups will also factor into the total
-                        cost. Make sure to consult your surgeon for the exact
-                        cost of the surgery.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Breast Augmentation?
-                    </p>
-                    <ul>
-                        <li>
-                            Administering anesthesia could harm the body
-                        </li>
-                        <li>
-                            Changed sensations in the breast or nipple
-                        </li>
-                        <li>
-                            Change in the position of implants
-                        </li>
-                        <li>
-                            Chances of rupture or leakage in the implants
-                        </li>
-                        <li>
-                            Accumulation of fluid
-                        </li>
-                        <li>
-                            Tight scar tissues may form close to the implant
-                        </li>
-                        <li>
-                            Bad scars, infection, continuous breast pain
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Breast Augmentation?
-                    </p>
-                    <p>
-                        Surgeons usually advise women to wait at least till they become 18 years old,
-                        as by that time, their breasts are more likely to develop completely.
-                        Ideally, the age for breast augmentation surgery in <?= ucwords($city) ?> or
-                        for that reason, anywhere else, should be between 20s and 30s.
-                        Women in this age group are likely to be most healthy, well
-                        aware of their bodies, and grown enough to prepare
-                        themselves mentally for the implants
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before Breast Augmentation Surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            You should bear a cool and calm mind, duly prepared for the surgery in <?= ucwords($city) ?>.
-                        </li>
-                        <li>
-                            Keep your body properly hydrated with water
-                        </li>
-                        <li>
-                            Eat a healthy diet
-                        </li>
-                        <li>
-                            Avoid eating or drinking anything after midnight to tolerate the
-                            effect of anesthesia
-                        </li>
-                        <li>
-                            Use an antimicrobial soap to wash your body before the surgery
-                        </li>
-                        <li>
-                            Do not wear any jewellery or piercing when going for the surgery
-                        </li>
-                        <li>
-                            Remove polish from your nails to enable the staff to measure
-                            oxygen saturation in your blood without hassles
-                        </li>
-                        <li>
-                            Remove dentures, contact lenses, etc. to reduce risks
-                        </li>
-                        <li>
-                            Make sure to have someone to take you back home after your Breast Augmentation
-                            Surgery in <?= ucwords($city) ?>
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Breast Augmentation surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            You should bear a cool and calm mind, duly prepared for the
-                            surgery in <?= ucwords($city) ?>.
-                        </li>
-                        <li>
-                            Reach the hospital on time
-                        </li>
-                        <li>
-                            The anesthetist will ask you questions about your behavior to
-                            anesthesia so that he could provide
-                            the right treatment accordingly
-                        </li>
-                        <li>
-                            In the operation theater, depending on your response to the anesthetist,
-                            the latter will give an IV to deliver the medicine anesthetic
-                        </li>
-                        <li>
-                            Depending on the procedure and the specific condition of the patient,
-                            the Breast augmentation surgery may take around one to two hours
-                            or maybe more to complete.
-                        </li>
-                        <li>
-                            You may feel like stretching or pulling in the breast area after the surgery
-                        </li>
-                        <li>
-                            You will feel tired easily and be less energetic in the starting days
-                        </li>
-                        <li>
-                            Pain may persist for around a week or two after the surgery in <?= ucwords($city) ?>
-                        </li>
-                        <li>
-                            As the days pass, you will experience a positive feeling about your breasts
-                        </li>
-                    </ul> -->
+
             </div>
         <?php } elseif ($surgery_str == "breast lift") { ?>
             <div class="col padd-null">
