@@ -680,58 +680,58 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Has your face started showing wrinkles and fine lines too early? If yes,
-                        then facelift surgery can restore your youthful skin appreciably! Facelift surgery
-                        or Rhytidectomy enhances the complete appearance of your face thereby reducing
-                        wrinkles, fine lines, and sagging.
-                    </p>
-                    <p>
-                        Turn back the time and get your youthful looks back with facelift surgery
-                        from one of our top cosmetic surgeons in <?= ucwords($city) ?>!
+                        Do you wish to restore your lost facial charm? Opting for a Facelift surgery
+                        in Hyderabad could serve your purpose significantly. Also termed
+                        as Rhytidectomy, this procedure aims at getting away with the ageing
+                        signs visible on the face and neck. These may include sagging skin,
+                        fold lines, excess or reduced fat, muscular deformities in the jaw
+                        and cheeks, double chin or turkey neck, and so on. Visit the best
+                        plastic surgeon in Hyderabad to know more about Facelift
+                        surgery.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Cosmetic Surgeons for Facelift Surgery in <?= ucwords($city) ?>?
+                    Why should you approach Our Surgeons for Facelift surgery in Hyderabad?
                 </p>
                 <ul>
                     <li>
-                        Most skilled surgeons in <?= ucwords($city) ?> for facelift surgery
+                        Hold excellence in performing reconstructive and plastic surgery treatments
                     </li>
                     <li>
-                        Highly proficient at performing different facelift procedures like standard facelift,
-                        mini facelift, mid facelift, and low facelift
+                        Renowned plastic surgeons in Hyderabad for Facelift surgery
                     </li>
                     <li>
-                        Dexterous in performing customized facelifts in combination with other non-invasive
-                        procedures for transformative results.
+                        Help patients regain a younger facial and neck appearance
                     </li>
                     <li>
-                        Extend complete support throughout the recovery phase
+                        Board-certified Plastic surgeons, and members of numerous
+                        plastic surgery associations in India and abroad
                     </li>
                     <li>
-                        Board-certified surgeons with accreditations from multiple national organizations
-                        for cosmetic surgeries
+                        Make you feel at ease while performing Rhytidectomy
                     </li>
                 </ul>
                 <p class="identity">
-                    COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
+                    COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of a facelift varies depending on the extent of the surgery.
-                    Some prefer to have a mini facelift on their forehead or cheeks while
-                    others go for a total facelift. Hence, the price of the treatment
-                    continues to differ.
+                    Depending on whether you want to undergo a full facelift or a mini Facelift surgery
+                    in Hyderabad, the cost may differ accordingly. Our expert facelift
+                    surgeons would be the best to help you get detailed information
+                    about the cost of the Facelift surgery.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    When nothing else works to restore your youthful look, a facelift is the best
-                    treatment. In just one procedure by one of our experienced surgeons
-                    in <?= ucwords($city) ?>, you can notice a visible difference in your
-                    facial appearance.
+                    Our experienced Facelift surgeon works dedicatedly to improve the appearance of your
+                    face and neck. They hold adept expertise in performing Full Facelift,
+                    Lower or Mid Facelift, Cheek Lift, Neck Lift, or Endoscopic Facelift.
+                    To get more info on the type of Facelift surgery that would suit
+                    you, you can always consult any of our Facelift surgery
+                    experts in Hyderabad.
                 </p>
 
                 <p class="identity">
-                    FAQs on Facelift Surgery Surgery in <?= ucwords($city) ?>
+                    FAQs on Facelift Surgery in <?= ucwords($city) ?>
                 </p>
 
                 <!-- ACCODION -->
@@ -745,27 +745,31 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
+                        <p>
+                            Abiding by the following conditions will make you an ideal
+                            candidate for Facelift surgery in Hyderabad:
+                        </p>
                         <ul>
                             <li>
-                                Satisfying the below-mentioned conditions will make
-                                you a suitable candidate for Facelift Surgery.
+                                Want to improve the overall facial appearance
                             </li>
                             <li>
-                                You should have a good overall skin condition with sufficient
-                                elasticity and flexibility with the ability to bounce
-                                back on pinching
+                                Good overall skin condition and elasticity
                             </li>
                             <li>
-                                Your lifestyle does not include smoking or extreme exposure to the sun
+                                The flexibility of the skin to bounce back on pinching
                             </li>
                             <li>
-                                Your face has a strong underlying bone structure
+                                Non-alcoholic and a non-smoker
                             </li>
                             <li>
-                                You have a clear understanding of the healing process
+                                The strong bone structure of the face
                             </li>
                             <li>
-                                You have fair expectations with the surgery
+                                Complete knowledge of the healing process
+                            </li>
+                            <li>
+                                Realistic goals with surgery results
                             </li>
                         </ul>
                     </div>
@@ -781,11 +785,13 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Approaching a certified and experienced cosmetic surgeon in <?= ucwords($city) ?>
-                            can cost you anywhere around 1,00,000 INR – 2,00,000 INR for
-                            facelift surgery.
-                            You can also choose to customize your surgery by including Chin Surgery,
-                            Lip Augmentation, etc. at additional costs.
+                            You may have to spend around 2,50,000 INR for a full Facelift surgery
+                            and approximately 1,50,000 INR for a mini Facelift surgery in
+                            Hyderabad. The cost may change depending on the cosmetic
+                            surgeon you approach. Your decision to include Lip
+                            Augmentation, Chin Surgery, and other facial
+                            surgeries will also influence the cost
+                            significantly.
                         </p>
                     </div>
                 </div>
@@ -800,40 +806,35 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Facelift surgery can lead to several complications
+                            While Facelift surgery in Hyderabad can produce great results, it is wise to be aware of several potential complications associated with it:
                         </p>
                         <ul>
                             <li>
-                                Hematoma, the collection of blood under the skin can happen within
-                                24 hours of the surgery, thus leading to pressure and swelling
+                                Hematoma (the build-up of blood under the skin) can occur within the first day after surgery, causing swelling and pressure.
                             </li>
                             <li>
-                                Permanent Facelift scars that can be hidden by hairline or natural
-                                contours of ear and face
+                                Scarring is a common concern with Facelift surgery, but you can hide them along natural creases or the hairline.
                             </li>
                             <li>
-                                Possibility of infection
+                                Like any surgical procedure, Facelift surgery also carries a risk of infection.
                             </li>
                             <li>
-                                Damaged blood vessels resulting in bleeding
+                                In rare cases, Facelift surgery may damage blood vessels, leading to bleeding.
                             </li>
                             <li>
-                                Slow healing of wounds
+                                Slow wound healing is a possibility after Facelift surgery, which is why it is advisable to follow all post-operative instructions.
                             </li>
                             <li>
-                                Injury to nerves in rare instances, leading to uneven facial
-                                expression or appearance
+                                Although rare, nerve damage can be a possibility during Facelift surgery in Hyderabad, resulting in an uneven facial appearance.
                             </li>
                             <li>
-                                Hampered blood supply to blood tissues,
-                                resulting in hair and skin loss
+                                In some cases, the blood supply to facial tissues may hamper the surgery proceedings, which could lead to skin or hair loss.
                             </li>
                             <li>
-                                Weight changes may change the condition of the skin and face
+                                Change in weight can affect the results of Facelift surgery adversely, so it is better to maintain a stable weight.
                             </li>
                             <li>
-                                Possibility of revision surgeries in case the procedure did not go well
-                                in rare instances
+                                While revision surgeries are not common, they may become unavoidable if the initial procedure did not go as planned.
                             </li>
                         </ul>
                     </div>
@@ -849,11 +850,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            People mostly opt for Facelifts to improve their facial structure that has been
-                            worn out with age. Hence, individuals from 40 to 60 years
-                            of age are more likely to undergo this surgery in <?= ucwords($city) ?>
-                            to get rid of fine lines, wrinkles, deep lines,
-                            and sagging skin in the face and neck area.
+                            When the effect of growing age starts showing up on your face, probably in your 40s and beyond, opting for a Facelift surgery in Hyderabad could be a suitable move. It will help you break free from sagging skin, wrinkles, deep lines, and fine lines formed on the neck and facial area.
                         </p>
                     </div>
                 </div>
@@ -869,32 +866,25 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Get medical evaluation and tests from a lab in <?= ucwords($city) ?> to make
-                                sure that your body is fit enough to undergo the surgery
+                                Undergoing proper medical evaluation as recommended by your surgeon will help you to remain prepared for the surgery in a better manner
                             </li>
                             <li>
-                                Have the required budget to pay for the treatment
+                                Make sure you have the requisite funds to finance Facelift surgery in Hyderabad
                             </li>
                             <li>
-                                Inform your surgeon about your existing medications for proper adjustments
-                                to ensure a safe facelift procedure
+                                Make your surgeon aware of your current medications so that he could make adjustments accordingly for a safe surgery
                             </li>
                             <li>
-                                Stop smoking as the contained nicotine can restrict blood flow,
-                                thus causing complications during the surgery and even later on
+                                Quit smoking as it contains nicotine, which can affect blood circulation and lead to severe surgery complications
                             </li>
                             <li>
-                                Start drinking plenty of water many days before the surgery,
-                                as it will facilitate quick recovery
+                                Keep your body hydrated with water and other additive-free liquids to facilitate satisfying healing
                             </li>
                             <li>
-                                Be prepared with loose clothes or those with buttons, zip, etc.
-                                to avoid taking off and wearing your shirts
-                                repeatedly over your head
+                                Have some to take you home from the clinic after the surgery
                             </li>
                             <li>
-                                You will need someone to drive you home, take care of yourself
-                                and do the cleaning after the surgery
+                                Arrange for some loose-fitted clothes, such as those with zip, buttons, which are easy to wear or remove
                             </li>
                         </ul>
                     </div>
@@ -911,270 +901,82 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                On the day of the surgery in <?= ucwords($city) ?>, you should be at the clinic
-                                with a positive attitude
+                                Come to the clinic with a cool and composed mind on the surgery day
                             </li>
                             <li>
-                                Your surgeon will clear all your apprehensions and doubts
-                                if you have any, in a candid interaction
+                                Expect your surgeon to have an open discussion with you to address any concerns or questions you may have
                             </li>
                             <li>
-                                In the surgery room, the anesthesia expert will inquire if you have
-                                allergic behavior to anesthesia and will
-                                adjust the dose accordingly.
+                                The specialist will ask if you have an allergic reaction to anesthesia to adjust the dose accordingly
                             </li>
                             <li>
-                                Usually, a facelift surgery in <?= ucwords($city) ?> might take around 3-6 hours
-                                depending on the severity of your case. However,
-                                opting for additional cosmetic procedures will
-                                take more time.
+                                The duration of a Facelift surgery in Hyderabad can vary from 3-6 hours, depending on the complexity of the procedure. Additional cosmetic procedures can extend the time even further
                             </li>
                             <li>
-                                During the surgery, you could expect the surgeon to do skin elevation
-                                followed by tightening of muscles and tissues of the face
-                                with the help of advanced tools and techniques.
+                                During the procedure, the surgeon will likely lift and tighten your facial muscles and tissues with the help of advanced techniques
                             </li>
                             <li>
-                                You should have realistic expectations with the surgery so that the results
-                                could not leave you upset.
+                                After the surgery, you may experience discomfort in the treated areas, which should subside within a couple of days
                             </li>
                             <li>
-                                After the surgery, you may feel pain in the treated areas, which will subside
-                                in a day or two
+                                It is common to experience bruising and swelling, which should resolve within 1-2 weeks
                             </li>
                             <li>
-                                You may also experience bruising and swelling on the face,
-                                which will vanish in 1-2 weeks
+                                It is important to have practical expectations about the outcome of the surgery instead of expecting miracles
                             </li>
                         </ul>
                     </div>
                 </div>
                 <!-- ACCODION -->
-
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Facelift Surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Satisfying the below-mentioned conditions will make
-                            you a suitable candidate for Facelift Surgery.
-                        </li>
-                        <li>
-                            You should have a good overall skin condition with sufficient
-                            elasticity and flexibility with the ability to bounce
-                            back on pinching
-                        </li>
-                        <li>
-                            Your lifestyle does not include smoking or extreme exposure to the sun
-                        </li>
-                        <li>
-                            Your face has a strong underlying bone structure
-                        </li>
-                        <li>
-                            You have a clear understanding of the healing process
-                        </li>
-                        <li>
-                            You have fair expectations with the surgery
-                        </li>
-                    </ul>
-
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of Facelift Surgery?
-                    </p>
-                    <p>
-                        Approaching a certified and experienced cosmetic surgeon in <?= ucwords($city) ?>
-                        can cost you anywhere around 1,00,000 INR – 2,00,000 INR for
-                        facelift surgery.
-                        You can also choose to customize your surgery by including Chin Surgery,
-                        Lip Augmentation, etc. at additional costs.
-                    </p>
-
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Facelift Surgery?
-                    </p>
-                    <p>
-                        Facelift surgery can lead to several complications
-                    </p>
-                    <ul>
-                        <li>
-                            Hematoma, the collection of blood under the skin can happen within
-                            24 hours of the surgery, thus leading to pressure and swelling
-                        </li>
-                        <li>
-                            Permanent Facelift scars that can be hidden by hairline or natural
-                            contours of ear and face
-                        </li>
-                        <li>
-                            Possibility of infection
-                        </li>
-                        <li>
-                            Damaged blood vessels resulting in bleeding
-                        </li>
-                        <li>
-                            Slow healing of wounds
-                        </li>
-                        <li>
-                            Injury to nerves in rare instances, leading to uneven facial
-                            expression or appearance
-                        </li>
-                        <li>
-                            Hampered blood supply to blood tissues,
-                            resulting in hair and skin loss
-                        </li>
-                        <li>
-                            Weight changes may change the condition of the skin and face
-                        </li>
-                        <li>
-                            Possibility of revision surgeries in case the procedure did not go well
-                            in rare instances
-                        </li>
-                    </ul>
-
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Facelift Surgery?
-                    </p>
-                    <p>
-                        People mostly opt for Facelifts to improve their facial structure that has been
-                        worn out with age. Hence, individuals from 40 to 60 years
-                        of age are more likely to undergo this surgery in <?= ucwords($city) ?>
-                        to get rid of fine lines, wrinkles, deep lines,
-                        and sagging skin in the face and neck area.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before the Facelift surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Get medical evaluation and tests from a lab in <?= ucwords($city) ?> to make
-                            sure that your body is fit enough to undergo the surgery
-                        </li>
-                        <li>
-                            Have the required budget to pay for the treatment
-                        </li>
-                        <li>
-                            Inform your surgeon about your existing medications for proper adjustments
-                            to ensure a safe facelift procedure
-                        </li>
-                        <li>
-                            Stop smoking as the contained nicotine can restrict blood flow,
-                            thus causing complications during the surgery and even later on
-                        </li>
-                        <li>
-                            Start drinking plenty of water many days before the surgery,
-                            as it will facilitate quick recovery
-                        </li>
-                        <li>
-                            Be prepared with loose clothes or those with buttons, zip, etc.
-                            to avoid taking off and wearing your shirts
-                            repeatedly over your head
-                        </li>
-                        <li>
-                            You will need someone to drive you home, take care of yourself
-                            and do the cleaning after the surgery
-                        </li>
-                    </ul>
-
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Facelift surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            On the day of the surgery in <?= ucwords($city) ?>, you should be at the clinic
-                            with a positive attitude
-                        </li>
-                        <li>
-                            Your surgeon will clear all your apprehensions and doubts
-                            if you have any, in a candid interaction
-                        </li>
-                        <li>
-                            In the surgery room, the anesthesia expert will inquire if you have
-                            allergic behavior to anesthesia and will
-                            adjust the dose accordingly.
-                        </li>
-                        <li>
-                            Usually, a facelift surgery in <?= ucwords($city) ?> might take around 3-6 hours
-                            depending on the severity of your case. However,
-                            opting for additional cosmetic procedures will
-                            take more time.
-                        </li>
-                        <li>
-                            During the surgery, you could expect the surgeon to do skin elevation
-                            followed by tightening of muscles and tissues of the face
-                            with the help of advanced tools and techniques.
-                        </li>
-                        <li>
-                            You should have realistic expectations with the surgery so that the results
-                            could not leave you upset.
-                        </li>
-                        <li>
-                            After the surgery, you may feel pain in the treated areas, which will subside
-                            in a day or two
-                        </li>
-                        <li>
-                            You may also experience bruising and swelling on the face,
-                            which will vanish in 1-2 weeks
-                        </li>
-                    </ul> -->
-
             </div>
         <?php } elseif ($surgery_str == "brow lift") { ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Your forehead and eyelids are among the first places to show the signs
-                        of ageing. A Brow Lift surgery targets this very area of your face,
-                        i.e., sagging skin between the eyebrows and the upper eyelids.
-                        You can minimise the appearance of wrinkles on the eyelids,
-                        which will automatically result in a rejuvenated appearance.
-                        Since it is an intricate surgery, it is vital to consult one of our best
-                        cosmetic surgeons in <?= ucwords($city) ?>.
+                        Are you noticing sagging skin on your forehead, eyebrows, and upper eyelids? If yes, it is high time to go for a Brow Lift surgery in Hyderabad. Surgeons use two different methods to lift the eyebrows and forehead.
+                    </p>
+                    <strong>
+                        Classic lift
+                    </strong>
+                    <p>
+                        The first method requires the surgeon to make a continuous cut from the ears to your hairline.
+                    </p>
+                    <strong>
+                        Endoscopic lift
+                    </strong>
+                    <p>
+                        The second type of Brow lift surgery is less invasive as compared to the first one. It needs the surgeon to make smaller cuts to protect the tissues.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for Brow Lift Surgery in <?= ucwords($city) ?>?
+                    Why Consult Our Surgeons for Brow Lift Surgery in Hyderabad
                 </p>
                 <ul>
                     <li>
-                        The best cosmetic surgeons in <?= ucwords($city) ?> with specialisation in facial
-                        cosmetic procedures
+                        Experienced plastic surgeons with expertise in Brow Lift surgery
                     </li>
                     <li>
-                        Ability to deliver amazing results by minimising the signs of ageing near
-                        the brows
+                        Hold certifications from various national and international plastic surgery associations
                     </li>
                     <li>
-                        Expert at combining Brow Lift surgery with other facial treatments
-                        like facelifts,fillers, or Botox.
+                        Expertise in performing surgeries with minimal or no scars at all
                     </li>
                     <li>
-                        Experienced cosmetic surgeons in <?= ucwords($city) ?>, certified by the top national
-                        associations of cosmetic surgeons.
+                        Help patients get an appealing forehead appearance
+                    </li>
+                    <li>
+                        Interact with the patients to clear all their apprehensions before the surgery
                     </li>
                 </ul>
                 <p class="identity">
-                    COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
+                    COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    When compared to other cosmetic procedures, Brow Lift surgery is a
-                    simple yet intricate treatment. Apart from the main surgery cost,
-                    you should also consider the price of medicines and other
-                    necessities for a smooth recovery. To get an estimate
-                    for Brow Lift surgery, you can always consult
-                    our cosmetic surgeon in <?= ucwords($city) ?>.
-                </p>
-                <p>
-                    To get an estimate for <?= $surgery_str ?> surgery, you can always consult our cosmetic surgeon in <?= ucwords($city) ?>.
+                    The cost for Brow Lift in Hyderabad may differ as per the surgeon or the hospital you choose for the treatment. The cost of medicines, hospital facilities, lab tests, anesthesia, or the surgeon’s fees will also affect the overall expense. You can connect with any of our Brow lift surgeons in Hyderabad to learn more about the cost of this treatment.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Tired eyes with wrinkles can make you look older.
-                    Our surgeons will help to reduce the sagging
-                    skin and wrinkles on your eyelids,
-                    hence letting your eyes look bright,
-                    big, and beautiful.
-                    The customised Brow Lift surgery performed by one of our
-                    best plastic surgeons in <?= ucwords($city) ?> would
-                    be suitable in this regard.
+                    Our brow lift surgeons in Hyderabad will care to perform the surgery with complete satisfaction. They will make you feel relaxed during the entire procedure, thanks to their safe hands and the cordial assistance of their medical staff. Our expert surgeons extend the facilities of advanced surgery equipment, operation beds, experienced nursing staff, and every possible medical amenity to ensure long-lasting success for your Brow lift surgery in Hyderabad.
                 </p>
 
                 <p class="identity">
@@ -1193,32 +995,29 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The points below will help to find out if you are a
-                            suitable candidate for Brow Lift
-                            surgery in <?= ucwords($city) ?>:
+                            To be an ideal candidate for Brow Lift surgery in Hyderabad, abiding by these points would be essential:
                         </p>
                         <ul>
                             <li>
-                                Your eyebrows have started sagging because of excessive skin
+                                Additional skin has left your eyebrows to sag
                             </li>
                             <li>
-                                Heavily sagging brows leading to the vision problem
+                                Sagging brows have started creating vision problems
                             </li>
                             <li>
-                                Formation of vertical frown lines between the brows
+                                Vertical frown lines have started emerging between the brows
                             </li>
                             <li>
-                                Fine lines and horizontal wrinkles on the forehead
+                                Forehead is becoming home to horizontal wrinkles and fine lines
                             </li>
                             <li>
-                                You have good health overall, free from any severe
-                                chronic disease
+                                Good overall health, free from any severe medical condition
                             </li>
                             <li>
-                                You do not consume tobacco or alcohol
+                                Non-smoker and non-alcoholic
                             </li>
                             <li>
-                                You have set measurable goals with the Brow Lift surgery
+                                Realistic goals with the surgery
                             </li>
                         </ul>
                     </div>
@@ -1234,12 +1033,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The average cost of Brow Lift surgery in <?= ucwords($city) ?> ranges between
-                            60,000 INR to 1,30,000 INR. There is however a big variation,
-                            which results due to the selection of hospital,
-                            the expertise of the surgeon, fees of the anesthesiologist,
-                            the use of advanced techniques, the extent of Brow Lift,
-                            the addition of other surgeries, and so on.
+                            The Brow Lift surgery in Hyderabad would cost you around 60,000 INR to 1,30,000 INR. The expense may increase further depending on the surgeon, hospital, facilities, techniques, medical equipment, and other major factors.
                         </p>
                     </div>
                 </div>
@@ -1254,46 +1048,50 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Like almost any other surgery, Brow Lift also accompanies
-                            several risks and complications:
+                            Brow Lift may accompany several risks, just like any other surgery:
                         </p>
                         <ul>
                             <li>
-                                Severe pain, bruising, and swelling
+                                Intense pain after the surgery
                             </li>
                             <li>
-                                Accumulation of flood or seroma, which necessitates
-                                the drainage of fluid
+                                Bruising, and swelling in the treated area
                             </li>
                             <li>
-                                Allergic behaviour to sutures, antiseptic medicines,
-                                dressings, etc.
+                                Accumulation of fluid or seroma, which may require drainage
                             </li>
                             <li>
-                                Allergic reaction to anaesthesia
+                                Allergic reactions to sutures, antiseptic medicines, or dressings
                             </li>
                             <li>
-                                Possibility of infection
+                                Chances of infection due to the use of surgical materials
                             </li>
                             <li>
-                                Skin scarring with visible marks formed due to sutures
+                                Allergy to anesthesia
                             </li>
                             <li>
-                                Loss of sensation in the facial skin and the scalp area
+                                Skin scarring resulting due to sutures with visible marks
                             </li>
                             <li>
-                                Itching in the face or scalp
+                                Lost or reduced sensation in the scalp and facial skin,
                             </li>
                             <li>
-                                Skin contour irregularities leading to depressions and
-                                skin wrinkling
+                                Itching in the incision site
                             </li>
                             <li>
-                                Harm to deeper structures like the eyes, nerves, skull bone,
-                                muscles, and blood vessels
+                                Irregularities in skin contour causing depression
                             </li>
                             <li>
-                                Asymmetrical face
+                                Wrinkling of the skin
+                            </li>
+                            <li>
+                                Risk of damage to deeper structures such as the eyes, nerves, skull bone, muscles, and blood vessels,
+                            </li>
+                            <li>
+                                Asymmetrical face due to botched surgery
+                            </li>
+                            <li>
+                                Chance of revisional surgery
                             </li>
                         </ul>
                     </div>
@@ -1309,12 +1107,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            People between the ages of 40-65 mostly opt for Brow Lift surgery.
-                            During this age bracket, the brow line starts to droop,
-                            fine lines appear across the forehead and wrinkle
-                            formation becomes a norm. However,
-                            young patients in their 20s or 30s having a genetic problem
-                            of “worry lines” may also opt for this surgery
+                            People start developing droopy brow lines, wrinkles, or fine lines across the forehead as they cross the 40-year mark. The age group of 40-65 is hence a probable time to opt for Brow Lift surgery in Hyderabad. In rare cases, if young patients aged between their 20s and 30s get “worry lines” due to genetic problems they may also undergo Brow Lift surgery.
                         </p>
                     </div>
                 </div>
@@ -1330,36 +1123,34 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Quit smoking at least 2 weeks before the surgery in <?= ucwords($city) ?>
+                                Stop smoking and drinking alcohol at least 2 weeks before the procedure.
                             </li>
                             <li>
-                                Quit drinking alcohol at least 2 weeks before the Brow Lift
+                                Consult with the doctor about your medical history and any medications you are currently taking, as they may need adjustment.
                             </li>
                             <li>
-                                Visit the doctor to review your medical history
-                                and suggest the adjustment of
-                                existing medications (if any) accordingly
+                                Discuss any concerns or questions you have about the surgery with your cosmetic surgeon.
                             </li>
                             <li>
-                                Clear your confusion regarding the surgery with your
-                                cosmetic surgeon
+                                Be clear about your need to undergo the surgery and be aware of the potential risks and benefits.
                             </li>
                             <li>
-                                Have a clear reason for undergoing the surgery and be aware
-                                of the related pros and cons
+                                Undergo medical tests such as Complete Blood Count (CBC), Clotting Time (CT), and Bleeding Time (BT) a few days before the surgery to ensure your perfect overall health.
                             </li>
                             <li>
-                                Get medical tests such as Complete Blood Count (CBC), Clotting Time (CT),
-                                and Bleeding Time (BT) a few days before the surgery
-                                to ensure your good health for the surgery
+                                Avoid taking anti-inflammatory drugs or other medications that may increase the risk of bleeding or bruising.
                             </li>
                             <li>
-                                Avoid consumption of anti-inflammatory drugs or other drugs that
-                                could increase bleeding and bruising
+                                Have someone to accompany you home after the surgery
                             </li>
                             <li>
-                                Arrange for someone to be with you during the surgery
-                                and help you take home after the surgery
+                                Wear loose-fitted clothes that are easy to wear and take off
+                            </li>
+                            <li>
+                                Do not eat anything at least 8 hours before the surgery
+                            </li>
+                            <li>
+                                Keep your body hydrated to ensure a speedy recovery
                             </li>
                         </ul>
                     </div>
@@ -1376,278 +1167,84 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                On the day of Brow Lift surgery, be in the hospital on time
+                                On the surgery day, arrive at the hospital with a cool mind
                             </li>
                             <li>
-                                The anesthesiologist will inquire about your reaction to
-                                anesthesia and will administer the dose accordingly
+                                Inform the anesthesiologist if you have an allergy to anesthesia so that the expert may adjust the dose accordingly
                             </li>
                             <li>
-                                In the surgery room, the surgeon will make the incisions
-                                necessary to remove the excess fat, tighten the
-                                sagging skin and make the
-                                forehead wrinkle-free
+                                The surgeon will create the necessary incisions to remove excess fat, tighten sagging skin, and smooth out wrinkles on the forehead
                             </li>
                             <li>
-                                You could expect the Brow Lift procedure to complete in around 1-2 hours
-                                depending on the complications arising due to the surgery.
+                                Depending on the complications arising during the procedure, you can expect the surgery to take around 1-2 hours
                             </li>
                             <li>
-                                The surgeon will suggest you several prescriptions and recovery
-                                instructions to follow
+                                The surgeon will provide you with several prescriptions and instructions for a successful recovery
                             </li>
                             <li>
-                                Your forehead will heal completely within 6 months
+                                It may take up to 6 months for your forehead to fully recover
                             </li>
                             <li>
-                                The surgeon will recommend you visit the clinic at regular intervals
-                                for follow-ups after the surgery
+                                The surgeon will also suggest regular follow-up visits at the clinic after the surgery
                             </li>
                             <li>
-                                Make sure to have realistic expectations with the surgery as the final
-                                outcome may vary significantly than you might have thought
+                                It is important to have realistic expectations for the results of the procedure, as the outcome may differ from your aspirations
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Brow Lift surgery?
-                    </p>
-                    <p>
-                        The points below will help to find out if you are a
-                        suitable candidate for Brow Lift
-                        surgery in <?= ucwords($city) ?>:
-                    </p>
-                    <ul>
-                        <li>
-                            Your eyebrows have started sagging because of excessive skin
-                        </li>
-                        <li>
-                            Heavily sagging brows leading to the vision problem
-                        </li>
-                        <li>
-                            Formation of vertical frown lines between the brows
-                        </li>
-                        <li>
-                            Fine lines and horizontal wrinkles on the forehead
-                        </li>
-                        <li>
-                            You have good health overall, free from any severe
-                            chronic disease
-                        </li>
-                        <li>
-                            You do not consume tobacco or alcohol
-                        </li>
-                        <li>
-                            You have set measurable goals with the Brow Lift surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of Brow Lift surgery?
-                    </p>
-                    <p>
-                        The average cost of Brow Lift surgery in <?= ucwords($city) ?> ranges between
-                        60,000 INR to 1,30,000 INR. There is however a big variation,
-                        which results due to the selection of hospital,
-                        the expertise of the surgeon, fees of the anesthesiologist,
-                        the use of advanced techniques, the extent of Brow Lift,
-                        the addition of other surgeries, and so on.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Brow Lift surgery?
-                    </p>
-                    <p>
-                        Like almost any other surgery, Brow Lift also accompanies
-                        several risks and complications:
-                    </p>
-                    <ul>
-                        <li>
-                            Severe pain, bruising, and swelling
-                        </li>
-                        <li>
-                            Accumulation of flood or seroma, which necessitates
-                            the drainage of fluid
-                        </li>
-                        <li>
-                            Allergic behaviour to sutures, antiseptic medicines,
-                            dressings, etc.
-                        </li>
-                        <li>
-                            Allergic reaction to anaesthesia
-                        </li>
-                        <li>
-                            Possibility of infection
-                        </li>
-                        <li>
-                            Skin scarring with visible marks formed due to sutures
-                        </li>
-                        <li>
-                            Loss of sensation in the facial skin and the scalp area
-                        </li>
-                        <li>
-                            Itching in the face or scalp
-                        </li>
-                        <li>
-                            Skin contour irregularities leading to depressions and
-                            skin wrinkling
-                        </li>
-                        <li>
-                            Harm to deeper structures like the eyes, nerves, skull bone,
-                            muscles, and blood vessels
-                        </li>
-                        <li>
-                            Asymmetrical face
-                        </li>
-                    </ul>
-
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Brow Lift surgery?
-                    </p>
-                    <p>
-                        People between the ages of 40-65 mostly opt for Brow Lift surgery.
-                        During this age bracket, the brow line starts to droop,
-                        fine lines appear across the forehead and wrinkle
-                        formation becomes a norm. However,
-                        young patients in their 20s or 30s having a genetic problem
-                        of “worry lines” may also opt for this surgery
-                    </p>
-
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before the Brow Lift Surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Quit smoking at least 2 weeks before the surgery in <?= ucwords($city) ?>
-                        </li>
-                        <li>
-                            Quit drinking alcohol at least 2 weeks before the Brow Lift
-                        </li>
-                        <li>
-                            Visit the doctor to review your medical history
-                            and suggest the adjustment of
-                            existing medications (if any) accordingly
-                        </li>
-                        <li>
-                            Clear your confusion regarding the surgery with your
-                            cosmetic surgeon
-                        </li>
-                        <li>
-                            Have a clear reason for undergoing the surgery and be aware
-                            of the related pros and cons
-                        </li>
-                        <li>
-                            Get medical tests such as Complete Blood Count (CBC), Clotting Time (CT),
-                            and Bleeding Time (BT) a few days before the surgery
-                            to ensure your good health for the surgery
-                        </li>
-                        <li>
-                            Avoid consumption of anti-inflammatory drugs or other drugs that
-                            could increase bleeding and bruising
-                        </li>
-                        <li>
-                            Arrange for someone to be with you during the surgery
-                            and help you take home after the surgery
-                        </li>
-                    </ul>
-
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Brow Lift surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            On the day of Brow Lift surgery, be in the hospital on time
-                        </li>
-                        <li>
-                            The anesthesiologist will inquire about your reaction to
-                            anesthesia and will administer the dose accordingly
-                        </li>
-                        <li>
-                            In the surgery room, the surgeon will make the incisions
-                            necessary to remove the excess fat, tighten the
-                            sagging skin and make the
-                            forehead wrinkle-free
-                        </li>
-                        <li>
-                            You could expect the Brow Lift procedure to complete in around 1-2 hours
-                            depending on the complications arising due to the surgery.
-                        </li>
-                        <li>
-                            The surgeon will suggest you several prescriptions and recovery
-                            instructions to follow
-                        </li>
-                        <li>
-                            Your forehead will heal completely within 6 months
-                        </li>
-                        <li>
-                            The surgeon will recommend you visit the clinic at regular intervals
-                            for follow-ups after the surgery
-                        </li>
-                        <li>
-                            Make sure to have realistic expectations with the surgery as the final
-                            outcome may vary significantly than you might have thought
-                        </li>
-                    </ul> -->
-
             </div>
         <?php } elseif ($surgery_str == "neck lift") { ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        While you often give importance to your face, you forget to notice
-                        the role of the neck in your overall appearance.
-                        Due to excessive weight gain or loss, hormonal imbalance,
-                        ageing, or any other genetic factors, you may have a sagging
-                        or drooping neck that could mess up how you look.
-                    </p>
-                    <p>
-                        A neck lift aims at tightening the skin of the neck by removing the excess fat
-                        under the chin and creating well-contoured necklines.
-                        We recommend visiting any of our top cosmetic
-                        surgeons in <?= ucwords($city) ?>
-                        for neck lift procedures.
+                        Wrinkling and creasing around the neck often leave you with an aged look. To get away with fat and excess skin responsible for these aging signs, a neck lift is a worthwhile treatment. Our neck lift surgeons in Hyderabad can help you get a slimmer and smoother neck with a carefully done treatment.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for Neck Lift IN <?= ucwords($city) ?>?
+                    Why Approach Our Surgeons for Neck Lift Surgery in Hyderabad?
                 </p>
                 <ul>
                     <li>
-                        The best cosmetic surgeons in <?= ucwords($city) ?> to perform neck lift
+                        Skilled in performing surgery on the area surrounding the neck and head
                     </li>
                     <li>
-                        Testimonials by numerous patients who are more than satisfied with the results
+                        Work on a natural approach to make your neck proportionate to your facial features
                     </li>
                     <li>
-                        Ability to help in restoring youthful appearance even as the ageing skin sets in.
+                        Carry out candid discussions with the patients before performing neck lift surgery in Hyderabad
                     </li>
                     <li>
-                        Renowned cosmetic surgeons for facial aesthetics in <?= ucwords($city) ?>,
-                        certified by several national and international
-                        boards for cosmetic surgeries
+                        Works actively in coming up with successful results as expected by the patient
+                    </li>
+                    <li>
+                        Member of many national and international plastic surgery associations
                     </li>
                 </ul>
 
                 <p class="identity">
-                    COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
+                    COST OF <?= $surgery_str ?> Surgery IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Many cosmetic surgeons in <?= ucwords($city) ?> have varying prices for neck lift
-                    surgeries. This difference in cost depends on the
-                    treatment facilities, the surgeon’s skills, and other
-                    additional recovery treatment prices.
-                    If you are considering neck lift surgery,
-                    it is best to consult our cosmetic surgeon to
-                    get realistic results.
+                    The cost of neck lift surgery in Hyderabad differs according to the surgeon you approach for the treatment. The type of surgery can also make a difference in the cost. For example:
                 </p>
+                <ul>
+                    <li>
+                        Platysmaplasty - to modify or remove the neck muscles or
+                    </li>
+                    <li>
+                        Cervicoplasty -to eliminate the excess skin in the neck
+                    </li>
+                </ul>
+                <p>
+                    Our neck lift surgeons can help you know about the overall cost of the surgery the better way.
+                </p>
+
                 <p class="identity">
                     OUR SERVICE
                 </p>
                 <p>
-                    Is sagging skin on your neck disturbing your appearance? If yes,
-                    you can go for a neck lift procedure by our certified surgeons
-                    in <?= ucwords($city) ?> to make way for transformed results!
+                    Our neck lift surgeons in Hyderabad could make a difference to your facial appearance with an improved neck. Our experts can tighten the skin around your neck to enable you to shun away the aging signs. Feel free to approach our experienced surgeons and get the treatment through advanced medical equipment, with cordial support from their nursing staff.
                 </p>
 
                 <p class="identity">
@@ -1665,38 +1262,32 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be a good candidate for Neck Lift in <?= ucwords($city) ?>,
-                            you should fulfil the below-mentioned
-                            conditions:
+                            To be a good candidate for Neck Lift in Hyderabad, you should fulfil the below-mentioned conditions:
                         </p>
                         <ul>
                             <li>
-                                You should have a healthy body without any severe medical
-                                ailment that could affect recovery
+                                Fulfilling the conditions below will make you an ideal candidate for Neck Lift surgery in Hyderabad
                             </li>
                             <li>
-                                You should not consume nicotine or alcohol
+                                A healthy body without any major medical conditions that could hinder the recovery process
                             </li>
                             <li>
-                                You have a short neck or weak chin resulting in a double
-                                chin that you want to get away with
+                                Refrain from nicotine or alcohol consumption
                             </li>
                             <li>
-                                Your jawline starts sagging and your chin loses volume,
-                                leading to the condition of jowls.
+                                A weak chin or a short neck resulting in a double chin that you wish to eliminate
                             </li>
                             <li>
-                                Your neck is sagging a lot with the weakening of the
-                                underlying neck muscles,
-                                giving way to the Turkey neck
+                                Sagging in your jawline and a loss of volume in your chin, leading to the development of jowls
                             </li>
                             <li>
-                                You have developed platysmal bands, which give your neck a
-                                thick and rubber-band kind of appearance hanging
-                                from the chin to Adam’s apple area.
+                                Excessive sagging in your neck due to weakened underlying neck muscles, commonly known as Turkey neck.
                             </li>
                             <li>
-                                Your neck has developed creases and wrinkles
+                                Develop platysmal bands that create a thick, rubber-band-like appearance around the neck, extending from Adam's apple area to the chin
+                            </li>
+                            <li>
+                                Formation of creases and wrinkles on your neck
                             </li>
                         </ul>
                     </div>
@@ -1712,12 +1303,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The average cost of Neck Lift surgery in <?= ucwords($city) ?>
-                            lies between 70,000 INR to 1,00,000 INR.
-                            Factors like skin and fat excision,
-                            muscle plication, the need for liposuction,
-                            and the surgeon’s expertise are the prominent
-                            ones to decide the cost.
+                            The cost of a Neck Lift surgery in Hyderabad ranges from 70,000 INR to 1,00,000 INR. The cost may depend on several factors, such as the extent of skin and fat removal, muscle plication, the requirement for liposuction, and the level of skill and experience of the surgeon performing the procedure. Medical facilities, medicines, surgeon’s fees, etc., also add up to the cost of Neck Lift surgery.
                         </p>
                     </div>
                 </div>
@@ -1733,32 +1319,34 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Excessive Bleeding leading to the condition Hematoma
+                                Risk of excessive bleeding, which can lead to the development of Hematoma.
                             </li>
                             <li>
-                                Nerve injury, skin loss, breakdown of wounds
+                                Nerve damage, skin loss, wound breakdown
                             </li>
                             <li>
-                                Formation of seroma or abnormal accumulation of fluid
-                                at the surgical incision site
+                                Formation of seroma - an abnormal accumulation of fluid at the site of the surgical incision
                             </li>
                             <li>
-                                Adverse reaction to anesthesia
+                                Allergic reactions to anesthesia
                             </li>
                             <li>
-                                Rare chances of scarring and bruising
+                                Scarring, bruising, or intense pain
                             </li>
                             <li>
                                 Loss or reduction of sensation in the treated area
                             </li>
                             <li>
-                                Asymmetric results
+                                Asymmetric neck after the surgery in Hyderabad
                             </li>
                             <li>
-                                Need for revisional surgery
+                                Stiffness in the neck after the procedure
                             </li>
                             <li>
-                                Stiffness of the neck
+                                Possibility of revisional surgery
+                            </li>
+                            <li>
+                                Infection due to the use of sutures and other surgical materials
                             </li>
                         </ul>
                     </div>
@@ -1774,13 +1362,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you have lost considerable weight, lost neck skin, have excess fat,
-                            or have developed horizontal skin bands called neck bands,
-                            this is the right time to opt for Neck Lift in <?= ucwords($city) ?>.
-                            Patients mostly between the age of 35 and 65 prefer
-                            opting for a neck lift.
-                            You should however be physically and mentally fit at the time
-                            of surgery.
+                            If you are experiencing significant weight loss, loose neck skin, excess fat deposits, or horizontal skin bands (neckbands), you could consider opting for a Neck Lift procedure in Hyderabad. Typically, individuals between the ages of 35 and 65 opt for this procedure. It is important to note that you should remain fit both physically and mentally before undergoing surgery.
                         </p>
                     </div>
                 </div>
@@ -1795,45 +1377,41 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Before you opt for a Neck lift surgery, it would be good
-                            to include the following essential
-                            things in your checklist:
+                            If you are considering a Neck lift surgery in Hyderabad, it is important to include the following items on your checklist:
                         </p>
                         <ul>
                             <li>
-                                Have good mental and physical health
+                                Ensure you have a good mental and physical state
                             </li>
                             <li>
-                                Get your blood tests to ensure your good health
+                                Get a blood test to confirm your overall health
                             </li>
                             <li>
-                                If you are pregnant, it is better to avoid the surgery
-                                for the time being
+                                If you're pregnant,
                             </li>
                             <li>
-                                Have someone drive you to the clinic and back home
+                                It is advisable to postpone the surgery in case you are pregnant or have plans to be pregnant
                             </li>
                             <li>
-                                Have someone to help you execute your daily cores
-                                after the surgery
+                                Arrange for transportation to and from the clinic on the day of the surgery
                             </li>
                             <li>
-                                Arrange for loose clothes to make you comfortable during
-                                and after the surgery
+                                Arrange for someone to help you with daily tasks after the surgery
                             </li>
                             <li>
-                                Make your surgeon aware of the medications you are taking
-                                at present
+                                Wear loose-fitting clothes to stay comfortable during and after the surgery
                             </li>
                             <li>
-                                Avoid taking Aspirin, health supplements, and anti-inflammatory drugs
-                                to avoid extreme bleeding during surgery
+                                Inform your surgeon of any current medications you are taking
                             </li>
                             <li>
-                                Keep yourself hydrated
+                                Avoid the consumption of aspirin, health supplements, and anti-inflammatory drugs to prevent excessive bleeding during the surgery
                             </li>
                             <li>
-                                Avoid eating anything at least up to eight hours before the surgery
+                                Stay hydrated with water or additive-free fluids
+                            </li>
+                            <li>
+                                Refrain from eating anything at least eight hours before the surgery.
                             </li>
                         </ul>
                     </div>
@@ -1850,279 +1428,77 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                On the day of the Neck Lift surgery in <?= ucwords($city) ?>, you will be given general
-                                anesthesia to avoid pain during the procedure
+                                During the Neck Lift surgery in Hyderabad, be at the clinic with a positive attitude
                             </li>
                             <li>
-                                Your surgeon will make incisions to operate on the deep structural tissues
-                                of the lower face and neck.
+                                Someone will administer general anesthesia to ensure a pain-free surgery experience
                             </li>
                             <li>
-                                You could also expect the surgeon to remove the excess skin
+                                The surgeon will create incisions to access the deep structural tissues of the lower face and neck
                             </li>
                             <li>
-                                The entire surgery will continue for 1-3 hours and will work
-                                best for patients having loose skin on the neck
+                                The expert may also eliminate excess skin from the neck
                             </li>
                             <li>
-                                You should have realistic expectations with the surgery results
+                                The procedure typically lasts for 1-3 hours and is most effective for patients with loose skin in the neck area
                             </li>
                             <li>
-                                Usually, it will take around 2 weeks for pain, swelling, and bruising to resolve
-                                and to make neck contours visible after the surgery in <?= ucwords($city) ?>
+                                Following the surgery in Hyderabad, it generally takes 2 weeks for pain, swelling, and bruising to subside and for the neck contours to become visible
                             </li>
                             <li>
-                                Around 4-6 weeks will be sufficient for complete recovery after
-                                which you could go back to work.
-                                In rare cases, this duration
-                                may extend further
+                                Recovery time is typically 4-6 weeks, after which most individuals can return to work, though in some cases, recovery may take longer
                             </li>
                             <li>
-                                In around 3 months, you can expect the swelling on the neck
-                                to vanish completely
+                                Within approximately 3 months, all swelling in the neck area should be resolved completely
+                            </li>
+                            <li>
+                                It is important to have realistic expectations regarding the outcome of the surgery
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Neck Lift?
-                    </p>
-                    <p>
-                        To be a good candidate for Neck Lift in <?= ucwords($city) ?>,
-                        you should fulfil the below-mentioned
-                        conditions:
-                    </p>
-                    <ul>
-                        <li>
-                            You should have a healthy body without any severe medical
-                            ailment that could affect recovery
-                        </li>
-                        <li>
-                            You should not consume nicotine or alcohol
-                        </li>
-                        <li>
-                            You have a short neck or weak chin resulting in a double
-                            chin that you want to get away with
-                        </li>
-                        <li>
-                            Your jawline starts sagging and your chin loses volume,
-                            leading to the condition of jowls.
-                        </li>
-                        <li>
-                            Your neck is sagging a lot with the weakening of the
-                            underlying neck muscles,
-                            giving way to the Turkey neck
-                        </li>
-                        <li>
-                            You have developed platysmal bands, which give your neck a
-                            thick and rubber-band kind of appearance hanging
-                            from the chin to Adam’s apple area.
-                        </li>
-                        <li>
-                            Your neck has developed creases and wrinkles
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of a Neck Lift?
-                    </p>
-                    <p>
-                        The average cost of Neck Lift surgery in <?= ucwords($city) ?>
-                        lies between 70,000 INR to 1,00,000 INR.
-                        Factors like skin and fat excision,
-                        muscle plication, the need for liposuction,
-                        and the surgeon’s expertise are the prominent
-                        ones to decide the cost.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Neck Lift surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Excessive Bleeding leading to the condition Hematoma
-                        </li>
-                        <li>
-                            Nerve injury, skin loss, breakdown of wounds
-                        </li>
-                        <li>
-                            Formation of seroma or abnormal accumulation of fluid
-                            at the surgical incision site
-                        </li>
-                        <li>
-                            Adverse reaction to anesthesia
-                        </li>
-                        <li>
-                            Rare chances of scarring and bruising
-                        </li>
-                        <li>
-                            Loss or reduction of sensation in the treated area
-                        </li>
-                        <li>
-                            Asymmetric results
-                        </li>
-                        <li>
-                            Need for revisional surgery
-                        </li>
-                        <li>
-                            Stiffness of the neck
-                        </li>
-                    </ul>
-
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Neck Lift surgery?
-                    </p>
-                    <p>
-                        If you have lost considerable weight, lost neck skin, have excess fat,
-                        or have developed horizontal skin bands called neck bands,
-                        this is the right time to opt for Neck Lift in <?= ucwords($city) ?>.
-                        Patients mostly between the age of 35 and 65 prefer
-                        opting for a neck lift.
-                        You should however be physically and mentally fit at the time
-                        of surgery.
-                    </p>
-
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before the Neck Lift Surgery?
-                    </p>
-                    <p>
-                        Before you opt for a Neck lift surgery, it would be good
-                        to include the following essential
-                        things in your checklist:
-                    </p>
-                    <ul>
-                        <li>
-                            Have good mental and physical health
-                        </li>
-                        <li>
-                            Get your blood tests to ensure your good health
-                        </li>
-                        <li>
-                            If you are pregnant, it is better to avoid the surgery
-                            for the time being
-                        </li>
-                        <li>
-                            Have someone drive you to the clinic and back home
-                        </li>
-                        <li>
-                            Have someone to help you execute your daily cores
-                            after the surgery
-                        </li>
-                        <li>
-                            Arrange for loose clothes to make you comfortable during
-                            and after the surgery
-                        </li>
-                        <li>
-                            Make your surgeon aware of the medications you are taking
-                            at present
-                        </li>
-                        <li>
-                            Avoid taking Aspirin, health supplements, and anti-inflammatory drugs
-                            to avoid extreme bleeding during surgery
-                        </li>
-                        <li>
-                            Keep yourself hydrated
-                        </li>
-                        <li>
-                            Avoid eating anything at least up to eight hours before the surgery
-                        </li>
-                    </ul>
-
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Neck Lift surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            On the day of the Neck Lift surgery in <?= ucwords($city) ?>, you will be given general
-                            anesthesia to avoid pain during the procedure
-                        </li>
-                        <li>
-                            Your surgeon will make incisions to operate on the deep structural tissues
-                            of the lower face and neck.
-                        </li>
-                        <li>
-                            You could also expect the surgeon to remove the excess skin
-                        </li>
-                        <li>
-                            The entire surgery will continue for 1-3 hours and will work
-                            best for patients having loose skin on the neck
-                        </li>
-                        <li>
-                            You should have realistic expectations with the surgery results
-                        </li>
-                        <li>
-                            Usually, it will take around 2 weeks for pain, swelling, and bruising to resolve
-                            and to make neck contours visible after the surgery in <?= ucwords($city) ?>
-                        </li>
-                        <li>
-                            Around 4-6 weeks will be sufficient for complete recovery after
-                            which you could go back to work.
-                            In rare cases, this duration
-                            may extend further
-                        </li>
-                        <li>
-                            In around 3 months, you can expect the swelling on the neck
-                            to vanish completely
-                        </li>
-                    </ul> -->
-
             </div>
         <?php } elseif ($surgery_str == "chin surgery") { ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Also called Genioplasty or Mentoplasty, Chin surgery is the process
-                        to augment or reduce the chin based on your facial features.
-                        The cosmetic surgeon can move the chin backward
-                        or forward and change its size by moving
-                        it up and above. Our expert cosmetic
-                        surgeons in <?= ucwords($city) ?> help to achieve a beautiful chin structure
-                        that remains symmetrical with your face.
+                        While performing Chin Surgery the plastic surgeon places a custom-fit chin implant to enhance the facial appearance of the patient. Also termed Mentoplasty or Genioplasty, the procedure improves the jawline structure and strengthens a recessed and weaker chin. Our chin surgeons in Hyderabad hold dexterity in executing this treatment with extreme precision.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for Chin Surgery in <?= ucwords($city) ?>?
+                    Why Consult Our Surgeons for Chin Surgery in Hyderabad?
                 </p>
                 <ul>
                     <li>
-                        Our renowned cosmetic surgeons in <?= ucwords($city) ?> hold adept expertise in performing
-                        numerous chin augmentation and reduction surgeries with success
+                        Experienced in performing numerous chin surgeries to improve the patient’s facial harmony.
                     </li>
                     <li>
-                        Expert at Sliding Genioplasty - correcting longer and protruding chins.
+                        Certified by many reputed plastic surgery associations in India and overseas.
                     </li>
                     <li>
-                        Specialized in working with chin implants to achieve the desired looks.
+                        Work with precision to bring the patient’s chin in improved proportion with other facial features
                     </li>
                     <li>
-                        Skilled cosmetic surgeons from <?= ucwords($city) ?> who leave barely visible scars
-                        that fade quickly over time.
+                        Satisfy all the queries and concerns of the patients before starting the surgery
                     </li>
                     <li>
-                        Members of several national and international cosmetic surgery boards
+                        Satisfy all the queries and concerns of the patients before starting the surgery
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    For the cost of chin surgeries, the type of recommended treatment will be
-                    the deciding factor. If you want to increase the size of the chin, the
-                    cosmetic surgeon will usually recommend using chin implants.
-                    If you want to reduce the chin size, Genioplasty is the best choice.
-                    So, the overall cost of chin surgery depends on the customized
-                    surgery, the cosmetic surgeon in <?= ucwords($city) ?>,
-                    and the additional medicines.
+                    The type of chin implant that you opt for Chin Surgery is one of the mainstay factors to decide the surgery cost. For instance, you can choose bone graft, cadaveric tissue graft silicone or polyethylene implant, or autologous tissue graft. This will however exclude the cost of anesthetics, the fees of the surgeon, and the charges for operating room facilities. Direct discussion with any of our chin surgeons in Hyderabad will help you get a deeper insight into the cost of the entire procedure and the additional facilities.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Are you worried that your chin does not complement the rest of your face?
-                    If yes, get the help of any of our cosmetic surgeons in <?= ucwords($city) ?>
-                    to fix the issue and change the appearance of your face.
+                    With our highly experienced chin surgeons in Hyderabad performing your surgery, you are in safe hands. Their sophisticated operating rooms studded with advanced surgery equipment will make your treatment easier and hassle-free. You can always contact our expert chin surgeons in Hyderabad to get the ingrained details associated with Chin Surgery.
                 </p>
                 <p class="identity">
                     FAQs on Chin Surgery in <?= ucwords($city) ?>
                 </p>
-                <!-- ACCODION -->
+
                 <div class="accordion-container">
                     <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
                         <span>
@@ -2134,27 +1510,29 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            An ideal candidate for Chin Surgery should fulfil
-                            the below-mentioned requirements:
+                            If you want to opt for Chin Surgery in Hyderabad, adhering to the following points will make you an ideal candidate
                         </p>
                         <ul>
                             <li>
-                                Unappealing looks on the chin
+                                Your face looks unappealing due to the asymmetrical chin
                             </li>
                             <li>
-                                Too short chin or with a low projection
+                                The chin lacks projection or is too short
                             </li>
                             <li>
-                                Insecurity about weak jawline
+                                A weak jawline makes you feel insecure
                             </li>
                             <li>
-                                Physically healthy and maintains a stable weight
+                                Good health overall and a stable body weight
                             </li>
                             <li>
-                                Realistic expectations with the chin surgery in <?= ucwords($city) ?>
+                                Free from any severe medical condition
                             </li>
                             <li>
-                                Non-smoker and non-alcoholic
+                                Non-alcoholic and a non-smoker
+                            </li>
+                            <li>
+                                Realistic expectation with the Chin Surgery result
                             </li>
                         </ul>
                     </div>
@@ -2170,10 +1548,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost of a chin surgery in <?= ucwords($city) ?> depends upon several factors
-                            like the procedure performed, the fees of the surgeon,
-                            the hospital, and more.
-                            The average cost ranges between 70,000 INR - 150,000 INR.
+                            Undergoing Chin Surgery in Hyderabad may cost you around 70,000 INR - 150,000 INR. The price may vary depending on the surgeon’s fees, the choice of hospital or clinic, the procedure carried out, etc.
                         </p>
                     </div>
                 </div>
@@ -2187,37 +1562,39 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
+                        <strong>
+                            Several complications may arise as a result of Chin Surgery in Hyderabad:
+                        </strong>
                         <ul>
                             <li>
-                                Allergic behaviour to anesthesia
+                                Allergic behaviour on administering anesthesia
                             </li>
                             <li>
-                                Swelling in the chin region
+                                Inflammation in the chin area
                             </li>
                             <li>
-                                Asymmetrical appearance of the chin
+                                The chin may appear asymmetrical
                             </li>
                             <li>
-                                Bruising on the sides of the chin that can appear from minimal
-                                to “black and blue”
+                                Minimal to “black and blue” bruising on the sides of the chin
                             </li>
                             <li>
-                                Numbness in the lower lip and chin
+                                Tingling sensation or numbness in the chin or lower lip
                             </li>
                             <li>
-                                Unappealing facial proportions after the surgery
+                                Unfavourable results, such as asymmetrical facial proportions
                             </li>
                             <li>
-                                Displacement of chin implant
+                                Dislocated chin implant after the surgery
                             </li>
                             <li>
-                                Need to change the silicon chin implant of a different size
+                                Urge to replace the existing silicone chin implant with an implant of another size
                             </li>
                             <li>
-                                Scar tissues surrounding the chin implant
+                                Excessive scarring around the chin implant
                             </li>
                             <li>
-                                Skin discoloration
+                                Discolouration of skin
                             </li>
                         </ul>
                     </div>
@@ -2233,13 +1610,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Chin surgery is an optional procedure that you undergo if you think your chin is too long,
-                            broad, or projects too far from your nose.
-                            The surgery in <?= ucwords($city) ?> can enhance the balance of your chin with other facial features.
-                            Chin surgery is popular among men and women of almost all age groups worldwide.
-                            There is however no specific age limitation for the procedure.
-                            Even 15 or 16-year-old young boys and girls could opt for it
-                            if they have a fully developed chin.
+                            If you are not happy with the projection or appearance of your chin, the option to undergo Chin Surgery in Hyderabad is wide open. This cosmetic procedure can make your chin appear on par with other facial features. Although there is no specific age requirement for Chin Surgery, individuals must have a fully developed chin to undergo the procedure. Even teenagers 15-16 years old can undergo this surgery with the consent of their parents.
                         </p>
                     </div>
                 </div>
@@ -2255,30 +1626,31 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Visit your cosmetic surgeon to discuss all your apprehensions and doubts
-                                about the chin surgery
+                                Before getting Chin Surgery in Hyderabad, make sure to consult with your cosmetic surgeon and clarify any doubts or concerns you may have.
                             </li>
                             <li>
-                                Get all the lab tests and medical evaluations to enable the surgeon to find out
-                                of your existing condition is good enough for the surgery
+                                To determine your eligibility for the procedure, the surgeon will conduct various lab tests and medical evaluations.
                             </li>
                             <li>
-                                Abide by the do’s and don’ts instructed by the surgeon
+                                Follow the instructions provided by your surgeon regarding what to do and what to avoid before and after the surgery.
                             </li>
                             <li>
-                                Quit smoking and alcohol to combat the entry of toxins and carcinogens
-                                into the bloodstream
+                                It's recommended to quit smoking and alcohol consumption well in advance to avoid introducing toxins and carcinogens to your body.
                             </li>
                             <li>
-                                Inform your surgeon about any of your existing medications, as he will suggest
-                                making proper adjustments accordingly
+                                Inform your surgeon of any medications you are currently taking, as they may need proper adjustment adjusted before the surgery.
                             </li>
                             <li>
-                                Get some easy to wear garments in advance
+                                Buy or arrange for comfortable clothing after the surgery, it should be easy to wear and remove
                             </li>
                             <li>
-                                Ask someone to accompany you to the clinic and get you back home after
-                                the surgery
+                                Have someone to take you back home after the surgery
+                            </li>
+                            <li>
+                                Keep yourself hydrated with water and additive-free liquids as it could help in healing wounds and satisfying recovery.
+                            </li>
+                            <li>
+                                You can have a light meal around 6-8 hours before the surgery, but make sure it is not protein-rich, fried, or fatty
                             </li>
                         </ul>
                     </div>
@@ -2295,344 +1667,350 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Be ready for the surgery day with the positive attitude
+                                Be at the clinic with a positive mindset on the surgery day
                             </li>
                             <li>
-                                Usually, the surgeons in <?= ucwords($city) ?> perform chin surgery as an
-                                outpatient treatment
+                                Usually, surgeons perform this surgery as an outpatient treatment.
                             </li>
                             <li>
-                                One of the staff members will administer general or IV anesthesia
-                                to make the chin area numb
+                                You could expect the anesthesiologist to administer either general or IV anesthesia to numb the chin area
                             </li>
                             <li>
-                                The surgeon will make incisions with the latest technique inside your mouth
-                                or under your chin
+                                Our surgeons in Hyderabad will use the latest techniques to make incisions either inside your mouth or under your chin.
                             </li>
                             <li>
-                                The incisions will be closed with the help of tapes, sutures, or skin
-                                adhesives
+                                After carrying out the surgery, the doctor will close the incisions with tapes, sutures, or skin adhesives.
                             </li>
                             <li>
-                                The surgeon will apply facial drains to build fluid in your neck and
-                                to minimize blood.
+                                The surgeon may also apply facial drains to prevent fluid build-up in your neck and reduce blood loss,
                             </li>
                             <li>
-                                The doctor will remove these facial drains after a couple of days
+                                The drains will be removed after a couple of days of Chin Surgery
                             </li>
                             <li>
-                                It will take around an hour for the procedure to complete
+                                The surgery usually takes around an hour to complete, and you can return home about two hours after the completion of the surgery.
                             </li>
                             <li>
-                                You can go home just after around two hours from the surgery completion
+                                You could expect some swelling and slight discomfort,
                             </li>
                             <li>
-                                You could expect swelling and slight discomfort
+                                The chin and neck skin may appear tight due to bruising and swelling.
                             </li>
                             <li>
-                                The chin and neck skin may appear tight because of bruising and
-                                swelling
+                                The surgery can indeed make positive changes to your face
                             </li>
                             <li>
-                                The surgery can help to inflict some positive changes on your face
-                            </li>
-                            <li>
-                                Still, you should have realistic expectations with the procedure
+                                It is still essential to have realistic expectations about the results.
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Chin Surgery?
-                    </p>
-                    <p>
-                        An ideal candidate for Chin Surgery should fulfil
-                        the below-mentioned requirements:
-                    </p>
-                    <ul>
-                        <li>
-                            Unappealing looks on the chin
-                        </li>
-                        <li>
-                            Too short chin or with a low projection
-                        </li>
-                        <li>
-                            Insecurity about weak jawline
-                        </li>
-                        <li>
-                            Physically healthy and maintains a stable weight
-                        </li>
-                        <li>
-                            Realistic expectations with the chin surgery in <?= ucwords($city) ?>
-                        </li>
-                        <li>
-                            Non-smoker and non-alcoholic
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of Chin Surgery?
-                    </p>
-                    <p>
-                        The cost of a chin surgery in <?= ucwords($city) ?> depends upon several factors
-                        like the procedure performed, the fees of the surgeon,
-                        the hospital, and more.
-                        The average cost ranges between 70,000 INR - 150,000 INR.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Chin Surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Allergic behaviour to anesthesia
-                        </li>
-                        <li>
-                            Swelling in the chin region
-                        </li>
-                        <li>
-                            Asymmetrical appearance of the chin
-                        </li>
-                        <li>
-                            Bruising on the sides of the chin that can appear from minimal
-                            to “black and blue”
-                        </li>
-                        <li>
-                            Numbness in the lower lip and chin
-                        </li>
-                        <li>
-                            Unappealing facial proportions after the surgery
-                        </li>
-                        <li>
-                            Displacement of chin implant
-                        </li>
-                        <li>
-                            Need to change the silicon chin implant of a different size
-                        </li>
-                        <li>
-                            Scar tissues surrounding the chin implant
-                        </li>
-                        <li>
-                            Skin discoloration
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Chin Surgery?
-                    </p>
-                    <p>
-                        Chin surgery is an optional procedure that you undergo if you think your chin is too long,
-                        broad, or projects too far from your nose.
-                        The surgery in <?= ucwords($city) ?> can enhance the balance of your chin with other facial features.
-                        Chin surgery is popular among men and women of almost all age groups worldwide.
-                        There is however no specific age limitation for the procedure.
-                        Even 15 or 16-year-old young boys and girls could opt for it
-                        if they have a fully developed chin.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before the Chin Surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Visit your cosmetic surgeon to discuss all your apprehensions and doubts
-                            about the chin surgery
-                        </li>
-                        <li>
-                            Get all the lab tests and medical evaluations to enable the surgeon to find out
-                            of your existing condition is good enough for the surgery
-                        </li>
-                        <li>
-                            Abide by the do’s and don’ts instructed by the surgeon
-                        </li>
-                        <li>
-                            Quit smoking and alcohol to combat the entry of toxins and carcinogens
-                            into the bloodstream
-                        </li>
-                        <li>
-                            Inform your surgeon about any of your existing medications, as he will suggest
-                            making proper adjustments accordingly
-                        </li>
-                        <li>
-                            Get some easy to wear garments in advance
-                        </li>
-                        <li>
-                            Ask someone to accompany you to the clinic and get you back home after
-                            the surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Chin surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Be ready for the surgery day with the positive attitude
-                        </li>
-                        <li>
-                            Usually, the surgeons in <?= ucwords($city) ?> perform chin surgery as an
-                            outpatient treatment
-                        </li>
-                        <li>
-                            One of the staff members will administer general or IV anesthesia
-                            to make the chin area numb
-                        </li>
-                        <li>
-                            The surgeon will make incisions with the latest technique inside your mouth
-                            or under your chin
-                        </li>
-                        <li>
-                            The incisions will be closed with the help of tapes, sutures, or skin
-                            adhesives
-                        </li>
-                        <li>
-                            The surgeon will apply facial drains to build fluid in your neck and
-                            to minimize blood.
-                        </li>
-                        <li>
-                            The doctor will remove these facial drains after a couple of days
-                        </li>
-                        <li>
-                            It will take around an hour for the procedure to complete
-                        </li>
-                        <li>
-                            You can go home just after around two hours from the surgery completion
-                        </li>
-                        <li>
-                            You could expect swelling and slight discomfort
-                        </li>
-                        <li>
-                            The chin and neck skin may appear tight because of bruising and
-                            swelling
-                        </li>
-                        <li>
-                            The surgery can help to inflict some positive changes on your face
-                        </li>
-                        <li>
-                            Still, you should have realistic expectations with the procedure
-                        </li>
-                    </ul> -->
-
             </div>
         <?php } elseif ($surgery_str == "cheek augmentation") { ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
                         <strong>
-                            Who would not want contoured, smooth cheeks?
+                            The Trustworthy Cheek Augmentation Surgeons in Hyderabad
                         </strong>
                     </p>
                     <p>
-                        Cheek augmentation surgery helps those with flat or hollow cheeks.
-                        It enables you to get bigger and plump looking cheeks.
-                        This surgery is also suitable for people wishing
-                        to restore their appearance after
-                        any accident or untoward incident.
-                    </p>
-                    <p>
-                        Choose the most respected cosmetic surgeon in <?= ucwords($city) ?> to enhance your cheeks naturally
-                        and improve your overall appearance.
+                        If you are noticing a flat appearance of your mid-face, it is due to your deformed cheekbones. It may have happened due to an accident or any other reason. In any case, opting for cheek implant surgery is a befitting solution to remedy this flawed appearance. The sole purpose of this surgery is to lift or add volume to your cheeks. Our Cheek Augmentation surgeons in Hyderabad hold a thriving record of performing cheek implants and fat grafting - the two widely performed surgeries in this regard.
                     </p>
                 </div>
                 <p class="identity">
-                    WHY CHOOSE <?= $surgery_str ?> IN <?= ucwords($city) ?>? </p>
+                    Why Consult Our Surgeons for Cheek Augmentation Surgery in Hyderabad?
+                </p>
                 <ul>
                     <li>
-                        One of the most experienced facial cosmetic surgeons in <?= ucwords($city) ?>.
+                        Have performed countless cheek surgeries to enhance the facial appearance of the patients
                     </li>
                     <li>
-                        Expertise in various forms of cheek augmentation procedures like
-                        fat transfer and cheek implants.
+                        Extremely qualified and experienced to perform Cheek Augmentation surgery in Hyderabad
                     </li>
                     <li>
-                        Skilled at helping the patients decide the best size and type of cheek
-                        implants that compliments their facial features.
+                        Members of several renowned Indian and international plastic surgery associations
                     </li>
                     <li>
-                        One of the top board-certified cosmetic surgeons in <?= ucwords($city) ?> and the member
-                        of numerous cosmetic surgery associations in India.
+                        Proficient in carrying out malar, sub-malar, and extended malar implants
                     </li>
                 </ul>
                 <p class="identity">
-                    COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
+                    COST OF <?= $surgery_str ?> Surgery IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    When it comes to the cost of cheek augmentation, several variables determine
-                    the final amount. For instance, the type of cheek augmentation procedure,
-                    the recovery medications and the cost of the cosmetic surgeon
-                    play a major role.
-                </p>
-                <p>
-                    Our cosmetic surgeon is one of the best in <?= ucwords($city) ?> for cheek augmentation.
-                    Schedule a consultation session and get the advice on the next
-                    action plan to increase the size and shape of your cheeks.
+                    The cost of Cheek Augmentation surgery in Hyderabad relies largely on the type of cheek implant used for your treatment. The charges for surgeon’s fees, medical facilities, operating room, anesthesia, and other associated expenses will also add up to the overall cost of Cheek Augmentation. Contact our Cheek Augmentation surgeon in Hyderabad to get detailed info about the surgery cost.
                 </p>
 
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Attaining those dreamy, bouncy cheeks is possible now! Go for cheek augmentation
-                    surgery by our expert cosmetic surgeon in <?= ucwords($city) ?> and observe
-                    the difference it makes to your life!
+                    During your surgery, our surgeons make sure to equip make you feel comfortable the best way possible. They also boast of their robust equipment and cordial nursing staff. Moreover, our Cheek Augmentation surgeons in Hyderabad are among the topmost in the healthcare industry. Overall, you can leave their clinics duly satisfied with an enhanced facial appearance.
                 </p>
+
+                <!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+                <p class="identity">
+                    FAQs on Chin Surgery in <?= ucwords($city) ?>
+                </p>
+
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            1. Are you a good candidate for Cheek Augmentation?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            If you want to undergo Cheek Augmentation surgery in Hyderabad, you should abide by the following criteria:
+                        </p>
+                        <ul>
+                            <li>
+                                Have facial defects or have experienced facial trauma
+                            </li>
+                            <li>
+                                Experience bone resorption due to ageing
+                            </li>
+                            <li>
+                                Desire to improve your facial appearance
+                            </li>
+                            <li>
+                                Have deflated, flat, or hollow cheeks due to growing age
+                            </li>
+                            <li>
+                                Have asymmetrical cheeks
+                            </li>
+                            <li>
+                                Do not have any chronic health conditions or severe gum disease
+                            </li>
+                            <li>
+                                Wish to get away with sagging skin beneath the eyes, sagging jowls, or deepening nasolabial folds
+                            </li>
+                            <li>
+                                Do not smoke or consume alcohol
+                            </li>
+                            <li>
+                                Have overall good health
+                            </li>
+                            <li>
+                                Have realistic expectations regarding the outcomes of the surgery
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            2. What is the cost of Cheek Augmentation?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            Cheek Augmentation surgery in Hyderabad costs between 100,000 INR to 130,000 INR on average. Additional procedures done in conjunction with Cheek Augmentation will result in extra expenses.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            3. What are the risks related to Cheek Augmentation?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                Allergic behaviour to anesthesia
+                            </li>
+                            <li>
+                                Infection and bleeding at the treated site
+                            </li>
+                            <li>
+                                Fluid build-up or seroma in the area
+                            </li>
+                            <li>
+                                Hematoma or blood clotting in the treated area
+                            </li>
+                            <li>
+                                Displacement of the implant in the cheek
+                            </li>
+                            <li>
+                                Reduced skin sensation
+                            </li>
+                            <li>
+                                Fat necrosis or the death of fatty tissue beneath the skin
+                            </li>
+                            <li>
+                                Severe and persistent pain
+                            </li>
+                            <li>
+                                Poor wound healing
+                            </li>
+                            <li>
+                                Cardiac and pulmonary complications
+                            </li>
+                            <li>
+                                Deep vein thrombosis (DVT)
+                            </li>
+                            <li>
+                                Lumpiness or unevenness in the treated area
+                            </li>
+                            <li>
+                                Excessive scarring around the cheek implant
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            4. When can you go for Cheek Augmentation?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            Cheek Augmentation is a suitable option if you want to enhance the appearance of your sagging, worn-out, or hollow cheek. The surgery can be performed in Hyderabad on individuals over the age of 18, with the majority of patients being between 35-65 years old.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            5. What are the things to do before the Cheek Augmentation Surgery?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            To prepare for Cheek Augmentation surgery in Hyderabad, you should do the following:
+                        </p>
+                        <ul>
+                            <li>
+                                Undergo a medical evaluation before the surgery as recommended by your surgeon
+                            </li>
+                            <li>
+                                Have your facial structure examined to help the surgeon determine where to make incisions
+                            </li>
+                            <li>
+                                Avoid eating or drinking anything for at least 8 hours before the surgery
+                            </li>
+                            <li>
+                                Stay hydrated with plenty of water and fluids
+                            </li>
+                            <li>
+                                Avoid consuming medications that lead to bleeding during or after the surgery
+                            </li>
+                            <li>
+                                Inform your surgeon about any existing medication to help him adjust the medicines accordingly
+                            </li>
+                            <li>
+                                Have someone accompany you to the clinic and take you home after the surgery
+                            </li>
+                            <li>
+                                Wear comfortable attire with easy-to-use fasteners like buttons or zippers so that it is easier to wear or take them off
+                            </li>
+                            <li>
+                                Refrain from smoking and consuming alcohol for at least 2 weeks before the Cheek Augmentation surgery
+                            </li>
+                            <li>
+                                Take pictures of your cheeks before the surgery to compare them with the post-surgery results
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            6. What to expect on the day of Cheek Augmentation surgery?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                On the day of Cheek Augmentation surgery in Hyderabad, be at the clinic with a calm and composed mindset.
+                            </li>
+                            <li>
+                                Cooperate with the medical staff during your pre-surgery examination
+                            </li>
+                            <li>
+                                The anesthesia specialist may inquire about your reaction to anesthesia to ensure that the dosage is adjusted accordingly
+                            </li>
+                            <li>
+                                To lift or add volume to your cheeks, the surgeon will create an incision inside the mouth at the selected area
+                            </li>
+                            <li>
+                                The surgeon may place an implant under the skin and on the cheekbone as per the requirement
+                            </li>
+                            <li>
+                                The incision will be closed with sutures
+                            </li>
+                            <li>
+                                The entire procedure takes approximately 1-1.5 hours
+                            </li>
+                            <li>
+                                It will leave no visible scars due to the incision being made inside the mouth
+                            </li>
+                            <li>
+                                You may experience pain in the incision site on the surgery day but will disappear with time
+                            </li>
+                            <li>
+                                After a week of the surgery, you can return to work
+                            </li>
+                            <li>
+                                Have realistic expectations with the Cheek Augmentation surgery in Hyderabad
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 00000000000000000000000000000000000000000000000000000000000000000000000 -->
             </div>
         <?php } elseif ($surgery_str == "lip augmentation") {  ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        <strong>
-                            Do you want to have pouty lips like Angeline Jolie? You can now fulfill your
-                            wish with Lip augmentation.
-                        </strong>
-                    </p>
-                    <p>
-                        The procedure of lip augmentation involves increasing the size of your lips,
-                        reshaping the contours, and making the lips naturally fuller.
-                        If you are unhappy with the appearance of your lips or
-                        they have become deformed due to an accident,
-                        lip augmentation surgery is the best choice.
-                        Our cosmetic surgeons in <?= ucwords($city) ?> have helped many to get dreamy
-                        lips that look in perfect symmetry with the face.
-                        You could also visit any of our experienced cosmetic surgeons,
-                        and choose to enhance your lips.
+                        Do you wish to get plumper and fuller lips? If yes, Lip Augmentation is the best cosmetic surgery procedure to attain your wish. You can opt from among silicone or expanded polytetrafluoroethylene implants. Alternatively, lip fillers such as Restylane and Juvederm are among the other widely preferred choices. Our experienced cosmetic surgeons in Hyderabad can help you opt for the most suitable Lip Augmentation treatment.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Cosmetic Surgeons for Lip Augmentation in <?= ucwords($city) ?>?
+                    Why Are Our Surgeons the Preferred Lip Augmentation Surgeons in Hyderabad?
                 </p>
                 <ul>
                     <li>
-                        Extremely skilled surgeons in <?= ucwords($city) ?> for lip augmentation treatment
+                        Expert in carrying out Lip Augmentation procedures in Hyderabad
                     </li>
                     <li>
-                        Expertise in different types of lip augmentation procedures including
-                        dermal fillers and lip implants
+                        Perform satisfying Lip Augmentation to ensure long-lasting results
                     </li>
                     <li>
-                        Highly talented at customizing the symmetry of upper and lower lips
+                        Can perform less visible and more natural lip implants.
                     </li>
                     <li>
-                        Dexterous at improving the overall shape and size as per the
-                        facial features
-                    </li>
-                    <li>
-                        Renowned cosmetic surgeons certified by several national boards of
-                        plastic and cosmetic surgeries.
+                        Member of several plastic surgery associations in India and overseas
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The lip augmentation treatment cost varies depending on whether you opt for
-                    dermal fillers or lip implants. Usually,
-                    lip implants are permanent and cost more than dermal
-                    fillers. You can visit our cosmetic surgeon
-                    in <?= ucwords($city) ?> to get the cost details
-                    and treatment plans.
+                    Several factors play their part in defining the cost of the Lip Augmentation procedure. These may include Lip Augmentation grade, advanced technology, fees of the surgeon, auxiliary services, and more. Your choice between lip implants and lip fillers will also incur different costs. For a better estimate of the involved surgery costs, you can always consult any of our renowned Lip Augmentation surgeons in Hyderabad.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Let your lips capture everyone’s attention! Make them look naturally fuller,
-                    beautiful, and well contoured with Lip Augmentation! Visit our reputed
-                    cosmetic surgeons in <?= ucwords($city) ?> to get your desired results now.
-                    Choose the best treatment from dermal fillers, fat fillers,
-                    and lip implants.
+                    Approach any of our Lip Augmentation experts in Hyderabad to get an enhanced lip appearance. The treatment will help you get more natural and fuller lips without leaving behind noticeable scars or marks. Their sophisticated operating room, laced with advanced medical equipment will make your treatment simpler than you could ever think of. Feel free to connect with skilled plastic surgeons and make way for an enhanced facial appearance.
                 </p>
 
                 <p class="identity">
@@ -2650,33 +2028,29 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Anyone satisfying several important criteria as given below can
-                            be a good candidate for Lip Augmentation in <?= ucwords($city) ?>:
+                            To be a suitable candidate for Lip Augmentation in Hyderabad, you must meet the following essential requirements:
                         </p>
                         <ul>
                             <li>
-                                Thin lips
+                                Lips with inadequate volume, shape, or symmetry
                             </li>
                             <li>
-                                Lips without proper volume, shape, or volume
+                                Unappealing lips, making you feel embarrassed
                             </li>
                             <li>
-                                Asymmetrical or uneven lips
+                                Damaged lips due to an accident or an injury
                             </li>
                             <li>
-                                Sufficient lip tissue to hide the implant
+                                Enough lip tissue to conceal the implant
                             </li>
                             <li>
-                                Good overall health
+                                Good overall health with no significant medical conditions
                             </li>
                             <li>
-                                Free from medical illness or any severe health condition
+                                Having adequate fat in the donor area
                             </li>
                             <li>
-                                Ample fat in the donor site
-                            </li>
-                            <li>
-                                Realistic expectations with the surgery
+                                Having realistic expectations regarding the outcome of the procedure
                             </li>
                         </ul>
                     </div>
@@ -2692,10 +2066,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            On average, any lip augmentation procedure in <?= ucwords($city) ?> will cost
-                            around 40,000 INR - 1,00,000 INR, but it can vary depending
-                            on the cosmetic surgeon and the treatment
-                            along with other factors.
+                            A Lip Augmentation procedure in Hyderabad will cost around 40,000 INR - 1,00,000 INR. The amount could differ significantly based on the cosmetic surgeon and the treatment you choose, the facilities provided, and several other factors.
                         </p>
                     </div>
                 </div>
@@ -2710,35 +2081,41 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Here is a quick look at the possible risks and complications of undergoing
-                            a Lip Augmentation surgery in a clinic in <?= ucwords($city) ?>.
+                            Mentioned below are some of the potential risks and complications associated with undergoing Lip Augmentation surgery in Hyderabad:
                         </p>
                         <ul>
                             <li>
-                                Allergic behaviour to anesthesia or other medicines given during
-                                the surgery Redness, itching, or tenderness at
-                                the incision site
+                                Adverse reactions to anesthesia or other medications used during the procedure
                             </li>
                             <li>
-                                Infection or bleeding in the treated area
+                                Redness, tenderness, or itching at the incision area
                             </li>
                             <li>
-                                Prolonged bruising or swelling
+                                Infection or bleeding in the treated area due to the use of surgical materials
                             </li>
                             <li>
-                                Fever blisters or cold sores around the lips
+                                Persistent swelling or bruising
                             </li>
                             <li>
-                                Lip asymmetry
+                                Cold sores or fever blisters around the lips
                             </li>
                             <li>
-                                Irregularities and lumps in the treated site
+                                Asymmetry of the lips
                             </li>
                             <li>
-                                Possibility of scarring, ulceration, or lip stiffening
+                                Irregularities and lumps in the surgical incision site
                             </li>
                             <li>
-                                Loss of tissue due to injection into the blood vessel
+                                Chances of scarring, ulceration, or stiffness in the lips
+                            </li>
+                            <li>
+                                Loss of tissue due to inadvertent injection into blood vessels
+                            </li>
+                            <li>
+                                Possibility of Hematoma or clotting of a pool of blood in the treated area
+                            </li>
+                            <li>
+                                Chances of seroma or flood accumulation
                             </li>
                         </ul>
                     </div>
@@ -2754,11 +2131,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            When you notice thin lips or a decrease in the volume of your lips
-                            due to growing age, this is the right time to opt for
-                            Lip Augmentation surgery. Ideally, any adult of
-                            18 years or more with a healthy body
-                            can undergo this surgery.
+                            You can go for Lip Augmentation Surgery at almost any age beyond 18 years. At this age, you are more prone to have a healthy body, immune enough to withstand the effect of anesthesia and other medicines given during the surgery. You would feel the need to undergo this surgery in Hyderabad if you observe thin lips or decreased lip volume because of ageing fact.
                         </p>
                     </div>
                 </div>
@@ -2772,31 +2145,33 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
+                        <p>
+                            Following these guidelines would be worthwhile in preparing for a Lip Augmentation surgery in Hyderabad:
+                        </p>
                         <ul>
                             <li>
-                                Visit a lab to undergo the tests recommended by your surgeon
+                                Undergo the recommended tests in a lab suggested by your surgeon
                             </li>
                             <li>
-                                Avoid consuming blood-thinning medicines, as they can cause
-                                significant bruising after the injection.
+                                Refrain from taking any blood-thinning medications to avoid significant bruising after the injection.
                             </li>
                             <li>
-                                Avoid tobacco, alcohol, and caffeine around 24 hours before
-                                and after the surgery in <?= ucwords($city) ?>
+                                Avoid tobacco, alcohol, and caffeine 24 hours before and after the surgery to reduce the risk of complications.
                             </li>
                             <li>
-                                Keep your face completely clean and free of makeup
+                                Keep your face clean and free of any makeup to minimise the risk of infection.
                             </li>
                             <li>
-                                Make sure to hydrate your body with water before going for the lip injection
-                                to ensure a safe recovery
+                                Stay hydrated by drinking plenty of water before the surgery to facilitate safe recovery.
                             </li>
                             <li>
-                                Have someone accompany you to the clinic and take you back home
+                                Arrange for someone to accompany you to the clinic and take you back home.
                             </li>
                             <li>
-                                Arrange for your clothing at home after the surgery in advance
-                                to avoid later hassles
+                                Prepare comfortable clothing to wear at home after the surgery to avoid any inconvenience.
+                            </li>
+                            <li>
+                                Have a clear understanding of the possible outcomes before undergoing Lip Augmentation surgery.
                             </li>
                         </ul>
                     </div>
@@ -2813,273 +2188,91 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                You could expect the surgeon to use various surgical and non-surgical methods
-                                for lip augmentation.
+                                Arrive at the place of the surgery with a calm and composed mind
                             </li>
                             <li>
-                                Injecting fillers with hyaluronic acid into your lips is a common method.
+                                Have realistic expectations with the surgery so that unfavourable results may not bother you much
                             </li>
                             <li>
-                                Several doctors also perform a lip lift or a lip implant to augment
-                                your lips permanently. So you could expect any of these
-                                treatments depending on the condition of your lips
+                                The surgeon may use several surgical or non-surgical techniques for Lip Augmentation
                             </li>
                             <li>
-                                Lip augmentation surgery from a <?= ucwords($city) ?> clinic will last for around 30 minutes.
-                                During this surgery, the surgeon will administer anesthesia
-                                to numb your lips.
+                                Mostly, surgeons use fillers such as hyaluronic acid for Lip Augmentation as a non-surgical method
                             </li>
                             <li>
-                                For lip implants, you could expect him to create a small incision in both
-                                corners of your mouth before inserting a clamp via one
-                                side and threading it to the other incised corner.
-                                After pulling the implants through the tunnels,
-                                he will stitch the incisions
-                                to close them permanently
+                                Often, surgeons also carry out a lip implant or lip lift method for permanent Lip Augmentation
                             </li>
                             <li>
-                                It is good to have realistic expectations with the surgery.
+                                Usually, a Lip Augmentation surgery done in a Hyderabad clinic may take around 30 minutes to complete
                             </li>
                             <li>
-                                You could expect pain in the injection site and corners of your lips
+                                During this surgery, you could expect administering the anesthesia to make your lips numb
                             </li>
                             <li>
-                                The possible swelling could vanish in around 24 to 48 hours.
-                                On rare occasions, it may take around a week.
+                                The surgeon would create a small incision in both corners of your mouth to insert a clamp via one side and thread it to the other incised corner
                             </li>
                             <li>
-                                Complete healing may take around two weeks. So if you want augmented
-                                lips to flaunt at a wedding or any other special occasion,
-                                schedule the surgery two weeks in advance.
+                                After pulling the implants through the tunnels, the doctor will close the incisions permanently by stitching them into sutures
+                            </li>
+                            <li>
+                                There may arise pain in the injection site and side of your lips
+                            </li>
+                            <li>
+                                The swelling would disappear in 1-2 days. In rare instances, it may take around a week
+                            </li>
+                            <li>
+                                Complete recovery from the treatment may take around two weeks. Therefore, if you wish to flaunt your augmented lips at a wedding or any other special event, schedule the surgery two weeks before the occasion
+                            </li>
+                            <li>
+                                Make sure to have realistic expectations with the Lip Augmentation surgery in Hyderabad
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Lip Augmentation Surgery?
-                    </p>
-                    <p>
-                        Anyone satisfying several important criteria as given below can
-                        be a good candidate for Lip Augmentation in <?= ucwords($city) ?>:
-                    </p>
-                    <ul>
-                        <li>
-                            Thin lips
-                        </li>
-                        <li>
-                            Lips without proper volume, shape, or volume
-                        </li>
-                        <li>
-                            Asymmetrical or uneven lips
-                        </li>
-                        <li>
-                            Sufficient lip tissue to hide the implant
-                        </li>
-                        <li>
-                            Good overall health
-                        </li>
-                        <li>
-                            Free from medical illness or any severe health condition
-                        </li>
-                        <li>
-                            Ample fat in the donor site
-                        </li>
-                        <li>
-                            Realistic expectations with the surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of Lip Augmentation Surgery?
-                    </p>
-                    <p>
-                        On average, any lip augmentation procedure in <?= ucwords($city) ?> will cost
-                        around 40,000 INR - 1,00,000 INR, but it can vary depending
-                        on the cosmetic surgeon and the treatment
-                        along with other factors.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Lip Augmentation Surgery?
-                    </p>
-                    <p>
-                        Here is a quick look at the possible risks and complications of undergoing
-                        a Lip Augmentation surgery in a clinic in <?= ucwords($city) ?>.
-                    </p>
-                    <ul>
-                        <li>
-                            Allergic behaviour to anesthesia or other medicines given during
-                            the surgery Redness, itching, or tenderness at
-                            the incision site
-                        </li>
-                        <li>
-                            Infection or bleeding in the treated area
-                        </li>
-                        <li>
-                            Prolonged bruising or swelling
-                        </li>
-                        <li>
-                            Fever blisters or cold sores around the lips
-                        </li>
-                        <li>
-                            Lip asymmetry
-                        </li>
-                        <li>
-                            Irregularities and lumps in the treated site
-                        </li>
-                        <li>
-                            Possibility of scarring, ulceration, or lip stiffening
-                        </li>
-                        <li>
-                            Loss of tissue due to injection into the blood vessel
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Lip Augmentation Surgery?
-                    </p>
-                    <p>
-                        When you notice thin lips or a decrease in the volume of your lips
-                        due to growing age, this is the right time to opt for
-                        Lip Augmentation surgery. Ideally, any adult of
-                        18 years or more with a healthy body
-                        can undergo this surgery.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before the Lip Augmentation Surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Visit a lab to undergo the tests recommended by your surgeon
-                        </li>
-                        <li>
-                            Avoid consuming blood-thinning medicines, as they can cause
-                            significant bruising after the injection.
-                        </li>
-                        <li>
-                            Avoid tobacco, alcohol, and caffeine around 24 hours before
-                            and after the surgery in <?= ucwords($city) ?>
-                        </li>
-                        <li>
-                            Keep your face completely clean and free of makeup
-                        </li>
-                        <li>
-                            Make sure to hydrate your body with water before going for the lip injection
-                            to ensure a safe recovery
-                        </li>
-                        <li>
-                            Have someone accompany you to the clinic and take you back home
-                        </li>
-                        <li>
-                            Arrange for your clothing at home after the surgery in advance
-                            to avoid later hassles
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Lip Augmentation surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            You could expect the surgeon to use various surgical and non-surgical methods
-                            for lip augmentation.
-                        </li>
-                        <li>
-                            Injecting fillers with hyaluronic acid into your lips is a common method.
-                        </li>
-                        <li>
-                            Several doctors also perform a lip lift or a lip implant to augment
-                            your lips permanently. So you could expect any of these
-                            treatments depending on the condition of your lips
-                        </li>
-                        <li>
-                            Lip augmentation surgery from a <?= ucwords($city) ?> clinic will last for around 30 minutes.
-                            During this surgery, the surgeon will administer anesthesia
-                            to numb your lips.
-                        </li>
-                        <li>
-                            For lip implants, you could expect him to create a small incision in both
-                            corners of your mouth before inserting a clamp via one
-                            side and threading it to the other incised corner.
-                            After pulling the implants through the tunnels,
-                            he will stitch the incisions
-                            to close them permanently
-                        </li>
-                        <li>
-                            It is good to have realistic expectations with the surgery.
-                        </li>
-                        <li>
-                            You could expect pain in the injection site and corners of your lips
-                        </li>
-                        <li>
-                            The possible swelling could vanish in around 24 to 48 hours.
-                            On rare occasions, it may take around a week.
-                        </li>
-                        <li>
-                            Complete healing may take around two weeks. So if you want augmented
-                            lips to flaunt at a wedding or any other special occasion,
-                            schedule the surgery two weeks in advance.
-                        </li>
-                    </ul> -->
             </div>
         <?php } elseif ($surgery_str == "buccal fat removal") { ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        If you want to change the appearance of your chubby cheeks, Buccal Fat Removal
-                        is the way to go. This surgery can reduce the size of your cheeks,
-                        transforming them into thinner and better-contoured features.
-                        Buccal Fat Removal is an extensive surgery that requires
-                        attention to detail and specialized techniques.
-                        It is only possible by an expert cosmetic surgeon in <?= ucwords($city) ?> who knows
-                        the best treatment plan to deliver your expected results.
-                        You can hence trust our surgeons to perform
-                        this procedure with excellence.
+                        Do you want to break free from your round face or baby, chipmunk, or chubby cheeks? Buccal Fat Removal in Hyderabad is the best remedy to your problem. Also termed Buccal Lipectomy or Cheek Fat Reduction, it refers to the elimination of fat pads accumulated in the cheek area. When done successfully through one of our experienced Buccal Fat Removal surgeons in Hyderabad, the treatment results in a finely contoured lower jawline and upper cheekbone.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for Buccal Fat Removal in <?= ucwords($city) ?>?
+                    Why prefer Our Surgeons for Buccal Fat Removal in Hyderabad?
                 </p>
                 <ul>
                     <li>
-                        Extremely talented cosmetic surgeons in <?= ucwords($city) ?> to perform
-                        Buccal Fat Removal with positive results
+                        Years of expertise in performing Buccal Fat Removal in Hyderabad
                     </li>
                     <li>
-                        Great attention to detail to ensure symmetry in both cheeks while
-                        reducing their size
+                        Dexterous in carrying out safe, painless, and quick treatment
                     </li>
                     <li>
-                        Expert in performing Buccal Fat Removal with the ability to
-                        achieve no visible scarring from the incisions
+                        Work proficiently to remove buccal fat-pad tissue
                     </li>
                     <li>
-                        Members of several national and international cosmetic
-                        surgery boards
+                        Help to get slimmer, thinner, and better cheeks
                     </li>
                     <li>
-                        Most acclaimed cosmetic surgeon for facial procedures.
+                        Pay attention to your concerns and surgery expectations patiently
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    You can get a better estimate of the cost if you visit the cosmetic surgeon
-                    at the clinic in <?= ucwords($city) ?>. After examining your condition,
-                    the surgeon will decide the course of treatment
-                    as well as the surgery costs.
+                    The cost would depend largely on the clinic and the surgeon you opt for the treatment. Likewise, the fees of the surgeon, post-operative follow-ups, medicines, hospital facility, and the patient’s profile also contribute toward deciding the cost of Buccal Fat Removal in Hyderabad. Our renowned plastic surgeons are the best to inform you about the cost involved with the Buccal Fat Removal treatment in Hyderabad.
                 </p>
                 <p class="identity">
                     OUR SERVICES
                 </p>
                 <p>
-                    You do not need to bother anymore if you have fat cheeks! Now, you can reduce
-                    your cheeks and have a thin facial contour with Buccal Fat Removal
-                    performed by any of our best cosmetic surgeons in <?= ucwords($city) ?>.
+                    Approach our Buccal Fat Removal experts in Hyderabad to reduce your cheek fat and attain a flawless appearance. With our experienced surgeons, you will get advanced medical facilities, upscale treatment equipment, a well-equipped operating room, and a cordial nursing staff. Consult any of our renowned plastic surgeons today and proceed towards regaining your charming appearance.
                 </p>
 
                 <p class="identity">
                     FAQs on Buccal Fat Removal Surgery in <?= ucwords($city) ?>
                 </p>
-                <!-- ACCODION -->
                 <div class="accordion-container">
                     <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
                         <span>
@@ -3091,37 +2284,32 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            An ideal candidate for Buccal Fat Removal surgery
-                            in <?= ucwords($city) ?> should satisfy
-                            the following conditions:
+                            To be a suitable candidate for Buccal Fat Removal surgery in Hyderabad, you should abide by the below-mentioned points:
                         </p>
                         <ul>
                             <li>
-                                Your cheek area has excess fat
+                                Cheeks with accumulated extraordinary fat
                             </li>
                             <li>
-                                Your Buccal Fat pads are larger than usual
+                                Larger than usual Buccal Fat Pads
                             </li>
                             <li>
-                                You have a round-shaped and fuller face
+                                Round and fuller face
                             </li>
                             <li>
-                                You want to have a slimmer and more defined facial appearance
+                                Wish to have a slimmer and well-defined facial appearance
                             </li>
                             <li>
-                                You are healthy and have a stable weight
+                                A healthy body with a stable weight
                             </li>
                             <li>
-                                You are more than 50 years of age
+                                Non-smoker and a non-alcoholic
                             </li>
                             <li>
-                                You are a non-alcoholic and a non-smoker
+                                50 years old or beyond
                             </li>
                             <li>
-                                The doctor has diagnosed you with the rare Parry-Romberg syndrome,
-                                or the condition of progressive hemifacial atrophy.
-                                It tends one portion of the facial
-                                skin to shrink
+                                Diagnosed with the rare Parry-Romberg syndrome or progressive hemifacial atrophy, which results in the shrinkage of one portion of the facial skin
                             </li>
                         </ul>
                     </div>
@@ -3137,13 +2325,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The starting cost for Buccal Fat Removal in <?= ucwords($city) ?> is around 65,000 INR,
-                            which can increase depending on the location, cosmetic surgeon,
-                            and the additional recovery costs. Among the other factors
-                            responsible for deciding the cost may include the
-                            anesthesia used, the experience of the cosmetic
-                            surgeon, and prescription medication
-                            for aftercare.
+                            The estimated cost of a Buccal Fat Removal procedure in Hyderabad is approximately 65,000 INR. However, this cost may vary depending on various factors such as the location, the experience of the cosmetic surgeon, and additional recovery expenses. The type of anesthesia administered and the prescription medication required for aftercare may affect the total cost of the procedure as well.
                         </p>
                     </div>
                 </div>
@@ -3158,39 +2340,38 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Wishing to undergo Buccal Fat Removal in <?= ucwords($city) ?>? Here are some
-                            of the associated risks:
+                            Here are some of the risks associated with Buccal Fat Removal surgery in Hyderabad
                         </p>
                         <ul>
                             <li>
-                                Possibility of infection at the site of incision
+                                Infection at the incision site
                             </li>
                             <li>
-                                Injury to the salivary duct or facial ducts
+                                Adverse reactions to anesthesia
                             </li>
                             <li>
-                                Reduced sensation in the treated area
+                                Injury to the salivary or facial ducts
                             </li>
                             <li>
-                                Asymmetry in the cheeks on both the sides
+                                Reduced sensation in the incision area
                             </li>
                             <li>
-                                Adverse reaction of anesthesia
+                                Asymmetry in the cheeks
                             </li>
                             <li>
-                                Hematoma or clotted blood formed in the treated site
+                                Hematoma or the formation of clotted blood at the treatment site
                             </li>
                             <li>
-                                Bleeding in the selected area
+                                Bleeding, bruising, or swelling
                             </li>
                             <li>
                                 Pulmonary and cardiac complications
                             </li>
                             <li>
-                                Continuous pain
+                                Unbearable pain after the effect of anesthesia ends
                             </li>
                             <li>
-                                Chances of revision surgery
+                                Need for correction surgery
                             </li>
                         </ul>
                     </div>
@@ -3206,10 +2387,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The growth of fat pads continues till one enters the twenties. Hence, surgeons
-                            recommend patients of 20 years age or above to undergo Buccal Fat Removal
-                            surgery in <?= ucwords($city) ?>. Most people choose this surgery because they feel
-                            their fat pads are making them appear childlike.
+                            The growth of fat pads continues until a person reaches their twenties. Cosmetic surgeons hence advise patients aged 20 and above to consider undergoing Buccal Fat Removal surgery in Hyderabad. Individuals who feel that their larger-than-desired fat pads are giving them a youthful or childlike appearance may also choose to undergo this surgery.
                         </p>
                     </div>
                 </div>
@@ -3223,32 +2401,36 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
-                        <p>
-                            Visit your surgeon for a candid consultation about the surgery
-                        </p>
                         <ul>
                             <li>
-                                Have realistic expectations with the surgery
+                                Clear your confusion about the Buccal Fat Removal surgery in Hyderabad
                             </li>
                             <li>
-                                Discuss your goals with the surgeon
+                                Provide your medical history and a list of any current medications you are taking
                             </li>
                             <li>
-                                Share your medical history and the existing medications with the
-                                doctor so that he could adjust them accordingly
+                                Your surgeon may suggest medical evaluations and lab tests prior to the surgery
                             </li>
                             <li>
-                                Undergo your medical evaluation and the lab tests suggested by the
-                                surgeon
+                                To reduce the risk of bleeding during surgery, it is advisable to avoid anti-inflammatory drugs, aspirin, supplements, and naturopathic medicines beforehand
                             </li>
                             <li>
-                                Avoid taking anti-inflammatory drugs, supplements, aspirin, naturopathic
-                                medicines, etc., before the surgery to keep a check on bleeding at the
-                                time of surgery
+                                Refrain from consuming alcohol and tobacco at least two weeks before the surgery
                             </li>
                             <li>
-                                Stop drinking and consuming alcohol at least two weeks prior
-                                to the surgery
+                                Have someone to escort you back after the surgery
+                            </li>
+                            <li>
+                                Arrange for domestic help at home to take care of your kids and the daily activities
+                            </li>
+                            <li>
+                                Apply for at least one week off from the office to take complete rest
+                            </li>
+                            <li>
+                                Do not eat anything at least 8 hours before the surgery
+                            </li>
+                            <li>
+                                keep yourself hydrated with water and other liquid consumables
                             </li>
                         </ul>
                     </div>
@@ -3265,194 +2447,38 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                On the surgery day, be prepared with a positive frame of mind
+                                On the surgery day, be at the clinic with a relaxed mind
                             </li>
                             <li>
-                                The surgeon or a staff member would administer anesthesia
-                                to make the concerned location numb
+                                Cooperate with the staff in performing your body check-up immediately before the surgery
                             </li>
                             <li>
-                                You could expect the surgeon to create minor incisions inside both cheeks
-                                and leave them open to drain. These incisions will close by themselves
-                                within 2-3 days
+                                The surgeon or anesthesiologist will ask about your behaviour with anesthesia and adjust the dose accordingly
                             </li>
                             <li>
-                                Compared to other surgical procedures in <?= ucwords($city) ?>, Buccal Fat Removal will
-                                take less time. You could expect it to complete within 30 minutes.
+                                The surgeon will create small incisions inside your cheeks and leave them open to drain
                             </li>
                             <li>
-                                The final outcome may get hampered by swelling on your face after the procedure
+                                You could expect the surgeon to create minor incisions inside both cheeks and leave them open to drain. These will disappear own within 2-3 days
                             </li>
                             <li>
-                                In the end, you will observe a less chubby appearance of your cheeks
+                                Buccal Fat Removal in Hyderabad will take around 30 minutes to complete, which is much less time compared to other surgeries.
                             </li>
                             <li>
-                                If the intended results remain unachieved with the first surgery in <?= ucwords($city) ?>,
-                                the surgeon might recommend another procedure
+                                After the surgery, you may experience swelling on your face, which will vanish in a few days
+                            </li>
+                            <li>
+                                As a favourable outcome, you will get appealing cheeks with less fat
+                            </li>
+                            <li>
+                                In rare instances, if the results do not turn out as expected, the surgeon might suggest you undergo another procedure
+                            </li>
+                            <li>
+                                In any case, you should have realistic expectations with the Buccal Fat Removal surgery in Hyderabad
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Buccal Fat Removal?
-                    </p>
-                    <p>
-                        An ideal candidate for Buccal Fat Removal surgery
-                        in <?= ucwords($city) ?> should satisfy
-                        the following conditions:
-                    </p>
-                    <ul>
-                        <li>
-                            Your cheek area has excess fat
-                        </li>
-                        <li>
-                            Your Buccal Fat pads are larger than usual
-                        </li>
-                        <li>
-                            You have a round-shaped and fuller face
-                        </li>
-                        <li>
-                            You want to have a slimmer and more defined facial appearance
-                        </li>
-                        <li>
-                            You are healthy and have a stable weight
-                        </li>
-                        <li>
-                            You are more than 50 years of age
-                        </li>
-                        <li>
-                            You are a non-alcoholic and a non-smoker
-                        </li>
-                        <li>
-                            The doctor has diagnosed you with the rare Parry-Romberg syndrome,
-                            or the condition of progressive hemifacial atrophy.
-                            It tends one portion of the facial
-                            skin to shrink
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of Buccal Fat Removal?
-                    </p>
-                    <p>
-                        The starting cost for Buccal Fat Removal in <?= ucwords($city) ?> is around 65,000 INR,
-                        which can increase depending on the location, cosmetic surgeon,
-                        and the additional recovery costs. Among the other factors
-                        responsible for deciding the cost may include the
-                        anesthesia used, the experience of the cosmetic
-                        surgeon, and prescription medication
-                        for aftercare.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Buccal Fat Removal?
-                    </p>
-                    <p>
-                        Wishing to undergo Buccal Fat Removal in <?= ucwords($city) ?>? Here are some
-                        of the associated risks:
-                    </p>
-                    <ul>
-                        <li>
-                            Possibility of infection at the site of incision
-                        </li>
-                        <li>
-                            Injury to the salivary duct or facial ducts
-                        </li>
-                        <li>
-                            Reduced sensation in the treated area
-                        </li>
-                        <li>
-                            Asymmetry in the cheeks on both the sides
-                        </li>
-                        <li>
-                            Adverse reaction of anesthesia
-                        </li>
-                        <li>
-                            Hematoma or clotted blood formed in the treated site
-                        </li>
-                        <li>
-                            Bleeding in the selected area
-                        </li>
-                        <li>
-                            Pulmonary and cardiac complications
-                        </li>
-                        <li>
-                            Continuous pain
-                        </li>
-                        <li>
-                            Chances of revision surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Buccal Fat Removal?
-                    </p>
-                    <p>
-                        The growth of fat pads continues till one enters the twenties. Hence, surgeons
-                        recommend patients of 20 years age or above to undergo Buccal Fat Removal
-                        surgery in <?= ucwords($city) ?>. Most people choose this surgery because they feel
-                        their fat pads are making them appear childlike.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before the Buccal Fat Removal Surgery?
-                    </p>
-                    <p>
-                        Visit your surgeon for a candid consultation about the surgery
-                    </p>
-                    <ul>
-                        <li>
-                            Have realistic expectations with the surgery
-                        </li>
-                        <li>
-                            Discuss your goals with the surgeon
-                        </li>
-                        <li>
-                            Share your medical history and the existing medications with the
-                            doctor so that he could adjust them accordingly
-                        </li>
-                        <li>
-                            Undergo your medical evaluation and the lab tests suggested by the
-                            surgeon
-                        </li>
-                        <li>
-                            Avoid taking anti-inflammatory drugs, supplements, aspirin, naturopathic
-                            medicines, etc., before the surgery to keep a check on bleeding at the
-                            time of surgery
-                        </li>
-                        <li>
-                            Stop drinking and consuming alcohol at least two weeks prior
-                            to the surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Buccal Fat Removal surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            On the surgery day, be prepared with a positive frame of mind
-                        </li>
-                        <li>
-                            The surgeon or a staff member would administer anesthesia
-                            to make the concerned location numb
-                        </li>
-                        <li>
-                            You could expect the surgeon to create minor incisions inside both cheeks
-                            and leave them open to drain. These incisions will close by themselves
-                            within 2-3 days
-                        </li>
-                        <li>
-                            Compared to other surgical procedures in <?= ucwords($city) ?>, Buccal Fat Removal will
-                            take less time. You could expect it to complete within 30 minutes.
-                        </li>
-                        <li>
-                            The final outcome may get hampered by swelling on your face after the procedure
-                        </li>
-                        <li>
-                            In the end, you will observe a less chubby appearance of your cheeks
-                        </li>
-                        <li>
-                            If the intended results remain unachieved with the first surgery in <?= ucwords($city) ?>,
-                            the surgeon might recommend another procedure
-                        </li>
-                    </ul> -->
 
             </div>
         <?php } elseif ($surgery_str == "ear surgery") { ?>

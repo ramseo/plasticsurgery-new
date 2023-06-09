@@ -3832,3 +3832,16 @@ img {
 .container-fluid.location {
     background: #fff;
 }
+
+#desktop-header-menu li.dropdown.show .dropdown-item {
+    background: #990e0e;
+    color: #fff;
+    border-bottom: 1px solid lightgray;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dropdown-menu {
+    margin: 0 auto !important;
+    padding: 0 !important;
+}
