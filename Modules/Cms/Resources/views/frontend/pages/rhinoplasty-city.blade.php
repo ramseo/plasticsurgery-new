@@ -2485,32 +2485,27 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Ear surgery or Otoplasty is a cosmetic procedure to reshape the ear.
-                        This surgery addresses structural defects like an abnormally large ear,
-                        disoriented ears due to accidents, ears that are unsymmetrical with
-                        each other or with facial features, or protruding ears.
-                        You need a highly skilled cosmetic surgeon from <?= ucwords($city) ?> to
-                        treat the defects and reshape the ear to look as natural as possible.
-                        This is where you can trust our surgeons.
+                        Do you want to regain your damaged or weird-looking ears back in their natural form? If yes, Ear Surgery is the best solution to serve your cause. Also known as Otoplasty or Pinnaplasty, this cosmetic surgery procedure reshapes, resizes, or repositions your ears as per the severity of your case. The treatment helps to regain the natural appearance of your years that have become defective by birth or due to an accident. The Ear Surgery in Hyderabad performed by our seasoned ear surgeons can also repair perforations, take care of hearing problems, and mitigate the pain resulting from otitis media.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Cosmetic Surgeons for Ear Surgery in <?= ucwords($city) ?>?
+                    Why Choose Our Surgeons for Ear Surgery in Hyderabad?
                 </p>
                 <ul>
                     <li>
-                        Most accomplished cosmetic surgeons in <?= ucwords($city) ?> for Otoplasty.
+                        Experienced surgeons in Hyderabad to perform Ear Surgery
                     </li>
                     <li>
-                        Ability to analyze and surgically correct the defect with as
-                        minimal possible incisions.
+                        Work with perfection to help you regain the natural appearance of your ears
                     </li>
                     <li>
-                        Experts in reconstructive cosmetic surgery in <?= ucwords($city) ?>
+                        Extremely qualified and experienced specialists in ear surgeries
                     </li>
                     <li>
-                        Members of numerous prestigious national and international boards
-                        of cosmetic surgeons and reconstructive surgeries
+                        Members of several national and international associations for plastic surgery
+                    </li>
+                    <li>
+                        Care about patient’s concerns and their expectations with the surgery
                     </li>
                 </ul>
 
@@ -2518,23 +2513,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Therefore, the cost of ear surgery varies widely based on the cosmetic surgeon
-                    and the intensiveness of the surgery. You can schedule a consultation with
-                    the cosmetic surgeon in <?= ucwords($city) ?> to know about the course of treatment
-                    and a fair estimate for the same.
+                    The charges for ear reconstruction surgery in Hyderabad will vary according to the surgeon and the clinic you approach. The cost is likely to include the fees of the surgeon, pre and post-operative care, anesthesia charges, medical facilities, surgery garments, and more. For a better understanding of the cost, you can have a direct appointment with any of our expert ear surgeons in Hyderabad.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Otoplasty is a detailed surgical procedure where customization holds high importance.
-                    You need an experienced cosmetic surgeon who is capable of tailoring
-                    the surgery to make the ears look natural.
-                    The expert should also be able to achieve symmetry with both ears and ensure
-                    compatibility with the face. Hence, if you are having trouble with
-                    the unnatural appearance of your ears, our experienced cosmetic
-                    surgeons in <?= ucwords($city) ?> can help you out.
-                    They can reconstruct your ear shape and position,
-                    thus making your ears look
-                    as natural as possible.
+                    Get a rejuvenated ear with carefully done surgery through our expert ear surgeons in Hyderabad. Whether your bad-shaped ear is the result of a congenital deformity or an accident, our specialist surgeon will make sure to bring it back to its natural shape. The advanced facilities we provide at our clinic will further assist in your surgery. We keep you at the disposal of industry best surgery equipment, caring nursing staff, and refurbished surgery rooms. Contact our ear surgeon to learn more about this treatment. You will leave our clinic, happy and satisfied for sure.
                 </p>
                 <p class="identity">
                     FAQs on Ear Surgery in <?= ucwords($city) ?>
@@ -2551,41 +2534,32 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be a good candidate for Otoplasty in <?= ucwords($city) ?>, you should satisfy
-                            the below points:
+                            To be a suitable candidate for Otoplasty in Hyderabad would need you to fulfil the following important points:
                         </p>
                         <ul>
                             <li>
-                                You are facing hearing loss problems
+                                You are experiencing hearing loss problems
                             </li>
                             <li>
-                                You are suffering from any of the various congenital defects like cagot ear,
-                                scroll ear, Stahl’s ear deformity, Wildermuth’s ear,
-                                cleft earlobe, etc.
+                                You have any of the congenital ear defects such as cagot ear, scroll ear, Stahl’s ear deformity, Wildermuth’s ear, or cleft earlobe
                             </li>
                             <li>
-                                You need to correct a failed Otoplasty done earlier
+                                You want to correct a previous failed Otoplasty surgery
                             </li>
                             <li>
-                                Your ears stick out too much
+                                Your ears protrude excessively or are asymmetrical
                             </li>
                             <li>
-                                Your ears are asymmetrical
+                                You have a healthy body with no chronic or life-threatening medical conditions that could interfere with healing
                             </li>
                             <li>
-                                You have a healthy body, free from any chronic or
-                                life-threatening medical condition
-                                that can obstruct healing
-                            </li>
-                            <li>
-                                You are not expecting or breastfeeding
+                                You are not pregnant or breastfeeding
                             </li>
                             <li>
                                 You are a non-smoker and a non-alcoholic
                             </li>
                             <li>
-                                You want to have an improved appearance that has been distorted by
-                                your uneven ears
+                                You wish to improve the appearance of your uneven ears
                             </li>
                         </ul>
                     </div>
@@ -2601,11 +2575,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The average cost of ear surgery in <?= ucwords($city) ?> may range from 40,000 INR to 60,000 INR.
-                            Much will depend on the hospital, the choice of Surgeon,
-                            the type of anesthesia used, and so on. Consulting
-                            our cosmetic surgeon will help you to know
-                            the exact cost of the surgery.
+                            The cost of Ear Surgery in Hyderabad may range between 40,000 INR - 60,000 INR or more, depending on the hospital, the choice of Surgeon, the type of anesthesia used, and other factors. Fixing an appointment with any of our cosmetic surgeons will help you to get exact figures regarding the Otoplasty.
                         </p>
                     </div>
                 </div>
@@ -2620,35 +2590,38 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Some common risks of undergoing Otoplasty include:
+                            Some of the probable risks of Otoplasty are as follows:
                         </p>
                         <ul>
                             <li>
-                                Pain, bleeding, or infection
+                                Pain, bleeding, or infection at the surgical site
                             </li>
                             <li>
-                                Adverse reaction to anesthesia
+                                Hearing impairment
                             </li>
                             <li>
-                                Asymmetry in the positioning of the ear
+                                Adverse reactions to anesthesia
                             </li>
                             <li>
-                                Permanent scarring
+                                Asymmetry in the placement of the ear
                             </li>
                             <li>
-                                Allergic reaction to surgical materials
+                                Permanent or temporary scarring
                             </li>
                             <li>
-                                Reduction in skin sensation
+                                Allergic reactions to surgical materials
                             </li>
                             <li>
-                                Unnatural contours that will make the ear appear pinned back
+                                Change in skin sensation
+                            </li>
+                            <li>
+                                Uneven contours resulting in a pinned-back appearance
                             </li>
                             <li>
                                 Blocked or stuffy ear
                             </li>
                             <li>
-                                Draining of bloody fluid from the incision or the ear canal
+                                Discharge of bloody fluid from the ear canal or the incision site
                             </li>
                         </ul>
                     </div>
@@ -2664,11 +2637,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Once your ears attain their full size, you can undergo ear surgery.
-                            Usually, the ears grow completely after the age of 5. However,
-                            doctors recommend waiting till the age of 7 years to go for
-                            the surgery in <?= ucwords($city) ?>. From 7 to adulthood, any age
-                            is fine to undergo the procedure.
+                            You can undergo Ear Surgery at any age after your ears develop completely. Usually, human ears grow to their full potential at the age of 5. However, doctors still advise waiting till the kid gets 7 years old to go for the surgery in Hyderabad. From 7 to adulthood, any time is suitable for the procedure.
                         </p>
                     </div>
                 </div>
@@ -2683,33 +2652,35 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Before you proceed with Otoplasty in a clinic in <?= ucwords($city) ?>,
-                            here are some important steps to consider:
+                            Before you go under the knife for Otoplasty in Hyderabad, here are some significant points to care for:
                         </p>
                         <ul>
                             <li>
-                                go for lab tests or medical examination as instructed by your
-                                surgeon
+                                Follow the instructions of your surgeon to prepare well for the ear corrective surgery
                             </li>
                             <li>
-                                Inform your surgeon about your current medications
+                                Undergo any necessary lab tests or medical examinations.
                             </li>
                             <li>
-                                Stop tobacco and alcohol consumption around 2 weeks in advance
+                                Inform your surgeon about any medications you are currently taking
                             </li>
                             <li>
-                                Have someone bring you back home after the surgery
+                                Stop consuming tobacco and alcohol at least two weeks before the surgery
                             </li>
                             <li>
-                                Have a positive outlook toward the ear surgery
+                                Arrange for someone to take you home after the surgery,
                             </li>
                             <li>
-                                Avoid the intake of any herbal supplement, anti-inflammatory medicine,
-                                or any other drugs that could increase bleeding
+                                Maintain a positive attitude towards the procedure.
                             </li>
                             <li>
-                                Be sure to discuss any concerns you have about the surgery with
-                                your ear surgeon
+                                Avoid taking any herbal supplements, anti-inflammatory medications, or drugs that could increase bleeding
+                            </li>
+                            <li>
+                                Buy or arrange for clothing such as buttoned shirts that are easy to wear and remove
+                            </li>
+                            <li>
+                                Discuss any concerns or questions you may have about the surgery with your ear surgeon.
                             </li>
                         </ul>
                     </div>
@@ -2726,193 +2697,33 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                On the day of Otoplasty surgery in <?= ucwords($city) ?>,
-                                come to the hospital with a calm
-                                and prepared mind
+                                Arrive at the clinic with a positive frame of mind on the day of Otoplasty surgery in Hyderabad
                             </li>
                             <li>
-                                One of the staff members will administer anesthesia to the selected area
+                                Feel relaxed and at ease while the staff performs the necessary checkups on your body
                             </li>
                             <li>
-                                The entire procedure may take around 2-3 hours to complete
+                                The anesthesiologist will administer anesthesia to the selected area
                             </li>
                             <li>
-                                The treatment will involve removing, replacing, or repairing any of the three
-                                little middle ear bones (termed Ossiculoplasty)
+                                The entire surgery will take around 2-3 hours to complete
                             </li>
                             <li>
-                                After the treatment, you may have a dizzy feeling for a few days.
+                                During the treatment, the surgeon will remove, replace, or repair any of the three little middle ear bones (or Ossiculoplasty)
                             </li>
                             <li>
-                                You may also expect ear pain for around a week after the surgery
+                                You may feel dizziness for a few days after the surgery
                             </li>
                             <li>
-                                Have realistic expectations with the surgery as it will help in
-                                quick healing
+                                Ear pain could bother you for around a week after the surgery
+                            </li>
+                            <li>
+                                Make sure to have realistic expectations with the treatment in Hyderabad for a quick recovery
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Ear Surgery?
-                    </p>
-                    <p>
-                        To be a good candidate for Otoplasty in <?= ucwords($city) ?>, you should satisfy
-                        the below points:
-                    </p>
-                    <ul>
-                        <li>
-                            You are facing hearing loss problems
-                        </li>
-                        <li>
-                            You are suffering from any of the various congenital defects like cagot ear,
-                            scroll ear, Stahl’s ear deformity, Wildermuth’s ear,
-                            cleft earlobe, etc.
-                        </li>
-                        <li>
-                            You need to correct a failed Otoplasty done earlier
-                        </li>
-                        <li>
-                            Your ears stick out too much
-                        </li>
-                        <li>
-                            Your ears are asymmetrical
-                        </li>
-                        <li>
-                            You have a healthy body, free from any chronic or
-                            life-threatening medical condition
-                            that can obstruct healing
-                        </li>
-                        <li>
-                            You are not expecting or breastfeeding
-                        </li>
-                        <li>
-                            You are a non-smoker and a non-alcoholic
-                        </li>
-                        <li>
-                            You want to have an improved appearance that has been distorted by
-                            your uneven ears
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of Ear Surgery?
-                    </p>
-                    <p>
-                        The average cost of ear surgery in <?= ucwords($city) ?> may range from 40,000 INR to 60,000 INR.
-                        Much will depend on the hospital, the choice of Surgeon,
-                        the type of anesthesia used, and so on. Consulting
-                        our cosmetic surgeon will help you to know
-                        the exact cost of the surgery.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Ear Surgery?
-                    </p>
-                    <p>
-                        Some common risks of undergoing Otoplasty include:
-                    </p>
-                    <ul>
-                        <li>
-                            Pain, bleeding, or infection
-                        </li>
-                        <li>
-                            Adverse reaction to anesthesia
-                        </li>
-                        <li>
-                            Asymmetry in the positioning of the ear
-                        </li>
-                        <li>
-                            Permanent scarring
-                        </li>
-                        <li>
-                            Allergic reaction to surgical materials
-                        </li>
-                        <li>
-                            Reduction in skin sensation
-                        </li>
-                        <li>
-                            Unnatural contours that will make the ear appear pinned back
-                        </li>
-                        <li>
-                            Blocked or stuffy ear
-                        </li>
-                        <li>
-                            Draining of bloody fluid from the incision or the ear canal
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Ear Surgery?
-                    </p>
-                    <p>
-                        Once your ears attain their full size, you can undergo ear surgery.
-                        Usually, the ears grow completely after the age of 5. However,
-                        doctors recommend waiting till the age of 7 years to go for
-                        the surgery in <?= ucwords($city) ?>. From 7 to adulthood, any age
-                        is fine to undergo the procedure.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before the Ear Surgery?
-                    </p>
-                    <p>
-                        Before you proceed with Otoplasty in a clinic in <?= ucwords($city) ?>,
-                        here are some important steps to consider:
-                    </p>
-                    <ul>
-                        <li>
-                            go for lab tests or medical examination as instructed by your
-                            surgeon
-                        </li>
-                        <li>
-                            Inform your surgeon about your current medications
-                        </li>
-                        <li>
-                            Stop tobacco and alcohol consumption around 2 weeks in advance
-                        </li>
-                        <li>
-                            Have someone bring you back home after the surgery
-                        </li>
-                        <li>
-                            Have a positive outlook toward the ear surgery
-                        </li>
-                        <li>
-                            Avoid the intake of any herbal supplement, anti-inflammatory medicine,
-                            or any other drugs that could increase bleeding
-                        </li>
-                        <li>
-                            Be sure to discuss any concerns you have about the surgery with
-                            your ear surgeon
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Ear surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            On the day of Otoplasty surgery in <?= ucwords($city) ?>,
-                            come to the hospital with a calm
-                            and prepared mind
-                        </li>
-                        <li>
-                            One of the staff members will administer anesthesia to the selected area
-                        </li>
-                        <li>
-                            The entire procedure may take around 2-3 hours to complete
-                        </li>
-                        <li>
-                            The treatment will involve removing, replacing, or repairing any of the three
-                            little middle ear bones (termed Ossiculoplasty)
-                        </li>
-                        <li>
-                            After the treatment, you may have a dizzy feeling for a few days.
-                        </li>
-                        <li>
-                            You may also expect ear pain for around a week after the surgery
-                        </li>
-                        <li>
-                            Have realistic expectations with the surgery as it will help in
-                            quick healing
-                        </li>
-                    </ul> -->
+             
             </div>
         <?php } elseif ($surgery_str == "breast augmentation") { ?>
             <div class="col padd-null">
