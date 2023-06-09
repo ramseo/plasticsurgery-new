@@ -3236,61 +3236,51 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </ul>
                     </div>
                 </div>
-               
+
             </div>
         <?php } elseif ($surgery_str == "breast reduction") {  ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Having large breasts can be a disadvantage not just to your appearance but also to
-                        other health issues. If you are suffering from extreme back pain or any physical
-                        troubles due to large breasts, our expert cosmetic surgeons in <?= ucwords($city) ?> can help
-                        you to resolve it. So, if you wish to reduce the size of your breasts and feel at
-                        ease, let us know.
+                        <strong>
+                            Renowned Surgeons in Hyderabad for Breast Reduction Surgery
+                        </strong>
+                    </p>
+                    <p>
+                        Are you unhappy with your extra-large breasts (macromastia) and envy women with comparably smaller breasts? Don’t be! Our plastic surgeons in Hyderabad can help you with Breast Reduction surgery to get your curves in shape. Also termed as reduction mammoplasty, this procedure requires the removal of excess breast tissue, glandular tissue, and skin to attain a size, which is proportionate to your body. Our experienced surgeons will ensure relief from physical discomfort, back pain, and other problems arising due to large breasts as well.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for Breast Reduction in <?= ucwords($city) ?>?
+                    Why Are Our Surgeons Best Suited to Perform Breast Reduction in Hyderabad?
                 </p>
                 <ul>
                     <li>
-                        Highly adept at performing breast reduction procedures to help patients
-                        relieve from physical constraints.
+                        Adept expertise to perform Breast Reduction surgery in Hyderabad
                     </li>
                     <li>
-                        The best cosmetic surgeons in <?= ucwords($city) ?>, perfectly skilled at performing breast reduction
-                        surgeries with minimal scarring.
+                        Expert in performing Vertical Breast Reduction, Liposuction, Scarless Breast Reduction, and Anchor Breast Reduction
                     </li>
                     <li>
-                        Expert cosmetic surgeons certified by many national and international boards for
-                        cosmetic surgeons.
+                        Help to regain confidence in the patients with reduced breasts
                     </li>
                     <li>
-                        Specialization in different types of breast reduction surgeries like Breast Reduction,
-                        Vertical Breast Reduction, and inverted-T Breast Reduction
+                        Enable the patients to get rid of back, shoulder, and neck pain, droopy big breasts, and the discomfort due to bra strap indentation
                     </li>
                     <li>
-                        Expert in reshaping the breasts and repositioning the nipples to achieve
-                        natural-looking breasts
+                        Perform the surgery at an affordable cost
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Breast reduction surgery involves a dedicated procedure and extensive care during the
-                    recovery phase. So, apart from the main cost of surgery,
-                    you will also have to take care of other expenditures related to the procedure.
-                    Our cosmetic surgeon in <?= ucwords($city) ?> will be able
-                    to guide you better in this regard.
+                    The cost of Breast Reduction surgery depends largely on the type of Breast Reduction procedure performed. In addition, factors like surgical amenities, surgeon’s expertise and experience, medications, etc. also contribute to deciding the Breast Reduction surgery cost in Hyderabad. It would be worthwhile to consult our expert plastic surgeon for detailed information on the cost of the surgery.
                 </p>
                 <p class="identity">
                     OUR SERVICES
                 </p>
                 <p>
-                    Do not let those big breasts hinder your movements, leading to physical pain. Consult with
-                    our best cosmetic surgeons in <?= ucwords($city) ?> and customize your breast reduction procedure
-                    for a happy and comfortable tomorrow.
+                    Our surgeons provide advanced treatment facilities in Hyderabad that will make you feel extremely comfortable during the entire surgery. Their surgery rooms comprise all the sophisticated facilities required for breast surgery, including the latest equipment and upscale operation beds. The efficient nursing team of our surgeons cares for you with perfection throughout the surgery. Furthermore, with our consummate Breast Reduction surgeon doing the job, you can feel yourself in the safest hands.
                 </p>
 
                 <p class="identity">
@@ -3308,31 +3298,32 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            You can be a good candidate for Breast Reduction surgery in <?= ucwords($city) ?> if you satisfy
-                            the following pointers:
+                            An ideal candidate for Breast Reduction surgery in Hyderabad should satisfy the below-mentioned criteria:
                         </p>
                         <ul>
                             <li>
-                                You have excessively large breasts, which have started creating back,
-                                neck, or shoulder pain
+                                Extraordinarily large breasts that are becoming hard to manage
                             </li>
                             <li>
-                                You are facing several skin conditions, rashes, and cuts in the shoulder due
-                                to large breasts
+                                Healthy body, good enough to withstand the complications of Breast Reduction surgery without hassles
                             </li>
                             <li>
-                                Your large breasts are compelling you to have bad posture and are limiting your
-                                physical activities
+                                Free from any severe medical condition
                             </li>
                             <li>
-                                You have realistic expectations with the surgery
+                                Causing pain in the shoulder, neck, and back
                             </li>
                             <li>
-                                You don’t smoke or drink alcohol
+                                Facing several skin conditions, cuts, and rashes in the shoulder because of large breasts
                             </li>
                             <li>
-                                You have a healthy body, which could bear the side effects of breast reduction
-                                surgery with ease.
+                                Bra straps leading to shoulder indentations
+                            </li>
+                            <li>
+                                Facing problems in carrying out physical activities due to bad posture
+                            </li>
+                            <li>
+                                Non-smoker and non-alcoholic
                             </li>
                         </ul>
                     </div>
@@ -3348,11 +3339,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The typical cost of a breast reduction procedure is between 1,00,000 INR to 2,00,000 INR
-                            depending on the scale of the surgery.
-                            Anyone who has recently undergone the surgery can help you get a better idea of the
-                            cost involved. Besides, consulting with your surgeon in <?= ucwords($city) ?> is always
-                            advisable to know about the cost of Breast Reduction surgery.
+                            The typical cost of a Breast Reduction procedure in Hyderabad is between 1,00,000 INR to 2,00,000 INR depending on the scale of the surgery. Anyone who has recently undergone the surgery can help you get a better idea of the cost involved. Besides, consulting with your surgeon in Hyderabad is always advisable to know about the cost of Breast Reduction surgery.
                         </p>
                     </div>
                 </div>
@@ -3368,34 +3355,40 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Surgical risks like infection or bleeding
+                                Risk of infection
                             </li>
                             <li>
-                                Fluid accumulation along the treated area
+                                Excessive bleeding
                             </li>
                             <li>
-                                Swelling, bruising, or skin discoloration in the treated location
+                                Accumulation of flood along the incision site, leading to seroma
                             </li>
                             <li>
-                                Breathing problems due to anesthesia
+                                Allergic reactions to anesthesia such as breathing problems
                             </li>
                             <li>
-                                Allergic reaction to tape adhesive, suture materials, lotions, etc.
+                                Allergic behaviour toward surgery materials, like sutures, lotions, adhesives, etc.
                             </li>
                             <li>
-                                Loss of sensation in nipples and breasts for a brief or long time.
+                                reduced sensation in breasts and nipples on a permanent or temporary basis
                             </li>
                             <li>
-                                Uneven or asymmetrical breasts
+                                Asymmetrical breasts resulting due to surgery
                             </li>
                             <li>
-                                Loss of nipple partially or permanently
+                                Risk of blood clots or Deep Vein Thrombosis (DVT) after recovery in rare cases
                             </li>
                             <li>
-                                Damaged nerve cells
+                                Need for correction surgery
                             </li>
                             <li>
-                                Need for a revisional surgery
+                                Partial or permanent nipple loss
+                            </li>
+                            <li>
+                                Damage to nerve cells
+                            </li>
+                            <li>
+                                Excessive scars in rare instances
                             </li>
                         </ul>
                     </div>
@@ -3411,12 +3404,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you are more than 18 years old and have your breasts developed completely,
-                            this is the right time for Breast Reduction. Teenagers facing severe
-                            back problems may also opt for this surgery in <?= ucwords($city) ?>.
-                            Older women undergo this treatment to get rid of their
-                            chronic neck pain, poor posture,
-                            and other side effects of large breasts.
+                            Ideally, you should be more than 18 years old to opt for this surgery and your breasts must be completely developed. Young girls in their teens who are facing severe back problems can also choose to undergo this surgery in Hyderabad. Women with large breasts often opt for this procedure in their old age to get rid of poor posture, chronic neck pain, etc.
                         </p>
                     </div>
                 </div>
@@ -3431,26 +3419,43 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Among the many things to make up to your to-do list include:
+                            Before going for the Breast Reduction surgery in Hyderabad you should take care to do the following:
                         </p>
                         <ul>
                             <li>
-                                Undergoing Mammogram
+                                Undergo Mammogram
                             </li>
                             <li>
-                                Avoid smoking and drinking for at least 6 weeks before the surgery
+                                Undergo medical evaluation and tests recommended by your surgeon
                             </li>
                             <li>
-                                Avoid taking over-the-counter drugs, anti-inflammatory drugs, herbal supplements,
-                                and other medicines to curb bleeding during the treatment
+                                do not smoke or drink for around 6 weeks before the surgery
                             </li>
                             <li>
-                                Have someone prepared to get you back home from the hospital after the surgery
+                                Maintain a balanced and nutritious diet
                             </li>
                             <li>
-                                Make sure to take a break of a few weeks from work in advance for speedy
-                                recovery after the surgery
+                                Keep your body hydrated to avoid hassles during the surgery
                             </li>
+                            <li>
+                                Arrange for someone to take you home after the surgery
+                            </li>
+                            <li>
+                                Have domestic help to look after you and your kids (if any) after the surgery
+                            </li>
+                            <li>
+                                Buy loose clothes in advance so that you could wear them comfortably later on
+                            </li>
+                            <li>
+                                Prefer having compression garments and clothes with buttons or chains
+                            </li>
+                            <li>
+                                Avoid the consumption of Aspirin, anti-inflammatory drugs, and herbal supplements as they could lead to excessive bleeding
+                            </li>
+                            <li>
+                                Take off from your office before the surgery so that you could get ample time for rest
+                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -3466,177 +3471,38 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                You should have realistic expectations with the surgery instead of
-                                expecting miracles
+                                Come to the clinic in Hyderabad with a calm and composed attitude
                             </li>
                             <li>
-                                On the day of surgery in <?= ucwords($city) ?>, the plastic surgeon will start performing the by
-                                creating incisions on your large breasts
+                                Have a positive attitude toward the surgery
                             </li>
                             <li>
-                                Before the surgery begins, you will get the required medicines to make you feel
-                                at ease during the procedure
+                                Have realistic expectations about the surgery
                             </li>
                             <li>
-                                The surgeon will remove the concerned skin, excess fat, and glandular tissue to
-                                reposition the nipple and reduce the areola
+                                You could expect to get an adjusted dose of anesthesia depending on your past reactions to it
                             </li>
                             <li>
-                                The results of the surgery will be visible immediately after the treatment
+                                Your surgeon will start the surgery by making an incision to reduce fat tissues
                             </li>
                             <li>
-                                The incisions lines and post-operative swelling will subside with time
+                                He will operate on the breast skin to remove excess fat and glandular tissue
                             </li>
                             <li>
-                                You will find a new you after the surgery in <?= ucwords($city) ?>
+                                With this, you could expect the repositioning of the nipple and reduction of the areola
+                            </li>
+                            <li>
+                                The entire surgery may take around 2-3 hours depending on the extent and complications of Breast Reduction
+                            </li>
+                            <li>
+                                You could expect your body to heal completely within 2 to 6 weeks of the surgery
+                            </li>
+                            <li>
+                                The post-operative swelling, scars, and incision lines will diminish in a few weeks after the surgery
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Breast Reduction?
-                    </p>
-                    <p>
-                        You can be a good candidate for Breast Reduction surgery in <?= ucwords($city) ?> if you satisfy
-                        the following pointers:
-                    </p>
-                    <ul>
-                        <li>
-                            You have excessively large breasts, which have started creating back,
-                            neck, or shoulder pain
-                        </li>
-                        <li>
-                            You are facing several skin conditions, rashes, and cuts in the shoulder due
-                            to large breasts
-                        </li>
-                        <li>
-                            Your large breasts are compelling you to have bad posture and are limiting your
-                            physical activities
-                        </li>
-                        <li>
-                            You have realistic expectations with the surgery
-                        </li>
-                        <li>
-                            You don’t smoke or drink alcohol
-                        </li>
-                        <li>
-                            You have a healthy body, which could bear the side effects of breast reduction
-                            surgery with ease.
-                        </li>
-                    </ul>
-
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of Breast Reduction?
-                    </p>
-                    <p>
-                        The typical cost of a breast reduction procedure is between 1,00,000 INR to 2,00,000 INR
-                        depending on the scale of the surgery.
-                        Anyone who has recently undergone the surgery can help you get a better idea of the
-                        cost involved. Besides, consulting with your surgeon in <?= ucwords($city) ?> is always
-                        advisable to know about the cost of Breast Reduction surgery.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Breast Reduction?
-                    </p>
-                    <ul>
-                        <li>
-                            Surgical risks like infection or bleeding
-                        </li>
-                        <li>
-                            Fluid accumulation along the treated area
-                        </li>
-                        <li>
-                            Swelling, bruising, or skin discoloration in the treated location
-                        </li>
-                        <li>
-                            Breathing problems due to anesthesia
-                        </li>
-                        <li>
-                            Allergic reaction to tape adhesive, suture materials, lotions, etc.
-                        </li>
-                        <li>
-                            Loss of sensation in nipples and breasts for a brief or long time.
-                        </li>
-                        <li>
-                            Uneven or asymmetrical breasts
-                        </li>
-                        <li>
-                            Loss of nipple partially or permanently
-                        </li>
-                        <li>
-                            Damaged nerve cells
-                        </li>
-                        <li>
-                            Need for a revisional surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Breast Reduction?
-                    </p>
-                    <p>
-                        If you are more than 18 years old and have your breasts developed completely,
-                        this is the right time for Breast Reduction. Teenagers facing severe
-                        back problems may also opt for this surgery in <?= ucwords($city) ?>.
-                        Older women undergo this treatment to get rid of their
-                        chronic neck pain, poor posture,
-                        and other side effects of large breasts.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before Breast Reduction Surgery?
-                    </p>
-                    <p>
-                        Among the many things to make up to your to-do list include:
-                    </p>
-                    <ul>
-                        <li>
-                            Undergoing Mammogram
-                        </li>
-                        <li>
-                            Avoid smoking and drinking for at least 6 weeks before the surgery
-                        </li>
-                        <li>
-                            Avoid taking over-the-counter drugs, anti-inflammatory drugs, herbal supplements,
-                            and other medicines to curb bleeding during the treatment
-                        </li>
-                        <li>
-                            Have someone prepared to get you back home from the hospital after the surgery
-                        </li>
-                        <li>
-                            Make sure to take a break of a few weeks from work in advance for speedy
-                            recovery after the surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Breast Reduction surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            You should have realistic expectations with the surgery instead of
-                            expecting miracles
-                        </li>
-                        <li>
-                            On the day of surgery in <?= ucwords($city) ?>, the plastic surgeon will start performing the by
-                            creating incisions on your large breasts
-                        </li>
-                        <li>
-                            Before the surgery begins, you will get the required medicines to make you feel
-                            at ease during the procedure
-                        </li>
-                        <li>
-                            The surgeon will remove the concerned skin, excess fat, and glandular tissue to
-                            reposition the nipple and reduce the areola
-                        </li>
-                        <li>
-                            The results of the surgery will be visible immediately after the treatment
-                        </li>
-                        <li>
-                            The incisions lines and post-operative swelling will subside with time
-                        </li>
-                        <li>
-                            You will find a new you after the surgery in <?= ucwords($city) ?>
-                        </li>
-                    </ul> -->
 
             </div>
         <?php } elseif ($surgery_str == "breast implant removal") { ?>
