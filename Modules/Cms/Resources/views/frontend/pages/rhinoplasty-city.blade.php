@@ -3509,121 +3509,532 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Surgeries for Breast implant removal in <?= ucwords($city) ?> are suitable for patients who want to
-                        remove the implants due to several reasons.
-                        It can be because the patient is not happy with the results or wishes to go back to
-                        her previous appearance. The change in the position of the implant due to weight
-                        fluctuations could also be one of the reasons in this regard. In some rare cases,
-                        the implant may rupture or leak, leaving no option but to remove it.
-                        One should approach only an expert and experienced cosmetic surgeon to undergo
-                        this surgery.
+                        <strong>
+                            Well-Known Surgeons in Hyderabad for Breast Implant Removal Surgery
+                        </strong>
+                    </p>
+                    <p>
+                        Many reasons could tend the females to opt for Breast Implant Removal, such as breast cancer or a change in the lifecycle. Many other conditions bleeding, infection, calcium build-up, necrosis, capsular contraction, and more could also prompt them to get away with the implants. The procedure is just opposite to breast augmentation and aims at removing breast implants or revising the breast size and shape. Our skilled plastic surgeons in Hyderabad hold high end-expertise in performing this surgery with thriving results.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for <?= $surgery_str ?> surgery in <?= ucwords($city) ?>?
+                    Why Approach Our Surgeons for Breast Implant Removal in Hyderabad?
                 </p>
                 <ul>
                     <li>
-                        The best cosmetic surgeon in <?= ucwords($city) ?> for all breast-related procedures.
+                        Best plastic surgeons in Hyderabad for Breast Implant Removal surgery
                     </li>
                     <li>
-                        Experienced in the placement and removal of breast implants.
+                        Expert in removing old implants and replacing them with new ones
                     </li>
                     <li>
-                        A commendable history of offering the best results for patients in breast
-                        surgeries in <?= ucwords($city) ?>.
+                        Repositioning the implants existing in the breasts
                     </li>
                     <li>
-                        Skilled at removing the scar tissue that forms around the implants and helps in
-                        achieving fuller, rounder breasts even
-                        after the removal of the implants.
+                        Removing the implants with no replacement
                     </li>
                     <li>
-                        A board-certified cosmetic surgeon and a member of several national and international
-                        organizations related to cosmetic surgeries.
+                        Help women flaunt a confident appearance
+                    </li>
+                    <li>
+                        Extremely qualified and experienced plastic surgeons in Hyderabad
                     </li>
                 </ul>
                 <p class="identity">
-                    COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
+                    COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    In a breast implant removal surgery, the cost of the surgery differs based on the
-                    cosmetic surgeon you choose and the complexity of the treatment.
-                    Generally, a breast implant removal surgery
-                    is from 50,000 INR to 1,00,000 INR.
-                </p>
-                <p>
-                    If you are feeling discomfort in your breasts after placing the implants, it is vital
-                    to visit a reliable cosmetic surgeon in <?= ucwords($city) ?> without any delay for
-                    complete checkup. The surgeon will
-                    analyze and recommend the solution.
+                    The cost of Breast Implant Removal depends mainly upon the expertise of the surgeon, the location of treatment, and the type of procedure. It may include the surgeon’s fee, facilities used during the treatment, post-operative garments, surgeon’s prescription, etc. While some insurance plans may cover Breast Implant Removal in Hyderabad if deemed medically necessary, the cost of getting new implants may not be covered.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Are you having second thoughts about your breast implants?
-                    There is a way out! Choose our skilled cosmetic
-                    surgeon in <?= ucwords($city) ?> to remove or fix your breast implants in the
-                    way you want!
+                    Similar to breast augmentation and breast reduction surgeries, we offer comprehensive facilities and services for Breast Implant Removal in Hyderabad. Our experienced surgeons are committed to providing top-notch treatment facilities, utilising the latest and advanced surgical equipment, and assisting you with the friendly nursing staff. You can expect a fulfilling Breast Implant Removal under the supervision of our qualified and proficient plastic surgeons.
                 </p>
+                <!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+                <p class="identity">
+                    FAQs on Breast Implant Removal Surgery in Hyderabad
+                </p>
+
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            1. Are you a good candidate for Breast Implant Removal?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            Conditions that make you a suitable candidate for Breast Implant Removal in Hyderabad include:
+                        </p>
+                        <ul>
+                            <li>
+                                Dissatisfaction with the appearance of breast implants
+                            </li>
+                            <li>
+                                Maintaining a stable weight
+                            </li>
+                            <li>
+                                No severe medical conditions
+                            </li>
+                            <li>
+                                Feeling intense pain or discomfort
+                            </li>
+                            <li>
+                                Implants making breasts too bulky
+                            </li>
+                            <li>
+                                Implant rupture or leakage
+                            </li>
+                            <li>
+                                Realistic expectations with the surgery results
+                            </li>
+                            <li>
+                                Infection due to breast implants
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            2. What is the cost of Breast Implant Removal?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            Typically, the cost of Breast Implant Removal surgery in Hyderabad is around 100,000 INR, but it may vary depending on several factors. For detailed and accurate information about the cost, we recommend scheduling a consultation with any of our experienced cosmetic surgeons.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            3. What are the risks related to Breast Implant Removal?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            Mostly the Breast Implant Removal surgery in Hyderabad will accompany rare or no complications at all. Here are some of the occasional risks that may occur:
+                        </p>
+                        <ul>
+                            <li>
+                                Displeasure with the breast appearance post-surgery
+                            </li>
+                            <li>
+                                Anesthesia-related risks
+                            </li>
+                            <li>
+                                Unevenness in breast size and shape
+                            </li>
+                            <li>
+                                Infection due to surgery materials
+                            </li>
+                            <li>
+                                Possibility of bleeding due to the intake of anti-inflammatory medicines
+                            </li>
+                            <li>
+                                Swelling, bruising
+                            </li>
+                            <li>
+                                Formation of seroma or fluid accumulation around the implant site
+                            </li>
+                            <li>
+                                Sagging skin around the breasts
+                            </li>
+                            <li>
+                                Reduced sensation around the nipples
+                            </li>
+                            <li>
+                                Excessive but invisible scarring
+                            </li>
+                            <li>
+                                Possible need for correction surgery in Hyderabad
+                            </li>
+                            <li>
+                                Rare chance of Deep Vein Thrombosis (DVT)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            4. When can you go for Breast Implant Removal?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            Breast Implant Removal in Hyderabad is an option for those who are not satisfied with the results of their breast implant surgery. Generally, any healthy adult woman can undergo this procedure. It is however essential to consult with your surgeon about your reasons for implant removal, as he can provide better guidance.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            5. What are the things to do before Breast Implant Removal Surgery?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                Consult your surgeon about the expected outcomes of the implant removal surgery in Hyderabad for better preparation
+                            </li>
+                            <li>
+                                Undergo a thorough medical evaluation and complete body check-up to ensure perfect health before the surgery.
+                            </li>
+                            <li>
+                                Make sure to consult your surgeon to adjust your existing medications.
+                            </li>
+                            <li>
+                                Avoid smoking and alcohol consumption to avert the chances of excessive bleeding during the surgery.
+                            </li>
+                            <li>
+                                Do not consume aspirin, anti-inflammatory drugs, and health supplements.
+                            </li>
+                            <li>
+                                Arrange for a caregiver who can take you home after the surgery
+                            </li>
+                            <li>
+                                Have a caregiver at home to assist you with daily activities during the initial few days after the surgery.
+                            </li>
+                            <li>
+                                Wear loose clothes to feel comfortable.
+                            </li>
+                            <li>
+                                Eat a healthy and nutritious diet
+                            </li>
+                            <li>
+                                Keep your body hydrated and additive-free fluids
+                            </li>
+                            <li>
+                                Do not eat anything for around 8 hours before the surgery
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            6. What to expect on the day of Breast Implant Removal surgery?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                It is important to approach the day of Breast Implant Removal surgery in Hyderabad with a calm and positive mindset.
+                            </li>
+                            <li>
+                                The type and quantity of anesthesia you receive will depend on your ability to tolerate it.
+                            </li>
+                            <li>
+                                The surgeon will create an incision to remove the breast implant.
+                            </li>
+                            <li>
+                                The entire procedure will take around 1-3 hours depending on the presence of excess scar tissues, leakage, or a rupture at the treatment site
+                            </li>
+                            <li>
+                                You may feel pain after the anesthesia effect ends
+                            </li>
+                            <li>
+                                It may take a few weeks to recover from pain, discomfort, swelling, and bruising.
+                            </li>
+                            <li>
+                                Full recovery from the surgery may take about 4-6 weeks.
+                            </li>
+                            <li>
+                                Managing your expectations and having realistic goals is crucial for a successful Breast Implant Removal procedure in Hyderabad.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 00000000000000000000000000000000000000000000000000000000000000000000000 -->
             </div>
         <?php } elseif ($surgery_str == "breast implant revision") { ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Breast implants enhance the appearance and size of the breasts and complement
-                        the entire figure. Unfortunately, breast implants are not permanent.
-                        You need to go for breast revision surgery after a span of 10 or more
-                        years when your breasts start to sag again.
+                        <strong>
+                            The Well-Known Surgeons in Hyderabad for Breast Implant Revision Surgery
+                        </strong>
                     </p>
                     <p>
-                        In breast revision surgery, the cosmetic surgeon will focus on changing the
-                        implants and reshaping the breasts to retain a youthful appearance.
-                        The highly skilled cosmetic surgeons in <?= ucwords($city) ?> can help you better
-                        in achieving natural-looking, rounder and fuller breasts.
+                        Breast implant revision aims at improving the appearance of female breasts by replacing old implants with new ones. This may tend the plastic surgeons in Hyderabad to increase or decrease the implant size, reduce breast size or lift it. Typically, women may consider breast revision surgery around 10 or more years after breast implant surgery. The purpose may be to improve the aesthetic appearance of the breasts, prevent sagging breasts due to dislocated implants, or address issues such as implant leakage or rupture.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for <?= $surgery_str ?> surgery in <?= ucwords($city) ?>?
+                    Why Are Our Surgeons the Best for Breast Implant Revision in Hyderabad?
                 </p>
                 <ul>
                     <li>
-                        One of the top cosmetic surgeons in <?= ucwords($city) ?> and duly experienced in
-                        breast implant surgery.
+                        Experienced plastic surgeons in Hyderabad to perform breast implant revision surgery
                     </li>
                     <li>
-                        Experienced in performing numerous breast augmentation with implants, breast implant
-                        removal and breast revision surgeries.
+                        Expertise in changing the implants from silicone to saline or vice versa
                     </li>
                     <li>
-                        Skilled at thoroughly examining the condition and offering detailed guidance in choosing
-                        the new breast implants.
+                        Can help to solve implant-related complications through breast revision surgery
                     </li>
                     <li>
-                        Certified by the best national and international boards of plastic and
-                        cosmetic surgeries.
+                        Experienced to deal with the issues like scarring, rupture, etc., that originated from earlier breast augmentation surgery
+                    </li>
+                    <li>
+                        Help women regain their natural breasts
                     </li>
                 </ul>
-                <p class="identity">COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?></p>
-                <p>
-                    A breast revision surgery involves swapping the old implants for the new implants.
-                    There can be minor complications like scar tissue removal as well as cleaning
-                    up any damages or leaks. As it’s an extensive procedure, the cost of the breast
-                    revision surgery starts from 1,00,000 INR. This cost can vary depending on
-                    the type and size of the breast implants you choose, the condition
-                    of the current implants and the cosmetic surgeon.
-                    The total price is not inclusive of the medicines and other items like
-                    bandages needed for recovery.
+                <p class="identity">
+                    COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    To get a good estimate for your breast revision surgery, feel free to visit
-                    our expert cosmetic surgeon at the <?= ucwords($city) ?> clinic.
+                    The cost of breast implant revision in Hyderabad will depend on various factors such as the type of breast implant replacement, the expertise of the surgeon, the hospital or clinic, and the geographical location. Depending on the complications resulting from your previous breast implants, your insurance may cover a portion of the surgery cost. If you undergo breast revision surgery within 10 years of the initial surgery, your insurance may also cover the cost of the procedure.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Is it time to replace your old breast implants? Well, get brand-new, high-quality
-                    implants that make your breasts look fuller and youthful through our expert
-                    surgeon in <?= ucwords($city) ?>.
+                    Our Surgeons are well equipped with advanced facilities when it comes to performing breast revision surgery in Hyderabad. You will feel relaxed and at ease during the procedure. Our experienced breast revision surgeons will perform the treatment without hassles and with successful results. Moreover, the assistance of their capable nursing staff, advanced surgery equipment, and the sophisticated operating room will be of great help in the success of your operation. Connect with any of our surgeons today and fix your appointment for the surgery.
                 </p>
+
+                <!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+                <p class="identity">
+                    FAQs on Breast Implant Removal Surgery in Hyderabad
+                </p>
+
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            1. Are you a good candidate for Breast Revision surgery?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            An ideal candidate for Breast Revision surgery in Hyderabad should meet the following criteria:
+                        </p>
+                        <ul>
+                            <li>
+                                Experiencing Capsular contracture or facing implant malposition
+                            </li>
+                            <li>
+                                Having rippling in the breast implant
+                            </li>
+                            <li>
+                                Wish to change the size of the breasts
+                            </li>
+                            <li>
+                                Being in good overall health and free of medical ailments
+                            </li>
+                            <li>
+                                Not happy with breast surgery done earlier due to resulting complications
+                            </li>
+                            <li>
+                                Have realistic expectations for the revision surgery
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            2. What is the cost of Breast Revision?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            The average cost of Breast Revision Surgery in Hyderabad starts from around 1,00,000 INR. The expenses may rise further depending on the complications of the procedure. Factors such as the type and size of the breast implants chosen, the condition of the current implants, and the expertise of the cosmetic surgeon may affect the cost.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            3. What are the risks related to Breast Revision?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            Undergoing Breast Revision in Hyderabad may lead to several risks on an occasional basis:
+                        </p>
+                        <ul>
+                            <li>
+                                Bleeding due to smoking or consuming alcohol
+                            </li>
+                            <li>
+                                Possibility of infection because of the use of surgery materials
+                            </li>
+                            <li>
+                                Persistent pain after the effect of anesthesia wears off
+                            </li>
+                            <li>
+                                Bruising in the surgical incision site which will probably vanish in a few days
+                            </li>
+                            <li>
+                                Bad healing of wounds caused due to incisions
+                            </li>
+                            <li>
+                                The condition of Seroma or fluid accumulation in the treated site
+                            </li>
+                            <li>
+                                Chances of dead fatty tissue deep down the skin or Fat necrosis
+                            </li>
+                            <li>
+                                Hanging skin of the breasts
+                            </li>
+                            <li>
+                                Unappealing results with Unusual scarring
+                            </li>
+                            <li>
+                                Change in the shape of breasts and skin sensation
+                            </li>
+                            <li>
+                                The rare possibility of Hematoma
+                            </li>
+                            <li>
+                                Occasional chance of Deep Vein Thrombosis (DVT)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            4. When can you go for Breast Revision surgery?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            Breast Revision surgery in Hyderabad may become inevitable for the following reasons:
+                        </p>
+                        <ul>
+                            <li>
+                                Discomfort or pain caused by the implants
+                            </li>
+                            <li>
+                                Rupture or leakage in the breast implants
+                            </li>
+                            <li>
+                                Bottoming out of the implants, causing them to fall below the breast crease
+                            </li>
+                            <li>
+                                Shifting or rotating the implants
+                            </li>
+                            <li>
+                                Desire to change the size of the breast implants
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            5. What are the things to do before Breast Revision Surgery?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            To prepare for Breast Revision Surgery in Hyderabad, taking the following steps would be advisable:
+                        </p>
+                        <ul>
+                            <li>
+                                Schedule a consultation with your surgeon to discuss the benefits and risks of the procedure.
+                            </li>
+                            <li>
+                                Share your previous experience with breast surgery with the surgeon to help him tailor the revision surgery to your needs.
+                            </li>
+                            <li>
+                                Plan to take at least one week off work after the surgery.
+                            </li>
+                            <li>
+                                Purchase comfortable clothing to wear during the recovery period.
+                            </li>
+                            <li>
+                                Refrain from smoking or consuming alcohol leading up to the surgery.
+                            </li>
+                            <li>
+                                Aim for at least 8 hours of sleep the night before the procedure.
+                            </li>
+                            <li>
+                                Avoid eating or drinking anything for 8 hours prior to the surgery.
+                            </li>
+                            <li>
+                                Stay hydrated by drinking water and other fluids before the surgery.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            6. What to expect on the day of Breast Revision Surgery?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                Approach the clinic with a positive state of mind.
+                            </li>
+                            <li>
+                                Cooperate with the staff during medical check-ups.
+                            </li>
+                            <li>
+                                The anesthesiologist will adjust the anesthesia dose according to your previous experience with it.
+                            </li>
+                            <li>
+                                To perform the Breast Revision surgery in Hyderabad, the surgeon will make an incision.
+                            </li>
+                            <li>
+                                The surgery may take at least 45 minutes to 2 hours to complete.
+                            </li>
+                            <li>
+                                The surgeon will do his best to achieve the expected breast shape, size, and texture with the revision surgery.
+                            </li>
+                            <li>
+                                However, the results may not always meet your expectations and may cause disappointment.
+                            </li>
+                            <li>
+                                Therefore, it is good to have realistic expectations for Breast Revision surgery in Hyderabad.
+                            </li>
+                            <li>
+                                You can usually resume work after 1-2 weeks of the surgery, but the surgeon may advise against vigorous activities for about three weeks.
+                            </li>
+                            <li>
+                                Bruising, swelling, and pain should subside within 2-3 weeks.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 00000000000000000000000000000000000000000000000000000000000000000000000 -->
             </div>
         <?php } elseif ($surgery_str == "gynecomastia") { ?>
             <div class="col padd-null">
