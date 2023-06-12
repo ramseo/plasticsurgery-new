@@ -4787,42 +4787,39 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            Are you not happy with your buttock size?
+                            Get the Best Plastic Surgeons for Buttock Enhancement in Hyderabad
                         </strong>
                     </p>
                     <p>
-                        Buttock enhancement is the best option to increase the size of your buttocks and complement your physical appearance. When performed by a trusted and experienced cosmetic surgeon from <?= ucwords($city) ?>, you can make your buttocks look rounded, projected, and lifted. You can even eliminate the issue of sagging breasts and make them look naturally bigger.
+                        Extremely small, big, or sagging buttocks or those with dimples can thwart the appearance of your back. Those willing to get their buttocks back in shape may therefore opt for Buttock Enhancement surgery. It will work effectively in enhancing the shape, size, and contour of your back, thus enabling you to get rounder, fuller, and more appealing buttocks. Our plastic surgeons in Hyderabad can perform this procedure with high-end expertise to enable you to regain your toned body.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for Buttock Enhancement in <?= ucwords($city) ?>?
+                    Why Approach Our Surgeons for Buttock Enhancement Surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Highly skilled cosmetic surgeons in <?= ucwords($city) ?> to perform buttock enhancement surgeries with minimal and almost invisible scarring
+                        Dexterous in performing all the types of buttock related procedures in Hyderabad such as buttock augmentation, implants, Brazilian butt lifts, and fat grafting
                     </li>
                     <li>
-                        Expertise in performing Brazilian Butt Lift and enhancement using buttock implants
+                        Ensure symmetry of buttocks without making them look artificial
                     </li>
                     <li>
-                        Experienced in helping patients choose the right type and size of buttock enhancement surgery
+                        Have a high success rate with Buttock Enhancement surgery
                     </li>
                     <li>
-                        Adept at accomplishing symmetrical enhancements of the buttock sizes without making it look artificial
-                    </li>
-                    <li>
-                        Certified by several national and international boards of cosmetic surgeons
+                        Instil self-confidence and increase the self-esteem of the patients with the surgery
                     </li>
                 </ul>
                 <p class="identity">
-                    COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
+                    COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Several types of buttock enhancement surgery include Brazilian Butt Lifts, Fat Grafting, and Buttock Implants. So depending on your preferred treatment, the cost of surgery will also differ. Apart from the cost of the surgery, you should also consider the expenses incurred in medicines, compressions, dressings, etc. To know the whole cost of buttock enhancement, you can visit any of our best cosmetic surgeons in <?= ucwords($city) ?>.
+                    The cost of surgery for Buttock Enhancement relies on your current geographical location, the type of surgery you opt for, and the reputation of the surgeon you approach. Other factors to decide the cost may include room charges, the surgeon’s fees, medical tests, facilities provided in the clinic, and more. For deeper insight into the associated cost, you can always consult any of our renowned Buttock Enhancement surgeons in Hyderabad.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Big buttocks have a glamorous appeal and you can achieve them through buttock enhancement surgery. With one of our skilled cosmetic surgeons from <?= ucwords($city) ?> helping you every step of the day, you can safely undergo Buttock Enhancement surgery.
+                    A successful Buttock Enhancement surgery goes a long way in boosting one’s self-confidence. Hence, the need to choose the best plastic surgeon is of high importance. With our experienced surgeons in Hyderabad, you will be in safe hands. Moreover, you will avail the best of services in their clinic, along with technically sound and advanced surgery equipment, a well-equipped surgery room, and amicable nursing staff. Your satisfaction remains paramount to us.
                 </p>
                 <p class="identity">
                     FAQs on Buttock Enhancement Surgery in <?= ucwords($city) ?>
@@ -4839,29 +4836,32 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Here are the conditions for you to be an ideal Buttock Enhancement candidate
+                            Mentioned below are important to consider if you wish to be a suitable candidate for Buttock Enhancement surgery in Hyderabad:
                         </p>
                         <ul>
                             <li>
-                                Your butt misses the desired size, shape, fullness, and appeal
+                                Your butts are lagging behind in the size, curves, roundness and the desired appeal
                             </li>
                             <li>
-                                You have a good overall health
+                                You have a healthy body, free from any severe medical condition
                             </li>
                             <li>
-                                You can tolerate the effect of anesthesia
+                                Your body is strong enough to withstand the adverse influence of anesthesia
                             </li>
                             <li>
-                                Despite regular exercising and taking a balanced diet, your butts cease to increase in size
+                                Your butts are not gaining weight and size despite a balanced diet and regular exercising
                             </li>
                             <li>
                                 You should have a particular donor site having sufficient stubborn fat cells that could be transferred to your butts
                             </li>
                             <li>
-                                You have realistic expectations with the Buttock Enhancement Surgery
+                                There has to be a donor site comprising stubborn fat cells in ample quantity, to transfer them to the butt
                             </li>
                             <li>
-                                You don’t smoke or drink alcohol. If you do, quit the habits at least two weeks before the surgery, as it may affect your surgery results adversely
+                                You have set realistic goals and do not expect miracles from the surgery
+                            </li>
+                            <li>
+                                You are a non-drinker and a non-smoker
                             </li>
                         </ul>
                     </div>
@@ -4877,7 +4877,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The average cost of a Brazilian Butt Lift or a Buttock Enhancement surgery in <?= ucwords($city) ?> lies between 200000 INR to 400000 INR. Indeed, it is a big amount, but considering the expenses in other countries, the cost of this surgery in India is still much more reasonable.
+                            A Buttock Enhancement surgery would cost around 2,00,000 INR to 4,00,000 INR. It may appear a big amount but as compared to other parts of the world, the cost of the Brazillian Butt Lift in Hyderabad, India is still affordable.
                         </p>
                     </div>
                 </div>
@@ -4892,41 +4892,44 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Irrespective of the type of Buttock Enhancement, you cannot rule out the possibility of several mild to severe risks:
+                            In rare instances, there can be several side effects of the Buttock Enhancement surgery in Hyderabad, as below:
                         </p>
                         <ul>
                             <li>
-                                Blood clotting or hematoma
+                                Clotting of a pool of blood, also called as hematoma
                             </li>
                             <li>
-                                Fluid accumulation or seroma
+                                Accumulation of fluid or seroma
                             </li>
                             <li>
-                                Dead fat tissue
+                                Fat necrosis or the dead fat tissue, which mostly disappears without treatment
                             </li>
                             <li>
-                                Loss of sensation on a temporary or permanent basis
+                                Reduction or loss of sensation in the treated area
                             </li>
                             <li>
-                                Permanent scars and stretch marks
+                                Stretch marks and permanent scars
                             </li>
                             <li>
-                                Infection and bleeding
+                                Poor healing of wounds
                             </li>
                             <li>
-                                Blood of fat clots that can affect your lungs or heart
+                                Infection due to the allergic reaction to medical equipment or medicines
                             </li>
                             <li>
-                                Nerve damage
+                                Bleeding due to the intake of anti-inflammatory medicines
                             </li>
                             <li>
-                                asymmetrical butts
+                                Possibility of Nerve damage
                             </li>
                             <li>
-                                Chances of revision surgery
+                                Unappealing and uneven butts
                             </li>
                             <li>
-                                Implant rupture or migration
+                                Correction surgery
+                            </li>
+                            <li>
+                                Dislocated or ruptured butt implant
                             </li>
                         </ul>
                     </div>
@@ -4942,7 +4945,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you think your natural butts are too flat or squarish, you may opt for this surgery in <?= ucwords($city) ?>. In addition, if you have lost significant weight or if you believe that adding a few extra curves could balance the rest of your body, Buttock Enhancement is the right option. As per experts, 25 is the ideal age to perform this surgery, as it will give ample time for the human brain to develop completely.
+                            If you are dissatisfied with the appearance of your flat or square buttocks, you may consider Buttock Enhancement surgery in Hyderabad. This option may also be suitable if you have lost a significant amount of weight or if you wish to achieve a more balanced body shape. According to experts, the ideal age for this surgery is 25, as it allows ample time for the brain to fully develop.
                         </p>
                     </div>
                 </div>
@@ -4957,29 +4960,29 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Here are some important points to help you ready for the Buttock Enhancement Surgery in <?= ucwords($city) ?>:
+                            These points will help you to prepare well for the Buttock Enhancement Surgery in Hyderabad:
                         </p>
                         <ul>
                             <li>
-                                Get the blood tests suggested by your surgeon to know if your body is all set for the surgery
+                                To ensure that your body is ready for surgery, follow your surgeon's advice regarding blood tests
                             </li>
                             <li>
-                                Refrain from smoking or consuming alcohol for around 2-3 weeks before and after the surgery
+                                Take the prescribed medication as directed
                             </li>
                             <li>
-                                Take the prescribed medicines as instructed and inform your surgeon about any existing medications to adjust accordingly
+                                Refrain from smoking or drinking alcohol for at least two to three weeks before and after the procedure
                             </li>
                             <li>
-                                Putting on loose clothing is advisable
+                                Inform your surgeon if you are taking any other medications so that he can adjust your treatment plan accordingly
                             </li>
                             <li>
-                                Prepare yourself mentally and if you have any confusion, discuss it with your surgeon for prompt resolution
+                                Surgeons recommend wearing loose clothing to make the patients feel comfortable during movement
                             </li>
                             <li>
-                                Have realistic expectations with the surgery
+                                Have someone accompany you home after the procedure.
                             </li>
                             <li>
-                                Have someone to accompany you back home after the surgery
+                                Arrange for domestic help to look after you and your family so that you could take rest
                             </li>
                         </ul>
                     </div>
@@ -4996,174 +4999,35 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Come to the hospital or clinic in <?= ucwords($city) ?> for the surgery with a cool mind
+                                When coming for the surgery in Hyderabad, make sure to be calm and relaxed.
                             </li>
                             <li>
-                                The hospital staff will perform necessary tests to examine your health and make you ready for the surgery
+                                The hospital or clinic staff will conduct necessary tests to evaluate your health and prepare you for the procedure.
                             </li>
                             <li>
-                                You will be given anesthesia to make the target area numb
+                                Anesthesia will be administered to numb the area being treated,
                             </li>
                             <li>
-                                If you have allergic behavior to anesthesia, you should inform your surgeon about it
+                                If you have a history of allergic reactions to anesthesia, it's important to inform your surgeon beforehand.
                             </li>
                             <li>
-                                You could expect the surgery to take around two hours or more to complete
+                                The surgery may take up to two hours or more so you need to bear patience.
                             </li>
                             <li>
-                                The surgeon would prescribe taking antibiotics, pain medicines, stool softener, etc. after the surgery in <?= ucwords($city) ?>
+                                Following the procedure, your surgeon will likely prescribe antibiotics, pain medication, and stool softeners, among other things.
                             </li>
                             <li>
-                                The doctor would also suggest you take rest, put less or no stress on the treated area, avoid taking a shower for around 2 days from the surgery, wear compression garments, and so on.
+                                or proper healing, follow post-operative instructions, such as resting, avoiding stress on the treated area, refraining from showering for a few days, and wearing compression garments.
                             </li>
                             <li>
-                                You could expect a better appearance of your rear after the healing period
+                                After the healing period, you can expect a noticeable improvement in the appearance of your buttocks.
+                            </li>
+                            <li>
+                                It is better to have realistic expectations for the surgery to avoid disappointment in case of unfavourable results
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Buttock Enhancement?
-                    </p>
-                    <p>
-                        Here are the conditions for you to be an ideal Buttock Enhancement candidate
-                    </p>
-                    <ul>
-                        <li>
-                            Your butt misses the desired size, shape, fullness, and appeal
-                        </li>
-                        <li>
-                            You have a good overall health
-                        </li>
-                        <li>
-                            You can tolerate the effect of anesthesia
-                        </li>
-                        <li>
-                            Despite regular exercising and taking a balanced diet, your butts cease to increase in size
-                        </li>
-                        <li>
-                            You should have a particular donor site having sufficient stubborn fat cells that could be transferred to your butts
-                        </li>
-                        <li>
-                            You have realistic expectations with the Buttock Enhancement Surgery
-                        </li>
-                        <li>
-                            You don’t smoke or drink alcohol. If you do, quit the habits at least two weeks before the surgery, as it may affect your surgery results adversely
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of Buttock Enhancement?
-                    </p>
-                    <p>
-                        The average cost of a Brazilian Butt Lift or a Buttock Enhancement surgery in <?= ucwords($city) ?> lies between 200000 INR to 400000 INR. Indeed, it is a big amount, but considering the expenses in other countries, the cost of this surgery in India is still much more reasonable.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Buttock Enhancement?
-                    </p>
-                    <p>
-                        Irrespective of the type of Buttock Enhancement, you cannot rule out the possibility of several mild to severe risks:
-                    </p>
-                    <ul>
-                        <li>
-                            Blood clotting or hematoma
-                        </li>
-                        <li>
-                            Fluid accumulation or seroma
-                        </li>
-                        <li>
-                            Dead fat tissue
-                        </li>
-                        <li>
-                            Loss of sensation on a temporary or permanent basis
-                        </li>
-                        <li>
-                            Permanent scars and stretch marks
-                        </li>
-                        <li>
-                            Infection and bleeding
-                        </li>
-                        <li>
-                            Blood of fat clots that can affect your lungs or heart
-                        </li>
-                        <li>
-                            Nerve damage
-                        </li>
-                        <li>
-                            asymmetrical butts
-                        </li>
-                        <li>
-                            Chances of revision surgery
-                        </li>
-                        <li>
-                            Implant rupture or migration
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Buttock Enhancement?
-                    </p>
-                    <p>
-                        If you think your natural butts are too flat or squarish, you may opt for this surgery in <?= ucwords($city) ?>. In addition, if you have lost significant weight or if you believe that adding a few extra curves could balance the rest of your body, Buttock Enhancement is the right option. As per experts, 25 is the ideal age to perform this surgery, as it will give ample time for the human brain to develop completely.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before the Buttock Enhancement Surgery?
-                    </p>
-                    <p>
-                        Here are some important points to help you ready for the Buttock Enhancement Surgery in <?= ucwords($city) ?>:
-                    </p>
-                    <ul>
-                        <li>
-                            Get the blood tests suggested by your surgeon to know if your body is all set for the surgery
-                        </li>
-                        <li>
-                            Refrain from smoking or consuming alcohol for around 2-3 weeks before and after the surgery
-                        </li>
-                        <li>
-                            Take the prescribed medicines as instructed and inform your surgeon about any existing medications to adjust accordingly
-                        </li>
-                        <li>
-                            Putting on loose clothing is advisable
-                        </li>
-                        <li>
-                            Prepare yourself mentally and if you have any confusion, discuss it with your surgeon for prompt resolution
-                        </li>
-                        <li>
-                            Have realistic expectations with the surgery
-                        </li>
-                        <li>
-                            Have someone to accompany you back home after the surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Buttock Enhancement surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Come to the hospital or clinic in <?= ucwords($city) ?> for the surgery with a cool mind
-                        </li>
-                        <li>
-                            The hospital staff will perform necessary tests to examine your health and make you ready for the surgery
-                        </li>
-                        <li>
-                            You will be given anesthesia to make the target area numb
-                        </li>
-                        <li>
-                            If you have allergic behavior to anesthesia, you should inform your surgeon about it
-                        </li>
-                        <li>
-                            You could expect the surgery to take around two hours or more to complete
-                        </li>
-                        <li>
-                            The surgeon would prescribe taking antibiotics, pain medicines, stool softener, etc. after the surgery in <?= ucwords($city) ?>
-                        </li>
-                        <li>
-                            The doctor would also suggest you take rest, put less or no stress on the treated area, avoid taking a shower for around 2 days from the surgery, wear compression garments, and so on.
-                        </li>
-                        <li>
-                            You could expect a better appearance of your rear after the healing period
-                        </li>
-                    </ul> -->
-
             </div>
         <?php } elseif ($surgery_str == "body lift") { ?>
             <div class="col padd-null">
