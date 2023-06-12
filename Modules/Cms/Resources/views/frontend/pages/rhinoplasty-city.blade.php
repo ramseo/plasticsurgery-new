@@ -4040,51 +4040,40 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Due to the changes in hormonal secretion in males, the breasts of males may
-                        become bigger. Gynecomastia is a male breast reduction treatment in which
-                        the surgeon removes the fatty tissues from the breast area to give a
-                        contoured chest. If you are suffering from similar issues, feel free
-                        to consult any of our experienced cosmetic surgeons in <?= ucwords($city) ?> for
-                        proper diagnosis and appropriate treatment.
+                        <strong>
+                            Well-Known Surgeons in Hyderabad for Gynecomastia Surgery
+                        </strong>
+                    </p>
+                    <p>
+                        Gynecomastia or reduction mammoplasty refers to the condition of enlarged or extensively developed breasts in men. It may result due to obesity, hormonal modifications, or because of hereditary reasons. If not treated timely, it may lead to lower self-esteem and discomfort. Our gynecomastia surgeons in Hyderabad hold adept expertise and experience to reduce the extended breasts in males, along with being chest contours back in shape.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Cosmetic Surgeons for Gynecomastia in <?= ucwords($city) ?>?
+                    Why Are Our Surgeons the Best for Gynecomastia Surgery in Hyderabad?
                 </p>
                 <ul>
                     <li>
-                        Leading cosmetic surgeons in <?= ucwords($city) ?>, having adept experience in treating Gynecomastia
+                        Highly qualified and experienced to perform gynecomastia surgery in Hyderabad
                     </li>
                     <li>
-                        Own expertise in performing the two main types of Gynecomastia surgeries:
-                        Gynecomastia and tissue excision
+                        Can deal with unwanted localized fat and glandular tissue development around the breasts
                     </li>
                     <li>
-                        Offer customized treatment plans to treat the male breast problem based on the age,
-                        weight, and medical conditions of the patient
+                        Hold expertise in carrying out liposuction to treat gynecomastia
                     </li>
                     <li>
-                        Highly accomplished surgeons in <?= ucwords($city) ?> with proven results in reducing breast size and
-                        contouring the chest of men and boys
+                        Treat each patient distinctly, as per a tailor-made treatment plan depending on the patient’s medical condition, age, and weight
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Several treatment options are available for Gynecomastia. While some of them need
-                    medicines, others require surgery. Our cosmetic surgeons will take you through
-                    the whole process and help you achieve a flat chest, as you desire.
-                    Depending on these treatment options, the cost of Gynecomastia surgery will vary.
-                    It is best to have an open talk with our surgeon from <?= ucwords($city) ?> about your
-                    expectations and get an idea of the involved cost.
+                    The cost of this surgery depends on the geographical location, the reputation of the clinic and the surgeon, the fees of the surgeon, and the method to deal with gynecomastia. Besides, the expenses will also subsume anesthesia, medical test, operating room facility, and imaging studies, if any. A candid discussion with any of our surgeons in Hyderabad can help you serve this purpose the better way.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Big breasts can affect self-esteem for men. If you too have a similar problem,
-                    it is wise to undergo Gynecomastia from any of our expert cosmetic surgeons
-                    in <?= ucwords($city) ?>! It is a safe and the best way to have a flat chest and regain
-                    your confidence.
+                    You can rely on the expert medical assistance of our surgeons during your gynecomastia surgery in Hyderabad. Our highly qualified and consummate surgeons will make sure that you get results as expected. With helpful nursing staff, advanced surgery equipment, and upscale operation rooms, you can undergo surgery without hassles. Feel free to connect with any of our skilled and experienced plastic surgeons and clear all your doubts before going under the knife. For sure, you will leave the clinic in Hyderabad with more confidence and high self-esteem.
                 </p>
                 <p class="identity">
                     FAQs on Gynecomastia Surgery in <?= ucwords($city) ?>
@@ -4101,30 +4090,29 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Check out the below-mentioned pointers to know if you are an ideal candidate
-                            for Gynecomastia surgery in <?= ucwords($city) ?>:
+                            Abiding by the below-mentioned points will help you be an ideal candidate for Gynecomastia surgery in Hyderabad:
                         </p>
                         <ul>
                             <li>
-                                You have Primary Gynecomastia - You have gained male boobs at an early
-                                age due to hormonal imbalance
+                                Primary Gynecomastia - You get male boobs at a very early age because of hormonal imbalance
                             </li>
                             <li>
-                                You have secondary Gynecomastia – you have got male breasts due to weight
-                                gain irrespective of your age group
+                                Secondary Gynecomastia – You get male breasts due to excessive weight gain immaterial of your age
                             </li>
                             <li>
-                                You are physically fit and healthy
+                                You want to have a better body appearance
                             </li>
                             <li>
-                                You are in your teens or twenties, due to higher skin elasticity
-                                in the younger age
+                                You are physically fit and have a good overall health
                             </li>
                             <li>
-                                You are a non-smoker and a non-alcoholic
+                                You are in the teenage or 20s, as this age group is likely to have higher skin elasticity
                             </li>
                             <li>
-                                You have realistic expectations from the surgery
+                                You do not smoke or drink
+                            </li>
+                            <li>
+                                You have set realistic goals with the surgery
                             </li>
                         </ul>
                     </div>
@@ -4140,10 +4128,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The average cost of male breast surgery in <?= ucwords($city) ?> ranges between
-                            30,000 INR to 2,00,000 INR. The type of technique that the surgeon
-                            uses will be a big factor in deciding the overall
-                            cost of the treatment.
+                            The cost of male breast surgery in Hyderabad is likely to fall within the range of 30,000 to 2,00,000 Indian rupees. The total expense of the procedure will also get influenced by the surgical technique employed by the surgeon.
                         </p>
                     </div>
                 </div>
@@ -4158,34 +4143,29 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Some of the common complications of Gynecomastia surgery include:
+                            Here are some of the common risk factors associated with Gynecomastia surgery:
                         </p>
                         <ul>
                             <li>
-                                Chances of hematoma – An instance of blood collection that occurs
-                                between the muscles and the skin, mainly because
-                                of bleeding after the surgery
+                                Hematoma or collection of blood between your skin and the muscles due to excessive bleeding after the surgery
                             </li>
                             <li>
-                                Seroma, or risk of infection due to fluid collection
+                                Accumulation of fluid in the treated area, leading to seroma
                             </li>
                             <li>
-                                Possibility of scarring at the planned or unplanned site
+                                Allergic behavior to anesthesia
                             </li>
                             <li>
-                                Temporarily decrease in the nipple sensation
+                                Unbearable pain up to a few days after the surgery
                             </li>
                             <li>
-                                Cardiopulmonary and Venous Thrombosis issues
+                                Harm to deeper structures during the surgery
                             </li>
                             <li>
-                                Discomfort due to an allergic reaction to anesthesia
+                                Excessive bleeding, swelling, bruising, etc.
                             </li>
                             <li>
-                                Intense pain during the recovery period
-                            </li>
-                            <li>
-                                Rare risk of damage to deeper structures
+                                Venous Thrombosis or Cardiopulmonary issues
                             </li>
                         </ul>
                     </div>
@@ -4201,11 +4181,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Most surgeons in <?= ucwords($city) ?> recommend Gynecomastia patients be at least 18 years
-                            old to get ready for the surgery. At this stage,
-                            the body is likely to develop to its full capacity.
-                            Usually, older men are more prone to opt
-                            for this surgery.
+                            A majority of surgeons in Hyderabad suggest that individuals with Gynecomastia should wait until they attain the age of 18 years old before considering surgery. By this age, the human body is likely to have developed to its maximum potential. Generally, older men are more inclined to undergo this procedure.
                         </p>
                     </div>
                 </div>
@@ -4221,34 +4197,34 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Restrict taking blood thinners such as aspirin, anti-inflammatory drugs as well
-                                as supplements to reduce the risk of excessive blood loss
+                                Avoid blood thinners like aspirin, anti-inflammatory drugs, and supplements to decrease the risk of excessive blood loss.
                             </li>
                             <li>
-                                After speaking with the doctor, adjust taking medications accordingly
+                                Consult with your doctor and adjust medications as required.
                             </li>
                             <li>
-                                Undergo all the required diagnostic tests to ensure your good health
-                                during the surgery
+                                Complete all necessary diagnostic tests to ensure perfect health for the surgery.
                             </li>
                             <li>
-                                Stop smoking or drinking alcohol at least two weeks before the procedure
+                                Quit smoking or alcohol consumption at least two weeks before the procedure.
                             </li>
                             <li>
-                                Adjust the medications as per the suggestion of your surgeon
+                                Follow your surgeon's instructions to modify your medications accordingly.
                             </li>
                             <li>
-                                Avoid taking supplements or medications that consist of blood thinners
+                                Do not take supplements or drugs that have blood-thinning properties.
                             </li>
                             <li>
-                                Keep a time gap of at least 8 hours between your last meal and the surgery
+                                Maintain an 8-hour gap between your last meal and the surgery.
                             </li>
                             <li>
-                                Likewise, avoid drinking water or anything else at least 6 hours before
-                                the procedure
+                                Avoid drinking water or any other fluids for at least 6 hours before the procedure.
                             </li>
                             <li>
-                                Arrange for a person to help you get back home after the surgery in <?= ucwords($city) ?>
+                                Arrange for someone to assist you in returning home after the surgery.
+                            </li>
+                            <li>
+                                Wear a compression garment in the first 24 hours after the procedure to reduce pain and swelling
                             </li>
                         </ul>
                     </div>
@@ -4265,196 +4241,46 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                On the day of the Gynecomastia surgery, make sure to enter the clinic with
-                                a positive frame of mind.
+                                On the day of Gynecomastia surgery, it is good to arrive at the clinic with a positive mindset.
                             </li>
                             <li>
-                                Expect around 1- 2 hours for the procedure to complete depending on the extent
-                                of tissues required to remove
+                                You could expect the duration of the procedure to range from 1 to 2 hours, depending on the amount of tissue removal required.
                             </li>
                             <li>
-                                In several cases, a patient could also undergo liposuction in the chest
-                                to deliver the best results
+                                In some cases, the surgeon may also perform liposuction in the chest to achieve optimal results.
                             </li>
                             <li>
-                                To perform the surgery, the surgeon will create small incisions in the
-                                treatment area
+                                The expert will create small incisions in the treatment area to carry out the procedure.
                             </li>
                             <li>
-                                After the treatment in <?= ucwords($city) ?>, you may feel sore in the first few days
+                                After the completion of the surgery in Hyderabad, you may experience mild soreness in the initial days.
                             </li>
                             <li>
-                                You should have realistic expectations with the surgery
+                                It is essential to maintain realistic expectations concerning the outcomes of the surgery.
+                            </li>
+                            <li>
+                                The healing time will depend largely on the way you follow the recovery instructions from your surgeon
+                            </li>
+                            <li>
+                                You may feel some pain, swelling, or bruising in the initial days, which will vanish with time.
+                            </li>
+                            <li>
+                                After the successful completion, you can expect a positive change in your overall appearance
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Gynecomastia surgery?
-                    </p>
-                    <p>
-                        Check out the below-mentioned pointers to know if you are an ideal candidate
-                        for Gynecomastia surgery in <?= ucwords($city) ?>:
-                    </p>
-                    <ul>
-                        <li>
-                            You have Primary Gynecomastia - You have gained male boobs at an early
-                            age due to hormonal imbalance
-                        </li>
-                        <li>
-                            You have secondary Gynecomastia – you have got male breasts due to weight
-                            gain irrespective of your age group
-                        </li>
-                        <li>
-                            You are physically fit and healthy
-                        </li>
-                        <li>
-                            You are in your teens or twenties, due to higher skin elasticity
-                            in the younger age
-                        </li>
-                        <li>
-                            You are a non-smoker and a non-alcoholic
-                        </li>
-                        <li>
-                            You have realistic expectations from the surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of Gynecomastia surgery?
-                    </p>
-                    <p>
-                        The average cost of male breast surgery in <?= ucwords($city) ?> ranges between
-                        30,000 INR to 2,00,000 INR. The type of technique that the surgeon
-                        uses will be a big factor in deciding the overall
-                        cost of the treatment.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Gynecomastia surgery?
-                    </p>
-                    <p>
-                        Some of the common complications of Gynecomastia surgery include:
-                    </p>
-                    <ul>
-                        <li>
-                            Chances of hematoma – An instance of blood collection that occurs
-                            between the muscles and the skin, mainly because
-                            of bleeding after the surgery
-                        </li>
-                        <li>
-                            Seroma, or risk of infection due to fluid collection
-                        </li>
-                        <li>
-                            Possibility of scarring at the planned or unplanned site
-                        </li>
-                        <li>
-                            Temporarily decrease in the nipple sensation
-                        </li>
-                        <li>
-                            Cardiopulmonary and Venous Thrombosis issues
-                        </li>
-                        <li>
-                            Discomfort due to an allergic reaction to anesthesia
-                        </li>
-                        <li>
-                            Intense pain during the recovery period
-                        </li>
-                        <li>
-                            Rare risk of damage to deeper structures
-                        </li>
-                    </ul>
-
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Gynecomastia surgery?
-                    </p>
-                    <p>
-                        Most surgeons in <?= ucwords($city) ?> recommend Gynecomastia patients be at least 18 years
-                        old to get ready for the surgery. At this stage,
-                        the body is likely to develop to its full capacity.
-                        Usually, older men are more prone to opt
-                        for this surgery.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before Gynecomastia surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Restrict taking blood thinners such as aspirin, anti-inflammatory drugs as well
-                            as supplements to reduce the risk of excessive blood loss
-                        </li>
-                        <li>
-                            After speaking with the doctor, adjust taking medications accordingly
-                        </li>
-                        <li>
-                            Undergo all the required diagnostic tests to ensure your good health
-                            during the surgery
-                        </li>
-                        <li>
-                            Stop smoking or drinking alcohol at least two weeks before the procedure
-                        </li>
-                        <li>
-                            Adjust the medications as per the suggestion of your surgeon
-                        </li>
-                        <li>
-                            Avoid taking supplements or medications that consist of blood thinners
-                        </li>
-                        <li>
-                            Keep a time gap of at least 8 hours between your last meal and the surgery
-                        </li>
-                        <li>
-                            Likewise, avoid drinking water or anything else at least 6 hours before
-                            the procedure
-                        </li>
-                        <li>
-                            Arrange for a person to help you get back home after the surgery in <?= ucwords($city) ?>
-                        </li>
-                    </ul>
-
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Gynecomastia surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            On the day of the Gynecomastia surgery, make sure to enter the clinic with
-                            a positive frame of mind.
-                        </li>
-                        <li>
-                            Expect around 1- 2 hours for the procedure to complete depending on the extent
-                            of tissues required to remove
-                        </li>
-                        <li>
-                            In several cases, a patient could also undergo liposuction in the chest
-                            to deliver the best results
-                        </li>
-                        <li>
-                            To perform the surgery, the surgeon will create small incisions in the
-                            treatment area
-                        </li>
-                        <li>
-                            After the treatment in <?= ucwords($city) ?>, you may feel sore in the first few days
-                        </li>
-                        <li>
-                            You should have realistic expectations with the surgery
-                        </li>
-                    </ul> -->
-
             </div>
         <?php } elseif ($surgery_str == "liposuction") { ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
                         <strong>
-                            Do you wish to have a slim physical appearance? Of course, you do!
+                            Struggling to lose that extra flab on your body?
                         </strong>
                     </p>
                     <p>
-                        When diets and exercises fail us to achieve that perfect body we want,
-                        liposuction would be a suitable cosmetic procedure to opt for.
-                        Our renowned cosmetic surgeons from <?= ucwords($city) ?> are the best
-                        to perform liposuction treatments. With years of experience
-                        to back their credibility, you can count on our experts
-                        to make you appear beautiful through
-                        successful liposuction treatment.
+                        Liposuction can help you out. Yes! It is usual to develop unwanted fat on your belly, hips, thighs, arms, or face. Nevertheless, if despite exercising or regular dieting you are not able to lose it, Liposuction is a befitting solution. Consulting any of our ideal plastic surgeons in Hyderabad can assist in getting you rid of uninvited fat.
                     </p>
                 </div>
                 <p class="identity">
@@ -4462,65 +4288,39 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        Highly trusted and experienced cosmetic surgeons in <?= ucwords($city) ?>, well-versed in performing various
-                        types of liposuction surgeries.
+                        Trustworthy plastic surgeons in Hyderabad, with expertise in performing Liposuction
                     </li>
                     <li>
-                        Hold adept expertise in customizing the liposuction treatment and removing fat from particular
-                        places in the patient’s body to achieve a better-looking figure.
+                        Capable of performing the surgery on any part of your body
                     </li>
                     <li>
-                        Expertise in numerous liposuction procedures like tumescent liposuction, ultrasound-assisted liposuction,
-                        suction-assisted liposuction, and power-assisted liposuction.
+                        Leverage advanced fat reduction techniques leaving behind minimal scars
                     </li>
                     <li>
-                        Own memberships of several prestigious national and international associations for plastic
-                        and cosmetic surgeons.
+                        Assist you regain your lost confidence with a successful Liposuction surgery in Hyderabad
                     </li>
                     <li>
-                        Highly reputed and respected cosmetic surgeons in <?= ucwords($city) ?> who work for maximum
-                        patient satisfaction.
+                        Can perform several treatments like Ultrasound-Assisted Liposuction, Tumescent Liposuction, Power-Assisted Liposuction, and Suction-Assisted Liposuction with ease
+                    </li>
+                    <li>
+                        Renowned plastic surgeons in Hyderabad with years of experience in carrying out Liposuction surgery with positive results
+                    </li>
+                    <li>
+                        Members of several Plastic surgery associations in India and worldwide
                     </li>
                 </ul>
                 <p class="identity">
-                    COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
+                    COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of liposuction mainly depends on various important
-                    factors:
+                    Different plastic surgeons will quote different charges for Liposuction surgery. This will however exclude the cost of clinic facilities, medical tests, pre-operative scans, surgeon’s fees, anesthesia, and more. Moreover, the cost of Liposuction may also increase depending on the severity of the treatment area. For instance, parts like inner thighs or chins can cost dearer as compared to other locations.
                 </p>
-                <ul>
-                    <li>
-                        The choice of surgeon
-                    </li>
-                    <li>
-                        The extent of fat you want to get eliminated
-                    </li>
-                    <li>
-                        The location of fat removal
-                    </li>
-                    <li>
-                        Additional costs such as medicines, anesthesia, surgery tools,
-                        equipment, etc.
-                    </li>
-                </ul>
-                <p>
-                    By considering all these factors, the cost of liposuction surgery can go up to six figures.
-                    Hence, putting forth honest efforts to find the best cosmetic is inevitable before
-                    spending a sumptuous amount on the surgery.
-                </p>
-                <p>
-                    Do you have a particular location where you need to perform the surgery? If yes,
-                    then it would be wise to visit any of our expert cosmetic surgeons
-                    in <?= ucwords($city) ?> and get a fair estimate.
-                </p>
+
                 <p class="identity">
                     OUR SERVICES
                 </p>
                 <p>
-                    Get your liposuction procedure customized by one of our most reliable cosmetic surgeons
-                    in <?= ucwords($city) ?> and achieve that dream figure. We will be
-                    happy to serve your cause.
+                    We help you get the best Liposuction surgery in Hyderabad under the supervision of our experienced plastic surgeons. With us, you can make the most of advanced surgery equipment, upscale Liposuction procedures, amicable hospital staff members, and the best cleanliness you could ever expect. Feel free to consult our bankable Liposuction surgeons in Hyderabad and put forth your first step toward regaining a fat-free body.
                 </p>
                 <p class="identity">
                     FAQs on Liposuction Surgery in <?= ucwords($city) ?>:
@@ -4537,22 +4337,35 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            An ideal candidate for liposuction should satisfy the
-                            following conditions:
+                            To be an ideal candidate for Liposuction in Hyderabad you should satisfy the following conditions:
                         </p>
                         <ul>
                             <li>
-                                A person with near ideal body weight, but owns selected areas of localized fat
-                                deposits such as hips, arms, neck, chin, arms, etc., which cease to vanish
-                                via diet or exercise.
+                                Your weight is close to 30% of your ideal weight
                             </li>
                             <li>
-                                Other important traits include realistic expectations, good skin elasticity,
-                                a healthy body, and a non-smoker.
+                                Your fat deposits cease to go away despite regular exercising and having a balanced diet
                             </li>
                             <li>
-                                The person should be willing to adhere to post-operative instructions given
-                                by the surgeon for prompt healing.
+                                You are not feeling positive about the excess fat deposits on your body
+                            </li>
+                            <li>
+                                You are extremely overweight and it is affecting your daily life
+                            </li>
+                            <li>
+                                You want to restore your appearance, lost due to excessive weight
+                            </li>
+                            <li>
+                                You are a non-smoker and a non-alcoholic person
+                            </li>
+                            <li>
+                                You have realistic expectations with the surgery
+                            </li>
+                            <li>
+                                You are a model or an actor, and your unwanted fat is creating obstacles in your professional life
+                            </li>
+                            <li>
+                                You are ready to follow the instructions of your surgeon after undergoing the procedure
                             </li>
                         </ul>
                     </div>
@@ -4560,7 +4373,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="accordion-container">
                     <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
                         <span>
-                            2. What is the cost of Liposuction?
+                            2. What is the cost of Liposuction surgery?
                         </span>
                         <span class="accordion-icon">
                             <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
@@ -4568,11 +4381,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The total cost of the liposuction procedure in <?= ucwords($city) ?> will depend on various factors
-                            such as the number of areas being treated, the amount of fat being removed, the
-                            complexity of the procedure, the type of facility, etc. The overall cost can vary
-                            somewhere between Rs 50,000 and Rs 3,00,000 or more per treatment area. Feel free
-                            to connect with our cosmetic surgeon to know the exact cost.
+                            The surgery for Liposuction in Hyderabad may go up to 1.5 lakhs depending on the surgeon you choose and various other factors. It would be best to consult any of our surgeons to know the actual cost of Liposuction surgery.
                         </p>
                     </div>
                 </div>
@@ -4587,12 +4396,40 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Like with any major plastic surgery in <?= ucwords($city) ?>, liposuction also accompanies several risks,
-                            such as bleeding, adverse reaction to anesthesia, loss of sensation,
-                            fluid accumulation, blood clits, etc. Skin irregularities like bumps,
-                            wavy contours, and dimpling are also among
-                            the possible risks of Liposuction.
+                            Among the prominent risks and complications related to Liposuction surgery in Hyderabad include the following:
                         </p>
+                        <ul>
+                            <li>
+                                Contour irregularities like bumpy skin, uneven fat removal, scarring, poor skin elasticity
+                            </li>
+                            <li>
+                                Life-threatening skin infection
+                            </li>
+                            <li>
+                                Formation of pockets of Fluid known as seroma, which are better to drain out with a needle before they could damage your body
+                            </li>
+                            <li>
+                                Temporary or permanent loss of sensation in the incision site
+                            </li>
+                            <li>
+                                Unusually deep penetration of the thin tube during the surgery, which could puncture
+                            </li>
+                            <li>
+                                Life-threatening lung, kidney, and heart problems in case of excessive Liposuction
+                            </li>
+                            <li>
+                                Intense pain after the surgery
+                            </li>
+                            <li>
+                                Possibility of swelling or bruising in the treated area
+                            </li>
+                            <li>
+                                Uncontrolled bleeding due to the intake of anti-inflammatory medicines
+                            </li>
+                            <li>
+                                Chance of correction surgery
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="accordion-container">
@@ -4606,55 +4443,14 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            You should go for Liposuction in <?= ucwords($city) ?> only after you prepared your mind well
-                            for the procedure. Almost any age would be fine for the treatment,
-                            but patients with optimum age of 30-35 years would be ideal.
-                            The skin elasticity of people in this age group is better, which leads to better
-                            results.
+                            Skin elasticity of the human body is the best between the age of 30 and 35 years. Hence, if you are in this age bracket, it is the right time to go for Liposuction surgery in Hyderabad. Consultation with any of our surgeons will help you to know more about the right time to opt for Liposuction.
                         </p>
                     </div>
                 </div>
                 <div class="accordion-container">
                     <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
                         <span>
-                            5. What are some important things to do before Liposuction Surgery?
-                        </span>
-                        <span class="accordion-icon">
-                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
-                        </span>
-                    </a>
-                    <div class="accordion-content">
-                        <p>
-                            It is good to prepare for the Liposuction surgery, as per the suggestions
-                            from your surgeon in <?= ucwords($city) ?>. Here are some important
-                            points to consider:
-                        </p>
-                        <ul>
-                            <li>
-                                Avoid smoking at least four weeks before the surgery
-                            </li>
-                            <li>
-                                Consult your surgeon about the medicines you are already consuming and stop
-                                them for a certain period as instructed
-                            </li>
-                            <li>
-                                Keep yourself hydrated and maintain a healthy diet
-                            </li>
-                            <li>
-                                Make sure to have someone to drive you back home after the surgery
-                                and assist you in a quick recovery
-                            </li>
-                            <li>
-                                On the day of the surgery, eat, drink, and wear as
-                                suggested by your surgeon
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="accordion-container">
-                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
-                        <span>
-                            6. What should you expect on the day of liposuction surgery?
+                            5. What are the things to do before Liposuction Surgery?
                         </span>
                         <span class="accordion-icon">
                             <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
@@ -4663,166 +4459,112 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                On the day of surgery, you could expect the surgeon to administer local or general
-                                anesthesia as per the case may be.
+                                Try to attain your target weight or at least reach close to it before the surgery
                             </li>
                             <li>
-                                The surgery time will also vary depending on the number of locations
-                                that need treatment.
+                                Focus on muscle-building months before undergoing the surgery in Hyderabad
                             </li>
                             <li>
-                                Be ready for the incisions in specific locations for fat elimination. After the procedure,
-                                you should have realistic expectations.
+                                Make sure to eat a healthy and balanced diet
                             </li>
                             <li>
-                                Much will depend on the extent of post-operative care you adopt.
+                                Stop the use of nicotine, as its presence could impact the results of plastic surgery adversely
+                            </li>
+                            <li>
+                                Prepare your home for the recovery period before leaving for the surgery
+                            </li>
+                            <li>
+                                Ask someone’s help to take you back after the surgery
+                            </li>
+                            <li>
+                                Arrange for someone in the home to help you with daily activities
+                            </li>
+                            <li>
+                                Keep your body perfectly hydrated
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Liposuction?
-                    </p>
-                    <p>
-                        An ideal candidate for liposuction should satisfy the
-                        following conditions:
-                    </p>
-                    <ul>
-                        <li>
-                            A person with near ideal body weight, but owns selected areas of localized fat
-                            deposits such as hips, arms, neck, chin, arms, etc., which cease to vanish
-                            via diet or exercise.
-                        </li>
-                        <li>
-                            Other important traits include realistic expectations, good skin elasticity,
-                            a healthy body, and a non-smoker.
-                        </li>
-                        <li>
-                            The person should be willing to adhere to post-operative instructions given
-                            by the surgeon for prompt healing.
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of Liposuction?
-                    </p>
-                    <p>
-                        The total cost of the liposuction procedure in <?= ucwords($city) ?> will depend on various factors
-                        such as the number of areas being treated, the amount of fat being removed, the
-                        complexity of the procedure, the type of facility, etc. The overall cost can vary
-                        somewhere between Rs 50,000 and Rs 3,00,000 or more per treatment area. Feel free
-                        to connect with our cosmetic surgeon to know the exact cost.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Liposuction?
-                    </p>
-                    <p>
-                        Like with any major plastic surgery in <?= ucwords($city) ?>, liposuction also accompanies several risks,
-                        such as bleeding, adverse reaction to anesthesia, loss of sensation,
-                        fluid accumulation, blood clits, etc. Skin irregularities like bumps,
-                        wavy contours, and dimpling are also among
-                        the possible risks of Liposuction.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Liposuction?
-                    </p>
-                    <p>
-                        You should go for Liposuction in <?= ucwords($city) ?> only after you prepared your mind well
-                        for the procedure. Almost any age would be fine for the treatment,
-                        but patients with optimum age of 30-35 years would be ideal.
-                        The skin elasticity of people in this age group is better, which leads to better
-                        results.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are some important things to do before Liposuction Surgery?
-                    </p>
-                    <p>
-                        It is good to prepare for the Liposuction surgery, as per the suggestions
-                        from your surgeon in <?= ucwords($city) ?>. Here are some important
-                        points to consider:
-                    </p>
-                    <ul>
-                        <li>
-                            Avoid smoking at least four weeks before the surgery
-                        </li>
-                        <li>
-                            Consult your surgeon about the medicines you are already consuming and stop
-                            them for a certain period as instructed
-                        </li>
-                        <li>
-                            Keep yourself hydrated and maintain a healthy diet
-                        </li>
-                        <li>
-                            Make sure to have someone to drive you back home after the surgery
-                            and assist you in a quick recovery
-                        </li>
-                        <li>
-                            On the day of the surgery, eat, drink, and wear as
-                            suggested by your surgeon
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What should you expect on the day of liposuction surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            On the day of surgery, you could expect the surgeon to administer local or general
-                            anesthesia as per the case may be.
-                        </li>
-                        <li>
-                            The surgery time will also vary depending on the number of locations
-                            that need treatment.
-                        </li>
-                        <li>
-                            Be ready for the incisions in specific locations for fat elimination. After the procedure,
-                            you should have realistic expectations.
-                        </li>
-                        <li>
-                            Much will depend on the extent of post-operative care you adopt.
-                        </li>
-                    </ul> -->
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            6. What to expect on the day of liposuction surgery?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                When going for Liposuction surgery in Hyderabad, have a calm and composed mind
+                            </li>
+                            <li>
+                                Cooperate with the staff in the clinic in their routine activities
+                            </li>
+                            <li>
+                                Inform the anesthesia expert if you have a history of adverse reactions to anesthesia
+                            </li>
+                            <li>
+                                Consult your surgeon about your apprehensions and concerns regarding the surgery, if any
+                            </li>
+                            <li>
+                                You could expect the surgeon to create an incision on the target area to perform Liposuction
+                            </li>
+                            <li>
+                                The surgeon would take around 1-2 hours to perform the entire Liposuction procedure depending on the area that needs treatment
+                            </li>
+                            <li>
+                                You could expect speedy recovery depending on the extent to which you abide by the instructions of your surgeon
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         <?php } elseif ($surgery_str == "tummy tuck") {  ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        A Tummy tuck or Abdominoplasty is the best solution to get rid of the extra flab that messes up your appearance. Even when diets fail, do not lose heart.
-                        All you need is the Tummy tuck procedure by our trusted cosmetic surgeons and you will end up flaunting a flat tummy. Our cosmetic surgeons are among the best tummy tuck experts in <?= ucwords($city) ?> to reduce your tummy size.
+                        <strong>
+                            The Expert Tummy Tuck Surgeons in Hyderabad
+                        </strong>
+                    </p>
+                    <p>
+                        Are you fed up with excess fat on your belly and cannot wait to get rid of it? Tummy tuck surgery is the best solution for your problem. Also known as abdominoplasty, this surgery helps to get a more flat and firm abdomen. It also tightens and repairs the underlying tendons and muscles. Consulting our tummy tuck surgeons in Hyderabad will be beneficial to enable you to break free from your fat.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Cosmetic Surgeons for Tummy Tuck in <?= ucwords($city) ?>?
+                    Why Approach Our Plastic Surgeons for Tummy Tuck Surgery in Hyderabad?
                 </p>
                 <ul>
                     <li>
-                        With us, you will find the best cosmetic surgeons in <?= ucwords($city) ?>
+                        Perform careful tummy tuck surgery to ensure a smoother abdomen for the patients
                     </li>
                     <li>
-                        Our doctors have more than a decade of experience in performing tummy tuck procedures
+                        Eliminate stubborn fat stuck up in the abdomen and tighten the loose skin
                     </li>
                     <li>
-                        Can perform customized tummy tuck procedures as per the patient’s need
+                        Restore and repair weak and separated stomach muscles
                     </li>
                     <li>
-                        Efficient in delivering believable results through different tummy tuck surgeries like Mini Tummy Tuck, Full Tummy Tuck, and Extended Tummy Tuck
+                        Help the patients get a well-toned and appealing body
                     </li>
                     <li>
-                        Ability to minimize the surgery scars and hide them near the abdomen
-                    </li>
-                    <li>
-                        Renowned cosmetic surgeons from <?= ucwords($city) ?>, certified by many national and international cosmetic surgery associations
+                        Works appreciably to furnish the results as per the expectations of the patients
                     </li>
                 </ul>
                 <p class="identity">
-                    COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
+                    COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost differs according to the different types of tummy tuck methods and the location of surgery. Apart from the main surgery cost, you should also consider the cost of medicines taken during the recovery period. Scans and other methods of monitoring the operated location would further add up to your bill. Make sure to visit our cosmetic surgeon in <?= ucwords($city) ?> to get a better estimate.
+                    The charges of the abdominoplasty in Hyderabad will depend largely on the experience of the surgeon, the type of surgery done, and the location of the clinic. Additionally, factors like surgical facilities in the operating room, anesthesia, post-surgery garments, and medical tests also play an important role in fixing the cost of surgery. It is best to discuss the cost of tummy tuck surgery with our experienced plastic surgeon. Mostly, insurance companies do not cover this procedure, so make sure to clarify with your medical insurance provider if they will consider insurance for Tummy Tuck surgery.
                 </p>
+
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Get rid of extra fat in your stomach that spoils your appearance. Choose your preferred tummy tuck surgery type and rock in any costume you desire with the help of our best cosmetic surgeons in <?= ucwords($city) ?>.
+                    Our surgeons provide industry best amenities in their clinics in Hyderabad. While you opt to undergo the tummy tuck surgery from our experienced surgeons, you can remain rest assured of a satiating treatment. Their nursing staff will be prompt to attend to your necessities. Further, they also offer the best operating room facilities and advanced medical equipment to ease the entire procedure. Feel free to connect with any of our surgeons to get detailed information about the tummy tuck surgery at our end.
                 </p>
+
                 <p class="identity">
                     FAQs on Tummy Tuck Surgery in <?= ucwords($city) ?>
                 </p>
@@ -4830,38 +4572,49 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="accordion-container">
                     <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
                         <span>
-                            1. Are you a good candidate for Tummy Tuck?
+                            1. Are you a good candidate for Tummy Tuck surgery?
                         </span>
                         <span class="accordion-icon">
                             <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
                         </span>
                     </a>
                     <div class="accordion-content">
-                        <p>
-                            Abiding by these points will make you an ideal candidate for the Tummy
-                            Tuck Surgery in <?= ucwords($city) ?>:
-                        </p>
                         <ul>
                             <li>
-                                You have good health but want to get rid of excess fat across your waist and abdomen
+                                These conditions will necessitate your candidature for Tummy Tuck surgery n Hyderabad
                             </li>
                             <li>
-                                You have lost considerable weight, resulting in hanging skin and excess fat
+                                Good overall health, free of any chronic disease
                             </li>
                             <li>
-                                Pregnancy has completely changed your body and you want to get it back in shape
+                                Wish to break free from unwanted fat tissues accumulated on your abs and waist
+                            </li>
+                            <li>
+                                Have suffered significant weight loss, leading to sagging skin
+                            </li>
+                            <li>
+                                Your body has witnessed a drastic adverse transformation post pregnancy
+                            </li>
+                            <li>
+                                Unable to part ways with additional fat despite maintaining a balanced diet and exercising regularly
+                            </li>
+                            <li>
+                                You do not drink or smoke
                             </li>
                             <li>
                                 You are not able to get away with excess fat despite exercising and having a balanced diet
                             </li>
                             <li>
-                                You are a non-smoker and non-alcoholic person
+                                You have maintained your body weight within the permissible limit
                             </li>
                             <li>
-                                Your body weight is within 20% of the ideal body weight
+                                You have loose abdomen muscles
                             </li>
                             <li>
-                                Your abdomen muscles have become loose
+                                You have to restore your appearance
+                            </li>
+                            <li>
+                                You have set realistic goals
                             </li>
                         </ul>
                     </div>
@@ -4877,7 +4630,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To give you an idea, the average cost of a tummy tuck procedure starts from 1,00,000 INR and can go up to 2,00,000 INR. The cost may vary depending on the surgeon you choose, the hospital, or the clinic where you decide to undergo the treatment, and several other factors. For better insight, a candid consultation with one of our Tummy Tuck surgeons in <?= ucwords($city) ?> would be a recommended move.
+                            The estimated cost of Tummy Tuck surgery in Hyderabad ranges between 1,00,000 INR and 2,00,000 INR. To know accurate figures, consultation with any of our plastic surgeons will be advisable.
                         </p>
                     </div>
                 </div>
@@ -4891,30 +4644,42 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
-                        <p>
-                            Like with any other surgery, Tummy Tuck also accompanies several risks.
-                        </p>
                         <ul>
                             <li>
-                                Accumulation of fluid under the skin or seroma
+                                Fluid build-up under the skin of the incision area called seroma
                             </li>
                             <li>
-                                Poor healing of the areas along the line of incision
+                                Allergic reaction to anesthesia
                             </li>
                             <li>
-                                Visible scars, which are hard to hide
+                                Bad wound healing along the incision line
                             </li>
                             <li>
-                                Repositioning of abdominal tissues during the surgery can lead to numbness or reduced sensations
+                                Excessive scarring, which is difficult to hide
                             </li>
                             <li>
-                                Chance of an unavoidable revisional surgery
+                                Possibility of a revisional surgery
                             </li>
                             <li>
-                                Prolonged swelling or skin discoloration
+                                Intense pain, swelling, bruising, etc
                             </li>
                             <li>
-                                Unbearable pain which ceases to subside
+                                Temporary loss of skin sensation
+                            </li>
+                            <li>
+                                Numbness due to repositioned abdominal tissues could cause
+                            </li>
+                            <li>
+                                Skin discoloration
+                            </li>
+                            <li>
+                                Excessive bleeding from the surgical incision site
+                            </li>
+                            <li>
+                                Chance of a correction surgery
+                            </li>
+                            <li>
+                                Slow recovery due to inadequate placement of sutures to close the tissues
                             </li>
                         </ul>
                     </div>
@@ -4930,7 +4695,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Ideally, if you do not wish to get pregnant any time soon, have a healthy body, and can maintain your results well, this is the right to go for Tummy Tuck. Women in <?= ucwords($city) ?> and other parts of the world often prefer undergoing Tummy Tuck in their 30s or 40s.
+                            You could opt for a Tummy Tuck surgery in Hyderabad at almost any age beyond 18 years. Usually, women in their 30s or 40s opt for this procedure, as their body is likely to be healthy in this age bracket, and they can maintain the results for a long time by following the instructions of the surgeon.
                         </p>
                     </div>
                 </div>
@@ -4946,31 +4711,28 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Your body weight should remain stable for at least 12 months before the Tummy Tuck surgery
+                                Your body weight should be stable for at least one year prior to undergoing the Tummy Tuck surgery in Hyderabad
                             </li>
                             <li>
-                                If you are overweight, the surgeon will recommend you lose weight to be fit for the procedure
+                                It is better to lose weight if you are overweight so that the surgeon could consider you for the procedure
                             </li>
                             <li>
-                                Prior to the surgery day, you should have a balanced diet including considerable proteins
+                                Maintain a balanced diet for the surgery
                             </li>
                             <li>
-                                Keep your body hydrated with water
+                                Avoid using any medicine without the consent of your surgeon
                             </li>
                             <li>
-                                Avoid using any medication without the permission of the doctor as it may lead to bleeding
+                                Hydrate your body properly to avoid dehydration-related complications
                             </li>
                             <li>
-                                Clear all your doubts with the surgeon before going under the knife
+                                Although rare, be prepared for any kind of adverse outcome
                             </li>
                             <li>
-                                Have realistic expectations with the surgery in <?= ucwords($city) ?>
+                                Have someone to drive you home after the Tummy Tuck surgery in Hyderabad
                             </li>
                             <li>
-                                Be prepared for the probable risks and side effects of the treatment
-                            </li>
-                            <li>
-                                Ask someone to take you home once the surgery completes
+                                Arrange for some domestic help to assist you in daily chores
                             </li>
                         </ul>
                     </div>
@@ -4987,155 +4749,38 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                On the surgery day in <?= ucwords($city) ?>, the anesthetic will discuss if you have any allergic reaction to anesthesia and will administer the dose accordingly
+                                On the surgery day, arrive at the clinic with a calm and composed mind
                             </li>
                             <li>
-                                The entire procedure will continue for around two to three hours or more, depending on the severity of the treatment
+                                Cooperate with the clinic staff in their routine activities regarding the surgery
                             </li>
                             <li>
-                                The surgeon will take out your belly button by creating a small incision and suture it back into its place after the procedure
+                                Inform the anesthesia expert if you have a history of allergic behavior to anesthesia
                             </li>
                             <li>
-                                You might also get some antibiotics to avoid infection or painkillers to mitigate the possible pain during the surgery
+                                The surgeon will make you feel relaxed and at ease to help you get ready for the surgery
                             </li>
                             <li>
-                                From the first to the third day after the procedure, you will experience pressure, mild pain, and bloating
+                                During the surgery in Hyderabad, you could expect the surgeon to create incisions on the selected portions to eliminate excess fat
                             </li>
                             <li>
-                                Your belly will become swollen and sore in the first week. To hide the swelling, you may need to put on a compression garment
+                                The entire surgery may take 2-3 hours depending on the complications of the surgery
+                            </li>
+                            <li>
+                                To reduce pain during the surgery, you could also expect some antibiotics or painkillers from the staff
+                            </li>
+                            <li>
+                                In the starting 2-3 days, you may expect bloating, mild pain, or pressure in the treated area
+                            </li>
+                            <li>
+                                You may experience swelling in the first week after the surgery, which you can hide by wearing a compression garment
+                            </li>
+                            <li>
+                                You should have realistic expectations with the surgery in Hyderabad
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Tummy Tuck?
-                    </p>
-                    <p>
-                        Abiding by these points will make you an ideal candidate for the Tummy
-                        Tuck Surgery in <?= ucwords($city) ?>:
-                    </p>
-                    <ul>
-                        <li>
-                            You have good health but want to get rid of excess fat across your waist and abdomen
-                        </li>
-                        <li>
-                            You have lost considerable weight, resulting in hanging skin and excess fat
-                        </li>
-                        <li>
-                            Pregnancy has completely changed your body and you want to get it back in shape
-                        </li>
-                        <li>
-                            You are not able to get away with excess fat despite exercising and having a balanced diet
-                        </li>
-                        <li>
-                            You are a non-smoker and non-alcoholic person
-                        </li>
-                        <li>
-                            Your body weight is within 20% of the ideal body weight
-                        </li>
-                        <li>
-                            Your abdomen muscles have become loose
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of Tummy Tuck?
-                    </p>
-                    <p>
-                        To give you an idea, the average cost of a tummy tuck procedure starts from 1,00,000 INR and can go up to 2,00,000 INR. The cost may vary depending on the surgeon you choose, the hospital, or the clinic where you decide to undergo the treatment, and several other factors. For better insight, a candid consultation with one of our Tummy Tuck surgeons in <?= ucwords($city) ?> would be a recommended move.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Tummy Tuck?
-                    </p>
-                    <p>
-                        Like with any other surgery, Tummy Tuck also accompanies several risks.
-                    </p>
-                    <ul>
-                        <li>
-                            Accumulation of fluid under the skin or seroma
-                        </li>
-                        <li>
-                            Poor healing of the areas along the line of incision
-                        </li>
-                        <li>
-                            Visible scars, which are hard to hide
-                        </li>
-                        <li>
-                            Repositioning of abdominal tissues during the surgery can lead to numbness or reduced sensations
-                        </li>
-                        <li>
-                            Chance of an unavoidable revisional surgery
-                        </li>
-                        <li>
-                            Prolonged swelling or skin discoloration
-                        </li>
-                        <li>
-                            Unbearable pain which ceases to subside
-                        </li>
-                    </ul>
-
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Tummy Tuck?
-                    </p>
-                    <p>
-                        Ideally, if you do not wish to get pregnant any time soon, have a healthy body, and can maintain your results well, this is the right to go for Tummy Tuck. Women in <?= ucwords($city) ?> and other parts of the world often prefer undergoing Tummy Tuck in their 30s or 40s.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before the Tummy Tuck Surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Your body weight should remain stable for at least 12 months before the Tummy Tuck surgery
-                        </li>
-                        <li>
-                            If you are overweight, the surgeon will recommend you lose weight to be fit for the procedure
-                        </li>
-                        <li>
-                            Prior to the surgery day, you should have a balanced diet including considerable proteins
-                        </li>
-                        <li>
-                            Keep your body hydrated with water
-                        </li>
-                        <li>
-                            Avoid using any medication without the permission of the doctor as it may lead to bleeding
-                        </li>
-                        <li>
-                            Clear all your doubts with the surgeon before going under the knife
-                        </li>
-                        <li>
-                            Have realistic expectations with the surgery in <?= ucwords($city) ?>
-                        </li>
-                        <li>
-                            Be prepared for the probable risks and side effects of the treatment
-                        </li>
-                        <li>
-                            Ask someone to take you home once the surgery completes
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Tummy Tuck surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            On the surgery day in <?= ucwords($city) ?>, the anesthetic will discuss if you have any allergic reaction to anesthesia and will administer the dose accordingly
-                        </li>
-                        <li>
-                            The entire procedure will continue for around two to three hours or more, depending on the severity of the treatment
-                        </li>
-                        <li>
-                            The surgeon will take out your belly button by creating a small incision and suture it back into its place after the procedure
-                        </li>
-                        <li>
-                            You might also get some antibiotics to avoid infection or painkillers to mitigate the possible pain during the surgery
-                        </li>
-                        <li>
-                            From the first to the third day after the procedure, you will experience pressure, mild pain, and bloating
-                        </li>
-                        <li>
-                            Your belly will become swollen and sore in the first week. To hide the swelling, you may need to put on a compression garment
-                        </li>
-                    </ul> -->
-
             </div>
         <?php } elseif ($surgery_str == "buttock enhancement") { ?>
             <div class="col padd-null">
