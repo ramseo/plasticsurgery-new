@@ -147,18 +147,18 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         to repair the nose damage caused due to a birth defect, a disease,
                         or a previous surgery. It could also be effective in correcting
                         breathing defects. Consulting any of our seasoned plastic surgeons
-                        in Hyderabad can help you serve your purpose with success.
+                        in <?= ucwords($city) ?> can help you serve your purpose with success.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Are Our Cosmetic Surgeons in Hyderabad the Best for Rhinoplasty?
+                    Why Are Our Cosmetic Surgeons in <?= ucwords($city) ?> the Best for Rhinoplasty?
                 </p>
                 <ul>
                     <li>
                         Deep knowledge of facial aesthetics
                     </li>
                     <li>
-                        Highly experienced nose surgeons in Hyderabad
+                        Highly experienced nose surgeons in <?= ucwords($city) ?>
                     </li>
                     <li>
                         Certified from varied national and international plastic surgery associations
@@ -167,7 +167,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Extremely qualified and experienced cosmetic surgeons
                     </li>
                     <li>
-                        Adept at performing high-definition nose surgery in Hyderabad
+                        Adept at performing high-definition nose surgery in <?= ucwords($city) ?>
                     </li>
                     <li>
                         Specializations in Reconstruction Rhinoplasty, Reduction Rhinoplasty,
@@ -185,7 +185,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of Rhinoplasty surgery in Hyderabad depends primarily on the complexity
+                    The cost of Rhinoplasty surgery in <?= ucwords($city) ?> depends primarily on the complexity
                     of the nose surgery. Moreover, surgeon’s fees, the cost for administering
                     anesthesia, facilities provided in the operating room, medical tests,
                     surgery garments, prescriptions, etc. will be in addition to the
@@ -195,9 +195,9 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <p class="identity">OUR SERVICES</p>
                 <p>
                     Approaching any of our plastic surgeons for Rhinoplasty would be the best choice
-                    in Hyderabad to ensure scar-less and painless surgery with faster recovery
+                    in <?= ucwords($city) ?> to ensure scar-less and painless surgery with faster recovery
                     time. You can regain your aesthetic appearance at an affordable cost
-                    through the most experienced hands in Hyderabad. Just consult one
+                    through the most experienced hands in <?= ucwords($city) ?>. Just consult one
                     of our expert surgeons and open the door to your facial
                     transformation with a beautiful, new-looking nose.
                     Cordial services, upscale treatment facilities,
@@ -220,7 +220,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <ul>
-                            <li>You can be an ideal candidate to undergo nose surgery in Hyderabad if</li>
+                            <li>You can be an ideal candidate to undergo nose surgery in <?= ucwords($city) ?> if</li>
                             <li>Your face has grown to its full potential</li>
                             <li>
                                 You wish to get a natural position and contour of your nasal cartilage, soft tissue, and bone restored
@@ -249,7 +249,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <p>
                             On average, it may range between 50,000 INR to 2,50,000 INR. Nasal
                             implants would accompany added expenditure. It would be wise to
-                            consult your nose surgeon in Hyderabad to know the exact cost
+                            consult your nose surgeon in <?= ucwords($city) ?> to know the exact cost
                             of Rhinoplasty
                         </p>
                     </div>
@@ -265,7 +265,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <ul>
-                            <li>Intense pain or numbness in the initial days after the surgery in Hyderabad</li>
+                            <li>Intense pain or numbness in the initial days after the surgery in <?= ucwords($city) ?></li>
                             <li>Possibility of bruising and infection</li>
                             <li>Tiny scars that fade away with time</li>
                             <li>Fluid build-up in the treated area, causing seroma</li>
@@ -295,7 +295,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <p>
                             From young ones to adults, anyone can opt for Rhinoplasty surgery in
-                            Hyderabad. However, the consent of parents is necessary in case
+                            <?= ucwords($city) ?>. However, the consent of parents is necessary in case
                             of surgery on teenagers. The minimum age for girls and boys
                             should be 15 and 17 years respectively for nose surgery.
                         </p>
@@ -353,7 +353,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Be at the clinic with a positive frame of mind for the nose surgery in Hyderabad
+                                Be at the clinic with a positive frame of mind for the nose surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 You could expect the medical staff to ask you a few questions or carry out a medical check-up
@@ -375,7 +375,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                             </li>
                             <li>
                                 At times, the result may not be close to natural, so it is important to have realistic
-                                expectations from the surgery in Hyderabad
+                                expectations from the surgery in <?= ucwords($city) ?>
                             </li>
                         </ul>
                     </div>
@@ -402,11 +402,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </p>
                 </div>
                 <p class="identity">
-                    Why Are Our Plastic Surgeons the Best in Hyderabad for Blepharoplasty?
+                    Why Are Our Plastic Surgeons the Best in <?= ucwords($city) ?> for Blepharoplasty?
                 </p>
                 <ul>
                     <li>
-                        Prominent plastic surgeons in Hyderabad to perform Blepharoplasty
+                        Prominent plastic surgeons in <?= ucwords($city) ?> to perform Blepharoplasty
                     </li>
                     <li>
                         Helps patients in regaining the eyelid appearance appreciably
@@ -415,7 +415,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Can perform corrective surgery on lower or upper eyelids, or both simultaneously
                     </li>
                     <li>
-                        Help to get away with the initial signs of ageing with Blepharoplasty in Hyderabad
+                        Help to get away with the initial signs of ageing with Blepharoplasty in <?= ucwords($city) ?>
                     </li>
                     <li>
                         A reputed member of several national and international plastic surgery associations
@@ -426,7 +426,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The Blepharoplasty cost in Hyderabad may depend on whether you are about
+                    The Blepharoplasty cost in <?= ucwords($city) ?> may depend on whether you are about
                     to undergo upper eyelid surgery or lower eyelid surgery. Moreover,
                     if you are up for this treatment to regain your aesthetic look,
                     your medical insurance may not cover it for cosmetic reasons.
@@ -437,7 +437,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     OUR SERVICES
                 </p>
                 <p>
-                    To restore your youthful and charming eyelids, opting for Blepharoplasty in Hyderabad
+                    To restore your youthful and charming eyelids, opting for Blepharoplasty in <?= ucwords($city) ?>
                     would be an ideal decision. It would be wise to consult any of our expert eyelid
                     lift surgeons to know about all the pros and cons of this treatment and the
                     longevity of its results. You should also be clear about your
@@ -462,7 +462,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be a suitable candidate for Blepharoplasty surgery in Hyderabad,
+                            To be a suitable candidate for Blepharoplasty surgery in <?= ucwords($city) ?>,
                             you should abide by the following criteria:
                         </p>
                         <ul>
@@ -501,7 +501,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The eyelid surgery in Hyderabad would cost you around 80,000 INR
+                            The eyelid surgery in <?= ucwords($city) ?> would cost you around 80,000 INR
                             to 2,00,000 INR. The overall expense may however fluctuate
                             depending on the surgeon, clinic, facilities used,
                             medications, etc.
@@ -571,7 +571,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <p>
                             If you start experiencing baggy or droopy upper eyelids, this is the right
                             time to opt for Blepharoplasty surgery from one of our experienced
-                            surgeons in Hyderabad. The surgery also becomes a necessity when
+                            surgeons in <?= ucwords($city) ?>. The surgery also becomes a necessity when
                             you develop vision problems due to excess skin forming in your
                             lower or upper eyelids. As for age, you should be around 30
                             years old or more, because droopy eyelids start appearing
@@ -594,7 +594,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Get your eyes checked in a lab to ensure your eye health is top-notch
                             </li>
                             <li>
-                                Consult with your surgeon in Hyderabad about your current medication
+                                Consult with your surgeon in <?= ucwords($city) ?> about your current medication
                                 regime to get the best advice for adjustments before surgery
                             </li>
                             <li>
@@ -642,7 +642,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Come to the clinic in Hyderabad with a positive attitude
+                                Come to the clinic in <?= ucwords($city) ?> with a positive attitude
                                 on the day of your Blepharoplasty surgery
                             </li>
                             <li>
@@ -669,7 +669,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 while lower eyelid surgery may take 10-14 days for complete recovery
                             </li>
                             <li>
-                                You should have realistic expectations with the surgery in Hyderabad
+                                You should have realistic expectations with the surgery in <?= ucwords($city) ?>
                             </li>
                         </ul>
                     </div>
@@ -681,24 +681,24 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         Do you wish to restore your lost facial charm? Opting for a Facelift surgery
-                        in Hyderabad could serve your purpose significantly. Also termed
+                        in <?= ucwords($city) ?> could serve your purpose significantly. Also termed
                         as Rhytidectomy, this procedure aims at getting away with the ageing
                         signs visible on the face and neck. These may include sagging skin,
                         fold lines, excess or reduced fat, muscular deformities in the jaw
                         and cheeks, double chin or turkey neck, and so on. Visit the best
-                        plastic surgeon in Hyderabad to know more about Facelift
+                        plastic surgeon in <?= ucwords($city) ?> to know more about Facelift
                         surgery.
                     </p>
                 </div>
                 <p class="identity">
-                    Why should you approach Our Surgeons for Facelift surgery in Hyderabad?
+                    Why should you approach Our Surgeons for Facelift surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
                         Hold excellence in performing reconstructive and plastic surgery treatments
                     </li>
                     <li>
-                        Renowned plastic surgeons in Hyderabad for Facelift surgery
+                        Renowned plastic surgeons in <?= ucwords($city) ?> for Facelift surgery
                     </li>
                     <li>
                         Help patients regain a younger facial and neck appearance
@@ -716,7 +716,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <p>
                     Depending on whether you want to undergo a full facelift or a mini Facelift surgery
-                    in Hyderabad, the cost may differ accordingly. Our expert facelift
+                    in <?= ucwords($city) ?>, the cost may differ accordingly. Our expert facelift
                     surgeons would be the best to help you get detailed information
                     about the cost of the Facelift surgery.
                 </p>
@@ -727,7 +727,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     Lower or Mid Facelift, Cheek Lift, Neck Lift, or Endoscopic Facelift.
                     To get more info on the type of Facelift surgery that would suit
                     you, you can always consult any of our Facelift surgery
-                    experts in Hyderabad.
+                    experts in <?= ucwords($city) ?>.
                 </p>
 
                 <p class="identity">
@@ -747,7 +747,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <p>
                             Abiding by the following conditions will make you an ideal
-                            candidate for Facelift surgery in Hyderabad:
+                            candidate for Facelift surgery in <?= ucwords($city) ?>:
                         </p>
                         <ul>
                             <li>
@@ -787,7 +787,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         <p>
                             You may have to spend around 2,50,000 INR for a full Facelift surgery
                             and approximately 1,50,000 INR for a mini Facelift surgery in
-                            Hyderabad. The cost may change depending on the cosmetic
+                            <?= ucwords($city) ?>. The cost may change depending on the cosmetic
                             surgeon you approach. Your decision to include Lip
                             Augmentation, Chin Surgery, and other facial
                             surgeries will also influence the cost
@@ -806,7 +806,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            While Facelift surgery in Hyderabad can produce great results, it is wise to be aware of several potential complications associated with it:
+                            While Facelift surgery in <?= ucwords($city) ?> can produce great results, it is wise to be aware of several potential complications associated with it:
                         </p>
                         <ul>
                             <li>
@@ -825,7 +825,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Slow wound healing is a possibility after Facelift surgery, which is why it is advisable to follow all post-operative instructions.
                             </li>
                             <li>
-                                Although rare, nerve damage can be a possibility during Facelift surgery in Hyderabad, resulting in an uneven facial appearance.
+                                Although rare, nerve damage can be a possibility during Facelift surgery in <?= ucwords($city) ?>, resulting in an uneven facial appearance.
                             </li>
                             <li>
                                 In some cases, the blood supply to facial tissues may hamper the surgery proceedings, which could lead to skin or hair loss.
@@ -850,7 +850,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            When the effect of growing age starts showing up on your face, probably in your 40s and beyond, opting for a Facelift surgery in Hyderabad could be a suitable move. It will help you break free from sagging skin, wrinkles, deep lines, and fine lines formed on the neck and facial area.
+                            When the effect of growing age starts showing up on your face, probably in your 40s and beyond, opting for a Facelift surgery in <?= ucwords($city) ?> could be a suitable move. It will help you break free from sagging skin, wrinkles, deep lines, and fine lines formed on the neck and facial area.
                         </p>
                     </div>
                 </div>
@@ -869,7 +869,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Undergoing proper medical evaluation as recommended by your surgeon will help you to remain prepared for the surgery in a better manner
                             </li>
                             <li>
-                                Make sure you have the requisite funds to finance Facelift surgery in Hyderabad
+                                Make sure you have the requisite funds to finance Facelift surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Make your surgeon aware of your current medications so that he could make adjustments accordingly for a safe surgery
@@ -910,7 +910,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 The specialist will ask if you have an allergic reaction to anesthesia to adjust the dose accordingly
                             </li>
                             <li>
-                                The duration of a Facelift surgery in Hyderabad can vary from 3-6 hours, depending on the complexity of the procedure. Additional cosmetic procedures can extend the time even further
+                                The duration of a Facelift surgery in <?= ucwords($city) ?> can vary from 3-6 hours, depending on the complexity of the procedure. Additional cosmetic procedures can extend the time even further
                             </li>
                             <li>
                                 During the procedure, the surgeon will likely lift and tighten your facial muscles and tissues with the help of advanced techniques
@@ -933,7 +933,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Are you noticing sagging skin on your forehead, eyebrows, and upper eyelids? If yes, it is high time to go for a Brow Lift surgery in Hyderabad. Surgeons use two different methods to lift the eyebrows and forehead.
+                        Are you noticing sagging skin on your forehead, eyebrows, and upper eyelids? If yes, it is high time to go for a Brow Lift surgery in <?= ucwords($city) ?>. Surgeons use two different methods to lift the eyebrows and forehead.
                     </p>
                     <strong>
                         Classic lift
@@ -949,7 +949,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </p>
                 </div>
                 <p class="identity">
-                    Why Consult Our Surgeons for Brow Lift Surgery in Hyderabad
+                    Why Consult Our Surgeons for Brow Lift Surgery in <?= ucwords($city) ?>
                 </p>
                 <ul>
                     <li>
@@ -972,11 +972,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost for Brow Lift in Hyderabad may differ as per the surgeon or the hospital you choose for the treatment. The cost of medicines, hospital facilities, lab tests, anesthesia, or the surgeon’s fees will also affect the overall expense. You can connect with any of our Brow lift surgeons in Hyderabad to learn more about the cost of this treatment.
+                    The cost for Brow Lift in <?= ucwords($city) ?> may differ as per the surgeon or the hospital you choose for the treatment. The cost of medicines, hospital facilities, lab tests, anesthesia, or the surgeon’s fees will also affect the overall expense. You can connect with any of our Brow lift surgeons in <?= ucwords($city) ?> to learn more about the cost of this treatment.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Our brow lift surgeons in Hyderabad will care to perform the surgery with complete satisfaction. They will make you feel relaxed during the entire procedure, thanks to their safe hands and the cordial assistance of their medical staff. Our expert surgeons extend the facilities of advanced surgery equipment, operation beds, experienced nursing staff, and every possible medical amenity to ensure long-lasting success for your Brow lift surgery in Hyderabad.
+                    Our brow lift surgeons in <?= ucwords($city) ?> will care to perform the surgery with complete satisfaction. They will make you feel relaxed during the entire procedure, thanks to their safe hands and the cordial assistance of their medical staff. Our expert surgeons extend the facilities of advanced surgery equipment, operation beds, experienced nursing staff, and every possible medical amenity to ensure long-lasting success for your Brow lift surgery in <?= ucwords($city) ?>.
                 </p>
 
                 <p class="identity">
@@ -995,7 +995,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be an ideal candidate for Brow Lift surgery in Hyderabad, abiding by these points would be essential:
+                            To be an ideal candidate for Brow Lift surgery in <?= ucwords($city) ?>, abiding by these points would be essential:
                         </p>
                         <ul>
                             <li>
@@ -1033,7 +1033,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The Brow Lift surgery in Hyderabad would cost you around 60,000 INR to 1,30,000 INR. The expense may increase further depending on the surgeon, hospital, facilities, techniques, medical equipment, and other major factors.
+                            The Brow Lift surgery in <?= ucwords($city) ?> would cost you around 60,000 INR to 1,30,000 INR. The expense may increase further depending on the surgeon, hospital, facilities, techniques, medical equipment, and other major factors.
                         </p>
                     </div>
                 </div>
@@ -1107,7 +1107,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            People start developing droopy brow lines, wrinkles, or fine lines across the forehead as they cross the 40-year mark. The age group of 40-65 is hence a probable time to opt for Brow Lift surgery in Hyderabad. In rare cases, if young patients aged between their 20s and 30s get “worry lines” due to genetic problems they may also undergo Brow Lift surgery.
+                            People start developing droopy brow lines, wrinkles, or fine lines across the forehead as they cross the 40-year mark. The age group of 40-65 is hence a probable time to opt for Brow Lift surgery in <?= ucwords($city) ?>. In rare cases, if young patients aged between their 20s and 30s get “worry lines” due to genetic problems they may also undergo Brow Lift surgery.
                         </p>
                     </div>
                 </div>
@@ -1198,11 +1198,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Wrinkling and creasing around the neck often leave you with an aged look. To get away with fat and excess skin responsible for these aging signs, a neck lift is a worthwhile treatment. Our neck lift surgeons in Hyderabad can help you get a slimmer and smoother neck with a carefully done treatment.
+                        Wrinkling and creasing around the neck often leave you with an aged look. To get away with fat and excess skin responsible for these aging signs, a neck lift is a worthwhile treatment. Our neck lift surgeons in <?= ucwords($city) ?> can help you get a slimmer and smoother neck with a carefully done treatment.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Approach Our Surgeons for Neck Lift Surgery in Hyderabad?
+                    Why Approach Our Surgeons for Neck Lift Surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
@@ -1212,7 +1212,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Work on a natural approach to make your neck proportionate to your facial features
                     </li>
                     <li>
-                        Carry out candid discussions with the patients before performing neck lift surgery in Hyderabad
+                        Carry out candid discussions with the patients before performing neck lift surgery in <?= ucwords($city) ?>
                     </li>
                     <li>
                         Works actively in coming up with successful results as expected by the patient
@@ -1226,7 +1226,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> Surgery IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of neck lift surgery in Hyderabad differs according to the surgeon you approach for the treatment. The type of surgery can also make a difference in the cost. For example:
+                    The cost of neck lift surgery in <?= ucwords($city) ?> differs according to the surgeon you approach for the treatment. The type of surgery can also make a difference in the cost. For example:
                 </p>
                 <ul>
                     <li>
@@ -1244,7 +1244,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     OUR SERVICE
                 </p>
                 <p>
-                    Our neck lift surgeons in Hyderabad could make a difference to your facial appearance with an improved neck. Our experts can tighten the skin around your neck to enable you to shun away the aging signs. Feel free to approach our experienced surgeons and get the treatment through advanced medical equipment, with cordial support from their nursing staff.
+                    Our neck lift surgeons in <?= ucwords($city) ?> could make a difference to your facial appearance with an improved neck. Our experts can tighten the skin around your neck to enable you to shun away the aging signs. Feel free to approach our experienced surgeons and get the treatment through advanced medical equipment, with cordial support from their nursing staff.
                 </p>
 
                 <p class="identity">
@@ -1262,11 +1262,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be a good candidate for Neck Lift in Hyderabad, you should fulfil the below-mentioned conditions:
+                            To be a good candidate for Neck Lift in <?= ucwords($city) ?>, you should fulfil the below-mentioned conditions:
                         </p>
                         <ul>
                             <li>
-                                Fulfilling the conditions below will make you an ideal candidate for Neck Lift surgery in Hyderabad
+                                Fulfilling the conditions below will make you an ideal candidate for Neck Lift surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 A healthy body without any major medical conditions that could hinder the recovery process
@@ -1303,7 +1303,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost of a Neck Lift surgery in Hyderabad ranges from 70,000 INR to 1,00,000 INR. The cost may depend on several factors, such as the extent of skin and fat removal, muscle plication, the requirement for liposuction, and the level of skill and experience of the surgeon performing the procedure. Medical facilities, medicines, surgeon’s fees, etc., also add up to the cost of Neck Lift surgery.
+                            The cost of a Neck Lift surgery in <?= ucwords($city) ?> ranges from 70,000 INR to 1,00,000 INR. The cost may depend on several factors, such as the extent of skin and fat removal, muscle plication, the requirement for liposuction, and the level of skill and experience of the surgeon performing the procedure. Medical facilities, medicines, surgeon’s fees, etc., also add up to the cost of Neck Lift surgery.
                         </p>
                     </div>
                 </div>
@@ -1337,7 +1337,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Loss or reduction of sensation in the treated area
                             </li>
                             <li>
-                                Asymmetric neck after the surgery in Hyderabad
+                                Asymmetric neck after the surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Stiffness in the neck after the procedure
@@ -1362,7 +1362,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you are experiencing significant weight loss, loose neck skin, excess fat deposits, or horizontal skin bands (neckbands), you could consider opting for a Neck Lift procedure in Hyderabad. Typically, individuals between the ages of 35 and 65 opt for this procedure. It is important to note that you should remain fit both physically and mentally before undergoing surgery.
+                            If you are experiencing significant weight loss, loose neck skin, excess fat deposits, or horizontal skin bands (neckbands), you could consider opting for a Neck Lift procedure in <?= ucwords($city) ?>. Typically, individuals between the ages of 35 and 65 opt for this procedure. It is important to note that you should remain fit both physically and mentally before undergoing surgery.
                         </p>
                     </div>
                 </div>
@@ -1377,7 +1377,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you are considering a Neck lift surgery in Hyderabad, it is important to include the following items on your checklist:
+                            If you are considering a Neck lift surgery in <?= ucwords($city) ?>, it is important to include the following items on your checklist:
                         </p>
                         <ul>
                             <li>
@@ -1428,7 +1428,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                During the Neck Lift surgery in Hyderabad, be at the clinic with a positive attitude
+                                During the Neck Lift surgery in <?= ucwords($city) ?>, be at the clinic with a positive attitude
                             </li>
                             <li>
                                 Someone will administer general anesthesia to ensure a pain-free surgery experience
@@ -1443,7 +1443,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 The procedure typically lasts for 1-3 hours and is most effective for patients with loose skin in the neck area
                             </li>
                             <li>
-                                Following the surgery in Hyderabad, it generally takes 2 weeks for pain, swelling, and bruising to subside and for the neck contours to become visible
+                                Following the surgery in <?= ucwords($city) ?>, it generally takes 2 weeks for pain, swelling, and bruising to subside and for the neck contours to become visible
                             </li>
                             <li>
                                 Recovery time is typically 4-6 weeks, after which most individuals can return to work, though in some cases, recovery may take longer
@@ -1462,11 +1462,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        While performing Chin Surgery the plastic surgeon places a custom-fit chin implant to enhance the facial appearance of the patient. Also termed Mentoplasty or Genioplasty, the procedure improves the jawline structure and strengthens a recessed and weaker chin. Our chin surgeons in Hyderabad hold dexterity in executing this treatment with extreme precision.
+                        While performing Chin Surgery the plastic surgeon places a custom-fit chin implant to enhance the facial appearance of the patient. Also termed Mentoplasty or Genioplasty, the procedure improves the jawline structure and strengthens a recessed and weaker chin. Our chin surgeons in <?= ucwords($city) ?> hold dexterity in executing this treatment with extreme precision.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Consult Our Surgeons for Chin Surgery in Hyderabad?
+                    Why Consult Our Surgeons for Chin Surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
@@ -1489,11 +1489,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The type of chin implant that you opt for Chin Surgery is one of the mainstay factors to decide the surgery cost. For instance, you can choose bone graft, cadaveric tissue graft silicone or polyethylene implant, or autologous tissue graft. This will however exclude the cost of anesthetics, the fees of the surgeon, and the charges for operating room facilities. Direct discussion with any of our chin surgeons in Hyderabad will help you get a deeper insight into the cost of the entire procedure and the additional facilities.
+                    The type of chin implant that you opt for Chin Surgery is one of the mainstay factors to decide the surgery cost. For instance, you can choose bone graft, cadaveric tissue graft silicone or polyethylene implant, or autologous tissue graft. This will however exclude the cost of anesthetics, the fees of the surgeon, and the charges for operating room facilities. Direct discussion with any of our chin surgeons in <?= ucwords($city) ?> will help you get a deeper insight into the cost of the entire procedure and the additional facilities.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    With our highly experienced chin surgeons in Hyderabad performing your surgery, you are in safe hands. Their sophisticated operating rooms studded with advanced surgery equipment will make your treatment easier and hassle-free. You can always contact our expert chin surgeons in Hyderabad to get the ingrained details associated with Chin Surgery.
+                    With our highly experienced chin surgeons in <?= ucwords($city) ?> performing your surgery, you are in safe hands. Their sophisticated operating rooms studded with advanced surgery equipment will make your treatment easier and hassle-free. You can always contact our expert chin surgeons in <?= ucwords($city) ?> to get the ingrained details associated with Chin Surgery.
                 </p>
                 <p class="identity">
                     FAQs on Chin Surgery in <?= ucwords($city) ?>
@@ -1510,7 +1510,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you want to opt for Chin Surgery in Hyderabad, adhering to the following points will make you an ideal candidate
+                            If you want to opt for Chin Surgery in <?= ucwords($city) ?>, adhering to the following points will make you an ideal candidate
                         </p>
                         <ul>
                             <li>
@@ -1548,7 +1548,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Undergoing Chin Surgery in Hyderabad may cost you around 70,000 INR - 150,000 INR. The price may vary depending on the surgeon’s fees, the choice of hospital or clinic, the procedure carried out, etc.
+                            Undergoing Chin Surgery in <?= ucwords($city) ?> may cost you around 70,000 INR - 150,000 INR. The price may vary depending on the surgeon’s fees, the choice of hospital or clinic, the procedure carried out, etc.
                         </p>
                     </div>
                 </div>
@@ -1563,7 +1563,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <strong>
-                            Several complications may arise as a result of Chin Surgery in Hyderabad:
+                            Several complications may arise as a result of Chin Surgery in <?= ucwords($city) ?>:
                         </strong>
                         <ul>
                             <li>
@@ -1610,7 +1610,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you are not happy with the projection or appearance of your chin, the option to undergo Chin Surgery in Hyderabad is wide open. This cosmetic procedure can make your chin appear on par with other facial features. Although there is no specific age requirement for Chin Surgery, individuals must have a fully developed chin to undergo the procedure. Even teenagers 15-16 years old can undergo this surgery with the consent of their parents.
+                            If you are not happy with the projection or appearance of your chin, the option to undergo Chin Surgery in <?= ucwords($city) ?> is wide open. This cosmetic procedure can make your chin appear on par with other facial features. Although there is no specific age requirement for Chin Surgery, individuals must have a fully developed chin to undergo the procedure. Even teenagers 15-16 years old can undergo this surgery with the consent of their parents.
                         </p>
                     </div>
                 </div>
@@ -1626,7 +1626,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Before getting Chin Surgery in Hyderabad, make sure to consult with your cosmetic surgeon and clarify any doubts or concerns you may have.
+                                Before getting Chin Surgery in <?= ucwords($city) ?>, make sure to consult with your cosmetic surgeon and clarify any doubts or concerns you may have.
                             </li>
                             <li>
                                 To determine your eligibility for the procedure, the surgeon will conduct various lab tests and medical evaluations.
@@ -1676,7 +1676,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 You could expect the anesthesiologist to administer either general or IV anesthesia to numb the chin area
                             </li>
                             <li>
-                                Our surgeons in Hyderabad will use the latest techniques to make incisions either inside your mouth or under your chin.
+                                Our surgeons in <?= ucwords($city) ?> will use the latest techniques to make incisions either inside your mouth or under your chin.
                             </li>
                             <li>
                                 After carrying out the surgery, the doctor will close the incisions with tapes, sutures, or skin adhesives.
@@ -1711,22 +1711,22 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            The Trustworthy Cheek Augmentation Surgeons in Hyderabad
+                            The Trustworthy Cheek Augmentation Surgeons in <?= ucwords($city) ?>
                         </strong>
                     </p>
                     <p>
-                        If you are noticing a flat appearance of your mid-face, it is due to your deformed cheekbones. It may have happened due to an accident or any other reason. In any case, opting for cheek implant surgery is a befitting solution to remedy this flawed appearance. The sole purpose of this surgery is to lift or add volume to your cheeks. Our Cheek Augmentation surgeons in Hyderabad hold a thriving record of performing cheek implants and fat grafting - the two widely performed surgeries in this regard.
+                        If you are noticing a flat appearance of your mid-face, it is due to your deformed cheekbones. It may have happened due to an accident or any other reason. In any case, opting for cheek implant surgery is a befitting solution to remedy this flawed appearance. The sole purpose of this surgery is to lift or add volume to your cheeks. Our Cheek Augmentation surgeons in <?= ucwords($city) ?> hold a thriving record of performing cheek implants and fat grafting - the two widely performed surgeries in this regard.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Consult Our Surgeons for Cheek Augmentation Surgery in Hyderabad?
+                    Why Consult Our Surgeons for Cheek Augmentation Surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
                         Have performed countless cheek surgeries to enhance the facial appearance of the patients
                     </li>
                     <li>
-                        Extremely qualified and experienced to perform Cheek Augmentation surgery in Hyderabad
+                        Extremely qualified and experienced to perform Cheek Augmentation surgery in <?= ucwords($city) ?>
                     </li>
                     <li>
                         Members of several renowned Indian and international plastic surgery associations
@@ -1739,12 +1739,12 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> Surgery IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of Cheek Augmentation surgery in Hyderabad relies largely on the type of cheek implant used for your treatment. The charges for surgeon’s fees, medical facilities, operating room, anesthesia, and other associated expenses will also add up to the overall cost of Cheek Augmentation. Contact our Cheek Augmentation surgeon in Hyderabad to get detailed info about the surgery cost.
+                    The cost of Cheek Augmentation surgery in <?= ucwords($city) ?> relies largely on the type of cheek implant used for your treatment. The charges for surgeon’s fees, medical facilities, operating room, anesthesia, and other associated expenses will also add up to the overall cost of Cheek Augmentation. Contact our Cheek Augmentation surgeon in <?= ucwords($city) ?> to get detailed info about the surgery cost.
                 </p>
 
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    During your surgery, our surgeons make sure to equip make you feel comfortable the best way possible. They also boast of their robust equipment and cordial nursing staff. Moreover, our Cheek Augmentation surgeons in Hyderabad are among the topmost in the healthcare industry. Overall, you can leave their clinics duly satisfied with an enhanced facial appearance.
+                    During your surgery, our surgeons make sure to equip make you feel comfortable the best way possible. They also boast of their robust equipment and cordial nursing staff. Moreover, our Cheek Augmentation surgeons in <?= ucwords($city) ?> are among the topmost in the healthcare industry. Overall, you can leave their clinics duly satisfied with an enhanced facial appearance.
                 </p>
 
                 <!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
@@ -1763,7 +1763,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you want to undergo Cheek Augmentation surgery in Hyderabad, you should abide by the following criteria:
+                            If you want to undergo Cheek Augmentation surgery in <?= ucwords($city) ?>, you should abide by the following criteria:
                         </p>
                         <ul>
                             <li>
@@ -1810,7 +1810,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Cheek Augmentation surgery in Hyderabad costs between 100,000 INR to 130,000 INR on average. Additional procedures done in conjunction with Cheek Augmentation will result in extra expenses.
+                            Cheek Augmentation surgery in <?= ucwords($city) ?> costs between 100,000 INR to 130,000 INR on average. Additional procedures done in conjunction with Cheek Augmentation will result in extra expenses.
                         </p>
                     </div>
                 </div>
@@ -1878,7 +1878,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Cheek Augmentation is a suitable option if you want to enhance the appearance of your sagging, worn-out, or hollow cheek. The surgery can be performed in Hyderabad on individuals over the age of 18, with the majority of patients being between 35-65 years old.
+                            Cheek Augmentation is a suitable option if you want to enhance the appearance of your sagging, worn-out, or hollow cheek. The surgery can be performed in <?= ucwords($city) ?> on individuals over the age of 18, with the majority of patients being between 35-65 years old.
                         </p>
                     </div>
                 </div>
@@ -1893,7 +1893,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To prepare for Cheek Augmentation surgery in Hyderabad, you should do the following:
+                            To prepare for Cheek Augmentation surgery in <?= ucwords($city) ?>, you should do the following:
                         </p>
                         <ul>
                             <li>
@@ -1941,7 +1941,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                On the day of Cheek Augmentation surgery in Hyderabad, be at the clinic with a calm and composed mindset.
+                                On the day of Cheek Augmentation surgery in <?= ucwords($city) ?>, be at the clinic with a calm and composed mindset.
                             </li>
                             <li>
                                 Cooperate with the medical staff during your pre-surgery examination
@@ -1971,7 +1971,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 After a week of the surgery, you can return to work
                             </li>
                             <li>
-                                Have realistic expectations with the Cheek Augmentation surgery in Hyderabad
+                                Have realistic expectations with the Cheek Augmentation surgery in <?= ucwords($city) ?>
                             </li>
                         </ul>
                     </div>
@@ -1982,15 +1982,15 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Do you wish to get plumper and fuller lips? If yes, Lip Augmentation is the best cosmetic surgery procedure to attain your wish. You can opt from among silicone or expanded polytetrafluoroethylene implants. Alternatively, lip fillers such as Restylane and Juvederm are among the other widely preferred choices. Our experienced cosmetic surgeons in Hyderabad can help you opt for the most suitable Lip Augmentation treatment.
+                        Do you wish to get plumper and fuller lips? If yes, Lip Augmentation is the best cosmetic surgery procedure to attain your wish. You can opt from among silicone or expanded polytetrafluoroethylene implants. Alternatively, lip fillers such as Restylane and Juvederm are among the other widely preferred choices. Our experienced cosmetic surgeons in <?= ucwords($city) ?> can help you opt for the most suitable Lip Augmentation treatment.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Are Our Surgeons the Preferred Lip Augmentation Surgeons in Hyderabad?
+                    Why Are Our Surgeons the Preferred Lip Augmentation Surgeons in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Expert in carrying out Lip Augmentation procedures in Hyderabad
+                        Expert in carrying out Lip Augmentation procedures in <?= ucwords($city) ?>
                     </li>
                     <li>
                         Perform satisfying Lip Augmentation to ensure long-lasting results
@@ -2006,11 +2006,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Several factors play their part in defining the cost of the Lip Augmentation procedure. These may include Lip Augmentation grade, advanced technology, fees of the surgeon, auxiliary services, and more. Your choice between lip implants and lip fillers will also incur different costs. For a better estimate of the involved surgery costs, you can always consult any of our renowned Lip Augmentation surgeons in Hyderabad.
+                    Several factors play their part in defining the cost of the Lip Augmentation procedure. These may include Lip Augmentation grade, advanced technology, fees of the surgeon, auxiliary services, and more. Your choice between lip implants and lip fillers will also incur different costs. For a better estimate of the involved surgery costs, you can always consult any of our renowned Lip Augmentation surgeons in <?= ucwords($city) ?>.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Approach any of our Lip Augmentation experts in Hyderabad to get an enhanced lip appearance. The treatment will help you get more natural and fuller lips without leaving behind noticeable scars or marks. Their sophisticated operating room, laced with advanced medical equipment will make your treatment simpler than you could ever think of. Feel free to connect with skilled plastic surgeons and make way for an enhanced facial appearance.
+                    Approach any of our Lip Augmentation experts in <?= ucwords($city) ?> to get an enhanced lip appearance. The treatment will help you get more natural and fuller lips without leaving behind noticeable scars or marks. Their sophisticated operating room, laced with advanced medical equipment will make your treatment simpler than you could ever think of. Feel free to connect with skilled plastic surgeons and make way for an enhanced facial appearance.
                 </p>
 
                 <p class="identity">
@@ -2028,7 +2028,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be a suitable candidate for Lip Augmentation in Hyderabad, you must meet the following essential requirements:
+                            To be a suitable candidate for Lip Augmentation in <?= ucwords($city) ?>, you must meet the following essential requirements:
                         </p>
                         <ul>
                             <li>
@@ -2066,7 +2066,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            A Lip Augmentation procedure in Hyderabad will cost around 40,000 INR - 1,00,000 INR. The amount could differ significantly based on the cosmetic surgeon and the treatment you choose, the facilities provided, and several other factors.
+                            A Lip Augmentation procedure in <?= ucwords($city) ?> will cost around 40,000 INR - 1,00,000 INR. The amount could differ significantly based on the cosmetic surgeon and the treatment you choose, the facilities provided, and several other factors.
                         </p>
                     </div>
                 </div>
@@ -2081,7 +2081,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Mentioned below are some of the potential risks and complications associated with undergoing Lip Augmentation surgery in Hyderabad:
+                            Mentioned below are some of the potential risks and complications associated with undergoing Lip Augmentation surgery in <?= ucwords($city) ?>:
                         </p>
                         <ul>
                             <li>
@@ -2131,7 +2131,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            You can go for Lip Augmentation Surgery at almost any age beyond 18 years. At this age, you are more prone to have a healthy body, immune enough to withstand the effect of anesthesia and other medicines given during the surgery. You would feel the need to undergo this surgery in Hyderabad if you observe thin lips or decreased lip volume because of ageing fact.
+                            You can go for Lip Augmentation Surgery at almost any age beyond 18 years. At this age, you are more prone to have a healthy body, immune enough to withstand the effect of anesthesia and other medicines given during the surgery. You would feel the need to undergo this surgery in <?= ucwords($city) ?> if you observe thin lips or decreased lip volume because of ageing fact.
                         </p>
                     </div>
                 </div>
@@ -2146,7 +2146,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Following these guidelines would be worthwhile in preparing for a Lip Augmentation surgery in Hyderabad:
+                            Following these guidelines would be worthwhile in preparing for a Lip Augmentation surgery in <?= ucwords($city) ?>:
                         </p>
                         <ul>
                             <li>
@@ -2203,7 +2203,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Often, surgeons also carry out a lip implant or lip lift method for permanent Lip Augmentation
                             </li>
                             <li>
-                                Usually, a Lip Augmentation surgery done in a Hyderabad clinic may take around 30 minutes to complete
+                                Usually, a Lip Augmentation surgery done in a <?= ucwords($city) ?> clinic may take around 30 minutes to complete
                             </li>
                             <li>
                                 During this surgery, you could expect administering the anesthesia to make your lips numb
@@ -2224,7 +2224,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Complete recovery from the treatment may take around two weeks. Therefore, if you wish to flaunt your augmented lips at a wedding or any other special event, schedule the surgery two weeks before the occasion
                             </li>
                             <li>
-                                Make sure to have realistic expectations with the Lip Augmentation surgery in Hyderabad
+                                Make sure to have realistic expectations with the Lip Augmentation surgery in <?= ucwords($city) ?>
                             </li>
                         </ul>
                     </div>
@@ -2234,15 +2234,15 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Do you want to break free from your round face or baby, chipmunk, or chubby cheeks? Buccal Fat Removal in Hyderabad is the best remedy to your problem. Also termed Buccal Lipectomy or Cheek Fat Reduction, it refers to the elimination of fat pads accumulated in the cheek area. When done successfully through one of our experienced Buccal Fat Removal surgeons in Hyderabad, the treatment results in a finely contoured lower jawline and upper cheekbone.
+                        Do you want to break free from your round face or baby, chipmunk, or chubby cheeks? Buccal Fat Removal in <?= ucwords($city) ?> is the best remedy to your problem. Also termed Buccal Lipectomy or Cheek Fat Reduction, it refers to the elimination of fat pads accumulated in the cheek area. When done successfully through one of our experienced Buccal Fat Removal surgeons in <?= ucwords($city) ?>, the treatment results in a finely contoured lower jawline and upper cheekbone.
                     </p>
                 </div>
                 <p class="identity">
-                    Why prefer Our Surgeons for Buccal Fat Removal in Hyderabad?
+                    Why prefer Our Surgeons for Buccal Fat Removal in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Years of expertise in performing Buccal Fat Removal in Hyderabad
+                        Years of expertise in performing Buccal Fat Removal in <?= ucwords($city) ?>
                     </li>
                     <li>
                         Dexterous in carrying out safe, painless, and quick treatment
@@ -2261,13 +2261,13 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost would depend largely on the clinic and the surgeon you opt for the treatment. Likewise, the fees of the surgeon, post-operative follow-ups, medicines, hospital facility, and the patient’s profile also contribute toward deciding the cost of Buccal Fat Removal in Hyderabad. Our renowned plastic surgeons are the best to inform you about the cost involved with the Buccal Fat Removal treatment in Hyderabad.
+                    The cost would depend largely on the clinic and the surgeon you opt for the treatment. Likewise, the fees of the surgeon, post-operative follow-ups, medicines, hospital facility, and the patient’s profile also contribute toward deciding the cost of Buccal Fat Removal in <?= ucwords($city) ?>. Our renowned plastic surgeons are the best to inform you about the cost involved with the Buccal Fat Removal treatment in <?= ucwords($city) ?>.
                 </p>
                 <p class="identity">
                     OUR SERVICES
                 </p>
                 <p>
-                    Approach our Buccal Fat Removal experts in Hyderabad to reduce your cheek fat and attain a flawless appearance. With our experienced surgeons, you will get advanced medical facilities, upscale treatment equipment, a well-equipped operating room, and a cordial nursing staff. Consult any of our renowned plastic surgeons today and proceed towards regaining your charming appearance.
+                    Approach our Buccal Fat Removal experts in <?= ucwords($city) ?> to reduce your cheek fat and attain a flawless appearance. With our experienced surgeons, you will get advanced medical facilities, upscale treatment equipment, a well-equipped operating room, and a cordial nursing staff. Consult any of our renowned plastic surgeons today and proceed towards regaining your charming appearance.
                 </p>
 
                 <p class="identity">
@@ -2284,7 +2284,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be a suitable candidate for Buccal Fat Removal surgery in Hyderabad, you should abide by the below-mentioned points:
+                            To be a suitable candidate for Buccal Fat Removal surgery in <?= ucwords($city) ?>, you should abide by the below-mentioned points:
                         </p>
                         <ul>
                             <li>
@@ -2325,7 +2325,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The estimated cost of a Buccal Fat Removal procedure in Hyderabad is approximately 65,000 INR. However, this cost may vary depending on various factors such as the location, the experience of the cosmetic surgeon, and additional recovery expenses. The type of anesthesia administered and the prescription medication required for aftercare may affect the total cost of the procedure as well.
+                            The estimated cost of a Buccal Fat Removal procedure in <?= ucwords($city) ?> is approximately 65,000 INR. However, this cost may vary depending on various factors such as the location, the experience of the cosmetic surgeon, and additional recovery expenses. The type of anesthesia administered and the prescription medication required for aftercare may affect the total cost of the procedure as well.
                         </p>
                     </div>
                 </div>
@@ -2340,7 +2340,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Here are some of the risks associated with Buccal Fat Removal surgery in Hyderabad
+                            Here are some of the risks associated with Buccal Fat Removal surgery in <?= ucwords($city) ?>
                         </p>
                         <ul>
                             <li>
@@ -2387,7 +2387,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The growth of fat pads continues until a person reaches their twenties. Cosmetic surgeons hence advise patients aged 20 and above to consider undergoing Buccal Fat Removal surgery in Hyderabad. Individuals who feel that their larger-than-desired fat pads are giving them a youthful or childlike appearance may also choose to undergo this surgery.
+                            The growth of fat pads continues until a person reaches their twenties. Cosmetic surgeons hence advise patients aged 20 and above to consider undergoing Buccal Fat Removal surgery in <?= ucwords($city) ?>. Individuals who feel that their larger-than-desired fat pads are giving them a youthful or childlike appearance may also choose to undergo this surgery.
                         </p>
                     </div>
                 </div>
@@ -2403,7 +2403,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Clear your confusion about the Buccal Fat Removal surgery in Hyderabad
+                                Clear your confusion about the Buccal Fat Removal surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Provide your medical history and a list of any current medications you are taking
@@ -2462,7 +2462,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 You could expect the surgeon to create minor incisions inside both cheeks and leave them open to drain. These will disappear own within 2-3 days
                             </li>
                             <li>
-                                Buccal Fat Removal in Hyderabad will take around 30 minutes to complete, which is much less time compared to other surgeries.
+                                Buccal Fat Removal in <?= ucwords($city) ?> will take around 30 minutes to complete, which is much less time compared to other surgeries.
                             </li>
                             <li>
                                 After the surgery, you may experience swelling on your face, which will vanish in a few days
@@ -2474,7 +2474,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 In rare instances, if the results do not turn out as expected, the surgeon might suggest you undergo another procedure
                             </li>
                             <li>
-                                In any case, you should have realistic expectations with the Buccal Fat Removal surgery in Hyderabad
+                                In any case, you should have realistic expectations with the Buccal Fat Removal surgery in <?= ucwords($city) ?>
                             </li>
                         </ul>
                     </div>
@@ -2485,15 +2485,15 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Do you want to regain your damaged or weird-looking ears back in their natural form? If yes, Ear Surgery is the best solution to serve your cause. Also known as Otoplasty or Pinnaplasty, this cosmetic surgery procedure reshapes, resizes, or repositions your ears as per the severity of your case. The treatment helps to regain the natural appearance of your years that have become defective by birth or due to an accident. The Ear Surgery in Hyderabad performed by our seasoned ear surgeons can also repair perforations, take care of hearing problems, and mitigate the pain resulting from otitis media.
+                        Do you want to regain your damaged or weird-looking ears back in their natural form? If yes, Ear Surgery is the best solution to serve your cause. Also known as Otoplasty or Pinnaplasty, this cosmetic surgery procedure reshapes, resizes, or repositions your ears as per the severity of your case. The treatment helps to regain the natural appearance of your years that have become defective by birth or due to an accident. The Ear Surgery in <?= ucwords($city) ?> performed by our seasoned ear surgeons can also repair perforations, take care of hearing problems, and mitigate the pain resulting from otitis media.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for Ear Surgery in Hyderabad?
+                    Why Choose Our Surgeons for Ear Surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Experienced surgeons in Hyderabad to perform Ear Surgery
+                        Experienced surgeons in <?= ucwords($city) ?> to perform Ear Surgery
                     </li>
                     <li>
                         Work with perfection to help you regain the natural appearance of your ears
@@ -2513,11 +2513,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The charges for ear reconstruction surgery in Hyderabad will vary according to the surgeon and the clinic you approach. The cost is likely to include the fees of the surgeon, pre and post-operative care, anesthesia charges, medical facilities, surgery garments, and more. For a better understanding of the cost, you can have a direct appointment with any of our expert ear surgeons in Hyderabad.
+                    The charges for ear reconstruction surgery in <?= ucwords($city) ?> will vary according to the surgeon and the clinic you approach. The cost is likely to include the fees of the surgeon, pre and post-operative care, anesthesia charges, medical facilities, surgery garments, and more. For a better understanding of the cost, you can have a direct appointment with any of our expert ear surgeons in <?= ucwords($city) ?>.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Get a rejuvenated ear with carefully done surgery through our expert ear surgeons in Hyderabad. Whether your bad-shaped ear is the result of a congenital deformity or an accident, our specialist surgeon will make sure to bring it back to its natural shape. The advanced facilities we provide at our clinic will further assist in your surgery. We keep you at the disposal of industry best surgery equipment, caring nursing staff, and refurbished surgery rooms. Contact our ear surgeon to learn more about this treatment. You will leave our clinic, happy and satisfied for sure.
+                    Get a rejuvenated ear with carefully done surgery through our expert ear surgeons in <?= ucwords($city) ?>. Whether your bad-shaped ear is the result of a congenital deformity or an accident, our specialist surgeon will make sure to bring it back to its natural shape. The advanced facilities we provide at our clinic will further assist in your surgery. We keep you at the disposal of industry best surgery equipment, caring nursing staff, and refurbished surgery rooms. Contact our ear surgeon to learn more about this treatment. You will leave our clinic, happy and satisfied for sure.
                 </p>
                 <p class="identity">
                     FAQs on Ear Surgery in <?= ucwords($city) ?>
@@ -2534,7 +2534,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be a suitable candidate for Otoplasty in Hyderabad would need you to fulfil the following important points:
+                            To be a suitable candidate for Otoplasty in <?= ucwords($city) ?> would need you to fulfil the following important points:
                         </p>
                         <ul>
                             <li>
@@ -2575,7 +2575,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost of Ear Surgery in Hyderabad may range between 40,000 INR - 60,000 INR or more, depending on the hospital, the choice of Surgeon, the type of anesthesia used, and other factors. Fixing an appointment with any of our cosmetic surgeons will help you to get exact figures regarding the Otoplasty.
+                            The cost of Ear Surgery in <?= ucwords($city) ?> may range between 40,000 INR - 60,000 INR or more, depending on the hospital, the choice of Surgeon, the type of anesthesia used, and other factors. Fixing an appointment with any of our cosmetic surgeons will help you to get exact figures regarding the Otoplasty.
                         </p>
                     </div>
                 </div>
@@ -2637,7 +2637,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            You can undergo Ear Surgery at any age after your ears develop completely. Usually, human ears grow to their full potential at the age of 5. However, doctors still advise waiting till the kid gets 7 years old to go for the surgery in Hyderabad. From 7 to adulthood, any time is suitable for the procedure.
+                            You can undergo Ear Surgery at any age after your ears develop completely. Usually, human ears grow to their full potential at the age of 5. However, doctors still advise waiting till the kid gets 7 years old to go for the surgery in <?= ucwords($city) ?>. From 7 to adulthood, any time is suitable for the procedure.
                         </p>
                     </div>
                 </div>
@@ -2652,7 +2652,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Before you go under the knife for Otoplasty in Hyderabad, here are some significant points to care for:
+                            Before you go under the knife for Otoplasty in <?= ucwords($city) ?>, here are some significant points to care for:
                         </p>
                         <ul>
                             <li>
@@ -2697,7 +2697,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Arrive at the clinic with a positive frame of mind on the day of Otoplasty surgery in Hyderabad
+                                Arrive at the clinic with a positive frame of mind on the day of Otoplasty surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Feel relaxed and at ease while the staff performs the necessary checkups on your body
@@ -2718,7 +2718,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Ear pain could bother you for around a week after the surgery
                             </li>
                             <li>
-                                Make sure to have realistic expectations with the treatment in Hyderabad for a quick recovery
+                                Make sure to have realistic expectations with the treatment in <?= ucwords($city) ?> for a quick recovery
                             </li>
                         </ul>
                     </div>
@@ -2730,19 +2730,19 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            Renowned Surgeons for Breast Augmentation in Hyderabad
+                            Renowned Surgeons for Breast Augmentation in <?= ucwords($city) ?>
                         </strong>
                     </p>
                     <p>
-                        Augmentation mammoplasty or Breast Augmentation aims at enhancing the shape, size, roundness, or completeness of the female breasts. The surgery requires our surgeons in Hyderabad to use saline, silicone implants beneath the breast tissue. A composite breast implant is also one of the widely used options for Breast Augmentation. With our consummate surgeons working for your cause, you can ensure to regain the appearance of your breasts as per your expectation.
+                        Augmentation mammoplasty or Breast Augmentation aims at enhancing the shape, size, roundness, or completeness of the female breasts. The surgery requires our surgeons in <?= ucwords($city) ?> to use saline, silicone implants beneath the breast tissue. A composite breast implant is also one of the widely used options for Breast Augmentation. With our consummate surgeons working for your cause, you can ensure to regain the appearance of your breasts as per your expectation.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Approach Our Surgeons for Breast Augmentation in Hyderabad?
+                    Why Approach Our Surgeons for Breast Augmentation in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Top plastic surgeons in Hyderabad for Breast Enhancement
+                        Top plastic surgeons in <?= ucwords($city) ?> for Breast Enhancement
                     </li>
                     <li>
                         Dexterous in fixing all types of Breast Augmentation implants
@@ -2761,14 +2761,14 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of a breast enhancement procedure depends largely on the type of implant used, the level of medical facilities provided, the fees of the surgeon, anesthesia, and other charges. You can connect directly with our Breast Augmentation surgeon in Hyderabad to know about the cost of the surgery in detail.
+                    The cost of a breast enhancement procedure depends largely on the type of implant used, the level of medical facilities provided, the fees of the surgeon, anesthesia, and other charges. You can connect directly with our Breast Augmentation surgeon in <?= ucwords($city) ?> to know about the cost of the surgery in detail.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Our expert surgeons perform Breast Augmentation surgery in Hyderabad with due satisfaction and success. Advanced facilities and services at their respective setups, help them further in carrying out the procedure without hassles. Keeping pace with the latest trends in the healthcare domain, our surgeons care to ensure upscale and advanced services.
+                    Our expert surgeons perform Breast Augmentation surgery in <?= ucwords($city) ?> with due satisfaction and success. Advanced facilities and services at their respective setups, help them further in carrying out the procedure without hassles. Keeping pace with the latest trends in the healthcare domain, our surgeons care to ensure upscale and advanced services.
                 </p>
                 <p>
-                    All our experts leverage sophisticated technical equipment for the surgery and their nursing staff tries its best to attend to all your concerns during the surgery. Fix your appointment with our Breast Augmentation surgeon in Hyderabad today and get the best possible treatment in our clinic.
+                    All our experts leverage sophisticated technical equipment for the surgery and their nursing staff tries its best to attend to all your concerns during the surgery. Fix your appointment with our Breast Augmentation surgeon in <?= ucwords($city) ?> today and get the best possible treatment in our clinic.
                 </p>
 
                 <p class="identity">
@@ -2786,7 +2786,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            You need to abide by the below-mentioned conditions to be a suitable candidate for Breast Augmentation surgery in Hyderabad:
+                            You need to abide by the below-mentioned conditions to be a suitable candidate for Breast Augmentation surgery in <?= ucwords($city) ?>:
                         </p>
                         <ul>
                             <li>
@@ -2830,7 +2830,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost of Breast Augmentation surgery in Hyderabad may range between 1,00,000 INR and 1,50,000 INR or even more. Much will rely on the breast implant technique used. Consulting any of our surgeons will help you to know the actual cost of the procedure
+                            The cost of Breast Augmentation surgery in <?= ucwords($city) ?> may range between 1,00,000 INR and 1,50,000 INR or even more. Much will rely on the breast implant technique used. Consulting any of our surgeons will help you to know the actual cost of the procedure
                         </p>
                     </div>
                 </div>
@@ -2898,7 +2898,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Any time after a woman’s breasts get fully developed is a good time to go for Breast Augmentation surgery in Hyderabad. To be precise, you should be at least 18 years old to undergo the procedure. A majority of women opt for this surgery in Hyderabad when they are between their 20s and 30 as they are likely to be healthier, well-developed, more aware, and duly prepared for the surgery in this age group.
+                            Any time after a woman’s breasts get fully developed is a good time to go for Breast Augmentation surgery in <?= ucwords($city) ?>. To be precise, you should be at least 18 years old to undergo the procedure. A majority of women opt for this surgery in <?= ucwords($city) ?> when they are between their 20s and 30 as they are likely to be healthier, well-developed, more aware, and duly prepared for the surgery in this age group.
                         </p>
                     </div>
                 </div>
@@ -2920,7 +2920,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Drink ample water to keep your body hydrated
                             </li>
                             <li>
-                                Avoid eating something after midnight prior to the surgery in Hyderabad
+                                Avoid eating something after midnight prior to the surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Take a balanced and healthy diet
@@ -2973,7 +2973,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                You should bear a cool and calm mind on the surgery day in Hyderabad
+                                You should bear a cool and calm mind on the surgery day in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 The anesthesiologist will administer anesthesia based on your past reactions to it
@@ -3005,15 +3005,15 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Do you want to get rid of excess skin accumulated on your breasts to avoid that sagging appearance? A Breast Lift is a preferred surgery option in Hyderabad to remedy your situation. Our experienced plastic surgeons can help you get an appealing Breast Lift by removing the unwanted skin and reshaping the breast tissue. Also termed Mastopexy, females prefer opting for this surgery after delivery to avoid experiencing droopy breasts.
+                        Do you want to get rid of excess skin accumulated on your breasts to avoid that sagging appearance? A Breast Lift is a preferred surgery option in <?= ucwords($city) ?> to remedy your situation. Our experienced plastic surgeons can help you get an appealing Breast Lift by removing the unwanted skin and reshaping the breast tissue. Also termed Mastopexy, females prefer opting for this surgery after delivery to avoid experiencing droopy breasts.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Are Our Surgeons the Best for a Breast Lift in Hyderabad?
+                    Why Are Our Surgeons the Best for a Breast Lift in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Renowned plastic surgeons in Hyderabad for Breast Lift
+                        Renowned plastic surgeons in <?= ucwords($city) ?> for Breast Lift
                     </li>
                     <li>
                         Experienced in delivering thriving results in the form of firmer and contoured breasts
@@ -3025,7 +3025,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Instil confidence among women with Breast Lift surgeries
                     </li>
                     <li>
-                        Cost-effective Breast Lift surgeons in Hyderabad
+                        Cost-effective Breast Lift surgeons in <?= ucwords($city) ?>
                     </li>
                 </ul>
                 <p class="identity">
@@ -3035,7 +3035,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Our Breast Lift surgeons hold high credibility in performing successful procedures, thereby rebuilding confidence among the patients. Whether you are opting for a primary Breast Lift or a revision Breast Lift, our surgeons will provide you with all the requisite facilities necessary for the procedure. Their advanced medical equipment, facilities, and cordial nursing staff will make you feel comfortable during the surgery. Feel free to contact any of our expert Breast Lift surgeons in Hyderabad to give an effective lift to your sagging breasts.
+                    Our Breast Lift surgeons hold high credibility in performing successful procedures, thereby rebuilding confidence among the patients. Whether you are opting for a primary Breast Lift or a revision Breast Lift, our surgeons will provide you with all the requisite facilities necessary for the procedure. Their advanced medical equipment, facilities, and cordial nursing staff will make you feel comfortable during the surgery. Feel free to contact any of our expert Breast Lift surgeons in <?= ucwords($city) ?> to give an effective lift to your sagging breasts.
                 </p>
                 <p class="identity">
                     FAQs on Breast Lift Surgery in <?= ucwords($city) ?>
@@ -3053,7 +3053,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be an ideal candidate for Breast Lift surgery in Hyderabad, you would need to fulfil the following pointers:
+                            To be an ideal candidate for Breast Lift surgery in <?= ucwords($city) ?>, you would need to fulfil the following pointers:
                         </p>
                         <ul>
                             <li>
@@ -3094,7 +3094,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost of Breast Lift surgery in Hyderabad will fall somewhere between 1,50,000 INR to 2,0,000 INR. Additional procedures like Breast Implants will add up to your expenditure accordingly. Feel free to consult any of our experienced surgeons to get detailed info on the involved cost.
+                            The cost of Breast Lift surgery in <?= ucwords($city) ?> will fall somewhere between 1,50,000 INR to 2,0,000 INR. Additional procedures like Breast Implants will add up to your expenditure accordingly. Feel free to consult any of our experienced surgeons to get detailed info on the involved cost.
                         </p>
                     </div>
                 </div>
@@ -3109,7 +3109,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            There can be several risks associated with Breast Lift surgery in Hyderabad on rare occasions.
+                            There can be several risks associated with Breast Lift surgery in <?= ucwords($city) ?> on rare occasions.
                         </p>
                         <ul>
                             <li>
@@ -3159,7 +3159,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Having completely developed breasts is one of the primary conditions to go for a Breast Lift surgery. You can be a teenager, in your 20s, or maybe older. But if you satisfy this one condition, you can opt for the surgery without hassles. Women often consider this procedure in Hyderabad due to improve their breast size that has become badly shaped due to pregnancy-related issues, weight changes, or genetic reasons,
+                            Having completely developed breasts is one of the primary conditions to go for a Breast Lift surgery. You can be a teenager, in your 20s, or maybe older. But if you satisfy this one condition, you can opt for the surgery without hassles. Women often consider this procedure in <?= ucwords($city) ?> due to improve their breast size that has become badly shaped due to pregnancy-related issues, weight changes, or genetic reasons,
                         </p>
                     </div>
                 </div>
@@ -3174,7 +3174,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The points below can prove helpful to consider before going for the Breast Lift surgery in Hyderabad:
+                            The points below can prove helpful to consider before going for the Breast Lift surgery in <?= ucwords($city) ?>:
                         </p>
                         <ul>
                             <li>
@@ -3213,7 +3213,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                You should have a positive attitude with a relaxed mind on the day of surgery in Hyderabad
+                                You should have a positive attitude with a relaxed mind on the day of surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Depending on the associated complications, the surgeon may around 1 to 2 hours to complete the surgery
@@ -3231,7 +3231,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Temporary symptoms such as tightness, bruising, or swelling are likely to occur.
                             </li>
                             <li>
-                                You can expect your breast tissues to be reshaped and repositioned after the completion of the Breast Lift surgery in Hyderabad,
+                                You can expect your breast tissues to be reshaped and repositioned after the completion of the Breast Lift surgery in <?= ucwords($city) ?>,
                             </li>
                         </ul>
                     </div>
@@ -3243,19 +3243,19 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            Renowned Surgeons in Hyderabad for Breast Reduction Surgery
+                            Renowned Surgeons in <?= ucwords($city) ?> for Breast Reduction Surgery
                         </strong>
                     </p>
                     <p>
-                        Are you unhappy with your extra-large breasts (macromastia) and envy women with comparably smaller breasts? Don’t be! Our plastic surgeons in Hyderabad can help you with Breast Reduction surgery to get your curves in shape. Also termed as reduction mammoplasty, this procedure requires the removal of excess breast tissue, glandular tissue, and skin to attain a size, which is proportionate to your body. Our experienced surgeons will ensure relief from physical discomfort, back pain, and other problems arising due to large breasts as well.
+                        Are you unhappy with your extra-large breasts (macromastia) and envy women with comparably smaller breasts? Don’t be! Our plastic surgeons in <?= ucwords($city) ?> can help you with Breast Reduction surgery to get your curves in shape. Also termed as reduction mammoplasty, this procedure requires the removal of excess breast tissue, glandular tissue, and skin to attain a size, which is proportionate to your body. Our experienced surgeons will ensure relief from physical discomfort, back pain, and other problems arising due to large breasts as well.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Are Our Surgeons Best Suited to Perform Breast Reduction in Hyderabad?
+                    Why Are Our Surgeons Best Suited to Perform Breast Reduction in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Adept expertise to perform Breast Reduction surgery in Hyderabad
+                        Adept expertise to perform Breast Reduction surgery in <?= ucwords($city) ?>
                     </li>
                     <li>
                         Expert in performing Vertical Breast Reduction, Liposuction, Scarless Breast Reduction, and Anchor Breast Reduction
@@ -3274,13 +3274,13 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of Breast Reduction surgery depends largely on the type of Breast Reduction procedure performed. In addition, factors like surgical amenities, surgeon’s expertise and experience, medications, etc. also contribute to deciding the Breast Reduction surgery cost in Hyderabad. It would be worthwhile to consult our expert plastic surgeon for detailed information on the cost of the surgery.
+                    The cost of Breast Reduction surgery depends largely on the type of Breast Reduction procedure performed. In addition, factors like surgical amenities, surgeon’s expertise and experience, medications, etc. also contribute to deciding the Breast Reduction surgery cost in <?= ucwords($city) ?>. It would be worthwhile to consult our expert plastic surgeon for detailed information on the cost of the surgery.
                 </p>
                 <p class="identity">
                     OUR SERVICES
                 </p>
                 <p>
-                    Our surgeons provide advanced treatment facilities in Hyderabad that will make you feel extremely comfortable during the entire surgery. Their surgery rooms comprise all the sophisticated facilities required for breast surgery, including the latest equipment and upscale operation beds. The efficient nursing team of our surgeons cares for you with perfection throughout the surgery. Furthermore, with our consummate Breast Reduction surgeon doing the job, you can feel yourself in the safest hands.
+                    Our surgeons provide advanced treatment facilities in <?= ucwords($city) ?> that will make you feel extremely comfortable during the entire surgery. Their surgery rooms comprise all the sophisticated facilities required for breast surgery, including the latest equipment and upscale operation beds. The efficient nursing team of our surgeons cares for you with perfection throughout the surgery. Furthermore, with our consummate Breast Reduction surgeon doing the job, you can feel yourself in the safest hands.
                 </p>
 
                 <p class="identity">
@@ -3298,7 +3298,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            An ideal candidate for Breast Reduction surgery in Hyderabad should satisfy the below-mentioned criteria:
+                            An ideal candidate for Breast Reduction surgery in <?= ucwords($city) ?> should satisfy the below-mentioned criteria:
                         </p>
                         <ul>
                             <li>
@@ -3339,7 +3339,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The typical cost of a Breast Reduction procedure in Hyderabad is between 1,00,000 INR to 2,00,000 INR depending on the scale of the surgery. Anyone who has recently undergone the surgery can help you get a better idea of the cost involved. Besides, consulting with your surgeon in Hyderabad is always advisable to know about the cost of Breast Reduction surgery.
+                            The typical cost of a Breast Reduction procedure in <?= ucwords($city) ?> is between 1,00,000 INR to 2,00,000 INR depending on the scale of the surgery. Anyone who has recently undergone the surgery can help you get a better idea of the cost involved. Besides, consulting with your surgeon in <?= ucwords($city) ?> is always advisable to know about the cost of Breast Reduction surgery.
                         </p>
                     </div>
                 </div>
@@ -3404,7 +3404,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Ideally, you should be more than 18 years old to opt for this surgery and your breasts must be completely developed. Young girls in their teens who are facing severe back problems can also choose to undergo this surgery in Hyderabad. Women with large breasts often opt for this procedure in their old age to get rid of poor posture, chronic neck pain, etc.
+                            Ideally, you should be more than 18 years old to opt for this surgery and your breasts must be completely developed. Young girls in their teens who are facing severe back problems can also choose to undergo this surgery in <?= ucwords($city) ?>. Women with large breasts often opt for this procedure in their old age to get rid of poor posture, chronic neck pain, etc.
                         </p>
                     </div>
                 </div>
@@ -3419,7 +3419,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Before going for the Breast Reduction surgery in Hyderabad you should take care to do the following:
+                            Before going for the Breast Reduction surgery in <?= ucwords($city) ?> you should take care to do the following:
                         </p>
                         <ul>
                             <li>
@@ -3471,7 +3471,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Come to the clinic in Hyderabad with a calm and composed attitude
+                                Come to the clinic in <?= ucwords($city) ?> with a calm and composed attitude
                             </li>
                             <li>
                                 Have a positive attitude toward the surgery
@@ -3510,19 +3510,19 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            Well-Known Surgeons in Hyderabad for Breast Implant Removal Surgery
+                            Well-Known Surgeons in <?= ucwords($city) ?> for Breast Implant Removal Surgery
                         </strong>
                     </p>
                     <p>
-                        Many reasons could tend the females to opt for Breast Implant Removal, such as breast cancer or a change in the lifecycle. Many other conditions bleeding, infection, calcium build-up, necrosis, capsular contraction, and more could also prompt them to get away with the implants. The procedure is just opposite to breast augmentation and aims at removing breast implants or revising the breast size and shape. Our skilled plastic surgeons in Hyderabad hold high end-expertise in performing this surgery with thriving results.
+                        Many reasons could tend the females to opt for Breast Implant Removal, such as breast cancer or a change in the lifecycle. Many other conditions bleeding, infection, calcium build-up, necrosis, capsular contraction, and more could also prompt them to get away with the implants. The procedure is just opposite to breast augmentation and aims at removing breast implants or revising the breast size and shape. Our skilled plastic surgeons in <?= ucwords($city) ?> hold high end-expertise in performing this surgery with thriving results.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Approach Our Surgeons for Breast Implant Removal in Hyderabad?
+                    Why Approach Our Surgeons for Breast Implant Removal in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Best plastic surgeons in Hyderabad for Breast Implant Removal surgery
+                        Best plastic surgeons in <?= ucwords($city) ?> for Breast Implant Removal surgery
                     </li>
                     <li>
                         Expert in removing old implants and replacing them with new ones
@@ -3537,22 +3537,22 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Help women flaunt a confident appearance
                     </li>
                     <li>
-                        Extremely qualified and experienced plastic surgeons in Hyderabad
+                        Extremely qualified and experienced plastic surgeons in <?= ucwords($city) ?>
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of Breast Implant Removal depends mainly upon the expertise of the surgeon, the location of treatment, and the type of procedure. It may include the surgeon’s fee, facilities used during the treatment, post-operative garments, surgeon’s prescription, etc. While some insurance plans may cover Breast Implant Removal in Hyderabad if deemed medically necessary, the cost of getting new implants may not be covered.
+                    The cost of Breast Implant Removal depends mainly upon the expertise of the surgeon, the location of treatment, and the type of procedure. It may include the surgeon’s fee, facilities used during the treatment, post-operative garments, surgeon’s prescription, etc. While some insurance plans may cover Breast Implant Removal in <?= ucwords($city) ?> if deemed medically necessary, the cost of getting new implants may not be covered.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Similar to breast augmentation and breast reduction surgeries, we offer comprehensive facilities and services for Breast Implant Removal in Hyderabad. Our experienced surgeons are committed to providing top-notch treatment facilities, utilising the latest and advanced surgical equipment, and assisting you with the friendly nursing staff. You can expect a fulfilling Breast Implant Removal under the supervision of our qualified and proficient plastic surgeons.
+                    Similar to breast augmentation and breast reduction surgeries, we offer comprehensive facilities and services for Breast Implant Removal in <?= ucwords($city) ?>. Our experienced surgeons are committed to providing top-notch treatment facilities, utilising the latest and advanced surgical equipment, and assisting you with the friendly nursing staff. You can expect a fulfilling Breast Implant Removal under the supervision of our qualified and proficient plastic surgeons.
                 </p>
                 <!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
                 <p class="identity">
-                    FAQs on Breast Implant Removal Surgery in Hyderabad
+                    FAQs on Breast Implant Removal Surgery in <?= ucwords($city) ?>
                 </p>
 
                 <div class="accordion-container">
@@ -3566,7 +3566,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Conditions that make you a suitable candidate for Breast Implant Removal in Hyderabad include:
+                            Conditions that make you a suitable candidate for Breast Implant Removal in <?= ucwords($city) ?> include:
                         </p>
                         <ul>
                             <li>
@@ -3607,7 +3607,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Typically, the cost of Breast Implant Removal surgery in Hyderabad is around 100,000 INR, but it may vary depending on several factors. For detailed and accurate information about the cost, we recommend scheduling a consultation with any of our experienced cosmetic surgeons.
+                            Typically, the cost of Breast Implant Removal surgery in <?= ucwords($city) ?> is around 100,000 INR, but it may vary depending on several factors. For detailed and accurate information about the cost, we recommend scheduling a consultation with any of our experienced cosmetic surgeons.
                         </p>
                     </div>
                 </div>
@@ -3622,7 +3622,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Mostly the Breast Implant Removal surgery in Hyderabad will accompany rare or no complications at all. Here are some of the occasional risks that may occur:
+                            Mostly the Breast Implant Removal surgery in <?= ucwords($city) ?> will accompany rare or no complications at all. Here are some of the occasional risks that may occur:
                         </p>
                         <ul>
                             <li>
@@ -3656,7 +3656,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Excessive but invisible scarring
                             </li>
                             <li>
-                                Possible need for correction surgery in Hyderabad
+                                Possible need for correction surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Rare chance of Deep Vein Thrombosis (DVT)
@@ -3675,7 +3675,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Breast Implant Removal in Hyderabad is an option for those who are not satisfied with the results of their breast implant surgery. Generally, any healthy adult woman can undergo this procedure. It is however essential to consult with your surgeon about your reasons for implant removal, as he can provide better guidance.
+                            Breast Implant Removal in <?= ucwords($city) ?> is an option for those who are not satisfied with the results of their breast implant surgery. Generally, any healthy adult woman can undergo this procedure. It is however essential to consult with your surgeon about your reasons for implant removal, as he can provide better guidance.
                         </p>
                     </div>
                 </div>
@@ -3691,7 +3691,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Consult your surgeon about the expected outcomes of the implant removal surgery in Hyderabad for better preparation
+                                Consult your surgeon about the expected outcomes of the implant removal surgery in <?= ucwords($city) ?> for better preparation
                             </li>
                             <li>
                                 Undergo a thorough medical evaluation and complete body check-up to ensure perfect health before the surgery.
@@ -3738,7 +3738,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                It is important to approach the day of Breast Implant Removal surgery in Hyderabad with a calm and positive mindset.
+                                It is important to approach the day of Breast Implant Removal surgery in <?= ucwords($city) ?> with a calm and positive mindset.
                             </li>
                             <li>
                                 The type and quantity of anesthesia you receive will depend on your ability to tolerate it.
@@ -3759,7 +3759,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Full recovery from the surgery may take about 4-6 weeks.
                             </li>
                             <li>
-                                Managing your expectations and having realistic goals is crucial for a successful Breast Implant Removal procedure in Hyderabad.
+                                Managing your expectations and having realistic goals is crucial for a successful Breast Implant Removal procedure in <?= ucwords($city) ?>.
                             </li>
                         </ul>
                     </div>
@@ -3771,19 +3771,19 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            The Well-Known Surgeons in Hyderabad for Breast Implant Revision Surgery
+                            The Well-Known Surgeons in <?= ucwords($city) ?> for Breast Implant Revision Surgery
                         </strong>
                     </p>
                     <p>
-                        Breast implant revision aims at improving the appearance of female breasts by replacing old implants with new ones. This may tend the plastic surgeons in Hyderabad to increase or decrease the implant size, reduce breast size or lift it. Typically, women may consider breast revision surgery around 10 or more years after breast implant surgery. The purpose may be to improve the aesthetic appearance of the breasts, prevent sagging breasts due to dislocated implants, or address issues such as implant leakage or rupture.
+                        Breast implant revision aims at improving the appearance of female breasts by replacing old implants with new ones. This may tend the plastic surgeons in <?= ucwords($city) ?> to increase or decrease the implant size, reduce breast size or lift it. Typically, women may consider breast revision surgery around 10 or more years after breast implant surgery. The purpose may be to improve the aesthetic appearance of the breasts, prevent sagging breasts due to dislocated implants, or address issues such as implant leakage or rupture.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Are Our Surgeons the Best for Breast Implant Revision in Hyderabad?
+                    Why Are Our Surgeons the Best for Breast Implant Revision in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Experienced plastic surgeons in Hyderabad to perform breast implant revision surgery
+                        Experienced plastic surgeons in <?= ucwords($city) ?> to perform breast implant revision surgery
                     </li>
                     <li>
                         Expertise in changing the implants from silicone to saline or vice versa
@@ -3802,16 +3802,16 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of breast implant revision in Hyderabad will depend on various factors such as the type of breast implant replacement, the expertise of the surgeon, the hospital or clinic, and the geographical location. Depending on the complications resulting from your previous breast implants, your insurance may cover a portion of the surgery cost. If you undergo breast revision surgery within 10 years of the initial surgery, your insurance may also cover the cost of the procedure.
+                    The cost of breast implant revision in <?= ucwords($city) ?> will depend on various factors such as the type of breast implant replacement, the expertise of the surgeon, the hospital or clinic, and the geographical location. Depending on the complications resulting from your previous breast implants, your insurance may cover a portion of the surgery cost. If you undergo breast revision surgery within 10 years of the initial surgery, your insurance may also cover the cost of the procedure.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Our Surgeons are well equipped with advanced facilities when it comes to performing breast revision surgery in Hyderabad. You will feel relaxed and at ease during the procedure. Our experienced breast revision surgeons will perform the treatment without hassles and with successful results. Moreover, the assistance of their capable nursing staff, advanced surgery equipment, and the sophisticated operating room will be of great help in the success of your operation. Connect with any of our surgeons today and fix your appointment for the surgery.
+                    Our Surgeons are well equipped with advanced facilities when it comes to performing breast revision surgery in <?= ucwords($city) ?>. You will feel relaxed and at ease during the procedure. Our experienced breast revision surgeons will perform the treatment without hassles and with successful results. Moreover, the assistance of their capable nursing staff, advanced surgery equipment, and the sophisticated operating room will be of great help in the success of your operation. Connect with any of our surgeons today and fix your appointment for the surgery.
                 </p>
 
                 <!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
                 <p class="identity">
-                    FAQs on Breast Implant Removal Surgery in Hyderabad
+                    FAQs on Breast Implant Removal Surgery in <?= ucwords($city) ?>
                 </p>
 
                 <div class="accordion-container">
@@ -3825,7 +3825,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            An ideal candidate for Breast Revision surgery in Hyderabad should meet the following criteria:
+                            An ideal candidate for Breast Revision surgery in <?= ucwords($city) ?> should meet the following criteria:
                         </p>
                         <ul>
                             <li>
@@ -3860,7 +3860,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The average cost of Breast Revision Surgery in Hyderabad starts from around 1,00,000 INR. The expenses may rise further depending on the complications of the procedure. Factors such as the type and size of the breast implants chosen, the condition of the current implants, and the expertise of the cosmetic surgeon may affect the cost.
+                            The average cost of Breast Revision Surgery in <?= ucwords($city) ?> starts from around 1,00,000 INR. The expenses may rise further depending on the complications of the procedure. Factors such as the type and size of the breast implants chosen, the condition of the current implants, and the expertise of the cosmetic surgeon may affect the cost.
                         </p>
                     </div>
                 </div>
@@ -3875,7 +3875,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Undergoing Breast Revision in Hyderabad may lead to several risks on an occasional basis:
+                            Undergoing Breast Revision in <?= ucwords($city) ?> may lead to several risks on an occasional basis:
                         </p>
                         <ul>
                             <li>
@@ -3928,7 +3928,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Breast Revision surgery in Hyderabad may become inevitable for the following reasons:
+                            Breast Revision surgery in <?= ucwords($city) ?> may become inevitable for the following reasons:
                         </p>
                         <ul>
                             <li>
@@ -3960,7 +3960,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To prepare for Breast Revision Surgery in Hyderabad, taking the following steps would be advisable:
+                            To prepare for Breast Revision Surgery in <?= ucwords($city) ?>, taking the following steps would be advisable:
                         </p>
                         <ul>
                             <li>
@@ -4011,7 +4011,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 The anesthesiologist will adjust the anesthesia dose according to your previous experience with it.
                             </li>
                             <li>
-                                To perform the Breast Revision surgery in Hyderabad, the surgeon will make an incision.
+                                To perform the Breast Revision surgery in <?= ucwords($city) ?>, the surgeon will make an incision.
                             </li>
                             <li>
                                 The surgery may take at least 45 minutes to 2 hours to complete.
@@ -4023,7 +4023,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 However, the results may not always meet your expectations and may cause disappointment.
                             </li>
                             <li>
-                                Therefore, it is good to have realistic expectations for Breast Revision surgery in Hyderabad.
+                                Therefore, it is good to have realistic expectations for Breast Revision surgery in <?= ucwords($city) ?>.
                             </li>
                             <li>
                                 You can usually resume work after 1-2 weeks of the surgery, but the surgeon may advise against vigorous activities for about three weeks.
@@ -4041,19 +4041,19 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            Well-Known Surgeons in Hyderabad for Gynecomastia Surgery
+                            Well-Known Surgeons in <?= ucwords($city) ?> for Gynecomastia Surgery
                         </strong>
                     </p>
                     <p>
-                        Gynecomastia or reduction mammoplasty refers to the condition of enlarged or extensively developed breasts in men. It may result due to obesity, hormonal modifications, or because of hereditary reasons. If not treated timely, it may lead to lower self-esteem and discomfort. Our gynecomastia surgeons in Hyderabad hold adept expertise and experience to reduce the extended breasts in males, along with being chest contours back in shape.
+                        Gynecomastia or reduction mammoplasty refers to the condition of enlarged or extensively developed breasts in men. It may result due to obesity, hormonal modifications, or because of hereditary reasons. If not treated timely, it may lead to lower self-esteem and discomfort. Our gynecomastia surgeons in <?= ucwords($city) ?> hold adept expertise and experience to reduce the extended breasts in males, along with being chest contours back in shape.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Are Our Surgeons the Best for Gynecomastia Surgery in Hyderabad?
+                    Why Are Our Surgeons the Best for Gynecomastia Surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Highly qualified and experienced to perform gynecomastia surgery in Hyderabad
+                        Highly qualified and experienced to perform gynecomastia surgery in <?= ucwords($city) ?>
                     </li>
                     <li>
                         Can deal with unwanted localized fat and glandular tissue development around the breasts
@@ -4069,11 +4069,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of this surgery depends on the geographical location, the reputation of the clinic and the surgeon, the fees of the surgeon, and the method to deal with gynecomastia. Besides, the expenses will also subsume anesthesia, medical test, operating room facility, and imaging studies, if any. A candid discussion with any of our surgeons in Hyderabad can help you serve this purpose the better way.
+                    The cost of this surgery depends on the geographical location, the reputation of the clinic and the surgeon, the fees of the surgeon, and the method to deal with gynecomastia. Besides, the expenses will also subsume anesthesia, medical test, operating room facility, and imaging studies, if any. A candid discussion with any of our surgeons in <?= ucwords($city) ?> can help you serve this purpose the better way.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    You can rely on the expert medical assistance of our surgeons during your gynecomastia surgery in Hyderabad. Our highly qualified and consummate surgeons will make sure that you get results as expected. With helpful nursing staff, advanced surgery equipment, and upscale operation rooms, you can undergo surgery without hassles. Feel free to connect with any of our skilled and experienced plastic surgeons and clear all your doubts before going under the knife. For sure, you will leave the clinic in Hyderabad with more confidence and high self-esteem.
+                    You can rely on the expert medical assistance of our surgeons during your gynecomastia surgery in <?= ucwords($city) ?>. Our highly qualified and consummate surgeons will make sure that you get results as expected. With helpful nursing staff, advanced surgery equipment, and upscale operation rooms, you can undergo surgery without hassles. Feel free to connect with any of our skilled and experienced plastic surgeons and clear all your doubts before going under the knife. For sure, you will leave the clinic in <?= ucwords($city) ?> with more confidence and high self-esteem.
                 </p>
                 <p class="identity">
                     FAQs on Gynecomastia Surgery in <?= ucwords($city) ?>
@@ -4090,7 +4090,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Abiding by the below-mentioned points will help you be an ideal candidate for Gynecomastia surgery in Hyderabad:
+                            Abiding by the below-mentioned points will help you be an ideal candidate for Gynecomastia surgery in <?= ucwords($city) ?>:
                         </p>
                         <ul>
                             <li>
@@ -4128,7 +4128,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost of male breast surgery in Hyderabad is likely to fall within the range of 30,000 to 2,00,000 Indian rupees. The total expense of the procedure will also get influenced by the surgical technique employed by the surgeon.
+                            The cost of male breast surgery in <?= ucwords($city) ?> is likely to fall within the range of 30,000 to 2,00,000 Indian rupees. The total expense of the procedure will also get influenced by the surgical technique employed by the surgeon.
                         </p>
                     </div>
                 </div>
@@ -4181,7 +4181,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            A majority of surgeons in Hyderabad suggest that individuals with Gynecomastia should wait until they attain the age of 18 years old before considering surgery. By this age, the human body is likely to have developed to its maximum potential. Generally, older men are more inclined to undergo this procedure.
+                            A majority of surgeons in <?= ucwords($city) ?> suggest that individuals with Gynecomastia should wait until they attain the age of 18 years old before considering surgery. By this age, the human body is likely to have developed to its maximum potential. Generally, older men are more inclined to undergo this procedure.
                         </p>
                     </div>
                 </div>
@@ -4253,7 +4253,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 The expert will create small incisions in the treatment area to carry out the procedure.
                             </li>
                             <li>
-                                After the completion of the surgery in Hyderabad, you may experience mild soreness in the initial days.
+                                After the completion of the surgery in <?= ucwords($city) ?>, you may experience mild soreness in the initial days.
                             </li>
                             <li>
                                 It is essential to maintain realistic expectations concerning the outcomes of the surgery.
@@ -4280,7 +4280,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </strong>
                     </p>
                     <p>
-                        Liposuction can help you out. Yes! It is usual to develop unwanted fat on your belly, hips, thighs, arms, or face. Nevertheless, if despite exercising or regular dieting you are not able to lose it, Liposuction is a befitting solution. Consulting any of our ideal plastic surgeons in Hyderabad can assist in getting you rid of uninvited fat.
+                        Liposuction can help you out. Yes! It is usual to develop unwanted fat on your belly, hips, thighs, arms, or face. Nevertheless, if despite exercising or regular dieting you are not able to lose it, Liposuction is a befitting solution. Consulting any of our ideal plastic surgeons in <?= ucwords($city) ?> can assist in getting you rid of uninvited fat.
                     </p>
                 </div>
                 <p class="identity">
@@ -4288,7 +4288,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        Trustworthy plastic surgeons in Hyderabad, with expertise in performing Liposuction
+                        Trustworthy plastic surgeons in <?= ucwords($city) ?>, with expertise in performing Liposuction
                     </li>
                     <li>
                         Capable of performing the surgery on any part of your body
@@ -4297,13 +4297,13 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Leverage advanced fat reduction techniques leaving behind minimal scars
                     </li>
                     <li>
-                        Assist you regain your lost confidence with a successful Liposuction surgery in Hyderabad
+                        Assist you regain your lost confidence with a successful Liposuction surgery in <?= ucwords($city) ?>
                     </li>
                     <li>
                         Can perform several treatments like Ultrasound-Assisted Liposuction, Tumescent Liposuction, Power-Assisted Liposuction, and Suction-Assisted Liposuction with ease
                     </li>
                     <li>
-                        Renowned plastic surgeons in Hyderabad with years of experience in carrying out Liposuction surgery with positive results
+                        Renowned plastic surgeons in <?= ucwords($city) ?> with years of experience in carrying out Liposuction surgery with positive results
                     </li>
                     <li>
                         Members of several Plastic surgery associations in India and worldwide
@@ -4320,7 +4320,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     OUR SERVICES
                 </p>
                 <p>
-                    We help you get the best Liposuction surgery in Hyderabad under the supervision of our experienced plastic surgeons. With us, you can make the most of advanced surgery equipment, upscale Liposuction procedures, amicable hospital staff members, and the best cleanliness you could ever expect. Feel free to consult our bankable Liposuction surgeons in Hyderabad and put forth your first step toward regaining a fat-free body.
+                    We help you get the best Liposuction surgery in <?= ucwords($city) ?> under the supervision of our experienced plastic surgeons. With us, you can make the most of advanced surgery equipment, upscale Liposuction procedures, amicable hospital staff members, and the best cleanliness you could ever expect. Feel free to consult our bankable Liposuction surgeons in <?= ucwords($city) ?> and put forth your first step toward regaining a fat-free body.
                 </p>
                 <p class="identity">
                     FAQs on Liposuction Surgery in <?= ucwords($city) ?>:
@@ -4337,7 +4337,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be an ideal candidate for Liposuction in Hyderabad you should satisfy the following conditions:
+                            To be an ideal candidate for Liposuction in <?= ucwords($city) ?> you should satisfy the following conditions:
                         </p>
                         <ul>
                             <li>
@@ -4381,7 +4381,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The surgery for Liposuction in Hyderabad may go up to 1.5 lakhs depending on the surgeon you choose and various other factors. It would be best to consult any of our surgeons to know the actual cost of Liposuction surgery.
+                            The surgery for Liposuction in <?= ucwords($city) ?> may go up to 1.5 lakhs depending on the surgeon you choose and various other factors. It would be best to consult any of our surgeons to know the actual cost of Liposuction surgery.
                         </p>
                     </div>
                 </div>
@@ -4396,7 +4396,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Among the prominent risks and complications related to Liposuction surgery in Hyderabad include the following:
+                            Among the prominent risks and complications related to Liposuction surgery in <?= ucwords($city) ?> include the following:
                         </p>
                         <ul>
                             <li>
@@ -4443,7 +4443,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Skin elasticity of the human body is the best between the age of 30 and 35 years. Hence, if you are in this age bracket, it is the right time to go for Liposuction surgery in Hyderabad. Consultation with any of our surgeons will help you to know more about the right time to opt for Liposuction.
+                            Skin elasticity of the human body is the best between the age of 30 and 35 years. Hence, if you are in this age bracket, it is the right time to go for Liposuction surgery in <?= ucwords($city) ?>. Consultation with any of our surgeons will help you to know more about the right time to opt for Liposuction.
                         </p>
                     </div>
                 </div>
@@ -4462,7 +4462,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Try to attain your target weight or at least reach close to it before the surgery
                             </li>
                             <li>
-                                Focus on muscle-building months before undergoing the surgery in Hyderabad
+                                Focus on muscle-building months before undergoing the surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Make sure to eat a healthy and balanced diet
@@ -4497,7 +4497,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                When going for Liposuction surgery in Hyderabad, have a calm and composed mind
+                                When going for Liposuction surgery in <?= ucwords($city) ?>, have a calm and composed mind
                             </li>
                             <li>
                                 Cooperate with the staff in the clinic in their routine activities
@@ -4526,15 +4526,15 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            The Expert Tummy Tuck Surgeons in Hyderabad
+                            The Expert Tummy Tuck Surgeons in <?= ucwords($city) ?>
                         </strong>
                     </p>
                     <p>
-                        Are you fed up with excess fat on your belly and cannot wait to get rid of it? Tummy tuck surgery is the best solution for your problem. Also known as abdominoplasty, this surgery helps to get a more flat and firm abdomen. It also tightens and repairs the underlying tendons and muscles. Consulting our tummy tuck surgeons in Hyderabad will be beneficial to enable you to break free from your fat.
+                        Are you fed up with excess fat on your belly and cannot wait to get rid of it? Tummy tuck surgery is the best solution for your problem. Also known as abdominoplasty, this surgery helps to get a more flat and firm abdomen. It also tightens and repairs the underlying tendons and muscles. Consulting our tummy tuck surgeons in <?= ucwords($city) ?> will be beneficial to enable you to break free from your fat.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Approach Our Plastic Surgeons for Tummy Tuck Surgery in Hyderabad?
+                    Why Approach Our Plastic Surgeons for Tummy Tuck Surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
@@ -4557,12 +4557,12 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The charges of the abdominoplasty in Hyderabad will depend largely on the experience of the surgeon, the type of surgery done, and the location of the clinic. Additionally, factors like surgical facilities in the operating room, anesthesia, post-surgery garments, and medical tests also play an important role in fixing the cost of surgery. It is best to discuss the cost of tummy tuck surgery with our experienced plastic surgeon. Mostly, insurance companies do not cover this procedure, so make sure to clarify with your medical insurance provider if they will consider insurance for Tummy Tuck surgery.
+                    The charges of the abdominoplasty in <?= ucwords($city) ?> will depend largely on the experience of the surgeon, the type of surgery done, and the location of the clinic. Additionally, factors like surgical facilities in the operating room, anesthesia, post-surgery garments, and medical tests also play an important role in fixing the cost of surgery. It is best to discuss the cost of tummy tuck surgery with our experienced plastic surgeon. Mostly, insurance companies do not cover this procedure, so make sure to clarify with your medical insurance provider if they will consider insurance for Tummy Tuck surgery.
                 </p>
 
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Our surgeons provide industry best amenities in their clinics in Hyderabad. While you opt to undergo the tummy tuck surgery from our experienced surgeons, you can remain rest assured of a satiating treatment. Their nursing staff will be prompt to attend to your necessities. Further, they also offer the best operating room facilities and advanced medical equipment to ease the entire procedure. Feel free to connect with any of our surgeons to get detailed information about the tummy tuck surgery at our end.
+                    Our surgeons provide industry best amenities in their clinics in <?= ucwords($city) ?>. While you opt to undergo the tummy tuck surgery from our experienced surgeons, you can remain rest assured of a satiating treatment. Their nursing staff will be prompt to attend to your necessities. Further, they also offer the best operating room facilities and advanced medical equipment to ease the entire procedure. Feel free to connect with any of our surgeons to get detailed information about the tummy tuck surgery at our end.
                 </p>
 
                 <p class="identity">
@@ -4581,7 +4581,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                These conditions will necessitate your candidature for Tummy Tuck surgery n Hyderabad
+                                These conditions will necessitate your candidature for Tummy Tuck surgery n <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Good overall health, free of any chronic disease
@@ -4630,7 +4630,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The estimated cost of Tummy Tuck surgery in Hyderabad ranges between 1,00,000 INR and 2,00,000 INR. To know accurate figures, consultation with any of our plastic surgeons will be advisable.
+                            The estimated cost of Tummy Tuck surgery in <?= ucwords($city) ?> ranges between 1,00,000 INR and 2,00,000 INR. To know accurate figures, consultation with any of our plastic surgeons will be advisable.
                         </p>
                     </div>
                 </div>
@@ -4695,7 +4695,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            You could opt for a Tummy Tuck surgery in Hyderabad at almost any age beyond 18 years. Usually, women in their 30s or 40s opt for this procedure, as their body is likely to be healthy in this age bracket, and they can maintain the results for a long time by following the instructions of the surgeon.
+                            You could opt for a Tummy Tuck surgery in <?= ucwords($city) ?> at almost any age beyond 18 years. Usually, women in their 30s or 40s opt for this procedure, as their body is likely to be healthy in this age bracket, and they can maintain the results for a long time by following the instructions of the surgeon.
                         </p>
                     </div>
                 </div>
@@ -4711,7 +4711,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Your body weight should be stable for at least one year prior to undergoing the Tummy Tuck surgery in Hyderabad
+                                Your body weight should be stable for at least one year prior to undergoing the Tummy Tuck surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 It is better to lose weight if you are overweight so that the surgeon could consider you for the procedure
@@ -4729,7 +4729,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Although rare, be prepared for any kind of adverse outcome
                             </li>
                             <li>
-                                Have someone to drive you home after the Tummy Tuck surgery in Hyderabad
+                                Have someone to drive you home after the Tummy Tuck surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Arrange for some domestic help to assist you in daily chores
@@ -4761,7 +4761,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 The surgeon will make you feel relaxed and at ease to help you get ready for the surgery
                             </li>
                             <li>
-                                During the surgery in Hyderabad, you could expect the surgeon to create incisions on the selected portions to eliminate excess fat
+                                During the surgery in <?= ucwords($city) ?>, you could expect the surgeon to create incisions on the selected portions to eliminate excess fat
                             </li>
                             <li>
                                 The entire surgery may take 2-3 hours depending on the complications of the surgery
@@ -4776,7 +4776,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 You may experience swelling in the first week after the surgery, which you can hide by wearing a compression garment
                             </li>
                             <li>
-                                You should have realistic expectations with the surgery in Hyderabad
+                                You should have realistic expectations with the surgery in <?= ucwords($city) ?>
                             </li>
                         </ul>
                     </div>
@@ -4787,11 +4787,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            Get the Best Plastic Surgeons for Buttock Enhancement in Hyderabad
+                            Get the Best Plastic Surgeons for Buttock Enhancement in <?= ucwords($city) ?>
                         </strong>
                     </p>
                     <p>
-                        Extremely small, big, or sagging buttocks or those with dimples can thwart the appearance of your back. Those willing to get their buttocks back in shape may therefore opt for Buttock Enhancement surgery. It will work effectively in enhancing the shape, size, and contour of your back, thus enabling you to get rounder, fuller, and more appealing buttocks. Our plastic surgeons in Hyderabad can perform this procedure with high-end expertise to enable you to regain your toned body.
+                        Extremely small, big, or sagging buttocks or those with dimples can thwart the appearance of your back. Those willing to get their buttocks back in shape may therefore opt for Buttock Enhancement surgery. It will work effectively in enhancing the shape, size, and contour of your back, thus enabling you to get rounder, fuller, and more appealing buttocks. Our plastic surgeons in <?= ucwords($city) ?> can perform this procedure with high-end expertise to enable you to regain your toned body.
                     </p>
                 </div>
                 <p class="identity">
@@ -4799,7 +4799,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        Dexterous in performing all the types of buttock related procedures in Hyderabad such as buttock augmentation, implants, Brazilian butt lifts, and fat grafting
+                        Dexterous in performing all the types of buttock related procedures in <?= ucwords($city) ?> such as buttock augmentation, implants, Brazilian butt lifts, and fat grafting
                     </li>
                     <li>
                         Ensure symmetry of buttocks without making them look artificial
@@ -4815,11 +4815,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF <?= $surgery_str ?> IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of surgery for Buttock Enhancement relies on your current geographical location, the type of surgery you opt for, and the reputation of the surgeon you approach. Other factors to decide the cost may include room charges, the surgeon’s fees, medical tests, facilities provided in the clinic, and more. For deeper insight into the associated cost, you can always consult any of our renowned Buttock Enhancement surgeons in Hyderabad.
+                    The cost of surgery for Buttock Enhancement relies on your current geographical location, the type of surgery you opt for, and the reputation of the surgeon you approach. Other factors to decide the cost may include room charges, the surgeon’s fees, medical tests, facilities provided in the clinic, and more. For deeper insight into the associated cost, you can always consult any of our renowned Buttock Enhancement surgeons in <?= ucwords($city) ?>.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    A successful Buttock Enhancement surgery goes a long way in boosting one’s self-confidence. Hence, the need to choose the best plastic surgeon is of high importance. With our experienced surgeons in Hyderabad, you will be in safe hands. Moreover, you will avail the best of services in their clinic, along with technically sound and advanced surgery equipment, a well-equipped surgery room, and amicable nursing staff. Your satisfaction remains paramount to us.
+                    A successful Buttock Enhancement surgery goes a long way in boosting one’s self-confidence. Hence, the need to choose the best plastic surgeon is of high importance. With our experienced surgeons in <?= ucwords($city) ?>, you will be in safe hands. Moreover, you will avail the best of services in their clinic, along with technically sound and advanced surgery equipment, a well-equipped surgery room, and amicable nursing staff. Your satisfaction remains paramount to us.
                 </p>
                 <p class="identity">
                     FAQs on Buttock Enhancement Surgery in <?= ucwords($city) ?>
@@ -4836,7 +4836,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Mentioned below are important to consider if you wish to be a suitable candidate for Buttock Enhancement surgery in Hyderabad:
+                            Mentioned below are important to consider if you wish to be a suitable candidate for Buttock Enhancement surgery in <?= ucwords($city) ?>:
                         </p>
                         <ul>
                             <li>
@@ -4877,7 +4877,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            A Buttock Enhancement surgery would cost around 2,00,000 INR to 4,00,000 INR. It may appear a big amount but as compared to other parts of the world, the cost of the Brazillian Butt Lift in Hyderabad, India is still affordable.
+                            A Buttock Enhancement surgery would cost around 2,00,000 INR to 4,00,000 INR. It may appear a big amount but as compared to other parts of the world, the cost of the Brazillian Butt Lift in <?= ucwords($city) ?>, India is still affordable.
                         </p>
                     </div>
                 </div>
@@ -4892,7 +4892,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            In rare instances, there can be several side effects of the Buttock Enhancement surgery in Hyderabad, as below:
+                            In rare instances, there can be several side effects of the Buttock Enhancement surgery in <?= ucwords($city) ?>, as below:
                         </p>
                         <ul>
                             <li>
@@ -4945,7 +4945,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you are dissatisfied with the appearance of your flat or square buttocks, you may consider Buttock Enhancement surgery in Hyderabad. This option may also be suitable if you have lost a significant amount of weight or if you wish to achieve a more balanced body shape. According to experts, the ideal age for this surgery is 25, as it allows ample time for the brain to fully develop.
+                            If you are dissatisfied with the appearance of your flat or square buttocks, you may consider Buttock Enhancement surgery in <?= ucwords($city) ?>. This option may also be suitable if you have lost a significant amount of weight or if you wish to achieve a more balanced body shape. According to experts, the ideal age for this surgery is 25, as it allows ample time for the brain to fully develop.
                         </p>
                     </div>
                 </div>
@@ -4960,7 +4960,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            These points will help you to prepare well for the Buttock Enhancement Surgery in Hyderabad:
+                            These points will help you to prepare well for the Buttock Enhancement Surgery in <?= ucwords($city) ?>:
                         </p>
                         <ul>
                             <li>
@@ -4999,7 +4999,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                When coming for the surgery in Hyderabad, make sure to be calm and relaxed.
+                                When coming for the surgery in <?= ucwords($city) ?>, make sure to be calm and relaxed.
                             </li>
                             <li>
                                 The hospital or clinic staff will conduct necessary tests to evaluate your health and prepare you for the procedure.
@@ -5034,11 +5034,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            Reputed Plastic Surgeons for Body Lift in Hyderabad
+                            Reputed Plastic Surgeons for Body Lift in <?= ucwords($city) ?>
                         </strong>
                     </p>
                     <p>
-                        Do you want to break free from your loose sagging skin caused due to pregnancy, a weight loss program, or age factor? If yes, Body Lift is a suitable treatment to help your purpose. Also known as Belt Lipectomy, this method tightens the skin of the abdomens, groin, thighs, buttocks, and waist. The surgery involves eliminating unwanted fat and skin through incisions along with repositioning adjoining tissues. Our Body Lift surgeon in Hyderabad can help you gain an appealing body contour full of youth and charm.
+                        Do you want to break free from your loose sagging skin caused due to pregnancy, a weight loss program, or age factor? If yes, Body Lift is a suitable treatment to help your purpose. Also known as Belt Lipectomy, this method tightens the skin of the abdomens, groin, thighs, buttocks, and waist. The surgery involves eliminating unwanted fat and skin through incisions along with repositioning adjoining tissues. Our Body Lift surgeon in <?= ucwords($city) ?> can help you gain an appealing body contour full of youth and charm.
                     </p>
                 </div>
                 <p class="identity">
@@ -5049,7 +5049,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Skilled at performing complete Body Lift, mid Body Lift, and Lower Body Lift
                     </li>
                     <li>
-                        Use advanced and painless techniques to perform Body lift in Hyderabad
+                        Use advanced and painless techniques to perform Body lift in <?= ucwords($city) ?>
                     </li>
                     <li>
                         Board-certified surgeons with years of experience and specialized training
@@ -5062,11 +5062,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF BODY LIFT IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of Body Lift treatment depends largely on the complexity of the procedure, the skills of the surgeon, and the hospital where you opt for the surgery. Other factors that decide the cost may include facilities in the operating room, anesthesia, post-surgery garments, and so on. For details, you can contact any of our expert Body Lift surgeons in Hyderabad.
+                    The cost of Body Lift treatment depends largely on the complexity of the procedure, the skills of the surgeon, and the hospital where you opt for the surgery. Other factors that decide the cost may include facilities in the operating room, anesthesia, post-surgery garments, and so on. For details, you can contact any of our expert Body Lift surgeons in <?= ucwords($city) ?>.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    With a satisfying Body Lift treatment from our renowned plastic surgeons in Hyderabad, you can get back to your life with more confidence. During your stint with our experienced surgeons, you will get the best treatment and satisfying post-surgery care. In addition to performing successful Body Lift procedures, our surgeons will also provide you with advanced surgery facilities and a cordial nursing team.
+                    With a satisfying Body Lift treatment from our renowned plastic surgeons in <?= ucwords($city) ?>, you can get back to your life with more confidence. During your stint with our experienced surgeons, you will get the best treatment and satisfying post-surgery care. In addition to performing successful Body Lift procedures, our surgeons will also provide you with advanced surgery facilities and a cordial nursing team.
                 </p>
                 <p class="identity">
                     FAQs on Body Lift Surgery in <?= ucwords($city) ?>
@@ -5083,7 +5083,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be an ideal candidate for a Body Lift procedure in Hyderabad, you should meet the following requirements:
+                            To be an ideal candidate for a Body Lift procedure in <?= ucwords($city) ?>, you should meet the following requirements:
                         </p>
                         <ul>
                             <li>
@@ -5124,7 +5124,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost of a Body Lift procedure in Hyderabad may range between 200,000 INR and 300,000 INR. This charge may differ based on individual factors such as height, weight, degree of weight loss, requirement for liposuction, overall health status, and other relevant considerations.
+                            The cost of a Body Lift procedure in <?= ucwords($city) ?> may range between 200,000 INR and 300,000 INR. This charge may differ based on individual factors such as height, weight, degree of weight loss, requirement for liposuction, overall health status, and other relevant considerations.
                         </p>
                     </div>
                 </div>
@@ -5140,7 +5140,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Visible scarring after the surgery in Hyderabad
+                                Visible scarring after the surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 The possibility of bleeding, which can lead to hematoma
@@ -5186,7 +5186,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            You can experience the best results from a Body Lift surgery in Hyderabad only when you have gained the target weight and have succeeded to maintain it for at least 6 months after the surgery. Weight fluctuation can impact the surgery negatively. You should be at least 18 years of age to undergo Body Lift surgery.
+                            You can experience the best results from a Body Lift surgery in <?= ucwords($city) ?> only when you have gained the target weight and have succeeded to maintain it for at least 6 months after the surgery. Weight fluctuation can impact the surgery negatively. You should be at least 18 years of age to undergo Body Lift surgery.
                         </p>
                     </div>
                 </div>
@@ -5201,7 +5201,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To prepare for a Body Lift procedure in Hyderabad, you should take the following steps:
+                            To prepare for a Body Lift procedure in <?= ucwords($city) ?>, you should take the following steps:
                         </p>
                         <ul>
                             <li>
@@ -5243,7 +5243,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Be at the clinic in Hyderabad with a positive frame of mind
+                                Be at the clinic in <?= ucwords($city) ?> with a positive frame of mind
                             </li>
                             <li>
                                 Clear any confusion you have with your surgeon
@@ -5273,7 +5273,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 For complete and satisfying healing, you should follow the instructions of your surgeon
                             </li>
                             <li>
-                                You must have realistic expectations with the surgery in Hyderabad
+                                You must have realistic expectations with the surgery in <?= ucwords($city) ?>
                             </li>
                         </ul>
                     </div>
@@ -5284,11 +5284,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            Connect with Renowned Arm Lift Surgeons in Hyderabad
+                            Connect with Renowned Arm Lift Surgeons in <?= ucwords($city) ?>
                         </strong>
                     </p>
                     <p>
-                        You may appear fit, but is your skin elastic enough? Have you started noticing loose skin flaps or ‘bat wings’ hanging from the upper arms? An Arm Lift Surgery or Brachioplasty can improve that loose and sagging portion shaping up in your upper arms, giving way to better contours. Our experienced Arm Lift surgeons in Hyderabad can help you appreciably in serving your purpose. They can help you gain a toned arm and an appealing overall appearance.
+                        You may appear fit, but is your skin elastic enough? Have you started noticing loose skin flaps or ‘bat wings’ hanging from the upper arms? An Arm Lift Surgery or Brachioplasty can improve that loose and sagging portion shaping up in your upper arms, giving way to better contours. Our experienced Arm Lift surgeons in <?= ucwords($city) ?> can help you appreciably in serving your purpose. They can help you gain a toned arm and an appealing overall appearance.
                     </p>
                 </div>
                 <p class="identity">
@@ -5305,18 +5305,18 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Expert in doing surgeries with minimum scars
                     </li>
                     <li>
-                        Board-certified surgeons in Hyderabad with credible experience in Arm Lift Surgery
+                        Board-certified surgeons in <?= ucwords($city) ?> with credible experience in Arm Lift Surgery
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF ARM LIFT SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Various factors govern the cost of an Arm Lift in Hyderabad, such as the experience, expertise, and fees of the surgeon. Anesthesia, room facilities, medical tests, post-operative garments, and other aspects are equally important in this regard. Consulting any of our Arm Lift surgeons will help to know more about the cost of the surgery.
+                    Various factors govern the cost of an Arm Lift in <?= ucwords($city) ?>, such as the experience, expertise, and fees of the surgeon. Anesthesia, room facilities, medical tests, post-operative garments, and other aspects are equally important in this regard. Consulting any of our Arm Lift surgeons will help to know more about the cost of the surgery.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Getting Arm Lift treatment from our expert plastic surgeon in Hyderabad can help you restore the appearance of your arm appreciably. You can count on our expert surgeons for superior-quality treatment facilities. They provide the best technical equipment, operating rooms, and nursing staff to make you feel at ease during the surgery. Undergoing the surgery from any of our Arm Lift surgeons in Hyderabad will make you feel relaxed and comfortable.
+                    Getting Arm Lift treatment from our expert plastic surgeon in <?= ucwords($city) ?> can help you restore the appearance of your arm appreciably. You can count on our expert surgeons for superior-quality treatment facilities. They provide the best technical equipment, operating rooms, and nursing staff to make you feel at ease during the surgery. Undergoing the surgery from any of our Arm Lift surgeons in <?= ucwords($city) ?> will make you feel relaxed and comfortable.
                 </p>
 
                 <p class="identity">
@@ -5334,7 +5334,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be a suitable candidate for Arm Lift Surgery in Hyderabad, you should fulfill certain criteria:
+                            To be a suitable candidate for Arm Lift Surgery in <?= ucwords($city) ?>, you should fulfill certain criteria:
                         </p>
                         <ul>
                             <li>
@@ -5369,7 +5369,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost of Arm Lift Surgery in Hyderabad typically ranges from 1,00,000 INR to 1,50,000 INR. The expenses may vary depending on the specific facilities and services chosen by the patient. In addition to the cost of the surgery itself, there may be additional charges for consultation fees, medication costs, and other support required for recovery.
+                            The cost of Arm Lift Surgery in <?= ucwords($city) ?> typically ranges from 1,00,000 INR to 1,50,000 INR. The expenses may vary depending on the specific facilities and services chosen by the patient. In addition to the cost of the surgery itself, there may be additional charges for consultation fees, medication costs, and other support required for recovery.
                         </p>
                     </div>
                 </div>
@@ -5384,7 +5384,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Here are some of the potential risks associated with Arm Lift Surgery in Hyderabad:
+                            Here are some of the potential risks associated with Arm Lift Surgery in <?= ucwords($city) ?>:
                         </p>
                         <ul>
                             <li>
@@ -5434,7 +5434,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Arm lift surgery in Hyderabad may be a suitable option for individuals experiencing age-related changes in their arms. Loose skin resulting from significant weight loss could also be one of the reasons to opt for this surgery. Our surgeons would recommend this procedure for adults during the winter season.
+                            Arm lift surgery in <?= ucwords($city) ?> may be a suitable option for individuals experiencing age-related changes in their arms. Loose skin resulting from significant weight loss could also be one of the reasons to opt for this surgery. Our surgeons would recommend this procedure for adults during the winter season.
                         </p>
                     </div>
                 </div>
@@ -5449,7 +5449,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Prior to undergoing Arm Lift Surgery in Hyderabad, you should take certain important preparatory measures:
+                            Prior to undergoing Arm Lift Surgery in <?= ucwords($city) ?>, you should take certain important preparatory measures:
                         </p>
                         <ul>
                             <li>
@@ -5488,7 +5488,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                On the day of your Arm Lift Surgery in Hyderabad, visit the clinic with a well-prepared and composed mind
+                                On the day of your Arm Lift Surgery in <?= ucwords($city) ?>, visit the clinic with a well-prepared and composed mind
                             </li>
                             <li>
                                 You can expect to undergo necessary formalities and cooperate with the staff at the clinic
@@ -5515,7 +5515,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 If your job requires physical exertion, the surgeon may recommend taking around two weeks off to rest
                             </li>
                             <li>
-                                It is important to have realistic expectations about the outcome of the surgery in Hyderabad
+                                It is important to have realistic expectations about the outcome of the surgery in <?= ucwords($city) ?>
                             </li>
                         </ul>
                     </div>
@@ -5525,7 +5525,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Due to your weight loss regime, you might have developed sagging skin on the inner thighs. Opting for a Thigh Lift surgery in Hyderabad or Thighplasty could help you get away with such excess skin to get tighter thighs. The treatment however needs extreme precision, as it requires the surgeon to create a long incision to remove the excess skin that can go up to the full length of the thigh. With the expertise of our Thigh Lift surgeons, you can remain rest assured of a safe, painless, and successful Thigh Lift surgery in Hyderabad.
+                        Due to your weight loss regime, you might have developed sagging skin on the inner thighs. Opting for a Thigh Lift surgery in <?= ucwords($city) ?> or Thighplasty could help you get away with such excess skin to get tighter thighs. The treatment however needs extreme precision, as it requires the surgeon to create a long incision to remove the excess skin that can go up to the full length of the thigh. With the expertise of our Thigh Lift surgeons, you can remain rest assured of a safe, painless, and successful Thigh Lift surgery in <?= ucwords($city) ?>.
                     </p>
                 </div>
                 <p class="identity">
@@ -5533,7 +5533,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        Board-certified surgeons in Hyderabad with adept training at performing Thigh Lift
+                        Board-certified surgeons in <?= ucwords($city) ?> with adept training at performing Thigh Lift
                     </li>
                     <li>
                         Work with precision to remove lose fat or skin, resulting in reshaped and smooth inner/outer thighs
@@ -5542,14 +5542,14 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Help patients to attain their ideal body goals with improved and tighter thighs.
                     </li>
                     <li>
-                        Enable the patients to restore confidence in their body with a successful Thigh Lift surgery in Hyderabad
+                        Enable the patients to restore confidence in their body with a successful Thigh Lift surgery in <?= ucwords($city) ?>
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF THIGH LIFT IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Usually, the cost of a Thigh Lift will vary depending on the surgeon and the clinic you choose, your geographic location, and the type of Thigh Lift surgery you undergo. In addition, the cost may also differ on various other factors like prescribed medication, lab tests, medical facilities, anesthesia, surgeon’s fees, specialized garments provided during surgery, and more. Our expert Thigh Lift surgeon in Hyderabad will be the best person to furnish relevant details about the involved cost.
+                    Usually, the cost of a Thigh Lift will vary depending on the surgeon and the clinic you choose, your geographic location, and the type of Thigh Lift surgery you undergo. In addition, the cost may also differ on various other factors like prescribed medication, lab tests, medical facilities, anesthesia, surgeon’s fees, specialized garments provided during surgery, and more. Our expert Thigh Lift surgeon in <?= ucwords($city) ?> will be the best person to furnish relevant details about the involved cost.
                 </p>
 
                 <p class="identity">OUR SERVICES</p>
@@ -5572,7 +5572,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To get a Thigh Lift surgery in Hyderabad you must fulfill the following criteria:
+                            To get a Thigh Lift surgery in <?= ucwords($city) ?> you must fulfill the following criteria:
                         </p>
                         <ul>
                             <li>
@@ -5613,7 +5613,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The expense associated with a Thigh Lift procedure in Hyderabad may range from 70,000 INR to 1,50,000 INR. Multiple factors may influence the overall expenses, such as the cost of the surgical facility, the complication involved in the surgery, the proficiency of the surgeon, the cost of anesthesia and medication, and more.
+                            The expense associated with a Thigh Lift procedure in <?= ucwords($city) ?> may range from 70,000 INR to 1,50,000 INR. Multiple factors may influence the overall expenses, such as the cost of the surgical facility, the complication involved in the surgery, the proficiency of the surgeon, the cost of anesthesia and medication, and more.
                         </p>
                     </div>
                 </div>
@@ -5628,7 +5628,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Various potential risks can emerge during a Thigh Lifts surgery in Hyderabad:
+                            Various potential risks can emerge during a Thigh Lifts surgery in <?= ucwords($city) ?>:
                         </p>
                         <ul>
                             <li>
@@ -5672,7 +5672,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you aspire to get well-contoured proportioned thigh contours followed by smooth skin, a Thigh Lift in Hyderabad would be an ideal choice. You would need to be at least 18 years of age to undergo this surgery and your body should be free of any severe medical condition.
+                            If you aspire to get well-contoured proportioned thigh contours followed by smooth skin, a Thigh Lift in <?= ucwords($city) ?> would be an ideal choice. You would need to be at least 18 years of age to undergo this surgery and your body should be free of any severe medical condition.
                         </p>
                     </div>
                 </div>
@@ -5687,7 +5687,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To prepare for the Thigh Lift surgery in Hyderabad, you should abide by the following pointers:
+                            To prepare for the Thigh Lift surgery in <?= ucwords($city) ?>, you should abide by the following pointers:
                         </p>
                         <ul>
                             <li>
@@ -5706,7 +5706,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Stay hydrated by drinking water or fluids free of any additive
                             </li>
                             <li>
-                                Refrain from eating or drinking anything for around 8 hours before the procedure Quit smoking or alcohol consumption to reduce the risk of complications during or after the surgery in Hyderabad
+                                Refrain from eating or drinking anything for around 8 hours before the procedure Quit smoking or alcohol consumption to reduce the risk of complications during or after the surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Arrange for someone to accompany you to the hospital and drive you home
@@ -5729,7 +5729,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Visit the clinic in Hyderabad with a positive frame of mind
+                                Visit the clinic in <?= ucwords($city) ?> with a positive frame of mind
                             </li>
                             <li>
                                 Discuss your apprehensions with the surgeon before the surgery
@@ -5753,7 +5753,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Expect around 4-6 weeks for your wounds to heal completely
                             </li>
                             <li>
-                                The surgeon could recommend not doing routine and strenuous activities for at least 2 weeks after the surgery in Hyderabad
+                                The surgeon could recommend not doing routine and strenuous activities for at least 2 weeks after the surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Make sure to have realistic expectations with the Thigh Lift surgery so that you do not get disappointed in case of adverse results
@@ -5766,7 +5766,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        After a strict weight loss regime, you may succeed to shed those extra pounds, but it could lead to droopy or saggy skin as a side effect. With Body Contouring, you can get away with this excess skin and regain the tone of your body tissues. The procedure enables you to regain your lost elasticity with smoother contours. Our plastic surgeons in Hyderabad can help you with this surgery by eliminating unwanted skin and fat cells from your body.
+                        After a strict weight loss regime, you may succeed to shed those extra pounds, but it could lead to droopy or saggy skin as a side effect. With Body Contouring, you can get away with this excess skin and regain the tone of your body tissues. The procedure enables you to regain your lost elasticity with smoother contours. Our plastic surgeons in <?= ucwords($city) ?> can help you with this surgery by eliminating unwanted skin and fat cells from your body.
                     </p>
                 </div>
                 <p class="identity">
@@ -5774,7 +5774,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        Board-certified surgeons in Hyderabad with specialized training in plastic surgery
+                        Board-certified surgeons in <?= ucwords($city) ?> with specialized training in plastic surgery
                     </li>
                     <li>
                         Experience in performing Body Contouring with success
@@ -5790,17 +5790,17 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF BODY CONTOURING IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of Body Contouring will rely largely on the type of surgery you choose. Depending on the part of your body, you can opt for an Arm Lift, Facelift, or other procedures. Considering the surgeon’s fee, medical tests, anesthesia, surgery equipment, and operating room are also substantial in fixing the cost of Body Contouring in Hyderabad. Our experienced plastic surgeons can provide a better insight into the cost of Body Contouring in Hyderabad.
+                    The cost of Body Contouring will rely largely on the type of surgery you choose. Depending on the part of your body, you can opt for an Arm Lift, Facelift, or other procedures. Considering the surgeon’s fee, medical tests, anesthesia, surgery equipment, and operating room are also substantial in fixing the cost of Body Contouring in <?= ucwords($city) ?>. Our experienced plastic surgeons can provide a better insight into the cost of Body Contouring in <?= ucwords($city) ?>.
                 </p>
 
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    You can come to us for a satiating Body Contouring surgery in Hyderabad. Our accomplished plastic surgeons will make sure to perform the surgery with due comfort, satisfaction, and ease. Additionally, they extend world-class facilities, surgery rooms, technical equipment, and caring staff to ensure the patients get a satisfying experience overall. Fix an appointment with our Body Contouring surgeon and clarify all your concerns before undergoing the surgery at our clinic in Hyderabad.
+                    You can come to us for a satiating Body Contouring surgery in <?= ucwords($city) ?>. Our accomplished plastic surgeons will make sure to perform the surgery with due comfort, satisfaction, and ease. Additionally, they extend world-class facilities, surgery rooms, technical equipment, and caring staff to ensure the patients get a satisfying experience overall. Fix an appointment with our Body Contouring surgeon and clarify all your concerns before undergoing the surgery at our clinic in <?= ucwords($city) ?>.
                 </p>
 
                 <!-- FAQS -->
                 <p class="identity">
-                    FAQs on Body Contouring Surgery in Hyderabad
+                    FAQs on Body Contouring Surgery in <?= ucwords($city) ?>
                 </p>
                 <div class="accordion-container">
                     <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
@@ -5813,7 +5813,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be a suitable candidate for Body Contouring in Hyderabad, the following points are important to consider:
+                            To be a suitable candidate for Body Contouring in <?= ucwords($city) ?>, the following points are important to consider:
                         </p>
                         <ul>
                             <li>
@@ -5854,7 +5854,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost of a Body Contouring procedure in Hyderabad may range from 1,00,000 INR to 3,00,000 INR. It will largely rely on the specific areas that require treatment. It is advisable to consult with your surgeon to get a more accurate estimate of the total cost involved.
+                            The cost of a Body Contouring procedure in <?= ucwords($city) ?> may range from 1,00,000 INR to 3,00,000 INR. It will largely rely on the specific areas that require treatment. It is advisable to consult with your surgeon to get a more accurate estimate of the total cost involved.
                         </p>
                     </div>
                 </div>
@@ -5869,7 +5869,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Body Contouring in Hyderabad may require the surgeon to remove a significant amount of excess skin, depending on the weight lost after Bariatric Surgery. Following are some of the potential risks associated with this surgery:
+                            Body Contouring in <?= ucwords($city) ?> may require the surgeon to remove a significant amount of excess skin, depending on the weight lost after Bariatric Surgery. Following are some of the potential risks associated with this surgery:
                         </p>
                         <ul>
                             <li>
@@ -5913,7 +5913,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            People in Hyderabad opt for Body Sculpting or Body Sculpting to get a thinner and more appealing body. Surgeons recommend going for it when regular exercise and balanced diets fail to show any effect in the body thinning regime. It is a widely demanded procedure for people who have suffered a massive loss of weight. Patients between the age of 30-60 years mostly prefer to undergo Body Contouring. At any age, good health remains the foremost condition.
+                            People in <?= ucwords($city) ?> opt for Body Sculpting or Body Sculpting to get a thinner and more appealing body. Surgeons recommend going for it when regular exercise and balanced diets fail to show any effect in the body thinning regime. It is a widely demanded procedure for people who have suffered a massive loss of weight. Patients between the age of 30-60 years mostly prefer to undergo Body Contouring. At any age, good health remains the foremost condition.
                         </p>
                     </div>
                 </div>
@@ -5950,7 +5950,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Expect scarring after the surgery and consult your surgeon about ways to minimize them
                             </li>
                             <li>
-                                Abstain from eating or drinking anything 8 hours prior to the surgery in Hyderabad
+                                Abstain from eating or drinking anything 8 hours prior to the surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Keep yourself hydrated before and after the surgery to eliminate toxins from the body
@@ -5973,7 +5973,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Before arriving at the hospital or clinic in Hyderabad, make sure you are mentally prepared for the procedure.
+                                Before arriving at the hospital or clinic in <?= ucwords($city) ?>, make sure you are mentally prepared for the procedure.
                             </li>
                             <li>
                                 The anesthesiologist will inquire about your response to anesthesia and adjust the dosage if you are allergic.
@@ -5994,7 +5994,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Assuming no complications arise, you may be able to return to work in 4-6 weeks after the procedure,
                             </li>
                             <li>
-                                It is essential to have realistic expectations with the surgery in Hyderabad.
+                                It is essential to have realistic expectations with the surgery in <?= ucwords($city) ?>.
                             </li>
                         </ul>
                     </div>
@@ -6005,7 +6005,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        If you believe pregnancy is the end of your beauty, it’s not! All thanks to the cosmetic procedure of a Mommy Makeover, you can get a restored body after your delivery. The treatment is also a welcome move to diminish your ageing signs reflecting on your breasts, face, and other body parts. With our Mommy Makeover surgeon in Hyderabad, you can get a rejuvenated and slim body shape with minimal or no side effects at all.
+                        If you believe pregnancy is the end of your beauty, it’s not! All thanks to the cosmetic procedure of a Mommy Makeover, you can get a restored body after your delivery. The treatment is also a welcome move to diminish your ageing signs reflecting on your breasts, face, and other body parts. With our Mommy Makeover surgeon in <?= ucwords($city) ?>, you can get a rejuvenated and slim body shape with minimal or no side effects at all.
                     </p>
                 </div>
                 <p class="identity">
@@ -6016,7 +6016,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         Expert in restoring the pre-baby shape of women through custom-made treatments
                     </li>
                     <li>
-                        Duly trained to perform Mommy Makeover procedures in Hyderabad
+                        Duly trained to perform Mommy Makeover procedures in <?= ucwords($city) ?>
                     </li>
                     <li>
                         Can help you to get away with excess skin, drooping breasts, and separated muscles of the abdomen
@@ -6029,15 +6029,15 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF MOMMY MAKEOVER IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Childbearing completely changes the body of a woman. But, with Mommy Makeover at our clinic at an affordable cost, you can regain the lost glamour of your body. The charges will depend very much on the reputation and experience of the surgeon and the clinic, along with the type of treatment, medical tests, anesthesia, surgery garments, etc. You can contact our cosmetic surgeons in Hyderabad to know about the involved cost of a Mommy Makeover.
+                    Childbearing completely changes the body of a woman. But, with Mommy Makeover at our clinic at an affordable cost, you can regain the lost glamour of your body. The charges will depend very much on the reputation and experience of the surgeon and the clinic, along with the type of treatment, medical tests, anesthesia, surgery garments, etc. You can contact our cosmetic surgeons in <?= ucwords($city) ?> to know about the involved cost of a Mommy Makeover.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Our Mommy Makeover experts will help to bring your body back to shape so that you could feel more like yourself after pregnancy. They provide the best of services during your stay in their respective clinics for the surgery. Our surgeons in Hyderabad perform the procedure in the industry best operating rooms laced with advanced treatment equipment with the assistance of their trained nursing staff. To know more about the procedure and to discuss your goals, feel free to consult any of our experienced Mommy Makeover specialists in Hyderabad.
+                    Our Mommy Makeover experts will help to bring your body back to shape so that you could feel more like yourself after pregnancy. They provide the best of services during your stay in their respective clinics for the surgery. Our surgeons in <?= ucwords($city) ?> perform the procedure in the industry best operating rooms laced with advanced treatment equipment with the assistance of their trained nursing staff. To know more about the procedure and to discuss your goals, feel free to consult any of our experienced Mommy Makeover specialists in <?= ucwords($city) ?>.
                 </p>
                 <!-- FAQS -->
                 <p class="identity">
-                    FAQs on Mommy Makeover Surgery in Hyderabad
+                    FAQs on Mommy Makeover Surgery in <?= ucwords($city) ?>
                 </p>
                 <div class="accordion-container">
                     <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
@@ -6050,7 +6050,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be an ideal candidate for a Mommy Makeover in Hyderabad, you should satisfy the following conditions:
+                            To be an ideal candidate for a Mommy Makeover in <?= ucwords($city) ?>, you should satisfy the following conditions:
                         </p>
                         <ul>
                             <li>
@@ -6094,7 +6094,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The estimated expense of a Mommy Makeover procedure in Hyderabad is approximately 300,000 INR. However, the cost may vary depending on the specific surgeries you choose to include or exclude from your personalized Mommy Makeover package.
+                            The estimated expense of a Mommy Makeover procedure in <?= ucwords($city) ?> is approximately 300,000 INR. However, the cost may vary depending on the specific surgeries you choose to include or exclude from your personalized Mommy Makeover package.
                         </p>
                     </div>
                 </div>
@@ -6153,7 +6153,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            A Mommy Makeover in Hyderabad would be a suitable decision if you have completed the childbearing phase and have no plans for pregnancy. This cosmetic procedure aims to restore the body to its pre-pregnancy state. Surgeons usually recommend this treatment to patients between 30-50 years of age.
+                            A Mommy Makeover in <?= ucwords($city) ?> would be a suitable decision if you have completed the childbearing phase and have no plans for pregnancy. This cosmetic procedure aims to restore the body to its pre-pregnancy state. Surgeons usually recommend this treatment to patients between 30-50 years of age.
                         </p>
                     </div>
                 </div>
@@ -6169,7 +6169,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                To prepare for your surgery in Hyderabad, aim to reach your ideal weight.
+                                To prepare for your surgery in <?= ucwords($city) ?>, aim to reach your ideal weight.
                             </li>
                             <li>
                                 Have someone to help in your daily activities after the surgery
@@ -6216,7 +6216,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Be at the clinic with a prepared mind, free of any confusion regarding Mommy Makeover surgery in Hyderabad
+                                Be at the clinic with a prepared mind, free of any confusion regarding Mommy Makeover surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 The medical staff will perform routine check-ups on your body
@@ -6249,11 +6249,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            Trustworthy Hair Transplant Surgeons in Hyderabad
+                            Trustworthy Hair Transplant Surgeons in <?= ucwords($city) ?>
                         </strong>
                     </p>
                     <p>
-                        A Hair Transplant is a highly effective solution to address hair loss, alopecia, thinning hair, and baldness through two common procedures - FUE and FUT. The FUT technique involves removing a strip of hair-bearing skin from the donor area and transplanting the hair follicles to the recipient site. Likewise, FUE involves extracting individual hair follicles directly from the donor area and transplanting them to the area of hair loss. If you are going bald at a rapid pace and want to restore your hair, undergoing a Hair Transplant surgery from any of our skilled Hair Transplant surgeons in Hyderabad would be a fruitful solution.
+                        A Hair Transplant is a highly effective solution to address hair loss, alopecia, thinning hair, and baldness through two common procedures - FUE and FUT. The FUT technique involves removing a strip of hair-bearing skin from the donor area and transplanting the hair follicles to the recipient site. Likewise, FUE involves extracting individual hair follicles directly from the donor area and transplanting them to the area of hair loss. If you are going bald at a rapid pace and want to restore your hair, undergoing a Hair Transplant surgery from any of our skilled Hair Transplant surgeons in <?= ucwords($city) ?> would be a fruitful solution.
                     </p>
                 </div>
                 <p class="identity">
@@ -6280,11 +6280,11 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF HAIR TRANSPLANT TREATMENT IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The cost of Hair Transplant Surgery in Hyderabad depends significantly on the requirement, grade of hair graft, the size of the head affected with hair loss or baldness, etc. Contacting any of our experienced Hair Transplant surgeons in Hyderabad will help you know about the ingrained costs the best way.
+                    The cost of Hair Transplant Surgery in <?= ucwords($city) ?> depends significantly on the requirement, grade of hair graft, the size of the head affected with hair loss or baldness, etc. Contacting any of our experienced Hair Transplant surgeons in <?= ucwords($city) ?> will help you know about the ingrained costs the best way.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    All our surgeons provide excellent amenities to Hair Transplant aspirants. With our expert surgeons performing the treatment with the help of their trained and cordial nursing staff, you just cannot ask for more. They prefer using the industry best equipment to perform the surgery in the advanced and highly equipped surgery rooms. You can leave the clinics of our experienced Hair Transplant experts in Hyderabad with due satisfaction. Fix an appointment with any of our expert surgeons today to find out more about your hair restoration prospects.
+                    All our surgeons provide excellent amenities to Hair Transplant aspirants. With our expert surgeons performing the treatment with the help of their trained and cordial nursing staff, you just cannot ask for more. They prefer using the industry best equipment to perform the surgery in the advanced and highly equipped surgery rooms. You can leave the clinics of our experienced Hair Transplant experts in <?= ucwords($city) ?> with due satisfaction. Fix an appointment with any of our expert surgeons today to find out more about your hair restoration prospects.
                 </p>
                 <p class="identity">
                     FAQs on Hair Transplant Surgery in <?= ucwords($city) ?>
@@ -6301,7 +6301,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Satisfying these important pointers will make you a suitable candidate for Hair Transplant surgery in Hyderabad:
+                            Satisfying these important pointers will make you a suitable candidate for Hair Transplant surgery in <?= ucwords($city) ?>:
                         </p>
                         <ul>
                             <li>
@@ -6339,7 +6339,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost depends mainly on the number of grafts transplanted. Mostly you will need to pay around 40 INR – 100 INR per graft. In case of a larger number of grafts, such as 2000 grafts, the cost will be between 55,000 INR – 80,000 INR. Likewise, for transplanting 5000 grafts, the cost will be in the range of 1,00,000 INR to 1,40,000 INR or maybe more. Various factors like level of baldness, transplant sessions, FUT or FUE technique used, and more, also affect the cost of Hair Transplant in Hyderabad.
+                            The cost depends mainly on the number of grafts transplanted. Mostly you will need to pay around 40 INR – 100 INR per graft. In case of a larger number of grafts, such as 2000 grafts, the cost will be between 55,000 INR – 80,000 INR. Likewise, for transplanting 5000 grafts, the cost will be in the range of 1,00,000 INR to 1,40,000 INR or maybe more. Various factors like level of baldness, transplant sessions, FUT or FUE technique used, and more, also affect the cost of Hair Transplant in <?= ucwords($city) ?>.
                         </p>
                     </div>
                 </div>
@@ -6398,7 +6398,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Usually, surgeons recommend the age of 21 years or beyond for Hair Transplant surgery. In case you have surpassed this stage and started noticing hair fall, this is high time to go for Hair Transplant before you go completely bald. Due to the early restoration phase, our surgeons in Hyderabad may leverage your existing hair for the transplant.
+                            Usually, surgeons recommend the age of 21 years or beyond for Hair Transplant surgery. In case you have surpassed this stage and started noticing hair fall, this is high time to go for Hair Transplant before you go completely bald. Due to the early restoration phase, our surgeons in <?= ucwords($city) ?> may leverage your existing hair for the transplant.
                         </p>
                     </div>
                 </div>
@@ -6426,7 +6426,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Stop taking any existing medication unless allowed by the surgeon
                             </li>
                             <li>
-                                Do not eat a spicy meal at night before the surgery in Hyderabad
+                                Do not eat a spicy meal at night before the surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 A gap of around 8 hours between your last meal and the surgery would be ideal
@@ -6451,7 +6451,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            On the day of the treatment, arrive at your Hyderabad clinic with a calm and composed mind
+                            On the day of the treatment, arrive at your <?= ucwords($city) ?> clinic with a calm and composed mind
                         </p>
                         <ul>
                             <li>
@@ -6470,7 +6470,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 If the surgery involves transplanting large volumes of hair, one session might not be enough
                             </li>
                             <li>
-                                In any such case, you will have to revisit the clinic for the completion of the remaining surgery in Hyderabad
+                                In any such case, you will have to revisit the clinic for the completion of the remaining surgery in <?= ucwords($city) ?>
                             </li>
                             <li>
                                 Your wounds will recover in a week or two. During recovery, you may expect a swollen, red, and scabby scalp. These signs will however vanish in around 10-14 days
@@ -6483,7 +6483,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Just like women, men also aspire to flaunt an appealing personality and this is no hidden fact. Our plastic surgeons hence pay due attention to the requirements of men as well. You can count on the professional excellence of our experienced surgeons to undergo your preferred treatment. Whether you are looking for a flat and slim belly or a perfect nose, reduced breasts, or wrinkle-free eyelids, our expert experts in Hyderabad will help you to fulfill all these desires with appropriate surgeries.
+                        Just like women, men also aspire to flaunt an appealing personality and this is no hidden fact. Our plastic surgeons hence pay due attention to the requirements of men as well. You can count on the professional excellence of our experienced surgeons to undergo your preferred treatment. Whether you are looking for a flat and slim belly or a perfect nose, reduced breasts, or wrinkle-free eyelids, our expert experts in <?= ucwords($city) ?> will help you to fulfill all these desires with appropriate surgeries.
                     </p>
                 </div>
                 <p class="identity">
@@ -6491,7 +6491,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 </p>
                 <ul>
                     <li>
-                        Board-certified surgeons in Hyderabad, duly trained to perform specialized plastic surgeries.
+                        Board-certified surgeons in <?= ucwords($city) ?>, duly trained to perform specialized plastic surgeries.
                     </li>
                     <li>
                         Experienced plastic surgeons perform varied plastic surgeries for males
@@ -6507,12 +6507,12 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     COST OF MEN’S PLASTIC SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The estimated cost of plastic surgery for males differs as per the type of surgery opted for. Our plastic surgeons in Hyderabad are proficient at correcting distinctive anomalies in males through various surgeries like Liposuction, Male Breast Reduction, Facelift, Hair Transplant, Botox, Blepharoplasty, and more. The rates for all of them vary significantly. You can consult our dexterous plastic surgeons directly to discuss your concerns and the surgery that you believe could help your cause. They will suggest the right treatment with the involved cost accordingly.
+                    The estimated cost of plastic surgery for males differs as per the type of surgery opted for. Our plastic surgeons in <?= ucwords($city) ?> are proficient at correcting distinctive anomalies in males through various surgeries like Liposuction, Male Breast Reduction, Facelift, Hair Transplant, Botox, Blepharoplasty, and more. The rates for all of them vary significantly. You can consult our dexterous plastic surgeons directly to discuss your concerns and the surgery that you believe could help your cause. They will suggest the right treatment with the involved cost accordingly.
                 </p>
 
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    We are ever ready to assist our patients with all types of plastic surgery procedures. From non-invasive to minimally invasive to full body procedures, our dexterous plastic surgeon in Hyderabad can perform all these surgery types with thriving results. Our excellent surgery facilities, well supported by a trained nursing staff help the surgeon to perform the required procedure with due satisfaction.
+                    We are ever ready to assist our patients with all types of plastic surgery procedures. From non-invasive to minimally invasive to full body procedures, our dexterous plastic surgeon in <?= ucwords($city) ?> can perform all these surgery types with thriving results. Our excellent surgery facilities, well supported by a trained nursing staff help the surgeon to perform the required procedure with due satisfaction.
                 </p>
 
                 <p class="identity">
@@ -6530,7 +6530,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            To be a suitable candidate for plastic surgery aimed at enhancing your physical appearance as a male in Hyderabad, you should satisfy the following conditions:
+                            To be a suitable candidate for plastic surgery aimed at enhancing your physical appearance as a male in <?= ucwords($city) ?>, you should satisfy the following conditions:
                         </p>
                         <ul>
                             <li>
@@ -6574,7 +6574,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost of men's plastic surgery in Hyderabad can differ depending on the specific procedure you opt for. For instance, dermal fillers, acne treatment, and laser skin treatment are available at rates starting from 1000 INR and increase significantly depending on the number of treatments you undergo. More extensive body contouring and reshaping surgeries may cost over 3,00,000 INR. To determine the exact cost of a procedure, it is advisable to consult any of our experienced surgeons.
+                            The cost of men's plastic surgery in <?= ucwords($city) ?> can differ depending on the specific procedure you opt for. For instance, dermal fillers, acne treatment, and laser skin treatment are available at rates starting from 1000 INR and increase significantly depending on the number of treatments you undergo. More extensive body contouring and reshaping surgeries may cost over 3,00,000 INR. To determine the exact cost of a procedure, it is advisable to consult any of our experienced surgeons.
                         </p>
                     </div>
                 </div>
@@ -6636,7 +6636,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Men's plastic surgery in Hyderabad can be a good option for enhancing your appearance, distorted due to an injury or age. There is no set age limit for undergoing plastic surgery. Even teenagers can opt for it with their parent’s consent. However, it is wise to wait until you are at least 18 years old before considering plastic surgery.
+                            Men's plastic surgery in <?= ucwords($city) ?> can be a good option for enhancing your appearance, distorted due to an injury or age. There is no set age limit for undergoing plastic surgery. Even teenagers can opt for it with their parent’s consent. However, it is wise to wait until you are at least 18 years old before considering plastic surgery.
                         </p>
                     </div>
                 </div>
@@ -6652,7 +6652,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                To prepare for your plastic surgery in Hyderabad, follow the pre-surgery instructions provided by your surgeon
+                                To prepare for your plastic surgery in <?= ucwords($city) ?>, follow the pre-surgery instructions provided by your surgeon
                             </li>
                             <li>
                                 For optimal results, make the habit to have a healthy, balanced, and nutritious diet
@@ -6676,7 +6676,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                                 Arranging for loose clothing in advance to wear after the surgery for faster recovery
                             </li>
                             <li>
-                                Clear any doubts you have about plastic surgery in Hyderabad with your surgeon beforehand
+                                Clear any doubts you have about plastic surgery in <?= ucwords($city) ?> with your surgeon beforehand
                             </li>
                         </ul>
                     </div>
@@ -6693,7 +6693,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                            When arriving for Men's Plastic Surgery in Hyderabad, you should come with a prepared mind 
+                            When arriving for Men's Plastic Surgery in <?= ucwords($city) ?>, you should come with a prepared mind 
                             </li>
                             <li>
                             Discuss any concerns or reactions you have to anesthesia with the anesthesiologist to enable him to adjust the dose accordingly
