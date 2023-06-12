@@ -5034,42 +5034,39 @@ if ($getAssignedDoctors->isNotEmpty()) {
                 <div class="top-content">
                     <p>
                         <strong>
-                            Do you have stubborn body fat that does not budge even with heavy exercise?
+                            Reputed Plastic Surgeons for Body Lift in Hyderabad
                         </strong>
                     </p>
                     <p>
-                        A Body Lift can help you to get rid of excess fat and sagging skin. There are times when some fat deposits do not disintegrate even when you diet and exercise hard. A Body Lift surgery removes or minimizes these fat deposits and tightens your skin for a well-toned body appearance. All you need is to look out for one of our best cosmetic surgeons in <?= ucwords($city) ?> to get the best treatment.
+                        Do you want to break free from your loose sagging skin caused due to pregnancy, a weight loss program, or age factor? If yes, Body Lift is a suitable treatment to help your purpose. Also known as Belt Lipectomy, this method tightens the skin of the abdomens, groin, thighs, buttocks, and waist. The surgery involves eliminating unwanted fat and skin through incisions along with repositioning adjoining tissues. Our Body Lift surgeon in Hyderabad can help you gain an appealing body contour full of youth and charm.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for Body Lift in <?= ucwords($city) ?>?
+                    Why are Our Surgeons the Best for Body Lift Surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        The best cosmetic surgeons in <?= ucwords($city) ?> with specialization in Body Lift
+                        Skilled at performing complete Body Lift, mid Body Lift, and Lower Body Lift
                     </li>
                     <li>
-                        Expertise in understanding the patient’s requirements and helping them to achieve their body goals
+                        Use advanced and painless techniques to perform Body lift in Hyderabad
                     </li>
                     <li>
-                        Works on a customized treatment plan to remove the excess fat and skin
+                        Board-certified surgeons with years of experience and specialized training
                     </li>
                     <li>
-                        Skilled at whole Body Lift, lower Body Lift, and mid-Body Lift
-                    </li>
-                    <li>
-                        Certified by several national and international boards of plastic and cosmetic surgeons
+                        Affiliated with reputed hospitals and clinics
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF BODY LIFT IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    Since the procedure depends totally on your expectations, the areas of a Body Lift will have a significant influence on the total cost. If you are opting for a Body Lift only in the lower body, it will cost you less than the total Body Lift. You can visit our experienced cosmetic surgeons in <?= ucwords($city) ?> to seek recommendations on the best Body Lift procedure for you.
+                    The cost of Body Lift treatment depends largely on the complexity of the procedure, the skills of the surgeon, and the hospital where you opt for the surgery. Other factors that decide the cost may include facilities in the operating room, anesthesia, post-surgery garments, and so on. For details, you can contact any of our expert Body Lift surgeons in Hyderabad.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    When exercising and dieting stop working, a Body Lift could help you get a toned and better-looking body! You can get rid of the flab to tighten the skin and get a toned body at our best surgeon’s clinic in <?= ucwords($city) ?>. No wonder, you can start wearing those body-fitting clothes and flaunt your gorgeous figure once you get the right treatment.
+                    With a satisfying Body Lift treatment from our renowned plastic surgeons in Hyderabad, you can get back to your life with more confidence. During your stint with our experienced surgeons, you will get the best treatment and satisfying post-surgery care. In addition to performing successful Body Lift procedures, our surgeons will also provide you with advanced surgery facilities and a cordial nursing team.
                 </p>
                 <p class="identity">
                     FAQs on Body Lift Surgery in <?= ucwords($city) ?>
@@ -5086,26 +5083,32 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            An ideal candidate for Body Lift in <?= ucwords($city) ?> should satisfy the following criteria:
+                            To be an ideal candidate for a Body Lift procedure in Hyderabad, you should meet the following requirements:
                         </p>
                         <ul>
                             <li>
-                                Looseness of soft tissue in single or several locations across the body
+                                Have loose soft tissue in one or more areas of the body
                             </li>
                             <li>
-                                Weight loss in excess, mostly due to bariatric surgery
+                                Have lost significant weight, such as because of bariatric surgery
                             </li>
                             <li>
-                                Healthy body, free of any medical ailments that could impair healing
+                                Want to regain the appealing body
                             </li>
                             <li>
-                                A non-smoker and non-alcoholic person
+                                Good health with no medical conditions
                             </li>
                             <li>
-                                Do not have any plans for pregnancy anytime soon
+                                that may hinder the healing process
                             </li>
                             <li>
-                                Living a healthy lifestyle and having a balanced meal
+                                Do not smoke or drink, or have left these addictions for hassle-free recovery
+                            </li>
+                            <li>
+                                Have no plans for pregnancy in the near future
+                            </li>
+                            <li>
+                                Maintain a healthy lifestyle with a well-balanced diet
                             </li>
                         </ul>
                     </div>
@@ -5121,7 +5124,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The average cost of a Body Lift procedure in <?= ucwords($city) ?> varies from 2,00,000 INR to 3,00,000 INR. It could fluctuate depending on various factors like your weight, height, the extent of weight loss, need for liposuction, overall health condition, and so on.
+                            The cost of a Body Lift procedure in Hyderabad may range between 200,000 INR and 300,000 INR. This charge may differ based on individual factors such as height, weight, degree of weight loss, requirement for liposuction, overall health status, and other relevant considerations.
                         </p>
                     </div>
                 </div>
@@ -5137,37 +5140,37 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Excessive scarring
+                                Visible scarring after the surgery in Hyderabad
                             </li>
                             <li>
-                                Chances of Bleeding, eventually leading to hematoma
+                                The possibility of bleeding, which can lead to hematoma
                             </li>
                             <li>
-                                Risk of infection, fever, and red skin (cellulitis) in large portions
+                                Increased risk of infection, fever, and red or inflamed skin (cellulitis) in larger areas
                             </li>
                             <li>
-                                Bad healing of the wound
+                                Poor healing of the incision site
                             </li>
                             <li>
-                                Would dehiscence or breakdown
+                                Wound breakdown or dehiscence
                             </li>
                             <li>
-                                Extrusion of sutures from the skin, causing irritation; needs removal
+                                Extrusion of sutures from the skin, causing irritation and necessitating removal
                             </li>
                             <li>
-                                Loss of sensation in the treated area
+                                Reduced sensation in the treated area or permanent or temporary basis
                             </li>
                             <li>
-                                Asymmetrical fullness, bulges, and other contour irregularities
+                                Contour irregularities such as asymmetrical fullness, bulges, etc.
                             </li>
                             <li>
-                                Swelling and discolouration of the skin
+                                Skin swelling and discoloration
                             </li>
                             <li>
-                                Allergic reaction to anesthesia or surgery materials like tape, gloves, suture materials, etc.
+                                Allergic behaviour to anesthesia or surgical materials, such as tape, gloves, or suture materials
                             </li>
                             <li>
-                                Possibility of revisional surgery
+                                Need for correction surgery
                             </li>
                         </ul>
                     </div>
@@ -5183,7 +5186,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            You can experience the best results from a Body Lift surgery in <?= ucwords($city) ?> only after you have gained the target weight, which remains intact for at least 6 months. Weight fluctuation can impact the surgery negatively. To opt for a Body Lift, the patient should have completed at least the age of 18.
+                            You can experience the best results from a Body Lift surgery in Hyderabad only when you have gained the target weight and have succeeded to maintain it for at least 6 months after the surgery. Weight fluctuation can impact the surgery negatively. You should be at least 18 years of age to undergo Body Lift surgery.
                         </p>
                     </div>
                 </div>
@@ -5197,33 +5200,33 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
+                        <p>
+                            To prepare for a Body Lift procedure in Hyderabad, you should take the following steps:
+                        </p>
                         <ul>
                             <li>
-                                Quit smoking and drinking alcohol at least 2 weeks before the surgery
+                                Refrain from smoking and drinking alcohol for at least two weeks prior to the surgery.
                             </li>
                             <li>
-                                Undergo medical tests and keep your medical records handy for the surgeon to check
+                                Undergo medical testing and ensure that medical records are readily available for the surgeon's review.
                             </li>
                             <li>
-                                Make sure to lose 30% to 50% of your maximum weight before the surgery
+                                Aim to lose between 30% and 50% of your maximum weight before the surgery.
                             </li>
                             <li>
-                                requirements
+                                Bring necessary medications and compression garments to the surgery.
                             </li>
                             <li>
-                                Bring medications and compression garments with you
+                                Arrange for someone to assist with daily tasks and take you back home after the surgery.
                             </li>
                             <li>
-                                Arrange for someone to take you back home and help you with daily chores up to a few days after the surgery
+                                Avoid consuming herbal supplements, aspirin, and other anti-inflammatory drugs as they may increase the risk of bleeding.
                             </li>
                             <li>
-                                Avoid taking herbal supplements, aspirin, and various anti-inflammatory drugs as they can pose bleeding risks
+                                Maintain adequate hydration before and after the procedure.
                             </li>
                             <li>
-                                keep yourself hydrated before and after the procedure in <?= ucwords($city) ?>
-                            </li>
-                            <li>
-                                Do not eat anything at least 8 hours before the surgery
+                                Refrain from eating anything for at least 8 hours before the scheduled surgery time.
                             </li>
                         </ul>
                     </div>
@@ -5240,210 +5243,82 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                On the day of surgery, visit the clinic with a calm mind
+                                Be at the clinic in Hyderabad with a positive frame of mind
                             </li>
                             <li>
-                                The anesthesia expert will inquire if you have an allergic behaviour to anesthesia and will adjust the dose accordingly
+                                Clear any confusion you have with your surgeon
                             </li>
                             <li>
-                                Depending on whether you are undergoing upper or lower Body Lift, the doctor will perform the necessary job
+                                Cooperate with the medical staff during your body check-up
                             </li>
                             <li>
-                                Usually, the surgery takes around 4-8 hours to complete under the influence of general anesthesia
+                                Inform the anesthesia expert about your reaction to anesthesia so that he could administer the dose accordingly
                             </li>
                             <li>
-                                Surgeons could also perform other surgeries like tummy tuck, arm lift, or arm lift in conjunction with the Body Lift procedure in <?= ucwords($city) ?>
+                                You could expect the entire Body Lift surgery to continue for around 4-8 hours
                             </li>
                             <li>
-                                You can get back to work in 2-3 weeks after the surgery and can do daily chores within 4-6 weeks
+                                During this period, the surgeon will perform the lower or upper Body Lift as per your requirement
                             </li>
                             <li>
-                                You could expect the surgeon to provide several instructions for a quick and satisfying recovery.
+                                The surgeon could also carry out other procedures in conjunction with Body Lift such as Arm Lift, Tummy Tuck, Face Lift, etc.
+                            </li>
+                            <li>
+                                It may take around 2-3 weeks for you to recover from the Body Lift surgery
+                            </li>
+                            <li>
+                                To do your daily activities, you will have to wait for around 4-6 weeks
+                            </li>
+                            <li>
+                                For complete and satisfying healing, you should follow the instructions of your surgeon
+                            </li>
+                            <li>
+                                You must have realistic expectations with the surgery in Hyderabad
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Body Lift?
-                    </p>
-                    <p>
-                        An ideal candidate for Body Lift in <?= ucwords($city) ?> should satisfy the following criteria:
-                    </p>
-                    <ul>
-                        <li>
-                            Looseness of soft tissue in single or several locations across the body
-                        </li>
-                        <li>
-                            Weight loss in excess, mostly due to bariatric surgery
-                        </li>
-                        <li>
-                            Healthy body, free of any medical ailments that could impair healing
-                        </li>
-                        <li>
-                            A non-smoker and non-alcoholic person
-                        </li>
-                        <li>
-                            Do not have any plans for pregnancy anytime soon
-                        </li>
-                        <li>
-                            Living a healthy lifestyle and having a balanced meal
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of a Body Lift?
-                    </p>
-                    <p>
-                        The average cost of a Body Lift procedure in <?= ucwords($city) ?> varies from 2,00,000 INR to 3,00,000 INR. It could fluctuate depending on various factors like your weight, height, the extent of weight loss, need for liposuction, overall health condition, and so on.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Body Lift?
-                    </p>
-                    <ul>
-                        <li>
-                            Excessive scarring
-                        </li>
-                        <li>
-                            Chances of Bleeding, eventually leading to hematoma
-                        </li>
-                        <li>
-                            Risk of infection, fever, and red skin (cellulitis) in large portions
-                        </li>
-                        <li>
-                            Bad healing of the wound
-                        </li>
-                        <li>
-                            Would dehiscence or breakdown
-                        </li>
-                        <li>
-                            Extrusion of sutures from the skin, causing irritation; needs removal
-                        </li>
-                        <li>
-                            Loss of sensation in the treated area
-                        </li>
-                        <li>
-                            Asymmetrical fullness, bulges, and other contour irregularities
-                        </li>
-                        <li>
-                            Swelling and discolouration of the skin
-                        </li>
-                        <li>
-                            Allergic reaction to anesthesia or surgery materials like tape, gloves, suture materials, etc.
-                        </li>
-                        <li>
-                            Possibility of revisional surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Body Lift?
-                    </p>
-                    <p>
-                        You can experience the best results from a Body Lift surgery in <?= ucwords($city) ?> only after you have gained the target weight, which remains intact for at least 6 months. Weight fluctuation can impact the surgery negatively. To opt for a Body Lift, the patient should have completed at least the age of 18.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before the Body Lift Surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Quit smoking and drinking alcohol at least 2 weeks before the surgery
-                        </li>
-                        <li>
-                            Undergo medical tests and keep your medical records handy for the surgeon to check
-                        </li>
-                        <li>
-                            Make sure to lose 30% to 50% of your maximum weight before the surgery
-                        </li>
-                        <li>
-                            requirements
-                        </li>
-                        <li>
-                            Bring medications and compression garments with you
-                        </li>
-                        <li>
-                            Arrange for someone to take you back home and help you with daily chores up to a few days after the surgery
-                        </li>
-                        <li>
-                            Avoid taking herbal supplements, aspirin, and various anti-inflammatory drugs as they can pose bleeding risks
-                        </li>
-                        <li>
-                            keep yourself hydrated before and after the procedure in <?= ucwords($city) ?>
-                        </li>
-                        <li>
-                            Do not eat anything at least 8 hours before the surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Body Lift surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            On the day of surgery, visit the clinic with a calm mind
-                        </li>
-                        <li>
-                            The anesthesia expert will inquire if you have an allergic behaviour to anesthesia and will adjust the dose accordingly
-                        </li>
-                        <li>
-                            Depending on whether you are undergoing upper or lower Body Lift, the doctor will perform the necessary job
-                        </li>
-                        <li>
-                            Usually, the surgery takes around 4-8 hours to complete under the influence of general anesthesia
-                        </li>
-                        <li>
-                            Surgeons could also perform other surgeries like tummy tuck, arm lift, or arm lift in conjunction with the Body Lift procedure in <?= ucwords($city) ?>
-                        </li>
-                        <li>
-                            You can get back to work in 2-3 weeks after the surgery and can do daily chores within 4-6 weeks
-                        </li>
-                        <li>
-                            You could expect the surgeon to provide several instructions for a quick and satisfying recovery.
-                        </li>
-                    </ul> -->
             </div>
         <?php } elseif ($surgery_str == "arm lift") { ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
                         <strong>
-                            Love to have better-looking, toned arms?
+                            Connect with Renowned Arm Lift Surgeons in Hyderabad
                         </strong>
                     </p>
                     <p>
-                        Arm Lift Surgery or Brachioplasty is the procedure to treat drooping upper arms resulting due to ageing or massive weight loss. It requires the surgeon to remove the excess sagging skin of the upper arm resulting in well-toned and tightened arms.
-                    </p>
-                    <p>
-                        Our reputed cosmetic surgeons in <?= ucwords($city) ?> advise the right treatment plan and the best-suited procedure for you.
+                        You may appear fit, but is your skin elastic enough? Have you started noticing loose skin flaps or ‘bat wings’ hanging from the upper arms? An Arm Lift Surgery or Brachioplasty can improve that loose and sagging portion shaping up in your upper arms, giving way to better contours. Our experienced Arm Lift surgeons in Hyderabad can help you appreciably in serving your purpose. They can help you gain a toned arm and an appealing overall appearance.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for Arm Lift Surgery in <?= ucwords($city) ?>?
+                    Why Trust Our Surgeons for Arm Lift Surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        The best cosmetic surgeons in <?= ucwords($city) ?> to treat patients with extremely sagging upper arms
+                        Adept at carrying out the procedure with minimum risk and maximum symmetry in the shape of your arms
                     </li>
                     <li>
-                        Highly skilled at various arm lift surgeries like Liposuction, Limited Arm Lift, Standard Arm Lift, and Extended Arm Lift.
+                        Can perform various Arm Lift procedures like liposuction and limited, standard, and extended Arm Lift surgeries
                     </li>
                     <li>
-                        Adept at customizing the treatment and toning the upper arms that are symmetrical with the body
+                        Expert in doing surgeries with minimum scars
                     </li>
                     <li>
-                        Leave only minimal scarring that becomes almost invisible over time.
-                    </li>
-                    <li>
-                        Renowned cosmetic surgeons from <?= ucwords($city) ?>, duly certified by several national boards of cosmetic surgeries
+                        Board-certified surgeons in Hyderabad with credible experience in Arm Lift Surgery
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF ARM LIFT SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The Arm Lift Surgery cost depends largely on the cosmetic surgeon you choose and the specific area where you want to tone it. Usually, the cost of extended Arm Lift Surgery is higher than other surgeries since the surgeon not just removes the excess skin on the upper arms but also on the sides of the body. It is best to visit our reliable cosmetic surgeon in <?= ucwords($city) ?> and seek advice on the best course of action.
+                    Various factors govern the cost of an Arm Lift in Hyderabad, such as the experience, expertise, and fees of the surgeon. Anesthesia, room facilities, medical tests, post-operative garments, and other aspects are equally important in this regard. Consulting any of our Arm Lift surgeons will help to know more about the cost of the surgery.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Are you feeling uncomfortable due to the excess skin on your upper arms? Are you finding it hard to tone down your excess skin through exercise? If yes then, you can always opt for Arm Lift Surgery by any of our experienced surgeons in <?= ucwords($city) ?>.
+                    Getting Arm Lift treatment from our expert plastic surgeon in Hyderabad can help you restore the appearance of your arm appreciably. You can count on our expert surgeons for superior-quality treatment facilities. They provide the best technical equipment, operating rooms, and nursing staff to make you feel at ease during the surgery. Undergoing the surgery from any of our Arm Lift surgeons in Hyderabad will make you feel relaxed and comfortable.
                 </p>
+
                 <p class="identity">
                     FAQs on Arm Lift Surgery in <?= ucwords($city) ?>
                 </p>
@@ -5459,29 +5334,26 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Abiding by the following points will make you a suitable candidate for Arm Lift Surgery in <?= ucwords($city) ?>:
+                            To be a suitable candidate for Arm Lift Surgery in Hyderabad, you should fulfill certain criteria:
                         </p>
                         <ul>
                             <li>
-                                You are an adult having considerable laxity in the upper arm skin
+                                Noticeable looseness in your upper arm skin as an adult
                             </li>
                             <li>
-                                You have lost weight significantly, which has caused loose hanging skin
+                                Experiencing loose hanging skin due to significant weight loss
                             </li>
                             <li>
-                                You are an adult with a stable weight irrespective of your age
+                                Your weight is well within the permissible limit for the surgery
                             </li>
                             <li>
-                                You are not overweight
+                                Good health without any medical conditions that could increase the risks of surgery or hinder healing,
                             </li>
                             <li>
-                                You are a healthy person with no medical problem that could affect healing or enhance surgery risks
+                                No habit of smoking or drinking alcohol
                             </li>
                             <li>
-                                You don’t smoke or drink alcohol
-                            </li>
-                            <li>
-                                You can maintain a healthy lifestyle with a proper diet
+                                Maintain a healthy lifestyle with a proper diet.
                             </li>
                         </ul>
                     </div>
@@ -5497,7 +5369,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The average cost of Arm Lift surgery in <?= ucwords($city) ?> may be in the range of 1,00,000 INR to 1,50,000 INR. Much will depend on the facilities the patient has opted for. This cost for consultation, medicine costs, and other external support needed for recovery will be additional.
+                            The cost of Arm Lift Surgery in Hyderabad typically ranges from 1,00,000 INR to 1,50,000 INR. The expenses may vary depending on the specific facilities and services chosen by the patient. In addition to the cost of the surgery itself, there may be additional charges for consultation fees, medication costs, and other support required for recovery.
                         </p>
                     </div>
                 </div>
@@ -5511,30 +5383,42 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
+                        <p>
+                            Here are some of the potential risks associated with Arm Lift Surgery in Hyderabad:
+                        </p>
                         <ul>
                             <li>
-                                Asymmetry in the appearance of arms
+                                Unevenness in the appearance of the arms
                             </li>
                             <li>
-                                Excessive or unusual scarring
+                                Allergic reaction to anesthesia
+                            </li>
+                            <li>
+                                Abnormal scarring
                             </li>
                             <li>
                                 Persistent bleeding
                             </li>
                             <li>
-                                Damage to the blood vessel, nerves, or muscles
+                                Affected blood vessels
                             </li>
                             <li>
-                                Infection in the surgical site
+                                Damage to nerves or muscles
                             </li>
                             <li>
-                                Arm stiffness
+                                Infection at the surgical site due to the use of surgical materials
                             </li>
                             <li>
-                                Seroma or accumulation of fluids in the arm, which can be drained with the help of a needle
+                                Tightening of arm
                             </li>
                             <li>
-                                Breakdown of the wound, which will require 2-3 additional weeks to heal
+                                Formation of seroma or fluid accumulation in the arm that may need to be drained using a needle
+                            </li>
+                            <li>
+                                Wound breakdown, which may need an additional 2-3 weeks to heal
+                            </li>
+                            <li>
+                                Poor healing due to incorrect surgery procedure
                             </li>
                         </ul>
                     </div>
@@ -5550,7 +5434,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you are experiencing age-related changes in your arms or loose skin due to excessive weight loss, Arm Lift surgery in <?= ucwords($city) ?> could be a suitable choice to deal with your arm laxity condition. Winter is the best time to undergo this surgery. All you need is to be an adult to opt for the Arm Lift procedure in <?= ucwords($city) ?>.
+                            Arm lift surgery in Hyderabad may be a suitable option for individuals experiencing age-related changes in their arms. Loose skin resulting from significant weight loss could also be one of the reasons to opt for this surgery. Our surgeons would recommend this procedure for adults during the winter season.
                         </p>
                     </div>
                 </div>
@@ -5564,27 +5448,30 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
+                        <p>
+                            Prior to undergoing Arm Lift Surgery in Hyderabad, you should take certain important preparatory measures:
+                        </p>
                         <ul>
                             <li>
-                                Consult your surgeon about the concerns related to Arm Lift
+                                Discuss concerns regarding the surgery with your surgeon,
                             </li>
                             <li>
-                                Stop eating and drinking at least 8 hours before the procedure
+                                Refrain from eating and drinking for at least 8 hours before undergoing the procedure
                             </li>
                             <li>
-                                Arrange for loose and comfortable clothing at home in advance
+                                Arrange comfortable and loose clothing for your recovery period in advance
                             </li>
                             <li>
-                                Go for a medical exam to ensure your health is perfect before the surgery
+                                Undergo a medical examination to ensure good health for the surgery
                             </li>
                             <li>
-                                Stop smoking several weeks earlier to avoid slow wound healing due to smoking-related health hassles
+                                Stop smoking and alcohol consumption several weeks before the surgery to prevent slow wound healing
                             </li>
                             <li>
-                                Adjust your existing medications after consultation with the doctor
+                                Adjust any existing medications after interacting with your surgeon
                             </li>
                             <li>
-                                Avoid the consumption of aspirin, anti-inflammatory drugs, or health supplements as they can result in excessive bleeding
+                                Avoiding the use of aspirin, anti-inflammatory drugs, or health supplements, as these may cause uncontrolled bleeding
                             </li>
                         </ul>
                     </div>
@@ -5601,185 +5488,75 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Cooperate with the staff at the clinic in executing the necessary formalities
+                                On the day of your Arm Lift Surgery in Hyderabad, visit the clinic with a well-prepared and composed mind
                             </li>
                             <li>
-                                The anesthesia expert may ask you about your behaviour toward anesthesia and administer the dose accordingly
+                                You can expect to undergo necessary formalities and cooperate with the staff at the clinic
                             </li>
                             <li>
-                                The surgeon in <?= ucwords($city) ?> may take around 3-4 hours to complete Brachioplasty. Due to the effect of anesthesia, you may not realize the lapse in time.
+                                An anesthesiologist will evaluate your response to anesthesia and administer the appropriate dose accordingly
                             </li>
                             <li>
-                                You will get incisions on the back or inside your arm depending on the choice of surgeon. Next, the excision of excess fat will take place via Liposuction
+                                The surgeon will perform the Brachioplasty, which may take approximately 3-4 hours to complete
                             </li>
                             <li>
-                                You may get back to work after the surgery in <?= ucwords($city) ?> within just a week if you have a sedentary job, but if it demands too much physical exertion, the surgeon would recommend resting for around two weeks after the surgery
+                                You may not perceive the passage of time due to the effects of anesthesia
                             </li>
                             <li>
-                                You should have realistic goals in your mind regarding the surgery.
+                                During the procedure, the surgeon will make incisions on the back or inside of your arm, depending on the complication level
+                            </li>
+                            <li>
+                                The surgeon may also choose to remove excess fat via liposuction
+                            </li>
+                            <li>
+                                If you have a sitting job, you may be able to return to work within a week of the surgery
+                            </li>
+                            <li>
+                                If your job requires physical exertion, the surgeon may recommend taking around two weeks off to rest
+                            </li>
+                            <li>
+                                It is important to have realistic expectations about the outcome of the surgery in Hyderabad
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Arm Lift Surgery?
-                    </p>
-                    <p>
-                        Abiding by the following points will make you a suitable candidate for Arm Lift Surgery in <?= ucwords($city) ?>:
-                    </p>
-                    <ul>
-                        <li>
-                            You are an adult having considerable laxity in the upper arm skin
-                        </li>
-                        <li>
-                            You have lost weight significantly, which has caused loose hanging skin
-                        </li>
-                        <li>
-                            You are an adult with a stable weight irrespective of your age
-                        </li>
-                        <li>
-                            You are not overweight
-                        </li>
-                        <li>
-                            You are a healthy person with no medical problem that could affect healing or enhance surgery risks
-                        </li>
-                        <li>
-                            You don’t smoke or drink alcohol
-                        </li>
-                        <li>
-                            You can maintain a healthy lifestyle with a proper diet
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of Arm Lift Surgery?
-                    </p>
-                    <p>
-                        The average cost of Arm Lift surgery in <?= ucwords($city) ?> may be in the range of 1,00,000 INR to 1,50,000 INR. Much will depend on the facilities the patient has opted for. This cost for consultation, medicine costs, and other external support needed for recovery will be additional.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Arm Lift Surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Asymmetry in the appearance of arms
-                        </li>
-                        <li>
-                            Excessive or unusual scarring
-                        </li>
-                        <li>
-                            Persistent bleeding
-                        </li>
-                        <li>
-                            Damage to the blood vessel, nerves, or muscles
-                        </li>
-                        <li>
-                            Infection in the surgical site
-                        </li>
-                        <li>
-                            Arm stiffness
-                        </li>
-                        <li>
-                            Seroma or accumulation of fluids in the arm, which can be drained with the help of a needle
-                        </li>
-                        <li>
-                            Breakdown of the wound, which will require 2-3 additional weeks to heal
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Arm Lift Surgery?
-                    </p>
-                    <p>
-                        If you are experiencing age-related changes in your arms or loose skin due to excessive weight loss, Arm Lift surgery in <?= ucwords($city) ?> could be a suitable choice to deal with your arm laxity condition. Winter is the best time to undergo this surgery. All you need is to be an adult to opt for the Arm Lift procedure in <?= ucwords($city) ?>.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before the Arm Lift surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Consult your surgeon about the concerns related to Arm Lift
-                        </li>
-                        <li>
-                            Stop eating and drinking at least 8 hours before the procedure
-                        </li>
-                        <li>
-                            Arrange for loose and comfortable clothing at home in advance
-                        </li>
-                        <li>
-                            Go for a medical exam to ensure your health is perfect before the surgery
-                        </li>
-                        <li>
-                            Stop smoking several weeks earlier to avoid slow wound healing due to smoking-related health hassles
-                        </li>
-                        <li>
-                            Adjust your existing medications after consultation with the doctor
-                        </li>
-                        <li>
-                            Avoid the consumption of aspirin, anti-inflammatory drugs, or health supplements as they can result in excessive bleeding
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Arm Lift surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Cooperate with the staff at the clinic in executing the necessary formalities
-                        </li>
-                        <li>
-                            The anesthesia expert may ask you about your behaviour toward anesthesia and administer the dose accordingly
-                        </li>
-                        <li>
-                            The surgeon in <?= ucwords($city) ?> may take around 3-4 hours to complete Brachioplasty. Due to the effect of anesthesia, you may not realize the lapse in time.
-                        </li>
-                        <li>
-                            You will get incisions on the back or inside your arm depending on the choice of surgeon. Next, the excision of excess fat will take place via Liposuction
-                        </li>
-                        <li>
-                            You may get back to work after the surgery in <?= ucwords($city) ?> within just a week if you have a sedentary job, but if it demands too much physical exertion, the surgeon would recommend resting for around two weeks after the surgery
-                        </li>
-                        <li>
-                            You should have realistic goals in your mind regarding the surgery.
-                        </li>
-                    </ul> -->
-
             </div>
         <?php } elseif ($surgery_str == "thigh lift") { ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        If dieting and exercising are not helping anymore in reducing your thigh size, a Thigh Lift can be a suitable alternative. The surgery reshapes the thigh by removing the extra tissues that would otherwise make you look flabby. It will also contour your body in proportion to the rest of your body figure.
-                    </p>
-                    <p>
-                        Some prefer to go for a combination of Liposuction and Thigh Lift to complement the body structure. For any more doubts about this surgery, you can visit any of our recommended cosmetic surgeons in <?= ucwords($city) ?>.
+                        Due to your weight loss regime, you might have developed sagging skin on the inner thighs. Opting for a Thigh Lift surgery in Hyderabad or Thighplasty could help you get away with such excess skin to get tighter thighs. The treatment however needs extreme precision, as it requires the surgeon to create a long incision to remove the excess skin that can go up to the full length of the thigh. With the expertise of our Thigh Lift surgeons, you can remain rest assured of a safe, painless, and successful Thigh Lift surgery in Hyderabad.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for Thigh Lift in <?= ucwords($city) ?>?
+                    Why Trust Our Surgeons for Thigh Lift Surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Best cosmetic surgeons in <?= ucwords($city) ?> with credible experience in Thigh Lift as well as other body contouring procedures
+                        Board-certified surgeons in Hyderabad with adept training at performing Thigh Lift
                     </li>
                     <li>
-                        Overwhelming testimonials from satisfied patients about the positive surgery results
+                        Work with precision to remove lose fat or skin, resulting in reshaped and smooth inner/outer thighs
                     </li>
                     <li>
-                        Operate patients in fully-equipped clinics for plastic, cosmetic, and reconstructive surgeries.
+                        Help patients to attain their ideal body goals with improved and tighter thighs.
                     </li>
                     <li>
-                        Top cosmetic surgeons in <?= ucwords($city) ?> certified by the national associations for plastic and cosmetic surgeries
+                        Enable the patients to restore confidence in their body with a successful Thigh Lift surgery in Hyderabad
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF THIGH LIFT IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    It would be wise to consult with any of our cosmetic surgeons in <?= ucwords($city) ?> about the cost of this treatment. This will also give you a better insight into the results you can expect as well as about the recovery period.
+                    Usually, the cost of a Thigh Lift will vary depending on the surgeon and the clinic you choose, your geographic location, and the type of Thigh Lift surgery you undergo. In addition, the cost may also differ on various other factors like prescribed medication, lab tests, medical facilities, anesthesia, surgeon’s fees, specialized garments provided during surgery, and more. Our expert Thigh Lift surgeon in Hyderabad will be the best person to furnish relevant details about the involved cost.
                 </p>
+
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Do not let those flabby thighs get the best of you! Go for a Thigh Lift, recover your lost shape, and look fab! Opt for one of our most-respected cosmetic surgeons in <?= ucwords($city) ?> to perform the Thigh Lift surgery.
+                    Our surgeons provide you with the best facilities in their respective clinics. Feel free to contact any of our Thigh Lift surgeons to get satisfying treatment. With advanced surgery equipment, hospitable nursing staff, and a well-equipped operating room, you will get complete attention during your Thigh Lift surgery. Our skilled and consummate Thigh Lift surgeons will ensure a noteworthy Thigh Lift on your body.
                 </p>
+
                 <p class="identity">
                     FAQs on Thigh Lift Surgery in <?= ucwords($city) ?>
                 </p>
@@ -5795,32 +5572,32 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            People in <?= ucwords($city) ?> wishing to be a Thigh Lift candidate need to satisfy the following conditions:
+                            To get a Thigh Lift surgery in Hyderabad you must fulfill the following criteria:
                         </p>
                         <ul>
                             <li>
-                                Have a relatively stable weight
+                                Maintain an ideal body weight
                             </li>
                             <li>
-                                Extra soft tissue along the inner thigh or the outer thigh
+                                Have excess soft tissue on the inner or outer thigh
                             </li>
                             <li>
-                                Good health overall
+                                Ensure good overall health
                             </li>
                             <li>
-                                No medical condition that could impair healing or increase risks
+                                Make sure to be free from any medical condition that could hinder healing or increase surgery risks
                             </li>
                             <li>
-                                Healthy diet
+                                Follow a healthy diet chart
                             </li>
                             <li>
-                                Routine of regular exercise
+                                Do regular exercise
                             </li>
                             <li>
-                                Non-smoker and non-alcoholic
+                                Abstain from smoking and alcohol consumption
                             </li>
                             <li>
-                                Wish to improve the appearance of thighs
+                                Have a desire to enhance the appearance of their thighs.
                             </li>
                         </ul>
                     </div>
@@ -5836,7 +5613,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The cost of a Thigh Lift surgery in <?= ucwords($city) ?> may vary between 70,000 INR-1,50,000 INR. Several factors can have an impact on the cost of Thigh Lift surgery. These may include the price of the surgical facilities, the complexity faced during the surgery, the experience of the surgeon, the cost of anesthesia and medicines, and so on.
+                            The expense associated with a Thigh Lift procedure in Hyderabad may range from 70,000 INR to 1,50,000 INR. Multiple factors may influence the overall expenses, such as the cost of the surgical facility, the complication involved in the surgery, the proficiency of the surgeon, the cost of anesthesia and medication, and more.
                         </p>
                     </div>
                 </div>
@@ -5850,33 +5627,36 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
+                        <p>
+                            Various potential risks can emerge during a Thigh Lifts surgery in Hyderabad:
+                        </p>
                         <ul>
                             <li>
-                                Allergic reaction to anesthesia
+                                Allergic behavior to anesthesia
                             </li>
                             <li>
-                                Infection and bleeding in the incision site
+                                Bleeding at the incision site
                             </li>
                             <li>
-                                Chances of scarring
+                                Excessive scarring
                             </li>
                             <li>
-                                Pain in rare instances after the effect of anesthesia subsides
+                                Intense pain after the anesthesia wears off
                             </li>
                             <li>
-                                Formation of blood clots in the legs, leading to Deep Vein Thrombosis or DVT
+                                Blood clots in the legs (known as Deep Vein Thrombosis or DVT) seroma
                             </li>
                             <li>
-                                Formation of seroma or blood accumulation in a dead space after the surgery
+                                Blood accumulation in a dead space after the surgery
                             </li>
                             <li>
-                                Dead fatty tissue beneath the skin or fat necrosis
+                                Dead fatty tissue beneath the skin
                             </li>
                             <li>
-                                Bruising and swelling in the incision site
+                                Bruising and inflammation at the incision site
                             </li>
                             <li>
-                                Need for a correction surgery
+                                The need for a revisional surgery
                             </li>
                         </ul>
                     </div>
@@ -5892,7 +5672,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you want to get smoother skin and well-proportioned contours on your thighs, a Thigh Lift is the best option. Anyone who is more than 18 years old and has a disease-free body can go for Thigh Lift in <?= ucwords($city) ?>.
+                            If you aspire to get well-contoured proportioned thigh contours followed by smooth skin, a Thigh Lift in Hyderabad would be an ideal choice. You would need to be at least 18 years of age to undergo this surgery and your body should be free of any severe medical condition.
                         </p>
                     </div>
                 </div>
@@ -5906,33 +5686,33 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
+                        <p>
+                            To prepare for the Thigh Lift surgery in Hyderabad, you should abide by the following pointers:
+                        </p>
                         <ul>
                             <li>
-                                Get your medical evaluation and complete body check-up before the surgery
+                                Undergo a medical evaluation and complete a body check-up.
                             </li>
                             <li>
-                                Avoid consuming anti-inflammatory drugs, health supplements, or Aspirin to avoid an increase in bleeding
+                                Avoid taking anti-inflammatory drugs, health supplements, or Aspirin to prevent excessive bleeding.
                             </li>
                             <li>
-                                Show the medication lists to the surgeon you are currently taking to avert confusion
+                                Provide your surgeon with a list of current medications to avoid any confusion.
                             </li>
                             <li>
-                                Take off contact lenses, nail polish, makeup, and deodorant
+                                Remove contact lenses, nail polish, makeup, and deodorant before the surgery
                             </li>
                             <li>
-                                Avoid
+                                Stay hydrated by drinking water or fluids free of any additive
                             </li>
                             <li>
-                                Keep yourself hydrated with water at least 2 weeks before the surgery in <?= ucwords($city) ?>
+                                Refrain from eating or drinking anything for around 8 hours before the procedure Quit smoking or alcohol consumption to reduce the risk of complications during or after the surgery in Hyderabad
                             </li>
                             <li>
-                                Avoid eating or drinking around 8 hours before the surgery.
+                                Arrange for someone to accompany you to the hospital and drive you home
                             </li>
                             <li>
-                                Quit smoking or alcohol consumption to avoid any complications during or after the surgery
-                            </li>
-                            <li>
-                                Arrange for someone to help you in the hospital, drive you home and assist in your daily chores after the surgery.
+                                Have domestic help to assist you with your daily chores after the surgery
                             </li>
                         </ul>
                     </div>
@@ -5949,176 +5729,38 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Visit the clinic or hospital with a cool and composed mind
+                                Visit the clinic in Hyderabad with a positive frame of mind
                             </li>
                             <li>
-                                Discuss your concerns with the <?= ucwords($city) ?> surgeon in a candid direct consultation
+                                Discuss your apprehensions with the surgeon before the surgery
                             </li>
                             <li>
-                                The anesthesiologist would ask about your reaction to anesthesia and will administer the dose accordingly
+                                The anesthesiologist would inquire about your behavior to anesthesia to adjust the dose accordingly
                             </li>
                             <li>
-                                You could expect the surgeon to make an incision and remove the fat and excess skin from the incision site
+                                The surgeon will make an incision to remove the fat and excess skin from the incision site
                             </li>
                             <li>
-                                As a result of the successful surgery, you could expect tight skin, enhanced leg contour, and better skin elasticity
+                                After a successful surgery, you could get tight skin, improved leg contour, and restored skin elasticity
                             </li>
                             <li>
-                                The entire procedure will complete in around 2-3 hours
+                                The entire surgery will take around 2-3 hours to complete
                             </li>
                             <li>
-                                Depending on your response to the Thigh Lift, you may have to stay in the hospital for a few days, or as recommended by your surgeon in <?= ucwords($city) ?>
+                                You may have to stay in the clinic for a few days after the Thigh Lift surgery, or as your surgeon recommends
                             </li>
                             <li>
-                                You can expect around 4-6 weeks from the day of the Thigh Lift surgery to heal completely
+                                Expect around 4-6 weeks for your wounds to heal completely
                             </li>
                             <li>
-                                The surgeon could advise you to restrict your daily activities for around 2 weeks and avoid strenuous activities for at least 2 weeks
+                                The surgeon could recommend not doing routine and strenuous activities for at least 2 weeks after the surgery in Hyderabad
+                            </li>
+                            <li>
+                                Make sure to have realistic expectations with the Thigh Lift surgery so that you do not get disappointed in case of adverse results
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Thigh Lift?
-                    </p>
-                    <p>
-                        People in <?= ucwords($city) ?> wishing to be a Thigh Lift candidate need to satisfy the following conditions:
-                    </p>
-                    <ul>
-                        <li>
-                            Have a relatively stable weight
-                        </li>
-                        <li>
-                            Extra soft tissue along the inner thigh or the outer thigh
-                        </li>
-                        <li>
-                            Good health overall
-                        </li>
-                        <li>
-                            No medical condition that could impair healing or increase risks
-                        </li>
-                        <li>
-                            Healthy diet
-                        </li>
-                        <li>
-                            Routine of regular exercise
-                        </li>
-                        <li>
-                            Non-smoker and non-alcoholic
-                        </li>
-                        <li>
-                            Wish to improve the appearance of thighs
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of a Thigh Lift?
-                    </p>
-                    <p>
-                        The cost of a Thigh Lift surgery in <?= ucwords($city) ?> may vary between 70,000 INR-1,50,000 INR. Several factors can have an impact on the cost of Thigh Lift surgery. These may include the price of the surgical facilities, the complexity faced during the surgery, the experience of the surgeon, the cost of anesthesia and medicines, and so on.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Thigh Lifts?
-                    </p>
-                    <ul>
-                        <li>
-                            Allergic reaction to anesthesia
-                        </li>
-                        <li>
-                            Infection and bleeding in the incision site
-                        </li>
-                        <li>
-                            Chances of scarring
-                        </li>
-                        <li>
-                            Pain in rare instances after the effect of anesthesia subsides
-                        </li>
-                        <li>
-                            Formation of blood clots in the legs, leading to Deep Vein Thrombosis or DVT
-                        </li>
-                        <li>
-                            Formation of seroma or blood accumulation in a dead space after the surgery
-                        </li>
-                        <li>
-                            Dead fatty tissue beneath the skin or fat necrosis
-                        </li>
-                        <li>
-                            Bruising and swelling in the incision site
-                        </li>
-                        <li>
-                            Need for a correction surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for a Thigh Lift?
-                    </p>
-                    <p>
-                        If you want to get smoother skin and well-proportioned contours on your thighs, a Thigh Lift is the best option. Anyone who is more than 18 years old and has a disease-free body can go for Thigh Lift in <?= ucwords($city) ?>.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before the Thigh Lift Surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Get your medical evaluation and complete body check-up before the surgery
-                        </li>
-                        <li>
-                            Avoid consuming anti-inflammatory drugs, health supplements, or Aspirin to avoid an increase in bleeding
-                        </li>
-                        <li>
-                            Show the medication lists to the surgeon you are currently taking to avert confusion
-                        </li>
-                        <li>
-                            Take off contact lenses, nail polish, makeup, and deodorant
-                        </li>
-                        <li>
-                            Avoid
-                        </li>
-                        <li>
-                            Keep yourself hydrated with water at least 2 weeks before the surgery in <?= ucwords($city) ?>
-                        </li>
-                        <li>
-                            Avoid eating or drinking around 8 hours before the surgery.
-                        </li>
-                        <li>
-                            Quit smoking or alcohol consumption to avoid any complications during or after the surgery
-                        </li>
-                        <li>
-                            Arrange for someone to help you in the hospital, drive you home and assist in your daily chores after the surgery.
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Thigh Lift surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            Visit the clinic or hospital with a cool and composed mind
-                        </li>
-                        <li>
-                            Discuss your concerns with the <?= ucwords($city) ?> surgeon in a candid direct consultation
-                        </li>
-                        <li>
-                            The anesthesiologist would ask about your reaction to anesthesia and will administer the dose accordingly
-                        </li>
-                        <li>
-                            You could expect the surgeon to make an incision and remove the fat and excess skin from the incision site
-                        </li>
-                        <li>
-                            As a result of the successful surgery, you could expect tight skin, enhanced leg contour, and better skin elasticity
-                        </li>
-                        <li>
-                            The entire procedure will complete in around 2-3 hours
-                        </li>
-                        <li>
-                            Depending on your response to the Thigh Lift, you may have to stay in the hospital for a few days, or as recommended by your surgeon in <?= ucwords($city) ?>
-                        </li>
-                        <li>
-                            You can expect around 4-6 weeks from the day of the Thigh Lift surgery to heal completely
-                        </li>
-                        <li>
-                            The surgeon could advise you to restrict your daily activities for around 2 weeks and avoid strenuous activities for at least 2 weeks
-                        </li>
-                    </ul> -->
             </div>
         <?php } elseif ($surgery_str == "body contouring") { ?>
             <div class="col padd-null">
