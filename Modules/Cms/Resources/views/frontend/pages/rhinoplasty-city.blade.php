@@ -5766,119 +5766,525 @@ if ($getAssignedDoctors->isNotEmpty()) {
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Sometimes, you may still have excess skin after extensive weight loss. This happens when your skin loses its elasticity. Body contouring procedure helps to remove these excess skin and fat. You will have a well-toned and lean looking figure after undergoing the whole body contouring surgery.
-                    </p>
-                    <p>
-                        Since body contouring in an extensive procedure, it is vital to get it done by an experienced cosmetic surgeon in <?= ucwords($city) ?>.
+                        After a strict weight loss regime, you may succeed to shed those extra pounds, but it could lead to droopy or saggy skin as a side effect. With Body Contouring, you can get away with this excess skin and regain the tone of your body tissues. The procedure enables you to regain your lost elasticity with smoother contours. Our plastic surgeons in Hyderabad can help you with this surgery by eliminating unwanted skin and fat cells from your body.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for <?= $surgery_str ?> in <?= ucwords($city) ?>?
+                    Why Approach Our Surgeons for Body Contouring in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        The most skilled cosmetic surgeon in <?= ucwords($city) ?> for body contouring.
+                        Board-certified surgeons in Hyderabad with specialized training in plastic surgery
                     </li>
                     <li>
-                        Highly experienced in individual procedures that make up the body contouring like tummy tuck, breast lift, arm lift, buttock lift, thigh lift and lower body lift.
+                        Experience in performing Body Contouring with success
                     </li>
                     <li>
-                        Performs highly specific and customized body-contouring surgery targeted at removing the excess skin that results in well-contoured appearance.
+                        Helps patients to restore body elasticity and enhance body contours in better proportion
                     </li>
                     <li>
-                        <?= ucwords($city) ?>’s experienced cosmetic surgeon, certified by several national and international boards of cosmetic surgeries.
+                        Can perform multiple Body Contouring surgeries including Arm Lift, Breast Lift, Thigh Lift, Facelift, Tummy Tuck, and more
                     </li>
                 </ul>
                 <p class="identity">
-                    COST OF BODY CONTOURING SURGERY IN <?= ucwords($city) ?>
+                    COST OF BODY CONTOURING IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    The body contouring procedure should be highly customized to treat the specific areas of the body that are disrupting the figure. The total cost of the procedure varies from 1,00,000 INR to 3,00,000 INR depending on the different areas of treatment. Visiting an expert cosmetic surgeon would be wise to get the recommendations for the customized body contouring treatment.
+                    The cost of Body Contouring will rely largely on the type of surgery you choose. Depending on the part of your body, you can opt for an Arm Lift, Facelift, or other procedures. Considering the surgeon’s fee, medical tests, anesthesia, surgery equipment, and operating room are also substantial in fixing the cost of Body Contouring in Hyderabad. Our experienced plastic surgeons can provide a better insight into the cost of Body Contouring in Hyderabad.
                 </p>
-                <p>
-                    Our cosmetic surgeon is one of the best in this field in <?= ucwords($city) ?>. You can schedule a consultation session to get a good ballpark on the cost of this surgery along with other necessary details.
-                </p>
+
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Transform your appearance in a single body contouring surgery. Get rid of that excess flab of skin from all over your body to get a well-toned and youthful skin with <?= ucwords($city) ?>’s best surgeon by your side.
+                    You can come to us for a satiating Body Contouring surgery in Hyderabad. Our accomplished plastic surgeons will make sure to perform the surgery with due comfort, satisfaction, and ease. Additionally, they extend world-class facilities, surgery rooms, technical equipment, and caring staff to ensure the patients get a satisfying experience overall. Fix an appointment with our Body Contouring surgeon and clarify all your concerns before undergoing the surgery at our clinic in Hyderabad.
                 </p>
+
+                <!-- FAQS -->
+                <p class="identity">
+                    FAQs on Body Contouring Surgery in Hyderabad
+                </p>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            1. Are you a good candidate for Body Contouring?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            To be a suitable candidate for Body Contouring in Hyderabad, the following points are important to consider:
+                        </p>
+                        <ul>
+                            <li>
+                                Wish to eliminate stubborn fat from areas that remain unaffected by diet and exercise
+                            </li>
+                            <li>
+                                Maintain a steady weight close to your ideal body weight
+                            </li>
+                            <li>
+                                Good health condition overall
+                            </li>
+                            <li>
+                                Excellent skin elasticity
+                            </li>
+                            <li>
+                                Not a smoker or drinker
+                            </li>
+                            <li>
+                                Realistic expectations with the surgery
+                            </li>
+                            <li>
+                                Specific areas of interest such as Inner Thighs, Love Handles, Bra Rolls, Bat Wings, Saddlebags, Tummy Fat, etc.
+                            </li>
+                            <li>
+                                No plans to join any weight loss procedure
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            2. What is the cost of Body Contouring?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            The cost of a Body Contouring procedure in Hyderabad may range from 1,00,000 INR to 3,00,000 INR. It will largely rely on the specific areas that require treatment. It is advisable to consult with your surgeon to get a more accurate estimate of the total cost involved.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            3. What are the risks related to Body Contouring?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            Body Contouring in Hyderabad may require the surgeon to remove a significant amount of excess skin, depending on the weight lost after Bariatric Surgery. Following are some of the potential risks associated with this surgery:
+                        </p>
+                        <ul>
+                            <li>
+                                Bruising and swelling in the incision area
+                            </li>
+                            <li>
+                                Decreased sensation or numbness in the surgical site
+                            </li>
+                            <li>
+                                Allergic behaviour such as infection, redness, nausea, itchiness, or nausea to anesthesia, or surgery materials
+                            </li>
+                            <li>
+                                Pulling the incisions apart may result in delayed wound recover
+                            </li>
+                            <li>
+                                Protrusion in the appearance of mons pubis because of distortion
+                            </li>
+                            <li>
+                                Chances of Seroma of fluid build-up in the incision site
+                            </li>
+                            <li>
+                                Excessive bleeding
+                            </li>
+                            <li>
+                                The rare possibility of Skin necrosis or the death of tissues
+                            </li>
+                            <li>
+                                Deep Vein Thrombosis (DVT), resulting in the formation of blood clots in the deep veins
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            4. When can you go for Body Contouring?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            People in Hyderabad opt for Body Sculpting or Body Sculpting to get a thinner and more appealing body. Surgeons recommend going for it when regular exercise and balanced diets fail to show any effect in the body thinning regime. It is a widely demanded procedure for people who have suffered a massive loss of weight. Patients between the age of 30-60 years mostly prefer to undergo Body Contouring. At any age, good health remains the foremost condition.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            5. What are the things to do before Body Contouring Surgery?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                Talk to your surgeon to determine the most suitable Body Contouring procedure from among Upper-Body Lift, Lower-Body Lift, Abdominoplasty, Thigh Lift, or Arm Lift
+                            </li>
+                            <li>
+                                Inform your surgeon about any existing medication you are taking, so that he could make proper adjustments
+                            </li>
+                            <li>
+                                Prior to the surgery, undergo a complete medical evaluation and body check-up
+                            </li>
+                            <li>
+                                Maintain a stable weight before and after the procedure to achieve desired results
+                            </li>
+                            <li>
+                                Arrange for a family member or friend to accompany you home after the surgery
+                            </li>
+                            <li>
+                                Have a domestic help at home to assist you with routine activities for at least one week
+                            </li>
+                            <li>
+                                Expect scarring after the surgery and consult your surgeon about ways to minimize them
+                            </li>
+                            <li>
+                                Abstain from eating or drinking anything 8 hours prior to the surgery in Hyderabad
+                            </li>
+                            <li>
+                                Keep yourself hydrated before and after the surgery to eliminate toxins from the body
+                            </li>
+                            <li>
+                                To reduce the risk of increased bleeding after the surgery, avoid taking anti-inflammatory drugs, herbal supplements, or Aspirin
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            6. What to expect on the day of Body Contouring surgery?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                Before arriving at the hospital or clinic in Hyderabad, make sure you are mentally prepared for the procedure.
+                            </li>
+                            <li>
+                                The anesthesiologist will inquire about your response to anesthesia and adjust the dosage if you are allergic.
+                            </li>
+                            <li>
+                                The surgeon will create incisions at the necessary locations to remove excess fat tissue and tighten the skin.
+                            </li>
+                            <li>
+                                Following the surgery, your incisions will be closed with self-absorbing sutures, which reduce the risk of infection.
+                            </li>
+                            <li>
+                                The duration of surgery for a particular area of the body may take between 60 and 90 minutes,
+                            </li>
+                            <li>
+                                If multiple procedures are required, the surgery may take up to 6 hours to complete.
+                            </li>
+                            <li>
+                                Assuming no complications arise, you may be able to return to work in 4-6 weeks after the procedure,
+                            </li>
+                            <li>
+                                It is essential to have realistic expectations with the surgery in Hyderabad.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- FAQS -->
             </div>
         <?php } elseif ($surgery_str == "mommy makeover") { ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Mommy makeover surgery aims specifically at helping women get back their slim body after childbirth. A woman’s body goes through significant changes during and after pregnancy. For many, it can be difficult and almost impossible to get back to the previous shape they were in. This is where mommy makeover surgery is beneficial. Our cosmetic surgeon from <?= ucwords($city) ?> will inspect the entire body and make changes to breasts, buttocks, thighs, tummy and other locations where the size has increased.
+                        If you believe pregnancy is the end of your beauty, it’s not! All thanks to the cosmetic procedure of a Mommy Makeover, you can get a restored body after your delivery. The treatment is also a welcome move to diminish your ageing signs reflecting on your breasts, face, and other body parts. With our Mommy Makeover surgeon in Hyderabad, you can get a rejuvenated and slim body shape with minimal or no side effects at all.
                     </p>
                 </div>
                 <p class="identity">
-                    WHY CHOOSE MOMMY MAKEOVER SURGERY IN <?= ucwords($city) ?>?
+                    Why Choose Our Surgeons for Mommy Makeover in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        One of the best cosmetic surgeons in <?= ucwords($city) ?> who offers astonishing results with a wholesome mommy makeover surgery.
+                        Expert in restoring the pre-baby shape of women through custom-made treatments
                     </li>
                     <li>
-                        Customized surgery plans aimed at reducing the fat at specific areas of the mother’s body.
+                        Duly trained to perform Mommy Makeover procedures in Hyderabad
                     </li>
                     <li>
-                        Skilled at transforming the patients’ back to their old, thinner self.
+                        Can help you to get away with excess skin, drooping breasts, and separated muscles of the abdomen
                     </li>
                     <li>
-                        A reliable cosmetic surgeon with a clinic in <?= ucwords($city) ?> offering personalized treatment and medicines by considering the recent childbirth.
-                    </li>
-                    <li>
-                        An esteemed cosmetic surgeon and a member of several national and international boards for cosmetic surgery.
+                        Help females fulfil their personal goals like breast symmetry, nipple repair, or even fitting in a swimsuit.
                     </li>
                 </ul>
                 <p class="identity">
-                    COST OF MOMMY MAKEOVER SURGERY IN <?= ucwords($city) ?>
+                    COST OF MOMMY MAKEOVER IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    In the mommy makeover surgery, the cosmetic surgeon performs several surgeries like liposuction, breast lift, breast reduction, buttock augmentation/reduction, tummy tuck, etc. Therefore, the cost of mommy makeover surgery will vary according to the recommended surgeries. If you are considering mommy makeover surgery, you can consult our cosmetic surgeon in <?= ucwords($city) ?> to get an estimate of the complete treatment plan.
+                    Childbearing completely changes the body of a woman. But, with Mommy Makeover at our clinic at an affordable cost, you can regain the lost glamour of your body. The charges will depend very much on the reputation and experience of the surgeon and the clinic, along with the type of treatment, medical tests, anesthesia, surgery garments, etc. You can contact our cosmetic surgeons in Hyderabad to know about the involved cost of a Mommy Makeover.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Revamp your entire body and get rid of the fat to look slim and fabulous! Choose the customized mommy makeover treatments in <?= ucwords($city) ?> with breast lift, liposuction, tummy tuck, labiaplasty, facial rejuvenation, and other body contouring surgeries.
+                    Our Mommy Makeover experts will help to bring your body back to shape so that you could feel more like yourself after pregnancy. They provide the best of services during your stay in their respective clinics for the surgery. Our surgeons in Hyderabad perform the procedure in the industry best operating rooms laced with advanced treatment equipment with the assistance of their trained nursing staff. To know more about the procedure and to discuss your goals, feel free to consult any of our experienced Mommy Makeover specialists in Hyderabad.
                 </p>
+                <!-- FAQS -->
+                <p class="identity">
+                    FAQs on Mommy Makeover Surgery in Hyderabad
+                </p>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            1. Are you a good candidate for Mommy Makeover?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            To be an ideal candidate for a Mommy Makeover in Hyderabad, you should satisfy the following conditions:
+                        </p>
+                        <ul>
+                            <li>
+                                Excellent physical health
+                            </li>
+                            <li>
+                                Should have attained the optimal body weight
+                            </li>
+                            <li>
+                                A positive attitude towards the surgery
+                            </li>
+                            <li>
+                                No more plans for childbearing
+                            </li>
+                            <li>
+                                Non-smoker and a non-alcoholic
+                            </li>
+                            <li>
+                                Have had a Caesarian or C-section delivery earlier
+                            </li>
+                            <li>
+                                Delivered a minimum of 6 months ago
+                            </li>
+                            <li>
+                                Stopped breastfeeding at least 6 months earlier
+                            </li>
+                            <li>
+                                Reasonable expectations from the surgery
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            2. What is the cost of a Mommy Makeover?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            The estimated expense of a Mommy Makeover procedure in Hyderabad is approximately 300,000 INR. However, the cost may vary depending on the specific surgeries you choose to include or exclude from your personalized Mommy Makeover package.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            3. What are the risks related to Mommy Makeover?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                Possibility of allergic behaviour to anesthesia
+                            </li>
+                            <li>
+                                Excessive bleeding risk for individuals who consume tobacco or alcohol
+                            </li>
+                            <li>
+                                Chances of fluid accumulation or Seroma
+                            </li>
+                            <li>
+                                Development of Deep Vein Thrombosis (DVT)
+                            </li>
+                            <li>
+                                Hematoma or pooling of blood that can lead to severe swelling and bruising
+                            </li>
+                            <li>
+                                Risk of damage to lungs, nerves, muscles, blood vessels, and other underlying structures
+                            </li>
+                            <li>
+                                Reduced skin sensation in the breasts and nipples
+                            </li>
+                            <li>
+                                Pain and discomfort in the surgical incision sites
+                            </li>
+                            <li>
+                                Distorted or misplaced belly button after a Tummy Tuck procedure
+                            </li>
+                            <li>
+                                Visible scars resulting from Abdomniplasty or any breast surgery
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            4. When can you go for Mommy Makeover?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <p>
+                            A Mommy Makeover in Hyderabad would be a suitable decision if you have completed the childbearing phase and have no plans for pregnancy. This cosmetic procedure aims to restore the body to its pre-pregnancy state. Surgeons usually recommend this treatment to patients between 30-50 years of age.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            5. What are the things to do before the Mommy Makeover Surgery?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                To prepare for your surgery in Hyderabad, aim to reach your ideal weight.
+                            </li>
+                            <li>
+                                Have someone to help in your daily activities after the surgery
+                            </li>
+                            <li>
+                                Maintain a healthy lifestyle before and after the procedure,
+                            </li>
+                            <li>
+                                Paying attention to a nutritious diet
+                            </li>
+                            <li>
+                                Consult with the surgeon before taking any health supplements, herbs, or other medications to avoid potential complications.
+                            </li>
+                            <li>
+                                Stop consuming tobacco or alcohol at least 2 weeks before the surgery
+                            </li>
+                            <li>
+                                Arrange for an electric recliner or wedge pillow for comfortable back support post-surgery.
+                            </li>
+                            <li>
+                                Use a laxative for smoother bowel movements.
+                            </li>
+                            <li>
+                                Apply for off from your work in advance to take complete rest after the surgery
+                            </li>
+                            <li>
+                                Minimise stress levels to maintain good physical and mental health before and after the procedure.
+                            </li>
+                            <li>
+                                Boost your immune system and avoid falling victim to severe health conditions to be ready for the surgery
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="accordion-container">
+                    <a onclick="accordion_elm(this)" href="#" class="accordion-toggle">
+                        <span>
+                            6. What to expect on the day of Mommy Makeover surgery?
+                        </span>
+                        <span class="accordion-icon">
+                            <i class="fa fa-chevron-down pull-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>
+                                Be at the clinic with a prepared mind, free of any confusion regarding Mommy Makeover surgery in Hyderabad
+                            </li>
+                            <li>
+                                The medical staff will perform routine check-ups on your body
+                            </li>
+                            <li>
+                                You can discuss your concerns and questions about the surgery with your surgeon.
+                            </li>
+                            <li>
+                                The surgeon will make incisions in appropriate locations depending on the specific procedures you choose to undergo.
+                            </li>
+                            <li>
+                                Different procedures, such as Breast Augmentation, Breast Lift, Liposuction, and Tummy Tuck, may be combined in a Mommy Makeover.
+                            </li>
+                            <li>
+                                Due to the complexity of the procedures involved, the entire Mommy Makeover may take up to 4-5 hours or longer to complete.
+                            </li>
+                            <li>
+                                Plan for a recovery period of 7-10 days after the surgery.
+                            </li>
+                            <li>
+                                The surgeon will advise you to resume normal activities only after one week of recovery.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- FAQS -->
             </div>
         <?php } elseif ($surgery_str == "hair transplant") { ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
                         <strong>
-                            Are you losing confidence because of thinning or balding hair?
+                            Trustworthy Hair Transplant Surgeons in Hyderabad
                         </strong>
                     </p>
                     <p>
-                        Not anymore! Get the best cosmetic surgeon in <?= ucwords($city) ?> known for the skilled hair transplant treatment to help you regain your confidence. Through hair transplantation surgery, the surgeon will extract hair grafts or follicles from your scalp, treat them and place it in the thinning areas. It is best for patients suffering from acute hair fall, balding hall, thinned-out hair, alopecia, or any other similar condition.
+                        A Hair Transplant is a highly effective solution to address hair loss, alopecia, thinning hair, and baldness through two common procedures - FUE and FUT. The FUT technique involves removing a strip of hair-bearing skin from the donor area and transplanting the hair follicles to the recipient site. Likewise, FUE involves extracting individual hair follicles directly from the donor area and transplanting them to the area of hair loss. If you are going bald at a rapid pace and want to restore your hair, undergoing a Hair Transplant surgery from any of our skilled Hair Transplant surgeons in Hyderabad would be a fruitful solution.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Cosmetic Surgeons for Hair Transplant in <?= ucwords($city) ?>?
+                    Why Choose Our Surgeons for Hair Transplant in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Top cosmetic surgeons for hair transplantation in <?= ucwords($city) ?> with a high success rate
+                        Expert plastic surgeons endorsed with high-end qualifications and credible experience
                     </li>
                     <li>
-                        Adept at performing the widely acclaimed hair transplant treatments - Follicular Unit Extraction (FUE) and Follicular Unit Transplantation (FUT) with dexterity
+                        Can perform Hair Transplant surgery with long-lasting results
                     </li>
                     <li>
-                        Ability to tailor the areas of transplantation based on the patient’s expectations to achieve a fuller-looking scalp.
+                        Board-certified and trained surgeons
                     </li>
                     <li>
-                        Board-recognized cosmetic surgeon and member of several hair transplant associations.
+                        Member of several reputed plastic surgery associations in India and abroad
+                    </li>
+                    <li>
+                        Carry out Hair Transplant surgeries at a reasonable cost
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF HAIR TRANSPLANT TREATMENT IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    You can opt from among two types of common hair transplant surgeries, FUT and FUE, The cost of both treatments varies depending on the number of grafts needed. To know the exact rates, you can visit any of our expert cosmetic surgeons in <?= ucwords($city) ?>.
+                    The cost of Hair Transplant Surgery in Hyderabad depends significantly on the requirement, grade of hair graft, the size of the head affected with hair loss or baldness, etc. Contacting any of our experienced Hair Transplant surgeons in Hyderabad will help you know about the ingrained costs the best way.
                 </p>
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    We all love to have a full head of hair. This is now possible with customized hair transplant surgery by an expert cosmetic surgeon in <?= ucwords($city) ?>. Enjoy thicker and fuller hair that makes you look younger!
+                    All our surgeons provide excellent amenities to Hair Transplant aspirants. With our expert surgeons performing the treatment with the help of their trained and cordial nursing staff, you just cannot ask for more. They prefer using the industry best equipment to perform the surgery in the advanced and highly equipped surgery rooms. You can leave the clinics of our experienced Hair Transplant experts in Hyderabad with due satisfaction. Fix an appointment with any of our expert surgeons today to find out more about your hair restoration prospects.
                 </p>
                 <p class="identity">
                     FAQs on Hair Transplant Surgery in <?= ucwords($city) ?>
@@ -5895,29 +6301,29 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you abide by the following criteria, you will be an ideal candidate for hair transplant surgery in <?= ucwords($city) ?>:
+                            Satisfying these important pointers will make you a suitable candidate for Hair Transplant surgery in Hyderabad:
                         </p>
                         <ul>
                             <li>
-                                You have been losing your hair out of male pattern baldness for around 5 years or more
+                                You are experiencing male pattern baldness for at least five years or more.
                             </li>
                             <li>
-                                You have advanced to Class 3 or beyond on the Norwood Scale.
+                                You have advanced to Stage 3 or beyond on the Norwood Scale.
                             </li>
                             <li>
-                                Your hair at the back and sides of your scalp have a healthy growth, good enough to serve as the donor zone
+                                You have healthy hair growth at the back and sides of your scalp to serve as a donor area.
                             </li>
                             <li>
-                                You have Scarring alopecia – a hair loss type resulting due to the damage of hair follicles
+                                You have scarring alopecia, a hair loss condition caused by damage to hair follicles.
                             </li>
                             <li>
-                                You have suffered hair loss due to scalp injuries, scarring, or some cosmetic surgery procedures
+                                Your hair loss misery is a result of scalp injuries, scarring, or previous cosmetic surgery procedures.
                             </li>
                             <li>
-                                You have good health overall and a healthy scalp
+                                You have good overall health and a healthy scalp.
                             </li>
                             <li>
-                                You have reasonable expectations with the surgery
+                                You have realistic expectations for the surgery.
                             </li>
                         </ul>
                     </div>
@@ -5933,10 +6339,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The average cost of Hair Transplant Surgery in <?= ucwords($city) ?> depends largely on the number of grafts. For example, the cost of the procedure per 2000 grafts lies in the range of 55,000 INR to 80,000 INR. For a Hair Transplant involving 5000 grafts, the average cost is 1,00,000 INR – 1,40,000 INR and beyond.
-                        </p>
-                        <p>
-                            Usually, the cost per graft is 40 INR to 100 INR. The cost also depends on various other factors like baldness level, number of sessions, the technique used (FUT or FUE), availability of graft donor area, the surgeon, and the clinical set up among others.
+                            The cost depends mainly on the number of grafts transplanted. Mostly you will need to pay around 40 INR – 100 INR per graft. In case of a larger number of grafts, such as 2000 grafts, the cost will be between 55,000 INR – 80,000 INR. Likewise, for transplanting 5000 grafts, the cost will be in the range of 1,00,000 INR to 1,40,000 INR or maybe more. Various factors like level of baldness, transplant sessions, FUT or FUE technique used, and more, also affect the cost of Hair Transplant in Hyderabad.
                         </p>
                     </div>
                 </div>
@@ -5951,29 +6354,35 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            Usually, Hair Transplant surgery in <?= ucwords($city) ?> is a safe procedure to help your hair restoration goals. It may however accompany several risks at times, such as:
+                            Hair Transplant surgery is mostly a safe procedure. In rare instances, it may however accompany several complications:
                         </p>
                         <ul>
                             <li>
-                                Pain after the surgery
+                                Unbearable pain in the treated area
                             </li>
                             <li>
-                                Unexpected outcomes
+                                Allergic behaviour to anesthesia
                             </li>
                             <li>
-                                Possibility of bleeding, infection, itching, or scarring
+                                Drainage of pus or crust around the incision site
                             </li>
                             <li>
-                                Chances of wound dehiscence or skin necrosis
+                                Unfavourable outcomes
                             </li>
                             <li>
-                                Scalp swelling
+                                Bleeding, scarring, or itching
                             </li>
                             <li>
-                                Lack of sensation in the treated scalp areas
+                                Inflammation or swelling of hair follicles
                             </li>
                             <li>
-                                Need for a revision surgery
+                                Skin necrosis or wound dehiscence
+                            </li>
+                            <li>
+                                Reduced sensation in the treated site of the scalp
+                            </li>
+                            <li>
+                                Requirement for a correction surgery
                             </li>
                         </ul>
                     </div>
@@ -5989,7 +6398,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            There is no fixed age to undergo hair transplant surgery, but surgeons mostly recommend the patients be at least 21 years old to opt for it. Moreover, if you have just started noticing hair fall and you have not gone completely bald yet, this is the right time to go for the Hair transplant from a clinic in <?= ucwords($city) ?> or elsewhere. At this specific stage, the surgeon can use your existing hair for transplantation in the early restoration phases.
+                            Usually, surgeons recommend the age of 21 years or beyond for Hair Transplant surgery. In case you have surpassed this stage and started noticing hair fall, this is high time to go for Hair Transplant before you go completely bald. Due to the early restoration phase, our surgeons in Hyderabad may leverage your existing hair for the transplant.
                         </p>
                     </div>
                 </div>
@@ -6003,27 +6412,30 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
-                        <p>
-                            Before going for hair transplant surgery in <?= ucwords($city) ?>, you need to clear all the doubts in your mind regarding the procedure. Consultation with your surgeon will be ideal to help you in this regard. Here are some other things to do before undergoing the surgery
-                        </p>
                         <ul>
                             <li>
-                                Be ready with the reports of the routine blood tests like CBC, HCV, ECG, etc. instructed by the surgeon.
+                                Visit your surgeon to clear all the doubts in your mind regarding the procedure.
                             </li>
                             <li>
-                                If you are a smoker or an alcoholic, stop consuming them at least 2 weeks before the treatment
+                                Have proper medical evaluation and undergo all the tests recommended by your surgeon, such as HCV, ECG, CBC, etc.
                             </li>
                             <li>
-                                Inform the doctor about any medication that you are taking currently, to stop or adjust it accordingly
+                                Stop drinking or smoking around 2 weeks before the surgery
                             </li>
                             <li>
-                                Avoid taking spicy food the night prior to the surgery.
+                                Stop taking any existing medication unless allowed by the surgeon
                             </li>
                             <li>
-                                Wash your hair for at least two days with shampoo before going for hair transplantation
+                                Do not eat a spicy meal at night before the surgery in Hyderabad
                             </li>
                             <li>
-                                Let your doctor know if you have allergic behaviour to any particular medicine or anesthesia.
+                                A gap of around 8 hours between your last meal and the surgery would be ideal
+                            </li>
+                            <li>
+                                You may not be in the best of condition to go home on your own, hence make sure to have someone to accompany you
+                            </li>
+                            <li>
+                                Arrange for loose-fitting dresses, such as button shirts, which are easy to wear and remove
                             </li>
                         </ul>
                     </div>
@@ -6038,186 +6450,71 @@ if ($getAssignedDoctors->isNotEmpty()) {
                         </span>
                     </a>
                     <div class="accordion-content">
+                        <p>
+                            On the day of the treatment, arrive at your Hyderabad clinic with a calm and composed mind
+                        </p>
                         <ul>
                             <li>
-                                On the day of the hair transplantation surgery in <?= ucwords($city) ?>, come with a prepared and stress-free mind.
+                                Have realistic expectations with the surgery
                             </li>
                             <li>
-                                Cooperate with the clinic staff in completing all the pre-operative formalities
+                                Help the clinical staff with routine activities regarding patient care
                             </li>
                             <li>
-                                The surgeon can choose to keep you awake during the entire procedure and administer anesthesia to numb your scalp
+                                The surgery may decide numb only your scalp by administering anesthesia instead of using it for the entire body
                             </li>
                             <li>
-                                Be patient enough to bear the lengthy process of hair transplantation, as it can take around four to eight hours for a single session to complete
+                                The Hair Transplant can be lengthy at times, so you need to bear patience
                             </li>
                             <li>
-                                In case of a large volume of hair transplantation, you may have to revisit the clinic and devote a few more hours the next day to undergo the remaining treatment.
+                                If the surgery involves transplanting large volumes of hair, one session might not be enough
                             </li>
                             <li>
-                                Overall, you should have realistic expectations with the hair transplant surgery in <?= ucwords($city) ?>.
+                                In any such case, you will have to revisit the clinic for the completion of the remaining surgery in Hyderabad
+                            </li>
+                            <li>
+                                Your wounds will recover in a week or two. During recovery, you may expect a swollen, red, and scabby scalp. These signs will however vanish in around 10-14 days
                             </li>
                         </ul>
                     </div>
                 </div>
-                <!-- ACCODION -->
-                <!-- <p class="cosmetic-faq-list">
-                        1. Are you a good candidate for Hair Transplant surgery?
-                    </p>
-                    <p>
-                        If you abide by the following criteria, you will be an ideal candidate for hair transplant surgery in <?= ucwords($city) ?>:
-                    </p>
-                    <ul>
-                        <li>
-                            You have been losing your hair out of male pattern baldness for around 5 years or more
-                        </li>
-                        <li>
-                            You have advanced to Class 3 or beyond on the Norwood Scale.
-                        </li>
-                        <li>
-                            Your hair at the back and sides of your scalp have a healthy growth, good enough to serve as the donor zone
-                        </li>
-                        <li>
-                            You have Scarring alopecia – a hair loss type resulting due to the damage of hair follicles
-                        </li>
-                        <li>
-                            You have suffered hair loss due to scalp injuries, scarring, or some cosmetic surgery procedures
-                        </li>
-                        <li>
-                            You have good health overall and a healthy scalp
-                        </li>
-                        <li>
-                            You have reasonable expectations with the surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        2. What is the cost of a Hair Transplant?
-                    </p>
-                    <p>
-                        The average cost of Hair Transplant Surgery in <?= ucwords($city) ?> depends largely on the number of grafts. For example, the cost of the procedure per 2000 grafts lies in the range of 55,000 INR to 80,000 INR. For a Hair Transplant involving 5000 grafts, the average cost is 1,00,000 INR – 1,40,000 INR and beyond.
-                    </p>
-                    <p>
-                        Usually, the cost per graft is 40 INR to 100 INR. The cost also depends on various other factors like baldness level, number of sessions, the technique used (FUT or FUE), availability of graft donor area, the surgeon, and the clinical set up among others.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        3. What are the risks related to Hair Transplant?
-                    </p>
-                    <p>
-                        Usually, Hair Transplant surgery in <?= ucwords($city) ?> is a safe procedure to help your hair restoration goals. It may however accompany several risks at times, such as:
-                    </p>
-                    <ul>
-                        <li>
-                            Pain after the surgery
-                        </li>
-                        <li>
-                            Unexpected outcomes
-                        </li>
-                        <li>
-                            Possibility of bleeding, infection, itching, or scarring
-                        </li>
-                        <li>
-                            Chances of wound dehiscence or skin necrosis
-                        </li>
-                        <li>
-                            Scalp swelling
-                        </li>
-                        <li>
-                            Lack of sensation in the treated scalp areas
-                        </li>
-                        <li>
-                            Need for a revision surgery
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        4. When can you go for Hair Transplant?
-                    </p>
-                    <p>
-                        There is no fixed age to undergo hair transplant surgery, but surgeons mostly recommend the patients be at least 21 years old to opt for it. Moreover, if you have just started noticing hair fall and you have not gone completely bald yet, this is the right time to go for the Hair transplant from a clinic in <?= ucwords($city) ?> or elsewhere. At this specific stage, the surgeon can use your existing hair for transplantation in the early restoration phases.
-                    </p>
-                    <p class="cosmetic-faq-list">
-                        5. What are the things to do before Hair Transplant Surgery?
-                    </p>
-                    <p>
-                        Before going for hair transplant surgery in <?= ucwords($city) ?>, you need to clear all the doubts in your mind regarding the procedure. Consultation with your surgeon will be ideal to help you in this regard. Here are some other things to do before undergoing the surgery
-                    </p>
-                    <ul>
-                        <li>
-                            Be ready with the reports of the routine blood tests like CBC, HCV, ECG, etc. instructed by the surgeon.
-                        </li>
-                        <li>
-                            If you are a smoker or an alcoholic, stop consuming them at least 2 weeks before the treatment
-                        </li>
-                        <li>
-                            Inform the doctor about any medication that you are taking currently, to stop or adjust it accordingly
-                        </li>
-                        <li>
-                            Avoid taking spicy food the night prior to the surgery.
-                        </li>
-                        <li>
-                            Wash your hair for at least two days with shampoo before going for hair transplantation
-                        </li>
-                        <li>
-                            Let your doctor know if you have allergic behaviour to any particular medicine or anesthesia.
-                        </li>
-                    </ul>
-                    <p class="cosmetic-faq-list">
-                        6. What to expect on the day of Hair Transplant surgery?
-                    </p>
-                    <ul>
-                        <li>
-                            On the day of the hair transplantation surgery in <?= ucwords($city) ?>, come with a prepared and stress-free mind.
-                        </li>
-                        <li>
-                            Cooperate with the clinic staff in completing all the pre-operative formalities
-                        </li>
-                        <li>
-                            The surgeon can choose to keep you awake during the entire procedure and administer anesthesia to numb your scalp
-                        </li>
-                        <li>
-                            Be patient enough to bear the lengthy process of hair transplantation, as it can take around four to eight hours for a single session to complete
-                        </li>
-                        <li>
-                            In case of a large volume of hair transplantation, you may have to revisit the clinic and devote a few more hours the next day to undergo the remaining treatment.
-                        </li>
-                        <li>
-                            Overall, you should have realistic expectations with the hair transplant surgery in <?= ucwords($city) ?>.
-                        </li>
-                    </ul> -->
             </div>
         <?php } elseif ($surgery_str == "men and plastic surgery") { ?>
             <div class="col padd-null">
                 <div class="top-content">
                     <p>
-                        Women are not the only ones who wish to look their best. Nowadays, men too want to beautify themselves, look slim, have flawless skin, and there is nothing wrong with that! Several cosmetic surgeries for men exist to treat different concerns like flabby stomach, sagging or blemished skin, facial wrinkles, or any other issues. Our cosmetic surgeons from <?= ucwords($city) ?> are one of the best to perform men’s cosmetic surgeries.
+                        Just like women, men also aspire to flaunt an appealing personality and this is no hidden fact. Our plastic surgeons hence pay due attention to the requirements of men as well. You can count on the professional excellence of our experienced surgeons to undergo your preferred treatment. Whether you are looking for a flat and slim belly or a perfect nose, reduced breasts, or wrinkle-free eyelids, our expert experts in Hyderabad will help you to fulfill all these desires with appropriate surgeries.
                     </p>
                 </div>
                 <p class="identity">
-                    Why Choose Our Surgeons for Men’s Plastic Surgery in <?= ucwords($city) ?>?
+                    Why Approach Our Surgeons Men and Plastic Surgery in <?= ucwords($city) ?>?
                 </p>
                 <ul>
                     <li>
-                        Top choices in <?= ucwords($city) ?> for performing cosmetic surgeries for men
+                        Board-certified surgeons in Hyderabad, duly trained to perform specialized plastic surgeries.
                     </li>
                     <li>
-                        Run a fully equipped clinic with the infrastructure needed to perform extensive surgeries for men
+                        Experienced plastic surgeons perform varied plastic surgeries for males
                     </li>
                     <li>
-                        Experienced at performing gynecomastia, Men’s Plastic Surgery, ear surgery, facelift, chin augmentation, tummy tuck, and many more procedures
+                        Helps instill confidence among males with successful procedures
                     </li>
                     <li>
-                        Best cosmetic surgeons in <?= ucwords($city) ?> certified by several national and international boards of cosmetic surgeons
+                        Can ensure long-lasting results with cost-effective treatments
                     </li>
                 </ul>
                 <p class="identity">
                     COST OF MEN’S PLASTIC SURGERY IN <?= ucwords($city) ?>
                 </p>
                 <p>
-                    When it comes to the choices for plastic surgery in men, the options are multiple. From facial non-invasive and minimally invasive treatments to extensive full-body procedures, you can go for any of them. Therefore, the cost of plastic surgery for men also varies depending on the treatment. If you have any specific concerns, feel free to visit any of our acclaimed cosmetic surgeons in <?= ucwords($city) ?> for proper guidance.
+                    The estimated cost of plastic surgery for males differs as per the type of surgery opted for. Our plastic surgeons in Hyderabad are proficient at correcting distinctive anomalies in males through various surgeries like Liposuction, Male Breast Reduction, Facelift, Hair Transplant, Botox, Blepharoplasty, and more. The rates for all of them vary significantly. You can consult our dexterous plastic surgeons directly to discuss your concerns and the surgery that you believe could help your cause. They will suggest the right treatment with the involved cost accordingly.
                 </p>
+
                 <p class="identity">OUR SERVICES</p>
                 <p>
-                    Regain your confidence with your choice of cosmetic surgery. Consult with <?= ucwords($city) ?>’s most esteemed cosmetic surgeon and be your youthful self.
+                    We are ever ready to assist our patients with all types of plastic surgery procedures. From non-invasive to minimally invasive to full body procedures, our dexterous plastic surgeon in Hyderabad can perform all these surgery types with thriving results. Our excellent surgery facilities, well supported by a trained nursing staff help the surgeon to perform the required procedure with due satisfaction.
                 </p>
+
                 <p class="identity">
                     FAQs on Men’s Plastic Surgery in <?= ucwords($city) ?>
                 </p>
@@ -6233,35 +6530,35 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            If you are a male and looking to undergo plastic surgery in <?= ucwords($city) ?> to enhance your physical appearance, fulfilling the following points will make you a suitable candidate:
+                            To be a suitable candidate for plastic surgery aimed at enhancing your physical appearance as a male in Hyderabad, you should satisfy the following conditions:
                         </p>
                         <ul>
                             <li>
-                                You are an adult with good overall health
+                                An adult with good overall health
                             </li>
                             <li>
-                                You are free from severe health conditions like high blood pressure, heart problems, diabetes, etc.
+                                Free from any serious health conditions, such as high blood pressure, heart problems, or diabetes.
                             </li>
                             <li>
-                                You are a non-smoker and non-alcoholic
+                                A non-smoker and non-drinker
                             </li>
                             <li>
-                                You have developed too much sagging skin
+                                Have excess sagging skin
                             </li>
                             <li>
-                                Your current body weight is close to your ideal weight
+                                The current body weight is near your ideal weight
                             </li>
                             <li>
-                                You want to get away with excess fat accumulated in your tummy, thighs, eyelid, arms, etc.
+                                Want to eliminate excess fat in areas such as your tummy, thighs, arms, and eyelids
                             </li>
                             <li>
-                                You have set realistic expectations for the surgery
+                                Have realistic expectations regarding the outcome of the surgery
                             </li>
                             <li>
-                                You want to opt for surgery to correct the asymmetric body features
+                                Interested in correcting any asymmetric body features
                             </li>
                             <li>
-                                You want to restore your body features after an accident
+                                Wish to restore the damaged features of your body after an accident
                             </li>
                         </ul>
                     </div>
@@ -6277,7 +6574,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            The rates start from as low as a couple of thousands for dermal fillers, acne treatment, and laser skin treatment to more than 3,00,000 INR for extensive body contouring and reshaping surgeries. Consult one of our surgeons to know the amount for the specific Men’s Plastic Surgery you wish to undergo in <?= ucwords($city) ?>.
+                            The cost of men's plastic surgery in Hyderabad can differ depending on the specific procedure you opt for. For instance, dermal fillers, acne treatment, and laser skin treatment are available at rates starting from 1000 INR and increase significantly depending on the number of treatments you undergo. More extensive body contouring and reshaping surgeries may cost over 3,00,000 INR. To determine the exact cost of a procedure, it is advisable to consult any of our experienced surgeons.
                         </p>
                     </div>
                 </div>
@@ -6293,34 +6590,37 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Allergic reaction to anesthesia
+                                Allergic response to anesthesia
                             </li>
                             <li>
-                                Loose or sagging skin
+                                Loose or sagging skin after the surgery
                             </li>
                             <li>
-                                Change or decrease in the sensation in the treated area
+                                Reduced sensation in the treated area
                             </li>
                             <li>
-                                Intense pain after the starting few days of the surgery
+                                Acute pain at the incision site for the few days post surgery
                             </li>
                             <li>
-                                Bleeding and swelling that persists for a week
+                                Bleeding and swelling that persists for around a week
                             </li>
                             <li>
-                                Infection due to surgery such as bruising, redness, itching, fever, warmth, etc.
+                                Infection due to the use of surgical items
+                            </li>
+                            <li>
+                                Possibility of bruising, redness, itching, or fever
                             </li>
                             <li>
                                 Seroma or pooling of fluid in the body
                             </li>
                             <li>
-                                Hematoma or pooling of blood, which tends the skin to feel rubbery, spongy, and lumpy
+                                Hematoma or pooling of blood, which causes the skin to feel rubbery, spongy, and lumpy
                             </li>
                             <li>
                                 Possibility of revisional surgery
                             </li>
                             <li>
-                                Poor healing due to careless stitching
+                                Delayed healing due to poor stitching
                             </li>
                         </ul>
                     </div>
@@ -6336,7 +6636,7 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     </a>
                     <div class="accordion-content">
                         <p>
-                            When you feel like enhancing your appearance, distorted due to an injury or age, opting for Men’s Plastic Surgery in <?= ucwords($city) ?> would be advisable. There is no fixed age to undergo plastic surgery, as even teenagers could undergo it after the consent of their parents. Still, to be on the side, you should be at least 18 years of age.
+                            Men's plastic surgery in Hyderabad can be a good option for enhancing your appearance, distorted due to an injury or age. There is no set age limit for undergoing plastic surgery. Even teenagers can opt for it with their parent’s consent. However, it is wise to wait until you are at least 18 years old before considering plastic surgery.
                         </p>
                     </div>
                 </div>
@@ -6352,28 +6652,31 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                Prepare yourself well for the surgery by following the pre-surgery instructions given by the surgeon
+                                To prepare for your plastic surgery in Hyderabad, follow the pre-surgery instructions provided by your surgeon
                             </li>
                             <li>
-                                Maintain a healthy, balanced, and nutritious diet before going for the surgery
+                                For optimal results, make the habit to have a healthy, balanced, and nutritious diet
                             </li>
                             <li>
-                                Drink around 6-8 glasses of water per day to hydrate and cleanse your body
+                                Drinking around 6-8 glasses of water per day can cleanse and hydrate your body before the surgery
                             </li>
                             <li>
-                                Stop smoking at least 2 weeks before the surgery
+                                To ensure proper healing, it is advisable to stop smoking at least 2 weeks prior to the procedure
                             </li>
                             <li>
-                                Stop consuming alcohol at least 2 weeks prior to the procedure
+                                Avoid consuming alcohol for at least 2 weeks before the surgery
                             </li>
                             <li>
-                                Have someone accompany you to the clinic, take you back after the surgery, and assist you in daily activities for around 1 week after the surgery
+                                Arrange for someone to accompany you to the clinic and take you home after the surgery
                             </li>
                             <li>
-                                Arrange for loose clothes to wear after the surgery for quicker healing
+                                Have domestic help to support you in daily activities for about a week following the procedure
                             </li>
                             <li>
-                                Clear all the doubts regarding plastic surgery in <?= ucwords($city) ?> with your surgeon
+                                Arranging for loose clothing in advance to wear after the surgery for faster recovery
+                            </li>
+                            <li>
+                                Clear any doubts you have about plastic surgery in Hyderabad with your surgeon beforehand
                             </li>
                         </ul>
                     </div>
@@ -6390,31 +6693,28 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                                You should arrive at the hospital or clinic in <?= ucwords($city) ?> for Men’s Plastic Surgery with a calm and composed mind
+                            When arriving for Men's Plastic Surgery in Hyderabad, you should come with a prepared mind 
                             </li>
                             <li>
-                                Feel relaxed and at ease
+                            Discuss any concerns or reactions you have to anesthesia with the anesthesiologist to enable him to adjust the dose accordingly
                             </li>
                             <li>
-                                Discuss your reaction to anesthesia with the anesthesiologist so that he could adjust the dose accordingly
+                            The surgeon will utilize the most up-to-date and sophisticated equipment to make incisions in the targeted area of your body
                             </li>
                             <li>
-                                The surgeon will use the latest and advanced equipment to create incisions in the concerned site on your body
+                            Following the surgery and incision-making process, the surgeon will use sutures to close the incisions.
                             </li>
                             <li>
-                                After making the incision and doing the surgery, the surgeon will stitch the incision with sutures
+                            The length of the procedure will vary depending on the type of surgery you opt for and may take a few hours to complete
                             </li>
                             <li>
-                                The entire procedure may take a few hours to complete depending on the surgery you opt for
+                            Strictly adhere to the aftercare instructions given by your surgeon for prompt healing
                             </li>
                             <li>
-                                The surgeon will provide aftercare instructions that you would need to abide strictly from prompt healing
+                            Take 2-3 weeks off from work for a satisfying recovery
                             </li>
                             <li>
-                                You can return to your work in around 2-3 weeks.
-                            </li>
-                            <li>
-                                You should have realistic expectations with the surgery so that you do not face problems with unfavourable results.
+                            To avoid complications from unfavorable results, make sure to have realistic expectations with the surgery
                             </li>
                         </ul>
                     </div>
