@@ -992,7 +992,7 @@ ul.nav.nav-tabs {
 
 .mtab .nav-link.ancr {
     color: #000000;
-    padding: 13px 50px;
+    padding: 10px 45px;
     margin: 1px;
     font-size: 19px;
     border-radius: 48px;
@@ -1640,7 +1640,7 @@ footer ul li a:hover {
         margin-bottom: 14px;
     }
     .mtab .nav-link.ancr {
-        padding: 13px 7px;
+        padding: 10px 7px;
     }
     .ico {
         height: auto;
