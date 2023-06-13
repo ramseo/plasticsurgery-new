@@ -3,23 +3,23 @@
         <p class="identity m-auto text-center">
             Find Your Procedure
         </p>
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="nav-item default-active-cls active">
+        <ul class="nav nav-tabs my-4" role="tablist">
+            <li class="nav-item default-active-cls nav-switch active">
                 <a class="nav-link default-active-cls active ancr" data-toggle="tab" href="#home" aria-expanded="true">
                     Face Procedures
                 </a>
             </li>
-            <li class="nav-item remove-default-active-cls">
+            <li class="nav-item remove-default-active-cls nav-switch">
                 <a class="nav-link ancr" data-toggle="tab" href="#menu1" aria-expanded="false">
-                    Breast Procedures
+                    Breast Procedures 
                 </a>
             </li>
-            <li class="nav-item remove-default-active-cls">
+            <li class="nav-item remove-default-active-cls nav-switch">
                 <a class="nav-link ancr" data-toggle="tab" href="#menu2" aria-expanded="false">
                     Body Procedures
                 </a>
             </li>
-            <li class="nav-item remove-default-active-cls">
+            <li class="nav-item remove-default-active-cls nav-switch">
                 <a class="nav-link ancr" data-toggle="tab" href="#menu3" aria-expanded="false">
                     Male Specific Procedures
                 </a>
