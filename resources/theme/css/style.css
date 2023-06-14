@@ -69,7 +69,7 @@ a:hover {
 }
 
 .sr-heading {
-    background-image: linear-gradient(36deg, #36d1dc, #5b86e5);
+    background-image: linear-gradient(36deg, #F88379, #c35248);
     color: #ffff;
     font-size: 25px;
     padding: 14px 24px;
@@ -250,7 +250,7 @@ a:hover {
     margin-top: 18px;
     margin-bottom: 17px;
     font-size: 23px;
-    color: #333;
+    color: #fff;
     font-weight: 600;
 }
 
@@ -972,7 +972,7 @@ ul.nav.nav-tabs {
 .before h4 {
     text-align: center;
     font-size: 19px;
-    background-color: #32ded4;
+    background-color: #F88379;
     color: #fff;
     padding: 19px;
 }
@@ -3513,7 +3513,7 @@ img {
     background: #F88379;
     margin-left: 37px;
     margin-top: 7px;
-    padding: 10px 25px;
+    padding: 10px 20px;
     color: #fff;
     border-radius: 11px;
 }
@@ -4034,4 +4034,22 @@ img {
 
 .fueparatext {
     text-align: left;
+}
+
+.card button:hover {
+    background-color: #c35248;
+}
+
+.aon-title a {
+    color: #F88379;
+}
+
+.page-link {
+    color: #F88379!important;
+}
+
+.page-item.active .page-link {
+    background-color: #F88379!important;
+    border: #F88379!important;
+    color: #fff!important;
 }
