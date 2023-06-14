@@ -29,7 +29,7 @@ class LeadFormMail extends Mailable
      */
     public function build()
     {
-        $domain = $_SERVER['REQUEST'];
+        $domain = $_SERVER['SERVER_NAME'];
         return $this->subject($this->data->name . " - " . "" . "New Patient Enquiry from : $domain")
             ->view('emails.lead-form');
     }
