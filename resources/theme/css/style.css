@@ -1129,7 +1129,7 @@ ul.nav.nav-tabs {
 .nav-tabs>li.active>a:focus {
     color: #555;
     cursor: default;
-    background-color: #000 !important;
+    /* background-color: #000 !important; */
     border: 1px solid #ddd;
     border-bottom-color: transparent;
     color: #fff;
