@@ -1127,12 +1127,12 @@ ul.nav.nav-tabs {
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:hover,
 .nav-tabs>li.active>a:focus {
-    color: #555;
+    /* color: #555; */
     cursor: default;
-    /* background-color: #000 !important; */
-    border: 1px solid #ddd;
-    border-bottom-color: transparent;
-    color: #fff;
+    /* background-color: #F88379 !important; */
+    /* border: 1px solid #ddd; */
+    /* border-bottom-color: transparent; */
+    /* color: #fff; */
 }
 
 .bald ul li img {
@@ -4161,5 +4161,5 @@ img {
 /* aos css */
 
 .heading-margin .nav.nav-tabs {
-    margin: 35px 0 0 0;
+    margin: 35px 0 35px 0;
 }
