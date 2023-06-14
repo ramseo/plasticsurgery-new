@@ -29,8 +29,8 @@ class LeadFormMail extends Mailable
      */
     public function build()
     {
-
-        return $this->subject($this->data->name . " - New Patient Enquiry from : cosmeticsurgery.in")
+        $domain = $_SERVER['SERVER_NAME'];
+        return $this->subject($this->data->name . " - New Patient Enquiry from : $domain")
             ->view('emails.lead-form');
     }
 }
