@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Mail;
 use App\Mail\LeadFormMail;
+use App\Mail\LeadFormMailUser;
 
 class leadform extends Model
 {
@@ -32,7 +33,12 @@ class leadform extends Model
 
         static::created(function ($item) {
             $to = Setting('email');
-            Mail::to($to)->bcc($item->email)->send(new LeadFormMail($item));
+            Mail::to($to)->send(new LeadFormMail($item));
+        });
+
+        static::created(function ($item) {
+            $to = Setting('email');
+            Mail::to($item->email)->send(new LeadFormMailUser($item));
         });
     }
 }
