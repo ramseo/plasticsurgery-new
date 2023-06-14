@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class LeadFormMail extends Mailable
+class LeadFormMailUser extends Mailable
 {
     use Queueable, SerializesModels;
     public $data;
@@ -27,10 +27,10 @@ class LeadFormMail extends Mailable
      *
      * @return $this
      */
+
     public function build()
     {
-        $domain = $_SERVER['SERVER_NAME'];
-        return $this->subject($this->data->name . " - " . "" . "New Patient Enquiry from : $domain")
+        return $this->subject($this->data->name . " - " . "" . "Thank You For Your Enquiry")
             ->view('emails.lead-form');
     }
 }
