@@ -24,7 +24,7 @@ class FrontendController extends Controller
         $table = "pages";
         $column_index = "slug";
         $body_class = '';
-        return view('frontend.index', compact('body_class', 'uri_string', 'table'));
+        return view('frontend.index', compact('body_class', 'uri_string', 'table', 'column_index'));
     }
 
     public function home()
