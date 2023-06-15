@@ -4083,7 +4083,12 @@ hr {
     border: 0;
     border-top: 1px solid rgb(255 131 97)!important;
     width: 200px;
-    background-color: #F88379 !important;
-    border: #F88379 !important;
-    color: #fff !important;
+}
+
+.fueparatext ul li {
+    list-style: circle;
+}
+
+.why_h ul li {
+    list-style: circle;
 }
