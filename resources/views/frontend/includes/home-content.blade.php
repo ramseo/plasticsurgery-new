@@ -7,7 +7,9 @@
                         <h2 class="h-bold">
                             Welcome to PlasticSurgery.in
                         </h2>
+                        <hr>
                     </div>
+                    
                     <div class="row">
                         <div class="col-md-6">
                             <img decoding="async" loading="lazy" class="img-responsive alignnone" src="<?= asset("img/plastic-img/welcome-plastic.jpg") ?>" alt="img" width="569" height="478">

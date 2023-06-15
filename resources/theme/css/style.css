@@ -4053,3 +4053,22 @@ img {
     border: #F88379!important;
     color: #fff!important;
 }
+
+.textwidget .section-heading {
+    padding: 0 0 30px 0;
+}
+
+.h-bold,
+h2,
+.version_mb_hide {
+    padding: 20px 0 0 0;
+    font-size: 36px;
+    color: #444;
+    font-weight: 400;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid rgb(255 131 97)!important;
+    width: 200px
+}

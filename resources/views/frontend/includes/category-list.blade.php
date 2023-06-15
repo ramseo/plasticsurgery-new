@@ -6,6 +6,7 @@
                     <h1 class="h-bold">
                         Find Your Cosmetic Surgery Procedure
                     </h1>
+                    <hr>
                 </div>
             </div>
         </div>

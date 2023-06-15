@@ -4,6 +4,7 @@
             <div class="col-md-12">
                 <div class="section-heading text-center">
                     <h2 class="h-bold">WHAT MAKES US DIFFERENT</h2>
+                    <hr>
                 </div>
             </div>
         </div>
