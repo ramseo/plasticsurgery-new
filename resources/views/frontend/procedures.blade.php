@@ -33,7 +33,7 @@
                         <a class="nav-link ancr" data-toggle="tab" href="#menu1" aria-expanded="false">Alphabetical</a>
                     </li>
                 </ul>
-                <div class="tab-content">
+                <div class="tab-content procedure-surgery-cls">
                     <div id="home" class="container tab-pane active in">
                         <div class="row tabo">
                             <div class="col-lg-3 col-md-12 col-sm-3 pt-3">
