@@ -1,6 +1,6 @@
 @extends('frontend.layouts.app')
 
-@section('title') {{app_name()}} @endsection
+@section('title') {{browser_title($uri_string,$table,$column_index)}} @endsection
 
 @section('content')
 @php
@@ -11,10 +11,10 @@ $types = getDataArray('types');
 <!-- Banner search -->
 @include('frontend.includes.banner-search')
 
-<!-- Category list --> 
+<!-- Category list -->
 @include('frontend.includes.category-list')
 
-<!-- Category list --> 
+<!-- Category list -->
 @include('frontend.includes.make-us-different')
 
 <!-- Home content list -->
