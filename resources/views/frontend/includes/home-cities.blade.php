@@ -1,8 +1,9 @@
 <div class="container-fluid location">
     <div class="container">
-        <p class="title text-center">
+        <h2 class="title text-center fnd-surgeon mb-2">
             Find a Surgeon by City
-        </p>
+</h2>
+<hr>
         <div class="row">
             <?php
             $citiesArr = citiesArr();
