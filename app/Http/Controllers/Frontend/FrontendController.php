@@ -206,4 +206,19 @@ class FrontendController extends Controller
 
         return view('frontend.before-after-result-details', compact('body_class', 'module_name_singular', "$module_name_singular", 'slug', 'name', 'result_images'));
     }
+
+
+    public function reconstructive()
+    {
+        $body_class = '';
+        $module_name_singular = Str::singular("pages");
+        $$module_name_singular = (object) array(
+            'meta_title' => "Types of Reconstructive Plastic Surgery",
+            'meta_description' => "List of Procedures Breast Reconstruction Know Your Post-Mastectomy Options Breast Reduction Reduction Mammaplasty Cleft Lip and Palate Repair Correcting Abnormal Development Congenital Anomalies Surgical Correction of Birth Anomalies Craniosynostosis Surgery Head Reshaping Gender Confirmation Surgeries Transfeminine / Transmasculine Giant Nevi Removal Congenital Nevi Surgery Hand Surgery Improve Strength, Function and Flexibility Lymphedema Treatment Surgical Options.",
+            'meta_keywords' => "",
+            'name' => "Reconstructive Plastic Surgery",
+        );
+
+        return view('frontend.reconstructive', compact('body_class', 'module_name_singular', "$module_name_singular"));
+    }
 }

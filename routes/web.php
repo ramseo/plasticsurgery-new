@@ -37,6 +37,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('procedures', 'FrontendController@procedures')->name('procedures');
     Route::get('before-after-results', 'FrontendController@before_after_results')->name('before-after-results');
     Route::get('before-after-results/{slug}', 'FrontendController@before_after_result_details')->name('before-after-result-details');
+    Route::get('reconstructive', 'FrontendController@reconstructive')->name('reconstructive');
     // new routes
 
     // Route::get('privacy', 'FrontendController@privacy')->name('privacy');
