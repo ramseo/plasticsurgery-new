@@ -3344,6 +3344,10 @@ img {
     background: #c35248;
 }
 
+.footer-bg h2 {
+    color: #fff;
+}
+
 .navbar-brand img {
     width: 200px;
 }
@@ -4080,9 +4084,10 @@ h2,
 }
 
 hr {
+    margin-top: 0!important;
     border: 0;
     border-top: 1px solid rgb(255 131 97)!important;
-    width: 200px;
+    width: 100px;
 }
 
 .fueparatext ul li {
@@ -4091,4 +4096,71 @@ hr {
 
 .why_h ul li {
     list-style: circle;
+}
+
+.blg-ctg-cntnt {
+    width: 94%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 23px 22px 15px 22px;
+    margin: 0 auto !important;
+    position: relative;
+    top: -20px;
+    border-radius: 10px;
+    min-height: 250px;
+    z-index: 1;
+}
+
+.blg-ctg-box h2 a {
+    color: #1f2d3d;
+    font-size: 24px;
+    text-decoration: none !important;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.blg-ctg-box {
+    float: left;
+}
+
+.blg-ctg-box .blg-cat-btm {
+    position: relative;
+    padding-left: 55px;
+    float: left;
+    width: 100%;
+}
+
+.blg-ctg-img {
+    width: 100%;
+    clear: left;
+    height: 191px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.blg-cat-btm a {
+    color: #666;
+    text-decoration: none !important;
+    background-color: transparent;
+}
+
+.author-avtr {
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #cecdcc;
+}
+
+.author-avtr img {
+    border-radius: 50px;
+}
+
+.blg-ctg-img img {
+    height: 191px;
+    border-radius: 15px;
 }

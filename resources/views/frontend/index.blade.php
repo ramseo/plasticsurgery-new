@@ -20,10 +20,10 @@ $types = getDataArray('types');
 <!-- Home content list -->
 @include('frontend.includes.home-content')
 
-<!-- About block -->
-@include('frontend.includes.about-block')
-
 <!-- Home cities -->
 @include('frontend.includes.home-cities')
+
+<!-- About block -->
+@include('frontend.includes.about-block')
 
 @endsection
