@@ -4365,12 +4365,14 @@ footer .row div h2 {
     font-weight: normal;
     width: 100%;
     float: left;
+    color: #F88379;
 }
 
 .right_dfs ul.list-unstyled li a small {
     font-size: 15px;
     width: 100%;
     float: left;
+    color: #000;
 }
 
 .right_dfs ul.list-unstyled li:hover {

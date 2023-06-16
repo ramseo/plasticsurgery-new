@@ -28,7 +28,7 @@
                         <div class="col-md-6 col-xs-12">
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>breast-reconstruction">
+                                    <a href="<?= url("/") . "/" ?>breast-reconstruction">
                                         <strong> Breast Reconstruction </strong>
                                         <small>Know Your Post-Mastectomy Options</small>
                                     </a>
@@ -36,18 +36,18 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>breast-reduction">
+                                    <a href="<?= url("/") . "/" ?>breast-reduction">
                                         <strong> Breast Reduction </strong>
                                         <small>Reduction Mammaplasty</small>
                                     </a>
                                 </li>
                             </ul>
                             <ul class="list-unstyled">
-                                <li> <a href="<?= url("/") ?>cleft-lip-and-palate-repair"> <strong> Cleft Lip and Palate Repair </strong> <small>Correcting Abnormal Development</small> </a> </li>
+                                <li> <a href="<?= url("/") . "/" ?>cleft-lip-and-palate-repair"> <strong> Cleft Lip and Palate Repair </strong> <small>Correcting Abnormal Development</small> </a> </li>
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>congenital-anomalies ">
+                                    <a href="<?= url("/") . "/" ?>congenital-anomalies ">
                                         <strong> Congenital Anomalies </strong>
                                         <small>Surgical Correction of Birth Anomalies</small>
                                     </a>
@@ -55,7 +55,7 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>craniosynostosis-surgery">
+                                    <a href="<?= url("/") . "/" ?>craniosynostosis-surgery">
                                         <strong> Craniosynostosis Surgery </strong>
                                         <small>Head Reshaping</small>
                                     </a>
@@ -63,7 +63,7 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>gender-confirmation-surgeries">
+                                    <a href="<?= url("/") . "/" ?>gender-confirmation-surgeries">
                                         <strong> Gender Confirmation Surgeries </strong>
                                         <small>Transfeminine / Transmasculine</small>
                                     </a>
@@ -71,7 +71,7 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>giant-nevi-removal">
+                                    <a href="<?= url("/") . "/" ?>giant-nevi-removal">
                                         <strong> Giant Nevi Removal </strong>
                                         <small>Congenital Nevi Surgery</small>
                                     </a>
@@ -79,7 +79,7 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>hand-surgery">
+                                    <a href="<?= url("/") . "/" ?>hand-surgery">
                                         <strong> Hand Surgery </strong>
                                         <small>Improve Strength, Function and Flexibility</small>
                                     </a>
@@ -87,7 +87,7 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>lymphedema-treatment">
+                                    <a href="<?= url("/") . "/" ?>lymphedema-treatment">
                                         <strong> Lymphedema Treatment </strong>
                                         <small>Surgical Options</small>
                                     </a>
@@ -97,7 +97,7 @@
                         <div class="col-md-6 col-xs-12">
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>microsurgery">
+                                    <a href="<?= url("/") . "/" ?>microsurgery">
                                         <strong> Microsurgery </strong>
                                         <small>Microscope-Assisted Operations</small>
                                     </a>
@@ -105,7 +105,7 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>migraine-surgery">
+                                    <a href="<?= url("/") . "/" ?>migraine-surgery">
                                         <strong> Migraine Surgery </strong>
                                         <small>Chronic Headache Relief</small>
                                     </a>
@@ -113,7 +113,7 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>orthognathic-surgery">
+                                    <a href="<?= url("/") . "/" ?>orthognathic-surgery">
                                         <strong> Orthognathic Surgery </strong>
                                         <small>Jaw Straightening</small>
                                     </a>
@@ -121,7 +121,7 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>panniculectomy">
+                                    <a href="<?= url("/") . "/" ?>panniculectomy">
                                         <strong> Panniculectomy </strong>
                                         <small>Body Contouring</small>
                                     </a>
@@ -129,7 +129,7 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>regenerative-medicine">
+                                    <a href="<?= url("/") . "/" ?>regenerative-medicine">
                                         <strong> Regenerative Medicine </strong>
                                         <small>The Future of Plastic Surgery</small>
                                     </a>
@@ -137,7 +137,7 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>scar-revision">
+                                    <a href="<?= url("/") . "/" ?>scar-revision">
                                         <strong> Scar Revision </strong>
                                         <small>Minimize a Scar</small>
                                     </a>
@@ -145,7 +145,7 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>septoplasty">
+                                    <a href="<?= url("/") . "/" ?>septoplasty">
                                         <strong> Septoplasty </strong>
                                         <small>Deviated Septum Correction</small>
                                     </a>
@@ -153,7 +153,7 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>skin-cancer-removal">
+                                    <a href="<?= url("/") . "/" ?>skin-cancer-removal">
                                         <strong> Skin Cancer Removal </strong>
                                         <small>Reconstruction After Skin Cancer</small>
                                     </a>
@@ -161,7 +161,7 @@
                             </ul>
                             <ul class="list-unstyled">
                                 <li>
-                                    <a href="<?= url("/") ?>tissue-expansion">
+                                    <a href="<?= url("/") . "/" ?>tissue-expansion">
                                         <strong> Tissue Expansion </strong>
                                         <small>Growing Extra Skin for Reconstruction</small>
                                     </a>
