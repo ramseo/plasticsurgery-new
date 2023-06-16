@@ -4321,11 +4321,11 @@ footer .row div h2 {
     border-radius: 15px;
 }
 
-.padding_t_b {
+/* .padding_t_b {
     padding: 20px 0px;
     float: left;
     width: 100%;
-}
+} */
 
 .padding_t_b h2 {
     float: none;

@@ -17,7 +17,7 @@
 </div>
 
 <div class="container-fluid">
-    <div class="container">
+    <div class="container padding_t_b">
         {!!$$module_name_singular->content!!}
     </div>
 </div>
