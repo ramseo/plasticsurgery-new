@@ -111,7 +111,7 @@
 
     @yield('page-banner')
 
-    <main>
+    <main class="padding_t_b">
         @yield('content')
     </main>
 
