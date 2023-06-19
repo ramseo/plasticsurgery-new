@@ -4401,3 +4401,27 @@ img.emoji {
     margin-right: auto;
     width: 600px;
 }
+
+.quer_bottom_s {
+    justify-content: center;
+}
+
+.col-md-4 .bdf_class {
+    border: solid 1px #F88379;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.col-md-4 .bdf_class h3 {
+    font-size: 22px;
+    color: #082092;
+    text-align: center;
+    width: 100%;
+    float: left;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+
+.col-md-4 .bdf_class p {
+    font-size: 16px;
+}
