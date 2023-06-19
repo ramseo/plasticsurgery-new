@@ -4425,3 +4425,20 @@ img.emoji {
 .col-md-4 .bdf_class p {
     font-size: 16px;
 }
+
+.joinus h4 {
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #990e0e;
+    font-weight: bold;
+    margin: 0px;
+    padding: 35px 0px 0 0;
+}
+
+.joine_line_spacing {
+    float: left;
+    width: 100%;
+    min-height: 20px;
+}
