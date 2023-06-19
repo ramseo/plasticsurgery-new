@@ -19,7 +19,7 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8 padding_t_b">
                 <?= $$module_name_singular->content ?>
             </div>
             <div class="col-lg-4 loc">
