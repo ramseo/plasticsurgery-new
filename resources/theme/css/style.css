@@ -4442,3 +4442,28 @@ img.emoji {
     width: 100%;
     min-height: 20px;
 }
+
+.col-md-6 .bdf_class:hover {
+    background: #f1f1f1;
+}
+
+.col-md-6 .bdf_class {
+    border: solid 1px #F88379;
+    padding: 10px;
+    margin-top: 25px;
+    float: left;
+}
+
+.col-md-6 .bdf_class h3 {
+    font-size: 22px;
+    color: #082092;
+    text-align: center;
+    width: 100%;
+    float: left;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+
+.col-md-6 .bdf_class p {
+    font-size: 16px;
+}
