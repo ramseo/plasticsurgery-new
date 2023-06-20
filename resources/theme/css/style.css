@@ -1624,7 +1624,7 @@ footer ul li a:hover {
         position: fixed;
         left: 0px;
         right: 0px;
-        z-index: 9;
+        z-index: 9999;
         background-color: #f4d8cd;
     }
     .bar a {
