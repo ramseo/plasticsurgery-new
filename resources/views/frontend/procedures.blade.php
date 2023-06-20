@@ -36,11 +36,11 @@
                 <div class="tab-content procedure-surgery-cls">
                     <div id="home" class="container tab-pane active in">
                         <div class="row tabo">
-                            <div class="col-lg-3 col-md-12 col-sm-3 pt-3">
+                            <div class="col-lg-3 col-md-12 col-sm-3 pt-3 pb-3">
                                 <img src="img/Breast-Augmentation-1-1024x683.jpg" style="width:100%">
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-9">
-                                <p class="small-heading">Breast</p>
+                            <div class="col-lg-9 col-md-9 col-sm-9 pt-3 pb-3">
+                                <p class="small-heading pb-3  m-0">Breast</p>
                                 <div class="border"></div>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6">
@@ -78,10 +78,10 @@
                             </div>
                         </div>
                         <div class="row tabo">
-                            <div class="col-lg-3 col-md-3 col-sm-3 pt-3">
+                            <div class="col-lg-3 col-md-3 col-sm-3 pt-3 pb-3">
                                 <img src="img/Liposuction-1-1024x683.jpg" style="width:100%">
                             </div>
-                            <div class="col-lg-9 col-md-12 col-sm-9 pt-3">
+                            <div class="col-lg-9 col-md-12 col-sm-9 pt-3 pb-3">
                                 <p class="small-heading">Fat Reduction</p>
                                 <div class="border"></div>
                                 <div class="row">
@@ -104,10 +104,10 @@
                             </div>
                         </div>
                         <div class="row tabo">
-                            <div class="col-lg-3 col-md-12 col-sm-3 pt-3">
+                            <div class="col-lg-3 col-md-12 col-sm-3 pt-3 pb-3">
                                 <img src="img/Arm-Lift-2-1024x683.jpg" style="width:100%">
                             </div>
-                            <div class="col-lg-9 col-md-12 col-sm-9 pt-3">
+                            <div class="col-lg-9 col-md-12 col-sm-9 pt-3 pb-3">
                                 <p class="small-heading">Body Lifts</p>
                                 <div class="border"></div>
                                 <div class="row">
@@ -156,10 +156,10 @@
                             </div>
                         </div>
                         <div class="row tabo">
-                            <div class="col-lg-3 col-md-12 col-sm-3 pt-3">
+                            <div class="col-lg-3 col-md-12 col-sm-3 pt-3 pb-3">
                                 <img src="img/Brow-Lift-Browplasty-0-1024x819.jpg" style="width:100%">
                             </div>
-                            <div class="col-lg-9 col-md-12 col-sm-9 pt-3">
+                            <div class="col-lg-9 col-md-12 col-sm-9 pt-3 pb-3">
                                 <p class="small-heading">FACE & NECK</p>
                                 <div class="border"></div>
                                 <div class="row">
@@ -222,10 +222,10 @@
                             </div>
                         </div>
                         <div class="row tabo">
-                            <div class="col-lg-3 col-md-12 col-sm-3 pt-3">
+                            <div class="col-lg-3 col-md-12 col-sm-3 pt-3 pb-3">
                                 <img src="img/Botulinum-Toxin-BOTOX-2-1024x734.jpg" style="width:100%">
                             </div>
-                            <div class="col-lg-9 col-md-12 col-sm-9 pt-3">
+                            <div class="col-lg-9 col-md-12 col-sm-9 pt-3 pb-3">
                                 <p class="small-heading">MINIMALLY INVASIVE</p>
                                 <div class="border"></div>
                                 <div class="row">
@@ -284,10 +284,10 @@
                         </div>
 
                         <div class="row tabo">
-                            <div class="col-lg-3 col-md-12 col-sm-3 pt-3">
+                            <div class="col-lg-3 col-md-12 col-sm-3 pt-3 pb-3">
                                 <img src="img/Gynecomastia-1-1024x683.jpg" style="width:100%">
                             </div>
-                            <div class="col-lg-9 col-md-12 col-sm-9 pt-3">
+                            <div class="col-lg-9 col-md-12 col-sm-9 pt-3 pb-3">
                                 <p class="small-heading">MALE-SPECIFIC PLASTIC SURGERY</p>
                                 <div class="border"></div>
                                 <div class="row">
@@ -315,10 +315,10 @@
                         </div>
 
                         <div class="row tabo">
-                            <div class="col-lg-3 col-md-12 col-sm-3 pt-3">
+                            <div class="col-lg-3 col-md-12 col-sm-3 pt-3 pb-3">
                                 <img src="img/Hymenoplasty-1-1024x693.jpg" style="width:100%">
                             </div>
-                            <div class="col-lg-9 col-md-12 col-sm-9 pt-3">
+                            <div class="col-lg-9 col-md-12 col-sm-9 pt-3 pb-3">
                                 <p class="small-heading">VAGINAL REJUVENATION </p>
                                 <div class="border"></div>
                                 <div class="row">
