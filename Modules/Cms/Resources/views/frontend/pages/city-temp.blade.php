@@ -16,10 +16,10 @@
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="container">
+<div id="city-page" class="container-fluid">
+    <div class="container city-page">
         <p class="identity width-100">
-            top Plastic Surgeons in <?= $city ?> 
+            top Plastic Surgeons in <?= $city ?>
         </p>
         <div class="col-lg-12 doc-flex-cls padd-null">
             <?php
@@ -29,8 +29,8 @@
                     $reviews = getDataArray('vendor_reviews', 'user_id', $item->id);
                     $average = averageReview($reviews);
             ?>
-            
-            <div class="col-lg-4 col-md-4">
+
+                    <div class="col-lg-4 col-md-4">
                         <div class="aon-med-team bg-light-gray">
                             <div class="aon-med-team-pic col-md-4 padd-null">
                                 <a target="_blank" href="<?= url("surgeon/dr-$item->username") ?>">
@@ -85,18 +85,18 @@
                             </div>
                         </div>
                     </div>
-            <?php } ?>
-            <div class="col-sm-12">
+                <?php } ?>
+                <div class="col-sm-12">
                     <div class="aon-addmore-btn-section pb-4">
                         <a href="javascript:void(0)" class="aon-addplus">
                             <i class="fa fa-star-o"></i>
                         </a>
                     </div>
                 </div>
-          <?php } ?>
+            <?php } ?>
         </div>
 
-        
+
         <div class="row">
             <div class="col">
                 <p>
@@ -115,8 +115,8 @@
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="container">
+<div id="city-page-content" class="container-fluid">
+    <div class="container city-page">
         <div class="col padd-null">
             <p class="identity">COSMETIC SURGERY COST IN <?= $city ?></p>
             <p>

@@ -1193,6 +1193,25 @@
         margin: bottom 0;
     }
 
+    #city-page .city-page {
+        padding: 0;
+    }
+
+    #city-page-content .city-page {
+        padding: 0;
+    }
+
+    #city-page-content .city-page ul {
+        padding: 0 0 0 15px;
+    }
+
+    .aon-med-team .aon-med-team-pic:after {
+        left: -6px;
+        top: -2px;
+        width: 110px;
+        height: 110px;
+    }
+
 }
 
 @media(min-width: 768px) and (max-width: 1199px) {
