@@ -1115,6 +1115,84 @@
         margin: auto;
     }
 
+    #boxes .textwidget {
+        padding: 0 15px 0 15px;
+    }
+
+    #boxes .textwidget ul {
+        padding: 0;
+    }
+
+    .col-md-12.pst_p {
+        position: initial;
+    }
+
+    .flat ul li .hexagon {
+        left: -15px;
+    }
+
+    .flat ul li label {
+        margin-left: 15px;
+    }
+
+    #boxes .why_main_bg ul {
+        padding: 0;
+    }
+
+    .bgh {
+        padding: 50px 0px;
+    }
+
+    .home-banner-sec .col-lg-6.col-md-12 {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .home-section {
+        z-index: inherit;
+    }
+
+    .flat ul li {
+        z-index: inherit;
+    }
+
+    #content-boxes .col-md-6:first-child {
+        margin-bottom: 50px;
+    }
+
+    .container-fluid.location .container {
+        padding: 0;
+    }
+
+    .container-fluid.new-doctor .container {
+        padding: 0;
+    }
+
+    #content-boxes .container {
+        padding: 0;
+    }
+
+    .footer-container .container {
+        padding: 0;
+    }
+
+    .footer-list {
+        padding: 0;
+    }
+
+    .small-footer a {
+        padding: 3px 3px;
+        font-size: 15px;
+    }
+
+    .remove-exterspace .surgenin-padding-remove {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .surgen-view-all {
+        margin: bottom 0;
+    }
+
 }
 
 @media(min-width: 768px) and (max-width: 1199px) {
