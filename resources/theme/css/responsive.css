@@ -1184,6 +1184,15 @@
         font-size: 15px;
     }
 
+    .remove-exterspace .surgenin-padding-remove {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .surgen-view-all {
+        margin: bottom 0;
+    }
+
 }
 
 @media(min-width: 768px) and (max-width: 1199px) {
