@@ -1074,6 +1074,23 @@
         text-align: center;
     }
 
+    .trans {
+        margin: 0;
+    }
+
+    .trans h2 {
+        font-size: 25px;
+        padding: 0;
+    }
+
+    .mob-home-btn-cls .col-md-5.pb-5 {
+        padding-bottom: 0px !important;
+    }
+
+    .banner a {
+        font-size: 12px;
+    }
+
 }
 
 @media(min-width: 768px) and (max-width: 1199px) {
