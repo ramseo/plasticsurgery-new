@@ -1079,7 +1079,7 @@
     }
 
     .trans h2 {
-        font-size: 25px;
+        font-size: 27px;
         padding: 0;
     }
 
@@ -1087,8 +1087,19 @@
         padding-bottom: 0px !important;
     }
 
+    .trans button {
+        padding: 5px;
+    }
+
     .banner a {
         font-size: 12px;
+    }
+
+    .h-bold,
+    h2,
+    .version_mb_hide,
+    .fnd-surgeon {
+        font-size: 27px;
     }
 
 }
