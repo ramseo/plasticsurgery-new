@@ -9,7 +9,7 @@
                         </h2>
                         <hr>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-6">
                             <img decoding="async" loading="lazy" class="img-responsive alignnone" src="<?= asset("img/plastic-img/welcome-plastic.jpg") ?>" alt="img" width="569" height="478">
@@ -173,7 +173,7 @@
     </div>
 </section>
 
-<section id="boxes" class="home-section paddingtop-120">
+<section id="content-boxes" class="home-section paddingtop-120">
     <div class="container-fluid bgh">
         <div class="container">
             <div class="row">
