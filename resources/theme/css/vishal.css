@@ -1,1 +1,13 @@
 /* css here */
+
+@media only screen and (max-width:768px) {
+    .surgeons-flex {
+        justify-content: space-around!important;
+    }
+    .new-doctor a img {
+        height: auto!important;
+    }
+    .cities h3 {
+        text-align: center;
+    }
+}
