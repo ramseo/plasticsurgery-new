@@ -1102,6 +1102,19 @@
         font-size: 27px;
     }
 
+    .whatmakes {
+        padding: 0 15px 0 15px !important;
+        text-align: center;
+    }
+
+    .whatmakes2 {
+        position: initial;
+    }
+
+    .whatmakes2 img {
+        margin: auto;
+    }
+
 }
 
 @media(min-width: 768px) and (max-width: 1199px) {

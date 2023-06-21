@@ -70,6 +70,7 @@ mix.styles(
         // "resources/theme/css/owl.theme.default.min.css",
         "resources/theme/css/rateit.css",
         "resources/theme/css/pooja.css",
+        "resources/theme/css/vishal.css",
         "resources/theme/css/style.css",
         "resources/theme/css/responsive.css"
     ],
