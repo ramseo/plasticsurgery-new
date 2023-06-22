@@ -1,5 +1,14 @@
 /* css here */
 
+@media screen and (min-width:801px) {
+    .navbar-nav {
+        flex-direction: initial!important;
+    }
+    .navbar-nav .nav-link {
+        padding: 8px!important;
+    }
+}
+
 @media only screen and (max-width:768px) {
     .surgeons-flex {
         justify-content: space-around!important;
@@ -9,5 +18,29 @@
     }
     .cities h3 {
         text-align: center;
+    }
+    .cit,
+    .before .col-lg-4 {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 5px;
+    }
+    .cit,
+    .before .col-lg-4:first-child {
+        margin-top: 13px;
+    }
+    .cit p {
+        margin-bottom: 0px;
+    }
+    .cit .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .cit .container {
+        padding-left: 13px;
+        padding-right: 13px;
     }
 }
