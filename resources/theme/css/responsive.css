@@ -1229,6 +1229,10 @@
         padding: 0;
     }
 
+    .regular-page-cls .padding_t_b {
+        padding: 0;
+    }
+
 }
 
 @media(min-width: 768px) and (max-width: 1199px) {

@@ -16,7 +16,7 @@
     </div>
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid regular-page-cls">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 padding_t_b">
