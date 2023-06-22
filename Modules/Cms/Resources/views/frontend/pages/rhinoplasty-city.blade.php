@@ -21,8 +21,8 @@
 $getAssignedDoctors = getAssignedDoctors(ucwords($city));
 if ($getAssignedDoctors->isNotEmpty()) {
 ?>
-    <div class="container-fluid">
-        <div class="container">
+    <div id="city-page-surgery" class="container-fluid">
+        <div class="container city-page-surgery">
             <p class="identity width-100">
                 top plastic surgeons in <?= ucwords($city) ?>
             </p>
@@ -133,8 +133,8 @@ if ($getAssignedDoctors->isNotEmpty()) {
 <?php } ?>
 <!-- Doctors Listing -->
 
-<div class="container-fluid">
-    <div class="container">
+<div id="city-page-surgery-content" class="container-fluid">
+    <div class="container city-page-surgery">
         <?php if ($surgery_str == "rhinoplasty") { ?>
             <div class="col padd-null">
                 <div class="top-content">
@@ -6693,28 +6693,28 @@ if ($getAssignedDoctors->isNotEmpty()) {
                     <div class="accordion-content">
                         <ul>
                             <li>
-                            When arriving for Men's Plastic Surgery in <?= ucwords($city) ?>, you should come with a prepared mind 
+                                When arriving for Men's Plastic Surgery in <?= ucwords($city) ?>, you should come with a prepared mind
                             </li>
                             <li>
-                            Discuss any concerns or reactions you have to anesthesia with the anesthesiologist to enable him to adjust the dose accordingly
+                                Discuss any concerns or reactions you have to anesthesia with the anesthesiologist to enable him to adjust the dose accordingly
                             </li>
                             <li>
-                            The surgeon will utilize the most up-to-date and sophisticated equipment to make incisions in the targeted area of your body
+                                The surgeon will utilize the most up-to-date and sophisticated equipment to make incisions in the targeted area of your body
                             </li>
                             <li>
-                            Following the surgery and incision-making process, the surgeon will use sutures to close the incisions.
+                                Following the surgery and incision-making process, the surgeon will use sutures to close the incisions.
                             </li>
                             <li>
-                            The length of the procedure will vary depending on the type of surgery you opt for and may take a few hours to complete
+                                The length of the procedure will vary depending on the type of surgery you opt for and may take a few hours to complete
                             </li>
                             <li>
-                            Strictly adhere to the aftercare instructions given by your surgeon for prompt healing
+                                Strictly adhere to the aftercare instructions given by your surgeon for prompt healing
                             </li>
                             <li>
-                            Take 2-3 weeks off from work for a satisfying recovery
+                                Take 2-3 weeks off from work for a satisfying recovery
                             </li>
                             <li>
-                            To avoid complications from unfavorable results, make sure to have realistic expectations with the surgery
+                                To avoid complications from unfavorable results, make sure to have realistic expectations with the surgery
                             </li>
                         </ul>
                     </div>
