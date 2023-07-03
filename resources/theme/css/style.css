@@ -3361,7 +3361,7 @@ img {
 }
 
 .find-a-procedure {
-    background-color: #f3413a !important;
+    background-color: #F88379 !important;
     color: #fff !important;
 }
 
@@ -3383,10 +3383,10 @@ img {
 
 .surgen-gal a,
 .surgen-gal a:hover {
-    border: solid 1px #dc555e;
+    border: solid 1px #F88379;
     float: left;
     width: 100%;
-    background: #ec606a;
+    background: #F88379;
     font-size: 20px;
     color: #fff;
     text-align: center;
@@ -3403,7 +3403,7 @@ img {
 }
 
 .surgen-gal img {
-    border: solid 1px #dc555e;
+    border: solid 1px #F88379;
     float: left;
     width: 100%;
     height: 185px;
@@ -3419,7 +3419,12 @@ img {
     text-transform: uppercase;
     font-size: 15px;
     font-weight: 700;
-    background: #428bca;
+    background: #F88379;
+    border: none;
+}
+
+.surgen-view-all a:hover {
+    background: #dc555e;
 }
 
 .home-section {
@@ -3572,7 +3577,7 @@ img {
 }
 
 .dfer_btn {
-    background: #f3413a !important;
+    background: #F88379 !important;
     border-radius: 10px !important;
     margin-top: 15px !important;
     font-size: 19px !important;
