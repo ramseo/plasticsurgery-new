@@ -138,9 +138,92 @@ class PagesController extends Controller
                 $uc_surgery_str = ucwords($surgery_str);
                 $uc_city = ucwords($city);
 
+                if ($surgery_str == "rhinoplasty") {
+                    $meta_title = "Rhinoplasty Surgeon in $uc_city | Nose Surgery Cost | Nose Job";
+                    $meta_description = "Top Plastic surgery clinic for Rhinoplasty in $uc_city. Board certified surgeons for altering and reconstructing the nose at an affordable cost.";
+                } else if ($surgery_str == "blepharoplasty") {
+                    $meta_title = "Blepharoplasty Surgeon in $uc_city | Eyelid Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Blepharoplasty in $uc_city. Board certified surgeons for removing skin fat from the eyelids at an affordable cost.";
+                } elseif ($surgery_str == "facelift") {
+                    $meta_title = "Facelift Surgeon in $uc_city | Facelift Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Facelift in $uc_city. Board certified surgeons for giving you youthful facial appearance at an affordable cost.";
+                } elseif ($surgery_str == "brow lift") {
+                    $meta_title = "Brow Lift Surgeon in $uc_city | Forehead/Eyebrow Lift Cost";
+                    $meta_description = "Top Plastic surgery clinic for Brow Lift in $uc_city. Board certified surgeons for giving you youthful facial appearance at an affordable cost.";
+                } elseif ($surgery_str == "neck lift") {
+                    $meta_title = "Neck Lift Surgeon in $uc_city | Neck Lift Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Necklift in $uc_city. Board certified surgeons to enhance the appearance of your neck at an affordable cost.";
+                } elseif ($surgery_str == "chin surgery") {
+                    $meta_title = "Chin Augmentation Surgeon in $uc_city | Chin Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Chin Surgery/Chin Augmentation in $uc_city. Board certified surgeons to reshape the chin at an affordable cost.";
+                } elseif ($surgery_str == "cheek augmentation") {
+                    $meta_title = "Cheek Augmentation Surgeon in $uc_city | Cheek Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Cheek Augmentation in $uc_city. Board certified surgeons to reshape the cheek at an affordable cost.";
+                } elseif ($surgery_str == "lip augmentation") {
+                    $meta_title = "Lip Augmentation Surgeon in $uc_city | Lip Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Lip Augmentation in $uc_city. Board certified surgeons to reshape and enhance your lip at an affordable cost.";
+                } elseif ($surgery_str == "buccal fat removal") {
+                    $meta_title = "Buccal Fat Removal Surgeon in $uc_city | Buccal Fat Removal Cost";
+                    $meta_description = "Top Plastic surgery clinic for Buccal Fat Pad Removal in $uc_city. Board certified surgeons to remove the excess fat from your chubby cheeks at an affordable cost.";
+                } elseif ($surgery_str == "ear surgery") {
+                    $meta_title = "Ear Correction Surgeon in $uc_city | Otoplasty Ear Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Ear Surgery in $uc_city. Board certified surgeons to reshape your ear at an affordable cost.";
+                } elseif ($surgery_str == "breast augmentation") {
+                    $meta_title = "Breast Augmentation Surgeon in $uc_city | Breast Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Breat Augmentation in $uc_city. Board certified surgeons to increase your breast size at an affordable cost.";
+                } elseif ($surgery_str == "breast lift") {
+                    $meta_title = "Breast Lift Surgeon in $uc_city | Breast Lift Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Breast Lift in $uc_city. Board certified surgeons to change the shape of your breasts at an affordable cost.";
+                } elseif ($surgery_str == "breast reduction") {
+                    $meta_title = "Breast Reduction Surgeon in $uc_city | Breast Reduction Cost";
+                    $meta_description = "Top Plastic surgery clinic for Breat Reduction in $uc_city. Board certified surgeons to reduce the size of large breasts at an affordable cost.";
+                } elseif ($surgery_str == "breast implant removal") {
+                    $meta_title = "Breast Implant Removal in $uc_city | Breast Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Breast Implant Removal in $uc_city. Board certified surgeons to reshape and lift the breasts at an affordable cost.";
+                } elseif ($surgery_str == "breast implant revision") {
+                    $meta_title = "Breast Implant Revision in $uc_city | Breast Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Breast Implant Revision in $uc_city. Board certified surgeons to replace old breast implants with new implants.";
+                } elseif ($surgery_str == "gynecomastia") {
+                    $meta_title = "Gynecomastia Surgeon in $uc_city | Male Breast Reduction Cost";
+                    $meta_description = "Top Plastic surgery clinic for Gynecomastia in $uc_city. Board certified surgeons for Male Breast reduction at a reasonable cost.";
+                } elseif ($surgery_str == "liposuction") {
+                    $meta_title = "Liposuction Surgeon in $uc_city | Fat Reduction Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Liposuction in $uc_city. Board certified surgeons for extra fat removal process at a reasonable cost.";
+                } elseif ($surgery_str == "tummy tuck") {
+                    $meta_title = "Tummy Tuck Surgeon in $uc_city | Abdominoplasty Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Abdominoplasty in $uc_city. Board certified surgeons for affordable tummy tuck surgery treatment";
+                } elseif ($surgery_str == "buttock enhancement") {
+                    $meta_title = "Buttock Augmentation Surgeon in $uc_city | Buttock Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Buttock Augmentation in $uc_city. Board certified surgeons for affordable Butt implant";
+                } elseif ($surgery_str == "body lift") {
+                    $meta_title = "Body Lift Surgeon in $uc_city | Body Contouring Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Body Lift in $uc_city. Board certified surgeons for cost-effective saggy skin removal";
+                } elseif ($surgery_str == "arm lift") {
+                    $meta_title = "Arm Lift Surgeon in $uc_city | Brachioplasty Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Arm Lift in $uc_city. Board certified surgeons for arm lift and saggy arm skin removal";
+                } elseif ($surgery_str == "thigh lift") {
+                    $meta_title = "Thigh Lift Surgeon in $uc_city | Thigh Reduction Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Thigh Lift in $uc_city. Board certified surgeons for affordable saggy thigh skin removal";
+                } elseif ($surgery_str == "body contouring") {
+                    $meta_title = "Body Contouring Surgeon in $uc_city | Body Contouring Cost";
+                    $meta_description = "Top Plastic surgery clinic for Body Contouring in $uc_city. Board certified surgeons for cost-effective Body Contouring treatment";
+                } elseif ($surgery_str == "mommy makeover") {
+                    $meta_title = "Mommy Makeover Surgeon in $uc_city | Post Pregnancy Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Mommy Makeover in $uc_city. Board certified surgeons for affordable Mommy Makeover surgery treatments";
+                } elseif ($surgery_str == "hair transplant") {
+                    $meta_title = "Hair Transplant Doctor $uc_city | Hair Transplant Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Hair Transplant in $uc_city. Board certified surgeons for Hair Restoration Treatment";
+                } elseif ($surgery_str == "men and plastic surgery") {
+                    $meta_title = "Men Plastic Surgery in $uc_city | Cosmetic Surgery Cost";
+                    $meta_description = "Top Plastic surgery clinic for Men Plastic Surgery in $uc_city. Board certified surgeons for afforfable Male plastic surgery treatments";
+                } else {
+                    $meta_title = "";
+                    $meta_description = "";
+                }
+
                 $$module_name_singular = (object) array(
-                    'meta_title' => $uc_surgery_str . " " . "Clinic in" . " " . $uc_city,
-                    'meta_description' => "The best Board certified surgeon for $uc_surgery_str in $uc_city. Visit the cost-effective Cosmetic surgery clinic for $uc_surgery_str today",
+                    'meta_title' => $meta_title,
+                    'meta_description' => $meta_description,
                     'meta_keywords' => "",
                     'name' => ucwords("The Most Skilled Plastic Surgeon for $uc_surgery_str in $uc_city"),
                 );
