@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+
 <?php
 $posts = getLatestBlogs();
 if ($posts->isNotEmpty()) {
@@ -12,12 +15,13 @@ if ($posts->isNotEmpty()) {
                     <hr>
                 </div>
             </div>
-            <div class="row pt-3 pb-5">
+
+            <div id="blogSlider" class="owl-carousel owl-theme row pt-3 pb-5">
                 <?php
                 foreach ($posts as $item) {
                     $url = route("frontend.posts.show", [$item->slug]);
                 ?>
-                    <div class="col-xs-12 col-sm-12 col-md-4 blg-ctg-box">
+                    <div class="col-xs-12 col-sm-12 blg-ctg-box">
                         <div class="blg-ctg-img">
                             <a href="<?= $url ?>" title="<?= $item->name ?>">
                                 <img width="652" height="324" src="<?= $item->featured_image ?>" class="img-responsive wp-post-image" alt="<?= $item->alt ?>" loading="lazy" />
@@ -50,3 +54,32 @@ if ($posts->isNotEmpty()) {
         </div>
     </section>
 <?php } ?>
+
+@push('after-scripts')
+<script>
+    $(document).ready(function() {
+        $('#blogSlider').owlCarousel({
+            loop: "<?= (count($posts) > 3) ? true : false ?>",
+            margin: 5,
+            nav: true,
+            items: 3,
+            dots: false,
+            autoplay: 4000,
+            responsive: {
+                0: {
+                    items: 1,
+                    loop: "<?= (count($posts) > 1) ? true : false ?>",
+                },
+                767: {
+                    items: 2,
+                    loop: "<?= (count($posts) > 2) ? true : false ?>",
+                },
+                991: {
+                    items: 3,
+                    loop: "<?= (count($posts) > 3) ? true : false ?>",
+                }
+            }
+        });
+    })
+</script>
+@endpush
