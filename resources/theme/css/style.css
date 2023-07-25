@@ -4530,3 +4530,19 @@ h5.mb-4 span.text-primary {
     left: 0;
     text-align: center;
 }
+
+.blg-cat-btm span {
+    color: #000;
+    display: block;
+    font-size: 13px;
+}
+
+.blog-read-more {
+    position: absolute;
+    bottom: 20px;
+}
+
+.blog-read-more button {
+    text-transform: capitalize;
+    outline: none;
+}

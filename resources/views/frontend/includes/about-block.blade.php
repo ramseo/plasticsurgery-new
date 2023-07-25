@@ -37,16 +37,24 @@ if ($posts->isNotEmpty()) {
                                 <a href="<?= url('/') . '/' . 'blog' ?>" class="author-avtr">
                                     <img alt='admin' src='<?= asset('img/default-avatar.jpg') ?>' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' />
                                 </a>
-                                <a href="<?= url('/') . '/' . 'blog' ?>">
+                                <div>
                                     <span>
                                         admin
                                     </span>
-                                </a>
-                                <br>
-                                <span>
-                                    <?= date('F', strtotime($item->published_at)) . " " . date('d', strtotime($item->published_at)) . "," . date('Y', strtotime($item->published_at)) ?>
-                                </span>
+                                    <span>
+                                        <?= date('F', strtotime($item->published_at)) . " " . date('d', strtotime($item->published_at)) . "," . date('Y', strtotime($item->published_at)) ?>
+                                    </span>
+                                </div>
                             </div>
+                            <div class="clearfix"></div>
+                            <div class="blog-read-more">
+                                <a href="<?= $url ?>">
+                                    <button class="btn find-a-procedure">
+                                        read more
+                                    </button>
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                 <?php } ?>
@@ -64,7 +72,7 @@ if ($posts->isNotEmpty()) {
             nav: true,
             items: 3,
             dots: false,
-            autoplay: 4000,
+            autoplay: false,
             responsive: {
                 0: {
                     items: 1,
