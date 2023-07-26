@@ -49,7 +49,7 @@
 
 <div class="container-fluid location">
     <div class="container">
-        <h2 class="title text-center fnd-surgeon mb-2">
+        <h2 class="text-center fnd-surgeon mb-2">
             Find a Surgeon by City
         </h2>
         <hr>
