@@ -1156,7 +1156,12 @@ if (!function_exists('date_today')) {
         $data = DB::table('albums')->where('id', $album_id)->get()->first();
         $doctor = NULL;
         if ($data) {
-            $doctor = DB::table('users')->where('id', $data->vendor_id)->get()->first();
+            $doctor = DB::table('users')
+
+                ->where('id', $data->vendor_id)
+                ->orWhere('is_active', 1)
+                ->whereNotIn('name', ['Super Admin', 'Admin Istrator', 'Executive User', 'General User'])
+                ->get()->first();
         }
 
         return $doctor;

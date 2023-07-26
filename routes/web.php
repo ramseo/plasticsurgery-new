@@ -216,6 +216,9 @@ Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'as' => 'backend.',
     Route::post('vendor/update/{id}', 'VendorController@update')->name('vendor.update');
 
     Route::get('customer', 'CustomerController@index')->name('customer.index');
+    // NEW ADD
+    Route::get('customer/is_active', 'CustomerController@is_active')->name('customer.is_active');
+    // NEW ADD
     Route::get('customer/edit/{id}', 'CustomerController@edit')->name('customer.edit');
     Route::post('customer/update/{id}', 'CustomerController@update')->name('customer.update');
     Route::delete('customer/destroy/{id}', 'CustomerController@destroy')->name('customer.destroy');
