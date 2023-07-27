@@ -25,7 +25,7 @@
             if ($result_images->isNotEmpty()) {
                 foreach ($result_images as $img) {
                     $doctor_details = get_doctor($img->album_id);
-                    
+
                     if ($doctor_details) {
             ?>
                         <div class="col-lg-4 col-md-6">

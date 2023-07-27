@@ -193,6 +193,9 @@ class FrontendController extends Controller
         );
 
         $result_category = DB::table('albums')->where('name', $name)->select('*')->get();
+        if ($result_category->isEmpty()) {
+            return abort(404);
+        }
 
         $album_ids = json_decode(json_encode($result_category), true);
         if ($album_ids) {

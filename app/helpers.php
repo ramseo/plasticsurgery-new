@@ -1093,7 +1093,7 @@ if (!function_exists('date_today')) {
         $cityId = DB::table('cities')->select('id')->where('name', $city)->get()->first();
         if ($cityId) {
             $jsonId = "$cityId->id";
-            $doctors = DB::table('users')->select('*')->whereJsonContains('city', $jsonId)->get();
+            $doctors = DB::table('users')->select('*')->Where('is_active', 1)->whereJsonContains('city', $jsonId)->get();
             return $doctors;
         } else {
             return collect([]);
@@ -1154,13 +1154,12 @@ if (!function_exists('date_today')) {
     function get_doctor($album_id)
     {
         $data = DB::table('albums')->where('id', $album_id)->get()->first();
+
         $doctor = NULL;
         if ($data) {
             $doctor = DB::table('users')
-
-                ->where('id', $data->vendor_id)
-                ->orWhere('is_active', 1)
-                ->whereNotIn('name', ['Super Admin', 'Admin Istrator', 'Executive User', 'General User'])
+                ->Where('id', $data->vendor_id)
+                ->Where('is_active', 1)
                 ->get()->first();
         }
 
@@ -1185,5 +1184,51 @@ if (!function_exists('date_today')) {
         } else {
             return "";
         }
+    }
+
+    function check_if_any_doc_exists($name)
+    {
+        // $name = "Tummy Tuck";
+        $result_category = DB::table('albums')->where('name', $name)->select('*')->get();
+        if (!$result_category) {
+            return [];
+        }
+
+        $album_ids = json_decode(json_encode($result_category), true);
+        if ($album_ids) {
+            $album_ids = array_column($album_ids, 'id');
+        }
+
+        $ids = check_active_doctor($album_ids);
+
+        $result_images = NULL;
+        if ($ids) {
+            $result_images = DB::table('images')
+                ->select('*')
+                ->whereIn('album_id', $ids)
+                ->get()->toArray();
+        }
+
+        return $result_images;
+    }
+
+    function check_active_doctor($album_ids)
+    {
+        $push_album_ids = [];
+        foreach ($album_ids as $id) {
+            $data = DB::table('albums')->Where('id', $id)->select('*')->get()->first();
+
+            $active_user = DB::table('users')
+                ->select('*')
+                ->Where('id', $data->vendor_id)
+                ->Where('is_active', 1)
+                ->get()->first();
+
+            if ($active_user) {
+                array_push($push_album_ids, $id);
+            }
+        }
+
+        return $push_album_ids;
     }
 }
