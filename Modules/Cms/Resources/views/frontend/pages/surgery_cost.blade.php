@@ -29,6 +29,7 @@ if ($doctors) {
 ?>
     <div class="container-fluid">
         <div class="container padding_t_b">
+            <p class="title">our surgeons:</p>
             <div class="row">
                 <?php foreach ($doctors as $doc_item) { ?>
                     <div class="col-sm-2">
