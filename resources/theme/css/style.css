@@ -276,11 +276,11 @@ a:hover {
 }
 
 .list-doctor {
-    width: 18%;
+    width: 100%;
     float: left;
     margin: 9px 21px 26px 0px;
     box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
-    background-color: #184d47 !important;
+    background-color: #F88379;
     border-radius: 9px;
 }
 

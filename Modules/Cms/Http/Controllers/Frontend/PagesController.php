@@ -234,7 +234,7 @@ class PagesController extends Controller
                     $$module_name_singular = $module_model::where('slug', '=', $slug)->firstOrFail();
                     event(new PageViewed($$module_name_singular));
 
-                    $template_view = "show";
+                    $template_view = "surgery_cost";
                     $city = "";
                     $surgery_str = "";
                 }
