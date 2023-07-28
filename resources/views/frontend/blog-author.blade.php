@@ -1,28 +1,37 @@
-<link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+@extends('frontend.layouts.app')
 
-<?php
-$posts = getLatestBlogs();
-if ($posts->isNotEmpty()) {
-?>
-    <section class="home-section paddingtop-80">
-        <div class="container">
+@section('title') {{$$module_name_singular->meta_title}} @endsection
+
+@section('site-meta-tags')
+<meta name="description" content="{{ $$module_name_singular->meta_description ? $$module_name_singular->meta_description : setting('meta_keyword') }}">
+@endsection
+
+
+@section('content')
+
+<div class="header-space"></div>
+<div class="cit">
+    <div class="container">
+        <p>
+            <?= $$module_name_singular->name ?>
+        </p>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container">
+        <h3 class="text-capitalize">
+            Author Archives: <?= $slug ?>
+        </h3>
+        <!-- dsssssss -->
+        <section class="home-section paddingtop-80">
             <div class="row">
-                <div class="section-heading text-center w-100">
-                    <h2 class="h-bold">
-                        Latest Blog
-                    </h2>
-                    <hr>
-                </div>
-            </div>
-
-            <div id="blogSlider" class="owl-carousel owl-theme row pt-3 pb-5">
                 <?php
                 foreach ($posts as $item) {
                     $url = route("frontend.posts.show", [$item->slug]);
                     $author_url = str_replace(' ', '-', strtolower($item->author));
                 ?>
-                    <div class="col-xs-12 col-sm-12 blg-ctg-box">
+                    <div class="col-xs-12 col-sm-4 blg-ctg-box">
                         <div class="blg-ctg-img">
                             <a href="<?= $url ?>" title="<?= $item->name ?>">
                                 <img width="652" height="324" src="<?= $item->featured_image ?>" class="img-responsive wp-post-image" alt="<?= $item->alt ?>" loading="lazy" />
@@ -62,35 +71,17 @@ if ($posts->isNotEmpty()) {
                     </div>
                 <?php } ?>
             </div>
-        </div>
-    </section>
-<?php } ?>
+        </section>
+        <!-- df -->
+    </div>
+</div>
 
-@push('after-scripts')
-<script>
-    $(document).ready(function() {
-        $('#blogSlider').owlCarousel({
-            loop: "<?= (count($posts) > 3) ? true : false ?>",
-            margin: 5,
-            nav: true,
-            items: 3,
-            dots: false,
-            autoplay: false,
-            responsive: {
-                0: {
-                    items: 1,
-                    loop: "<?= (count($posts) > 1) ? true : false ?>",
-                },
-                767: {
-                    items: 2,
-                    loop: "<?= (count($posts) > 2) ? true : false ?>",
-                },
-                991: {
-                    items: 3,
-                    loop: "<?= (count($posts) > 3) ? true : false ?>",
-                }
-            }
-        });
-    })
-</script>
+<div class="spacer">
+    @include('cms::frontend.pages.footer-email')
+</div>
+
+@endsection
+
+@push ("after-scripts")
+
 @endpush

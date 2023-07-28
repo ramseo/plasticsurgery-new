@@ -40,6 +40,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('before-after-results/{slug}', 'FrontendController@before_after_result_details')->name('before-after-result-details');
     Route::get('reconstructive', 'FrontendController@reconstructive')->name('reconstructive');
     Route::get('book-an-appointment', 'FrontendController@appointment')->name('book-an-appointment');
+    Route::get('blog/author/{slug}', 'FrontendController@blog_author')->name('blog-author');
     // new routes
 
     // Route::get('privacy', 'FrontendController@privacy')->name('privacy');
