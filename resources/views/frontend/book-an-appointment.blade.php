@@ -242,11 +242,10 @@
                 </div>
 
                 <div class="icon_sec">
-                    <div class="display-flex" style="background:#ffffff; width: 180px; height: 40px;
-        border-radius: 26px; margin: 12px 0px 20px;">
+                    <div class="display-flex book-an-app">
                         <a href="https://wa.me/919888550489">
-                            <i class="fa fa-whatsapp" aria-hidden="true" style="font-size:43px; color:#3daf20;">
-                                <span style="font-size: 18px;padding-left: 10px;position: absolute; padding-top: 12px; font-weight:600;">
+                            <i class="fa fa-whatsapp" aria-hidden="true">
+                                <span>
                                     WhatsApp us
                                 </span>
                             </i>

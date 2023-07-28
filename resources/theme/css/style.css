@@ -4621,3 +4621,24 @@ h5.mb-4 span.text-primary {
 .form-new {
     padding: 0px 15px 10px 15px;
 }
+
+.book-an-app {
+    background: #fff;
+    width: 180px;
+    height: 40px;
+    border-radius: 26px;
+    margin: 12px 0px 20px;
+}
+
+.book-an-app i {
+    font-size: 43px;
+    color: #3daf20;
+}
+
+.book-an-app i span {
+    font-size: 18px;
+    padding-left: 10px;
+    position: absolute;
+    padding-top: 12px;
+    font-weight: 600;
+}
