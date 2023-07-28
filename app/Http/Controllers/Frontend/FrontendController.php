@@ -156,7 +156,7 @@ class FrontendController extends Controller
             'meta_title' => "Top Cosmetic Surgery Clinics in India | Best Plastic Surgeons",
             'meta_description' => "Find the best cosmetic surgery clinic in your city. Book your appointment with Board Certified Plastic Surgeon across India.",
             'meta_keywords' => "",
-            'name' => "Cosmetic Surgery Procedures",
+            'name' => "Cosmetic Surgeries",
         );
 
         return view('frontend.procedures', compact('body_class', 'module_name_singular', "$module_name_singular"));
@@ -224,4 +224,20 @@ class FrontendController extends Controller
 
         return view('frontend.reconstructive', compact('body_class', 'module_name_singular', "$module_name_singular"));
     }
+
+    public function appointment()
+    {
+        $body_class = '';
+        $module_name_singular = Str::singular("pages");
+        $$module_name_singular = (object) array(
+            'meta_title' => "Book An Appointment",
+            'meta_description' => "Book An Appointment",
+            'meta_keywords' => "",
+            'name' => "Book An Appointment",
+        );
+
+        return view('frontend.book-an-appointment', compact('body_class', 'module_name_singular', "$module_name_singular"));
+    }
+
+
 }

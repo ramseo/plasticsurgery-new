@@ -30,6 +30,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('home', 'FrontendController@index')->name('home');
     Route::get('listing', 'FrontendController@listing')->name('listing');
     Route::get('detail', 'FrontendController@detail')->name('detail');
+
     // new routes 
     Route::get('surgeon/dr-{slug}', 'FrontendController@surgeon_profile')->name('surgeon');
     Route::get('clinics', 'FrontendController@clinics')->name('clinics');
@@ -38,6 +39,7 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('before-after-results', 'FrontendController@before_after_results')->name('before-after-results');
     Route::get('before-after-results/{slug}', 'FrontendController@before_after_result_details')->name('before-after-result-details');
     Route::get('reconstructive', 'FrontendController@reconstructive')->name('reconstructive');
+    Route::get('book-an-appointment', 'FrontendController@appointment')->name('book-an-appointment');
     // new routes
 
     // Route::get('privacy', 'FrontendController@privacy')->name('privacy');

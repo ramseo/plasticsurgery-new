@@ -159,22 +159,11 @@ a:hover {
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
 
-.form-bg-2 {
-    background: #0777ff;
-    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
-    padding-top: 8px;
-    padding-bottom: 40px;
-}
-
 .main-form {
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 10px;
     padding-right: 10px;
-}
-
-.icon_space {
-    padding-left: 15px;
 }
 
 .radioo_icon {
@@ -4560,4 +4549,74 @@ h5.mb-4 span.text-primary {
 .blog-read-more button {
     text-transform: capitalize;
     outline: none;
+}
+
+.btn.mt-1.kl.btn-sm {
+    background-color: #f3413a;
+    font-weight: 600;
+}
+
+.navbar-nav.ml-auto {
+    display: flex;
+    align-items: center;
+}
+
+.verticle-line-cls {
+    color: #fff;
+    padding: 0 9px 0 0px;
+}
+
+.book-app {
+    background: #F88379;
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 14px;
+    padding: 20px;
+}
+
+#google-sheet {
+    box-shadow: rgb(0 0 0 / 30%) -4px 1px 10px;
+    background: none;
+    padding: 0;
+}
+
+.reach_us {
+    font-weight: 700;
+    color: #ffffff;
+    padding-bottom: 15px;
+}
+
+.form-bg-2 {
+    background: #ff8361;
+    box-shadow: rgb(0 0 0 / 30%) 4px 1px 10px;
+    padding-top: 22px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.icon_sec {
+    display: flex;
+    align-items: baseline;
+    padding-top: 10px;
+}
+
+.icon_sec1 {
+    font-size: 28px;
+    color: #ffff;
+}
+
+.icon_space {
+    padding-left: 20px;
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.icon_space p {
+    margin: 0;
+}
+
+.form-new {
+    padding: 0px 15px 10px 15px;
 }
