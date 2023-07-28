@@ -158,10 +158,10 @@
    <div class="split"></div>
 </div>
 
+<!-- LEAD FORM CODE -->
 <?php
 if (\Request::getRequestUri() != "/book-an-appointment") {
 ?>
-   <!-- LEAD FORM CODE -->
    <div class="sidebar-form">
       <div class="call-action">
          <span>Enquiry Form</span>
@@ -296,9 +296,13 @@ if (\Request::getRequestUri() != "/book-an-appointment") {
          </button>
       </form>
    </div>
-   <!-- LEAD FORM CODE -->
+   <div id="chatbutton">
+      <a href="https://wa.me/919888550489" target="_blank" class="chat-cls">
+         <img src="<?= asset('images/whatsapp-icon-square.svg') ?>">
+      </a>
+   </div>
 <?php } ?>
-
+<!-- LEAD FORM CODE -->
 
 <!--Model Popup starts-->
 <div class="container">

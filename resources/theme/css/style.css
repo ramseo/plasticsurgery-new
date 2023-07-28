@@ -3407,6 +3407,7 @@ img {
     position: fixed;
     bottom: 10px;
     right: 10px;
+    z-index: 999;
 }
 
 
@@ -4641,4 +4642,9 @@ h5.mb-4 span.text-primary {
     position: absolute;
     padding-top: 12px;
     font-weight: 600;
+}
+
+.chat-cls img {
+    width: 50px;
+    color: #3daf20;
 }
