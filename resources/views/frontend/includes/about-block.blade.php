@@ -39,7 +39,9 @@ if ($posts->isNotEmpty()) {
                                 </a>
                                 <div>
                                     <span>
-                                        admin
+                                        <a href="<?= url('/') . '/author/' ?>">
+                                            admin
+                                        </a>
                                     </span>
                                     <span>
                                         <?= date('F', strtotime($item->published_at)) . " " . date('d', strtotime($item->published_at)) . "," . date('Y', strtotime($item->published_at)) ?>

@@ -32,7 +32,7 @@
                             </div>
                             <div class="text-col">
                                 <a href="{{$details_url}}">
-                                    <p class="title">
+                                    <p class="title2">
                                         <?= Str::words($item->name, 4) ?>
                                     </p>
                                 </a>
