@@ -42,3 +42,30 @@
         padding-right: 13px;
     }
 }
+
+.tabo .col-lg-3 {
+    padding-right: 0px;
+    top: 58px;
+}
+
+.tabo .even {
+    background: #e6e2e2;
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.tabo .odd {
+    border: 1px solid #e6e2e2;
+    padding: 10px 0px;
+    margin: 10px 0px;
+}
+
+.even-alp {
+    background: #e6e2e2;
+    padding: 10px 10px;
+}
+
+.odd-alp {
+    border: 1px solid #e6e2e2;
+    padding: 10px 10px;
+}
