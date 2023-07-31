@@ -1176,16 +1176,6 @@ if (!function_exists('date_today')) {
         }
     }
 
-    function browser_title($slug, $table, $column_index)
-    {
-        $data = DB::table($table)->where($column_index, $slug)->get()->first();
-        if ($data) {
-            return $data->meta_title;
-        } else {
-            return "";
-        }
-    }
-
     function check_if_any_doc_exists($name)
     {
         // $name = "Tummy Tuck";
