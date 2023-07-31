@@ -23,7 +23,7 @@
         <h3 class="text-capitalize">
             Author Archives: <?= $slug ?>
         </h3>
-        <!-- dsssssss -->
+
         <section class="home-section paddingtop-80">
             <div class="row">
                 <?php
@@ -71,8 +71,13 @@
                     </div>
                 <?php } ?>
             </div>
+            <div class="inner text-center">
+                <div class="d-flex justify-content-center w-100 mt-3">
+                    <?= $posts->links() ?>
+                </div>
+            </div>
         </section>
-        <!-- df -->
+
     </div>
 </div>
 
