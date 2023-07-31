@@ -41,6 +41,21 @@
     </div>
 </div>
 
+<div class="row">
+    <div class="col-12">
+        <div class="form-group">
+            <?php
+            $field_name = 'content_bottom';
+            $field_lable = __("cms::$module_name.$field_name");
+            $field_placeholder = $field_lable;
+            $required = "required";
+            ?>
+            {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
+            {{ html()->textarea($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
+        </div>
+    </div>
+</div>
+
 <!-- <div class="row">
     <div class="col-12">
         <div class="form-group">
