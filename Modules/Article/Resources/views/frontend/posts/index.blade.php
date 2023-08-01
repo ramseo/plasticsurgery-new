@@ -18,38 +18,44 @@
     <div class="container">
         <div class="row">
             @foreach ($post_data as $item)
-            @php
-            $details_url = route("frontend.$module_name.show",[$item->slug]);
+            <?php
+            $url = route("frontend.posts.show", [$item->slug]);
             $author_url = str_replace(' ', '-', strtolower($item->author));
-            @endphp
-            <div class="col-md-4">
-                <div class="post-item-wrap">
-                    <div class="common-card">
-                        <div class="card" data-label="<?= date('d', strtotime($item->published_at)) . " " . substr(date('F', strtotime($item->published_at)), 0, 3) . " " . date('Y', strtotime($item->published_at)) ?>">
-                            <div class="img-col">
-                                <a href="{{$details_url}}">
-                                    <img src="{{$item->featured_image}}" class="img-fluid" alt="<?= $item->alt ?>">
+            ?>
+            <div class="col-xs-12 col-sm-4 blg-ctg-box">
+                <div class="blg-ctg-img">
+                    <a href="<?= $url ?>" title="<?= $item->name ?>">
+                        <img width="652" height="324" src="<?= $item->featured_image ?>" class="img-responsive wp-post-image" alt="<?= $item->alt ?>" loading="lazy" />
+                    </a>
+                </div>
+                <div class="blg-ctg-cntnt">
+                    <h2>
+                        <a href="<?= $url ?>" title="<?= $item->name ?>">
+                            <?= $item->name ?>
+                        </a>
+                    </h2>
+                    <div class="blg-cat-btm">
+                        <a href="<?= url('/') . '/' . 'blog/author/' . $author_url ?>" class="author-avtr">
+                            <img alt='admin' src='<?= asset('img/default-avatar.jpg') ?>' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' />
+                        </a>
+                        <div>
+                            <span>
+                                <a href="<?= url('/') . '/' . 'blog/author/' . $author_url ?>">
+                                    <?= $item->author ?>
                                 </a>
-                            </div>
-                            <div class="text-col">
-                                <a href="{{$details_url}}">
-                                    <p class="title2">
-                                        <?= Str::words($item->name, 4) ?>
-                                    </p>
-                                </a>
-                                <!-- <p class="text margin-null">
-                                    {{Str::words($item->intro, '15')}}
-                                </p> -->
-                                <div class="author"> 
-                                    <span>
-                                        Author:
-                                    </span>
-                                    <a class="color-black" href="<?= url('/') . '/' . 'blog/author/' . $author_url ?>">
-                                        <?= $item->author ?>
-                                    </a>
-                                </div>
-                            </div>
+                            </span>
+                            <span>
+                                <?= date('F', strtotime($item->published_at)) . " " . date('d', strtotime($item->published_at)) . "," . date('Y', strtotime($item->published_at)) ?>
+                            </span>
                         </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="blog-read-more">
+                        <a href="<?= $url ?>">
+                            <button class="btn find-a-procedure">
+                                read more
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
