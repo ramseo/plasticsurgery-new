@@ -221,10 +221,10 @@ class FrontendController extends Controller
         $result_images = NULL;
         if ($album_ids) {
             $result_images = DB::table('images')->select('*')->whereIn('album_id', $album_ids)->get();
-        }
+        } 
 
         return view('frontend.before-after-result-details', compact('body_class', 'module_name_singular', "$module_name_singular", 'slug', 'name', 'result_images'));
-    }
+    } 
 
 
     public function reconstructive()
@@ -268,7 +268,9 @@ class FrontendController extends Controller
             'name' => "What You Need to Know About Traveling Abroad for Cosmetic Surgery",
         );
 
-        $posts = DB::table('posts')->where('author', $slug)->select('*')->paginate(3);
+        $posts = DB::table('posts')->where('author', $slug)->select('*')->paginate(6);
         return view('frontend.blog-author', compact('body_class', 'module_name_singular', "$module_name_singular", 'posts', 'slug'));
     }
+
+    
 }

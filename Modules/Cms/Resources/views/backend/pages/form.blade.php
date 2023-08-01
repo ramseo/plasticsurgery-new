@@ -41,7 +41,7 @@
     </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-12">
         <div class="form-group">
             <?php
@@ -54,7 +54,7 @@
             {{ html()->textarea($field_name)->placeholder($field_placeholder)->class('form-control')->attributes(["$required"]) }}
         </div>
     </div>
-</div>
+</div> -->
 
 <!-- <div class="row">
     <div class="col-12">
