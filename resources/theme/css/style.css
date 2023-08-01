@@ -1076,6 +1076,8 @@ ul.nav.nav-tabs {
     padding: 30px;
     margin-bottom: 25px;
     border-radius: 3px;
+    min-height: 310px;
+    max-height: 310px;
 }
 
 .tab-pane ul {
@@ -4048,7 +4050,7 @@ img {
 .procedure-surgery-cls small {
     font-size: 16px!important;
     font-weight: 400!important;
-    color: #766f6f;
+    color: #c94022;
 }
 
 .procedure-surgery-cls .proc a {
