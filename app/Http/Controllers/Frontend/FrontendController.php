@@ -24,10 +24,18 @@ class FrontendController extends Controller
 
         $data = DB::table("pages")->where('slug', "homepage")->get()->first();
 
+        if ($data) {
+            $meta_title = $data->meta_title;
+            $meta_description = $data->meta_description;
+        } else {
+            $meta_title = "Plastic Surgery";
+            $meta_description = "Plastic Surgery";
+        }
+
         $module_name_singular = Str::singular("pages");
         $$module_name_singular = (object) array(
-            'meta_title' => $data->meta_title,
-            'meta_description' => $data->meta_description,
+            'meta_title' => $meta_title,
+            'meta_description' => $meta_description,
             'meta_keywords' => "",
             'name' => "Homepage",
         );

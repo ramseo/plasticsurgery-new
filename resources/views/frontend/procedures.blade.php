@@ -145,7 +145,7 @@
 
 
                                 <!-- <div class="kpborder"></div> -->
-                                <div class="row odd">
+                                <div class="row even">
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <p class="proc"><a href="<?= url('/') ?>/mommy-makeover">Mommy Makeover</a></p>
                                         <small>Get Your Pre-Baby Body Back</small>
@@ -157,7 +157,7 @@
                                     </div>
                                 </div>
                                 <!-- <div class="kpborder"></div> -->
-                                <div class="row even">
+                                <div class="row odd">
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <p class="proc"><a href="<?= url('/') ?>/tummy-tuck">Tummy Tuck</a></p>
                                         <small>Abdominoplasty</small>
