@@ -49,23 +49,23 @@
 }
 
 .tabo .even {
-    background: #e6e2e2;
+    background: #e5e5e5;
     padding: 10px 0px;
     margin: 10px 0px;
 }
 
 .tabo .odd {
-    border: 1px solid #e6e2e2;
+    border: 1px solid #e5e5e5;
     padding: 10px 0px;
     margin: 10px 0px;
 }
 
 .even-alp {
-    background: #e6e2e2;
+    background: #e5e5e5;
     padding: 10px 10px;
 }
 
 .odd-alp {
-    border: 1px solid #e6e2e2;
+    border: 1px solid #e5e5e5;
     padding: 10px 10px;
 }
