@@ -19,11 +19,10 @@
 <div class="container-fluid regular-page-cls">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 padding_t_b">
+            <div class="col-lg-12 padding_t_b">
                 <?= $$module_name_singular->content ?>
             </div>
-            <div class="col-lg-4 loc">
-
+            <!-- <div class="col-lg-4 loc">
                 <?php
                 $popular_cities1 = popular_cities_surgeries("cities", $skip = 0, $take = 13);
                 $popular_cities2 = popular_cities_surgeries("cities", $skip = 13, $take = 100);
@@ -95,10 +94,11 @@
                         <?php } ?>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
+
         </div>
     </div>
-</div>
 </div>
 
 @endsection
