@@ -62,12 +62,6 @@ a:hover {
     margin-bottom: 16px;
 }
 
-.cutome_sele_bg {
-    max-width: 306px;
-    height: 47px;
-    margin: auto;
-}
-
 .sr-heading {
     background-image: linear-gradient(36deg, #F88379, #c35248);
     color: #ffff;
