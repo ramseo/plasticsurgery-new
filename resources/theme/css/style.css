@@ -4186,14 +4186,14 @@ footer .row div h2 {
     float: left;
     width: 100%;
     padding: 16px;
-    border: dashed 1px #ccc;
+    border: 1px solid #e5e5e5;
     margin-top: 10px;
     background: #fff;
     background-position-x: 0%;
     background-position-y: 0%;
     background-image: none;
     background-size: auto;
-    background-image: linear-gradient(to left, transparent, transparent 50%, #00c6ff 50%, #00c6ff);
+    background-image: linear-gradient(to left, transparent, transparent 50%, #e5e5e5 50%, #e5e5e5);
     background-position: 100% 0;
     background-size: 200% 100%;
     transition: all .25s ease-in;
@@ -4202,17 +4202,17 @@ footer .row div h2 {
 .right_dfs ul.list-unstyled li a strong {
     font-size: 19px;
     line-height: 40px;
-    font-weight: normal;
+    font-weight: 600;
     width: 100%;
     float: left;
-    color: #F88379;
+    color: #000;
 }
 
 .right_dfs ul.list-unstyled li a small {
     font-size: 15px;
     width: 100%;
     float: left;
-    color: #000;
+    color: #bd3b3b;
 }
 
 .right_dfs ul.list-unstyled li:hover {
