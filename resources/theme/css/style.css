@@ -4521,3 +4521,11 @@ h5.mb-4 span.text-primary {
 p {
     text-align: justify;
 }
+
+p {
+    left: 200px;
+}
+
+p:first-line {
+    left: 0;
+}
