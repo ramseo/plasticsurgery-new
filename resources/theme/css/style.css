@@ -4186,7 +4186,7 @@ footer .row div h2 {
     float: left;
     width: 100%;
     padding: 16px;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #c6c5c5;
     margin-top: 10px;
     background: #fff;
     background-position-x: 0%;
@@ -4210,7 +4210,7 @@ footer .row div h2 {
 
 .right_dfs ul.list-unstyled li a small {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     width: 100%;
     float: left;
     color: #bd3b3b;
