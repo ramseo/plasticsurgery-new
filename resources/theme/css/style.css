@@ -4209,7 +4209,8 @@ footer .row div h2 {
 }
 
 .right_dfs ul.list-unstyled li a small {
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 400;
     width: 100%;
     float: left;
     color: #bd3b3b;
