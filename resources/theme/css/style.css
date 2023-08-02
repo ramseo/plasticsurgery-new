@@ -4522,10 +4522,29 @@ p {
     text-align: justify;
 }
 
-p {
-    left: 200px;
+.new_breat_f {
+    background: #f3413a;
+    margin: 20px 0px;
+    padding: 20px;
 }
 
-p:first-line {
-    left: 0;
+..new_breat_f h5 {
+    float: left;
+    width: 100%;
+    font-size: 30px;
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.cutome_sele_bg {
+    display: inline-block;
+    max-width: 300px;
+    height: 50px;
+    background: #fff;
+    font-size: 18px;
+    color: #000;
+    border: solid 2px #fffaf9;
+    text-align: left;
 }
