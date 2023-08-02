@@ -4523,12 +4523,12 @@ p {
 }
 
 .new_breat_f {
-    background: #f3413a;
+    background: #f3413a!important;
     margin: 20px 0px;
     padding: 20px;
 }
 
-..new_breat_f h5 {
+.new_breat_f h5 {
     float: left;
     width: 100%;
     font-size: 30px;
