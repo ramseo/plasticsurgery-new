@@ -4516,10 +4516,18 @@ p {
     text-align: justify;
 }
 
+.select_fg {
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    float: left;
+    width: 100%;
+}
+
 .new_breat_f {
     background: #f3413a!important;
     margin: 20px 0px;
     padding: 20px;
+    justify-content: center;
 }
 
 .new_breat_f h5 {
@@ -4535,30 +4543,10 @@ p {
 .cutome_sele_bg {
     display: inline-block;
     max-width: 300px;
-    height: 50px;
     background: #fff;
     font-size: 18px;
     color: #000;
     border: solid 2px #fffaf9;
     text-align: left;
     height: 50px!important;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
