@@ -4050,7 +4050,7 @@ img {
 .procedure-surgery-cls small {
     font-size: 16px!important;
     font-weight: 400!important;
-    color: #766f6f;
+    color: #bd3b3b;
 }
 
 .procedure-surgery-cls .proc a {
@@ -4516,4 +4516,8 @@ h5.mb-4 span.text-primary {
 .item-middle .ico {
     min-height: 180px;
     max-height: 180px;
+}
+
+p {
+    text-align: justify;
 }
