@@ -4050,7 +4050,7 @@ img {
 .procedure-surgery-cls small {
     font-size: 16px!important;
     font-weight: 400!important;
-    color: #c94022;
+    color: #766f6f;
 }
 
 .procedure-surgery-cls .proc a {
@@ -4269,6 +4269,8 @@ img.emoji {
     border: solid 1px #F88379;
     padding: 10px;
     margin-top: 25px;
+    min-height: 190px;
+    max-height: 190px;
 }
 
 .col-md-4 .bdf_class h3 {
@@ -4509,4 +4511,9 @@ h5.mb-4 span.text-primary {
 .chat-cls img {
     width: 50px;
     color: #3daf20;
+}
+
+.item-middle .ico {
+    min-height: 180px;
+    max-height: 180px;
 }
