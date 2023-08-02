@@ -4541,7 +4541,7 @@ p {
 }
 
 .cutome_sele_bg {
-    display: inline-block;
+    display: inline-block !important;
     max-width: 300px;
     background: #fff;
     font-size: 18px;
