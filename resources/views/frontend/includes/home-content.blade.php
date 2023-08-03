@@ -183,20 +183,17 @@
                             Are you a Top 5-Star Plastic Surgeon?
                         </h3>
                         <h4>
-                            Let us list you as the ‘ONLY’ recommended Plastic Surgeon in your city.
+                            Get listed alongside the Top Plastic Surgeons in your city.
                         </h4>
                         <ul>
                             <li>
-                                Connect easily with thousands of patients from your city
-                                and worldwide searching for a Plastic Surgeon.
+                                Connect easily with thousands of patients from your city and worldwide searching for a Plastic Surgeon.
                             </li>
                             <li>
-                                We only list ONE Top Plastic Surgeon in the city. So, your
-                                online credibility will increase manifold.
+                                With your inclusion in our elite of Top Plastic Surgeons in the city, your online credibility will increase manifold.
                             </li>
                             <li>
-                                Educate people by writing informative blogs/articles on the topics
-                                that your patients love.
+                                Educate people by writing informative blogs/articles on the topics that your patients love.
                             </li>
                         </ul>
                         <a class="btn dfer_btn" href="<?= url("join-as-plastic-surgeon") ?>">
@@ -207,13 +204,11 @@
                 <div class="col-md-6 mndfe">
                     <div class="five-star box_shape45">
                         <h3>
-                            We understand how unsettling it can be for patients when searching
-                            for the right plastic and cosmetic surgery treatments.
+                            We understand how unsettling it can be for patients when looking out for the right Plastic and Cosmetic Surgery treatments.
                         </h3>
                         <br>
                         <h4>
-                            Our website enables the needful patients connect with the best plastic
-                            surgeon around in just a few clicks.
+                            Our website enables the needful patients to connect with our best Plastic Surgeons in just a few clicks.
                         </h4>
                         <h4>
                             Join us now to help patients make the right choice
