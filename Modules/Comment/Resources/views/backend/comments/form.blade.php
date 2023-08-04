@@ -234,11 +234,14 @@ if (isset($$module_name_singular)) {
 
     document.addEventListener("DOMContentLoaded", function() {
 
-        document.getElementById('button-image').addEventListener('click', (event) => {
-            event.preventDefault();
+        var elem1 = document.getElementById('button-image');
+        if (elem1 !== null && elem1 !== 'undefined') {
+            document.getElementById('button-image').addEventListener('click', (event) => {
+                event.preventDefault();
 
-            window.open('/file-manager/fm-button', 'fm', 'width=800,height=600');
-        });
+                window.open('/file-manager/fm-button', 'fm', 'width=800,height=600');
+            });
+        }
     });
 
     // set file link

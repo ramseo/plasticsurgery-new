@@ -4,7 +4,7 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("backend.service.index")}}' icon='c-icon cil-people' >
+    <x-backend-breadcrumb-item route='{{route("backend.service.index")}}' icon='c-icon cil-people'>
         Content
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">Create</x-backend-breadcrumb-item>
@@ -37,13 +37,13 @@
 
                     <div class="col-6">
                         <div class="form-group">
-                            {{ Form::label('type_id', 'Vendor Type') }}   {!! fielf_required("required") !!}
+                            {{ Form::label('type_id', 'Vendor Type') }} {!! fielf_required("required") !!}
                             {{ Form::select('type_id', $types, null, array('class' => 'form-control')) }}
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="form-group">
-                            {{ Form::label('city_id', 'City') }}  {!! fielf_required("required") !!}
+                            {{ Form::label('city_id', 'City') }} {!! fielf_required("required") !!}
                             {{ Form::select('city_id', $cities, null, array('class' => 'form-control')) }}
                         </div>
                     </div>
@@ -136,81 +136,96 @@
 
 
 @push('after-styles')
-    <!-- File Manager -->
-    <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.6/css/bootstrap-colorpicker.css" rel="stylesheet">
+<!-- File Manager -->
+<link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.6/css/bootstrap-colorpicker.css" rel="stylesheet">
 @endpush
 
 @push ('after-scripts')
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('.select2-category').select2({
-                theme: "bootstrap",
-                placeholder: '@lang("Select an option")',
-                minimumInputLength: 2,
-                allowClear: true,
-                ajax: {
-                    url: '{{route("backend.categories.index_list")}}',
-                    dataType: 'json',
-                    data: function (params) {
-                        return {
-                            q: $.trim(params.term)
-                        };
-                    },
-                    processResults: function (data) {
-                        return {
-                            results: data
-                        };
-                    },
-                    cache: true
-                }
-            });
-
-            $('.select2-tags').select2({
-                theme: "bootstrap",
-                placeholder: '@lang("Select an option")',
-                minimumInputLength: 2,
-                allowClear: true,
-                ajax: {
-                    url: '{{route("backend.tags.index_list")}}',
-                    dataType: 'json',
-                    data: function (params) {
-                        return {
-                            q: $.trim(params.term)
-                        };
-                    },
-                    processResults: function (data) {
-                        return {
-                            results: data
-                        };
-                    },
-                    cache: true
-                }
-            });
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.select2-category').select2({
+            theme: "bootstrap",
+            placeholder: '@lang("Select an option")',
+            minimumInputLength: 2,
+            allowClear: true,
+            ajax: {
+                url: '{{route("backend.categories.index_list")}}',
+                dataType: 'json',
+                data: function(params) {
+                    return {
+                        q: $.trim(params.term)
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data
+                    };
+                },
+                cache: true
+            }
         });
-    </script>
+
+        $('.select2-tags').select2({
+            theme: "bootstrap",
+            placeholder: '@lang("Select an option")',
+            minimumInputLength: 2,
+            allowClear: true,
+            ajax: {
+                url: '{{route("backend.tags.index_list")}}',
+                dataType: 'json',
+                data: function(params) {
+                    return {
+                        q: $.trim(params.term)
+                    };
+                },
+                processResults: function(data) {
+                    return {
+                        results: data
+                    };
+                },
+                cache: true
+            }
+        });
+    });
+</script>
 
 
 
-    <script type="text/javascript" src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 
-    <script type="text/javascript">
-        CKEDITOR.replace('description', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
-        CKEDITOR.replace('content', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
-        CKEDITOR.replace('faq', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
-        document.addEventListener("DOMContentLoaded", function() {
+<script type="text/javascript">
+    CKEDITOR.replace('description', {
+        filebrowserImageBrowseUrl: '/file-manager/ckeditor',
+        language: '{{App::getLocale()}}',
+        defaultLanguage: 'en'
+    });
+    CKEDITOR.replace('content', {
+        filebrowserImageBrowseUrl: '/file-manager/ckeditor',
+        language: '{{App::getLocale()}}',
+        defaultLanguage: 'en'
+    });
+    CKEDITOR.replace('faq', {
+        filebrowserImageBrowseUrl: '/file-manager/ckeditor',
+        language: '{{App::getLocale()}}',
+        defaultLanguage: 'en'
+    });
+    document.addEventListener("DOMContentLoaded", function() {
 
+        var elem1 = document.getElementById('button-image');
+        if (elem1 !== null && elem1 !== 'undefined') {
             document.getElementById('button-image').addEventListener('click', (event) => {
                 event.preventDefault();
 
                 window.open('/file-manager/fm-button', 'fm', 'width=800,height=600');
             });
-        });
-
-        // set file link
-        function fmSetLink($url) {
-            document.getElementById('featured_image').value = $url;
         }
-    </script>
+    });
+
+    // set file link
+    function fmSetLink($url) {
+        document.getElementById('featured_image').value = $url;
+    }
+</script>
 @endpush

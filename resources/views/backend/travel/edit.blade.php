@@ -4,8 +4,8 @@
 
 @section('breadcrumbs')
 <x-backend-breadcrumbs>
-    <x-backend-breadcrumb-item route='{{route("backend.travel.index")}}' icon='c-icon cil-people' >
-    Travel
+    <x-backend-breadcrumb-item route='{{route("backend.travel.index")}}' icon='c-icon cil-people'>
+        Travel
     </x-backend-breadcrumb-item>
     <x-backend-breadcrumb-item type="active">Edit</x-backend-breadcrumb-item>
 </x-backend-breadcrumbs>
@@ -20,7 +20,7 @@
                     <i class="c-icon cil-people"></i> Travel <small class="text-muted">Create</small>
                 </h4>
                 <div class="small text-muted">
-                Travel Management Dashboard
+                    Travel Management Dashboard
                 </div>
             </div>
             <div class="col-4">
@@ -36,11 +36,11 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="form-group">
-                            {{ Form::label('name', 'name') }}  {!! fielf_required("required") !!}
+                            {{ Form::label('name', 'name') }} {!! fielf_required("required") !!}
                             {{ Form::text('name', $travel->name, array('class' => 'form-control')) }}
                         </div>
                     </div>
-                   
+
                     <div class="col-12">
                         <div class="form-group">
                             {{ Form::label('intro', 'Short Description') }}
@@ -65,7 +65,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="row">
                     <div class="col-6">
@@ -128,30 +128,38 @@
 
 
 @push('after-styles')
-    <!-- File Manager -->
-    <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.6/css/bootstrap-colorpicker.css" rel="stylesheet">
+<!-- File Manager -->
+<link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.6/css/bootstrap-colorpicker.css" rel="stylesheet">
 @endpush
 
 
 @push ('after-scripts')
-    <script type="text/javascript" src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendor/ckeditor/ckeditor.js') }}"></script>
+<script type="text/javascript" src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
 
-    <script type="text/javascript">
-        CKEDITOR.replace('content', {filebrowserImageBrowseUrl: '/file-manager/ckeditor', language:'{{App::getLocale()}}', defaultLanguage: 'en'});
-        document.addEventListener("DOMContentLoaded", function() {
+<script type="text/javascript">
+    CKEDITOR.replace('content', {
+        filebrowserImageBrowseUrl: '/file-manager/ckeditor',
+        language: '{{App::getLocale()}}',
+        defaultLanguage: 'en'
+    });
+    document.addEventListener("DOMContentLoaded", function() {
 
+        var elem1 = document.getElementById('button-image');
+        if (elem1 !== null && elem1 !== 'undefined') {
             document.getElementById('button-image').addEventListener('click', (event) => {
                 event.preventDefault();
 
                 window.open('/file-manager/fm-button', 'fm', 'width=800,height=600');
             });
-        });
-
-        // set file link
-        function fmSetLink($url) {
-            document.getElementById('featured_image').value = $url;
         }
-    </script>
+
+    });
+
+    // set file link
+    function fmSetLink($url) {
+        document.getElementById('featured_image').value = $url;
+    }
+</script>
 @endpush
