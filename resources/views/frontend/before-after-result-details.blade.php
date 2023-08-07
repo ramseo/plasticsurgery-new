@@ -30,7 +30,7 @@
             ?>
                         <div class="col-lg-4 col-md-6">
                             <div class="spec">
-                                <a class="example-image-link" href="<?= asset('storage/album') . '/' . $img->album_id . '/' . $img->name ?>" data-lightbox="example-set" data-title="<?= $name ?>">
+                                <a class="example-image-link" href="<?= asset('storage/album') . '/' . $img->album_id . '/' . $img->name ?>" data-lightbox="example-set" data-title="<?= "Dr." . " " . $doctor_details->first_name . " " . $doctor_details->last_name . " " . $name ?>">
                                     <img class="example-image" src="<?= asset('storage/album') . '/' . $img->album_id . '/' . $img->name ?>" alt="<?= $name ?>" />
                                 </a>
                                 <p>

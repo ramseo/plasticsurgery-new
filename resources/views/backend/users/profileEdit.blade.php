@@ -16,6 +16,7 @@
 @endsection
 
 @section('content')
+
 <div class="card">
     <div class="card-body">
         <div class="row">
@@ -283,7 +284,7 @@
             <div id="doctor-results" class="container tab-pane fade">
                 <div class="row">
                     <div class="table-responsive">
-                        <table id="datatable" class="table table-bordered table-hover table-responsive-sm">
+                        <table width="100%" id="datatable" class="table table-bordered table-hover table-responsive-sm">
                             <thead>
                                 <th width="5%">#</th>
                                 <th width="20%">Name</th>
@@ -440,7 +441,7 @@
     var table = $('#datatable').DataTable({
         processing: true,
         serverSide: true,
-        ajax: "{{ route('frontend.results.index')}}",
+        ajax: "{{ route('backend.customer.results.index',$user->id)}}",
         columns: [{
                 data: 'id',
                 name: 'id'
