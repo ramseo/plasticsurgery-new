@@ -32,7 +32,11 @@
 
             <div class="col-4">
                 <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-                    <button onclick="window.history.back();" class="btn btn-warning ml-1" data-toggle="tooltip" title="Return Back"><i class="fas fa-reply"></i></button>
+                    <a href="<?= url("admin/customer") ?>">
+                        <button class="btn btn-warning ml-1" data-toggle="tooltip" title="Return Back">
+                            <i class="fas fa-reply"></i>
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
