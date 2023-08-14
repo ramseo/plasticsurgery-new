@@ -23,7 +23,6 @@
 }
 
 .insight_core_breadcrumb {
-
     font-weight: 600;
     letter-spacing: 0em;
     line-height: 1.2;
@@ -42,7 +41,6 @@
     -webkit-transition: all .5s cubic-bezier(.645, .045, .355, 1);
     transition: all .5s cubic-bezier(.645, .045, .355, 1);
 }
-
 
 .post-item-wrap:hover {
     animation: moveVertical 1s ease forwards;
@@ -75,8 +73,8 @@
 
 .card {
     box-shadow: 0 1px 4px 2px #dadada;
-
 }
+
 
 /* .card::after {
     position: absolute;
@@ -97,7 +95,6 @@
 .card:hover {
     box-shadow: 0 1px 4px 2px #dadada;
     background-color: #f8f8f8;
-
 }
 
 .margin-null {
@@ -110,7 +107,6 @@
     font-size: 17px;
     font-weight: 600;
 }
-
 
 .common-card .title {
     font-size: 20px !important;
@@ -130,7 +126,6 @@
 }
 
 .page-pagination li .current {
-
     color: #000;
     background-color: #EAE8D0;
     padding: 0;
@@ -159,8 +154,6 @@
     color: #7a8a9e;
 }
 
-
-
 .page-pagination li .next i {
     font-size: 10px;
     font-weight: 700;
@@ -169,7 +162,6 @@
 
 .item-img {
     box-shadow: 0 1px 4px 2px #dadada;
-
 }
 
 .item-img {
@@ -183,4 +175,12 @@
 
 .item-img:hover {
     transform: scale(1.1);
+}
+
+.padding_t_b h2 .col-lg-4 {
+    padding-top: 20px;
+}
+
+.padding_t_b h2 p {
+    padding-top: 0px 15px;
 }
