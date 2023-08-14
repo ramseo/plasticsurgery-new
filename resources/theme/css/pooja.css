@@ -182,5 +182,6 @@
 }
 
 .padding_t_b h2 p {
-    padding-top: 0px 15px;
+    padding: 0px 15px;
+    font-weight: 400;
 }
