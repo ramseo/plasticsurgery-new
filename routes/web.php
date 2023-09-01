@@ -90,6 +90,13 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
         // get profile content 
         Route::get('profile/content', 'UserController@profile_content')->name('content.index');
         Route::PATCH('profile/content-update/{id}', 'UserController@profile_content_update')->name('content.update');
+
+        Route::get('profile/posts', 'UserController@profile_posts')->name('profile_posts.index');
+        Route::get('profile/posts-create/', 'UserController@posts_create')->name('profile_posts.create');
+        Route::post('profile/posts-store/', 'UserController@posts_store')->name('profile_posts.store');
+        Route::get('profile/posts-edit/{id}', 'UserController@posts_edit')->name('profile_posts.edit');
+        Route::PATCH('profile/posts-update/{id}', 'UserController@posts_update')->name('profile_posts.update');
+        Route::get('profile/posts-delete/{id}', 'UserController@posts_delete')->name('profile_posts.delete');
         // get profile content
 
         Route::get("users/emailConfirmationResend/{id}", ['as' => "users.emailConfirmationResend", 'uses' => "UserController@emailConfirmationResend"]);

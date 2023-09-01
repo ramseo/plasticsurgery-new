@@ -1230,4 +1230,34 @@ if (!function_exists('date_today')) {
             ->Where('id', $album_id)
             ->get()->first();
     }
+
+    function getRelatedlPostsArr()
+    {
+        $data = DB::table('posts')
+            ->select('id', 'name')
+            ->Where('status', 1)
+            ->orderBy('id', 'desc')
+            ->get()
+            ->toArray();
+
+        $Arr = [];
+        if ($data) {
+            foreach ($data as $item) {
+                $Arr[$item->id] = $item->name;
+            }
+        }
+
+        return $Arr;
+    }
+
+    function getDocPosts($doc_name)
+    {
+        return DB::table('posts')
+            ->select("*")
+            ->Where('status', 1)
+            ->Where('author', ucwords($doc_name))
+            ->limit(4)
+            ->orderBy('id', 'desc')
+            ->get();
+    }
 }
