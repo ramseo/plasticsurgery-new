@@ -74,7 +74,7 @@
                 <div class="custom-control custom-control-alternative custom-checkbox">
                     <input class="custom-control-input" name="agree" id="customCheckRegister" type="checkbox">
                     <label class="custom-control-label" for="customCheckRegister">
-                        <span class="text-muted">I agree with the <a href="#!">Privacy Policy</a></span>
+                        <span class="text-muted">I agree with the <a target="_blank" href="<?= url('privacy') ?>">Privacy Policy</a></span>
                     </label>
                 </div>
             </div>

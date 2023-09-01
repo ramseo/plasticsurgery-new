@@ -2,7 +2,7 @@
 
 @section('title') @lang('Vendor Signup') @endsection
 @push('before-styles')
-    {!! RecaptchaV3::initJs() !!}
+{!! RecaptchaV3::initJs() !!}
 @endpush
 @section('content')
 
@@ -28,7 +28,7 @@
             </button>
         </div>
         @endif
-      <!--   @if(env('FACEBOOK_ACTIVE') || env('GITHUB_ACTIVE') || env('GOOGLE_ACTIVE'))
+        <!--   @if(env('FACEBOOK_ACTIVE') || env('GITHUB_ACTIVE') || env('GOOGLE_ACTIVE'))
         <div class="card-header bg-transparent ">
             <div class="text-muted text-center ">
               
@@ -131,9 +131,9 @@
                 <div class="col-md-6">
                     {!! RecaptchaV3::field('register') !!}
                     @if ($errors->has('g-recaptcha-response'))
-                        <span class="help-block">
-                                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
-                                    </span>
+                    <span class="help-block">
+                        <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                    </span>
                     @endif
                 </div>
             </div>
@@ -141,7 +141,7 @@
                 <div class="custom-control custom-control-alternative custom-checkbox">
                     <input class="custom-control-input" id="customCheckRegister" type="checkbox">
                     <label class="custom-control-label" for="customCheckRegister">
-                        <span class="text-muted">I agree with the <a href="#!">Privacy Policy</a></span>
+                        <span class="text-muted">I agree with the <a target="_blank" href="<?= url('privacy') ?>">Privacy Policy</a></span>
                     </label>
                 </div>
             </div>
