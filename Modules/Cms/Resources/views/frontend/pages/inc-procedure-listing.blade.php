@@ -43,13 +43,13 @@
                                         <a href="blepharoplasty-<?= strtolower($city) ?>">Blepharoplasty</a>
                                     </li>
                                     <li>
-                                        <a href="facelift-<?= strtolower($city) ?>">Facelift</a>
+                                        <a href="facelift-<?= strtolower($city) ?>">Face lift</a>
                                     </li>
                                     <li>
-                                        <a href="brow-lift-<?= strtolower($city) ?>">Brow-Lift</a>
+                                        <a href="brow-lift-<?= strtolower($city) ?>">Brow Lift</a>
                                     </li>
                                     <li>
-                                        <a href="neck-lift-<?= strtolower($city) ?>">Neck-Lift</a>
+                                        <a href="neck-lift-<?= strtolower($city) ?>">Neck Lift</a>
                                     </li>
                                 </ul>
                             </div>
@@ -59,16 +59,16 @@
                                         <a href="chin-surgery-<?= strtolower($city) ?>">Chin Surgery</a>
                                     </li>
                                     <li>
-                                        <a href="cheek-augmentation-<?= strtolower($city) ?>">Cheek-augmentation</a>
+                                        <a href="cheek-augmentation-<?= strtolower($city) ?>">Cheek augmentation</a>
                                     </li>
                                     <li>
-                                        <a href="lip-augmentation-<?= strtolower($city) ?>">Lip-augmentation</a>
+                                        <a href="lip-augmentation-<?= strtolower($city) ?>">Lip augmentation</a>
                                     </li>
                                     <li>
-                                        <a href="buccal-fat-removal-<?= strtolower($city) ?>">Buccal-Fat-Removal</a>
+                                        <a href="buccal-fat-removal-<?= strtolower($city) ?>">Buccal Fat Removal</a>
                                     </li>
                                     <li>
-                                        <a href="ear-surgery-<?= strtolower($city) ?>">Ear-Surgery</a>
+                                        <a href="ear-surgery-<?= strtolower($city) ?>">Ear Surgery</a>
                                     </li>
                                 </ul>
                             </div>
@@ -130,7 +130,7 @@
                                         <a href="liposuction-<?= strtolower($city) ?>">Liposuction</a>
                                     </li>
                                     <li>
-                                        <a href="tummy-tuck-<?= strtolower($city) ?>">Tummy-tuck</a>
+                                        <a href="tummy-tuck-<?= strtolower($city) ?>">Tummy tuck</a>
                                     </li>
                                     <li>
                                         <a href="buttock-enhancement-<?= strtolower($city) ?>">Buttock Enhancement</a>
@@ -248,7 +248,7 @@
                 </h2>
             </div>
 
-            <div id="collapseOne" class="collapse in show" aria-labelledby="headingOne" data-parent="#accordion" aria-expanded="true" style="">
+            <div id="collapseOne" class="collapse in show" aria-labelledby="headingOne" data-parent="#accordion" aria-expanded="true">
                 <div class="card-body">
                     <img src="<?= asset('img/face.jpg') ?>" style="width:100%">
                     <ul>
@@ -259,28 +259,28 @@
                             <a href="blepharoplasty-<?= strtolower($city) ?>">Blepharoplasty</a>
                         </li>
                         <li>
-                            <a href="facelift-<?= strtolower($city) ?>">Facelift</a>
+                            <a href="facelift-<?= strtolower($city) ?>">Face lift</a>
                         </li>
                         <li>
-                            <a href="brow-lift-<?= strtolower($city) ?>">Brow-Lift</a>
+                            <a href="brow-lift-<?= strtolower($city) ?>">Brow Lift</a>
                         </li>
                         <li>
-                            <a href="neck-lift-<?= strtolower($city) ?>">Neck-Lift</a>
+                            <a href="neck-lift-<?= strtolower($city) ?>">Neck Lift</a>
                         </li>
                         <li>
                             <a href="chin-surgery-<?= strtolower($city) ?>">Chin Surgery</a>
                         </li>
                         <li>
-                            <a href="cheek-augmentation-<?= strtolower($city) ?>">Cheek-augmentation</a>
+                            <a href="cheek-augmentation-<?= strtolower($city) ?>">Cheek augmentation</a>
                         </li>
                         <li>
-                            <a href="lip-augmentation-<?= strtolower($city) ?>">Lip-augmentation</a>
+                            <a href="lip-augmentation-<?= strtolower($city) ?>">Lip augmentation</a>
                         </li>
                         <li>
-                            <a href="buccal-fat-removal-<?= strtolower($city) ?>">Buccal-Fat-Removal</a>
+                            <a href="buccal-fat-removal-<?= strtolower($city) ?>">Buccal Fat Removal</a>
                         </li>
                         <li>
-                            <a href="ear-surgery-<?= strtolower($city) ?>">Ear-Surgery</a>
+                            <a href="ear-surgery-<?= strtolower($city) ?>">Ear Surgery</a>
                         </li>
                     </ul>
                 </div>
@@ -334,7 +334,7 @@
                             <a href="liposuction-<?= strtolower($city) ?>">Liposuction</a>
                         </li>
                         <li>
-                            <a href="tummy-tuck-<?= strtolower($city) ?>">Tummy-tuck</a>
+                            <a href="tummy-tuck-<?= strtolower($city) ?>">Tummy tuck</a>
                         </li>
                         <li>
                             <a href="buttock-enhancement-<?= strtolower($city) ?>">Buttock Enhancement</a>

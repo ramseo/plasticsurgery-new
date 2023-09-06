@@ -3,8 +3,7 @@
 @section('title') {{$$module_name_singular->meta_title}} @endsection
 
 @section('site-meta-tags')
-<meta name="description"
-    content="{{ $$module_name_singular->meta_description ? $$module_name_singular->meta_description : setting('meta_keyword') }}">
+<meta name="description" content="{{ $$module_name_singular->meta_description ? $$module_name_singular->meta_description : setting('meta_keyword') }}">
 @endsection
 
 
@@ -97,8 +96,7 @@
                                         <small>Surgical Fat Reduction</small>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <p class="proc"><a
-                                                href="<?= url('/') ?>/liposuction-laser-ultrasound-assisted">Liposuction-Assisted</a>
+                                        <p class="proc"><a href="<?= url('/') ?>/liposuction-laser-ultrasound-assisted">Liposuction Assisted</a>
                                         </p>
                                         <small>Laser/Ultrasound Assisted</small>
                                     </div>
@@ -274,8 +272,7 @@
                                         <small>Skin Care Procedure</small>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <p class="proc"><a
-                                                href="<?= url('/') ?>/microdermabrasion">Microdermabrasion</a></p>
+                                        <p class="proc"><a href="<?= url('/') ?>/microdermabrasion">Microdermabrasion</a></p>
                                         <small>Minimally Invasive Procedure</small>
                                     </div>
                                 </div>
@@ -363,8 +360,7 @@
                                         <small>Reshaping Surgical Options</small>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <p class="proc"><a
-                                                href="<?= url('/') ?>/non-surgical-vaginal-rejuvenation">Nonsurgical
+                                        <p class="proc"><a href="<?= url('/') ?>/non-surgical-vaginal-rejuvenation">Nonsurgical
                                                 Vaginal Rejuvenation</a></p>
                                         <small>Minimally Invasive Options</small>
                                     </div>
@@ -547,8 +543,7 @@
                                         </div>
 
                                         <div class="odd-alp">
-                                            <p class="proc"><a
-                                                    href="<?= url('/') ?>/liposuction-laser-ultrasound-assisted">Liposuction
+                                            <p class="proc"><a href="<?= url('/') ?>/liposuction-laser-ultrasound-assisted">Liposuction
                                                     & Assisted</a></p>
                                             <small>Laser / Ultrasound Assisted</small>
                                         </div>
@@ -560,8 +555,7 @@
                                         </div>
 
                                         <div class="odd-alp">
-                                            <p class="proc"><a
-                                                    href="<?= url('/') ?>/microdermabrasion">Microdermabrasion</a></p>
+                                            <p class="proc"><a href="<?= url('/') ?>/microdermabrasion">Microdermabrasion</a></p>
                                             <small>Minimally Invasive Procedure</small>
                                         </div>
 
@@ -577,15 +571,13 @@
                                         </div>
 
                                         <div class="even-alp">
-                                            <p class="proc"><a
-                                                    href="<?= url('/') ?>/non-surgical-fat-reduction">Nonsurgical
+                                            <p class="proc"><a href="<?= url('/') ?>/non-surgical-fat-reduction">Nonsurgical
                                                     Fat Reduction</a></p>
                                             <small>Minimally Invasive Procedures</small>
                                         </div>
 
                                         <div class="odd-alp">
-                                            <p class="proc"><a
-                                                    href="<?= url('/') ?>/non-surgical-vaginal-rejuvenation">Nonsurgical
+                                            <p class="proc"><a href="<?= url('/') ?>/non-surgical-vaginal-rejuvenation">Nonsurgical
                                                     Vaginal Rejuvenation</a></p>
                                             <small>Minimally Invasive Options</small>
                                         </div>
@@ -596,8 +588,7 @@
                                         </div>
 
                                         <div class="odd-alp">
-                                            <p class="proc"><a
-                                                    href="<?= url('/') ?>/skin-rejuvenation-and-resurfacing">Skin
+                                            <p class="proc"><a href="<?= url('/') ?>/skin-rejuvenation-and-resurfacing">Skin
                                                     Rejuvenation and Resurfacing</a></p>
                                             <small>Skin Care Procedure</small>
                                         </div>
