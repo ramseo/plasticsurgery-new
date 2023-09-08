@@ -203,7 +203,7 @@
                                     $field_name = 'experience_years';
                                     $field_lable = label_case($field_name);
                                     $field_placeholder = $field_lable;
-                                    $required = "required";
+                                    $required = "";
                                     ?>
                                     {{ html()->label($field_lable, $field_name) }} {!! fielf_required($required) !!}
                                     {!! Form::text($field_name, $get_userprofiles->bio, ['class' => 'form-control','placeholder' => 'Experience Years', $required => $required]) !!}
