@@ -81,10 +81,12 @@
                                 </i>
                             </strong>
                         </p>
-                        <p>
-                            <strong>Years of Experience:</strong>
-                            <?= $doctor_details->year_experience ?> years
-                        </p>
+                        <?php if ($doctor_details->year_experience) { ?>
+                            <p>
+                                <strong>Years of Experience:</strong>
+                                <?= $doctor_details->year_experience ?>
+                            </p>
+                        <?php } ?>
                         <p>
                             <strong>Address:</strong>
                             <?= $doctor_details->address ?>
