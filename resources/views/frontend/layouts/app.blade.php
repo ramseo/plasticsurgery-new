@@ -11,7 +11,7 @@
     <link rel="icon" type="image/ico" href="{{asset('img/cosmetic-lg.png')}}" />
     <link rel="shortcut icon" href="{{asset('img/cosmetic-lg.png')}}">
     <!-- BROWSER ICONS -->
-    <meta name="robots" content="noindex,nofollow" />
+    <meta name="robots" content="index,follow" />
     <title>@yield('title')</title>
     <!-- <title>@yield('title') | {{ config('app.name') }}</title> -->
 
