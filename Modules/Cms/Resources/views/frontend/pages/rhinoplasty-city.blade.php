@@ -28,91 +28,81 @@ if ($getAssignedDoctors->isNotEmpty()) {
             </p>
             <div class="col-lg-12 doc-flex-cls padd-null">
                 <?php
-                $getAssignedDoctors = getAssignedDoctors(ucwords($city));
+                $getAssignedDoctors = getAssignedDoctors($city);
                 if ($getAssignedDoctors) {
                     foreach ($getAssignedDoctors as $item) {
                         $reviews = getDataArray('vendor_reviews', 'user_id', $item->id);
                         $average = averageReview($reviews);
                 ?>
-                        <div class="col-lg-4">
-                            <div class="col-12 doc-flex-cls doctor-box-shadow">
-                                <div class="col-lg-4 padd-null">
-                                    <div class="doc-img-div">
-                                        <a target="_blank" href="<?= url("surgeon/dr-$item->username") ?>">
-                                            <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
-                                                <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" alt="doctor img" />
-                                            <?php } else { ?>
-                                                <img src="<?= asset("img/default-avatar.jpg") ?>" alt="doctor img" />
-                                            <?php } ?>
-                                        </a>
-                                    </div>
-                                    <div class="doc-star-rating">
-                                        <ul class="list-inline space-list">
-                                            <li class="list-inline-item">
-                                                <ul class="list-inline">
-                                                    <?php
-                                                    $totalRating = 5;
-                                                    $starRating = $average;
 
-                                                    for ($i = 1; $i <= $totalRating; $i++) {
-                                                        if ($starRating < $i) {
-                                                            if (is_float($starRating) && (round($starRating) == $i)) {
-                                                                echo "";
-                                                            } else {
-                                                                echo "<li class='list-inline-item yellow-star'>
-                                                                       <i class='fa fa-star-o' aria-hidden='true'></i>
-                                                                     </li>";
-                                                            }
-                                                        } else {
-                                                            echo "<li class='list-inline-item yellow-star'>
-                                                                   <i class='fa fa-star'></i>
-                                                                 </li>";
-                                                        }
-                                                    }
-                                                    ?>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="star-rating-count">
-                                        (<?= count($reviews) ?>)
-                                    </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="aon-med-team bg-light-gray">
+                                <div class="aon-med-team-pic col-md-4 padd-null">
+                                    <a target="_blank" href="<?= url("surgeon/dr-$item->username") ?>">
+                                        <?php if (file_exists(public_path() . '/storage/user/profile/' . $item->avatar)) { ?>
+                                            <img src="<?= asset('/storage/user/profile/' . $item->avatar) ?>" alt="doctor img" />
+                                        <?php } else { ?>
+                                            <img src="<?= asset("img/default-avatar.jpg") ?>" alt="doctor img" />
+                                        <?php } ?>
+                                    </a>
                                 </div>
-                                <div class="col-lg-8 doc-details-sec padd-null">
-                                    <div class="doc-name">
+                                <div class="aon-med-team-info col-md-8 padd-null">
+                                    <h4 class="aon-title">
                                         <a target="_blank" href="<?= url("surgeon/dr-$item->username") ?>">
-                                            Dr. <?= $item->first_name . " " . $item->last_name . ", MD" ?>
+                                            Dr. <?= Str::words($item->first_name . " " . $item->last_name, 2) ?>
                                         </a>
-                                    </div>
-                                    <div class="doc-tagline">
-                                        Plastic/Cosmetic
-                                    </div>
-                                    <div class="doc-tagline">
-                                        Surgeon
-                                    </div>
-                                    <div class="doc-tagline">
+                                    </h4>
+                                    <div class="aon-med-team-discription doc-tagline">
                                         <?php
                                         $get_userprofiles = get_userprofiles($item->id);
                                         echo $get_userprofiles->degree;
                                         ?>
                                     </div>
-                                    <div class="doc-city">
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <?= getCitiesById($item->city, 'pipe') ?>
-                                    </div>
-                                    <div class="doc-view-btn">
-                                        <a target="_blank" href="<?= url("surgeon/dr-$item->username") ?>">
-                                            view full profile
-                                        </a>
+                                    <span class="aon-med-team-position">
+                                        Plastic Surgeon
+                                    </span>
+                                    <span class="aon-med-team-location">
+                                        <i class="fa fa-map-marker"></i>
+                                        <?= getCitiesById($item->city, 'pipe') ?>, India
+                                    </span>
+                                    <div class="aon-df-rating">
+                                        <?php
+                                        $totalRating = 5;
+                                        $starRating = $average;
+
+                                        for ($i = 1; $i <= $totalRating; $i++) {
+                                            if ($starRating < $i) {
+                                                if (is_float($starRating) && (round($starRating) == $i)) {
+                                                    echo "";
+                                                } else {
+                                                    echo "<span class='fa fa-star-o'></span>";
+                                                }
+                                            } else {
+                                                echo "<span class='fa fa-star'></span>";
+                                            }
+                                        }
+
+                                        ?>
+                                        <span>
+                                            (<?= $average ?>)
+                                        </span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                <?php
-                    }
-                }
-                ?>
+                    <?php } ?>
+                    <div class="col-sm-12">
+                        <div class="aon-addmore-btn-section pb-4">
+                            <a href="javascript:void(0)" class="aon-addplus">
+                                <i class="fa fa-star-o"></i>
+                            </a>
+                        </div>
+                    </div>
+                <?php } ?>
             </div>
+
+
+
             <div class="row">
                 <div class="col">
                     <p>
