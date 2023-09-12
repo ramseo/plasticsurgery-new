@@ -400,7 +400,11 @@ class UserController extends Controller
 
         $$module_name_singular->email = $request->email;
         $$module_name_singular->name = $request->first_name . " " . $request->last_name;
-        $$module_name_singular->username = strtolower($request->first_name . "-" . $request->last_name);
+
+        $f_name_l_name = $request->first_name . "-" . $request->last_name;
+        $f_name_l_name = str_replace(" ", "-", $f_name_l_name);
+
+        $$module_name_singular->username = strtolower($f_name_l_name);
 
         if ($request->city) {
             $jsonEncodeCities = json_encode($request->city);
