@@ -4713,3 +4713,21 @@ p {
 .bar a:hover {
     color: #fff;
 }
+
+#reviewModal .modal-content {
+    background: url("../img/review_bg.png") no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+#reviewModal .modal-content .reachus-overlay {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#reviewModal .modal-title p {
+    padding: 0;
+}
+
+#reviewModal .stars-cls {
+    margin: 0;
+}
