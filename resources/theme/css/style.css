@@ -4732,3 +4732,7 @@ p {
 #reviewModal .stars-cls {
     margin: 0;
 }
+
+.before-after-cls .tab-content {
+    padding-top: 30px;
+}
