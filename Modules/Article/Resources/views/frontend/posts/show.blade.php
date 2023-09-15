@@ -369,7 +369,6 @@ if ($getMorePosts) {
             <p class="identity">
                 Recent Posts
             </p>
-
             <div class="row">
                 <?php
                 foreach ($getMorePosts as $item) {
@@ -381,7 +380,6 @@ if ($getMorePosts) {
                         }
                     }
                 ?>
-
                     <div class="col-sm-3">
                         <div class="maim-more-post">
                             <a href="<?= route("frontend.posts.show", [$item->slug]) ?>">
@@ -391,7 +389,7 @@ if ($getMorePosts) {
                             </a>
                             <div class="item-name">
                                 <a href="<?= route("frontend.posts.show", [$item->slug]) ?>">
-                                    <?= Str::words($item->name, 4) ?>
+                                    <?= Str::words($item->name, 3) ?>
                                 </a>
                             </div>
                         </div>

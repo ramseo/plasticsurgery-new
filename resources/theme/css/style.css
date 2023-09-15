@@ -3318,6 +3318,7 @@ img {
 .maim-more-post .item-name a:hover {
     color: initial;
     text-decoration: none;
+    font-size: 15px;
 }
 
 .card {
