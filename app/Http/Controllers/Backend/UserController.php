@@ -401,7 +401,12 @@ class UserController extends Controller
         $$module_name_singular->email = $request->email;
         $$module_name_singular->name = $request->first_name . " " . $request->last_name;
 
-        $f_name_l_name = $request->first_name . "-" . $request->last_name;
+        if ($request->last_name) {
+            $f_name_l_name = $request->first_name . "-" . $request->last_name;
+        } else {
+            $f_name_l_name = $request->first_name;
+        }
+
         $f_name_l_name = str_replace(" ", "-", $f_name_l_name);
 
         $$module_name_singular->username = strtolower($f_name_l_name);
