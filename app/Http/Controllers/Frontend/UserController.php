@@ -522,7 +522,7 @@ class UserController extends Controller
 
         $this->validate($request, [
             'first_name' => 'required|string|max:191',
-            'last_name'  => 'required|string|max:191',
+            // 'last_name'  => 'required|string|max:191',
             'avatar'     => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'city' => 'required',
         ]);

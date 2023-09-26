@@ -111,7 +111,7 @@
                     <input type="text" class="form-control" id="first_name" name="first_name" value="{{ old('first_name') }}" placeholder="{{ __('First Name') }}" aria-label="first_name" aria-describedby="first_name">
                 </div>
                 <div class="col-6 form-group mat-group">
-                    <label for="">{{ __('Last Name') }}</label>
+                    <label for="">{{ __('Last Name') }} fsdfsdf</label>
                     <input type="text" class="form-control" id="last_name" name="last_name" value="{{ old('last_name') }}" placeholder="{{ __('Last Name') }}" aria-label="last_name" aria-describedby="last_name">
                 </div>
             </div>
