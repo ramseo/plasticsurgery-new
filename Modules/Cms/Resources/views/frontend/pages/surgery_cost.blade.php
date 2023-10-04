@@ -30,7 +30,32 @@ if ($doctors) {
     <div class="container-fluid">
         <div class="container padding_t_b">
             <p class="title">our surgeons:</p>
-            <div class="row">
+            <div class="identity surgeon-filter">
+                <select attr="cost" id="surgeon-filter">
+                    <option value="">Sort Surgeons By Alphabet</option>
+                    <?php
+                    $alphabets_arr = [];
+                    $fr_name_arr = array_column($doctors, "first_name");
+                    foreach ($fr_name_arr as $item) {
+                        if (!in_array($item[0], $alphabets_arr)) {
+                            array_push($alphabets_arr, $item[0]);
+                        }
+                    }
+
+                    foreach ($alphabets_arr as $elements) {
+                    ?>
+                        <option value="<?= strtolower($elements) ?>">
+                            <?= $elements ?>
+                        </option>
+                    <?php } ?>
+                </select>
+                <div class="sort-btn">
+                    <button page-attr="cost" attr="desc" id="sort-by-asc-des" type="button" class="btn">
+                        Click To Sort By Descending Order
+                    </button>
+                </div>
+            </div>
+            <div id="ajax-surgeons" class="row">
                 <?php foreach ($doctors as $doc_item) { ?>
                     <div class="col-sm-2">
                         <a target="_blank" href="<?= url("surgeon/dr-$doc_item->username") ?>">
