@@ -420,8 +420,7 @@ a:hover {
 
 .identity select {
     max-width: 428px !important;
-    margin: auto;
-    height: 40px;
+    height: 35px;
     font-size: 15px;
 }
 
@@ -4735,4 +4734,40 @@ p {
 
 .before-after-cls .tab-content {
     padding-top: 30px;
+}
+
+.sort-btn button,
+.sort-btn button:hover {
+    background: #fff;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #F88379;
+    font-weight: bolder;
+}
+
+#surgeon-filter {
+    width: 210px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #F88379;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.surgeon-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn.focus,
+.btn:focus {
+    box-shadow: none !important;
+}
+
+#sort-by-asc-des {
+    height: 35px;
 }

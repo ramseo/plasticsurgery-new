@@ -246,3 +246,48 @@ $(document).on('click', '#fa-bars', function () {
 $(document).on('click', '.remove-default-active-cls', function () {
     $('.default-active-cls').removeClass("active active in");
 });
+
+
+$(document).on('change', '.sel-open-next', function () {
+    if (this.value) {
+        window.open(this.value, '_blank');
+    }
+});
+
+
+$(document).on('change', '#surgeon-filter', function () {
+    var attr = $(this).attr("attr");
+    callAjax(this.value, attr);
+});
+
+$(document).on('click', '#sort-by-asc-des', function () {
+    $('#surgeon-filter').prop('selectedIndex', 0);
+
+    var asc_desc = $(this).attr("attr");
+    var cost = $(this).attr("page-attr");
+    if (asc_desc == "desc") {
+        $("#sort-by-asc-des").attr("attr", "asc");
+        $("#sort-by-asc-des").html("Click To Sort By Ascending Order").css({ 'background': '#f3413a', 'color': 'white' });
+    } else {
+        $("#sort-by-asc-des").attr("attr", "desc");
+        $("#sort-by-asc-des").html("Click To Sort By Descending Order").css({ 'background': 'white', 'color': '#F88379' });
+    }
+
+    callAjax(asc_desc, cost);
+});
+
+function callAjax(val, attr) {
+    $.ajax({
+        url: surgeons_filter_path,
+        type: 'post',
+        data: {
+            value: val,
+            attr: attr,
+            "_token": csrf_token,
+        },
+        dataType: 'json',
+        success: function (response) {
+            $("#ajax-surgeons").html(response.html);
+        }
+    });
+}
