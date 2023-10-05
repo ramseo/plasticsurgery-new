@@ -4692,7 +4692,6 @@ p {
     border: solid 2px #fffaf9;
     text-align: left;
     height: 50px !important;
-    oc
 }
 
 .password-container {
@@ -4770,7 +4769,7 @@ p {
 }
 
 .trice-drop-down {
-    border: 1px solid #c2c2f6;
+    border: 1px solid #F88379;
     margin: 25px 0 25px 0;
 }
 
@@ -4789,12 +4788,12 @@ p {
 }
 
 .trice-drop-down .sr-heading .form-control {
-    border: 1px solid #8ec7ff;
+    border: 1px solid #F88379;
     margin-top: 0;
 }
 
 .trice-drop-down .sr-heading p {
     margin: 10px 0px;
-    color: #389cff;
+    color: #F88379;
     font-size: 15px;
 }
