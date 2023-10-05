@@ -4776,6 +4776,7 @@ p {
 
 .trice-drop-down .sr-heading {
     background: none;
+    height: 125px;
 }
 
 .trice-drop-down .opt_cls:nth-child(2) {
@@ -4795,4 +4796,5 @@ p {
 .trice-drop-down .sr-heading p {
     margin: 10px 0px;
     color: #389cff;
+    font-size: 15px;
 }
