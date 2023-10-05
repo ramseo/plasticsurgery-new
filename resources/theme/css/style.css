@@ -4662,7 +4662,7 @@ p {
 .select_fg {
     text-align: center;
     padding: 20px 0px 0px 0px;
-    float: left;
+    /* float: left; */
     width: 100%;
 }
 
@@ -4795,7 +4795,6 @@ p {
 .trice-drop-down .new_breat_f {
     margin-top: 0;
     margin-bottom: 0;
-    background: linear-gradient(to right, #0777ff 5%, #ffffff 157%) !important;
 }
 
 .trice-drop-down .sr-heading .form-control {
