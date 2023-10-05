@@ -4662,7 +4662,7 @@ p {
 .select_fg {
     text-align: center;
     padding: 20px 0px 0px 0px;
-    /* float: left; */
+    float: left;
     width: 100%;
 }
 
@@ -4796,4 +4796,10 @@ p {
     margin: 10px 0px;
     color: #F88379;
     font-size: 15px;
+}
+
+.trice-drop-down .select_fg {
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
 }
