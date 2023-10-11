@@ -104,6 +104,7 @@
 </head>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVW8CB7PZ"></script>
+
 <script>
     window.dataLayer = window.dataLayer || [];
 
