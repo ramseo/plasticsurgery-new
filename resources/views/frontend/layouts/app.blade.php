@@ -103,6 +103,18 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVW8CB7PZ"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-2GVW8CB7PZ');
+</script>
+
 <body>
 
     @include('frontend.includes.header')
