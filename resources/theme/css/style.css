@@ -4808,3 +4808,7 @@ p {
 .addr-cls {
     line-height: 10px;
 }
+
+.display-flex {
+    display: flex;
+}
