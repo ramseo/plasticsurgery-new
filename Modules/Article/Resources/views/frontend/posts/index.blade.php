@@ -42,7 +42,7 @@
                                 <?= $item->name ?>
                             </a>
                         </h2>
-                        <div class="blg-cat-btm">
+                        <div class="blg-cat-btm"> 
                             <a href="<?= url('/') . '/' . 'blog/author/' . $author_url ?>" class="author-avtr">
                                 <img alt='<?= $item->author ?>' src='<?= $author_img ?>' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' />
                             </a>

@@ -30,6 +30,15 @@
                 foreach ($posts as $item) {
                     $url = route("frontend.posts.show", [$item->slug]);
                     $author_url = str_replace(' ', '-', strtolower($item->author));
+
+                    $author_img = asset("img/default-avatar.jpg");
+                    if ($item->author != "Super Admin") {
+                        $get_author_img = get_author_img($item->created_by);
+                        if (file_exists(public_path() . '/storage/user/profile/' . $get_author_img->avatar)) {
+                            $author_img = asset('storage/user/profile/' . $get_author_img->avatar);
+                        }
+                    }
+
                 ?>
                     <div class="col-xs-12 col-sm-4 blg-ctg-box">
                         <div class="blg-ctg-img">
@@ -45,12 +54,12 @@
                             </h2>
                             <div class="blg-cat-btm">
                                 <a href="<?= url('/') . '/' . 'blog/author/' . $author_url ?>" class="author-avtr">
-                                    <img alt='admin' src='<?= asset('img/default-avatar.jpg') ?>' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' />
+                                    <img alt='<?= $item->author ?>' src='<?= $author_img ?>' class='avatar avatar-40 photo' height='40' width='40' loading='lazy' />
                                 </a>
                                 <div>
                                     <span>
-                                        <a href="<?= url('/') . '/' . 'blog/author/' . $author_url ?>">
-                                            <?= $item->author ?>
+                                        <a class="color-black" href="<?= url('/') . '/' . 'blog/author/' . $author_url ?>">
+                                            <?= ($author_url == "super-admin") ? $item->author : "Dr." . " " . substr($item->author, 0, 10) ?>
                                         </a>
                                     </span>
                                     <span>
