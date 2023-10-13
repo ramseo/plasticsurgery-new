@@ -1274,4 +1274,12 @@ if (!function_exists('date_today')) {
         $array = json_decode(json_encode($rr), true);
         return $array;
     }
+
+    function get_author_img($userId)
+    {
+        return DB::table('users')
+            ->select("avatar")
+            ->Where("id", $userId)
+            ->get()->first();
+    }
 }
