@@ -24,7 +24,7 @@
 
 <!-- surgeons listing -->
 <?php
-$doctors = DB::table('users')->select('*')->whereNotNull('city')->Where('is_active', 1)->orderBy("first_name")->get()->toArray();
+$doctors = DB::table('users')->select('*')->whereNotNull('city')->Where('is_active', 1)->orderBy("sortable")->get()->toArray();
 if ($doctors) {
 ?>
     <div class="container-fluid">

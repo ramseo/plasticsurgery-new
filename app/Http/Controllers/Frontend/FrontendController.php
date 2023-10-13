@@ -159,7 +159,7 @@ class FrontendController extends Controller
             'name' => "Find A Surgeon",
         );
 
-        $doctors = DB::table('users')->select('*')->whereNotNull('city')->Where('is_active', 1)->orderBy("first_name")->get()->toArray();
+        $doctors = DB::table('users')->select('*')->whereNotNull('city')->Where('is_active', 1)->orderBy("sortable")->get()->toArray();
 
         return view('frontend.surgeons', compact('body_class', 'module_name_singular', "$module_name_singular", 'doctors'));
     }
@@ -221,10 +221,10 @@ class FrontendController extends Controller
         $result_images = NULL;
         if ($album_ids) {
             $result_images = DB::table('images')->select('*')->whereIn('album_id', $album_ids)->get();
-        } 
+        }
 
         return view('frontend.before-after-result-details', compact('body_class', 'module_name_singular', "$module_name_singular", 'slug', 'name', 'result_images'));
-    } 
+    }
 
 
     public function reconstructive()
@@ -271,6 +271,4 @@ class FrontendController extends Controller
         $posts = DB::table('posts')->where('author', $slug)->select('*')->paginate(6);
         return view('frontend.blog-author', compact('body_class', 'module_name_singular', "$module_name_singular", 'posts', 'slug'));
     }
-
-    
 }
