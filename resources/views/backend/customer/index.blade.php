@@ -97,7 +97,10 @@ Customer | Index
         <div class="row mt-4">
             <div class="col">
                 <div class="table-responsive">
-                    <table id="datatable" class="table table-bordered table-hover table-responsive-sm">
+                    <div id="loadingImage">
+                        <img src="<?= asset("img/giphy.gif") ?>">
+                    </div>
+                    <table class="table table-bordered table-hover table-responsive-sm">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -107,7 +110,33 @@ Customer | Index
                                 <th class="text-center">{{ __('labels.backend.action') }}</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="sortable">
+                            <?php
+                            foreach ($surgeons as $doc) {
+                                if ($doc->is_active == 1) {
+                                    $checked = "checked";
+                                } else {
+                                    $checked = "";
+                                }
+                            ?>
+                                <tr id="item-<?= $doc->id ?>">
+                                    <td><?= $doc->id ?></td>
+                                    <td><?= $doc->name ?></td>
+                                    <td><?= $doc->email ?></td>
+                                    <td><?= $doc->status ?></td>
+                                    <td>
+                                        <div class='switch-flex-cls'>
+                                            <a href="<?= route("backend.customer.edit", $doc->id) ?>" class="btn btn-sm btn-primary mt-1" data-toggle="tooltip">
+                                                <i class="fas fa-wrench"></i>
+                                            </a>
+                                            <label class="switch">
+                                                <input onclick="userIsActive(this)" user_id="<?= $doc->id ?>" name="is_active" type="checkbox" <?= $checked ?>>
+                                                <span class="slider"></span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </div>
@@ -216,6 +245,38 @@ Customer | Index
             });
         }
     }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script>
+    $('#sortable').sortable({
+        axis: 'y',
+        update: function(event, ui) {
+            $("#loadingImage").show();
+            var data = $(this).sortable('serialize');
+
+            $.ajax({
+                data: {
+                    data: data,
+                    _token: '<?= csrf_token() ?>'
+                },
+                type: 'POST',
+                url: '<?= route('backend.customer.sortable') ?>',
+                dataType: "json",
+                success: function(response) {
+                    setTimeout(function() {
+                        $("#loadingImage").hide();
+                    }, 2000);
+                },
+                error: function(request, error) {
+                    setTimeout(function() {
+                        $("#loadingImage").hide();
+                    }, 2000);
+                    alert("FOUT:" + error);
+                }
+            });
+        }
+    });
 </script>
 
 @endpush
