@@ -34,12 +34,12 @@
                 <!-- ERR MSG FILE -->
                 @include('frontend.includes.messages')
                 <!-- ERR MSG FILE -->
-                <div class="row justify-content-between">
+                <div class="justify-content-between display-flex">
                     <div class="one">
                         <h4 class="card-title mb-0">
                             <i class="c-icon cil-people"></i>
                             Post
-                            <small class="text-muted">Add</small>
+                            <small class="text-muted">Edit</small>
                         </h4>
                         <div class="small text-muted">
                             Posts Management Dashboard

@@ -1260,4 +1260,18 @@ if (!function_exists('date_today')) {
             ->orderBy('id', 'desc')
             ->get();
     }
+
+    function getSelectedRelatedPostsVal($posts)
+    {
+        if (!$posts) {
+            return;
+        }
+
+        $data = DB::table('posts');
+        $data->select('id', 'name', 'slug');
+        $data->whereIn('id', $posts);
+        $rr = $data->get()->toArray();
+        $array = json_decode(json_encode($rr), true);
+        return $array;
+    }
 }
