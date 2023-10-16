@@ -49,7 +49,7 @@
                         <div class="blg-ctg-cntnt">
                             <h2>
                                 <a href="<?= $url ?>" title="<?= $item->name ?>">
-                                    <?= $item->name ?>
+                                    <?= substr($item->name, 0, 70) ?>
                                 </a>
                             </h2>
                             <div class="blg-cat-btm">
