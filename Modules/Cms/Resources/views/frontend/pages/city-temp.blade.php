@@ -24,7 +24,7 @@
         <div class="col-lg-12 doc-flex-cls padd-null">
             <?php
             $getAssignedDoctors = getAssignedDoctors($city);
-            if ($getAssignedDoctors) {
+            if ($getAssignedDoctors->isNotEmpty()) {
                 foreach ($getAssignedDoctors as $item) {
                     $reviews = getDataArray('vendor_reviews', 'user_id', $item->id);
                     $average = averageReview($reviews);
