@@ -49,7 +49,7 @@
                             <div>
                                 <span>
                                     <a class="color-black" href="<?= url('/') . '/' . 'blog/author/' . $author_url ?>">
-                                        <?= ($author_url == "super-admin") ? $item->author : "Dr." . " " . substr($item->author, 0, 10) ?>
+                                        <?= ($author_url == "super-admin") ? $item->author : "Dr." . " " . $item->author ?>
                                     </a>
                                 </span>
                                 <span>
