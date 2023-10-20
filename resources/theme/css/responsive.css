@@ -1252,6 +1252,10 @@
             margin: 10px 0 0 0;
         }
 
+        #ajax-surgeons {
+            padding: 10px 0 0 0;
+        }
+
     }
 
     @media(min-width: 768px) and (max-width: 1199px) {
