@@ -1256,6 +1256,19 @@
             padding: 10px 0 0 0;
         }
 
+        #desktop-header-menu li.dropdown.show .dropdown-item {
+            background: none;
+            color: black;
+            border-bottom: none;
+            font-size: 11px;
+            font-weight: lighter;
+            text-align: center;
+        }
+
+        #header li .nav-link.dropdown-toggle {
+            text-align: center;
+        }
+
     }
 
     @media(min-width: 768px) and (max-width: 1199px) {
