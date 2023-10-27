@@ -78,19 +78,23 @@ Customer | Index
 <div class="card">
     <div class="card-body">
         <div class="row">
-            <div class="col-8">
+            <div class="col-12">
                 <h4 class="card-title mb-0">
-                    <i class="c-icon cil-people"></i> Customer <small class="text-muted">Data Table Customer</small>
+                    <i class="c-icon cil-people"></i>
+                    Surgeons
+                    <small class="text-muted">
+                        Data Table
+                    </small>
                 </h4>
                 <div class="small text-muted">
-                    Customer Management Dashboard
+                    Surgeons Management Dashboard
                 </div>
             </div>
-            <div class="col-4">
+            <!-- <div class="col-4">
                 <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
                     <a href="{{ route("backend.customer.index") }}" class="btn btn-secondary btn-sm ml-1" data-toggle="tooltip" title="Type List"><i class="fas fa-list-ul"></i> List</a>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!--/.row-->
 

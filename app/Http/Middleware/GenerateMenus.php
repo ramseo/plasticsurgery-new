@@ -46,7 +46,7 @@ class GenerateMenus
                     'class' => 'c-sidebar-nav-link',
                 ]);
 
-            $menu->add('<i class="c-sidebar-nav-icon fas fa-file"></i> Customer', [
+            $menu->add('<i class="c-sidebar-nav-icon fa fa-user-md"></i> Surgeons', [
                 'route' => 'backend.customer.index',
                 'class' => 'c-sidebar-nav-item',
             ])
