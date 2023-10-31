@@ -44,7 +44,7 @@ class PostsController extends Controller
 
         $module_action = 'List';
 
-        $post_data = $module_model::where("published_at", "<=", Carbon::now())->latest()->paginate(12);
+        $post_data = $module_model::Where('status', 1)->Where("published_at", "<=", Carbon::now())->latest()->paginate(12);
 
         return view(
             "article::frontend.$module_path.index",
