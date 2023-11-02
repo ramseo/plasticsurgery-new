@@ -944,7 +944,7 @@ if (!function_exists('date_today')) {
 
     function getAllCities()
     {
-        $getAllCities = DB::table('cities')->select('name', 'slug', 'id')->get()->toArray();
+        $getAllCities = DB::table('cities')->select('name', 'slug', 'id')->orderBy("name")->get()->toArray();
 
         $array = json_decode(json_encode($getAllCities), true);
 
@@ -1065,7 +1065,7 @@ if (!function_exists('date_today')) {
 
     function citiesArr()
     {
-        $all_cities = DB::table('cities')->select('slug')->get()->toArray();
+        $all_cities = DB::table('cities')->select('slug')->orderBy("name")->get()->toArray();
         if ($all_cities) {
             return array_column($all_cities, 'slug');
         } else {
@@ -1281,5 +1281,15 @@ if (!function_exists('date_today')) {
             ->select("avatar")
             ->Where("id", $userId)
             ->get()->first();
+    }
+
+    function header_menu_cities()
+    {
+        return DB::table('cities')
+            ->select("*")
+            ->orderBy('name', 'asc')
+            ->limit(10)
+            ->get()
+            ->toArray();
     }
 }

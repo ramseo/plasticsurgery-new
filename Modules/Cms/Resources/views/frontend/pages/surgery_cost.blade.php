@@ -25,6 +25,7 @@
 <!-- surgeons listing -->
 <?php
 $doctors = DB::table('users')->select('*')->whereNotNull('city')->Where('is_active', 1)->orderBy("sortable")->get()->toArray();
+$alphabetical = DB::table('users')->select('*')->whereNotNull('city')->Where('is_active', 1)->orderBy("first_name")->get()->toArray();
 if ($doctors) {
 ?>
     <div class="container-fluid">
@@ -35,7 +36,7 @@ if ($doctors) {
                     <option value="">Sort Surgeons By Alphabet</option>
                     <?php
                     $alphabets_arr = [];
-                    $fr_name_arr = array_column($doctors, "first_name");
+                    $fr_name_arr = array_column($alphabetical, "first_name");
                     foreach ($fr_name_arr as $item) {
                         if (!in_array($item[0], $alphabets_arr)) {
                             array_push($alphabets_arr, $item[0]);
