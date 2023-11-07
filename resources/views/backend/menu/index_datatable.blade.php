@@ -16,15 +16,18 @@
                     <small class="text-muted">Menu Items</small>
                 </h4>
                 <div class="small text-muted">
-                    Service Management Dashboard
+                    Menu Management Dashboard
                 </div>
             </div>
             <div class="col-4">
-                <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
-                    <a href='{{ url("admin/menutype") }}' class="btn btn-secondary btn-sm ml-1" data-toggle="tooltip" title="Type List"><i class="fas fa-list-ul"></i> List</a>
+                <div class="btn-toolbar float-right">
+                    <a href='{{ url("admin/menutype") }}' class="btn btn-secondary btn-sm ml-1">
+                        <i class="fas fa-list-ul"></i>
+                        List
+                    </a>
                 </div>
                 <div class="float-right">
-                    <a href="{{ route('backend.menus.create').'/'. $menu_id}}" class='btn btn-success btn-sm' data-toggle="tooltip" title="{{__('Create')}}">
+                    <a href="{{ route('backend.menus.create').'/'. $menu_id}}" class='btn btn-success btn-sm' title="{{__('Create')}}">
                         <i class="fas fa-plus-circle"></i>
                     </a>
                 </div>
@@ -35,14 +38,52 @@
         <div class="row mt-4">
             <div class="col">
                 <div class="table-responsive">
-                    <table id="datatable" class="table table-bordered table-hover table-responsive-sm">
-                        <thead>
-                            <th> # </th>
-                            <th> Name </th>
-                            <th> Slug </th>
-                            <th style="width: 25%" class="text-center"> Action </th>
-                        </thead>
-                    </table>
+                    <div class="table table-bordered table-hover table-responsive-sm">
+                        <div id="loadingImage">
+                            <img src="<?= asset("img/giphy.gif") ?>">
+                        </div>
+                        <ul id="pagetree" class="ui-sortable ui-sortable-menu sortable-menu">
+                            <?php
+                            foreach ($menus as $item) {
+                                $child_item = getChildItems($item->id);
+                            ?>
+                                <li class="parent_li" id="menu-<?= $item->id ?>">
+                                    <table class="page_item">
+                                        <tbody>
+                                            <tr class="flex-cls-tr">
+                                                <td class="page_item_name <?= ($child_item->isNotEmpty()) ? "" : "name-left-padd" ?>">
+                                                    <?php if ($child_item->isNotEmpty()) { ?>
+                                                        <i onclick="append_menu(this)" class="fa fa-plus-square" aria-hidden="true"></i>
+                                                    <?php } ?>
+                                                    <a target="_blank" href="<?= url("admin/menus/edit/$item->id") ?>">
+                                                        <?php
+                                                        echo $item->title . " " . "<span class='merlinCats'>" . $item->url . "</span>";
+                                                        if ($child_item->isNotEmpty()) {
+                                                            if ($child_item->count() > 0) {
+                                                                echo "<span>[" . " " . $child_item->count() . " " . "]</span>";
+                                                            }
+                                                        }
+                                                        ?>
+                                                    </a>
+                                                </td>
+                                                <td class="menu_item_options">
+                                                    <a href="<?= url("admin/menus/edit/$item->id") ?>" class="btn" title="Edit Service">
+                                                        <i class="fas fa-wrench"></i>
+                                                    </a>
+                                                    <a href="<?= url("admin/menus/destroy/$item->menu_id/$item->id") ?>" class="btn del-review-popup" data-method="DELETE" data-token="<?= csrf_token() ?>" title="Delete" data-confirm="Are you sure?">
+                                                        <i class="fas fa-trash-alt"></i>
+                                                    </a>
+                                                </td>
+                                            </tr> 
+                                        </tbody>
+                                    </table>
+                                    <?php if ($child_item->isNotEmpty()) { ?>
+                                        @include('backend.menu.infinite-menu', ['menus' => $child_item])
+                                    <?php } ?>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,6 +144,38 @@
         "order": [
             [1, 'desc']
         ]
+    });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script>
+    $('.sortable-menu').sortable({
+        axis: 'y',
+        update: function(event, ui) {
+            $("#loadingImage").show();
+            var data = $(this).sortable('serialize');
+
+            $.ajax({
+                data: {
+                    data: data,
+                    _token: '<?= csrf_token() ?>'
+                },
+                type: 'POST',
+                url: '<?= route('backend.menus.sortable') ?>',
+                dataType: "json",
+                success: function(response) {
+                    setTimeout(function() {
+                        $("#loadingImage").hide();
+                    }, 2000);
+                },
+                error: function(request, error) {
+                    setTimeout(function() {
+                        $("#loadingImage").hide();
+                    }, 2000);
+                    alert("FOUT:" + error);
+                }
+            });
+        }
     });
 </script>
 

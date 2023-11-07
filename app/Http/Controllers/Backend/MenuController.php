@@ -32,87 +32,37 @@ class MenuController extends Controller
     public function index($menu_id, Request $request)
     {
         $menuName = DB::table('menutype')->where('menu_id', $menu_id)->select('title')->first();
+        $menus = Menu::Where('menu_id', $menu_id)->Where('parent_id', 0)->orderBy('sortable')->select(['id', 'title', 'url', 'menu_id', 'parent_id', 'sort'])->get();
+
         if ($request->ajax()) {
-            $menus = Menu::where('menu_id', $menu_id)->orderBy('parent_id', 'asc')->select(['id', 'title', 'url', 'menu_id', 'parent_id', 'sort']);
             return Datatables::of($menus)
                 ->addIndexColumn()
-                ->editColumn('title', function ($menu) {
-                    $getParentItem = getParentItem($menu->parent_id);
-                    $isParent = isParent($menu->id);
-                    if ($getParentItem) {
-                        $parentItem = "<div>$menu->title<span class='parent-menu-cls'>Child of $getParentItem->title<span></div>";
-                    } elseif ($isParent) {
-                        $parentItem = "<div>$menu->title<span class='parent-menu-red-cls'>Parent Item</span></div>";
-                    } else {
-                        $parentItem = "<div>$menu->title</div>";
-                    }
-
-                    $nameContent = $parentItem;
-                    return $nameContent;
-                })
-                ->addColumn('action', function ($menu) {
-                    $sort_html = "";
-                    $one = "";
-                    $two = "";
-                    $three = "";
-                    $four = "";
-                    $five = "";
-                    $six = "";
-                    $seven = "";
-                    $eight = "";
-                    $nine = "";
-                    $ten = "";
-
-                    if ($menu->sort == 1) {
-                        $one = "selected";
-                    } elseif ($menu->sort == 2) {
-                        $two = "selected";
-                    } elseif ($menu->sort == 3) {
-                        $three = "selected";
-                    } elseif ($menu->sort == 4) {
-                        $four = "selected";
-                    } elseif ($menu->sort == 5) {
-                        $five = "selected";
-                    } elseif ($menu->sort == 6) {
-                        $six = "selected";
-                    } elseif ($menu->sort == 7) {
-                        $seven = "selected";
-                    } elseif ($menu->sort == 8) {
-                        $eight = "selected";
-                    } elseif ($menu->sort == 9) {
-                        $nine = "selected";
-                    } elseif ($menu->sort == 10) {
-                        $ten = "selected";
-                    }
-
-                    if ($menu->parent_id == 0) {
-                        $sort_html .= "<select name='sort' class='sort-menu-cls' menu-id='$menu->menu_id' menu-item-id='$menu->id'>";
-                        $sort_html .= "<option value='0'>Choose Sort</option>";
-                        $sort_html .= "<option value='1' $one>1</option>";
-                        $sort_html .= "<option value='2' $two>2</option>";
-                        $sort_html .= "<option value='3' $three>3</option>";
-                        $sort_html .= "<option value='4' $four>4</option>";
-                        $sort_html .= "<option value='5' $five>5</option>";
-                        $sort_html .= "<option value='6' $six>6</option>";
-                        $sort_html .= "<option value='7' $seven>7</option>";
-                        $sort_html .= "<option value='8' $eight>8</option>";
-                        $sort_html .= "<option value='9' $nine>9</option>";
-                        $sort_html .= "<option value='10' $ten>10</option>";
-                        $sort_html .= "</select>";
-                        // $sort_html .= '<input class="sort-menu-cls" type="text" value="' . $menu->sort . '" name="sort" menu-id="' . $menu->menu_id . '" menu-item-id="' . $menu->id . '">';
-                    }
-                    $btn = "";
-                    $btn .= "<div class='switch-flex-cls posts-cls'>";
-                    $btn .= '<a href="' . url("admin/menus/edit/$menu->id") . '" class="btn btn-danger" data-toggle="tooltip" title="Edit Service"><i class="fas fa-wrench"></i></a>';
-                    $btn .= '<a href="' . url("admin/menus/destroy/$menu->menu_id/$menu->id") . '" class="btn btn-danger del-review-popup" data-method="DELETE" data-token="' . csrf_token() . '" data-toggle="tooltip" title="Delete" data-confirm="Are you sure?"><i class="fas fa-trash-alt"></i></a>';
-                    $btn .= $sort_html;
-                    $btn .= "</div>";
-                    return $btn;
-                })
-                ->rawColumns(['action', 'title'])
+                ->rawColumns()
                 ->make(true);
         }
-        return view('backend.menu.index_datatable', compact('menuName', 'menu_id'))->with('menu_id', $menu_id);
+        return view('backend.menu.index_datatable', compact('menus', 'menuName', 'menu_id'))->with('menu_id', $menu_id);
+    }
+
+    public function sortable(Request $request)
+    {
+        parse_str($request->data, $output);
+
+        $i = 0;
+        if ($output) {
+            foreach ($output['menu'] as $value) {
+                DB::table('menuitem')
+                    ->where('id', $value)
+                    ->update(['sortable' => $i]);
+                $i++;
+            }
+            $response['status'] = true;
+            $response['msg'] = "Successfully Sorted";
+        } else {
+            $response['status'] = false;
+            $response['msg'] = "Failed To Sort";
+        }
+
+        echo json_encode($response);
     }
 
     /**
@@ -222,7 +172,42 @@ class MenuController extends Controller
         $module_title = 'Menu';
         $module_name = 'menus';
 
-        DB::table('menuitem')->where('id', $id)->where('menu_id', $menu_id)->delete();
+        $menu_ids = [];
+        $menu_ids[] = $id;
+
+        $child_1 = DB::table('menuitem')->where('parent_id', $id)->where('menu_id', $menu_id)->get();
+        if ($child_1->isNotEmpty()) {
+            foreach ($child_1 as $child_1) {
+
+                $menu_ids[] = $child_1->id;
+
+                $child_2 = DB::table('menuitem')->where('parent_id', $child_1->id)->where('menu_id', $menu_id)->get();
+                if ($child_2->isNotEmpty()) {
+                    foreach ($child_2 as $child_2) {
+
+                        $menu_ids[] = $child_2->id;
+
+                        $child_3 = DB::table('menuitem')->where('parent_id', $child_2->id)->where('menu_id', $menu_id)->get();
+                        if ($child_3->isNotEmpty()) {
+                            foreach ($child_3 as $child_3) {
+
+                                $menu_ids[] = $child_3->id;
+
+                                $child_4 = DB::table('menuitem')->where('parent_id', $child_3->id)->where('menu_id', $menu_id)->get();
+
+                                if ($child_4->isNotEmpty()) {
+                                    foreach ($child_4 as $child_4) {
+                                        $menu_ids[] = $child_4->id;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        DB::table('menuitem')->WhereIn('id', $menu_ids)->Where('menu_id', $menu_id)->delete();
 
         Flash::success('<i class="fas fa-check"></i> ' . label_case($module_title) . ' Deleted Successfully!')->important();
         return redirect("admin/$module_name/$menu_id");

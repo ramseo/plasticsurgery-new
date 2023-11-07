@@ -795,7 +795,7 @@ if (!function_exists('date_today')) {
         $data = DB::table('menuitem');
         $data->select('id', 'title', 'url', 'parent_id');
         $data->where('menu_id', $menu_id);
-        $data->where('parent_id', 0);
+        // $data->where('parent_id', 0);
         return $data->get();
     }
 
@@ -1291,5 +1291,13 @@ if (!function_exists('date_today')) {
             ->limit(10)
             ->get()
             ->toArray();
+    }
+
+    function getChildItems($menu_id)
+    {
+        return DB::table('menuitem')
+            ->select("*")
+            ->Where("parent_id", $menu_id)
+            ->get();
     }
 }
