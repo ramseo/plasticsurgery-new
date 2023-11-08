@@ -20,6 +20,9 @@
                 </div>
             </div>
             <div class="col-4">
+                <div class="float-left">
+                    <button attr="expand" class="btn btn-default menu-items-expand">expand all</button>
+                </div>
                 <div class="btn-toolbar float-right">
                     <a href='{{ url("admin/menutype") }}' class="btn btn-secondary btn-sm ml-1">
                         <i class="fas fa-list-ul"></i>
@@ -42,7 +45,7 @@
                         <div id="loadingImage">
                             <img src="<?= asset("img/giphy.gif") ?>">
                         </div>
-                        <ul id="pagetree" class="ui-sortable ui-sortable-menu sortable-menu">
+                        <ul id="pagetree" class="ui-sortable sortable-menu">
                             <?php
                             foreach ($menus as $item) {
                                 $child_item = getChildItems($item->id);
@@ -53,7 +56,7 @@
                                             <tr class="flex-cls-tr">
                                                 <td class="page_item_name <?= ($child_item->isNotEmpty()) ? "" : "name-left-padd" ?>">
                                                     <?php if ($child_item->isNotEmpty()) { ?>
-                                                        <i onclick="append_menu(this)" class="fa fa-plus-square" aria-hidden="true"></i>
+                                                        <i onclick="append_menu(this)" class="fa fa-plus-square expand-icon" aria-hidden="true"></i>
                                                     <?php } ?>
                                                     <a target="_blank" href="<?= url("admin/menus/edit/$item->id") ?>">
                                                         <?php
@@ -74,7 +77,7 @@
                                                         <i class="fas fa-trash-alt"></i>
                                                     </a>
                                                 </td>
-                                            </tr> 
+                                            </tr>
                                         </tbody>
                                     </table>
                                     <?php if ($child_item->isNotEmpty()) { ?>

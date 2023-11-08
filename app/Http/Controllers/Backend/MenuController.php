@@ -80,6 +80,8 @@ class MenuController extends Controller
         $menuData = new stdClass();
         $menuData->title = '';
         $menuData->url = '';
+        $menuData->id = '';
+        $menuData->parent_id = '';
 
         return view(
             "backend.$module_name.create",

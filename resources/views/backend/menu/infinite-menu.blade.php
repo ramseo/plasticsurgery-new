@@ -9,7 +9,7 @@
                     <tr class="flex-cls-tr">
                         <td class="page_item_name">
                             <?php if ($child_item->isNotEmpty()) { ?>
-                                <i onclick="append_menu(this)" class="fa fa-plus-square" aria-hidden="true"></i>
+                                <i onclick="append_menu(this)" class="fa fa-plus-square expand-icon" aria-hidden="true"></i>
                             <?php } ?>
                             <a target="_blank" href="<?= url("admin/menus/edit/$item->id") ?>">
                                 <?php
