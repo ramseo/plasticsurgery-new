@@ -73,7 +73,7 @@
                                                     <a href="<?= url("admin/menus/edit/$item->id") ?>" class="btn" title="Edit Service">
                                                         <i class="fas fa-wrench"></i>
                                                     </a>
-                                                    <a href="<?= url("admin/menus/destroy/$item->menu_id/$item->id") ?>" class="btn" data-method="DELETE" data-token="<?= csrf_token() ?>" title="Delete" data-confirm="Are you sure?">
+                                                    <a href="<?= url("admin/menus/destroy/$item->menu_id/$item->id") ?>" class="btn" data-method="DELETE" data-token="<?= csrf_token() ?>" title="Delete" data-confirm="This will deleted the entire child tree of this item. Click ok to Proceed">
                                                         <i class="fas fa-trash-alt"></i>
                                                     </a>
                                                 </td>
