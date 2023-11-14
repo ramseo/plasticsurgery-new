@@ -63,19 +63,17 @@ a:hover {
 }
 
 .sr-heading {
-    background-image: linear-gradient(36deg, #F88379, #c35248);
     color: #ffff;
     font-size: 25px;
-    padding: 14px 24px;
     border-radius: 2px;
     text-align: center;
-    margin-bottom: 16px;
     height: 200px;
 }
 
-.sr-heading .form-control {
+.sr-heading .cutome_sele_bg {
     color: #333;
     font-weight: 600;
+    max-width: 300px;
 }
 
 .gender-contact {
@@ -230,8 +228,6 @@ a:hover {
 }
 
 .sr-heading p {
-    margin-top: 18px;
-    margin-bottom: 17px;
     font-size: 23px;
     color: #fff;
     font-weight: 600;
@@ -4666,8 +4662,11 @@ p {
     width: 100%;
 }
 
+.select_fg .form-control {
+    border: 1px solid #fbbfba;
+}
+
 .new_breat_f {
-    background: #f3413a !important;
     margin: 20px 0px;
     padding: 20px;
     justify-content: center;
@@ -4677,15 +4676,17 @@ p {
     float: left;
     width: 100%;
     font-size: 30px;
-    color: #fff;
-    padding: 0px;
-    margin: 0px;
+    color: #F88379;
+    background: #fff;
+    padding: 15px 0;
+    margin: 0;
     text-align: center;
+    border-radius: 10px 10px 0 0;
 }
 
 .cutome_sele_bg {
     display: inline-block !important;
-    max-width: 300px;
+    max-width: 400px;
     background: #fff;
     font-size: 18px;
     color: #000;
@@ -4769,17 +4770,14 @@ p {
 }
 
 .trice-drop-down {
-    border: 1px solid #F88379;
     margin: 25px 0 25px 0;
+    background: linear-gradient(to right, rgb(248 131 121) 38%, rgb(255, 255, 255) 153%) !important;
 }
 
 .trice-drop-down .sr-heading {
     background: none;
-    height: 125px;
-}
-
-.trice-drop-down .opt_cls:nth-child(2) {
-    background: #ffffff;
+    height: 100px;
+    margin-bottom: 10px;
 }
 
 .trice-drop-down .new_breat_f {
@@ -4787,22 +4785,18 @@ p {
     margin-bottom: 0;
 }
 
-.trice-drop-down .sr-heading .form-control {
-    border: 1px solid #F88379;
-    margin-top: 0;
-}
-
 .trice-drop-down .sr-heading p {
-    margin: 10px 0px;
-    color: #F88379;
+    color: #ffffff;
     font-size: 15px;
 }
 
 .trice-drop-down .select_fg {
     text-align: center;
     width: 100%;
-    margin-top: 30px;
     float: inherit;
+    background: #fff;
+    padding: 20px 0;
+    border-radius: 10px;
 }
 
 .addr-cls {

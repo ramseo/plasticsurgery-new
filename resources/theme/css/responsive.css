@@ -1268,7 +1268,6 @@
         #header li .nav-link.dropdown-toggle {
             text-align: center;
         }
-
     }
 
     @media(min-width: 768px) and (max-width: 1199px) {
@@ -1638,6 +1637,17 @@
     }
 
     @media (min-width:320px) and (max-width:576px) {
+        .new_breat_f h5 {
+            font-size: 20px;
+        }
+
+        .cutome_sele_bg {
+            max-width: 220px;
+        }
+
+        .sr-heading .cutome_sele_bg {
+            max-width: 200px;
+        }
 
         .tabo .even,
         .odd {
