@@ -291,3 +291,17 @@ function callAjax(val, attr) {
         }
     });
 }
+
+$(document).on('mouseover mouseleave', '.main-child-cls', function (e) {
+    var elm = $(this).children();
+    var next_elm = $(elm).next(".drop-down-child");
+
+    var wd = $(this).width();
+    $(next_elm).css({ "left": wd + "px" });
+
+    if (e.type === 'mouseover') {
+        $(next_elm).show();
+    } else {
+        $(next_elm).hide();
+    }
+});

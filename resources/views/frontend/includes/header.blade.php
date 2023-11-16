@@ -109,16 +109,27 @@ $city = getData('cities');
                                     </a>
                                     <?php if ($child_item) { ?>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <?php foreach ($child_item as $c_item) { ?>
-                                                <a class="dropdown-item" href="<?= url("/") . "/" . $c_item['url'] ?>">
-                                                    <?= $c_item['title'] ?>
-                                                </a>
+                                            <?php
+                                            foreach ($child_item as $c_item) {
+                                                $child_item_1 = dynamicMenuChildItem($c_item['id']);
+                                            ?>
+                                                <div class="main-child-cls position-relative">
+                                                    <a class="dropdown-item <?= ($child_item_1) ? "dropdown-toggle" : "" ?>" href="<?= url("/") . "/" . $c_item['url'] ?>">
+                                                        <?= $c_item['title'] ?>
+                                                    </a>
+                                                    <?php if ($child_item_1) {  ?>
+                                                        <div class="drop-down-child" aria-labelledby="navbarDropdown">
+                                                            <?php foreach ($child_item_1 as $c_item_1) { ?>
+                                                                <a class="dropdown-item-child" href="<?= url("/") . "/" . $c_item_1['url'] ?>">
+                                                                    <?= $c_item_1['title'] ?>
+                                                                </a>
+                                                            <?php } ?>
+                                                        </div>
+                                                    <?php } ?>
+                                                </div>
                                             <?php } ?>
-                                            <?php if ($item->title == "Clinics") { ?>
-                                                <a class="dropdown-item" href="<?= url("/") . "/clinics" ?>">
-                                                    View All Clinics
-                                                </a>
-                                            <?php } elseif ($item->title == "Face" || $item->title == "Breast" || $item->title == "Body") { ?>
+
+                                            <?php if ($item->title == "Face" || $item->title == "Breast" || $item->title == "Body") { ?>
                                                 <a class="dropdown-item" href="<?= url("/") . "/procedures" ?>">
                                                     View All Procedures
                                                 </a>

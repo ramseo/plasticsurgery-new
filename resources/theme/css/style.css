@@ -4806,3 +4806,31 @@ p {
 .display-flex {
     display: flex;
 }
+
+.drop-down-child {
+    display: none;
+    position: absolute;
+    background: #fff;
+    /* left: 170px; */
+    width: 100%;
+    top: 0;
+}
+
+.drop-down-child a {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #990e0e;
+}
+
+.dropdown-item-child {
+    color: #fff;
+    border-bottom: 1px solid lightgray;
+    font-size: 14px;
+    font-weight: 600;
+    width: 100%;
+    clear: both;
+    text-align: inherit;
+    white-space: nowrap;
+    border: 0;
+    padding: 5px 15px 5px 15px;
+}
