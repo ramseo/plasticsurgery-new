@@ -4820,6 +4820,11 @@ p {
     display: inline-block;
     text-align: center;
     border: 1px solid #990e0e;
+    border-bottom: none;
+}
+
+.drop-down-child a:last-child {
+    border-bottom: 1px solid #990e0e;
 }
 
 .dropdown-item-child {
