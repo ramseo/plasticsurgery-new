@@ -293,15 +293,19 @@ function callAjax(val, attr) {
 }
 
 $(document).on('mouseover mouseleave', '.main-child-cls', function (e) {
-    var elm = $(this).children();
-    var next_elm = $(elm).next(".drop-down-child");
 
-    var width = $(this).width();
-    $(next_elm).css({ "left": width + "px" });
+    if ($(window).width() > 767) {
+        var elm = $(this).children();
+        var next_elm = $(elm).next(".drop-down-child");
 
-    if (e.type === 'mouseover') {
-        $(next_elm).show();
-    } else {
-        $(next_elm).hide();
+        var width = $(this).width();
+        $(next_elm).css({ "left": width + "px" });
+
+        if (e.type === 'mouseover') {
+            $(next_elm).show();
+        } else {
+            $(next_elm).hide();
+        }
     }
+
 });

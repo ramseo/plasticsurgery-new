@@ -1269,9 +1269,9 @@
             text-align: center;
         }
 
-        .main-child-cls.position-relative {
+        /* .main-child-cls.position-relative {
             pointer-events: none;
-        }
+        } */
 
         .drop-down-child {
             display: block;
