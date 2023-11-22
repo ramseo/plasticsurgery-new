@@ -4838,3 +4838,9 @@ p {
     border: 0;
     padding: 5px 15px 5px 15px;
 }
+
+.tab-pane ul li a.active-surgery {
+    color: #F88379;
+    text-transform: uppercase;
+    font-weight: 600;
+}
