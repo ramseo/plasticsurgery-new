@@ -4843,4 +4843,5 @@ p {
     color: #F88379;
     text-transform: uppercase;
     font-weight: 600;
+    pointer-events: none;
 }
