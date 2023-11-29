@@ -390,7 +390,8 @@
     CKEDITOR.replace('content', {
         filebrowserImageBrowseUrl: '/file-manager/ckeditor',
         language: '{{App::getLocale()}}',
-        defaultLanguage: 'en'
+        defaultLanguage: 'en',
+        allowedContent: true,
     });
 
     document.addEventListener("DOMContentLoaded", function() {
