@@ -4880,3 +4880,14 @@ p {
 .blog-meta .post-date {
     color: #fff;
 }
+
+.desc-top h2,
+.desc-top h3,
+.desc-top h3 strong {
+    background-color: #F88379;
+    color: #fff;
+    font-size: 23px;
+    padding: 9px 15px 9px 15px;
+    text-transform: uppercase;
+    display: inherit;
+}
