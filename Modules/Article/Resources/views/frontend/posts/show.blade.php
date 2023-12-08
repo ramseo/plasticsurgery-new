@@ -51,7 +51,7 @@
                 </div>
                 <div class="blog-intro">
                     <p>
-                        {{$$module_name_singular->intro}}
+                        <?= Str::words($$module_name_singular->intro, '20') ?>
                     </p>
                 </div>
                 <!-- social icons -->
