@@ -1292,6 +1292,24 @@
             border-bottom: none;
         }
 
+        .blog-detail-content-col {
+            padding-right: 15px !important;
+        }
+
+        .blog-detail-content-col img {
+            border-radius: 10px;
+        }
+
+        .blog-detail-main-col {
+            margin: 15px 15px 0 15px;
+            border-radius: 10px;
+        }
+
+        .desc-top h2,
+        .desc-top h3,
+        .desc-top h3 strong {
+            font-size: 20px;
+        }
     }
 
     @media(min-width: 768px) and (max-width: 1199px) {
