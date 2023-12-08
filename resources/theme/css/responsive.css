@@ -1310,6 +1310,11 @@
         .desc-top h3 strong {
             font-size: 20px;
         }
+
+        .blog-detail-main-col {
+            height: auto;
+        }
+
     }
 
     @media(min-width: 768px) and (max-width: 1199px) {
