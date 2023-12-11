@@ -1,4 +1,4 @@
-<div class="container-fluid new-doctor">
+<div class="container-fluid new-doctor trice-drop-down-home">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6">

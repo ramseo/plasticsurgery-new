@@ -4892,3 +4892,12 @@ p {
     display: inherit;
     font-weight: 600;
 }
+
+.trice-drop-down-home {
+    background: linear-gradient(to right, rgb(248 131 121) 38%, rgb(255, 255, 255) 153%) !important;
+}
+
+.trice-drop-down-home .sr-heading {
+    height: auto;
+    margin: 35px 0 35px 0;
+}
