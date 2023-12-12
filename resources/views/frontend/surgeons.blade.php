@@ -66,7 +66,7 @@
                                     <img src="<?= asset($doc_item->avatar) ?>" class="card-img-top" alt="doctor alt" style="width:100%" />
                                 <?php } ?>
                             </a>
-                            <div class="card-body doctors-list-cls position-relative">
+                            <div class="card-body doctors-list-cls min-height-185 position-relative">
                                 <div class="content-abs-fix">
                                     <a target="_blank" href="<?= url("surgeon/dr-$doc_item->username") ?>">
                                         <h4 class="card-title">

@@ -148,7 +148,7 @@ class PagesController extends Controller
                         $html .= '<img src="' . asset($doc_item->avatar) . '" class="card-img-top" alt="doctor alt" style="width:100%" />';
                     }
                     $html .=  '</a>';
-                    $html .= '<div class="card-body doctors-list-cls position-relative">';
+                    $html .= '<div class="card-body doctors-list-cls min-height-185 position-relative">';
                     $html .= '<div class="content-abs-fix">';
                     $html .= '<a target="_blank" href="' . url("surgeon/dr-$doc_item->username") . '">';
                     $html .= '<h4 class="card-title">';
