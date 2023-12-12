@@ -70,7 +70,7 @@
                                 <div class="content-abs-fix">
                                     <a target="_blank" href="<?= url("surgeon/dr-$doc_item->username") ?>">
                                         <h4 class="card-title">
-                                            Dr. <?= substr($doc_item->first_name . " " . $doc_item->last_name, 0, 16) ?>
+                                            Dr. <?= substr($doc_item->first_name . " " . $doc_item->last_name, 0, 22) ?>
                                         </h4>
                                     </a>
                                     <ul class="padd-null text-center">

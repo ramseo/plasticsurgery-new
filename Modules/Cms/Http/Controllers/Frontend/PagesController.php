@@ -152,7 +152,7 @@ class PagesController extends Controller
                     $html .= '<div class="content-abs-fix">';
                     $html .= '<a target="_blank" href="' . url("surgeon/dr-$doc_item->username") . '">';
                     $html .= '<h4 class="card-title">';
-                    $html .= "Dr." . " " . substr($doc_item->first_name . " " . $doc_item->last_name, 0, 16);
+                    $html .= "Dr." . " " . substr($doc_item->first_name . " " . $doc_item->last_name, 0, 22);
                     $html .= '</h4>';
                     $html .= '</a>';
                     $html .= '<ul class="padd-null text-center">';
