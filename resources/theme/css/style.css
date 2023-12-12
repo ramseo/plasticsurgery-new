@@ -4917,5 +4917,5 @@ p {
 }
 
 .min-height-185 {
-    min-height: 185px;
+    min-height: 185px !important;
 }
