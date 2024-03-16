@@ -15,7 +15,7 @@ Route::group(['namespace' => '\Modules\Cms\Http\Controllers\Frontend', 'as' => '
      * ---------------------------------------------------------------------
      */
     $module_name = 'pages';
-    $controller_name = 'PagesController';
+    $controller_name = 'PagesController'; 
     //    Route::get("pages", ['as' => "pages.index", 'uses' => "PagesController@index"]);
     Route::get("{slug?}", ['as' => "pages.show", 'uses' => "PagesController@show"]);
     Route::post("pages/lead_form", ['as' => "pages.lead_form", 'uses' => "PagesController@lead_form"]);

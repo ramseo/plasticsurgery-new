@@ -20,22 +20,22 @@ $city = getData('cities');
         <div class="container">
             <ul class="navbar-nav soc">
                 <li class="nav-item">
-                    <a target="_blank" class="nav-link text-white" href="https://www.facebook.com/CosmeticSurgery.in">
+                    <a target="_blank" class="nav-link text-white" href="https://www.facebook.com/PlasticSurgery.in">
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a target="_blank" class="nav-link text-white" href="https://twitter.com/CosmeticSurgIN">
+                    <a target="_blank" class="nav-link text-white" href="https://twitter.com/PlasticSurgIN">
                         <i class="fa fa-twitter" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a target="_blank" class="nav-link text-white" href="https://www.linkedin.com/company/cosmeticsurgeryindia/">
+                    <a target="_blank" class="nav-link text-white" href="https://www.linkedin.com/company/plasticsurgeryindia">
                         <i class="fa fa-linkedin" aria-hidden="true"></i>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a target="_blank" class="nav-link text-white" href="https://www.instagram.com/cosmeticsurgery.in/">
+                    <a target="_blank" class="nav-link text-white" href="https://www.instagram.com/plasticsurgeryindia">
                         <i class="fa fa-instagram" aria-hidden="true"></i>
                     </a>
                 </li>

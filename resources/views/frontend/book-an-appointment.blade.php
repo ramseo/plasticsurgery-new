@@ -211,7 +211,7 @@
 
                         date_default_timezone_set('Asia/Kolkata');
                         $current_time = date('H:i:s A');
-                        ?>
+                        ?> 
 
                         <input type="hidden" name="city_url" value="<?= browser_url() ?>">
                         <input type="hidden" name="url" value="<?= browser_url() ?>">

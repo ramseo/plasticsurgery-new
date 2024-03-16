@@ -334,7 +334,7 @@ if (\Request::getRequestUri() != "/book-an-appointment") {
    var lead_form_path = "<?= route('frontend.pages.lead_form') ?>";
    var surgeons_filter_path = "<?= route('frontend.pages.surgeon_filter') ?>";
    var csrf_token = "<?= csrf_token() ?>";
-   var base_url = "<?= url('/') . '/' ?>";
+   var base_url = "<?= url('/') . '/' ?>"; 
 
    $(document).ready(function() {
       $('.sidebar-form .call-action').click(function() {

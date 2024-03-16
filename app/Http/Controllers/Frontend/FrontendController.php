@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
@@ -49,6 +50,17 @@ class FrontendController extends Controller
         $body_class = '';
 
         return view('frontend.home', compact('body_class'));
+    }
+
+    public function appointmentAjax(Request $request)
+    {
+        dd(link);
+       dd($request);
+       $api_url = 'https://www.zohoapis.in/crm/v2/functions/create_lead_from_sites_api/actions/execute';
+       $key = 'apikey'; 
+       $zapikey = '1003.6ab6778bf662746f4862787a11e4f177.1d0eea8e34ff6db90f929c86beb198ea'; 
+
+
     }
 
     public function listing()

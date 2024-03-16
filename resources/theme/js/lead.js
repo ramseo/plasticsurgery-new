@@ -1,6 +1,8 @@
 $('#google-sheet').submit(function (e) {
     e.preventDefault();
 
+
+
     var status = true;
 
     $(".name-err").html("");
@@ -83,7 +85,7 @@ $('#google-sheet').submit(function (e) {
             .then(response => console.log('Form is successfully submitted'))
             .catch(error => console.error('Error!', error.message))
 
-        // code
+       // code
         $.ajax({
             url: lead_form_path,
             type: 'post',
@@ -116,7 +118,12 @@ $('#google-sheet').submit(function (e) {
                 }
             }
         });
-        // code
+       // code
+
+      
+
+      
+
     }
 
 });
