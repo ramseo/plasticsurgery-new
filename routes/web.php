@@ -57,6 +57,10 @@ Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
     Route::get('book-an-appointment', 'FrontendController@appointment')->name('book-an-appointment');
     Route::post('appointment-ajax', 'FrontendController@appointmentAjax')->name('appointment-ajax');
     Route::get('blog/author/{slug}', 'FrontendController@blog_author')->name('blog-author');
+    // contact us contactus
+    Route::get('contact-us', 'FrontendController@contactus')->name('contact-us');
+    Route::post('contactlist', 'FrontendController@contactlist')->name('contactlist');
+    
     // new routes
 
     // Route::get('privacy', 'FrontendController@privacy')->name('privacy');
