@@ -320,7 +320,7 @@ class FrontendController extends Controller
         $email = $request->email;
         $msg = $request->message;
 
-        $to = "ashwani@seobooklab.com";//change receiver address  
+        $to = "info@plasticsurgery.in"; //change receiver address  
         $subject = "Contact Us";  
        // $message = "<h1>send msg message</h1>";  
 
