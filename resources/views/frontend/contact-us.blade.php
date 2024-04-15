@@ -114,7 +114,11 @@
              Route::post('contactlist', 'FrontendController@contactlist')->name('contactlist');    
                 -->
                 <form method="post" action="{{url('/')}}/contactlist">
-                    <h4 class="book-app">Contact us</h4>
+                    <h4 class="book-app">Contact us </h4>                    
+                         <?php $valch = $$module_name_singular->rep;                     
+                     if ($valch == '2') { ?>
+                      <p style="color:red;"> <?php  echo "Thank you for contacting us. Our team will get in touch with you shortly."; ?> </p>
+                    <?php  }   ?> 
                     <div class="form-new">
                         <div class="form-group margin-bottom-5 margin-top-4">
                             <div class="position-relative">

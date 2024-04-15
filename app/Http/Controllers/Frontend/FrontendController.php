@@ -279,12 +279,15 @@ class FrontendController extends Controller
             'meta_description' => "Contact us",
             'meta_keywords' => "",
             'name' => "Contact us",
+            'rep' => "1",
         );
+
+        
 
         return view('frontend.contact-us', compact('body_class', 'module_name_singular', "$module_name_singular"));
     }
 
-    public function contactlist()
+    public function contactlist(Request $request)
     {
         //echo ('view');
        // exit();
@@ -294,8 +297,75 @@ class FrontendController extends Controller
             'meta_title' => "Contact us",
             'meta_description' => "Contact us",
             'meta_keywords' => "",
-            'name' => "Contact us",
+            'name' => "Contact us", 
+            'rep' => "2",                     
         );
+
+       
+
+
+
+       // print_r($request->all());
+         //exit();
+        // $request->validate([            
+        //     'first_name' => 'required|string|max:191',
+        //     'last_name'  => 'required|string|max:191',
+        //     'mobile_no'   => 'required|string|max:10',
+        //     'textarea-601' => 'required|string|max:591',  
+        // ]);        
+        // $request->validate(['email' => 'required|string|email|max:191|unique:users']);
+
+        $name = $request->name;
+        $phone = $request->phone;
+        $email = $request->email;
+        $msg = $request->message;
+
+        $to = "ashwani@seobooklab.com";//change receiver address  
+        $subject = "Contact Us";  
+       // $message = "<h1>send msg message</h1>";  
+
+                $message = "
+                        <html>
+                        <head>
+                        <title>Contact Us</title>
+                        </head>
+                        <body>
+                        <h2>Contact Us !</h2>
+                        <table>
+                            <tr>
+                            <td>Name</td>
+                            <td>:</td>
+                            <td>$name</td>    
+                            </tr>
+                            <tr>
+                            <td>User Email</td>
+                            <td>:</td>
+                            <td>$email</td>    
+                            </tr>
+                            <tr>
+                            <td>Phone</td>
+                            <td>:</td>
+                            <td>$phone</td>   
+                            </tr>
+                            <tr>
+                            <td>Message</td>
+                            <td>:</td>
+                            <td>$msg</td>    
+                            </tr> 
+                        </table>
+                        </body>
+                        </html>
+                ";
+
+               // echo $message;
+              //exit();
+        
+                $header = "From:contact@seobooklab.com \r\n";  
+                $header .= "MIME-Version: 1.0 \r\n";  
+                $header .= "Content-type: text/html;charset=UTF-8 \r\n";  
+                
+                $result = mail ($to,$subject,$message,$header);       
+
 
         return view('frontend.contact-us', compact('body_class', 'module_name_singular', "$module_name_singular"));
     }
