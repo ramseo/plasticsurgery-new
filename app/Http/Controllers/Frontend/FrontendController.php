@@ -364,7 +364,7 @@ class FrontendController extends Controller
                 $header .= "MIME-Version: 1.0 \r\n";  
                 $header .= "Content-type: text/html;charset=UTF-8 \r\n";  
                 
-                $result = mail ($to,$subject,$message,$header);       
+                //$result = mail ($to,$subject,$message,$header);       
 
 
         return view('frontend.contact-us', compact('body_class', 'module_name_singular', "$module_name_singular"));
