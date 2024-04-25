@@ -322,6 +322,7 @@ class FrontendController extends Controller
 
         $to = "info@plasticsurgery.in"; //change receiver address  
         $subject = "Contact Us";  
+       // $subject = $name." - ". ' Plasticsurgery.in '." "." ". 'Contact Page'; 
        // $message = "<h1>send msg message</h1>";  
 
                 $message = "
@@ -359,8 +360,8 @@ class FrontendController extends Controller
 
                // echo $message;
               //exit();
-        
-                $header = "From:contact@seobooklab.com \r\n";  
+             // $headers .= 'From: '.$name.'<'.$from.'>' . "\r\n";
+                $header = "From:info@plasticsurgery.com \r\n";  
                 $header .= "MIME-Version: 1.0 \r\n";  
                 $header .= "Content-type: text/html;charset=UTF-8 \r\n";  
                 
