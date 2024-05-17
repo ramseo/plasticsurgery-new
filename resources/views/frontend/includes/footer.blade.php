@@ -183,7 +183,7 @@ if (\Request::getRequestUri() != "/book-an-appointment") {
             <div class="position-relative">
                <i class="fa fa-user icon" aria-hidden="true"></i>
             </div>
-            <input type="text" name="name" class="form-controler name-cls" id="exampleInputName1" aria-describedby="emailHelp" placeholder="Patient's Name*">
+            <input type="text" name="name" class="form-controler name-cls" id="exampleInputName1" maxlength="35" aria-describedby="emailHelp" placeholder="Patient's Name*">
             <div class="name-err"></div>
          </div>
 
@@ -192,7 +192,7 @@ if (\Request::getRequestUri() != "/book-an-appointment") {
             <div class="position-relative">
                <i class="fa fa-phone icon" aria-hidden="true"></i>
             </div>
-            <input type="number" name="phone" class="form-controler phone-cls" id="exampleInputPhone" placeholder="Phone Number*">
+            <input type="number" name="phone" class="form-controler phone-cls" id="exampleInputPhone" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==15) return false;" placeholder="Phone Number*">
             <div class="phone-err"></div>
          </div>
 
@@ -200,7 +200,7 @@ if (\Request::getRequestUri() != "/book-an-appointment") {
             <div class="position-relative">
                <i class="fa fa-envelope icon" aria-hidden="true"></i>
             </div>
-            <input type="text" name="email" class="form-controler email-cls" id="exampleInputEmail" placeholder="Email Address*">
+            <input type="text" name="email" class="form-controler email-cls" id="exampleInputEmail" maxlength="50" placeholder="Email Address*">
             <div class="email-err"></div>
          </div>
 
@@ -228,7 +228,7 @@ if (\Request::getRequestUri() != "/book-an-appointment") {
             <div class="position-relative">
                <i class="fa fa-id-badge icon" aria-hidden="true"></i>
             </div>
-            <input type="text" name="age" class="form-controler age-cls" id="exampleInputAge" placeholder="Age in Years*">
+            <input type="text" name="age" class="form-controler age-cls" id="exampleInputAge" maxlength="2" placeholder="Age in Years*">
             <div class="age-err"></div>
          </div>
 
@@ -272,7 +272,7 @@ if (\Request::getRequestUri() != "/book-an-appointment") {
                <i class="fa fa-comment icon" aria-hidden="true"></i>
             </div>
 
-            <textarea maxlength="3000" name="message" class="form-controler message-cls" id="exampleFormControlTextarea1" rows="1" placeholder="Message*"></textarea>
+            <textarea maxlength="1500" name="message" class="form-controler message-cls" id="exampleFormControlTextarea1" rows="1" placeholder="Message*"></textarea>
             <div class="msg-err"></div>
 
          </div>
