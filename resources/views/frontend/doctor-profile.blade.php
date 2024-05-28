@@ -389,7 +389,7 @@
 $getDocPosts = getDocPosts($doctor_details->first_name . " " . $doctor_details->last_name);
 if ($getDocPosts->isNotEmpty()) {
 ?>
-    <section class="blog-list-half section-padding sub-bg">
+    <!-- <section class="blog-list-half section-padding sub-bg">
         <div class="container">
             <p class="identity text-center">
                 Dr. <?= $doctor_details->first_name . " " . $doctor_details->last_name . " " . ":" . " " . "Blog Posts" ?>
@@ -439,7 +439,7 @@ if ($getDocPosts->isNotEmpty()) {
                 <?php } ?>
             </div>
         </div>
-    </section>
+    </section> -->
 <?php } ?>
 
 <div class="spacer">
