@@ -189,7 +189,7 @@
                                 <i class="fa fa-comment icon" aria-hidden="true"></i>
                             </div>
 
-                            <textarea maxlength="1500" name="message" class="form-controler message-cls" id="exampleFormControlTextarea1" rows="1" placeholder="Message*1"></textarea>
+                            <textarea maxlength="1500" name="message" class="form-controler message-cls" id="exampleFormControlTextarea1" rows="1" placeholder="Message*"></textarea>
                             <div class="msg-err"></div>
 
                         </div>

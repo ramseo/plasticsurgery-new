@@ -392,7 +392,7 @@ if ($getDocPosts->isNotEmpty()) {
     <section class="blog-list-half section-padding sub-bg">
         <div class="container">
             <p class="identity text-center">
-                Dr. <?= $doctor_details->first_name . " " . $doctor_details->last_name . " " . ":" . " " . "Posts" ?>
+                Dr. <?= $doctor_details->first_name . " " . $doctor_details->last_name . " " . ":" . " " . "Blog Posts" ?>
             </p>
             <div class="row">
                 <?php
