@@ -389,7 +389,7 @@
 $getDocPosts = getDocPosts($doctor_details->first_name . " " . $doctor_details->last_name);
 if ($getDocPosts->isNotEmpty()) {
 ?>
-    <!-- <section class="blog-list-half section-padding sub-bg">
+    <section class="blog-list-half section-padding sub-bg">
         <div class="container">
             <p class="identity text-center">
                 Dr. <?= $doctor_details->first_name . " " . $doctor_details->last_name . " " . ":" . " " . "Blog Posts" ?>
@@ -420,9 +420,9 @@ if ($getDocPosts->isNotEmpty()) {
                                         </h5>
                                         <div class="author">
                                             <span>
-                                                Author:
+                                                Author :
                                             </span>
-                                            <a class="color-white" href="<?= url('/') . '/' . 'blog/author/' . $author_url ?>">
+                                            <a class="color-white" href="<?= url('/') . '/' . 'blog/author/' . $author_url ?>" style="color:#007bff">
                                                 <?= ($author_url == "super-admin") ? $item->author : "Dr." . " " . $item->author ?>
                                             </a>
                                         </div>
@@ -439,7 +439,7 @@ if ($getDocPosts->isNotEmpty()) {
                 <?php } ?>
             </div>
         </div>
-    </section> -->
+    </section>
 <?php } ?>
 
 <div class="spacer">
