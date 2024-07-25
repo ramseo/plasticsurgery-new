@@ -8,6 +8,13 @@ $meta_description_target = "";
 if (isset($$module_name_singular)) {
     if (isset($$module_name_singular->meta_description)) {
         $meta_description_target = $$module_name_singular->meta_description;
+
+        if(isset($$module_name_singular->featured_image)){
+            $meta_img = $$module_name_singular->featured_image; 
+            $meta_img_target = asset($meta_img);
+             } else {
+                $meta_img_target = asset("img/Buccal-Fat-Removal-Cheek-Reduction-1-1024x683.jpg");
+             }  
     }
 }
 

@@ -40,7 +40,7 @@
                             </small>
                         </h4>
                         <div class="small text-muted">
-                            Posts Management Dashboard
+                            Posts Management Dashboard 
                         </div>
                     </div>
 
